@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+    <title>HHS</title>
+    {% include "styles.html" %}
+</head>
+<body>
+<div style="padding: 25px 25px 25px 25px;">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Time Coverage</th>
+                <th>Geo Coverage</th>
+                <th>Created</th>
+                <th>Tags</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for dataset in datasets %}
+            <tr>
+                <td><a href="/hhs/detail/{{ dataset._id }}">{{ dataset.title }}</a></td>
+                <td>{{ dataset.temporal_coverage }}</td>
+                <td>{{ dataset.geo_coverage }}</td>
+                <td style="white-space: nowrap;">C: {{ dataset.created }}<br/>U: {{ dataset.updated }}</td>
+                <td>{{ dataset.tags }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body></html>

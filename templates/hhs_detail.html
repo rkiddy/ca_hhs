@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+    <title>HHS</title>
+    {% include "styles.html" %}
+</head>
+<body>
+<div style="padding: 25px 25px 25px 25px;">
+    <p>
+        <a href="/hhs/">Up</a>
+        &nbsp;-&nbsp;
+        <a href="/hhs/next/{{ id }}">Next</a>
+        &nbsp;-&nbsp;
+        <a href="/hhs/prev/{{ id }}">Prev</a>
+    </p>
+    <table class="table table-striped">
+        <tbody>
+           <tr><th>Title</th><td>{{ dataset.title }}</td></tr>
+           <tr><th>Description</th><td>{{ dataset.description }}</td></tr>
+           <tr><th>Department</th><td>{{ dataset.department }}</td></tr>
+           <tr><th>Contact</th><td>{{ dataset.contact }}</td></tr>
+           <tr><th>Email</th><td>{{ dataset.email }}</td></tr>
+           <tr><th>Homepage</th><td>{{ dataset.homepage_url }}</td></tr>
+           <tr><th>Time&nbsp;Coverage</th><td>{{ dataset.temporal_coverage }}</td></tr>
+           <tr><th>Geo&nbsp;Coverage</th><td>{{ dataset.geo_coverage }}</td></tr>
+           <tr><th>Geo&nbsp;Granularity</th><td>{{ dataset.geo_granularity }}</td></tr>
+           <tr><th>Created</th><td>{{ dataset.created }}</td></tr>
+           <tr><th>Updated</th><td>{{ dataset.updated }}</td></tr>
+           <tr><th>Topic</th><td>{{ dataset.topic }}</td></tr>
+           <tr><th>Tags</th><td>{{ dataset.tags }}</td></tr>
+           <tr><th>Dataset&nbsp;URL</th><td>{{ dataset.dataset_url }}</td></tr>
+           <tr><th>Dataset&nbsp;ID</th><td>{{ dataset.dataset_id }}</td></tr>
+        </tbody>
+    </table>
+</div>
+</body></html>
