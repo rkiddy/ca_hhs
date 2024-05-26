@@ -20,15 +20,15 @@
            <tr><th>Department</th><td>{{ dataset.department }}</td></tr>
            <tr><th>Contact</th><td>{{ dataset.contact }}</td></tr>
            <tr><th>Email</th><td>{{ dataset.email }}</td></tr>
-           <tr><th>Homepage</th><td>{{ dataset.homepage_url }}</td></tr>
+           <tr><th>Homepage</th><td><a href="{{ dataset.homepage_url }}">{{ dataset.homepage_url }}</a></td></tr>
            <tr><th>Time&nbsp;Coverage</th><td>{{ dataset.temporal_coverage }}</td></tr>
-           <tr><th>Geo&nbsp;Coverage</th><td>{{ dataset.geo_coverage }}</td></tr>
-           <tr><th>Geo&nbsp;Granularity</th><td>{{ dataset.geo_granularity }}</td></tr>
+           <tr><th>Geo&nbsp;Coverage</th><td>{{ dataset.spatial_geographic_coverage }}</td></tr>
+           <tr><th>Geo&nbsp;Granularity</th><td>{{ dataset.geographic_granularity }}</td></tr>
            <tr><th>Created</th><td>{{ dataset.created }}</td></tr>
-           <tr><th>Updated</th><td>{{ dataset.updated }}</td></tr>
+           <tr><th>Updated</th><td>{{ dataset.last_updated }}</td></tr>
            <tr><th>Topic</th><td>{{ dataset.topic }}</td></tr>
            <tr><th>Tags</th><td>{{ dataset.tags }}</td></tr>
-           <tr><th>Dataset&nbsp;URL</th><td>{{ dataset.dataset_url }}</td></tr>
+           <tr><th>Dataset&nbsp;URL</th><td><a href="{{ dataset.dataset_url }}">{{ dataset.dataset_url }}</a></td></tr>
            <tr><th>Dataset&nbsp;ID</th><td>{{ dataset.dataset_id }}</td></tr>
         </tbody>
     </table>

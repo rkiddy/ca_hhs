@@ -23,7 +23,7 @@ def db_exec(engine, sql):
 
 def fixes(row):
     row['created'] = row['created'][:10]
-    row['updated'] = row['updated'][:10]
+    row['last_updated'] = row['last_updated'][:10]
     row['tags'] = row['tags'].replace(',', ', ')
     return row
 
