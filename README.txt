@@ -1,0 +1,23 @@
+
+## dataset-catalog
+
+The dataset-catalog directory includes code to download and import the data. The dataset-catalog-www will
+vend it in a simple application.
+
+## healthcare-facility-locations
+
+See https://data.chhs.ca.gov/dataset/healthcare-facility-locations
+
+I am receiving notifications when the data set changes. There is no detail but one can re-download the data,
+
+from the site:
+
+Facility data were obtained from the CDPH’s Electronic Licensing Management System (ELMS) database.
+ELMS records health facility/provider applications, issues licenses, generates license renewal
+notices, determines license fees, issues and tracks state enforcement actions, and generates
+management reports. Facility licensing applications are entered into ELMS by L&C District Office staff.
+Refer to L&C's webpage for the application forms needed to apply for a healthcare facility license:
+https://www.cdph.ca.gov/Programs/CHCQ/LCP/Pages/ApplyForLicensure.aspx. Contact L&C District Offices
+to initiate a license or update facility information:
+https://www.cdph.ca.gov/Programs/CHCQ/LCP/Pages/HealthCareFacilities.aspx.
+
