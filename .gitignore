@@ -2,7 +2,12 @@
 **/.env
 **/.venv
 **/__pycache__
-**/*csv
-**/*json
-**/*zip
+**/*.csv
+**/*.json
+**/*.zip
+**/*.pdf
+**/*.tableau
+**/*.xls
+**/*.xlsx
+**/*.zip
 
