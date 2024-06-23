@@ -1,10 +1,13 @@
 
-## dataset-catalog
+<detail>
+<summary>dataset-catalog</summary>
 
 The dataset-catalog directory includes code to download and import the data. The dataset-catalog-www will
 vend it in a simple application.
+</details>
 
-## healthcare-facility-locations
+<details>
+<summary>healthcare-facility-locations</summary>
 
 See https://data.chhs.ca.gov/dataset/healthcare-facility-locations
 
@@ -19,5 +22,37 @@ management reports. Facility licensing applications are entered into ELMS by L&C
 Refer to L&C's webpage for the application forms needed to apply for a healthcare facility license:
 https://www.cdph.ca.gov/Programs/CHCQ/LCP/Pages/ApplyForLicensure.aspx. Contact L&C District Offices
 to initiate a license or update facility information:
+
 https://www.cdph.ca.gov/Programs/CHCQ/LCP/Pages/HealthCareFacilities.aspx.
+<detais>
+
+<details>
+<summary>hospital-building-data</summary>
+
+TBD
+</details>
+
+<details>
+<summary>hospital-inpatient-diagnosis-procedure-and-external-cause-codes</summary>
+
+TBD
+</details>
+
+<details>
+<summary>licensed-facility-crosswalk</summary>
+
+TBD
+</details>
+
+<details>
+<summary>licensed-healthcare-facility-listing</summary>
+
+TBD
+</details>
+
+<details>
+<summary>statewide-death-profiles</summary>
+
+TBD
+</details>
 
