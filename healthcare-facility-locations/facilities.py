@@ -168,3 +168,6 @@ if __name__ == '__main__':
             # print(f"sql: {sql}")
             db_exec(conn, sql)
 
+    sql = "insert into updates values ('healthcare-facility-locations', unix_timestamp(now()))"
+    db_exec(conn, sql)
+

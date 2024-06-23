@@ -91,3 +91,6 @@ if __name__ == '__main__':
                 # print(f"sql: {sql}")
                 db_exec(conn, sql)
 
+    sql = "insert into updates values ('dataset-catalog', unix_timestamp(now()))"
+    db_exec(conn, sql)
+

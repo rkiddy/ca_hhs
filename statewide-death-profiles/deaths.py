@@ -96,3 +96,6 @@ if __name__ == '__main__':
                     sql = f"insert into deaths values ({', '.join(values)})"
                     db_exec(conn, sql)
 
+    sql = "insert into updates values ('statewide-death-profiles', unix_timestamp(now()))"
+    db_exec(conn, sql)
+
