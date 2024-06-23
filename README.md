@@ -1,5 +1,5 @@
 
-<detail>
+<details>
 <summary>dataset-catalog</summary>
 
 The dataset-catalog directory includes code to download and import the data. The dataset-catalog-www will
@@ -24,7 +24,7 @@ https://www.cdph.ca.gov/Programs/CHCQ/LCP/Pages/ApplyForLicensure.aspx. Contact 
 to initiate a license or update facility information:
 
 https://www.cdph.ca.gov/Programs/CHCQ/LCP/Pages/HealthCareFacilities.aspx.
-<detais>
+</details>
 
 <details>
 <summary>hospital-building-data</summary>
