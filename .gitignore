@@ -11,3 +11,7 @@
 **/*.xlsx
 **/*.zip
 
+# do not store text files, unless requirements.
+**/[a-qs-zA-Z]*.txt
+**/r[a-df-zA-Z]*.txt
+
