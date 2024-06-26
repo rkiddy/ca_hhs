@@ -1,7 +1,6 @@
-
 if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
     echo ""
-    echo "usage: bash update.sh [ --no-fetch ]"
+    echo "usage: bash update.sh [ --no-fetch ]]"
     echo ""
     exit 
 fi
@@ -15,9 +14,9 @@ if [ "$1" != "" ] && [ "$1" != "--no-fetch" ]; then
     exit
 fi
 
-uuid1="7a456555-87b9-4830-817c-72d72e628745"
-uuid2="9964e86b-8796-4f59-8880-c5f736763e7b"
-id="statewide-death-profiles"
+uuid1="dab37323-5b23-492e-9328-3bcc93bd1335"
+uuid2="eeea3559-f0a2-4aad-babe-43a070a569ea"
+id="hospital-building-data"
 
 if [ "$1" != "--no-fetch" ]; then
 
@@ -25,18 +24,19 @@ if [ "$1" != "--no-fetch" ]; then
 
     mv -f *.csv *.json *.zip sources/ 2>/dev/null
 
-    wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id-8eleum.zip"
+    wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id-a_2hjpn_.zip"
 
-    unzip statewide-death-profiles-8eleum.zip
+    unzip $id-a_2hjpn_.zip
 else
     mv sources/* .
 fi
 
 echo "into data..."
 
-SQLALCHEMY_SILENCE_UBER_WARNING=1 ./.venv/bin/python deaths.py
+# SQLALCHEMY_SILENCE_UBER_WARNING=1 ./.venv/bin/python facilities.py
 
 /bin/rm -f sources/*
 
 mv -f *.csv *.json *.zip sources/ 2>/dev/null
+
 

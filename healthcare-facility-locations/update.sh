@@ -23,6 +23,8 @@ if [ "$1" != "--no-fetch" ]; then
 
     echo "fetching..."
 
+    mv -f *.tableau *.xlsx *.csv *.pdf *.json *.zip sources/ 2>/dev/null
+
     wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id-mecao_1o.zip"
 
     unzip $id-mecao_1o.zip
@@ -38,5 +40,5 @@ SQLALCHEMY_SILENCE_UBER_WARNING=1 ./.venv/bin/python facilities.py
 
 /bin/rm -f sources/*
 
-mv -f *.tableau *.xlsx *.csv *.pdf *.json *.zip sources/
+mv -f *.tableau *.xlsx *.csv *.pdf *.json *.zip sources/ 2>/dev/null
 
