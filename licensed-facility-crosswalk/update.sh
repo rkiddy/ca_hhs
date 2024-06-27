@@ -18,6 +18,7 @@ fi
 uuid1="e89100fd-1f1d-4a37-8205-d588aa42e5a1"
 uuid2="63499f73-feba-43f2-a364-7188d5cf7728"
 id="licensed-facility-crosswalk"
+hash="nox9em"
 
 if [ "$1" != "--no-fetch" ]; then
 
@@ -25,11 +26,11 @@ if [ "$1" != "--no-fetch" ]; then
 
     echo "fetching..."
 
-    wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id-nox9em.zip"
+    wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id-$hash.zip"
 
     /bin/rm -f *.json *.xls *.xlsx
 
-    unzip $id-nox9em.zip
+    unzip $id-$hash.zip
 fi
 
 # do nothing?

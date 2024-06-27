@@ -18,6 +18,7 @@ fi
 uuid1="3b5b80e8-6b8d-4715-b3c0-2699af6e72e5"
 uuid2="11747e61-6d10-45d3-b3c4-f78dcaf26241"
 id="healthcare-facility-locations"
+hash="mecao_1o"
 
 if [ "$1" != "--no-fetch" ]; then
 
@@ -25,13 +26,11 @@ if [ "$1" != "--no-fetch" ]; then
 
     mv -f *.tableau *.xlsx *.csv *.pdf *.json *.zip sources/ 2>/dev/null
 
-    wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id-mecao_1o.zip"
+    wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id-$hash.zip"
 
-    unzip $id-mecao_1o.zip
+    unzip $id-$hash.zip
 else
-
     mv sources/* .
-
 fi
 
 echo "into data..."

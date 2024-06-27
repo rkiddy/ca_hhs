@@ -17,6 +17,7 @@ fi
 uuid1="dab37323-5b23-492e-9328-3bcc93bd1335"
 uuid2="eeea3559-f0a2-4aad-babe-43a070a569ea"
 id="hospital-building-data"
+hash="a_2hjpn_"
 
 if [ "$1" != "--no-fetch" ]; then
 
@@ -24,9 +25,9 @@ if [ "$1" != "--no-fetch" ]; then
 
     mv -f *.csv *.json *.zip sources/ 2>/dev/null
 
-    wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id-a_2hjpn_.zip"
+    wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id-$hash.zip"
 
-    unzip $id-a_2hjpn_.zip
+    unzip $id-$hash.zip
 else
     mv sources/* .
 fi
@@ -38,5 +39,4 @@ echo "into data..."
 /bin/rm -f sources/*
 
 mv -f *.csv *.json *.zip sources/ 2>/dev/null
-
 

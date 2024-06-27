@@ -18,6 +18,7 @@ fi
 uuid1="d1ac90ad-d583-426f-8012-828743cf4ac1"
 uuid2="fef8fe44-95a5-42e9-b7e5-cdaa6dbb043c"
 id="hospital-inpatient-diagnosis-procedure-and-external-cause-codes"
+hash="ub9woi"
 
 if [ "$1" != "--no-fetch" ]; then
 
@@ -25,9 +26,9 @@ if [ "$1" != "--no-fetch" ]; then
 
     echo "fetching..."
 
-    wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id-ub9woi.zip"
+    wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id-$hash.zip"
 
-    unzip $id-ub9woi.zip
+    unzip $id-$hash.zip
 else
     mv sources/* .
 fi

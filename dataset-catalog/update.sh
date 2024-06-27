@@ -18,6 +18,7 @@ fi
 uuid1="fc35be35-be26-4862-853a-4b82050ff3d4"
 uuid2="fe07049b-5c95-4bc8-b6bf-a8cde21ff942"
 id="dataset-catalog"
+hash="tqnrw8em"
 
 if [ "$1" != "--no-fetch" ]; then
 
@@ -25,9 +26,9 @@ if [ "$1" != "--no-fetch" ]; then
 
     echo "fetching..."
 
-    wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id-tqnrw8em.zip"
+    wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id-$hash.zip"
 
-    unzip $id-tqnrw8em.zip
+    unzip $id-$hash.zip
 else
     mv sources/* .
 fi

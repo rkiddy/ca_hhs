@@ -18,6 +18,7 @@ fi
 uuid1="59d9abe7-2664-407a-a5aa-f89a866f3381"
 uuid2="a31bba27-44bc-46b0-b516-0bcc98000636"
 id="licensed-healthcare-facility-listing"
+hash="qgbca3"
 
 if [ "$1" != "--no-fetch" ]; then
 
@@ -25,11 +26,11 @@ if [ "$1" != "--no-fetch" ]; then
 
     mv *.xls *.xlsx *json sources/ 2>/dev/null
 
-    wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id-listing-qgbca3.zip"
+    wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id-listing-$hash.zip"
 
     /bin/rm *json *csv
 
-    unzip $id-qgbca3.zip
+    unzip $id-$hash.zip
 fi
 
 echo "into data..."

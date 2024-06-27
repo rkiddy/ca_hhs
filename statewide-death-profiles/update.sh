@@ -18,6 +18,7 @@ fi
 uuid1="7a456555-87b9-4830-817c-72d72e628745"
 uuid2="9964e86b-8796-4f59-8880-c5f736763e7b"
 id="statewide-death-profiles"
+hash="8eleum"
 
 if [ "$1" != "--no-fetch" ]; then
 
@@ -25,9 +26,9 @@ if [ "$1" != "--no-fetch" ]; then
 
     mv -f *.csv *.json *.zip sources/ 2>/dev/null
 
-    wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id-8eleum.zip"
+    wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id-$hash.zip"
 
-    unzip statewide-death-profiles-8eleum.zip
+    unzip statewide-death-profiles-$hash.zip
 else
     mv sources/* .
 fi
