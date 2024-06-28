@@ -25,12 +25,24 @@ create table pccu_facilities (
   fac_str_addr varchar(127),
   fac_zip varchar(15),
   fac_zipcode varchar(15),
+  pcc_health_serv_medical char(1),
+  pcc_health_serv_dental char(1),
+  pcc_health_serv_vision char(1),
+  pcc_health_serv_mental_health char(1),
+  pcc_health_serv_substance_abuse char(1),
+  pcc_health_serv_domestic_violence char(1),
+  pcc_health_serv_basic_lab char(1),
+  pcc_health_serv_radiological_services char(1),
+  pcc_health_serv_urgent_care char(1),
+  pcc_health_serv_pharmacy char(1),
+  pcc_health_serv_womens_health char(1),
   parent_address_one varchar(127),
   parent_address_two varchar(63),
   parent_city varchar(127),
   parent_name varchar(127),
   parent_state varchar(15),
-  parent_zipcode varchar(15));
+  parent_zipcode varchar(15),
+  unique key file_pk (file_pk,fac_no));
 
 drop table if exists pccu_files;
 

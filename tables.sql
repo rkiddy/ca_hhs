@@ -295,13 +295,25 @@ CREATE TABLE `pccu_facilities` (
   `fac_str_addr` varchar(127) DEFAULT NULL,
   `fac_zip` varchar(15) DEFAULT NULL,
   `fac_zipcode` varchar(15) DEFAULT NULL,
+  `pcc_health_serv_medical` char(1) DEFAULT NULL,
+  `pcc_health_serv_dental` char(1) DEFAULT NULL,
+  `pcc_health_serv_vision` char(1) DEFAULT NULL,
+  `pcc_health_serv_mental_health` char(1) DEFAULT NULL,
+  `pcc_health_serv_substance_abuse` char(1) DEFAULT NULL,
+  `pcc_health_serv_domestic_violence` char(1) DEFAULT NULL,
+  `pcc_health_serv_basic_lab` char(1) DEFAULT NULL,
+  `pcc_health_serv_radiological_services` char(1) DEFAULT NULL,
+  `pcc_health_serv_urgent_care` char(1) DEFAULT NULL,
+  `pcc_health_serv_pharmacy` char(1) DEFAULT NULL,
+  `pcc_health_serv_womens_health` char(1) DEFAULT NULL,
   `parent_address_one` varchar(127) DEFAULT NULL,
   `parent_address_two` varchar(63) DEFAULT NULL,
   `parent_city` varchar(127) DEFAULT NULL,
   `parent_name` varchar(127) DEFAULT NULL,
   `parent_state` varchar(15) DEFAULT NULL,
   `parent_zipcode` varchar(15) DEFAULT NULL,
-  PRIMARY KEY (`pk`)
+  PRIMARY KEY (`pk`),
+  UNIQUE KEY `file_pk` (`file_pk`,`fac_no`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -327,4 +339,4 @@ CREATE TABLE `updates` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2024-06-28 10:34:59
+-- Dump completed on 2024-06-28 11:50:12

@@ -102,9 +102,35 @@ if __name__ == '__main__':
             'parent_city',
             'parent_name',
             'parent_state',
-            'parent_zipcode' ]
+            'parent_zipcode',
+            'pcc_health_serv_medical',
+            'pcc_health_serv_dental',
+            'pcc_health_serv_vision',
+            'pcc_health_serv_mental_health',
+            'pcc_health_serv_substance_abuse',
+            'pcc_health_serv_domestic_violence',
+            'pcc_health_serv_basic_lab',
+            'pcc_health_serv_radiological_services',
+            'pcc_health_serv_urgent_care',
+            'pcc_health_serv_pharmacy',
+            'pcc_health_serv_womens_health']
  
-        bool_columns = ['fac_acquire_equip_over_500k', 'fac_operated_this_yr', 'fac_oper_curryr']
+        bool_columns = [
+            'fac_acquire_equip_over_500k',
+            'fac_operated_this_yr',
+            'fac_oper_curryr',
+            'pcc_health_serv_medical',
+            'pcc_health_serv_dental',
+            'pcc_health_serv_vision',
+            'pcc_health_serv_mental_health',
+            'pcc_health_serv_substance_abuse',
+            'pcc_health_serv_domestic_violence',
+            'pcc_health_serv_basic_lab',
+            'pcc_health_serv_radiological_services',
+            'pcc_health_serv_urgent_care',
+            'pcc_health_serv_pharmacy',
+            'pcc_health_serv_womens_health']
+
         int_columns = ['pk', 'fac_no', 'oshpd_id']
 
         pk = 0
@@ -173,7 +199,7 @@ if __name__ == '__main__':
                                 next_row[key] = fix_value(value)
 
                                 if key in bool_columns:
-                                    next_row[key] = next_row[key].replace("'Yes'", "'N'").replace("'No'", "'N'")
+                                    next_row[key] = next_row[key].replace("'Yes'", "'Y'").replace("'No'", "'N'")
 
                                 if key in int_columns:
                                     next_row[key] = next_row[key].replace("'","")
@@ -197,7 +223,7 @@ if __name__ == '__main__':
 
                         vals = ', '.join([r for r in list(next_row.values())])
  
-                        sql = f"insert into pccu_facilities ({cols}) values ({vals})"
+                        sql = f"insert ignore into pccu_facilities ({cols}) values ({vals})"
 
                         # print(f"sql: {sql}")
                         db_exec(conn, sql)
