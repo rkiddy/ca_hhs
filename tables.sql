@@ -267,6 +267,56 @@ CREATE TABLE `licensed_facilities` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `pccu_facilities`
+--
+
+DROP TABLE IF EXISTS `pccu_facilities`;
+CREATE TABLE `pccu_facilities` (
+  `pk` int NOT NULL,
+  `sheetname` varchar(63) DEFAULT NULL,
+  `file_pk` int DEFAULT NULL,
+  `fac_acquire_equip_over_500k` char(1) DEFAULT NULL,
+  `fac_address_one` varchar(127) DEFAULT NULL,
+  `fac_address_two` varchar(63) DEFAULT NULL,
+  `fac_admin_name` varchar(127) DEFAULT NULL,
+  `fac_city` varchar(63) DEFAULT NULL,
+  `fac_name` varchar(127) DEFAULT NULL,
+  `fac_no` int DEFAULT NULL,
+  `fac_operated_this_yr` char(1) DEFAULT NULL,
+  `fac_oper_curryr` varchar(11) DEFAULT NULL,
+  `fac_op_per_begin_dt` varchar(19) DEFAULT NULL,
+  `fac_op_per_end_dt` varchar(19) DEFAULT NULL,
+  `fac_par_corp_bus_addr` varchar(127) DEFAULT NULL,
+  `fac_par_corp_city` varchar(63) DEFAULT NULL,
+  `fac_par_corp_name` varchar(127) DEFAULT NULL,
+  `fac_par_corp_state` varchar(31) DEFAULT NULL,
+  `fac_par_corp_zip` varchar(15) DEFAULT NULL,
+  `fac_phone` varchar(31) DEFAULT NULL,
+  `fac_str_addr` varchar(127) DEFAULT NULL,
+  `fac_zip` varchar(15) DEFAULT NULL,
+  `fac_zipcode` varchar(15) DEFAULT NULL,
+  `parent_address_one` varchar(127) DEFAULT NULL,
+  `parent_address_two` varchar(63) DEFAULT NULL,
+  `parent_city` varchar(127) DEFAULT NULL,
+  `parent_name` varchar(127) DEFAULT NULL,
+  `parent_state` varchar(15) DEFAULT NULL,
+  `parent_zipcode` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`pk`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `pccu_files`
+--
+
+DROP TABLE IF EXISTS `pccu_files`;
+CREATE TABLE `pccu_files` (
+  `pk` int NOT NULL,
+  `name` varchar(127) DEFAULT NULL,
+  `tag` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`pk`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `updates`
 --
 
@@ -277,4 +327,4 @@ CREATE TABLE `updates` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2024-06-27 11:32:15
+-- Dump completed on 2024-06-28 10:34:59
