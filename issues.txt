@@ -1,0 +1,21 @@
+
+----------------------------------------------------------
+
+The "facility id" column is called "fac_id" almost everywhere.
+In the healthcare_facilities table, it is "facid". Why?
+
+----------------------------------------------------------
+
+The women-infants-and-children-wic-authorized-vendors data includes a county name, but
+not the county FIPS code.
+
+----------------------------------------------------------
+
+The chargemasters page has a 'Download all' button, but the downloaded zip file does not contain
+data for 2019, 2022 and 2023. All of these files can be found in the indivdual pick list.
+
+Sent e-mail on this and received ack on Jun 26, 2024.
+
+----------------------------------------------------------
+
+Research Question: Can I map the availability of pharmacies in CA? Can we determine distances?

@@ -1,0 +1,44 @@
+dataset chargemasters
+table chargemasters_files
+table chargemasters_common25
+
+dataset dataset-catalog
+table catalog
+
+dataset healthcare-facility-locations
+table healthcare_facilities
+table healthcare_facilities_across_time
+
+dataset hospital-building-data
+table none
+
+dataset hospital-inpatient-diagnosis-procedure-and-external-cause-codes
+table inpatient_death_causes
+table inpatient_deaths
+table inpatient_diagnoses
+table inpatient_diagnosis
+table inpatient_procedures
+
+dataset licensed-facility-crosswalk
+table none
+
+dataset licensed-healthcare-facility-listing
+table licensed_facilities
+
+dataset primary-care-clinic-annual-utilization-data
+table pccu_facilities
+table pccu_files
+
+dataset statewide-death-profiles
+table deaths
+
+dataset women-infants-and-children-wic-authorized-vendors
+table authorized_wic_vendors
+
+dataset ??????
+table facility_admins
+table facility_hospitals
+
+admin_tools:
+table updates
+
