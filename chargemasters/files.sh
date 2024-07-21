@@ -10,7 +10,7 @@ create table chargemasters_files (
 EOF
 
 echo "delete from chargemasters_files;" | mysql ca_hhs
- 
+
 echo "adding file names..."
 
 find 20?? -type f | \
@@ -41,7 +41,7 @@ echo "select full_name from chargemasters_files;" | \
               print "where full_name like '\''%"$0"%'\'';"}}' | \
     mysql ca_hhs
 echo "done"
- 
+
 echo "fixing hcai_id values..."
 echo "select full_name from chargemasters_files where hcai_id is NULL;" | \
     mysql --skip-column-names ca_hhs | \
@@ -64,9 +64,12 @@ echo "done"
 
 cat <<EOF | mysql ca_hhs
 update chargemasters_files set file_type = 'Common25'
-    where full_name like '%_Common25_%' or full_name like '%_common25_%' or full_name like '% Common 25 %';
+    where full_name like '%_Common25_%' or full_name like '%_common25_%'
+        or full_name like '%Common 25%'
 update chargemasters_files set file_type = 'Comments'
     where full_name like '%_Comments_%' or full_name like '%_comments_%';
+update chargemasters_files set file_type = 'Comments'
+    where full_name like '% Comments%';
 update chargemasters_files set file_type = 'CDM All'
     where full_name like '%_CDM_All_%';
 update chargemasters_files set file_type = 'CDM'
@@ -79,4 +82,4 @@ alter table chargemasters_files add primary key (pk);
 alter table chargemasters_files add column year int after pk;
 update chargemasters_files set year = cast(substr(full_name,1,4) as unsigned);
 EOF
- 
+
