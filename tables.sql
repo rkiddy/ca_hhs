@@ -58,6 +58,36 @@ CREATE TABLE `catalog` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `chargemasters_common25`
+--
+
+DROP TABLE IF EXISTS `chargemasters_common25`;
+CREATE TABLE `chargemasters_common25` (
+  `file_pk` int DEFAULT NULL,
+  `procedure_desc` varchar(255) DEFAULT NULL,
+  `cpt_code` varchar(31) DEFAULT NULL,
+  `charge_str` varchar(31) DEFAULT NULL,
+  `charge` decimal(10,2) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `chargemasters_files`
+--
+
+DROP TABLE IF EXISTS `chargemasters_files`;
+CREATE TABLE `chargemasters_files` (
+  `pk` int NOT NULL,
+  `year` int DEFAULT NULL,
+  `full_name` varchar(255) DEFAULT NULL,
+  `hcai_id` varchar(15) DEFAULT NULL,
+  `file_type` varchar(15) DEFAULT NULL,
+  `file_ext` varchar(4) DEFAULT NULL,
+  `common25` int DEFAULT NULL,
+  PRIMARY KEY (`pk`),
+  KEY `full_name` (`full_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `deaths`
 --
 
@@ -179,6 +209,45 @@ CREATE TABLE `healthcare_facilities_across_time` (
   `county_name` varchar(63) DEFAULT NULL,
   `provider_type` varchar(127) DEFAULT NULL,
   `fac_fdr` varchar(127) DEFAULT NULL,
+  `count` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `healthcare_facilities_digests`
+--
+
+DROP TABLE IF EXISTS `healthcare_facilities_digests`;
+CREATE TABLE `healthcare_facilities_digests` (
+  `facid` char(9) DEFAULT NULL,
+  `update_date` char(10) DEFAULT NULL,
+  `dgst_sha256` char(64) DEFAULT NULL,
+  KEY `facid` (`facid`),
+  KEY `facid_2` (`facid`,`update_date`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `hospital_buildings`
+--
+
+DROP TABLE IF EXISTS `hospital_buildings`;
+CREATE TABLE `hospital_buildings` (
+  `county_code` varchar(31) DEFAULT NULL,
+  `perm_id` varchar(11) DEFAULT NULL,
+  `facility_name` varchar(127) DEFAULT NULL,
+  `city` varchar(31) DEFAULT NULL,
+  `building_nbr` varchar(63) DEFAULT NULL,
+  `building_name` varchar(127) DEFAULT NULL,
+  `building_status` varchar(31) DEFAULT NULL,
+  `spc_rating` varchar(3) DEFAULT NULL,
+  `building_url` varchar(255) DEFAULT NULL,
+  `height_ft` int DEFAULT NULL,
+  `stories` int DEFAULT NULL,
+  `building_code` varchar(63) DEFAULT NULL,
+  `building_code_year` int DEFAULT NULL,
+  `year_completed` int DEFAULT NULL,
+  `ab_1882_notice` varchar(255) DEFAULT NULL,
+  `latitude` decimal(12,8) DEFAULT NULL,
+  `longitude` decimal(12,8) DEFAULT NULL,
   `count` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -339,4 +408,4 @@ CREATE TABLE `updates` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2024-06-28 11:50:12
+-- Dump completed on 2024-07-20 18:30:26

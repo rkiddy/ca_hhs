@@ -34,7 +34,7 @@ fi
 
 echo "into data..."
 
-# SQLALCHEMY_SILENCE_UBER_WARNING=1 ./.venv/bin/python facilities.py
+SQLALCHEMY_SILENCE_UBER_WARNING=1 ./.venv/bin/python buildings.py
 
 /bin/rm -f sources/*
 

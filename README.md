@@ -35,7 +35,9 @@ TBD
 <details>
 <summary>hospital-building-data</summary>
 
-TBD
+Contains construction information for the buildings, includes number of stories, and building code in effect
+when built. Includes a "perm_id" assigned as "Facility number per Facilities Development Division". Will this
+match up with the "facid" fields in other datasets? We will see.
 </details>
 
 <details>

@@ -10,7 +10,7 @@ table healthcare_facilities
 table healthcare_facilities_across_time
 
 dataset hospital-building-data
-table none
+table hospital_buildings
 
 dataset hospital-inpatient-diagnosis-procedure-and-external-cause-codes
 table inpatient_death_causes
