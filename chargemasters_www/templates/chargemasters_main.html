@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+    <title>Chargemasters</title>
+    {% include "styles.html" %}
+</head>
+<body>
+<div style="padding: 25px 25px 25px 25px;">
+    <p>
+    Years:
+        <a href="/hcai/year/2011">2011</a>&nbsp;-&nbsp;
+        <a href="/hcai/year/2012">2012</a>&nbsp;-&nbsp;
+        <a href="/hcai/year/2013">2013</a>&nbsp;-&nbsp;
+        <a href="/hcai/year/2014">2014</a>&nbsp;-&nbsp;
+        <a href="/hcai/year/2015">2015</a>&nbsp;-&nbsp;
+        <a href="/hcai/year/2016">2016</a>&nbsp;-&nbsp;
+        <a href="/hcai/year/2017">2017</a>&nbsp;-&nbsp;
+        <a href="/hcai/year/2018">2018</a>&nbsp;-&nbsp;
+        <a href="/hcai/year/2019">2019</a>&nbsp;-&nbsp;
+        <a href="/hcai/year/2020">2020</a>&nbsp;-&nbsp;
+        <a href="/hcai/year/2021">2021</a>&nbsp;-&nbsp;
+        <a href="/hcai/year/2022">2022</a>&nbsp;-&nbsp;
+        <a href="/hcai/year/2023">2023</a>&nbsp;or&nbsp;
+        <a href="/hcai/noC25/year/{{ year }}">Might Be Missing Common25s</a>
+    </p>
+    <table class="table table-striped">
+    <caption>Files That Have Common25 Entries > 0<br/>Files # {{ all_count }}</caption>
+    <thead>
+        <tr>
+            <th>HCAI Id</th>
+            <th>File Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for file in files %}
+        <tr>
+            <td>{{ file.hcai_id }}</td>
+            <td>{{ file.full_name }}</td>
+        </tr>
+        <tr>
+            {% if 'facilities' in file %}
+            <td colspan="2">
+            <table class="table" border="1">
+            <tr><th>Common25 Count</th><td>{{ file.count }}</td></tr>
+            <tr><th>Fac Name</th><td>{{ file.facilities[0].facname }}</td></tr>
+            <tr><th>Fac FDR</th><td>{{ file.facilities[0].fac_fdr }}</td></tr>
+            <tr><th>County</th><td>{{ file.facilities[0].county_name }}</td></tr>
+            <tr><th>Business Name</th><td>{{ file.facilities[0].business_name }}</td></tr>
+            <tr><th>Lic Status</th><td>{{ file.facilities[0].license_status_description }}</td></tr>
+            <tr><th>Lic From</th><td>{{ file.facilities[0].initial_license_date }}</td></tr>
+            <tr><th>Is Birthing Fac</th><td>{{ file.facilities[0].birthing_facility_flag }}</td></tr>
+            </table>
+            </td>
+            {% else %}
+            <td>&nbsp;</td>
+            <td><strong>No HCAI Id located (???) in File Name</strong></td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+</div>
+</body></html>
