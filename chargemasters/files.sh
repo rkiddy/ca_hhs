@@ -1,4 +1,7 @@
 
+# NOTE: This file causes an error. FIX:
+# 2023/2023 Completed Reviews/Victor Valley Gloabl Medical Center/.~lock.106361370_Common25.xlsx#
+
 cat <<EOF | mysql ca_hhs
 drop table if exists chargemasters_files;
 create table chargemasters_files (
@@ -63,20 +66,37 @@ echo "select full_name from chargemasters_files where hcai_id is NULL;" | \
 echo "done"
 
 cat <<EOF | mysql ca_hhs
+-- clear values
+update chargemasters_files set file_type = NULL;
+
+-- Common25
 update chargemasters_files set file_type = 'Common25'
     where full_name like '%_Common25_%' or full_name like '%_common25_%'
-        or full_name like '%Common 25%'
+        or full_name like '%Common 25%';
+
+-- Comments
 update chargemasters_files set file_type = 'Comments'
     where full_name like '%_Comments_%' or full_name like '%_comments_%';
 update chargemasters_files set file_type = 'Comments'
-    where full_name like '% Comments%';
+    where full_name like '%Comment%' or full_name like '%Commnets%';
+
+-- CDM, or CMD?
 update chargemasters_files set file_type = 'CDM All'
-    where full_name like '%_CDM_All_%';
+    where full_name like '%_CDM_All_%' or full_name like '%_CDM_ALL_%';
 update chargemasters_files set file_type = 'CDM'
-    where full_name like '%_CDM_%' and file_type is NULL;
+    where file_type is NULL and (full_name like '%_CDM_%' or full_name like '% CDM %');
+update chargemasters_files set file_type = 'CMD' where full_name like '%CMD%';
+
+-- PCT CHG
 update chargemasters_files set file_type = 'PCT CHG'
     where full_name like '%_PCT_CHG_%';
-alter table chargemasters_files add columm pk int first;
+
+-- Cover letters
+update chargemasters_files set file_type = 'Coverletter'
+    where full_name like '%Cover letter%' or full_name like '%Coverletter%';
+
+-- pk and year columns
+alter table chargemasters_files add column pk int first;
 update chargemasters_files cross join (select @pk:=0) as init set chargemasters_files.pk=@pk:=@pk+1;
 alter table chargemasters_files add primary key (pk);
 alter table chargemasters_files add column year int after pk;
