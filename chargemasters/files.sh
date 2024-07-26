@@ -5,11 +5,19 @@
 cat <<EOF | mysql ca_hhs
 drop table if exists chargemasters_files;
 create table chargemasters_files (
+    year int,
     full_name varchar(255),
     hcai_id varchar(15),
     file_type varchar(15),
     file_ext varchar(4),
     common25 int);
+
+drop table if exists chargemasters_dirs;
+create table chargemasters_dirs (
+    pk int primary key,
+    directory varchar(255),
+    year int,
+    hcai_id varchar(15)
 EOF
 
 echo "delete from chargemasters_files;" | mysql ca_hhs
@@ -28,6 +36,9 @@ echo "select full_name from chargemasters_files;" | \
     sed 's/'\''/'\'\''/g' | \
     awk 'BEGIN{FS="."}
          {print "update chargemasters_files set file_ext = '\''"$NF"'\'' where full_name = '\''"$0"'\'';"}' | \
+    mysql ca_hhs
+
+echo "delete from chargemasters_files where file_ext = 'db';" | \
     mysql ca_hhs
 echo "done"
 
@@ -62,6 +73,33 @@ echo "select full_name from chargemasters_files where hcai_id is NULL;" | \
               print "update chargemasters_files set hcai_id = '\''"$2"'\''";
               print "    where full_name like '\''%/"$1"/%'\'';"
          }}' | \
+    mysql ca_hhs
+
+echo "update chargemasters_files set hcai_id = '106334048' where hcai_id = '106334048191300';" | \
+    mysql ca_hhs
+echo "done"
+
+echo "adding directory names..."
+echo "select full_name from chargemasters_files;" | \
+    mysql --skip-column-names ca_hhs | \
+    awk 'BEGIN{FS="/"}{print substr($0,1,length($0)-length($NF)-1)}' | \
+    sort | uniq | \
+    sed 's/'\''/'\'\''/g' | \
+    awk '{print "insert into chargemasters_dirs values ("NR", '\''"$0"'\'', "substr($0,1,4)", NULL);"}' | \
+    mysql ca_hhs
+
+# Add in the manually-curated known values where needed.
+#
+( echo "update chargemasters_dirs d1, chargemasters_hcai_ids h1 set ";
+  echo "d1.hcai_id = h1.hcai_id where d1.directory = h1.directory and d1.hcai_id is NULL;" ) | \
+    mysql ca_hhs
+echo "done"
+
+echo "linking directory names to files..."
+echo "select pk, directory from chargemasters_dirs;" | \
+    mysql --skip-column-names ca_hhs | \
+    sed 's/'\''/'\'\''/g' | \
+    awk 'BEGIN{FS="\t"}{print "update chargemasters_files set dir_pk = "$1" where full_name like '\''"$2"/%'\'';"}' | \
     mysql ca_hhs
 echo "done"
 
@@ -99,7 +137,6 @@ update chargemasters_files set file_type = 'Coverletter'
 alter table chargemasters_files add column pk int first;
 update chargemasters_files cross join (select @pk:=0) as init set chargemasters_files.pk=@pk:=@pk+1;
 alter table chargemasters_files add primary key (pk);
-alter table chargemasters_files add column year int after pk;
 update chargemasters_files set year = cast(substr(full_name,1,4) as unsigned);
 EOF
 

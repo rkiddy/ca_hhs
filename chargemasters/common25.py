@@ -1,12 +1,12 @@
 
+
 import argparse
 import re
 import traceback
 
-from openpyxl import load_workbook
-from sqlalchemy import create_engine
-
 import config
+import excel
+from sqlalchemy import create_engine
 
 cfg = config.cfg()
 
@@ -16,13 +16,13 @@ conn = engine.connect()
 
 def arguments():
     parser = argparse.ArgumentParser()
-
     parser.add_argument('--only-load-strings', action='store_true')
     parser.add_argument('--update-charge', action='store_true')
     parser.add_argument('--update-files-counts', action='store_true')
     parser.add_argument('--file', nargs='?', help="Name of single file to process.")
     parser.add_argument('--files', nargs='?', help="File containing list of files to process.")
     parser.add_argument('--year', nargs='?', help="Files only for this year will be processed.")
+    parser.add_argument('--only-scan-columns', action='store_true')
     parser.add_argument('--verbose', '-v', action='store_true')
 
     return parser.parse_args()
@@ -36,16 +36,6 @@ def db_exec(engine, sql):
         return engine.execute(sql)
 
 
-def is_cpt_label(cell):
-    if cell.value is None:
-        return False
-    if cell.data_type != 's':
-        return False
-    if not cell.value.endswith('CPT Code'):
-        return False
-    return True
-
-
 def fix(val):
      if val is None:
          return "NULL"
@@ -53,12 +43,6 @@ def fix(val):
          val = str(val).replace("'", "''")
          return f"'{val}'"
 
-
-def common25_sheet(wbook):
-    for found_name in wbook.sheetnames:
-        if 'Common' in found_name or 'COMMON' in found_name or 'AB 1045' in found_name:
-            return wbook[found_name]
-    return None
 
 def dprint(s):
     if args.verbose:
@@ -84,20 +68,36 @@ def load_strings():
         db_exec(conn, "alter table chargemasters_common25 add index (file_pk)")
 
         sql = """
-              select pk, full_name, file_type from chargemasters_files
+              select pk, full_name, file_type, file_ext from chargemasters_files
               where file_type in ('Common25', 'CDM All') and file_ext = 'xlsx'"""
         files = db_exec(conn, sql)
+
+    # We have give just one file name here.
+    #
     if args.file is not None:
-        sql = f"select pk, full_name, file_type from chargemasters_files where full_name = {fix(args.file)} and file_ext = 'xlsx'"
+        sql = f"""
+              select pk, full_name, file_type, file_ext from chargemasters_files
+              where full_name = {fix(args.file)} and file_ext = 'xlsx'"""
         files = db_exec(conn, sql)
+
+
+    # We have given a file which contains a list of filenames. NOT TESTED!
+    #
     if args.files is not None:
         fs = open(args.files, 'r')
         fnames = fs.readlines()
         fnames = [fix(r) for r in fnames]
-        sql = f"select pk, full_name, file_type from chargemasters_files where full_name in ({','.join(fnames)}) and file_ext = 'xlsx'"
+        sql = f"""
+              select pk, full_name, file_type, file_ext from chargemasters_files
+              where full_name in ({','.join(fnames)}) and file_ext = 'xlsx'"""
         files = db_exec(conn, sql)
+
+    # We are processing all the files for a year.
+    #
     if args.year is not None:
-        sql = f"select pk, full_name, file_type from chargemasters_files where year = {args.year} and file_ext = 'xlsx'"
+        sql = f"""
+              select pk, full_name, file_type, file_ext from chargemasters_files
+              where year = {args.year} and file_ext = 'xlsx'"""
         files = db_exec(conn, sql)
 
     dprint(f"files found # {len(files)}")
@@ -110,17 +110,19 @@ def load_strings():
         # f = "2011/El Camino Hosptial/106430763_Common25_2011.xlsx"
         # pk = 18
 
+        ext = row['file_ext']
+
         print(f"file: {f}")
 
         try:
 
-            wb = load_workbook(f, data_only=True)
+            wb = excel.load_my_workbook(ext, f)
 
             # if 'CDM All', then tab could be like 'HCAI 106381154_COMMON 25', '25 Most Common OP Procedures',
             #     'AB 1045 Form', 'AB 1045', 'AB 1045 FORM', or variation thereof.
             #
             if row['file_type'] != 'Common25':
-                c25_sheet = common25_sheet(wb)
+                c25_sheet = excel.common25_sheet(ext, wb)
                 if c25_sheet is not None:
                     wb.active = c25_sheet
                 else:
@@ -134,24 +136,25 @@ def load_strings():
 
             ws = wb.active
 
-            found_top = False
-
             idx = 1
 
             while True:
 
-                A = f"A{idx}"
-                B = f"B{idx}"
-                C = f"C{idx}"
+                locations = excel.find_column_heads(ext, ws)
+
+                if locations is None:
+                    print("Cannot find CPT Code column head.")
+                    break
+
+                A = f"{locations['Procedure']['col']}{locations['Procedure']['row']+idx}"
+                B = f"{locations['CPT Code']['col']}{locations['CPT Code']['row']+idx}"
+                C = f"{locations['Cost']['col']}{locations['Cost']['row']+idx}"
 
                 empty_rows = 0
 
                 # print(f"checking row {idx}")
 
-                if not found_top and is_cpt_label(ws[B]):
-                    found_top = True
-
-                if found_top and ws[A].value is None and ws[B].value is None and ws[C].value is None:
+                if ws[A].value is None and ws[B].value is None and ws[C].value is None:
                     dprint("found empty line")
                     empty_lines += 1
                     if empty_lines > 10:
@@ -159,15 +162,11 @@ def load_strings():
                 else:
                     empty_lines = 0
 
-                if found_top and ws[A].value is not None and ws[B].value is None and str(ws[C].value).startswith('='):
-                    dprint("Formula found in |{ws[A].value}|{ws[B].value}|{ws[C].value}|")
+                if ws[A].value is not None and ws[B].value is None and str(ws[C].value).startswith('='):
+                    dprint(f"Formula found in |{ws[A].value}|{ws[B].value}|{ws[C].value}|")
                     break
 
-                if not found_top and idx > 10:
-                    dprint("No TOP cell found. Aborting.")
-                    break
-
-                if found_top and not str(ws[B].value).endswith('CPT Code'):
+                if not str(ws[B].value).endswith('CPT Code'):
                     # print(f"proc: {ws[A].value}")
                     # print(f"code: {ws[B].value}")
                     # print(f"cost: {ws[C].value}")
@@ -199,11 +198,14 @@ def load_strings():
             traceback.print_exc()
 
 
+# DB only, no excel.
+#
 def update_charge_value():
 
     sqls = [
         "update ignore chargemasters_common25 set charge = charge_str where charge_str rlike '^[0-9]*$'",
-        "update ignore chargemasters_common25 set charge = charge_str where charge_str rlike '[0-9]*\\.[0-9]{1,2}'"
+        "update ignore chargemasters_common25 set charge = charge_str where charge_str rlike '[0-9]*\\.[0-9]{1,2}'",
+        "delete from chargemasters_common25 where charge_str is NULL"
     ]
 
     for sql in sqls:
@@ -215,7 +217,8 @@ def update_charge_value():
         except:
             traceback.print_exc()
 
-
+# DB only, no excel
+#
 def update_file_counts():
 
     # TODO when I run this manually, it works but in this code, it returns everything. Why?
@@ -253,9 +256,72 @@ def update_file_counts():
     print("")
 
 
+# DB and excel both
+#
+def only_scan_columns():
+
+    sql = """
+          select full_name, file_type, file_ext from chargemasters_files
+          where file_type in ('Common25', 'CDM All') order by year desc"""
+
+    for row in db_exec(conn, sql):
+
+        f = row['full_name']
+        print(f"\nfile: {f}")
+
+        ext = row['file_ext']
+
+        try:
+
+            wb = None
+
+            wb = excel.load_my_workbook(ext, row['full_name'])
+
+            dprint(f"wb: {wb}")
+
+            if wb is None:
+                continue
+
+            if row['file_type'] == 'Common25':
+                ws = excel.only_sheet(ext, wb)
+            else:
+                ws = excel.common25_sheet(ext, wb)
+
+            dprint(f"ws: {ws}")
+
+            if ws is None:
+                continue
+
+            found = excel.find_column_heads(ext, ws)
+
+            if found is None:
+                print("No column heads are found.")
+                continue
+            else:
+                row = found['CPT Code']['row']
+                Ar = f"A{row}"
+                Br = f"B{row}"
+                Cr = f"C{row}"
+                Dr = f"D{row}"
+                Er = f"E{row}"
+                Fr = f"F{row}"
+                Gr = f"G{row}"
+
+                print(f"{Ar}: '{excel.cell_value_str(ext, ws, Ar)}', {Br}: '{excel.cell_value_str(ext, ws, Br)}', {Cr}: '{excel.cell_value_str(ext, ws, Cr)}', {Dr}: '{excel.cell_value_str(ext, ws, Dr)}', {Er}: '{excel.cell_value_str(ext, ws, Er)}', {Fr}: '{excel.cell_value_str(ext, ws, Fr)}', {Gr}: '{excel.cell_value_str(ext, ws, Gr)}'")
+
+        except:
+            traceback.print_exc()
+
+    print("Done.")
+
+
 if __name__ == '__main__':
 
     args = arguments()
+
+    if args.only_scan_columns:
+        only_scan_columns()
+        quit()
 
     # if incremental, do not delete all data first.
     #

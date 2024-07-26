@@ -9,7 +9,6 @@
 -- Table structure for table `authorized_wic_vendors`
 --
 
-DROP TABLE IF EXISTS `authorized_wic_vendors`;
 CREATE TABLE `authorized_wic_vendors` (
   `vendor` varchar(127) DEFAULT NULL,
   `address1` varchar(127) DEFAULT NULL,
@@ -25,7 +24,6 @@ CREATE TABLE `authorized_wic_vendors` (
 -- Table structure for table `catalog`
 --
 
-DROP TABLE IF EXISTS `catalog`;
 CREATE TABLE `catalog` (
   `_id` int DEFAULT NULL,
   `title` varchar(153) DEFAULT NULL,
@@ -61,22 +59,46 @@ CREATE TABLE `catalog` (
 -- Table structure for table `chargemasters_common25`
 --
 
-DROP TABLE IF EXISTS `chargemasters_common25`;
 CREATE TABLE `chargemasters_common25` (
   `file_pk` int DEFAULT NULL,
-  `procedure_desc` varchar(255) DEFAULT NULL,
+  `procedure_desc` varchar(1027) DEFAULT NULL,
   `cpt_code` varchar(31) DEFAULT NULL,
   `charge_str` varchar(31) DEFAULT NULL,
-  `charge` decimal(10,2) DEFAULT NULL
+  `charge` decimal(10,2) DEFAULT NULL,
+  KEY `charge_str` (`charge_str`),
+  KEY `charge` (`charge`),
+  KEY `file_pk` (`file_pk`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `chargemasters_cpt_codes`
+--
+
+CREATE TABLE `chargemasters_cpt_codes` (
+  `cpt_code` varchar(11) DEFAULT NULL,
+  `cpt_desc` varchar(1027) DEFAULT NULL,
+  `file_pk` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `chargemasters_dirs`
+--
+
+CREATE TABLE `chargemasters_dirs` (
+  `pk` int NOT NULL,
+  `directory` varchar(1027) DEFAULT NULL,
+  `year` int DEFAULT NULL,
+  `hcai_id` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`pk`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Table structure for table `chargemasters_files`
 --
 
-DROP TABLE IF EXISTS `chargemasters_files`;
 CREATE TABLE `chargemasters_files` (
   `pk` int NOT NULL,
+  `dir_pk` int DEFAULT NULL,
   `year` int DEFAULT NULL,
   `full_name` varchar(255) DEFAULT NULL,
   `hcai_id` varchar(15) DEFAULT NULL,
@@ -84,14 +106,22 @@ CREATE TABLE `chargemasters_files` (
   `file_ext` varchar(4) DEFAULT NULL,
   `common25` int DEFAULT NULL,
   PRIMARY KEY (`pk`),
-  KEY `full_name` (`full_name`)
+  KEY `hcai_id` (`hcai_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `chargemasters_hcai_ids`
+--
+
+CREATE TABLE `chargemasters_hcai_ids` (
+  `directory` varchar(255) DEFAULT NULL,
+  `hcai_id` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Table structure for table `deaths`
 --
 
-DROP TABLE IF EXISTS `deaths`;
 CREATE TABLE `deaths` (
   `year` int DEFAULT NULL,
   `month` int DEFAULT NULL,
@@ -112,7 +142,6 @@ CREATE TABLE `deaths` (
 -- Table structure for table `facility_admins`
 --
 
-DROP TABLE IF EXISTS `facility_admins`;
 CREATE TABLE `facility_admins` (
   `fac_id` varchar(15) DEFAULT NULL,
   `name` varchar(127) DEFAULT NULL,
@@ -125,7 +154,6 @@ CREATE TABLE `facility_admins` (
 -- Table structure for table `facility_hospitals`
 --
 
-DROP TABLE IF EXISTS `facility_hospitals`;
 CREATE TABLE `facility_hospitals` (
   `fac_id` varchar(15) NOT NULL,
   `name` varchar(127) DEFAULT NULL,
@@ -136,7 +164,6 @@ CREATE TABLE `facility_hospitals` (
 -- Table structure for table `healthcare_facilities`
 --
 
-DROP TABLE IF EXISTS `healthcare_facilities`;
 CREATE TABLE `healthcare_facilities` (
   `licensed_certified` varchar(255) DEFAULT NULL,
   `flag` varchar(255) DEFAULT NULL,
@@ -187,7 +214,7 @@ CREATE TABLE `healthcare_facilities` (
   `latitude` varchar(255) DEFAULT NULL,
   `longitude` varchar(255) DEFAULT NULL,
   `location` varchar(255) DEFAULT NULL,
-  `hcai_id` varchar(255) DEFAULT NULL,
+  `hcai_id` varchar(9) DEFAULT NULL,
   `cclho_code` varchar(255) DEFAULT NULL,
   `cclho_name` varchar(255) DEFAULT NULL,
   `fips_county_code` varchar(255) DEFAULT NULL,
@@ -196,14 +223,14 @@ CREATE TABLE `healthcare_facilities` (
   `trauma_ctr` varchar(255) DEFAULT NULL,
   `type_of_care` varchar(255) DEFAULT NULL,
   `critical_access_hospital` varchar(255) DEFAULT NULL,
-  `data_date` varchar(255) DEFAULT NULL
+  `data_date` varchar(255) DEFAULT NULL,
+  KEY `hcai_id` (`hcai_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Table structure for table `healthcare_facilities_across_time`
 --
 
-DROP TABLE IF EXISTS `healthcare_facilities_across_time`;
 CREATE TABLE `healthcare_facilities_across_time` (
   `state_fiscal_year` char(10) DEFAULT NULL,
   `county_name` varchar(63) DEFAULT NULL,
@@ -216,7 +243,6 @@ CREATE TABLE `healthcare_facilities_across_time` (
 -- Table structure for table `healthcare_facilities_digests`
 --
 
-DROP TABLE IF EXISTS `healthcare_facilities_digests`;
 CREATE TABLE `healthcare_facilities_digests` (
   `facid` char(9) DEFAULT NULL,
   `update_date` char(10) DEFAULT NULL,
@@ -229,7 +255,6 @@ CREATE TABLE `healthcare_facilities_digests` (
 -- Table structure for table `hospital_buildings`
 --
 
-DROP TABLE IF EXISTS `hospital_buildings`;
 CREATE TABLE `hospital_buildings` (
   `county_code` varchar(31) DEFAULT NULL,
   `perm_id` varchar(11) DEFAULT NULL,
@@ -255,7 +280,6 @@ CREATE TABLE `hospital_buildings` (
 -- Table structure for table `inpatient_death_causes`
 --
 
-DROP TABLE IF EXISTS `inpatient_death_causes`;
 CREATE TABLE `inpatient_death_causes` (
   `icdcm_code` varchar(31) NOT NULL,
   `diagnosis_description` varchar(1027) DEFAULT NULL,
@@ -266,7 +290,6 @@ CREATE TABLE `inpatient_death_causes` (
 -- Table structure for table `inpatient_deaths`
 --
 
-DROP TABLE IF EXISTS `inpatient_deaths`;
 CREATE TABLE `inpatient_deaths` (
   `icdcm_code` varchar(31) DEFAULT NULL,
   `total` int DEFAULT NULL,
@@ -277,7 +300,6 @@ CREATE TABLE `inpatient_deaths` (
 -- Table structure for table `inpatient_diagnoses`
 --
 
-DROP TABLE IF EXISTS `inpatient_diagnoses`;
 CREATE TABLE `inpatient_diagnoses` (
   `icdcm_code` varchar(31) DEFAULT NULL,
   `diagnosis_description` varchar(1027) DEFAULT NULL,
@@ -289,7 +311,6 @@ CREATE TABLE `inpatient_diagnoses` (
 -- Table structure for table `inpatient_diagnosis`
 --
 
-DROP TABLE IF EXISTS `inpatient_diagnosis`;
 CREATE TABLE `inpatient_diagnosis` (
   `icdcm_code` varchar(31) DEFAULT NULL,
   `diagnosis_description` varchar(1027) DEFAULT NULL,
@@ -301,7 +322,6 @@ CREATE TABLE `inpatient_diagnosis` (
 -- Table structure for table `inpatient_procedures`
 --
 
-DROP TABLE IF EXISTS `inpatient_procedures`;
 CREATE TABLE `inpatient_procedures` (
   `icdpcs_code` varchar(31) DEFAULT NULL,
   `procedure_description` varchar(1027) DEFAULT NULL,
@@ -313,7 +333,6 @@ CREATE TABLE `inpatient_procedures` (
 -- Table structure for table `licensed_facilities`
 --
 
-DROP TABLE IF EXISTS `licensed_facilities`;
 CREATE TABLE `licensed_facilities` (
   `period` char(8) DEFAULT NULL,
   `oshpd_id` varchar(63) DEFAULT NULL,
@@ -339,7 +358,6 @@ CREATE TABLE `licensed_facilities` (
 -- Table structure for table `pccu_facilities`
 --
 
-DROP TABLE IF EXISTS `pccu_facilities`;
 CREATE TABLE `pccu_facilities` (
   `pk` int NOT NULL,
   `sheetname` varchar(63) DEFAULT NULL,
@@ -389,7 +407,6 @@ CREATE TABLE `pccu_facilities` (
 -- Table structure for table `pccu_files`
 --
 
-DROP TABLE IF EXISTS `pccu_files`;
 CREATE TABLE `pccu_files` (
   `pk` int NOT NULL,
   `name` varchar(127) DEFAULT NULL,
@@ -401,11 +418,10 @@ CREATE TABLE `pccu_files` (
 -- Table structure for table `updates`
 --
 
-DROP TABLE IF EXISTS `updates`;
 CREATE TABLE `updates` (
   `dataset_id` varchar(127) DEFAULT NULL,
   `updated` bigint DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2024-07-20 18:30:26
+-- Dump completed on 2024-07-26 12:09:12

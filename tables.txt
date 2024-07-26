@@ -1,6 +1,11 @@
+resource_type resource_name commnent
+
 dataset chargemasters
 table chargemasters_files
 table chargemasters_common25
+table chargemasters_dirs
+table chargemasters_cpt_codes MAYBE_NOT_WORKING
+table chargemasters_hcai_ids HANDCURATED
 
 dataset dataset-catalog
 table catalog
