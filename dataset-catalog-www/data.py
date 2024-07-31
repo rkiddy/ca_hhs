@@ -61,3 +61,11 @@ def prev(id_num):
     else:
         return prev_id[0]['_id']
 
+
+def hhs_raw(param):
+
+    if param == 'blankDescriptions':
+        return db_exec(conn, "select * from catalog where description = '{{description}}'")
+
+    return list()
+

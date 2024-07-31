@@ -49,6 +49,22 @@ def hhs_prev(id):
         return redirect(f"/{cfg['WWW']}/detail/{id}")
 
 
+@hhs.route(f"/{cfg['WWW']}/details/")
+def hhs_raw_details():
+    context = dict()
+    main = env.get_template('details_list.html')
+    return main.render(**context)
+
+
+@hhs.route(f"/{cfg['WWW']}/details/description_blank/")
+def hhs_descriptions_blank():
+    context = dict()
+    main = env.get_template('raw_details.html')
+    context['rows'] = data.hhs_raw('blankDescriptions')
+    context['label'] = 'Blank Descriptions in Cataolog Dataset'
+    return main.render(**context)
+
+
 if __name__ == '__main__':
     hhs.run(port=8080)
 
