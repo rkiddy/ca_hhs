@@ -9,6 +9,7 @@
 -- Table structure for table `authorized_wic_vendors`
 --
 
+DROP TABLE IF EXISTS `authorized_wic_vendors`;
 CREATE TABLE `authorized_wic_vendors` (
   `vendor` varchar(127) DEFAULT NULL,
   `address1` varchar(127) DEFAULT NULL,
@@ -24,6 +25,7 @@ CREATE TABLE `authorized_wic_vendors` (
 -- Table structure for table `catalog`
 --
 
+DROP TABLE IF EXISTS `catalog`;
 CREATE TABLE `catalog` (
   `_id` int DEFAULT NULL,
   `title` varchar(153) DEFAULT NULL,
@@ -56,9 +58,37 @@ CREATE TABLE `catalog` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `chargemasters_cdm`
+--
+
+DROP TABLE IF EXISTS `chargemasters_cdm`;
+CREATE TABLE `chargemasters_cdm` (
+  `file_pk` int DEFAULT NULL,
+  `code` varchar(31) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `charge_str` varchar(63) DEFAULT NULL,
+  `charge` decimal(10,2) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `chargemasters_column_heads`
+--
+
+DROP TABLE IF EXISTS `chargemasters_column_heads`;
+CREATE TABLE `chargemasters_column_heads` (
+  `file_pk` int DEFAULT NULL,
+  `sheet` varchar(127) DEFAULT NULL,
+  `code_head` varchar(5) DEFAULT NULL,
+  `desc_head` varchar(5) DEFAULT NULL,
+  `cost_head` varchar(5) DEFAULT NULL,
+  `full_name` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `chargemasters_common25`
 --
 
+DROP TABLE IF EXISTS `chargemasters_common25`;
 CREATE TABLE `chargemasters_common25` (
   `file_pk` int DEFAULT NULL,
   `procedure_desc` varchar(1027) DEFAULT NULL,
@@ -74,6 +104,7 @@ CREATE TABLE `chargemasters_common25` (
 -- Table structure for table `chargemasters_cpt_codes`
 --
 
+DROP TABLE IF EXISTS `chargemasters_cpt_codes`;
 CREATE TABLE `chargemasters_cpt_codes` (
   `cpt_code` varchar(11) DEFAULT NULL,
   `cpt_desc` varchar(1027) DEFAULT NULL,
@@ -84,6 +115,7 @@ CREATE TABLE `chargemasters_cpt_codes` (
 -- Table structure for table `chargemasters_dirs`
 --
 
+DROP TABLE IF EXISTS `chargemasters_dirs`;
 CREATE TABLE `chargemasters_dirs` (
   `pk` int NOT NULL,
   `directory` varchar(1027) DEFAULT NULL,
@@ -96,6 +128,7 @@ CREATE TABLE `chargemasters_dirs` (
 -- Table structure for table `chargemasters_files`
 --
 
+DROP TABLE IF EXISTS `chargemasters_files`;
 CREATE TABLE `chargemasters_files` (
   `pk` int NOT NULL,
   `dir_pk` int DEFAULT NULL,
@@ -113,15 +146,27 @@ CREATE TABLE `chargemasters_files` (
 -- Table structure for table `chargemasters_hcai_ids`
 --
 
+DROP TABLE IF EXISTS `chargemasters_hcai_ids`;
 CREATE TABLE `chargemasters_hcai_ids` (
   `directory` varchar(255) DEFAULT NULL,
   `hcai_id` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `chargemasters_tabs`
+--
+
+DROP TABLE IF EXISTS `chargemasters_tabs`;
+CREATE TABLE `chargemasters_tabs` (
+  `file_pk` int DEFAULT NULL,
+  `tab_name` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `deaths`
 --
 
+DROP TABLE IF EXISTS `deaths`;
 CREATE TABLE `deaths` (
   `year` int DEFAULT NULL,
   `month` int DEFAULT NULL,
@@ -142,6 +187,7 @@ CREATE TABLE `deaths` (
 -- Table structure for table `facility_admins`
 --
 
+DROP TABLE IF EXISTS `facility_admins`;
 CREATE TABLE `facility_admins` (
   `fac_id` varchar(15) DEFAULT NULL,
   `name` varchar(127) DEFAULT NULL,
@@ -154,6 +200,7 @@ CREATE TABLE `facility_admins` (
 -- Table structure for table `facility_hospitals`
 --
 
+DROP TABLE IF EXISTS `facility_hospitals`;
 CREATE TABLE `facility_hospitals` (
   `fac_id` varchar(15) NOT NULL,
   `name` varchar(127) DEFAULT NULL,
@@ -164,6 +211,7 @@ CREATE TABLE `facility_hospitals` (
 -- Table structure for table `healthcare_facilities`
 --
 
+DROP TABLE IF EXISTS `healthcare_facilities`;
 CREATE TABLE `healthcare_facilities` (
   `licensed_certified` varchar(255) DEFAULT NULL,
   `flag` varchar(255) DEFAULT NULL,
@@ -223,14 +271,14 @@ CREATE TABLE `healthcare_facilities` (
   `trauma_ctr` varchar(255) DEFAULT NULL,
   `type_of_care` varchar(255) DEFAULT NULL,
   `critical_access_hospital` varchar(255) DEFAULT NULL,
-  `data_date` varchar(255) DEFAULT NULL,
-  KEY `hcai_id` (`hcai_id`)
+  `data_date` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Table structure for table `healthcare_facilities_across_time`
 --
 
+DROP TABLE IF EXISTS `healthcare_facilities_across_time`;
 CREATE TABLE `healthcare_facilities_across_time` (
   `state_fiscal_year` char(10) DEFAULT NULL,
   `county_name` varchar(63) DEFAULT NULL,
@@ -243,6 +291,7 @@ CREATE TABLE `healthcare_facilities_across_time` (
 -- Table structure for table `healthcare_facilities_digests`
 --
 
+DROP TABLE IF EXISTS `healthcare_facilities_digests`;
 CREATE TABLE `healthcare_facilities_digests` (
   `facid` char(9) DEFAULT NULL,
   `update_date` char(10) DEFAULT NULL,
@@ -252,9 +301,298 @@ CREATE TABLE `healthcare_facilities_digests` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `hhs_program_annual_counts`
+--
+
+DROP TABLE IF EXISTS `hhs_program_annual_counts`;
+CREATE TABLE `hhs_program_annual_counts` (
+  `fileyear` varchar(63) DEFAULT NULL,
+  `program` varchar(63) DEFAULT NULL,
+  `level` varchar(63) DEFAULT NULL,
+  `level_num` varchar(63) DEFAULT NULL,
+  `person` int DEFAULT NULL,
+  `cases` int DEFAULT NULL,
+  `medical` int DEFAULT NULL,
+  `aca` int DEFAULT NULL,
+  `fpact` int DEFAULT NULL,
+  `calfresh` int DEFAULT NULL,
+  `calworks` int DEFAULT NULL,
+  `ihhs` int DEFAULT NULL,
+  `child_welfare` int DEFAULT NULL,
+  `foster_care` int DEFAULT NULL,
+  `dds` int DEFAULT NULL,
+  `wic` int DEFAULT NULL,
+  `black` int DEFAULT NULL,
+  `white` int DEFAULT NULL,
+  `hispanic` int DEFAULT NULL,
+  `asian_pi` int DEFAULT NULL,
+  `native_american` int DEFAULT NULL,
+  `other_missing` int DEFAULT NULL,
+  `female` int DEFAULT NULL,
+  `male` int DEFAULT NULL,
+  `unknown_gender` int DEFAULT NULL,
+  `age1_missing` int DEFAULT NULL,
+  `age_17_and_under` int DEFAULT NULL,
+  `age_18_and_over` int DEFAULT NULL,
+  `age_18_to_64` int DEFAULT NULL,
+  `age_65_and_over` int DEFAULT NULL,
+  `age_18_to_59` int DEFAULT NULL,
+  `age_60_and_over` int DEFAULT NULL,
+  `1_program` int DEFAULT NULL,
+  `2_program` int DEFAULT NULL,
+  `3_program` int DEFAULT NULL,
+  `4_program` int DEFAULT NULL,
+  `5_plus_program` int DEFAULT NULL,
+  `1_dept` int DEFAULT NULL,
+  `2_dept` int DEFAULT NULL,
+  `3_dept` int DEFAULT NULL,
+  `4_dept` int DEFAULT NULL,
+  `fc_age_missing` int DEFAULT NULL,
+  `age_0` int DEFAULT NULL,
+  `age_1_to_2` int DEFAULT NULL,
+  `age_3_to_5` int DEFAULT NULL,
+  `age_6_to_10` int DEFAULT NULL,
+  `age_11_to_15` int DEFAULT NULL,
+  `age_16_to_17` int DEFAULT NULL,
+  `age_18_to_20` int DEFAULT NULL,
+  `wic_age_adult_missing` int DEFAULT NULL,
+  `age_less_than_19` int DEFAULT NULL,
+  `age_20_to_24` int DEFAULT NULL,
+  `age_25_to_29` int DEFAULT NULL,
+  `age_30_to_34` int DEFAULT NULL,
+  `age_35_and_over` int DEFAULT NULL,
+  `wic_age_child_missing` int DEFAULT NULL,
+  `wic_age_0` int DEFAULT NULL,
+  `wic_age_1` int DEFAULT NULL,
+  `wic_age_2` int DEFAULT NULL,
+  `wic_age_3` int DEFAULT NULL,
+  `wic_age_4` int DEFAULT NULL,
+  `wic_age_5_to_19` int DEFAULT NULL,
+  `wic_20_and_over` int DEFAULT NULL,
+  KEY `fileyear` (`fileyear`,`program`,`level`,`level_num`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `hhs_program_annual_masks`
+--
+
+DROP TABLE IF EXISTS `hhs_program_annual_masks`;
+CREATE TABLE `hhs_program_annual_masks` (
+  `fileyear` varchar(63) DEFAULT NULL,
+  `program` varchar(63) DEFAULT NULL,
+  `level` varchar(63) DEFAULT NULL,
+  `level_num` varchar(63) DEFAULT NULL,
+  `person` varchar(63) DEFAULT NULL,
+  `cases` varchar(63) DEFAULT NULL,
+  `medical` varchar(63) DEFAULT NULL,
+  `aca` varchar(63) DEFAULT NULL,
+  `fpact` varchar(63) DEFAULT NULL,
+  `calfresh` varchar(63) DEFAULT NULL,
+  `calworks` varchar(63) DEFAULT NULL,
+  `ihhs` varchar(63) DEFAULT NULL,
+  `child_welfare` varchar(63) DEFAULT NULL,
+  `foster_care` varchar(63) DEFAULT NULL,
+  `dds` varchar(63) DEFAULT NULL,
+  `wic` varchar(63) DEFAULT NULL,
+  `black` varchar(63) DEFAULT NULL,
+  `white` varchar(63) DEFAULT NULL,
+  `hispanic` varchar(63) DEFAULT NULL,
+  `asian_pi` varchar(63) DEFAULT NULL,
+  `native_american` varchar(63) DEFAULT NULL,
+  `other_missing` varchar(63) DEFAULT NULL,
+  `female` varchar(63) DEFAULT NULL,
+  `male` varchar(63) DEFAULT NULL,
+  `unknown_gender` varchar(63) DEFAULT NULL,
+  `age1_missing` varchar(63) DEFAULT NULL,
+  `age_17_and_under` varchar(63) DEFAULT NULL,
+  `age_18_and_over` varchar(63) DEFAULT NULL,
+  `age_18_to_64` varchar(63) DEFAULT NULL,
+  `age_65_and_over` varchar(63) DEFAULT NULL,
+  `age_18_to_59` varchar(63) DEFAULT NULL,
+  `age_60_and_over` varchar(63) DEFAULT NULL,
+  `1_program` varchar(63) DEFAULT NULL,
+  `2_program` varchar(63) DEFAULT NULL,
+  `3_program` varchar(63) DEFAULT NULL,
+  `4_program` varchar(63) DEFAULT NULL,
+  `5_plus_program` varchar(63) DEFAULT NULL,
+  `1_dept` varchar(63) DEFAULT NULL,
+  `2_dept` varchar(63) DEFAULT NULL,
+  `3_dept` varchar(63) DEFAULT NULL,
+  `4_dept` varchar(63) DEFAULT NULL,
+  `fc_age_missing` varchar(63) DEFAULT NULL,
+  `age_0` varchar(63) DEFAULT NULL,
+  `age_1_to_2` varchar(63) DEFAULT NULL,
+  `age_3_to_5` varchar(63) DEFAULT NULL,
+  `age_6_to_10` varchar(63) DEFAULT NULL,
+  `age_11_to_15` varchar(63) DEFAULT NULL,
+  `age_16_to_17` varchar(63) DEFAULT NULL,
+  `age_18_to_20` varchar(63) DEFAULT NULL,
+  `wic_age_adult_missing` varchar(63) DEFAULT NULL,
+  `age_less_than_19` varchar(63) DEFAULT NULL,
+  `age_20_to_24` varchar(63) DEFAULT NULL,
+  `age_25_to_29` varchar(63) DEFAULT NULL,
+  `age_30_to_34` varchar(63) DEFAULT NULL,
+  `age_35_and_over` varchar(63) DEFAULT NULL,
+  `wic_age_child_missing` varchar(63) DEFAULT NULL,
+  `wic_age_0` varchar(63) DEFAULT NULL,
+  `wic_age_1` varchar(63) DEFAULT NULL,
+  `wic_age_2` varchar(63) DEFAULT NULL,
+  `wic_age_3` varchar(63) DEFAULT NULL,
+  `wic_age_4` varchar(63) DEFAULT NULL,
+  `wic_age_5_to_19` varchar(63) DEFAULT NULL,
+  `wic_20_and_over` varchar(63) DEFAULT NULL,
+  KEY `fileyear` (`fileyear`,`program`,`level`,`level_num`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `hhs_program_july_counts`
+--
+
+DROP TABLE IF EXISTS `hhs_program_july_counts`;
+CREATE TABLE `hhs_program_july_counts` (
+  `fileyear` varchar(63) DEFAULT NULL,
+  `program` varchar(63) DEFAULT NULL,
+  `level` varchar(63) DEFAULT NULL,
+  `level_num` varchar(63) DEFAULT NULL,
+  `person` int DEFAULT NULL,
+  `cases` int DEFAULT NULL,
+  `medical` int DEFAULT NULL,
+  `aca` int DEFAULT NULL,
+  `fpact` int DEFAULT NULL,
+  `calfresh` int DEFAULT NULL,
+  `calworks` int DEFAULT NULL,
+  `ihhs` int DEFAULT NULL,
+  `child_welfare` int DEFAULT NULL,
+  `foster_care` int DEFAULT NULL,
+  `dds` int DEFAULT NULL,
+  `wic` int DEFAULT NULL,
+  `black` int DEFAULT NULL,
+  `white` int DEFAULT NULL,
+  `hispanic` int DEFAULT NULL,
+  `asian_pi` int DEFAULT NULL,
+  `native_american` int DEFAULT NULL,
+  `other_missing` int DEFAULT NULL,
+  `female` int DEFAULT NULL,
+  `male` int DEFAULT NULL,
+  `unknown_gender` int DEFAULT NULL,
+  `age1_missing` int DEFAULT NULL,
+  `age_17_and_under` int DEFAULT NULL,
+  `age_18_and_over` int DEFAULT NULL,
+  `age_18_to_64` int DEFAULT NULL,
+  `age_65_and_over` int DEFAULT NULL,
+  `age_18_to_59` int DEFAULT NULL,
+  `age_60_and_over` int DEFAULT NULL,
+  `1_program` int DEFAULT NULL,
+  `2_program` int DEFAULT NULL,
+  `3_program` int DEFAULT NULL,
+  `4_program` int DEFAULT NULL,
+  `5_plus_program` int DEFAULT NULL,
+  `1_dept` int DEFAULT NULL,
+  `2_dept` int DEFAULT NULL,
+  `3_dept` int DEFAULT NULL,
+  `4_dept` int DEFAULT NULL,
+  `fc_age_missing` int DEFAULT NULL,
+  `age_0` int DEFAULT NULL,
+  `age_1_to_2` int DEFAULT NULL,
+  `age_3_to_5` int DEFAULT NULL,
+  `age_6_to_10` int DEFAULT NULL,
+  `age_11_to_15` int DEFAULT NULL,
+  `age_16_to_17` int DEFAULT NULL,
+  `age_18_to_20` int DEFAULT NULL,
+  `wic_age_adult_missing` int DEFAULT NULL,
+  `age_less_than_19` int DEFAULT NULL,
+  `age_20_to_24` int DEFAULT NULL,
+  `age_25_to_29` int DEFAULT NULL,
+  `age_30_to_34` int DEFAULT NULL,
+  `age_35_and_over` int DEFAULT NULL,
+  `wic_age_child_missing` int DEFAULT NULL,
+  `wic_age_0` int DEFAULT NULL,
+  `wic_age_1` int DEFAULT NULL,
+  `wic_age_2` int DEFAULT NULL,
+  `wic_age_3` int DEFAULT NULL,
+  `wic_age_4` int DEFAULT NULL,
+  `wic_age_5_to_19` int DEFAULT NULL,
+  `wic_20_and_over` int DEFAULT NULL,
+  KEY `fileyear` (`fileyear`,`program`,`level`,`level_num`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `hhs_program_july_masks`
+--
+
+DROP TABLE IF EXISTS `hhs_program_july_masks`;
+CREATE TABLE `hhs_program_july_masks` (
+  `fileyear` varchar(63) DEFAULT NULL,
+  `program` varchar(63) DEFAULT NULL,
+  `level` varchar(63) DEFAULT NULL,
+  `level_num` varchar(63) DEFAULT NULL,
+  `person` varchar(63) DEFAULT NULL,
+  `cases` varchar(63) DEFAULT NULL,
+  `medical` varchar(63) DEFAULT NULL,
+  `aca` varchar(63) DEFAULT NULL,
+  `fpact` varchar(63) DEFAULT NULL,
+  `calfresh` varchar(63) DEFAULT NULL,
+  `calworks` varchar(63) DEFAULT NULL,
+  `ihhs` varchar(63) DEFAULT NULL,
+  `child_welfare` varchar(63) DEFAULT NULL,
+  `foster_care` varchar(63) DEFAULT NULL,
+  `dds` varchar(63) DEFAULT NULL,
+  `wic` varchar(63) DEFAULT NULL,
+  `black` varchar(63) DEFAULT NULL,
+  `white` varchar(63) DEFAULT NULL,
+  `hispanic` varchar(63) DEFAULT NULL,
+  `asian_pi` varchar(63) DEFAULT NULL,
+  `native_american` varchar(63) DEFAULT NULL,
+  `other_missing` varchar(63) DEFAULT NULL,
+  `female` varchar(63) DEFAULT NULL,
+  `male` varchar(63) DEFAULT NULL,
+  `unknown_gender` varchar(63) DEFAULT NULL,
+  `age1_missing` varchar(63) DEFAULT NULL,
+  `age_17_and_under` varchar(63) DEFAULT NULL,
+  `age_18_and_over` varchar(63) DEFAULT NULL,
+  `age_18_to_64` varchar(63) DEFAULT NULL,
+  `age_65_and_over` varchar(63) DEFAULT NULL,
+  `age_18_to_59` varchar(63) DEFAULT NULL,
+  `age_60_and_over` varchar(63) DEFAULT NULL,
+  `1_program` varchar(63) DEFAULT NULL,
+  `2_program` varchar(63) DEFAULT NULL,
+  `3_program` varchar(63) DEFAULT NULL,
+  `4_program` varchar(63) DEFAULT NULL,
+  `5_plus_program` varchar(63) DEFAULT NULL,
+  `1_dept` varchar(63) DEFAULT NULL,
+  `2_dept` varchar(63) DEFAULT NULL,
+  `3_dept` varchar(63) DEFAULT NULL,
+  `4_dept` varchar(63) DEFAULT NULL,
+  `fc_age_missing` varchar(63) DEFAULT NULL,
+  `age_0` varchar(63) DEFAULT NULL,
+  `age_1_to_2` varchar(63) DEFAULT NULL,
+  `age_3_to_5` varchar(63) DEFAULT NULL,
+  `age_6_to_10` varchar(63) DEFAULT NULL,
+  `age_11_to_15` varchar(63) DEFAULT NULL,
+  `age_16_to_17` varchar(63) DEFAULT NULL,
+  `age_18_to_20` varchar(63) DEFAULT NULL,
+  `wic_age_adult_missing` varchar(63) DEFAULT NULL,
+  `age_less_than_19` varchar(63) DEFAULT NULL,
+  `age_20_to_24` varchar(63) DEFAULT NULL,
+  `age_25_to_29` varchar(63) DEFAULT NULL,
+  `age_30_to_34` varchar(63) DEFAULT NULL,
+  `age_35_and_over` varchar(63) DEFAULT NULL,
+  `wic_age_child_missing` varchar(63) DEFAULT NULL,
+  `wic_age_0` varchar(63) DEFAULT NULL,
+  `wic_age_1` varchar(63) DEFAULT NULL,
+  `wic_age_2` varchar(63) DEFAULT NULL,
+  `wic_age_3` varchar(63) DEFAULT NULL,
+  `wic_age_4` varchar(63) DEFAULT NULL,
+  `wic_age_5_to_19` varchar(63) DEFAULT NULL,
+  `wic_20_and_over` varchar(63) DEFAULT NULL,
+  KEY `fileyear` (`fileyear`,`program`,`level`,`level_num`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `hospital_buildings`
 --
 
+DROP TABLE IF EXISTS `hospital_buildings`;
 CREATE TABLE `hospital_buildings` (
   `county_code` varchar(31) DEFAULT NULL,
   `perm_id` varchar(11) DEFAULT NULL,
@@ -280,6 +618,7 @@ CREATE TABLE `hospital_buildings` (
 -- Table structure for table `inpatient_death_causes`
 --
 
+DROP TABLE IF EXISTS `inpatient_death_causes`;
 CREATE TABLE `inpatient_death_causes` (
   `icdcm_code` varchar(31) NOT NULL,
   `diagnosis_description` varchar(1027) DEFAULT NULL,
@@ -290,6 +629,7 @@ CREATE TABLE `inpatient_death_causes` (
 -- Table structure for table `inpatient_deaths`
 --
 
+DROP TABLE IF EXISTS `inpatient_deaths`;
 CREATE TABLE `inpatient_deaths` (
   `icdcm_code` varchar(31) DEFAULT NULL,
   `total` int DEFAULT NULL,
@@ -300,6 +640,7 @@ CREATE TABLE `inpatient_deaths` (
 -- Table structure for table `inpatient_diagnoses`
 --
 
+DROP TABLE IF EXISTS `inpatient_diagnoses`;
 CREATE TABLE `inpatient_diagnoses` (
   `icdcm_code` varchar(31) DEFAULT NULL,
   `diagnosis_description` varchar(1027) DEFAULT NULL,
@@ -311,6 +652,7 @@ CREATE TABLE `inpatient_diagnoses` (
 -- Table structure for table `inpatient_diagnosis`
 --
 
+DROP TABLE IF EXISTS `inpatient_diagnosis`;
 CREATE TABLE `inpatient_diagnosis` (
   `icdcm_code` varchar(31) DEFAULT NULL,
   `diagnosis_description` varchar(1027) DEFAULT NULL,
@@ -322,6 +664,7 @@ CREATE TABLE `inpatient_diagnosis` (
 -- Table structure for table `inpatient_procedures`
 --
 
+DROP TABLE IF EXISTS `inpatient_procedures`;
 CREATE TABLE `inpatient_procedures` (
   `icdpcs_code` varchar(31) DEFAULT NULL,
   `procedure_description` varchar(1027) DEFAULT NULL,
@@ -333,6 +676,7 @@ CREATE TABLE `inpatient_procedures` (
 -- Table structure for table `licensed_facilities`
 --
 
+DROP TABLE IF EXISTS `licensed_facilities`;
 CREATE TABLE `licensed_facilities` (
   `period` char(8) DEFAULT NULL,
   `oshpd_id` varchar(63) DEFAULT NULL,
@@ -358,6 +702,7 @@ CREATE TABLE `licensed_facilities` (
 -- Table structure for table `pccu_facilities`
 --
 
+DROP TABLE IF EXISTS `pccu_facilities`;
 CREATE TABLE `pccu_facilities` (
   `pk` int NOT NULL,
   `sheetname` varchar(63) DEFAULT NULL,
@@ -407,6 +752,7 @@ CREATE TABLE `pccu_facilities` (
 -- Table structure for table `pccu_files`
 --
 
+DROP TABLE IF EXISTS `pccu_files`;
 CREATE TABLE `pccu_files` (
   `pk` int NOT NULL,
   `name` varchar(127) DEFAULT NULL,
@@ -418,10 +764,52 @@ CREATE TABLE `pccu_files` (
 -- Table structure for table `updates`
 --
 
+DROP TABLE IF EXISTS `updates`;
 CREATE TABLE `updates` (
   `dataset_id` varchar(127) DEFAULT NULL,
   `updated` bigint DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Table structure for table `watershed_cases`
+--
 
--- Dump completed on 2024-07-26 12:09:12
+DROP TABLE IF EXISTS `watershed_cases`;
+CREATE TABLE `watershed_cases` (
+  `episode_date` char(10) DEFAULT NULL,
+  `site_pk` int DEFAULT NULL,
+  `masked` char(1) DEFAULT NULL,
+  `cases` int DEFAULT NULL,
+  `cum_cases` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `watershed_sites`
+--
+
+DROP TABLE IF EXISTS `watershed_sites`;
+CREATE TABLE `watershed_sites` (
+  `pk` int NOT NULL,
+  `short_name` varchar(255) DEFAULT NULL,
+  `full_name` varchar(255) DEFAULT NULL,
+  `area_type` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`pk`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `wic_products`
+--
+
+DROP TABLE IF EXISTS `wic_products`;
+CREATE TABLE `wic_products` (
+  `upc` varchar(15) DEFAULT NULL,
+  `category` char(2) DEFAULT NULL,
+  `cat_desc` varchar(127) DEFAULT NULL,
+  `sub_category` char(3) DEFAULT NULL,
+  `sub_cat_desc` varchar(127) DEFAULT NULL,
+  `prod_desc_and_size` varchar(127) DEFAULT NULL,
+  `uom` varchar(5) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- Dump completed on 2024-07-31 14:59:10

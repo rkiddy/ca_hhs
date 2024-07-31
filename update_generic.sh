@@ -53,3 +53,6 @@ if [ "$1" != "--only-fetch" ] && [ -f $script.py ]; then
     #
     mv -f *.csv *.xls* *.json *.zip sources/ 2>/dev/null
 fi
+
+SQLALCHEMY_SILENCE_UBER_WARNING=1 ./.venv/bin/python ../update_time.py
+

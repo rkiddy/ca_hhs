@@ -10,6 +10,12 @@ table chargemasters_hcai_ids HANDCURATED
 dataset dataset-catalog
 table catalog
 
+dataset health-and-human-services-program-counts
+table hhs_program_annual_counts
+table hhs_program_annual_masks
+table hhs_program_july_counts
+table hhs_program_july_masks
+
 dataset healthcare-facility-locations
 table healthcare_facilities
 table healthcare_facilities_across_time
