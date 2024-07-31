@@ -10,4 +10,5 @@
 **/*.xls
 **/*.xlsx
 **/*.zip
+**/sources
 
