@@ -92,7 +92,7 @@ TBD
 <summary>oshpd-healthcare-facilities-BLOCKED</summary>
 
 This dataset is marked on the CalHHS Open Data Portal as blocked. No idea why.
-<details>
+</details>
 
 <details>
 <summary>primary-care-clinic-annual-utilization-data</summary>
