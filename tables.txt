@@ -37,6 +37,10 @@ table pccu_files
 dataset statewide-death-profiles
 table deaths
 
+dataset covid-19-sewershed-restricted-case-data
+table watershed_cases
+table watershed_sites
+
 dataset women-infants-and-children-wic-authorized-vendors
 table authorized_wic_vendors
 
