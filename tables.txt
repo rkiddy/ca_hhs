@@ -1,11 +1,22 @@
 resource_type resource_name commnent
 
+dataset ??????
+table facility_admins
+table facility_hospitals
+
+admin_tools:
+table updates
+
 dataset chargemasters
 table chargemasters_files
 table chargemasters_common25
 table chargemasters_dirs
 table chargemasters_cpt_codes MAYBE_NOT_WORKING
 table chargemasters_hcai_ids HANDCURATED
+
+dataset covid-19-sewershed-restricted-case-data
+table watershed_cases
+table watershed_sites
 
 dataset dataset-catalog
 table catalog
@@ -48,17 +59,9 @@ table pccu_files
 dataset statewide-death-profiles
 table deaths
 
-dataset covid-19-sewershed-restricted-case-data
-table watershed_cases
-table watershed_sites
+dataset suspended-and-ineligible-list-s-i-list
+table suspended-and-ineligible-list-s-i-list
 
 dataset women-infants-and-children-wic-authorized-vendors
 table authorized_wic_vendors
-
-dataset ??????
-table facility_admins
-table facility_hospitals
-
-admin_tools:
-table updates
 

@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.37, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.39, for Linux (x86_64)
 --
 -- Host: localhost    Database: ca_hhs
 -- ------------------------------------------------------
--- Server version	8.0.37-0ubuntu0.22.04.3
+-- Server version	8.0.39-0ubuntu0.22.04.1
 
 
 --
@@ -699,6 +699,52 @@ CREATE TABLE `licensed_facilities` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `payments_snapshot_enrollment`
+--
+
+DROP TABLE IF EXISTS `payments_snapshot_enrollment`;
+CREATE TABLE `payments_snapshot_enrollment` (
+  `product_type` varchar(63) DEFAULT NULL,
+  `reporting_year` int DEFAULT NULL,
+  `claim_type` varchar(63) DEFAULT NULL,
+  `payer_type` varchar(63) DEFAULT NULL,
+  `record_type` varchar(63) DEFAULT NULL,
+  `metric_id` int DEFAULT NULL,
+  `metric_name` varchar(63) DEFAULT NULL,
+  `count` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `payments_snapshot_medical`
+--
+
+DROP TABLE IF EXISTS `payments_snapshot_medical`;
+CREATE TABLE `payments_snapshot_medical` (
+  `procedure_code` char(5) DEFAULT NULL,
+  `procedure_code_type` varchar(31) DEFAULT NULL,
+  `procedure_category` varchar(127) DEFAULT NULL,
+  `reporting_year` int DEFAULT NULL,
+  `type_of_setting` varchar(63) DEFAULT NULL,
+  `payer_type` varchar(63) DEFAULT NULL,
+  `record_count` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `payments_snapshot_pharmaceutical`
+--
+
+DROP TABLE IF EXISTS `payments_snapshot_pharmaceutical`;
+CREATE TABLE `payments_snapshot_pharmaceutical` (
+  `national_drug_code` char(11) DEFAULT NULL,
+  `drug_name` varchar(63) DEFAULT NULL,
+  `reporting_year` int DEFAULT NULL,
+  `drug_class` varchar(63) DEFAULT NULL,
+  `brand_generic` varchar(63) DEFAULT NULL,
+  `payer_type` varchar(63) DEFAULT NULL,
+  `prescription_count` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `pccu_facilities`
 --
 
@@ -761,6 +807,24 @@ CREATE TABLE `pccu_files` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `providers_suspended_ineligible`
+--
+
+DROP TABLE IF EXISTS `providers_suspended_ineligible`;
+CREATE TABLE `providers_suspended_ineligible` (
+  `last_name` varchar(127) DEFAULT NULL,
+  `first_name` varchar(63) DEFAULT NULL,
+  `middle_name` varchar(63) DEFAULT NULL,
+  `doing_business_as` varchar(511) DEFAULT NULL,
+  `address` varchar(511) DEFAULT NULL,
+  `provider_type` varchar(255) DEFAULT NULL,
+  `license_number` varchar(63) DEFAULT NULL,
+  `provider_number` varchar(1027) DEFAULT NULL,
+  `date_of_suspension` varchar(10) DEFAULT NULL,
+  `active_period` varchar(63) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `updates`
 --
 
@@ -812,4 +876,4 @@ CREATE TABLE `wic_products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2024-07-31 14:59:10
+-- Dump completed on 2024-08-02 13:49:52
