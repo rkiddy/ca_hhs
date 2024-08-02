@@ -56,6 +56,9 @@ dataset primary-care-clinic-annual-utilization-data
 table pccu_facilities
 table pccu_files
 
+dataset profile-of-enrolled-medi-cal-fee-for-service-ffs-providers
+table medicaid_ffs_providers
+
 dataset statewide-death-profiles
 table deaths
 

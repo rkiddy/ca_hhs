@@ -699,6 +699,44 @@ CREATE TABLE `licensed_facilities` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `medicaid_ffs_providers`
+--
+
+DROP TABLE IF EXISTS `medicaid_ffs_providers`;
+CREATE TABLE `medicaid_ffs_providers` (
+  `objectid` varchar(63) DEFAULT NULL,
+  `provider_source` varchar(63) DEFAULT NULL,
+  `provider_number` varchar(63) DEFAULT NULL,
+  `npi` varchar(63) DEFAULT NULL,
+  `owner_number` varchar(63) DEFAULT NULL,
+  `service_location_number` varchar(63) DEFAULT NULL,
+  `legal_name` varchar(63) DEFAULT NULL,
+  `enroll_status_eff_dt` varchar(63) DEFAULT NULL,
+  `provider_taxonomy` varchar(63) DEFAULT NULL,
+  `anc_provider_type` varchar(63) DEFAULT NULL,
+  `fi_provider_type_cd` varchar(63) DEFAULT NULL,
+  `fi_provider_type` varchar(255) DEFAULT NULL,
+  `provider_license` varchar(63) DEFAULT NULL,
+  `fi_provider_specialty_cd` varchar(63) DEFAULT NULL,
+  `fi_provider_specialty` varchar(63) DEFAULT NULL,
+  `out_of_state_indicator` varchar(63) DEFAULT NULL,
+  `in_out_state` varchar(63) DEFAULT NULL,
+  `address_attention` varchar(63) DEFAULT NULL,
+  `address` varchar(63) DEFAULT NULL,
+  `address2` varchar(63) DEFAULT NULL,
+  `city` varchar(63) DEFAULT NULL,
+  `state` varchar(63) DEFAULT NULL,
+  `zip` varchar(63) DEFAULT NULL,
+  `zip_4` varchar(63) DEFAULT NULL,
+  `dhcs_county_cd` varchar(63) DEFAULT NULL,
+  `fips_county_cd` varchar(63) DEFAULT NULL,
+  `county` varchar(63) DEFAULT NULL,
+  `latitude` varchar(63) DEFAULT NULL,
+  `longitude` varchar(63) DEFAULT NULL,
+  `countyname` varchar(63) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `payments_snapshot_enrollment`
 --
 
@@ -876,4 +914,4 @@ CREATE TABLE `wic_products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2024-08-02 13:49:52
+-- Dump completed on 2024-08-02 14:40:44
