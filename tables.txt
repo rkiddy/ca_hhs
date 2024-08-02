@@ -20,6 +20,11 @@ dataset healthcare-facility-locations
 table healthcare_facilities
 table healthcare_facilities_across_time
 
+dataset healthcare-payments-data-snapshot
+table payments_snapshot_enrollment
+table payments_snapshot_medical
+table payments_snapshot_pharmaceutical
+
 dataset hospital-building-data
 table hospital_buildings
 
