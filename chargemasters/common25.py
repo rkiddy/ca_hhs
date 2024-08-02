@@ -4,9 +4,12 @@ import argparse
 import re
 import traceback
 
-import config
 import excel
 from sqlalchemy import create_engine
+
+sys.path.append('..')
+
+import config
 
 cfg = config.cfg()
 

@@ -5,6 +5,8 @@ import os
 from openpyxl import load_workbook
 from sqlalchemy import create_engine
 
+sys.path.append('..')
+
 import config
 
 cfg = config.cfg()
