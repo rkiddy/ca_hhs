@@ -24,7 +24,7 @@ fi
 
 source ./deets.sh
 
-if [ "$1" != "--no-fetch" ]; then
+if [ "$1" != "--no-fetch" ] && [ "$uuid1" != "none" ]; then
 
     echo "fetching..."
 
@@ -54,5 +54,9 @@ if [ "$1" != "--only-fetch" ] && [ -f $script.py ]; then
     mv -f *.csv *.xls* *.json *.zip sources/ 2>/dev/null
 fi
 
-SQLALCHEMY_SILENCE_UBER_WARNING=1 ./.venv/bin/python ../update_time.py
+if [ -f ./.venv/bin/python ]; then
+    SQLALCHEMY_SILENCE_UBER_WARNING=1 ./.venv/bin/python ../update_time.py
+else
+    echo "No note taken of update time. No python present."
+fi
 
