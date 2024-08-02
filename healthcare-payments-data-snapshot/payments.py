@@ -119,4 +119,6 @@ if __name__ == '__main__':
                     print(f"sql: {sql}")
                     traceback.print_exc()
 
+    sql = "update payments_snapshot_enrollment set product_type = 'All' where product_type = 'ALL'"
+    db_exec(conn, sql)
 
