@@ -32,7 +32,7 @@ if [ "$1" != "--no-fetch" ] && [ "$uuid1" != "none" ]; then
         mkdir sources
     fi
 
-    mv -f *.csv *.xls* *.json *.zip sources/ 2>/dev/null
+    mv -f *.csv *.xls* *.docx *.json *.zip sources/ 2>/dev/null
 
     wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id-$hash.zip"
 
@@ -51,7 +51,7 @@ if [ "$1" != "--only-fetch" ] && [ -f $script.py ]; then
 
     # move the current data sources to the sources directory
     #
-    mv -f *.csv *.xls* *.json *.zip sources/ 2>/dev/null
+    mv -f *.csv *.xls* *.docx *.json *.zip sources/ 2>/dev/null
 fi
 
 if [ -f ./.venv/bin/python ]; then
