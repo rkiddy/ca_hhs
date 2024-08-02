@@ -1,7 +1,9 @@
 
 import csv
+import os
 import sys
 import traceback
+from os import path
 
 from sqlalchemy import create_engine
 
@@ -98,6 +100,60 @@ if __name__ == '__main__':
                 vals.append(fix(row[key]))
 
             sql = "insert into providers_suspended_ineligible ("
+            sql += ', '.join(cols)
+            sql += ') values ('
+            sql += ', '.join(vals)
+            sql += ')'
+
+            # print(f"sql: {sql}")
+
+            db_exec(conn, sql)
+
+    os.system("/usr/bin/mv ./sources/UPDATED.csv .")
+
+    db_exec(conn, "drop table if exists providers_suspended_ineligible_us")
+
+    sql = """create table providers_suspended_ineligible_us (
+              lastname varchar(63),
+              firstname varchar(31),
+              midname  varchar(31),
+              busname  varchar(31),
+              general  varchar(31),
+              specialty  varchar(31),
+              upin  varchar(31),
+              npi  varchar(31),
+              dob  varchar(31),
+              address  varchar(31),
+              city  varchar(31),
+              state  varchar(31),
+              zip  varchar(31),
+              excltype  varchar(31),
+              excldate  varchar(31),
+              reindate  varchar(31),
+              waiverdate  varchar(31),
+              wvrstate  varchar(31))"""
+    db_exec(conn, sql)
+
+    with open('UPDATED.csv', newline='', encoding='latin1') as csvfile:
+        rdr = csv.DictReader(csvfile)
+
+        for row in rdr:
+
+            next_row = dict()
+
+            for key in row:
+                next_row[fix_column_head(key)] = row[key]
+
+            row = next_row
+
+            cols = list()
+            vals = list()
+
+            for key in row:
+                cols.append(key)
+                vals.append(fix(row[key]))
+
+            sql = "insert into providers_suspended_ineligible_us ("
             sql += ', '.join(cols)
             sql += ') values ('
             sql += ', '.join(vals)
