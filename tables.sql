@@ -17,8 +17,8 @@ CREATE TABLE `authorized_wic_vendors` (
   `city` varchar(31) DEFAULT NULL,
   `zip` varchar(10) DEFAULT NULL,
   `county` varchar(31) DEFAULT NULL,
-  `latitude` varchar(13) DEFAULT NULL,
-  `longitude` varchar(13) DEFAULT NULL
+  `latitude` decimal(12,8) DEFAULT NULL,
+  `longitude` decimal(12,8) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -259,8 +259,8 @@ CREATE TABLE `healthcare_facilities` (
   `license_effective_date` varchar(255) DEFAULT NULL,
   `license_expiration_date` varchar(255) DEFAULT NULL,
   `entity_type_description` varchar(255) DEFAULT NULL,
-  `latitude` varchar(255) DEFAULT NULL,
-  `longitude` varchar(255) DEFAULT NULL,
+  `latitude` decimal(12,8) DEFAULT NULL,
+  `longitude` decimal(12,8) DEFAULT NULL,
   `location` varchar(255) DEFAULT NULL,
   `hcai_id` varchar(9) DEFAULT NULL,
   `cclho_code` varchar(255) DEFAULT NULL,
@@ -694,8 +694,8 @@ CREATE TABLE `licensed_facilities` (
   `facility_status_date` varchar(63) DEFAULT NULL,
   `license_type_desc` varchar(63) DEFAULT NULL,
   `license_category_desc` varchar(63) DEFAULT NULL,
-  `latitude` varchar(31) DEFAULT NULL,
-  `longitude` varchar(31) DEFAULT NULL
+  `latitude` decimal(12,8) DEFAULT NULL,
+  `longitude` decimal(12,8) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -731,8 +731,8 @@ CREATE TABLE `medicaid_ffs_providers` (
   `dhcs_county_cd` varchar(63) DEFAULT NULL,
   `fips_county_cd` varchar(63) DEFAULT NULL,
   `county` varchar(63) DEFAULT NULL,
-  `latitude` varchar(63) DEFAULT NULL,
-  `longitude` varchar(63) DEFAULT NULL,
+  `latitude` decimal(12,8) DEFAULT NULL,
+  `longitude` decimal(12,8) DEFAULT NULL,
   `countyname` varchar(63) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -863,6 +863,65 @@ CREATE TABLE `providers_suspended_ineligible` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `providers_suspended_ineligible_us`
+--
+
+DROP TABLE IF EXISTS `providers_suspended_ineligible_us`;
+CREATE TABLE `providers_suspended_ineligible_us` (
+  `lastname` varchar(63) DEFAULT NULL,
+  `firstname` varchar(31) DEFAULT NULL,
+  `midname` varchar(31) DEFAULT NULL,
+  `busname` varchar(31) DEFAULT NULL,
+  `general` varchar(31) DEFAULT NULL,
+  `specialty` varchar(31) DEFAULT NULL,
+  `upin` varchar(31) DEFAULT NULL,
+  `npi` varchar(31) DEFAULT NULL,
+  `dob` varchar(31) DEFAULT NULL,
+  `address` varchar(31) DEFAULT NULL,
+  `city` varchar(31) DEFAULT NULL,
+  `state` varchar(31) DEFAULT NULL,
+  `zip` varchar(31) DEFAULT NULL,
+  `excltype` varchar(31) DEFAULT NULL,
+  `excldate` varchar(31) DEFAULT NULL,
+  `reindate` varchar(31) DEFAULT NULL,
+  `waiverdate` varchar(31) DEFAULT NULL,
+  `wvrstate` varchar(31) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `sud_facilities`
+--
+
+DROP TABLE IF EXISTS `sud_facilities`;
+CREATE TABLE `sud_facilities` (
+  `x` varchar(63) DEFAULT NULL,
+  `y` varchar(63) DEFAULT NULL,
+  `objectid` varchar(63) DEFAULT NULL,
+  `county_code` varchar(63) DEFAULT NULL,
+  `record_id` varchar(63) DEFAULT NULL,
+  `legal_name` varchar(255) DEFAULT NULL,
+  `program_name` varchar(255) DEFAULT NULL,
+  `facility_address` varchar(255) DEFAULT NULL,
+  `facility_address_2` varchar(255) DEFAULT NULL,
+  `additional_facility_locations` varchar(255) DEFAULT NULL,
+  `facility_city` varchar(63) DEFAULT NULL,
+  `facility_state` varchar(63) DEFAULT NULL,
+  `facility_zip` varchar(63) DEFAULT NULL,
+  `facility_phone` varchar(63) DEFAULT NULL,
+  `type_of_application` varchar(63) DEFAULT NULL,
+  `service_type` varchar(63) DEFAULT NULL,
+  `resident_capacity` varchar(63) DEFAULT NULL,
+  `total_occupancy` varchar(63) DEFAULT NULL,
+  `expiration_date` varchar(63) DEFAULT NULL,
+  `target_population` varchar(63) DEFAULT NULL,
+  `incidental_medical_services` varchar(63) DEFAULT NULL,
+  `adolescent_waiver` varchar(63) DEFAULT NULL,
+  `latitude` varchar(63) DEFAULT NULL,
+  `longitude` varchar(63) DEFAULT NULL,
+  `countyname` varchar(63) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `updates`
 --
 
@@ -914,4 +973,4 @@ CREATE TABLE `wic_products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2024-08-02 14:40:44
+-- Dump completed on 2024-08-03 18:20:27

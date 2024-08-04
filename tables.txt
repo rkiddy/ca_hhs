@@ -62,6 +62,9 @@ table medicaid_ffs_providers
 dataset statewide-death-profiles
 table deaths
 
+dataset sud-recovery-treatment-facilities
+table sud_facilities
+
 dataset suspended-and-ineligible-list-s-i-list
 table suspended-and-ineligible-list-s-i-list
 
