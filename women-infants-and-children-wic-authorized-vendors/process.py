@@ -36,9 +36,14 @@ if __name__ == '__main__':
 
     sql = """
           create table authorized_wic_vendors (
-              vendor varchar(127), address1 varchar(127), address2 varchar(127),
-              city varchar(31), zip varchar(10), county varchar(31),
-              latitude varchar(13), longitude varchar(13))"""
+              vendor varchar(127),
+              address1 varchar(127),
+              address2 varchar(127),
+              city varchar(31),
+              zip varchar(10),
+              county varchar(31),
+              latitude decimal(12,8),
+              longitude decimal(12,8))"""
     db_exec(conn, sql)
 
     f = "women-infants-and-children-wic-authorized-vendors-.csv"

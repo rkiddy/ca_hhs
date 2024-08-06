@@ -76,8 +76,8 @@ if __name__ == '__main__':
               fips_county_cd varchar(63),
               county varchar(63),
               latitude varchar(63),
-              longitude varchar(63),
-              countyname varchar(63))"""
+              longitude decimal(12,8),
+              countyname decimal(12,8))"""
     db_exec(conn, sql)
 
     with open('medi_cal_ffs_provider_listing_7_29_24.csv', newline='', encoding='latin1') as csvfile:

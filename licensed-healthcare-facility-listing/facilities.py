@@ -55,8 +55,8 @@ if __name__ == '__main__':
                   facility_status_date varchar(63),
                   license_type_desc varchar(63),
                   license_category_desc varchar(63),
-                  latitude varchar(31),
-                  longitude varchar(31))"""
+                  latitude decimal(12,8),
+                  longitude decimal(12,8))"""
 
     db_exec(conn, sql)
 
