@@ -127,18 +127,21 @@ TBD
 <details>
 <summary>Glossary</summary>
 
-* ADAP - AIDS Drug Assistance Program
 * ACA - Affordable Care Act
+* ADAP - AIDS Drug Assistance Program
 * CalFresh
 * CalWORKs
 * CPS - Child Protective Services
-* DDS
+* DDS 
 * Family PACT
+* HAI - Hospital-Acquired Infection
 * IHSS
-* Medi-Cal
 * Medicaid
+* Medi-Cal
+* SIR - Standardized Infection Ratio
+* SMR - Standardized Mortality Ratio
 * SNAP
+* SUD - Substance-Use Disorder
 * TANF
 * WIC
 
-</details>

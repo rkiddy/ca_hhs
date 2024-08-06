@@ -889,6 +889,137 @@ CREATE TABLE `providers_suspended_ineligible_us` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `ssi_for_procedures_24`
+--
+
+DROP TABLE IF EXISTS `ssi_for_procedures_24`;
+CREATE TABLE `ssi_for_procedures_24` (
+  `year` int DEFAULT NULL,
+  `state` varchar(63) DEFAULT NULL,
+  `hai` varchar(63) DEFAULT NULL,
+  `operative_procedure` varchar(255) DEFAULT NULL,
+  `facility_id_1` varchar(63) DEFAULT NULL,
+  `facility_name_1` varchar(255) DEFAULT NULL,
+  `facility_id_2` varchar(63) DEFAULT NULL,
+  `facility_name_2` varchar(255) DEFAULT NULL,
+  `facility_id_3` varchar(63) DEFAULT NULL,
+  `facility_name_3` varchar(255) DEFAULT NULL,
+  `county` varchar(63) DEFAULT NULL,
+  `procedure_count` int DEFAULT NULL,
+  `infection_count` int DEFAULT NULL,
+  `predicted_infection_count` int DEFAULT NULL,
+  `sir` varchar(63) DEFAULT NULL,
+  `comparison` varchar(63) DEFAULT NULL,
+  `sir_ci_95_lower_limit` varchar(63) DEFAULT NULL,
+  `sir_ci_95_upper_limit` varchar(63) DEFAULT NULL,
+  `notes` varchar(1027) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `ssi_for_procedures_5`
+--
+
+DROP TABLE IF EXISTS `ssi_for_procedures_5`;
+CREATE TABLE `ssi_for_procedures_5` (
+  `year` int DEFAULT NULL,
+  `state` varchar(63) DEFAULT NULL,
+  `hai` varchar(63) DEFAULT NULL,
+  `operative_procedure` varchar(255) DEFAULT NULL,
+  `facility_id_1` varchar(63) DEFAULT NULL,
+  `facility_name_1` varchar(255) DEFAULT NULL,
+  `facility_id_2` varchar(63) DEFAULT NULL,
+  `facility_name_2` varchar(255) DEFAULT NULL,
+  `facility_id_3` varchar(63) DEFAULT NULL,
+  `facility_name_3` varchar(255) DEFAULT NULL,
+  `county` varchar(63) DEFAULT NULL,
+  `procedure_count` int DEFAULT NULL,
+  `infection_count` int DEFAULT NULL,
+  `predicted_infection_count` int DEFAULT NULL,
+  `sir` varchar(63) DEFAULT NULL,
+  `comparison` varchar(63) DEFAULT NULL,
+  `sir_ci_95_lower_limit` varchar(63) DEFAULT NULL,
+  `sir_ci_95_upper_limit` varchar(63) DEFAULT NULL,
+  `notes` varchar(1027) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `ssi_for_procedures_did_not_report`
+--
+
+DROP TABLE IF EXISTS `ssi_for_procedures_did_not_report`;
+CREATE TABLE `ssi_for_procedures_did_not_report` (
+  `year` int DEFAULT NULL,
+  `state` varchar(13) DEFAULT NULL,
+  `county` varchar(31) DEFAULT NULL,
+  `hai` varchar(255) DEFAULT NULL,
+  `facility_id` varchar(63) DEFAULT NULL,
+  `facility_name` varchar(1027) DEFAULT NULL,
+  `facility_type` varchar(127) DEFAULT NULL,
+  `number_months_expected` int DEFAULT NULL,
+  `notes` varchar(1027) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `ssi_for_procedures_in_patients`
+--
+
+DROP TABLE IF EXISTS `ssi_for_procedures_in_patients`;
+CREATE TABLE `ssi_for_procedures_in_patients` (
+  `year` int DEFAULT NULL,
+  `state` varchar(63) DEFAULT NULL,
+  `hai` varchar(63) DEFAULT NULL,
+  `facility_id` varchar(63) DEFAULT NULL,
+  `facility_name` varchar(1027) DEFAULT NULL,
+  `facility_type` varchar(63) DEFAULT NULL,
+  `county` varchar(63) DEFAULT NULL,
+  `hospital_category_riskadjustment` varchar(63) DEFAULT NULL,
+  `hospital_type` varchar(63) DEFAULT NULL,
+  `operative_procedure` varchar(1027) DEFAULT NULL,
+  `procedure_count` int DEFAULT NULL,
+  `infections_reported` int DEFAULT NULL,
+  `infections_predicted` int DEFAULT NULL,
+  `predicted_infection_count` int DEFAULT NULL,
+  `infection_count` int DEFAULT NULL,
+  `sir` varchar(63) DEFAULT NULL,
+  `sir_ci_95_lower_limit` varchar(63) DEFAULT NULL,
+  `sir_ci_95_upper_limit` varchar(63) DEFAULT NULL,
+  `comparison` varchar(63) DEFAULT NULL,
+  `on_track_to_goal` varchar(63) DEFAULT NULL,
+  `sir_2015` varchar(63) DEFAULT NULL,
+  `notes` varchar(63) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `ssi_for_procedures_in_patients_pooled`
+--
+
+DROP TABLE IF EXISTS `ssi_for_procedures_in_patients_pooled`;
+CREATE TABLE `ssi_for_procedures_in_patients_pooled` (
+  `year` int DEFAULT NULL,
+  `state` varchar(63) DEFAULT NULL,
+  `hai` varchar(63) DEFAULT NULL,
+  `facility_id` varchar(63) DEFAULT NULL,
+  `facility_name` varchar(1027) DEFAULT NULL,
+  `facility_type` varchar(63) DEFAULT NULL,
+  `county` varchar(63) DEFAULT NULL,
+  `hospital_category_riskadjustment` varchar(63) DEFAULT NULL,
+  `hospital_type` varchar(63) DEFAULT NULL,
+  `operative_procedure` varchar(1027) DEFAULT NULL,
+  `procedure_count` int DEFAULT NULL,
+  `infections_reported` int DEFAULT NULL,
+  `infections_predicted` int DEFAULT NULL,
+  `predicted_infection_count` int DEFAULT NULL,
+  `infection_count` int DEFAULT NULL,
+  `sir` varchar(63) DEFAULT NULL,
+  `sir_ci_95_lower_limit` varchar(63) DEFAULT NULL,
+  `sir_ci_95_upper_limit` varchar(63) DEFAULT NULL,
+  `comparison` varchar(63) DEFAULT NULL,
+  `on_track_to_goal` varchar(63) DEFAULT NULL,
+  `sir_2015` varchar(63) DEFAULT NULL,
+  `notes` varchar(63) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `sud_facilities`
 --
 
@@ -973,4 +1104,4 @@ CREATE TABLE `wic_products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2024-08-03 18:20:27
+-- Dump completed on 2024-08-05 18:57:50

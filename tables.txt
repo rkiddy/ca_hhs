@@ -65,6 +65,13 @@ table deaths
 dataset sud-recovery-treatment-facilities
 table sud_facilities
 
+dataset surgical-site-infections-ssis-for-28-operative-procedures-in-california-hospitals
+table ssi_for_procedures_did_not_report
+table ssi_for_procedures_in_patients
+table ssi_for_procedures_in_patients_pooled
+table ssi_for_procedures_5
+table ssi_for_procedures_24
+
 dataset suspended-and-ineligible-list-s-i-list
 table suspended-and-ineligible-list-s-i-list
 
