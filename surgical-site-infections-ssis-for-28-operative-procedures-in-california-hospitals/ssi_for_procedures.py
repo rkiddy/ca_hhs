@@ -232,6 +232,8 @@ if __name__ == '__main__':
 
     for file in files:
 
+        # TODO There is a lot of duplication here in these three options....
+        #
         if files[file] == 'DID_NOT_REPORT':
 
             print(f"Processing file: {file}")
@@ -351,4 +353,61 @@ if __name__ == '__main__':
             continue
 
         print(f"Skipping file: {file}")
+
+    sqls = [
+       """update ssi_for_procedures_in_patients
+          set operative_procedure = 'Coronary bypass, chest and donor incisions'
+          where operative_procedure = 'Coronary bypass,chest and donor incisions'""",
+       """update ssi_for_procedures_in_patients
+          set operative_procedure = 'Coronary bypass, chest incision only'
+          where operative_procedure = 'Coronary bypass,chest incision only'""",
+       """update ssi_for_procedures_in_patients
+          set operative_procedure = 'Hysterectomy, vaginal'
+          where operative_procedure = 'Hysterectomy,vaginal'""",
+       """update ssi_for_procedures_in_patients
+          set operative_procedure = 'Hysterectomy, abdominal'
+          where operative_procedure = 'Hysterectomy,abdominal'""",
+       """update ssi_for_procedures_in_patients
+          set operative_procedure = 'Exploratory abdominal surgery (laparotomy)'
+          where operative_procedure = 'Exploratory abdomial surgery (laparotomy)'""",
+       """update ssi_for_procedures_in_patients
+          set operative_procedure = 'STATE OF CALIFORNIA POOLED DATA - Coronary bypass, chest and donor incisions'
+          where operative_procedure = 'STATE OF CALIFORNIA POOLED DATA - Coronary bypass,chest and donor incisions'""",
+       """update ssi_for_procedures_in_patients
+          set operative_procedure = 'STATE OF CALIFORNIA POOLED DATA - Coronary bypass, chest incision only'
+          where operative_procedure = 'STATE OF CALIFORNIA POOLED DATA - Coronary bypass,chest incision only'""",
+       """update ssi_for_procedures_in_patients
+          set operative_procedure = 'STATE OF CALIFORNIA POOLED DATA-Hysterectomy, abdominal'
+          where operative_procedure = 'STATE OF CALIFORNIA POOLED DATA-Hysterectomy,abdominal'""",
+       """update ssi_for_procedures_in_patients
+          set operative_procedure = 'STATE OF CALIFORNIA POOLED DATA-Hysterectomy, vaginal'
+          where operative_procedure = 'STATE OF CALIFORNIA POOLED DATA-Hysterectomy,vaginal'""",
+       """update ssi_for_procedures_in_patients
+          set operative_procedure = NULL
+          where operative_procedure = ''""",
+       """update ssi_for_procedures_5
+          set operative_procedure = substr(operative_procedure,2)
+          where operative_procedure like ' %%'""",
+       """update ssi_for_procedures_24
+          set operative_procedure = substr(operative_procedure,2)
+          where operative_procedure like ' %%'""",
+       "drop table if exists ssi_for_procedures_in_patients_pooled",
+       "create table ssi_for_procedures_in_patients_pooled like ssi_for_procedures_in_patients",
+       """insert into ssi_for_procedures_in_patients_pooled select * from ssi_for_procedures_in_patients
+          where operative_procedure like 'STATE OF CALIFORNIA POOLED%%'""",
+       """delete from ssi_for_procedures_in_patients
+          where operative_procedure like 'STATE OF CALIFORNIA POOLED%%'""",
+       """update ssi_for_procedures_in_patients_pooled
+          set operative_procedure = substr(operative_procedure,33)
+          where operative_procedure like 'STATE OF CALIFORNIA POOLED DATA-%%'""",
+       """update ssi_for_procedures_in_patients_pooled
+          set operative_procedure = substr(operative_procedure,35)
+          where operative_procedure like 'STATE OF CALIFORNIA POOLED DATA - %%'""",
+       """update ssi_for_procedures_in_patients_pooled
+          set operative_procedure = NULL
+          where operative_procedure = 'STATE OF CALIFORNIA POOLED DATA'"""]
+
+    print("Fixing...")
+    for sql in sqls:
+        db_exec(conn, sql)
 
