@@ -1376,7 +1376,6 @@
 2012/Marian Medical Center/106420493_Comments(1)_2012.docx
 2012/Marian Medical Center/106420493_PCT_CHG_2012.xlsx
 2012/Marian Medical Center/106420493_Comments(2)_2012.doc
-2012/Marian Medical Center/~$MC Cov Let 070112.doc
 2012/Marian Medical Center/106420493_Common25_2012.xls
 2012/Marian Medical Center/106420493_CDM_2012.xlsx
 2012/San Dimas Community Hospital/106190673_Comments_2012.docx
@@ -1512,7 +1511,6 @@
 2012/Marshall Medical Center/106090933_CDM_All_2012.xls
 2012/Marshall Medical Center/106090933_Comments_2012.docx
 2012/Marshall Medical Center/106090933_PCT_CHG_2012.pdf
-2012/Marshall Medical Center/~$rshall Medical Center Cover Letter.docx
 2012/Pacifica Hospital of the Valley/106190696_CDM_2012.xlsx
 2012/Pacifica Hospital of the Valley/106190696_PCT_CHG_2012.xls
 2012/Pacifica Hospital of the Valley/106190696_Common25_2012.xls
@@ -1805,7 +1803,6 @@
 2012/Mercy Medical Center - Redding/106450949_CDM_All_2012.xls
 2012/Mercy Medical Center - Redding/106450949_Comments(1)_2012.docx
 2012/Mercy Medical Center - Redding/106450949_Comments(2)_2012.doc
-2012/Mercy Medical Center - Redding/~$HPD Cover Letter 2012_MMCR.doc
 2012/Kern Valley Healthcare District/106150737_CDM_All_2012.xls
 2012/Kern Valley Healthcare District/106150737_Comments_2012.docx
 2012/Community Hospital of San Bernardino/106361323_CDM_All_2012.xlsx
@@ -1882,7 +1879,6 @@
 2012/Mercy Hospital - Bakersfield/106150761_PCT_CHG_2012.xls
 2012/Mercy Hospital - Bakersfield/106150761_CDM_2012.xls
 2012/Mercy Hospital - Bakersfield/106150761_Comments(1)_2012.docx
-2012/Mercy Hospital - Bakersfield/~$HPD Cover Letter 2012_Dignity Health Bakersfield.doc
 2012/Mercy Hospital - Bakersfield/106150761_Common25_2012.xls
 2012/Sherman Oaks Hospital/106190708_Comments_2012.docx
 2012/Sherman Oaks Hospital/106190708_CDM_ALL_2012.xlsx
@@ -2132,7 +2128,6 @@
 2012/Pacific Shores Hospital/106560838_Comments_2012.docx
 2012/Pacific Shores Hospital/106560838_CDM_ALL_2012.xlsx
 2012/Mercy Medical Center - Mt. Shasta/106470871_CDM_All_2012.xls
-2012/Mercy Medical Center - Mt. Shasta/~$HPD Cover Letter 2012_MMS.doc
 2012/Mercy Medical Center - Mt. Shasta/106470871_Comments_2012.doc
 2012/Ballard Rehabilitation Hospital/106364121_CDM_All_2012.xls
 2012/Ballard Rehabilitation Hospital/106364121_Comments_2012.docx
@@ -2651,7 +2646,6 @@
 2013/Marian Medical Center/106420493_COMMENTS(2)_2013.doc
 2013/Marian Medical Center/106420493_COMMON25_2013.xls
 2013/Marian Medical Center/106420493_PCT_CHG_2013.xlsx
-2013/Marian Medical Center/~$MC Cov Let 070112.doc
 2013/Marian Medical Center/106420493_COMMENTS(1)_2013.docx
 2013/Marian Medical Center/106420493_CDM_2013.xlsx
 2013/San Dimas Community Hospital/106190673_Comments_2013.docx
@@ -2780,7 +2774,6 @@
 2013/Pomona Valley Hospital Medical Center/106190630_PCT_CHG_2013.xls
 2013/Marshall Medical Center/106090933_COMMENTS_2013.docx
 2013/Marshall Medical Center/106090933_CDM_ALL_2013.xls
-2013/Marshall Medical Center/~$rshall Medical Center Cover Letter.docx
 2013/Pacifica Hospital of the Valley/106190696_Comments_2013.docx
 2013/Pacifica Hospital of the Valley/106190696_CDM_2013.xls
 2013/Pacifica Hospital of the Valley/106190696_Common25_2013.xls
@@ -3013,7 +3006,6 @@
 2013/Kaiser Foundation Hospital - Baldwin Park/106196035_COMMENTS_2013.docx
 2013/Kaiser Foundation Hospital - Baldwin Park/106196035_PCT_CHG_2013.xlsx
 2013/Kaiser Foundation Hospital - Baldwin Park/106196035_CDM_2013.xlsx
-2013/Kaiser Foundation Hospital - Baldwin Park/~$106196035_PCT_CHG_2013.xlsx
 2013/College Hospital - Cerritos/106190184_Common25_2013.xls
 2013/College Hospital - Cerritos/106190184_Comments_2013.docx
 2013/College Hospital - Cerritos/106190184_CDM_2013.xls
@@ -3069,7 +3061,6 @@
 2013/Hollywood Community Hospital of Hollywood/106190110_PCT_CHG_2013.doc
 2013/Hollywood Community Hospital of Hollywood/106190814_Comments_2013.docx
 2013/Mercy Medical Center - Redding/106450949_COMMENTS_2013.docx
-2013/Mercy Medical Center - Redding/~$HPD Cover Letter 2012_MMCR.doc
 2013/Mercy Medical Center - Redding/106450949_CDM_ALL_2013.xlsx
 2013/Kern Valley Healthcare District/106150737_CDM_ALL_2013.xls
 2013/Kern Valley Healthcare District/106150737_COMMENTS_2013.docx
@@ -3109,7 +3100,6 @@
 2013/Eden Medical Center/106010805_Comments_2013.docx
 2013/St. Francis Memorial Hospital/106380960_Comments_2013.docx
 2013/St. Francis Memorial Hospital/106380960_CDM_ALL_2013.xlsx
-2013/St. Francis Memorial Hospital/~$6380960_Comments_2013.docx
 2013/Sutter Davis Hospital/106574010_CDM_All_2013.xls
 2013/Sutter Davis Hospital/106574010_Comments_2013.docx
 2013/San Gabriel Valley Medical Center/106190200_CDM_ALL_2013.xls
@@ -3132,11 +3122,9 @@
 2013/Good Samaritan Hospital - Bakersfield/106150775_CDM_All_2013.xls
 2013/Kaiser Foundation Hospital - Northern California Region/106015000_CDM_2013.xlsx
 2013/Kaiser Foundation Hospital - Northern California Region/106015000_COMMENTS_2013.docx
-2013/Kaiser Foundation Hospital - Northern California Region/~$6015000_COMMENTS_2013.docx
 2013/Kaiser Foundation Hospital - Northern California Region/106015000_PCT_CHG_2013.xlsx
 2013/Mercy Hospital - Bakersfield/106150761_CDM_2013.xlsx
 2013/Mercy Hospital - Bakersfield/106150761_COMMENTS(2)_2013.docx
-2013/Mercy Hospital - Bakersfield/~$HPD Cover Letter 2012_Dignity Health Bakersfield.doc
 2013/Mercy Hospital - Bakersfield/106150761_COMMENTS(1)_2013.doc
 2013/Mercy Hospital - Bakersfield/106150761_PCT_CHG_2013.xls
 2013/Mercy Hospital - Bakersfield/106150761_COMMON25_2013.xlsx
@@ -3330,7 +3318,6 @@
 2013/Mission Community Regional Medical Center/106301262_COMMENTS_2013.docx
 2013/Mission Community Regional Medical Center/106301262_CDM_ALL_2013.xls
 2013/Pacific Alliance Medical Center/106190307_CDM_All_2013.xls
-2013/Joyce Eisenberg Keefer Medical Center/~$6196404_COMMENTS(2)_2013.docx
 2013/Joyce Eisenberg Keefer Medical Center/106196404_COMMENTS(2)_2013.docx
 2013/Joyce Eisenberg Keefer Medical Center/106196404_CDM_ANCILLARY_DPSNF_2013.xlsx
 2013/Joyce Eisenberg Keefer Medical Center/106196404_CDM_R&B_DPSNF_2013.xlsx
@@ -3377,7 +3364,6 @@
 2013/Corcoran District Hospital/106160702_PCT_CHG_2013.docx
 2013/Pacific Shores Hospital/106560838_CDM_ALL_2013.xlsx
 2013/Pacific Shores Hospital/106560838_Comments_2013.docx
-2013/Mercy Medical Center - Mt. Shasta/~$HPD Cover Letter 2012_MMS.doc
 2013/Mercy Medical Center - Mt. Shasta/106470871_CDM_ALL_2013.xlsx
 2013/Mercy Medical Center - Mt. Shasta/106470871_COMMENTS_2013.docx
 2013/Ballard Rehabilitation Hospital/106364121_CDM_All_2013.xls
@@ -5050,7 +5036,6 @@
 2015/Marian Medical Center/106420493_CDM_All_2015.xls.xls
 2015/Marian Medical Center/Thumbs.db
 2015/Marian Medical Center/106420493_Comments(2)_2015.doc
-2015/Marian Medical Center/~$6420493_Comments(2)_2015.wd.doc
 2015/Marian Medical Center/106420493_Comments(1)_2015.doc
 2015/Marian Medical Center/106400466_CDM_All_2015.xls.xls
 2015/San Dimas Community Hospital/106190673_CDM_All_2015.xls.xlsx
@@ -6095,7 +6080,6 @@
 2015/Kindred Hospital - San Francsco Bay Area/106010887_Comments(2)_2015.docx
 2015/Kindred Hospital - San Francsco Bay Area/106010887_CDM_2015.xls.xls
 2015/Kindred Hospital - San Francsco Bay Area/106010887_Comments(1)_2015.doc
-2015/Biggs-Gridley Memorial Hospital/~$HPD LETTER 2015.docx
 2015/Biggs-Gridley Memorial Hospital/Thumbs.db
 2015/Biggs-Gridley Memorial Hospital/106040802_Common25_2015.xls
 2015/Biggs-Gridley Memorial Hospital/106040802_Comments_2015.doc
@@ -6202,7 +6186,6 @@
 2016/Ventura County Medical Center/106560481_Common25_2016.xls
 2016/Ventura County Medical Center/106560481_PCT_CHG_2016.xlsx
 2016/Ventura County Medical Center/106560481_CDM_2016.xlsx
-2016/Sherman Oaks Hospital & Health Center/~$106190708_CDM_All_2016.xlsx
 2016/Sherman Oaks Hospital & Health Center/106190708_CDM_All_2016.xlsx
 2016/Newport Bay Hospital/Thumbs.db
 2016/Newport Bay Hospital/106301304_Comments_2016.doc
@@ -8138,7 +8121,7 @@
 2017/Mammoth Hospital/106260011_PCT_CHG_2017.xlsx
 2017/Mammoth Hospital/106260011_CDM_2017.xls
 2017/State - Fairview Developmental Center/Thumbs.db
-2017/State - Fairview Developmental Center/10630178_CDM_All_2017.xls
+2017/State - Fairview Developmental Center/106301781_CDM_All_2017.xls
 2017/Stanislaus Surgical Center/Thumbs.db
 2017/Stanislaus Surgical Center/106430905_CDM_2017.xlsm
 2017/Stanislaus Surgical Center/106430905_Comments_2017.docx
@@ -13310,7 +13293,6 @@
 2023/College Hospital/106190184_CDM_All.xlsx
 2023/Los Angeles Community Hospital at Bellflower/106190066_Common25.xlsx
 2023/Los Angeles Community Hospital at Bellflower/106190066_PCT_CHG.xlsx
-2023/Los Angeles Community Hospital at Bellflower/~$6190066_PCT_CHG.doc
 2023/Los Angeles Community Hospital at Bellflower/106190066_CDM_2023.xlsx
 2023/Emanate Health Foothill Presbyterian Hospital/106190298_Common25_2023_FOOTHILL.XLS
 2023/Emanate Health Foothill Presbyterian Hospital/106190298_CDM.xlsx
