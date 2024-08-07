@@ -6,7 +6,7 @@ if [ ! -f ./deets.sh ]; then
     exit 0
 fi
 
-if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
+if [ "$1" = "--help" ] || [ "$1" = "-help" ] || [ "$1" = "-h" ] || [ "$1" = "--h" ]; then
     echo ""
     echo "usage: bash update.sh [ --no-fetch ]"
     echo ""
