@@ -1,5 +1,8 @@
+import argparse
 import csv
+import sys
 
+import requests
 from sqlalchemy import create_engine
 
 sys.path.append('..')
@@ -10,6 +13,13 @@ cfg = config.cfg()
 
 engine = create_engine(f"mysql+pymysql://{cfg['USR']}:{cfg['PWD']}@{cfg['HOST']}/{cfg['DB']}")
 conn = engine.connect()
+
+
+def arguments():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--check-urls', action='store_true', help="check existence of dataset main page on web")
+
+    return parser.parse_args()
 
 
 def db_exec(eng, this_sql):
@@ -30,6 +40,24 @@ def fix_value(start_value):
 
 
 if __name__ == '__main__':
+
+    args = arguments()
+
+    if args.check_urls:
+        for row in db_exec(conn, "select dataset_url from catalog"):
+            url = row['dataset_url']
+
+            status = '000'
+
+            try:
+                r = requests.get(url)
+                status = r.status_code
+            except:
+                traceback.print_exc()
+                status='000'
+
+            print(f"response: {status} url: {url}")
+        quit()
 
     lengths = dict()
     types = dict()
