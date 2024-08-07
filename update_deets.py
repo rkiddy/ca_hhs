@@ -51,7 +51,7 @@ def read_deets(values):
 
         body = requests.get(url)
 
-        print(f"body length: {len(body.content)}")
+        # print(f"body length: {len(body.content)}")
 
         aUrl = None
         dload = None
@@ -63,7 +63,7 @@ def read_deets(values):
                 parts = aUrl.split('"')
                 dload = parts[-2]
 
-        print(f"dload: {dload}")
+        # print(f"dload: {dload}")
 
         parts = dload.split('/')
 
@@ -101,11 +101,19 @@ def write_deets(deets):
 
 if __name__ == '__main__':
 
+    print("reading ids...")
     ids = find_ids()
-    print("ids:")
-    pprint(ids)
+    # print("ids:")
+    # pprint(ids)
 
+    print("checking deets...")
     deets = read_deets(ids)
-    print("deets:")
-    pprint(deets)
+    # print("deets:")
+    # pprint(deets)
+
+    print("writing...")
+    write_deets(deets)
+
+    print("diffs:")
+    os.system('git diff */deets.sh')
 
