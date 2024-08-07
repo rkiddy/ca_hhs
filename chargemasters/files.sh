@@ -8,7 +8,7 @@ drop table if exists chargemasters_common25;
 drop table if exists chargemasters_cpt_codes;
 drop table if exists chargemasters_dirs;
 drop table if exists chargemasters_files;
-drop table if exists chargemasters_tabs;
+drop table if exists chargemasters_sheets
 EOF
 
 cat <<EOF > /tmp/files_pre_$$.sql
@@ -36,6 +36,9 @@ alter table chargemasters_files add primary key (pk);
 drop table if exists chargemasters_dir_hcai_id_joins;
 create table chargemasters_dir_hcai_id_joins (dir_pk int, hcai_id varchar(10));
 alter table chargemasters_dir_hcai_id_joins add primary key (dir_pk, hcai_id);
+-- delete from chargemasters_common25;
+-- delete from chargemasters_column_heads;
+-- delete from chargemasters_cdm;
 EOF
 
 cat <<EOF > /tmp/dirs_pre_$$.sql
@@ -89,11 +92,7 @@ if [ "$1" == "" ]; then
     echo ""
 fi
 
-if [ "$1" == "--all" ]; then
-    cat /tmp/all_pre_$$.sql | mysql ca_hhs
-fi
-
-if [ "$1" == "--files" ]; then
+if [ "$1" == "--files" ] || [ "$1" == "--all" ]; then
 
     cat /tmp/files_pre_$$.sql | mysql ca_hhs
 
@@ -161,7 +160,7 @@ if [ "$1" == "--files" ]; then
     echo "select count(0) as files from chargemasters_files;" | mysql --table ca_hhs
 fi
 
-if [ "$1" == "--dirs" ]; then
+if [ "$1" == "--dirs" ] || [ "$1" == "--all" ]; then
 
     cat /tmp/dirs_pre_$$.sql | mysql ca_hhs
 
@@ -196,14 +195,14 @@ if [ "$1" == "--dirs" ]; then
         mysql --skip-column-names ca_hhs | \
         awk '{print "update chargemasters_files set hcai_id = '\''"$1"'\'' ";
               print "where dir_pk = "$2" and hcai_id is NULL;"}' | \
-        mysql -vvv ca_hhs
+        mysql ca_hhs
 
     echo "done"
 
     echo "select count(0) as dirs from chargemasters_dirs;" | mysql --table ca_hhs
 fi
 
-if [ "$1" == "--types" ]; then
+if [ "$1" == "--types" ] || [ "$1" == "--all" ]; then
 
     cat /tmp/types_$$.sql | mysql ca_hhs
 
