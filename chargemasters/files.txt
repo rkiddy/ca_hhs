@@ -10280,819 +10280,819 @@
 2021/Madera Community Hospital/106201281_CDM_2021.xlsx
 2021/Madera Community Hospital/106201281_Common25_2021.xlsx
 2021/Catalina Island Medical Center/106190045_CDM_All_2021.xlsx
-2022/2022 Completed Reviews/Canyon Ridge Hospital/106364050_CDM_ALL_2022.xls
-2022/2022 Completed Reviews/Ventura County Medical Center/HCAI ID 106560481 CDM_All.xlsx
-2022/2022 Completed Reviews/Newport Bay Hospital/106301304_PCT_CHG_2022.docx
-2022/2022 Completed Reviews/Newport Bay Hospital/106301304_Common25_2022.doc
-2022/2022 Completed Reviews/Newport Bay Hospital/106301304_CDM_2022.xlsx
-2022/2022 Completed Reviews/Hazel Hawkins Memorial Hospital/106350784_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- San Diego-Clairemont Mesa/106374465_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- San Diego-Clairemont Mesa/106374465_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- San Diego-Clairemont Mesa/106374465_CDM_2022.xlsx
-2022/2022 Completed Reviews/Monterey Park Hospital/106190547_CDM_ALL_2022.xls
-2022/2022 Completed Reviews/Sutter Center for Psychiatry/106344017_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- South Bay/106190431_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- South Bay/106190431_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- South Bay/106190431_CDM_2022.xlsx
-2022/2022 Completed Reviews/Doctors Medical Center/106500852_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Orange County- Irvine/106304306_CDM_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Orange County- Irvine/106304306_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Orange County- Irvine/106304306_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kindred Hospital- Paramount/106190599_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/San Diego County Psychiatric Hospital/106374055_CDM_ALL_2022.xls
-2022/2022 Completed Reviews/Memorial Medical Center- Modesto/106500939_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Oroville Hospital/106040937_CDM_2022.xlsx
-2022/2022 Completed Reviews/Oroville Hospital/10604937_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Oroville Hospital/106040937_Common25_2022.xlsx
-2022/2022 Completed Reviews/Providence Redwood Memorial Hospital/106121051_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Mayers Memorial Hospital/106450936_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Montclair Hospital Medical Center/106361166_CDM_All_2022 (1).xlsx
-2022/2022 Completed Reviews/Ronald Reagan UCLA Medical Center/106190796_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Ronald Reagan UCLA Medical Center/106190796_MSDRG Avg Chrgs.xlsx
-2022/2022 Completed Reviews/Ronald Reagan UCLA Medical Center/106190796_Common25_2022.xlsx
-2022/2022 Completed Reviews/Ronald Reagan UCLA Medical Center/106190796_CDM_2022.xlsx
-2022/2022 Completed Reviews/St. Rose Hospital/106010967_Common25_2022.xlsx
-2022/2022 Completed Reviews/St. Rose Hospital/106010967_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/St. Rose Hospital/106010967_CDM_2022.xlsx
-2022/2022 Completed Reviews/Select Special Hospital- San Diego/106374094_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Providence Little Company Of Mary Medical Center Torrance/106190470_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Northridge Hospital Medical Center/106190568 Cover Letter Northridge Hospital.docx
-2022/2022 Completed Reviews/Northridge Hospital Medical Center/106190568_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Fontana/106361223_CDM_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Fontana/106361223_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Fontana/106361223_Common25_2022.xlsx
-2022/2022 Completed Reviews/Corona Regional Medical Center- Magnolia/Corona AB 1627 1045 Letter 2022.pdf
-2022/2022 Completed Reviews/Corona Regional Medical Center- Magnolia/106331145_CDM_2022.xlsx
-2022/2022 Completed Reviews/Corona Regional Medical Center- Magnolia/106331145_Common25_2022.xlsx
-2022/2022 Completed Reviews/Ojai Valley Community Hospital/106560501_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Adventist Health Tulare/106540816_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Priscilla Chan & Mark Zuckerberg San Francisco General Hospital & Trauma Center/106380939_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Providence Cedars-Sinai Tarzana Medical Center/106190517_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/UCSF Benioff Children's Hospital Oakland/106010776_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Community Hospital of the Monterey Peninsula/106270744_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Garden Grove Hospital and Medical Center/106301283_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/O'Connor Hospital/106430837_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Scripps Mercy Hospital- Chula Vista/106370658_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Menifee Global Medical Center/106334018_Common 25.xlsx
-2022/2022 Completed Reviews/Menifee Global Medical Center/106334018_PCT_CHG.xlsx
-2022/2022 Completed Reviews/Menifee Global Medical Center/106334018_CDM.xlsx
-2022/2022 Completed Reviews/Twin Cities Community Hospital/106400548_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Providence Holy Cross Medical Center/106190385_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Mercy Hospital- Bakersfield/OSHPD Cover Letter Mercy Hospital's Bakersfield Southwest.docx
-2022/2022 Completed Reviews/Mercy Hospital- Bakersfield/OSHPD Cover Letter Mercy Hospital's Bakersfield Downtown.docx
-2022/2022 Completed Reviews/Mercy Hospital- Bakersfield/106150761_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Fountain Valley Regional Hospital & Medical Center- Euclid/106301175_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Modesto/106504042_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Modesto/106504042_CDM_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Modesto/106504042_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/St. John Pleasant Valley Hospital/St. John's Regional Medical Center/106560529_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/St. John Pleasant Valley Hospital/St. John's Regional Medical Center/106560529 Cover Letter St. John's Regional.docx
-2022/2022 Completed Reviews/St. John Pleasant Valley Hospital/106560508 Cover Letter St. John's Pleasant Valley.docx
-2022/2022 Completed Reviews/St. John Pleasant Valley Hospital/106560508_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Loma Linda University Behavioral Medicine Center/106364014_Common25_2022.xlsx
-2022/2022 Completed Reviews/Loma Linda University Behavioral Medicine Center/106364014_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Loma Linda University Behavioral Medicine Center/106364014_CDM_2022.xlsx
-2022/2022 Completed Reviews/Adventist Health Sonora-Greenley/106554011_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/NorthBay Medical Center/106481357_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/UC San Diego Health HillCrest Medical Center/106370782_Pharmacy_System_Data_2022.xlsx
-2022/2022 Completed Reviews/UC San Diego Health HillCrest Medical Center/106370782_Common25_2022.xlsx
-2022/2022 Completed Reviews/UC San Diego Health HillCrest Medical Center/106370782_Supply_file.xlsx
-2022/2022 Completed Reviews/UC San Diego Health HillCrest Medical Center/106370782_CDM_2022.xlsx
-2022/2022 Completed Reviews/UC San Diego Health HillCrest Medical Center/106370782_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Fresno Heart and Surgical Hospital/106105029_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/VCMC- Santa Paula Hospital/HCAI ID 106560521 CDM_All.xlsx
-2022/2022 Completed Reviews/Salinas Valley Memorial Hospital/106270875_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Kindred Hospital- San Gabriel Valley/106190458_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/St. Mary Medical Center- Long Beach/106190053_Cover Letter St Marys Medical Center LB.docx
-2022/2022 Completed Reviews/St. Mary Medical Center- Long Beach/106190053_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Tarzana Treatment Center/106190782_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Woodland Memoral Hospital/106571086_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Woodland Memoral Hospital/106571086 Cover Letter Woodland Memorial Hospital.docx
-2022/2022 Completed Reviews/Docs Surgical Hospital/106190681_PCT_CHG_2022.docx
-2022/2022 Completed Reviews/Docs Surgical Hospital/106190681_CDM_2022.xls
-2022/2022 Completed Reviews/Docs Surgical Hospital/106190681_Common25_2022.xlsx
-2022/2022 Completed Reviews/Desert Regional Medical Center/106331164_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Aliso Ridge Behavioral Hospital/106304589_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Adventist Health White Memorial/106190878_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- San Jose/106431506_Coomon25_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- San Jose/106431506_CDM_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- San Jose/106431506_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Fremont Hospital/106014034_CDM_ALL_2022.xls
-2022/2022 Completed Reviews/San Gorgonio Memorial Hospital/106331326_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Oroville Hospital Post-Acute Center/206044003_Common25_2022.docx
-2022/2022 Completed Reviews/Oroville Hospital Post-Acute Center/206044003_CDM_2022.xlsx
-2022/2022 Completed Reviews/Oroville Hospital Post-Acute Center/206044003_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Glenn Medical Center/106110889_CDM_ALL_2022.xls
-2022/2022 Completed Reviews/City of Hope Helford Clinical Research Hospital/106190176_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Chinese Hospital/106382715_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Adventist Health Mendocino Coast/106231013_CDM_All_AHMC_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Antioch/106074097_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Antioch/106074097_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Antioch/106074097_CDM_2022.xlsx
-2022/2022 Completed Reviews/Adventist Health Tehachapi Valley/106154168_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Los Angeles County Olive View- UCLA Medical Center/106191231_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Monrovia Memorial Hospital/106190541_Common25_2022.xlsx
-2022/2022 Completed Reviews/Monrovia Memorial Hospital/106190541_PCT_CHG_2022.docx
-2022/2022 Completed Reviews/Monrovia Memorial Hospital/106190541_CDM_2022.xlsx
-2022/2022 Completed Reviews/Children's Hospital of Orange County/106300032_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Watsonville Community Hospital/106444013_CDM_ALL_2022.xlsb
-2022/2022 Completed Reviews/San Dimas Community Hospital/106190673_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Providence St. John's Health Center/106190756_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/California Pacific Medical Center- Davies Campus Hospital/106380933_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Central Valley Specialty Hospital/106500954_CDM_ALL_2022.xlsm
-2022/2022 Completed Reviews/California Pacific Medical Center- Van Ness Campus/106384176_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Healthbridge Children's Hospital- Orange/106304159_PCT_CHG_2022.pdf
-2022/2022 Completed Reviews/Healthbridge Children's Hospital- Orange/106304159_CDM_Common25_2022.xlsx
-2022/2022 Completed Reviews/East Los Angeles Doctors Hospital/106190256_Common25_2022.xlsx
-2022/2022 Completed Reviews/East Los Angeles Doctors Hospital/106190256_CDM_2022.xlsx
-2022/2022 Completed Reviews/East Los Angeles Doctors Hospital/106190256_PCT_CHG_2022.docx
-2022/2022 Completed Reviews/Emanuel Medical Center/106500867_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/El Centro Regional Medical Center/106130699_Common25_2022.xlsx
-2022/2022 Completed Reviews/El Centro Regional Medical Center/106130699_CDM_2022.xlsx
-2022/2022 Completed Reviews/El Centro Regional Medical Center/106130699_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Good Samaritan Hospital- San Jose/106430779_Common25_2022.xlsx
-2022/2022 Completed Reviews/Good Samaritan Hospital- San Jose/Charge  Master Letter - 2022.pdf
-2022/2022 Completed Reviews/Good Samaritan Hospital- San Jose/106430779_CDM_2022.xlsx
-2022/2022 Completed Reviews/Good Samaritan Hospital- San Jose/106430779_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Fresno/106104062_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Fresno/106104062_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Fresno/106104062_CDM_2022.xlsx
-2022/2022 Completed Reviews/Riverside University Health System- Medical Center/106334487_CDM_All_2022.xls
-2022/2022 Completed Reviews/San Ramon Regional Medical Center/106074017_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Scripps Memorial Hospital- La Jolla/106370771_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Mercy Medical Center- Mt. Shasta/106470871_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Mercy Medical Center- Mt. Shasta/106470871 Cover Letter Mercy Medical Center Mt Shasta.docx
-2022/2022 Completed Reviews/USC Verdugo Hills Hospital/106190818_CDM_ALL_2022_.xlsx
-2022/2022 Completed Reviews/Sutter Solano Medical Center/106481094_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Memorial Hospital of Gardena/106190521_PCT_CHG_2022.docx
-2022/2022 Completed Reviews/Memorial Hospital of Gardena/106190521_CDM_2022.xlsx
-2022/2022 Completed Reviews/Memorial Hospital of Gardena/106190521_Common25_2022.xlsx
-2022/2022 Completed Reviews/Pioneers Memorial Healthcare District/106130760_CDM_2022.xlsx
-2022/2022 Completed Reviews/Pioneers Memorial Healthcare District/PMHD Pharmacy Letter.pdf
-2022/2022 Completed Reviews/Pioneers Memorial Healthcare District/106130760_Common25_2022.xlsx
-2022/2022 Completed Reviews/Pioneers Memorial Healthcare District/106130760_PCT_CHG_20222.pdf
-2022/2022 Completed Reviews/Natividad Medical Center/106274043_CDM_ALL_2022.xlsb
-2022/2022 Completed Reviews/Resnick Neuropsychiatric Hospital at UCLA/106190930_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Resnick Neuropsychiatric Hospital at UCLA/106190930_CDM_2022.xlsx
-2022/2022 Completed Reviews/Resnick Neuropsychiatric Hospital at UCLA/106190930_ MSDRG Avg Chrgs.xlsx
-2022/2022 Completed Reviews/Resnick Neuropsychiatric Hospital at UCLA/106190930_Common25_2022.xlsx
-2022/2022 Completed Reviews/Barlow Respiratory Hospital/106190052_PCT_CHG_2022.xls
-2022/2022 Completed Reviews/Barlow Respiratory Hospital/106190052_CDM_2022.xlsx
-2022/2022 Completed Reviews/Barlow Respiratory Hospital/106190052_Common25_2022.xlsx
-2022/2022 Completed Reviews/Los Angeles Community Hospital/106190198_Common25_2022.xlsx
-2022/2022 Completed Reviews/Los Angeles Community Hospital/106190198_PCT_CHG_2022.doc
-2022/2022 Completed Reviews/Los Angeles Community Hospital/106190198  CDM_2022.xlsx
-2022/2022 Completed Reviews/Providence St. Joseph Medical Center/106190758_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Oakland-Richmond/106014326_CDM_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Oakland-Richmond/106014326_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Oakland-Richmond/106014326_Common25_2022.xlsx
-2022/2022 Completed Reviews/Riverside University Health System - DP APH/106331314_CDM_ALL_2022.xls
-2022/2022 Completed Reviews/Palomar Rehabilitation Institute/106374572 CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Adventist Health Glendale/106190323_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Glendora Hospital/106190328_CDM_All.xlsx
-2022/2022 Completed Reviews/Aurora Vista Del Mar Hospital/106560203_CDM_ALL_2022.xls
-2022/2022 Completed Reviews/Hoag Memorial Hospital Presbyterian/106301205_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Sierra Vista Regional Medical Center/106400524_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Panorama City/106190432_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Panorama City/106190432_CDM_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Panorama City/106190432_Common25_2022.xlsx
-2022/2022 Completed Reviews/Stanislaus Surgical Hospital/106504038_CDM_ALL_2022.xls
-2022/2022 Completed Reviews/Placentia Linda Hospital/106301297_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Regional Medical Center of San Jose/106430705_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/George L. Mee Memorial Hospital/106270777_CDM_ALL_2022.xlsb
-2022/2022 Completed Reviews/Sierra Vista Hospital/106342392_PCT_CHG_2022.docx
-2022/2022 Completed Reviews/Sierra Vista Hospital/106342392_Common25_2022.xlsx
-2022/2022 Completed Reviews/Sierra Vista Hospital/106342392_CDM_2022.xlsx
-2022/2022 Completed Reviews/Shasta Regional Medical Center/106450940_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/MemorialCare Miller Children's & Womens Hospital Long Beach/106196168_Comments(1)_2022.docx
-2022/2022 Completed Reviews/MemorialCare Miller Children's & Womens Hospital Long Beach/106196168_Comments(2)_2022.docx
-2022/2022 Completed Reviews/MemorialCare Miller Children's & Womens Hospital Long Beach/106196168_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Barton Memorial Hospital/106090793_CDM_2022.xlsx
-2022/2022 Completed Reviews/Barton Memorial Hospital/106090793_Common25_2022.xlsx
-2022/2022 Completed Reviews/Barton Memorial Hospital/106090793_RX_CDM_2022.xlsx
-2022/2022 Completed Reviews/Barton Memorial Hospital/106090793_PCT_CHG_2022.doc
-2022/2022 Completed Reviews/Huntington Hospital/106190400_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Kindred Hospital- San Francisco Bay Area/106010887_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Baldwin Park/106196035_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Baldwin Park/106196035_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Baldwin Park/106196035_CDM_2022.xlsx
-2022/2022 Completed Reviews/Lompoc Valley Medical Center/106420491_PCT_CHG_2022.docx
-2022/2022 Completed Reviews/Lompoc Valley Medical Center/106420491_CDM_2022.xlsx
-2022/2022 Completed Reviews/Lompoc Valley Medical Center/106420491_Common25_2022.xlsx
-2022/2022 Completed Reviews/El Camino Hospital - Los Gatos/106430743_Common 25_2022.xlsx
-2022/2022 Completed Reviews/El Camino Hospital - Los Gatos/106430743_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/El Camino Hospital - Los Gatos/106430743_CDM_2022.xlsx
-2022/2022 Completed Reviews/Loma Linda University Medical Center/106361246_CDM_2022.xlsx
-2022/2022 Completed Reviews/Loma Linda University Medical Center/106361246_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Loma Linda University Medical Center/106361246_Common25_2022.xlsx
-2022/2022 Completed Reviews/Pomona Valley Hospital Medical Center/106190630_CDM_2022.xlsx
-2022/2022 Completed Reviews/Pomona Valley Hospital Medical Center/106190630_PCT_CHG_2022.xls
-2022/2022 Completed Reviews/Pomona Valley Hospital Medical Center/106190630_Common25_2022.xlsx
-2022/2022 Completed Reviews/Marshall Medical Center/106090933_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Marshall Medical Center/106090933_CDM_2022.xlsx
-2022/2022 Completed Reviews/Marshall Medical Center/106090933_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Vacaville/106484044_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Vacaville/106484044_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Vacaville/106484044_CDM_2022.xlsx
-2022/2022 Completed Reviews/Pacifica Hospital of the Valley/106190696_CDM_ALL_2022.xlsb
-2022/2022 Completed Reviews/South Coast Global Medical Center/106301258_CDM.xlsx
-2022/2022 Completed Reviews/South Coast Global Medical Center/106301258_PCT_CHG.xlsx
-2022/2022 Completed Reviews/South Coast Global Medical Center/106301258_Common 25.xlsx
-2022/2022 Completed Reviews/Southern California Hospital at Culver City/106190110 CDM_2022.xlsx
-2022/2022 Completed Reviews/Southern California Hospital at Culver City/106190110_Common25_2022.xlsx
-2022/2022 Completed Reviews/Southern California Hospital at Culver City/106190110_PCT_CHG_2022.doc
-2022/2022 Completed Reviews/St. Francis Medical Center/106190754_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Keck Hospital of USC/106194219_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Dominican Hospital/106440755_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Dominican Hospital/OSHPD Cover Letter Dominican Hospital Santa Cruz.docx
-2022/2022 Completed Reviews/Santa Barbara Cottage Hospital/106420514_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/College Medical Center Hawthorne Campus/106190523_CDM_All.xlsx
-2022/2022 Completed Reviews/Los Alamitos Medical Center/106301248_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Mercy San Juan Medical Center/106340950_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Mercy San Juan Medical Center/106340950 Cover Letter Mercy San Juan Medical Center.docx
-2022/2022 Completed Reviews/Heritage Oaks Hospital/106344021_CDM.xlsx
-2022/2022 Completed Reviews/Heritage Oaks Hospital/106344021_Common25_2022.xlsx
-2022/2022 Completed Reviews/Heritage Oaks Hospital/106344021_PCT_CHG.docx
-2022/2022 Completed Reviews/Mountains Community Hospital/106361266_CDM_ALL_2022.xls
-2022/2022 Completed Reviews/Coalinga Regional Medical Center/106100697_CDM_ALL_2022.xlsm
-2022/2022 Completed Reviews/Mercy Hospital of Folsom/106344029 Cover Letter Mercy Hospital of Folsom.docx
-2022/2022 Completed Reviews/Mercy Hospital of Folsom/106344029_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Encompass Health Rehabilitation Hospital of Modesto/106504079_Common 25_2022.xlsx
-2022/2022 Completed Reviews/Encompass Health Rehabilitation Hospital of Modesto/106504079_CDM_2022.xlsx
-2022/2022 Completed Reviews/Encompass Health Rehabilitation Hospital of Modesto/106504079_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/St. Agnes Medical Center/106100899_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Adventist Health Clearlake/106171049_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Palo Verde Hospital/106331288_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Southern California Hospital at Hollywood/106190380_CDM_2022.xlsx
-2022/2022 Completed Reviews/Southern California Hospital at Hollywood/106190380_PCT_CHG_2022.doc
-2022/2022 Completed Reviews/Southern California Hospital at Hollywood/106190380_Common25_2022.xlsx
-2022/2022 Completed Reviews/Torrance Memorial Medical Center/106190422_Common25_2022.xlsx
-2022/2022 Completed Reviews/Torrance Memorial Medical Center/106190422_CDM_2022.xlsx
-2022/2022 Completed Reviews/Torrance Memorial Medical Center/106190422_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Riverside/106334025_CDM_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Riverside/106334025_COmmon25_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Riverside/106334025_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Los Ageles County- Rancho Los Amigos National Rehab Center/106191306_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/St. Mary's Medical Center San Francisco/106380965_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/St. Mary's Medical Center San Francisco/OSHPD Cover Letter St Marys Medical Center SF.docx
-2022/2022 Completed Reviews/Marian Regional Medical Center- Arroyo Grande/OSHPD Cover Letter Arroyo Grande Community Hospital.docx
-2022/2022 Completed Reviews/Marian Regional Medical Center- Arroyo Grande/106400466_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Encino Hospital Medical Center/106190280_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/San Joaquin General Hospital/OSHPD CDM Letter 2022.doc
-2022/2022 Completed Reviews/San Joaquin General Hospital/106391010_CDM_2022.xlsx
-2022/2022 Completed Reviews/San Joaquin General Hospital/106391010_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/San Joaquin General Hospital/106391010_Common25_2022.xlsx
-2022/2022 Completed Reviews/Napa State Hospital/106281266_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Napa State Hospital/FY21.22 Supporting Documentation.pdf
-2022/2022 Completed Reviews/Adventist Health Delano/106150706_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/St. John's Regional Medical Center/106560529_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/St. John's Regional Medical Center/106560529 Cover Letter St. John's Regional.docx
-2022/2022 Completed Reviews/Kaweah Delta Medical Center/106540734_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kaweah Delta Medical Center/106540734_PCT_CHG_2022.doc
-2022/2022 Completed Reviews/Kaweah Delta Medical Center/106540734_CDM_2022.xls
-2022/2022 Completed Reviews/Department of State Hospitals- Atascadero/106400683_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Department of State Hospitals- Atascadero/FY21.22 Supporting Documentation.pdf
-2022/2022 Completed Reviews/Valley Presbyterian Hospital/106190812_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- South San Francisco/106410806_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- South San Francisco/106410806_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- South San Francisco/106410806_CDM_2022.xlsx
-2022/2022 Completed Reviews/BHC Alhambra Hospital/106190020_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Mercy General Hospital/106340947 Cover Letter Mercy General Hospital.docx
-2022/2022 Completed Reviews/Mercy General Hospital/106340947_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/California Hospital Medical Center- Los Angeles/106190125_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/California Hospital Medical Center- Los Angeles/106190125_Cover Letter California Hospital Medical Center.docx
-2022/2022 Completed Reviews/Sutter Maternity and Surgery Center of Santa Cruz/106444012_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/San Leandro Hospital/106013619_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Anaheim Regional Medical Center/106301098_CDM_ALL_2022.xlsm
-2022/2022 Completed Reviews/St. Mary Medical Center- Apple Valley/106361343_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Stanford Health Care- Valleycare/106014050_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/John Muir Behavioral Health Center/106074039_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/John Muir Behavioral Health Center/106074039_Common 25_2022.xlsx
-2022/2022 Completed Reviews/John Muir Behavioral Health Center/106074039_CDM_2022.xlsx
-2022/2022 Completed Reviews/John F. Kennedy Memorial Hospital/106331216_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/West Covina Medical Center/106190857_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Thousand Oaks Surgical Hospital/106564121_Common 25_2022.xlsx
-2022/2022 Completed Reviews/Thousand Oaks Surgical Hospital/106564121_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Thousand Oaks Surgical Hospital/106564121_CDM_2022.xlsx
-2022/2022 Completed Reviews/St. Joseph Hospital - Eureka/106121080_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Tri-City Medical Center/106370780_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Adventist Health Hanford/106164029_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/College Hospital Costa Mesa/106301155_CDM_2022.xlsx
-2022/2022 Completed Reviews/College Hospital Costa Mesa/106301155_Common25_2022.xlsx
-2022/2022 Completed Reviews/College Hospital Costa Mesa/106301155_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Sutter Auburn Faith Hospital/106310791_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/John C Fremont Healthcare District/106220733_PCT_CHG_2022.pdf
-2022/2022 Completed Reviews/John C Fremont Healthcare District/106220733_COMMON25_2022.pdf
-2022/2022 Completed Reviews/John C Fremont Healthcare District/106220733_CDM_2022.xlsx
-2022/2022 Completed Reviews/Cottage Rehabilitation Hospital/106424047_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/St. Joseph's Medical Center of Stockton/OSHPD Cover Letter St Joseph's Medical Center.docx
-2022/2022 Completed Reviews/St. Joseph's Medical Center of Stockton/106391042_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Sierra View Medical Center/106540798_CDM_2022.xlsx
-2022/2022 Completed Reviews/Sierra View Medical Center/106540798_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Sierra View Medical Center/106540798_Common25_2022.xls
-2022/2022 Completed Reviews/Palomar Medical Center- Poway/106370977_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- San Diego-Zion/106370730_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- San Diego-Zion/106370730_CDM_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- San Diego-Zion/106370730_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- South Sacramento/106342344_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- South Sacramento/106342344_CDM_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- South Sacramento/106342344_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Eastern Plumas Hospital- Loyalton Campus/206462284_CDM_2022.xlsx
-2022/2022 Completed Reviews/Eastern Plumas Hospital- Loyalton Campus/206462284_Common25_2022.docx
-2022/2022 Completed Reviews/Eastern Plumas Hospital- Loyalton Campus/206462284_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/California Rehabilitation Institute/106190155_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Vallejo/106480989_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Vallejo/106480989_CDM_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Vallejo/106480989_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Aurora San Diego/106374024_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Mercy Medical Center- Redding/106450949_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Mercy Medical Center- Redding/106450949 Cover Letter Mercy Medical Center Redding.docx
-2022/2022 Completed Reviews/Pacific Grove Hospital/106331226_Common25_2022.csv
-2022/2022 Completed Reviews/Pacific Grove Hospital/106331226_CDM_2022.csv
-2022/2022 Completed Reviews/Pacific Grove Hospital/106331226_PCT_CHG_2022.docx
-2022/2022 Completed Reviews/Langley Porter Psychiatric Institute/106380868_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Alameda Hospital/106010735_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- San Leandro/106014337_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- San Leandro/106014337_CDM_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- San Leandro/106014337_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Mills Health Center D.P APH/106414145_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Jewish Home & Rehab Center/106380842_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/L.A. Downtown Medical Center- Ingleside Campus/106190410_CDM_ALL_2022.XLSX
-2022/2022 Completed Reviews/Oak Valley Hospital/106500967_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Community Behavioral Health Center/106104008_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Ontario/106364265_CDM_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Ontario/106364265_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Ontario/106364265_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Eastern Plumas Hospital- Portola Campus/106320859_Common25_2022.xlsx
-2022/2022 Completed Reviews/Eastern Plumas Hospital- Portola Campus/106320859_CDM_2022.xlsx
-2022/2022 Completed Reviews/Eastern Plumas Hospital- Portola Campus/106320859_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaweah Health Mental Health Hospital/106544009_PCT_CHG_2022.doc
-2022/2022 Completed Reviews/Kaweah Health Mental Health Hospital/106544009_CDM_2022.xls
-2022/2022 Completed Reviews/Kaweah Health Mental Health Hospital/106544009_Common25_2022.docx
-2022/2022 Completed Reviews/L.A. Downtown Medical Center/106190661_CDM_ALL_2022.XLSX
-2022/2022 Completed Reviews/Mercy Medical Center- Merced/OSHPD Cover Letter Mercy Medical Center Merced.docx
-2022/2022 Completed Reviews/Mercy Medical Center- Merced/106240942_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Norwalk Community Hospital/106190570_Common25_2022.xlsx
-2022/2022 Completed Reviews/Norwalk Community Hospital/106190570_PCT_CHG_2022.doc
-2022/2022 Completed Reviews/Norwalk Community Hospital/106190570_CDM_2022.xlsx
-2022/2022 Completed Reviews/Goleta Valley Cottage Hospital/106420483_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Kaweah Health Skilled Nursing Center/106540827_CDM_2022.xls
-2022/2022 Completed Reviews/Kaweah Health Skilled Nursing Center/106540827_PCT_CHG_2022.doc
-2022/2022 Completed Reviews/Kaweah Health Skilled Nursing Center/106540827_Common25_2022.docx
-2022/2022 Completed Reviews/Novato Community Hospital/106214034_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Seton Medical Center/106410817_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/LAC+USC Medical Center/106191228_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Kindred Hospital Westminster/106301380_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Kern Valley Healthcare District/106150737_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Community Hospital of San Bernardino/106361323_ Cover Letter Community Hospital San Bernardino.docx
-2022/2022 Completed Reviews/Community Hospital of San Bernardino/106361323_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Glendale Memorial Hospital and Health Center/106190522_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Glendale Memorial Hospital and Health Center/106190522 Cover Letter Glendale Memorial Hospital.docx
-2022/2022 Completed Reviews/Petaluma Valley Hospital/106491001_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Kentfield Hospital/106210993_CDM_2022.xls
-2022/2022 Completed Reviews/Kentfield Hospital/106210993_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kentfield Hospital/106210993_PCT_CHG_.docx
-2022/2022 Completed Reviews/Marian Regional Medical Center/OSHPD Cover Letter Marian Regional Medical Center.docx
-2022/2022 Completed Reviews/Marian Regional Medical Center/106420493_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Department of State Hospital- Coalinga/106105051_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Department of State Hospital- Coalinga/FY21.22 Supporting Documentation.pdf
-2022/2022 Completed Reviews/Sequoia Hospital/106410891_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Sequoia Hospital/OSHPD Cover Letter Sequoia Hospital.docx
-2022/2022 Completed Reviews/Tahoe Forest Hospital/106291053_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/College Medical Center South Campus D.P. APH/106190477_CDM_ALL.xlsx
-2022/2022 Completed Reviews/Centinela Hospital Medical Center/106190148_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/UCSF Medical Center/106381154_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Mercy Southwest Hospital/106154108_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Mercy Southwest Hospital/OSHPD Cover Letter Mercy Hospital's Bakersfield Southwest.docx
-2022/2022 Completed Reviews/St. Joseph's Behavioral Health Center/106392232_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Mission Community Hospital- Panorama Campus/106190524_PCT_CHG_2022.PDF
-2022/2022 Completed Reviews/Mission Community Hospital- Panorama Campus/106190524_CDM_Common25_2022.xlsx
-2022/2022 Completed Reviews/Good Samaritan Hospital- Bakersfield/106150775_Common25_2022.xlsx
-2022/2022 Completed Reviews/Good Samaritan Hospital- Bakersfield/106150775_CDM_2022.xlsx
-2022/2022 Completed Reviews/Good Samaritan Hospital- Bakersfield/106150775_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Eden Medical Center/106014233_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/St. Francis Memorial Hospital/OSHPD Cover Letter St Francis Memorial Hospital.docx
-2022/2022 Completed Reviews/St. Francis Memorial Hospital/106380960_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Sutter Davis Hospital/106574010_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/San Gabriel Valley Medical Center/106190200_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Sharp Memorial Hospital/106370694_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Sharp Memorial Hospital/106370694_CDM_2022.xlsx
-2022/2022 Completed Reviews/Sharp Memorial Hospital/106370694_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kindred Hospital- Ontario/106361274_CDM_All.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Walnut Creek/106070990_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Walnut Creek/106070990_CDM_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Walnut Creek/106070990_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Rady Children's Hospital- San Diego/106370673_Common25_2022.xlsx
-2022/2022 Completed Reviews/Rady Children's Hospital- San Diego/106370673_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Rady Children's Hospital- San Diego/106370673_Comments.docx
-2022/2022 Completed Reviews/Rady Children's Hospital- San Diego/106370673_CDM_2022.xlsx
-2022/2022 Completed Reviews/Santa Monica- UCLA Medical Center and Orthopaedic Hospital/106190687_ MSDRG Avg Chrgs.xlsx
-2022/2022 Completed Reviews/Santa Monica- UCLA Medical Center and Orthopaedic Hospital/106190687_CDM_2022.xlsx
-2022/2022 Completed Reviews/Santa Monica- UCLA Medical Center and Orthopaedic Hospital/106190687_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Santa Monica- UCLA Medical Center and Orthopaedic Hospital/106190687_Common25_2022.xlsx
-2022/2022 Completed Reviews/Sherman Oaks Hospital/106190708_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Totally Kids Rehabilitation Hospital/106364451_PCT_CHG_2022.docx
-2022/2022 Completed Reviews/Totally Kids Rehabilitation Hospital/106364451_Common25_2022.xlsx
-2022/2022 Completed Reviews/Totally Kids Rehabilitation Hospital/106364451_CDM_2022.xlsx
-2022/2022 Completed Reviews/Kindred Hospital- Brea/106301127_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Los Angeles/106190429_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Los Angeles/106190429_CDM_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Los Angeles/106190429_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Doctors Hospital of Manteca/106392287_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/AHMC Seton Medical Center Coastside/106410828_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Kindred Hospital- Los Angeles/106190305_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Desert Valley Hospital/106364144_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/St. Elizabeth Community Hospital/106521041 Cover Letter St. Elizabeth Community Hospital.docx
-2022/2022 Completed Reviews/St. Elizabeth Community Hospital/106521041_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Fairchild Medical Center/106474007_Common25_2022.xlsx
-2022/2022 Completed Reviews/Fairchild Medical Center/106474007_CDM_2022.xlsx
-2022/2022 Completed Reviews/Fairchild Medical Center/106474007_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/PIH Health Good Samaritan Hospital/106190392_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Scripps Mercy Hospital/106370744_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/St. Bernardine Medical Center/106361339_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/St. Bernardine Medical Center/106361339 Cover Letter St Bernardine Medical Center.docx
-2022/2022 Completed Reviews/Arrowhead Regional Medical Center/106364231_Common25_2022.xlsx
-2022/2022 Completed Reviews/Arrowhead Regional Medical Center/22 0630 Charge Master Content Ltr.pdf
-2022/2022 Completed Reviews/Arrowhead Regional Medical Center/106364231_PCT_CHG_2022.xls
-2022/2022 Completed Reviews/Arrowhead Regional Medical Center/106364231_Charge Master Cover Ltr.pdf
-2022/2022 Completed Reviews/Arrowhead Regional Medical Center/106364231_Pharmacy_ChargeMaster_2022.xlsx
-2022/2022 Completed Reviews/Arrowhead Regional Medical Center/106364231 Non-Pharmacy ChargeMaster2022.xlsx
-2022/2022 Completed Reviews/Encompass Health Rehabilitation Hospital of Bakersfield/106154022_PCT_CHG_2022.xls
-2022/2022 Completed Reviews/Encompass Health Rehabilitation Hospital of Bakersfield/106154022_Common25_Letter_2022.docx
-2022/2022 Completed Reviews/Encompass Health Rehabilitation Hospital of Bakersfield/106154022_CDM_2022.xlsx
-2022/2022 Completed Reviews/Children's Hospital at Mission/106304113_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Jerold Phelps Community Hospital/106121031_PCT_CHG_2022.docx
-2022/2022 Completed Reviews/Jerold Phelps Community Hospital/106121031_CDM_2022.xlsx
-2022/2022 Completed Reviews/Jerold Phelps Community Hospital/106121031_Common25_2022.xlsx
-2022/2022 Completed Reviews/Corona Regional Medical Center/106331152_PCT_CHG_2022.pdf
-2022/2022 Completed Reviews/Corona Regional Medical Center/106331152_Common25_2022.xlsx
-2022/2022 Completed Reviews/Corona Regional Medical Center/106331152_CDM_2022.xlsx
-2022/2022 Completed Reviews/Banner Lassen Medical Center/106184008_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Antelope Valley Hospital/106190034_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Aurora Las Encinas Hospital/106190462_CDM_ALL_2022.xls
-2022/2022 Completed Reviews/Laguna Honda Hospital and Rehabilitation Center/106380865_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Temecula Valley Hospital/106334564_PCT_CHG_2022.pdf
-2022/2022 Completed Reviews/Temecula Valley Hospital/106334564_CDM_2022.xlsx
-2022/2022 Completed Reviews/Temecula Valley Hospital/106334564_Common25_2022.xlsx
-2022/2022 Completed Reviews/Sonoma Valley Hospital/106491076_CDM_ALL_2022.xlsb
-2022/2022 Completed Reviews/Valley Children's Hospital/106204019_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/San Mateo Medical Center/106410782_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Alta Bates Summit Medical Center/106010937_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Orchard Hospital/16040802_CDM_2022.xlsx
-2022/2022 Completed Reviews/Orchard Hospital/106040802_PCT_CHG_2022.docx
-2022/2022 Completed Reviews/Orchard Hospital/106040802_Common25_2022.xlsx
-2022/2022 Completed Reviews/Del Amo Hospital/106190232_PCT_CHG_2022.docx
-2022/2022 Completed Reviews/Del Amo Hospital/106190232_Common25_2022.xlsx
-2022/2022 Completed Reviews/Del Amo Hospital/106190232_CDM_2022.rtf
-2022/2022 Completed Reviews/Bakersfield Behavioral Healthcare Hospital/106154044_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/California Pacific Medical Center- Mission Bernal Campus/106384202_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Adventist Health Vallejo/106481015_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Alvarado Parkway Institute B.H.S/106370749_PCT_CHG_2022.docx
-2022/2022 Completed Reviews/Alvarado Parkway Institute B.H.S/106370749_Common25_2022.xlsx
-2022/2022 Completed Reviews/Alvarado Parkway Institute B.H.S/106370749_CDM_2022.xlsx
-2022/2022 Completed Reviews/Surprise Valley Community Hospital/106250955_CDM_All.xlsx
-2022/2022 Completed Reviews/Riverside Community Hospital/106331312_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Seneca District Hospital/106321016_PCT_CHG.docx
-2022/2022 Completed Reviews/Seneca District Hospital/106321016_CDM_2022.xlsx
-2022/2022 Completed Reviews/Seneca District Hospital/106321016_Common25_.xlsx
-2022/2022 Completed Reviews/Kindred Hospital- La Mirada/106190449_CDM_All.xlsx
-2022/2022 Completed Reviews/West Hills Hospital and Medical Center/106190859_CDM_ALL.xls
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Santa Clara/106434153_CDM_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Santa Clara/106434153_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Santa Clara/106434153_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kindred Hospital- San Diego/106370721_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Bear Valley Community Hospital/106361110_CDM_2022.xlsm
-2022/2022 Completed Reviews/Bear Valley Community Hospital/106361110_Common25_2022.xlsx
-2022/2022 Completed Reviews/Bear Valley Community Hospital/106361110_PCT_CHG_2022.docx
-2022/2022 Completed Reviews/Sacramento Behavioral Healthcare Hospital/106344210_CDM_ALL.xls
-2022/2022 Completed Reviews/Sutter Roseville Medical Center/106311000_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Redwood Memorial Hospital/106121051_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Santa Rosa/106494019_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Santa Rosa/106494019_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Santa Rosa/106494019_CDM_2022.xlsx
-2022/2022 Completed Reviews/College Medical Center/106190587_CDM_All.xlsx
-2022/2022 Completed Reviews/USC Kenneth Norris Jr. Cancer Hospital/106191216_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Southwest Healthcare System- Wildomar/106334001_Common25.xlsx
-2022/2022 Completed Reviews/Southwest Healthcare System- Wildomar/106334001_CDM.xlsx
-2022/2022 Completed Reviews/Southwest Healthcare System- Wildomar/SWHCS Charge Master Letter 2022.pdf
-2022/2022 Completed Reviews/Plumas District Hospital/106320986_CDM_ALL_2022.xlsb
-2022/2022 Completed Reviews/Community Regional Medical Center-Fresno/106100717_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Alhambra Hospital Medical Center/106190017_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/San Joaquin Valley Rehabilitation Hospital/106104023_CDM_All_2022.xls
-2022/2022 Completed Reviews/MarinHealth Medical Center/106211006_CDM_PCT_CHG.xlsx
-2022/2022 Completed Reviews/MarinHealth Medical Center/106211006_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/MarinHealth Medical Center/106211006_Common25_2022.xlsx
-2022/2022 Completed Reviews/Loma Linda University Medical Center-Murrieta/106334589_Common25_2022.xlsx
-2022/2022 Completed Reviews/Loma Linda University Medical Center-Murrieta/106334589_CDM_2022.xlsx
-2022/2022 Completed Reviews/Loma Linda University Medical Center-Murrieta/106334589_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Washington Hospital- Fremont/106010987_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Community Subacute and Transitional Care Center/206100718_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Garfield Medical Center/106190315_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Lompoc Valley Medical Center Comprehensive Care Center/206420552_PCT_CHG.xlsx
-2022/2022 Completed Reviews/Lompoc Valley Medical Center Comprehensive Care Center/206420552_Common 25.xlsx
-2022/2022 Completed Reviews/Lompoc Valley Medical Center Comprehensive Care Center/206420552_CDM.xlsx
-2022/2022 Completed Reviews/Kedren Community Mental Health Center/106190150_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Sharp Mesa Vista Hospital/106370745_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Sharp Mesa Vista Hospital/106370745_CDM_2022.xlsx
-2022/2022 Completed Reviews/Sharp Mesa Vista Hospital/106370745_Common25_2022.xlsx
-2022/2022 Completed Reviews/SouthWest Healthcare System/106334068_Common25_2022.xlsx
-2022/2022 Completed Reviews/SouthWest Healthcare System/106334068_CDM_2022.xlsx
-2022/2022 Completed Reviews/SouthWest Healthcare System/106334068_PCT_CHG_2022.pdf
-2022/2022 Completed Reviews/Kaiser Permanente Hospital- San Rafael/106210992_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Permanente Hospital- San Rafael/106210992_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Permanente Hospital- San Rafael/106210992_CDM_2022.xlsx
-2022/2022 Completed Reviews/Enloe Medical Center- Cohasset/106040828_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Adventist Health St. Helena/106281078_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Sutter Surgical Hospital - North Valley/106034002_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Cedars-Sinai Medical Center/106190555_Common25_2022.xlsx
-2022/2022 Completed Reviews/Cedars-Sinai Medical Center/106190555_CDM_2022.xlsx
-2022/2022 Completed Reviews/Cedars-Sinai Medical Center/106190555_PCT_CHG_2022.pdf
-2022/2022 Completed Reviews/Adventist Health Reedley/106100797_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Mission Hospital Regional Medical Center/106301262_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Mark Twain Medical Center/OSHPD Cover Letter Mark Twain Medical Center.docx
-2022/2022 Completed Reviews/Mark Twain Medical Center/106050932_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Methodist Hospital of Sacramento/106340951_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Methodist Hospital of Sacramento/106340951 Cover Letter Methodist Hospital of Sacramento.docx
-2022/2022 Completed Reviews/Vibra Rehabilitation Hospital of Rancho Mirage/106334533_CDM_All_2022.xls
-2022/2022 Completed Reviews/Los Robles Hospital & Medical Center East Campus/106564018_Common 25_2022.xlsx
-2022/2022 Completed Reviews/Los Robles Hospital & Medical Center East Campus/106564018_.xlsx
-2022/2022 Completed Reviews/Los Robles Hospital & Medical Center East Campus/106564018_CDM_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- San Francisco/106380857_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- San Francisco/106380857_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- San Francisco/106380857_CDM_2022.xlsx
-2022/2022 Completed Reviews/Shriners Hospital for Children Northern California/106344114_PCT_CHG_2022.docx
-2022/2022 Completed Reviews/Shriners Hospital for Children Northern California/106344114_Common25_2022.xlsx
-2022/2022 Completed Reviews/Shriners Hospital for Children Northern California/106344114_CDM_2022.xlsx
-2022/2022 Completed Reviews/Stanford Health Care/106430905_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- West LA/106190434_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- West LA/106190434_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- West LA/106190434_CDM_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Downey/106196403_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Downey/106196403_CDM_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Downey/106196403_Common25_2022.xlsx
-2022/2022 Completed Reviews/Enloe Medical Center/106040962_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/St. Joseph Hospital - Orange/106301340_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Sonoma Specialty Hospital/106491338_CDM_ALL_2022.xlsm
-2022/2022 Completed Reviews/Hoag Orthopedic Institute/106304460_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Mission Oaks Hospital/106430915_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Mission Oaks Hospital/106430915_Common25_2022.xlsx
-2022/2022 Completed Reviews/Mission Oaks Hospital/106430915_CDM_2022.xlsx
-2022/2022 Completed Reviews/Hoag Hospital Irvine/106304045_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Paradise Valley Hospital/106370759_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/El Camino Health/106430763_CDM_2022.xlsx
-2022/2022 Completed Reviews/El Camino Health/106430763_Common25_2022.xlsx
-2022/2022 Completed Reviews/El Camino Health/106430763_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Beverly Hospital/106190081_CDM_ALL_2022.xlsb
-2022/2022 Completed Reviews/Encompass Health Rehabilitation Hospital of Tustin/106304585_CDM_ALL_2022.xls
-2022/2022 Completed Reviews/Hemet Global Medical Center/106331194_Common 25.xlsx
-2022/2022 Completed Reviews/Hemet Global Medical Center/106331194_CDM.xlsx
-2022/2022 Completed Reviews/Hemet Global Medical Center/106331194_PCT_CHG.xlsx
-2022/2022 Completed Reviews/Greater El Monte Community Hospital/106190352_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Hemet Valley Health Care Center/206334032_CDM_2022.xlsx
-2022/2022 Completed Reviews/Hemet Valley Health Care Center/206334032_PCT_CHG.xlsx
-2022/2022 Completed Reviews/Hemet Valley Health Care Center/206334032_COMMON25_2022.xlsx
-2022/2022 Completed Reviews/Doctors Hospital of Riverside/106331293_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Orange County Global Medical Center/106301566_CDM.xlsx
-2022/2022 Completed Reviews/Orange County Global Medical Center/106301566_PCT_CHG.xlsx
-2022/2022 Completed Reviews/Orange County Global Medical Center/106301566_Common 25.xlsx
-2022/2022 Completed Reviews/Anaheim Global Medical Center/106301188_PCT_CHG.xlsx
-2022/2022 Completed Reviews/Anaheim Global Medical Center/106301188_CDM.xlsx
-2022/2022 Completed Reviews/Anaheim Global Medical Center/106301188_Common 25.xlsx
-2022/2022 Completed Reviews/Adventist Health Ukiah Valley/106231396_CDM_All_AHUV_2022.xlsx
-2022/2022 Completed Reviews/Scripps Green Hospital/106371256_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Vibra Hospital of Northern California/106454012_CDM_ALL_2022.xls
-2022/2022 Completed Reviews/Clovis Community Medical Center/106100005_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Kindred Hospital- Baldwin Park/106190049_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Patton State Hospital/106361768_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Patton State Hospital/FY21.22 Supporting Documentation.pdf
-2022/2022 Completed Reviews/Joyce Eisenberg Keefer Medical Center/106196404_ Common 25_Response Letter _62022.docx
-2022/2022 Completed Reviews/Joyce Eisenberg Keefer Medical Center/106196404_ 25CommonOPProcedures_062022.xlsx
-2022/2022 Completed Reviews/Joyce Eisenberg Keefer Medical Center/106196404_PCT_CHG _Estimate of percentage change_062022.xlsx
-2022/2022 Completed Reviews/Joyce Eisenberg Keefer Medical Center/106196404_Ancillary Chargemaster_Acute_062022.xlsx
-2022/2022 Completed Reviews/Joyce Eisenberg Keefer Medical Center/106196404_Room Chargemaster_Acute_062022.xlsx
-2022/2022 Completed Reviews/Joyce Eisenberg Keefer Medical Center/106196404_Room Chargemaster_DPSNF_062022.xlsx
-2022/2022 Completed Reviews/Joyce Eisenberg Keefer Medical Center/106196404_Ancillary Chargemaster_DPSNF_062022.xlsx
-2022/2022 Completed Reviews/Joyce Eisenberg Keefer Medical Center/106196404_Calculation of Percentage Change in Gross Income_62022.docx
-2022/2022 Completed Reviews/Sutter Tracy Hospital/106391056_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Mad River Community Hospital/106121002_Common 25.xlsx
-2022/2022 Completed Reviews/Mad River Community Hospital/106121002_PCT_CHG.XLSX
-2022/2022 Completed Reviews/Mad River Community Hospital/106121002_CDM.CSV
-2022/2022 Completed Reviews/Healdsburg Hospital/106490964_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Sutter Delta Medical Center/106070934_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/San Antonio Regional Hospital/106361318_CDM_ALL_2022.xlsb
-2022/2022 Completed Reviews/Trinity Hospital/106531059_CDM_ALL.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Moreno Valey/106334048_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Moreno Valey/106334048_CDM_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Moreno Valey/106334048_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Community Memorial Hospital- San Buenaventura/106560473_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/MemorialCare Long Beach Medical Center/106190525_Comments(2)_2022.docx
-2022/2022 Completed Reviews/MemorialCare Long Beach Medical Center/106190525_Comments(1)_2022.docx
-2022/2022 Completed Reviews/MemorialCare Long Beach Medical Center/106190525_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Ballard Rehabilitation Hospital/106364121_CDM_All_2022.xls
-2022/2022 Completed Reviews/Adventist Health Simi Valley/106560525_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Fremont/106014132_CDM_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Fremont/106014132_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Fremont/106014132_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/St. Jude Medical Center/106301342_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Scripps Memorial Hospital- Encinitas/106371394_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Colorado River Medical Center/106361458_PCT_CHG_2022.pdf
-2022/2022 Completed Reviews/Colorado River Medical Center/106361458_CDM_2022.csv
-2022/2022 Completed Reviews/Colorado River Medical Center/106361458_Common25_2022.xlsx
-2022/2022 Completed Reviews/Gateways Hospital & Mental Health Center/106190317_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Chapman Global Medical Center/106301140_CDM.xlsx
-2022/2022 Completed Reviews/Chapman Global Medical Center/106301140_PCT_CHG.xlsx
-2022/2022 Completed Reviews/Chapman Global Medical Center/106301140_Common 25.xlsx
-2022/2022 Completed Reviews/Victor Valley Global Medical Center/106361370_PCT_CHG.xlsx
-2022/2022 Completed Reviews/Victor Valley Global Medical Center/106361370_Common 25.xlsx
-2022/2022 Completed Reviews/Victor Valley Global Medical Center/106361370_CDM.xlsx
-2022/2022 Completed Reviews/Aurora Behavioral Healthcare- Santa Rosa/106494048_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Highland Hospital/106010846_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Paradise Calley Hospital- Bayview Behavioral Health/106370775_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/California Pacific Medical Center D.P. APH/106380031_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Southern California Hospital at Van Nuys/106190814_PCT_CHG_2022.doc
-2022/2022 Completed Reviews/Southern California Hospital at Van Nuys/106190814_Common25_2022.xlsx
-2022/2022 Completed Reviews/Southern California Hospital at Van Nuys/106190814_CDM_2022.xlsx
-2022/2022 Completed Reviews/Palmdale Regional Medical Center/106196405_CDM_2022.xlsx
-2022/2022 Completed Reviews/Palmdale Regional Medical Center/106196405_PCT_CHG_2022.pdf
-2022/2022 Completed Reviews/Palmdale Regional Medical Center/106196405_Common25_2022.xlsx
-2022/2022 Completed Reviews/Santa Rosa Memorial Hospital-Montgomery/106491064_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/PIH Health Hospital- Downey/106190243_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Woodland Hills/106191450_CDM_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Woodland Hills/106191450_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Woodland Hills/106191450_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Manteca/106394009_CDM_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Manteca/106394009_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Manteca/106394009_Common25_2022.xlsx
-2022/2022 Completed Reviews/Los Robles Hospital & Medical Center/106560492_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Los Robles Hospital & Medical Center/106560492_Common 25_2022.xlsx
-2022/2022 Completed Reviews/Los Robles Hospital & Medical Center/106560492_CDM_2022.xlsx
-2022/2022 Completed Reviews/Emanate Health Queen of the Valley Hospital/106190636_Common25_2022_.XLS
-2022/2022 Completed Reviews/Emanate Health Queen of the Valley Hospital/106190636_CDM_2022.xlsx
-2022/2022 Completed Reviews/Emanate Health Queen of the Valley Hospital/106190636_PCT_CHG_2022.docx
-2022/2022 Completed Reviews/Modoc Medical Center/106254005_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Modoc Medical Center/106254005_CDM_2022.xls
-2022/2022 Completed Reviews/Modoc Medical Center/106254005_Common25_2022.xlsx
-2022/2022 Completed Reviews/Coast Plaza Hospital/106190766_PCT_CHG_2022.docx
-2022/2022 Completed Reviews/Coast Plaza Hospital/106190766_Common25_2022.xlsx
-2022/2022 Completed Reviews/Coast Plaza Hospital/106190766_CDM_2022.xlsx
-2022/2022 Completed Reviews/Henry Mayo Newhall Hospital/106190949_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Redlands Community Hospital/106361308_CDM_ALL_2022.xlsb
-2022/2022 Completed Reviews/Sutter Lakeside Hospital/106171395_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Kindred Hospital Rancho/106364188_CDM_All.xlsx
-2022/2022 Completed Reviews/St. Louise Regional Hospital/106434138_CDM_ALL.xlsx
-2022/2022 Completed Reviews/Sutter Amador Hospital/106034002_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Porterville Developmental Center/106541123_CDM_All.xlsx
-2022/2022 Completed Reviews/La Palma Intercommunity Hospital/106301234_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/University of California Davis Medical Center/106341006_CDM_2022.xlsx
-2022/2022 Completed Reviews/University of California Davis Medical Center/106341006_PCT_CHG_2022.pdf
-2022/2022 Completed Reviews/University of California Davis Medical Center/106341006_Common25_2022.pdf
-2022/2022 Completed Reviews/Kaweah Health Rehabilitation Hospital/106544075_PCT_CHG_2022.doc
-2022/2022 Completed Reviews/Kaweah Health Rehabilitation Hospital/106544075_CDM_2022.xls
-2022/2022 Completed Reviews/Kaweah Health Rehabilitation Hospital/106544075_Common25_2022.docx
-2022/2022 Completed Reviews/Mills-Peninsula Medical Center/106410852_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Vibra Hospital of Sacramento/106344035_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Contra Costa Regional Medical Center/106070924_Common25_2022.xlsx
-2022/2022 Completed Reviews/Contra Costa Regional Medical Center/106070924_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Contra Costa Regional Medical Center/106070924 Cover Letter.pdf
-2022/2022 Completed Reviews/Contra Costa Regional Medical Center/106070924_CDM_2022.xlsx
-2022/2022 Completed Reviews/Palomar Medical Center/106374382_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Alvarado Hospital Medical Center/Alvarado Hospital_106370652_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Sharp Coronado Hospital and Healthcare Center/106370689_Common25_2022.xlsx
-2022/2022 Completed Reviews/Sharp Coronado Hospital and Healthcare Center/106370689_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Sharp Coronado Hospital and Healthcare Center/106370689_CDM_2022.xlsx
-2022/2022 Completed Reviews/Memorial Hospital Los Banos/106240924_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Lakewood Regional Medical Center/106190240_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Sutter Santa Rosa Regional Hospital/106494106_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Mammoth Hospital/106260011_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Cedars-Sinai Marina Del Rey Hospital/106190500_PCT_CHG_2022.pdf
-2022/2022 Completed Reviews/Cedars-Sinai Marina Del Rey Hospital/106190500_Common25_2022.xlsx
-2022/2022 Completed Reviews/Cedars-Sinai Marina Del Rey Hospital/106190500_CDM_2022.xlsx
-2022/2022 Completed Reviews/Grossmont Hospital/106370714_CDM_2022.xlsx
-2022/2022 Completed Reviews/Grossmont Hospital/106370714_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Grossmont Hospital/106370714_Common25_2022.xlsx
-2022/2022 Completed Reviews/Casa Colina Hospital/106190137_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Bakersfield Rehabilitation Hospital/106150820_CDM_All_2022.xls
-2022/2022 Completed Reviews/College Hospital/106190184_Common25_2022.xlsx
-2022/2022 Completed Reviews/College Hospital/106190184_CDM_2022.xlsx
-2022/2022 Completed Reviews/College Hospital/106190184_PCT_CHG_2022.pdf
-2022/2022 Completed Reviews/Santa Ynez Valley College Hospital/106420522_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Los Angeles Community Hospital at Bellflower/106190066 BELLFLOWER_CDM_2022.xlsx
-2022/2022 Completed Reviews/Los Angeles Community Hospital at Bellflower/106190066_Common25_2022.xlsx
-2022/2022 Completed Reviews/Los Angeles Community Hospital at Bellflower/106190066_BELLFLOWER_PCT_CHG_2022.doc
-2022/2022 Completed Reviews/Emanate Health Foothill Presbyterian Hospital/106190298_CDM_2022.xlsx
-2022/2022 Completed Reviews/Emanate Health Foothill Presbyterian Hospital/106190298_PCT_CHG_2022.docx
-2022/2022 Completed Reviews/Emanate Health Foothill Presbyterian Hospital/106190298_Common25_2022_.XLS
-2022/2022 Completed Reviews/Colusa Medical Center/106060870_CDM_ALL_2022.xls
-2022/2022 Completed Reviews/Community Hospital of Huntington Park/106190197_CDM_2022.xlsx
-2022/2022 Completed Reviews/Community Hospital of Huntington Park/106190197_Common25_2022.xlsx
-2022/2022 Completed Reviews/Community Hospital of Huntington Park/106190197_PCT_CHG_2022.docx
-2022/2022 Completed Reviews/Sutter Coast Hospital/106084001_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Alta Bates Summit Medical Center- Summit Campus/106013626_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Fresno Surgical Hospital/106104047_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Northern Inyo Hospital/106141273_CDM_2022.xlsx
-2022/2022 Completed Reviews/Northern Inyo Hospital/106141273_Common25_2022.xlsx
-2022/2022 Completed Reviews/Northern Inyo Hospital/106141273_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Eisenhower Medical Center/106331168_CDM_ALL_2022.xls
-2022/2022 Completed Reviews/Hi-Desert Medical Center/106362041_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Enloe Rehabilitation Center/106044011_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Los Angeles- Mental Health/106190646_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Los Angeles- Mental Health/106190646_CDM_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Los Angeles- Mental Health/106190646_Common25_2022.xlsx
-2022/2022 Completed Reviews/West Anaheim Medical Center/106301379_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Adventist Health Lodi Memorial/106390923_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Santa Clara Valley Medical Center/106430883_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/MemorialCare Orange Coast Medical Center/106300225_Comments(1)_2022.docx
-2022/2022 Completed Reviews/MemorialCare Orange Coast Medical Center/106300225_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/MemorialCare Orange Coast Medical Center/106300225_Comments(2)_2022.docx
-2022/2022 Completed Reviews/Sutter Medical Center- Sacramento/106341051_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Lucile Packard Children's Hospital Stanford/106434040_CDM_2022.xlsx
-2022/2022 Completed Reviews/Lucile Packard Children's Hospital Stanford/106434040_PCT_CHG_2022.docx
-2022/2022 Completed Reviews/Lucile Packard Children's Hospital Stanford/106434040_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kindred Hospital- Santa Ana/106301167_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Adventist Health Bakersfield/106150788_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Aurora Charter Oak/106190163_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Bella Sera/206154001_CDM_ALL_2022.xls
-2022/2022 Completed Reviews/Chino Valley Medical Center/106361144_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Orange County- Anaheim/106304409_CDM_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Orange County- Anaheim/106304409_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Orange County- Anaheim/106304409_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Foothill Regional Medical Center/106301357_Common25_2022.xlsx
-2022/2022 Completed Reviews/Foothill Regional Medical Center/106301357_CDM_2022.xlsx
-2022/2022 Completed Reviews/Foothill Regional Medical Center/106301357_PCT_CHG_2022.doc
-2022/2022 Completed Reviews/Adventist Health and Rideout/106580996_CDM_All_AHRO_2022.xlsx
-2022/2022 Completed Reviews/Sharp Chula Vista Medical Center/106370875_CDM_2022.xlsx
-2022/2022 Completed Reviews/Sharp Chula Vista Medical Center/16370875_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Sharp Chula Vista Medical Center/106370875_Common25_2022.xlsx
-2022/2022 Completed Reviews/Martin Luther King Jr. Community Hospital/106191230_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Alta Bates Summit Medical Center- Alta Bates Campus/106010739_CDM_ALL_20222.xlsx
-2022/2022 Completed Reviews/USC Arcadia Hospital/106190529_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Department of State Hospital- Metropolitan/FY21.22 Supporting Documentation.pdf
-2022/2022 Completed Reviews/Department of State Hospital- Metropolitan/106190958_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/John Muir Medical Center- Walnut Creek Campus/106070988_Common 25_2022.xlsx
-2022/2022 Completed Reviews/John Muir Medical Center- Walnut Creek Campus/106070988_CDM_2022.xlsx
-2022/2022 Completed Reviews/John Muir Medical Center- Walnut Creek Campus/106070988_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Children's Hospital of Los Angeles/106190170_Common25_2022.xlsx
-2022/2022 Completed Reviews/Children's Hospital of Los Angeles/106190170_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Children's Hospital of Los Angeles/106190170_CDM_2022.xls
-2022/2022 Completed Reviews/Bakersfield Memorial Hospital/106150722_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Bakersfield Memorial Hospital/OSHPD Cover Letter Bakersfield Memorial Hospital.docx
-2022/2022 Completed Reviews/John Muir Medical Center- Concord/106071018_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/John Muir Medical Center- Concord/106071018_CDM_2022.xlsx
-2022/2022 Completed Reviews/John Muir Medical Center- Concord/106071018_Common 25_2022.xlsx
-2022/2022 Completed Reviews/Alta Bates Summit Medical Center- Herrick Campus/106010844_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Kindred Hospital- Riverside/106332172_CDM_All.xlsx
-2022/2022 Completed Reviews/Bakerfield Heart Hospital/106154101_CDM_2022.xlsx
-2022/2022 Completed Reviews/Bakerfield Heart Hospital/106154101_Common25_2022.xlsx
-2022/2022 Completed Reviews/Bakerfield Heart Hospital/106154101_PCT_CHG_2022.docx
-2022/2022 Completed Reviews/Southern Inyo Hospital/106141338_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Huntington Beach Hospital/106301209_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Kindred Hospital- South Bay/106190196_CDM_All.xlsx
-2022/2022 Completed Reviews/Providence Little Company of Mary Medical Center, San Pedro/106190680_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Ojai Valley Community Skilled Nursing Facility/206560500_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Sierra Nevada Memorial Hospital/106291023_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Sierra Nevada Memorial Hospital/106291023 Cover Letter Sierra Nevada Memorial Hospital.docx
-2022/2022 Completed Reviews/MemorialCare SaddleBack Medical Center/106301317_Comments(2)_2022.docx
-2022/2022 Completed Reviews/MemorialCare SaddleBack Medical Center/106301317_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/MemorialCare SaddleBack Medical Center/106301317_Comments(1)_2022.docx
-2022/2022 Completed Reviews/Loma Linda University Children's Hospital/106364502_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Loma Linda University Children's Hospital/106364502_Common25_2022.xlsx
-2022/2022 Completed Reviews/Loma Linda University Children's Hospital/106364502_CDM_2022.xlsx
-2022/2022 Completed Reviews/San Jose Behavioral Health/106434032_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Richmond/106074093_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Richmond/106074093_CDM_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Richmond/106074093_Common25_2022.xlsx
-2022/2022 Completed Reviews/Adventist Health Howard Memorial/106234038_CDM_All_2022.xlsx
-2022/2022 Completed Reviews/Whittier Hospital Medical Center/106190883_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Dameron Hospital/106390846_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Motion Picture and Television Hospital/106190552_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Roseville/106314024_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Roseville/106314024_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Roseville/106314024_CDM_2022.xlsx
-2022/2022 Completed Reviews/Queen of the Valley Medical Center/106281047_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/French Hospital Medical Center/106400480_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/French Hospital Medical Center/OSHPD Cover Letter French Hospital Medical Center.docx
-2022/2022 Completed Reviews/Encompass Health Rehabilitation Hospital of Murrieta/106334678_CDM_All.xlsx
-2022/2022 Completed Reviews/University of California Irvine Medical Center/106301279_CDM_2022.xlsx
-2022/2022 Completed Reviews/University of California Irvine Medical Center/106301279_Common25_2022.xlsx
-2022/2022 Completed Reviews/University of California Irvine Medical Center/106301279_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Sacramento/106340913_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Sacramento/106340913_CDM_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Sacramento/106340913_Common25_2022.xlsx
-2022/2022 Completed Reviews/Madera Community Hospital/106201281_Common25_2022.xlsx
-2022/2022 Completed Reviews/Madera Community Hospital/106201281_CDM_2022.xlsx
-2022/2022 Completed Reviews/Madera Community Hospital/106201281_PCT_CHG_2022.pdf
-2022/2022 Completed Reviews/Hollywood Presbyterian Medical Center/106190382_CDM_2022.xlsx
-2022/2022 Completed Reviews/Hollywood Presbyterian Medical Center/106190382_Common_25_2022.xlsx
-2022/2022 Completed Reviews/Hollywood Presbyterian Medical Center/106190382_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Catalina Island Medical Center/106190045_CDM_ALL_2022.xlsb
-2022/2022 Completed Reviews/Los Angeles County- Harbor-UCLA Medical Center/106191227_CDM_ALL_2022.xlsx
-2022/2022 Completed Reviews/Ridgecrest Regional Hospital/106150782_Common 25.xls
-2022/2022 Completed Reviews/Ridgecrest Regional Hospital/106150782_PCT_CHG.xlsx
-2022/2022 Completed Reviews/Ridgecrest Regional Hospital/106150782_CDM.csv
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Redwood City/106414139_PCT_CHG_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Redwood City/106414139_Common25_2022.xlsx
-2022/2022 Completed Reviews/Kaiser Foundation Hospital- Redwood City/106414139_CDM_2022.xlsx
-2022/2022 Completed Reviews/PIH Health Hospital- Whittier/106190631_CDM_ALL_2022.xlsx
+2022/Canyon Ridge Hospital/106364050_CDM_ALL_2022.xls
+2022/Ventura County Medical Center/HCAI ID 106560481 CDM_All.xlsx
+2022/Newport Bay Hospital/106301304_PCT_CHG_2022.docx
+2022/Newport Bay Hospital/106301304_Common25_2022.doc
+2022/Newport Bay Hospital/106301304_CDM_2022.xlsx
+2022/Hazel Hawkins Memorial Hospital/106350784_CDM_ALL_2022.xlsx
+2022/Kaiser Foundation Hospital- San Diego-Clairemont Mesa/106374465_PCT_CHG_2022.xlsx
+2022/Kaiser Foundation Hospital- San Diego-Clairemont Mesa/106374465_Common25_2022.xlsx
+2022/Kaiser Foundation Hospital- San Diego-Clairemont Mesa/106374465_CDM_2022.xlsx
+2022/Monterey Park Hospital/106190547_CDM_ALL_2022.xls
+2022/Sutter Center for Psychiatry/106344017_CDM_ALL_2022.xlsx
+2022/Kaiser Foundation Hospital- South Bay/106190431_PCT_CHG_2022.xlsx
+2022/Kaiser Foundation Hospital- South Bay/106190431_Common25_2022.xlsx
+2022/Kaiser Foundation Hospital- South Bay/106190431_CDM_2022.xlsx
+2022/Doctors Medical Center/106500852_CDM_ALL_2022.xlsx
+2022/Kaiser Foundation Hospital- Orange County- Irvine/106304306_CDM_2022.xlsx
+2022/Kaiser Foundation Hospital- Orange County- Irvine/106304306_PCT_CHG_2022.xlsx
+2022/Kaiser Foundation Hospital- Orange County- Irvine/106304306_Common25_2022.xlsx
+2022/Kindred Hospital- Paramount/106190599_CDM_All_2022.xlsx
+2022/San Diego County Psychiatric Hospital/106374055_CDM_ALL_2022.xls
+2022/Memorial Medical Center- Modesto/106500939_CDM_ALL_2022.xlsx
+2022/Oroville Hospital/106040937_CDM_2022.xlsx
+2022/Oroville Hospital/10604937_PCT_CHG_2022.xlsx
+2022/Oroville Hospital/106040937_Common25_2022.xlsx
+2022/Providence Redwood Memorial Hospital/106121051_CDM_ALL_2022.xlsx
+2022/Mayers Memorial Hospital/106450936_CDM_All_2022.xlsx
+2022/Montclair Hospital Medical Center/106361166_CDM_All_2022 (1).xlsx
+2022/Ronald Reagan UCLA Medical Center/106190796_PCT_CHG_2022.xlsx
+2022/Ronald Reagan UCLA Medical Center/106190796_MSDRG Avg Chrgs.xlsx
+2022/Ronald Reagan UCLA Medical Center/106190796_Common25_2022.xlsx
+2022/Ronald Reagan UCLA Medical Center/106190796_CDM_2022.xlsx
+2022/St. Rose Hospital/106010967_Common25_2022.xlsx
+2022/St. Rose Hospital/106010967_PCT_CHG_2022.xlsx
+2022/St. Rose Hospital/106010967_CDM_2022.xlsx
+2022/Select Special Hospital- San Diego/106374094_CDM_All_2022.xlsx
+2022/Providence Little Company Of Mary Medical Center Torrance/106190470_CDM_ALL_2022.xlsx
+2022/Northridge Hospital Medical Center/106190568 Cover Letter Northridge Hospital.docx
+2022/Northridge Hospital Medical Center/106190568_CDM_ALL_2022.xlsx
+2022/Kaiser Foundation Hospital- Fontana/106361223_CDM_2022.xlsx
+2022/Kaiser Foundation Hospital- Fontana/106361223_PCT_CHG_2022.xlsx
+2022/Kaiser Foundation Hospital- Fontana/106361223_Common25_2022.xlsx
+2022/Corona Regional Medical Center- Magnolia/Corona AB 1627 1045 Letter 2022.pdf
+2022/Corona Regional Medical Center- Magnolia/106331145_CDM_2022.xlsx
+2022/Corona Regional Medical Center- Magnolia/106331145_Common25_2022.xlsx
+2022/Ojai Valley Community Hospital/106560501_CDM_ALL_2022.xlsx
+2022/Adventist Health Tulare/106540816_CDM_All_2022.xlsx
+2022/Priscilla Chan & Mark Zuckerberg San Francisco General Hospital & Trauma Center/106380939_CDM_ALL_2022.xlsx
+2022/Providence Cedars-Sinai Tarzana Medical Center/106190517_CDM_ALL_2022.xlsx
+2022/UCSF Benioff Children's Hospital Oakland/106010776_CDM_ALL_2022.xlsx
+2022/Community Hospital of the Monterey Peninsula/106270744_CDM_ALL_2022.xlsx
+2022/Garden Grove Hospital and Medical Center/106301283_CDM_ALL_2022.xlsx
+2022/O'Connor Hospital/106430837_CDM_ALL_2022.xlsx
+2022/Scripps Mercy Hospital- Chula Vista/106370658_CDM_ALL_2022.xlsx
+2022/Menifee Global Medical Center/106334018_Common 25.xlsx
+2022/Menifee Global Medical Center/106334018_PCT_CHG.xlsx
+2022/Menifee Global Medical Center/106334018_CDM.xlsx
+2022/Twin Cities Community Hospital/106400548_CDM_ALL_2022.xlsx
+2022/Providence Holy Cross Medical Center/106190385_CDM_ALL_2022.xlsx
+2022/Mercy Hospital- Bakersfield/OSHPD Cover Letter Mercy Hospital's Bakersfield Southwest.docx
+2022/Mercy Hospital- Bakersfield/OSHPD Cover Letter Mercy Hospital's Bakersfield Downtown.docx
+2022/Mercy Hospital- Bakersfield/106150761_CDM_ALL_2022.xlsx
+2022/Fountain Valley Regional Hospital & Medical Center- Euclid/106301175_CDM_ALL_2022.xlsx
+2022/Kaiser Foundation Hospital- Modesto/106504042_Common25_2022.xlsx
+2022/Kaiser Foundation Hospital- Modesto/106504042_CDM_2022.xlsx
+2022/Kaiser Foundation Hospital- Modesto/106504042_PCT_CHG_2022.xlsx
+2022/St. John Pleasant Valley Hospital/St. John's Regional Medical Center/106560529_CDM_ALL_2022.xlsx
+2022/St. John Pleasant Valley Hospital/St. John's Regional Medical Center/106560529 Cover Letter St. John's Regional.docx
+2022/St. John Pleasant Valley Hospital/106560508 Cover Letter St. John's Pleasant Valley.docx
+2022/St. John Pleasant Valley Hospital/106560508_CDM_ALL_2022.xlsx
+2022/Loma Linda University Behavioral Medicine Center/106364014_Common25_2022.xlsx
+2022/Loma Linda University Behavioral Medicine Center/106364014_PCT_CHG_2022.xlsx
+2022/Loma Linda University Behavioral Medicine Center/106364014_CDM_2022.xlsx
+2022/Adventist Health Sonora-Greenley/106554011_CDM_All_2022.xlsx
+2022/NorthBay Medical Center/106481357_CDM_ALL_2022.xlsx
+2022/UC San Diego Health HillCrest Medical Center/106370782_Pharmacy_System_Data_2022.xlsx
+2022/UC San Diego Health HillCrest Medical Center/106370782_Common25_2022.xlsx
+2022/UC San Diego Health HillCrest Medical Center/106370782_Supply_file.xlsx
+2022/UC San Diego Health HillCrest Medical Center/106370782_CDM_2022.xlsx
+2022/UC San Diego Health HillCrest Medical Center/106370782_PCT_CHG_2022.xlsx
+2022/Fresno Heart and Surgical Hospital/106105029_CDM_ALL_2022.xlsx
+2022/VCMC- Santa Paula Hospital/HCAI ID 106560521 CDM_All.xlsx
+2022/Salinas Valley Memorial Hospital/106270875_CDM_ALL_2022.xlsx
+2022/Kindred Hospital- San Gabriel Valley/106190458_CDM_All_2022.xlsx
+2022/St. Mary Medical Center- Long Beach/106190053_Cover Letter St Marys Medical Center LB.docx
+2022/St. Mary Medical Center- Long Beach/106190053_CDM_ALL_2022.xlsx
+2022/Tarzana Treatment Center/106190782_CDM_ALL_2022.xlsx
+2022/Woodland Memoral Hospital/106571086_CDM_ALL_2022.xlsx
+2022/Woodland Memoral Hospital/106571086 Cover Letter Woodland Memorial Hospital.docx
+2022/Docs Surgical Hospital/106190681_PCT_CHG_2022.docx
+2022/Docs Surgical Hospital/106190681_CDM_2022.xls
+2022/Docs Surgical Hospital/106190681_Common25_2022.xlsx
+2022/Desert Regional Medical Center/106331164_CDM_ALL_2022.xlsx
+2022/Aliso Ridge Behavioral Hospital/106304589_CDM_ALL_2022.xlsx
+2022/Adventist Health White Memorial/106190878_CDM_All_2022.xlsx
+2022/Kaiser Foundation Hospital- San Jose/106431506_Coomon25_2022.xlsx
+2022/Kaiser Foundation Hospital- San Jose/106431506_CDM_2022.xlsx
+2022/Kaiser Foundation Hospital- San Jose/106431506_PCT_CHG_2022.xlsx
+2022/Fremont Hospital/106014034_CDM_ALL_2022.xls
+2022/San Gorgonio Memorial Hospital/106331326_CDM_All_2022.xlsx
+2022/Oroville Hospital Post-Acute Center/206044003_Common25_2022.docx
+2022/Oroville Hospital Post-Acute Center/206044003_CDM_2022.xlsx
+2022/Oroville Hospital Post-Acute Center/206044003_PCT_CHG_2022.xlsx
+2022/Glenn Medical Center/106110889_CDM_ALL_2022.xls
+2022/City of Hope Helford Clinical Research Hospital/106190176_CDM_All_2022.xlsx
+2022/Chinese Hospital/106382715_CDM_ALL_2022.xlsx
+2022/Adventist Health Mendocino Coast/106231013_CDM_All_AHMC_2022.xlsx
+2022/Kaiser Foundation Hospital- Antioch/106074097_PCT_CHG_2022.xlsx
+2022/Kaiser Foundation Hospital- Antioch/106074097_Common25_2022.xlsx
+2022/Kaiser Foundation Hospital- Antioch/106074097_CDM_2022.xlsx
+2022/Adventist Health Tehachapi Valley/106154168_CDM_All_2022.xlsx
+2022/Los Angeles County Olive View- UCLA Medical Center/106191231_CDM_ALL_2022.xlsx
+2022/Monrovia Memorial Hospital/106190541_Common25_2022.xlsx
+2022/Monrovia Memorial Hospital/106190541_PCT_CHG_2022.docx
+2022/Monrovia Memorial Hospital/106190541_CDM_2022.xlsx
+2022/Children's Hospital of Orange County/106300032_CDM_ALL_2022.xlsx
+2022/Watsonville Community Hospital/106444013_CDM_ALL_2022.xlsb
+2022/San Dimas Community Hospital/106190673_CDM_All_2022.xlsx
+2022/Providence St. John's Health Center/106190756_CDM_ALL_2022.xlsx
+2022/California Pacific Medical Center- Davies Campus Hospital/106380933_CDM_ALL_2022.xlsx
+2022/Central Valley Specialty Hospital/106500954_CDM_ALL_2022.xlsm
+2022/California Pacific Medical Center- Van Ness Campus/106384176_CDM_ALL_2022.xlsx
+2022/Healthbridge Children's Hospital- Orange/106304159_PCT_CHG_2022.pdf
+2022/Healthbridge Children's Hospital- Orange/106304159_CDM_Common25_2022.xlsx
+2022/East Los Angeles Doctors Hospital/106190256_Common25_2022.xlsx
+2022/East Los Angeles Doctors Hospital/106190256_CDM_2022.xlsx
+2022/East Los Angeles Doctors Hospital/106190256_PCT_CHG_2022.docx
+2022/Emanuel Medical Center/106500867_CDM_ALL_2022.xlsx
+2022/El Centro Regional Medical Center/106130699_Common25_2022.xlsx
+2022/El Centro Regional Medical Center/106130699_CDM_2022.xlsx
+2022/El Centro Regional Medical Center/106130699_PCT_CHG_2022.xlsx
+2022/Good Samaritan Hospital- San Jose/106430779_Common25_2022.xlsx
+2022/Good Samaritan Hospital- San Jose/Charge  Master Letter - 2022.pdf
+2022/Good Samaritan Hospital- San Jose/106430779_CDM_2022.xlsx
+2022/Good Samaritan Hospital- San Jose/106430779_PCT_CHG_2022.xlsx
+2022/Kaiser Foundation Hospital- Fresno/106104062_PCT_CHG_2022.xlsx
+2022/Kaiser Foundation Hospital- Fresno/106104062_Common25_2022.xlsx
+2022/Kaiser Foundation Hospital- Fresno/106104062_CDM_2022.xlsx
+2022/Riverside University Health System- Medical Center/106334487_CDM_All_2022.xls
+2022/San Ramon Regional Medical Center/106074017_CDM_ALL_2022.xlsx
+2022/Scripps Memorial Hospital- La Jolla/106370771_CDM_ALL_2022.xlsx
+2022/Mercy Medical Center- Mt. Shasta/106470871_CDM_ALL_2022.xlsx
+2022/Mercy Medical Center- Mt. Shasta/106470871 Cover Letter Mercy Medical Center Mt Shasta.docx
+2022/USC Verdugo Hills Hospital/106190818_CDM_ALL_2022_.xlsx
+2022/Sutter Solano Medical Center/106481094_CDM_ALL_2022.xlsx
+2022/Memorial Hospital of Gardena/106190521_PCT_CHG_2022.docx
+2022/Memorial Hospital of Gardena/106190521_CDM_2022.xlsx
+2022/Memorial Hospital of Gardena/106190521_Common25_2022.xlsx
+2022/Pioneers Memorial Healthcare District/106130760_CDM_2022.xlsx
+2022/Pioneers Memorial Healthcare District/PMHD Pharmacy Letter.pdf
+2022/Pioneers Memorial Healthcare District/106130760_Common25_2022.xlsx
+2022/Pioneers Memorial Healthcare District/106130760_PCT_CHG_20222.pdf
+2022/Natividad Medical Center/106274043_CDM_ALL_2022.xlsb
+2022/Resnick Neuropsychiatric Hospital at UCLA/106190930_PCT_CHG_2022.xlsx
+2022/Resnick Neuropsychiatric Hospital at UCLA/106190930_CDM_2022.xlsx
+2022/Resnick Neuropsychiatric Hospital at UCLA/106190930_ MSDRG Avg Chrgs.xlsx
+2022/Resnick Neuropsychiatric Hospital at UCLA/106190930_Common25_2022.xlsx
+2022/Barlow Respiratory Hospital/106190052_PCT_CHG_2022.xls
+2022/Barlow Respiratory Hospital/106190052_CDM_2022.xlsx
+2022/Barlow Respiratory Hospital/106190052_Common25_2022.xlsx
+2022/Los Angeles Community Hospital/106190198_Common25_2022.xlsx
+2022/Los Angeles Community Hospital/106190198_PCT_CHG_2022.doc
+2022/Los Angeles Community Hospital/106190198  CDM_2022.xlsx
+2022/Providence St. Joseph Medical Center/106190758_CDM_ALL_2022.xlsx
+2022/Kaiser Foundation Hospital- Oakland-Richmond/106014326_CDM_2022.xlsx
+2022/Kaiser Foundation Hospital- Oakland-Richmond/106014326_PCT_CHG_2022.xlsx
+2022/Kaiser Foundation Hospital- Oakland-Richmond/106014326_Common25_2022.xlsx
+2022/Riverside University Health System - DP APH/106331314_CDM_ALL_2022.xls
+2022/Palomar Rehabilitation Institute/106374572 CDM_ALL_2022.xlsx
+2022/Adventist Health Glendale/106190323_CDM_All_2022.xlsx
+2022/Glendora Hospital/106190328_CDM_All.xlsx
+2022/Aurora Vista Del Mar Hospital/106560203_CDM_ALL_2022.xls
+2022/Hoag Memorial Hospital Presbyterian/106301205_CDM_ALL_2022.xlsx
+2022/Sierra Vista Regional Medical Center/106400524_CDM_ALL_2022.xlsx
+2022/Kaiser Foundation Hospital- Panorama City/106190432_PCT_CHG_2022.xlsx
+2022/Kaiser Foundation Hospital- Panorama City/106190432_CDM_2022.xlsx
+2022/Kaiser Foundation Hospital- Panorama City/106190432_Common25_2022.xlsx
+2022/Stanislaus Surgical Hospital/106504038_CDM_ALL_2022.xls
+2022/Placentia Linda Hospital/106301297_CDM_ALL_2022.xlsx
+2022/Regional Medical Center of San Jose/106430705_CDM_ALL_2022.xlsx
+2022/George L. Mee Memorial Hospital/106270777_CDM_ALL_2022.xlsb
+2022/Sierra Vista Hospital/106342392_PCT_CHG_2022.docx
+2022/Sierra Vista Hospital/106342392_Common25_2022.xlsx
+2022/Sierra Vista Hospital/106342392_CDM_2022.xlsx
+2022/Shasta Regional Medical Center/106450940_CDM_All_2022.xlsx
+2022/MemorialCare Miller Children's & Womens Hospital Long Beach/106196168_Comments(1)_2022.docx
+2022/MemorialCare Miller Children's & Womens Hospital Long Beach/106196168_Comments(2)_2022.docx
+2022/MemorialCare Miller Children's & Womens Hospital Long Beach/106196168_CDM_ALL_2022.xlsx
+2022/Barton Memorial Hospital/106090793_CDM_2022.xlsx
+2022/Barton Memorial Hospital/106090793_Common25_2022.xlsx
+2022/Barton Memorial Hospital/106090793_RX_CDM_2022.xlsx
+2022/Barton Memorial Hospital/106090793_PCT_CHG_2022.doc
+2022/Huntington Hospital/106190400_CDM_All_2022.xlsx
+2022/Kindred Hospital- San Francisco Bay Area/106010887_CDM_All_2022.xlsx
+2022/Kaiser Foundation Hospital- Baldwin Park/106196035_Common25_2022.xlsx
+2022/Kaiser Foundation Hospital- Baldwin Park/106196035_PCT_CHG_2022.xlsx
+2022/Kaiser Foundation Hospital- Baldwin Park/106196035_CDM_2022.xlsx
+2022/Lompoc Valley Medical Center/106420491_PCT_CHG_2022.docx
+2022/Lompoc Valley Medical Center/106420491_CDM_2022.xlsx
+2022/Lompoc Valley Medical Center/106420491_Common25_2022.xlsx
+2022/El Camino Hospital - Los Gatos/106430743_Common 25_2022.xlsx
+2022/El Camino Hospital - Los Gatos/106430743_PCT_CHG_2022.xlsx
+2022/El Camino Hospital - Los Gatos/106430743_CDM_2022.xlsx
+2022/Loma Linda University Medical Center/106361246_CDM_2022.xlsx
+2022/Loma Linda University Medical Center/106361246_PCT_CHG_2022.xlsx
+2022/Loma Linda University Medical Center/106361246_Common25_2022.xlsx
+2022/Pomona Valley Hospital Medical Center/106190630_CDM_2022.xlsx
+2022/Pomona Valley Hospital Medical Center/106190630_PCT_CHG_2022.xls
+2022/Pomona Valley Hospital Medical Center/106190630_Common25_2022.xlsx
+2022/Marshall Medical Center/106090933_PCT_CHG_2022.xlsx
+2022/Marshall Medical Center/106090933_CDM_2022.xlsx
+2022/Marshall Medical Center/106090933_Common25_2022.xlsx
+2022/Kaiser Foundation Hospital- Vacaville/106484044_Common25_2022.xlsx
+2022/Kaiser Foundation Hospital- Vacaville/106484044_PCT_CHG_2022.xlsx
+2022/Kaiser Foundation Hospital- Vacaville/106484044_CDM_2022.xlsx
+2022/Pacifica Hospital of the Valley/106190696_CDM_ALL_2022.xlsb
+2022/South Coast Global Medical Center/106301258_CDM.xlsx
+2022/South Coast Global Medical Center/106301258_PCT_CHG.xlsx
+2022/South Coast Global Medical Center/106301258_Common 25.xlsx
+2022/Southern California Hospital at Culver City/106190110 CDM_2022.xlsx
+2022/Southern California Hospital at Culver City/106190110_Common25_2022.xlsx
+2022/Southern California Hospital at Culver City/106190110_PCT_CHG_2022.doc
+2022/St. Francis Medical Center/106190754_CDM_ALL_2022.xlsx
+2022/Keck Hospital of USC/106194219_CDM_ALL_2022.xlsx
+2022/Dominican Hospital/106440755_CDM_ALL_2022.xlsx
+2022/Dominican Hospital/OSHPD Cover Letter Dominican Hospital Santa Cruz.docx
+2022/Santa Barbara Cottage Hospital/106420514_CDM_ALL_2022.xlsx
+2022/College Medical Center Hawthorne Campus/106190523_CDM_All.xlsx
+2022/Los Alamitos Medical Center/106301248_CDM_ALL_2022.xlsx
+2022/Mercy San Juan Medical Center/106340950_CDM_ALL_2022.xlsx
+2022/Mercy San Juan Medical Center/106340950 Cover Letter Mercy San Juan Medical Center.docx
+2022/Heritage Oaks Hospital/106344021_CDM.xlsx
+2022/Heritage Oaks Hospital/106344021_Common25_2022.xlsx
+2022/Heritage Oaks Hospital/106344021_PCT_CHG.docx
+2022/Mountains Community Hospital/106361266_CDM_ALL_2022.xls
+2022/Coalinga Regional Medical Center/106100697_CDM_ALL_2022.xlsm
+2022/Mercy Hospital of Folsom/106344029 Cover Letter Mercy Hospital of Folsom.docx
+2022/Mercy Hospital of Folsom/106344029_CDM_ALL_2022.xlsx
+2022/Encompass Health Rehabilitation Hospital of Modesto/106504079_Common 25_2022.xlsx
+2022/Encompass Health Rehabilitation Hospital of Modesto/106504079_CDM_2022.xlsx
+2022/Encompass Health Rehabilitation Hospital of Modesto/106504079_PCT_CHG_2022.xlsx
+2022/St. Agnes Medical Center/106100899_CDM_All_2022.xlsx
+2022/Adventist Health Clearlake/106171049_CDM_All_2022.xlsx
+2022/Palo Verde Hospital/106331288_CDM_ALL_2022.xlsx
+2022/Southern California Hospital at Hollywood/106190380_CDM_2022.xlsx
+2022/Southern California Hospital at Hollywood/106190380_PCT_CHG_2022.doc
+2022/Southern California Hospital at Hollywood/106190380_Common25_2022.xlsx
+2022/Torrance Memorial Medical Center/106190422_Common25_2022.xlsx
+2022/Torrance Memorial Medical Center/106190422_CDM_2022.xlsx
+2022/Torrance Memorial Medical Center/106190422_PCT_CHG_2022.xlsx
+2022/Kaiser Foundation Hospital- Riverside/106334025_CDM_2022.xlsx
+2022/Kaiser Foundation Hospital- Riverside/106334025_COmmon25_2022.xlsx
+2022/Kaiser Foundation Hospital- Riverside/106334025_PCT_CHG_2022.xlsx
+2022/Los Ageles County- Rancho Los Amigos National Rehab Center/106191306_CDM_ALL_2022.xlsx
+2022/St. Mary's Medical Center San Francisco/106380965_CDM_ALL_2022.xlsx
+2022/St. Mary's Medical Center San Francisco/OSHPD Cover Letter St Marys Medical Center SF.docx
+2022/Marian Regional Medical Center- Arroyo Grande/OSHPD Cover Letter Arroyo Grande Community Hospital.docx
+2022/Marian Regional Medical Center- Arroyo Grande/106400466_CDM_ALL_2022.xlsx
+2022/Encino Hospital Medical Center/106190280_CDM_All_2022.xlsx
+2022/San Joaquin General Hospital/OSHPD CDM Letter 2022.doc
+2022/San Joaquin General Hospital/106391010_CDM_2022.xlsx
+2022/San Joaquin General Hospital/106391010_PCT_CHG_2022.xlsx
+2022/San Joaquin General Hospital/106391010_Common25_2022.xlsx
+2022/Napa State Hospital/106281266_CDM_ALL_2022.xlsx
+2022/Napa State Hospital/FY21.22 Supporting Documentation.pdf
+2022/Adventist Health Delano/106150706_CDM_ALL_2022.xlsx
+2022/St. John's Regional Medical Center/106560529_CDM_ALL_2022.xlsx
+2022/St. John's Regional Medical Center/106560529 Cover Letter St. John's Regional.docx
+2022/Kaweah Delta Medical Center/106540734_Common25_2022.xlsx
+2022/Kaweah Delta Medical Center/106540734_PCT_CHG_2022.doc
+2022/Kaweah Delta Medical Center/106540734_CDM_2022.xls
+2022/Department of State Hospitals- Atascadero/106400683_CDM_ALL_2022.xlsx
+2022/Department of State Hospitals- Atascadero/FY21.22 Supporting Documentation.pdf
+2022/Valley Presbyterian Hospital/106190812_CDM_ALL_2022.xlsx
+2022/Kaiser Foundation Hospital- South San Francisco/106410806_Common25_2022.xlsx
+2022/Kaiser Foundation Hospital- South San Francisco/106410806_PCT_CHG_2022.xlsx
+2022/Kaiser Foundation Hospital- South San Francisco/106410806_CDM_2022.xlsx
+2022/BHC Alhambra Hospital/106190020_CDM_All_2022.xlsx
+2022/Mercy General Hospital/106340947 Cover Letter Mercy General Hospital.docx
+2022/Mercy General Hospital/106340947_CDM_ALL_2022.xlsx
+2022/California Hospital Medical Center- Los Angeles/106190125_CDM_ALL_2022.xlsx
+2022/California Hospital Medical Center- Los Angeles/106190125_Cover Letter California Hospital Medical Center.docx
+2022/Sutter Maternity and Surgery Center of Santa Cruz/106444012_CDM_ALL_2022.xlsx
+2022/San Leandro Hospital/106013619_CDM_ALL_2022.xlsx
+2022/Anaheim Regional Medical Center/106301098_CDM_ALL_2022.xlsm
+2022/St. Mary Medical Center- Apple Valley/106361343_CDM_ALL_2022.xlsx
+2022/Stanford Health Care- Valleycare/106014050_CDM_ALL_2022.xlsx
+2022/John Muir Behavioral Health Center/106074039_PCT_CHG_2022.xlsx
+2022/John Muir Behavioral Health Center/106074039_Common 25_2022.xlsx
+2022/John Muir Behavioral Health Center/106074039_CDM_2022.xlsx
+2022/John F. Kennedy Memorial Hospital/106331216_CDM_ALL_2022.xlsx
+2022/West Covina Medical Center/106190857_CDM_ALL_2022.xlsx
+2022/Thousand Oaks Surgical Hospital/106564121_Common 25_2022.xlsx
+2022/Thousand Oaks Surgical Hospital/106564121_PCT_CHG_2022.xlsx
+2022/Thousand Oaks Surgical Hospital/106564121_CDM_2022.xlsx
+2022/St. Joseph Hospital - Eureka/106121080_CDM_ALL_2022.xlsx
+2022/Tri-City Medical Center/106370780_CDM_ALL_2022.xlsx
+2022/Adventist Health Hanford/106164029_CDM_All_2022.xlsx
+2022/College Hospital Costa Mesa/106301155_CDM_2022.xlsx
+2022/College Hospital Costa Mesa/106301155_Common25_2022.xlsx
+2022/College Hospital Costa Mesa/106301155_PCT_CHG_2022.xlsx
+2022/Sutter Auburn Faith Hospital/106310791_CDM_ALL_2022.xlsx
+2022/John C Fremont Healthcare District/106220733_PCT_CHG_2022.pdf
+2022/John C Fremont Healthcare District/106220733_COMMON25_2022.pdf
+2022/John C Fremont Healthcare District/106220733_CDM_2022.xlsx
+2022/Cottage Rehabilitation Hospital/106424047_CDM_ALL_2022.xlsx
+2022/St. Joseph's Medical Center of Stockton/OSHPD Cover Letter St Joseph's Medical Center.docx
+2022/St. Joseph's Medical Center of Stockton/106391042_CDM_ALL_2022.xlsx
+2022/Sierra View Medical Center/106540798_CDM_2022.xlsx
+2022/Sierra View Medical Center/106540798_PCT_CHG_2022.xlsx
+2022/Sierra View Medical Center/106540798_Common25_2022.xls
+2022/Palomar Medical Center- Poway/106370977_CDM_ALL_2022.xlsx
+2022/Kaiser Foundation Hospital- San Diego-Zion/106370730_PCT_CHG_2022.xlsx
+2022/Kaiser Foundation Hospital- San Diego-Zion/106370730_CDM_2022.xlsx
+2022/Kaiser Foundation Hospital- San Diego-Zion/106370730_Common25_2022.xlsx
+2022/Kaiser Foundation Hospital- South Sacramento/106342344_Common25_2022.xlsx
+2022/Kaiser Foundation Hospital- South Sacramento/106342344_CDM_2022.xlsx
+2022/Kaiser Foundation Hospital- South Sacramento/106342344_PCT_CHG_2022.xlsx
+2022/Eastern Plumas Hospital- Loyalton Campus/206462284_CDM_2022.xlsx
+2022/Eastern Plumas Hospital- Loyalton Campus/206462284_Common25_2022.docx
+2022/Eastern Plumas Hospital- Loyalton Campus/206462284_PCT_CHG_2022.xlsx
+2022/California Rehabilitation Institute/106190155_CDM_All_2022.xlsx
+2022/Kaiser Foundation Hospital- Vallejo/106480989_Common25_2022.xlsx
+2022/Kaiser Foundation Hospital- Vallejo/106480989_CDM_2022.xlsx
+2022/Kaiser Foundation Hospital- Vallejo/106480989_PCT_CHG_2022.xlsx
+2022/Aurora San Diego/106374024_CDM_ALL_2022.xlsx
+2022/Mercy Medical Center- Redding/106450949_CDM_ALL_2022.xlsx
+2022/Mercy Medical Center- Redding/106450949 Cover Letter Mercy Medical Center Redding.docx
+2022/Pacific Grove Hospital/106331226_Common25_2022.csv
+2022/Pacific Grove Hospital/106331226_CDM_2022.csv
+2022/Pacific Grove Hospital/106331226_PCT_CHG_2022.docx
+2022/Langley Porter Psychiatric Institute/106380868_CDM_ALL_2022.xlsx
+2022/Alameda Hospital/106010735_CDM_ALL_2022.xlsx
+2022/Kaiser Foundation Hospital- San Leandro/106014337_Common25_2022.xlsx
+2022/Kaiser Foundation Hospital- San Leandro/106014337_CDM_2022.xlsx
+2022/Kaiser Foundation Hospital- San Leandro/106014337_PCT_CHG_2022.xlsx
+2022/Mills Health Center D.P APH/106414145_CDM_ALL_2022.xlsx
+2022/Jewish Home & Rehab Center/106380842_CDM_ALL_2022.xlsx
+2022/L.A. Downtown Medical Center- Ingleside Campus/106190410_CDM_ALL_2022.XLSX
+2022/Oak Valley Hospital/106500967_CDM_All_2022.xlsx
+2022/Community Behavioral Health Center/106104008_CDM_ALL_2022.xlsx
+2022/Kaiser Foundation Hospital- Ontario/106364265_CDM_2022.xlsx
+2022/Kaiser Foundation Hospital- Ontario/106364265_Common25_2022.xlsx
+2022/Kaiser Foundation Hospital- Ontario/106364265_PCT_CHG_2022.xlsx
+2022/Eastern Plumas Hospital- Portola Campus/106320859_Common25_2022.xlsx
+2022/Eastern Plumas Hospital- Portola Campus/106320859_CDM_2022.xlsx
+2022/Eastern Plumas Hospital- Portola Campus/106320859_PCT_CHG_2022.xlsx
+2022/Kaweah Health Mental Health Hospital/106544009_PCT_CHG_2022.doc
+2022/Kaweah Health Mental Health Hospital/106544009_CDM_2022.xls
+2022/Kaweah Health Mental Health Hospital/106544009_Common25_2022.docx
+2022/L.A. Downtown Medical Center/106190661_CDM_ALL_2022.XLSX
+2022/Mercy Medical Center- Merced/OSHPD Cover Letter Mercy Medical Center Merced.docx
+2022/Mercy Medical Center- Merced/106240942_CDM_ALL_2022.xlsx
+2022/Norwalk Community Hospital/106190570_Common25_2022.xlsx
+2022/Norwalk Community Hospital/106190570_PCT_CHG_2022.doc
+2022/Norwalk Community Hospital/106190570_CDM_2022.xlsx
+2022/Goleta Valley Cottage Hospital/106420483_CDM_ALL_2022.xlsx
+2022/Kaweah Health Skilled Nursing Center/106540827_CDM_2022.xls
+2022/Kaweah Health Skilled Nursing Center/106540827_PCT_CHG_2022.doc
+2022/Kaweah Health Skilled Nursing Center/106540827_Common25_2022.docx
+2022/Novato Community Hospital/106214034_CDM_ALL_2022.xlsx
+2022/Seton Medical Center/106410817_CDM_ALL_2022.xlsx
+2022/LAC+USC Medical Center/106191228_CDM_ALL_2022.xlsx
+2022/Kindred Hospital Westminster/106301380_CDM_All_2022.xlsx
+2022/Kern Valley Healthcare District/106150737_CDM_ALL_2022.xlsx
+2022/Community Hospital of San Bernardino/106361323_ Cover Letter Community Hospital San Bernardino.docx
+2022/Community Hospital of San Bernardino/106361323_CDM_ALL_2022.xlsx
+2022/Glendale Memorial Hospital and Health Center/106190522_CDM_ALL_2022.xlsx
+2022/Glendale Memorial Hospital and Health Center/106190522 Cover Letter Glendale Memorial Hospital.docx
+2022/Petaluma Valley Hospital/106491001_CDM_ALL_2022.xlsx
+2022/Kentfield Hospital/106210993_CDM_2022.xls
+2022/Kentfield Hospital/106210993_Common25_2022.xlsx
+2022/Kentfield Hospital/106210993_PCT_CHG_.docx
+2022/Marian Regional Medical Center/OSHPD Cover Letter Marian Regional Medical Center.docx
+2022/Marian Regional Medical Center/106420493_CDM_ALL_2022.xlsx
+2022/Department of State Hospital- Coalinga/106105051_CDM_ALL_2022.xlsx
+2022/Department of State Hospital- Coalinga/FY21.22 Supporting Documentation.pdf
+2022/Sequoia Hospital/106410891_CDM_ALL_2022.xlsx
+2022/Sequoia Hospital/OSHPD Cover Letter Sequoia Hospital.docx
+2022/Tahoe Forest Hospital/106291053_CDM_ALL_2022.xlsx
+2022/College Medical Center South Campus D.P. APH/106190477_CDM_ALL.xlsx
+2022/Centinela Hospital Medical Center/106190148_CDM_All_2022.xlsx
+2022/UCSF Medical Center/106381154_CDM_ALL_2022.xlsx
+2022/Mercy Southwest Hospital/106154108_CDM_ALL_2022.xlsx
+2022/Mercy Southwest Hospital/OSHPD Cover Letter Mercy Hospital's Bakersfield Southwest.docx
+2022/St. Joseph's Behavioral Health Center/106392232_CDM_ALL_2022.xlsx
+2022/Mission Community Hospital- Panorama Campus/106190524_PCT_CHG_2022.PDF
+2022/Mission Community Hospital- Panorama Campus/106190524_CDM_Common25_2022.xlsx
+2022/Good Samaritan Hospital- Bakersfield/106150775_Common25_2022.xlsx
+2022/Good Samaritan Hospital- Bakersfield/106150775_CDM_2022.xlsx
+2022/Good Samaritan Hospital- Bakersfield/106150775_PCT_CHG_2022.xlsx
+2022/Eden Medical Center/106014233_CDM_ALL_2022.xlsx
+2022/St. Francis Memorial Hospital/OSHPD Cover Letter St Francis Memorial Hospital.docx
+2022/St. Francis Memorial Hospital/106380960_CDM_ALL_2022.xlsx
+2022/Sutter Davis Hospital/106574010_CDM_ALL_2022.xlsx
+2022/San Gabriel Valley Medical Center/106190200_CDM_ALL_2022.xlsx
+2022/Sharp Memorial Hospital/106370694_PCT_CHG_2022.xlsx
+2022/Sharp Memorial Hospital/106370694_CDM_2022.xlsx
+2022/Sharp Memorial Hospital/106370694_Common25_2022.xlsx
+2022/Kindred Hospital- Ontario/106361274_CDM_All.xlsx
+2022/Kaiser Foundation Hospital- Walnut Creek/106070990_Common25_2022.xlsx
+2022/Kaiser Foundation Hospital- Walnut Creek/106070990_CDM_2022.xlsx
+2022/Kaiser Foundation Hospital- Walnut Creek/106070990_PCT_CHG_2022.xlsx
+2022/Rady Children's Hospital- San Diego/106370673_Common25_2022.xlsx
+2022/Rady Children's Hospital- San Diego/106370673_PCT_CHG_2022.xlsx
+2022/Rady Children's Hospital- San Diego/106370673_Comments.docx
+2022/Rady Children's Hospital- San Diego/106370673_CDM_2022.xlsx
+2022/Santa Monica- UCLA Medical Center and Orthopaedic Hospital/106190687_ MSDRG Avg Chrgs.xlsx
+2022/Santa Monica- UCLA Medical Center and Orthopaedic Hospital/106190687_CDM_2022.xlsx
+2022/Santa Monica- UCLA Medical Center and Orthopaedic Hospital/106190687_PCT_CHG_2022.xlsx
+2022/Santa Monica- UCLA Medical Center and Orthopaedic Hospital/106190687_Common25_2022.xlsx
+2022/Sherman Oaks Hospital/106190708_CDM_All_2022.xlsx
+2022/Totally Kids Rehabilitation Hospital/106364451_PCT_CHG_2022.docx
+2022/Totally Kids Rehabilitation Hospital/106364451_Common25_2022.xlsx
+2022/Totally Kids Rehabilitation Hospital/106364451_CDM_2022.xlsx
+2022/Kindred Hospital- Brea/106301127_CDM_All_2022.xlsx
+2022/Kaiser Foundation Hospital- Los Angeles/106190429_Common25_2022.xlsx
+2022/Kaiser Foundation Hospital- Los Angeles/106190429_CDM_2022.xlsx
+2022/Kaiser Foundation Hospital- Los Angeles/106190429_PCT_CHG_2022.xlsx
+2022/Doctors Hospital of Manteca/106392287_CDM_ALL_2022.xlsx
+2022/AHMC Seton Medical Center Coastside/106410828_CDM_ALL_2022.xlsx
+2022/Kindred Hospital- Los Angeles/106190305_CDM_All_2022.xlsx
+2022/Desert Valley Hospital/106364144_CDM_All_2022.xlsx
+2022/St. Elizabeth Community Hospital/106521041 Cover Letter St. Elizabeth Community Hospital.docx
+2022/St. Elizabeth Community Hospital/106521041_CDM_ALL_2022.xlsx
+2022/Fairchild Medical Center/106474007_Common25_2022.xlsx
+2022/Fairchild Medical Center/106474007_CDM_2022.xlsx
+2022/Fairchild Medical Center/106474007_PCT_CHG_2022.xlsx
+2022/PIH Health Good Samaritan Hospital/106190392_CDM_ALL_2022.xlsx
+2022/Scripps Mercy Hospital/106370744_CDM_ALL_2022.xlsx
+2022/St. Bernardine Medical Center/106361339_CDM_ALL_2022.xlsx
+2022/St. Bernardine Medical Center/106361339 Cover Letter St Bernardine Medical Center.docx
+2022/Arrowhead Regional Medical Center/106364231_Common25_2022.xlsx
+2022/Arrowhead Regional Medical Center/22 0630 Charge Master Content Ltr.pdf
+2022/Arrowhead Regional Medical Center/106364231_PCT_CHG_2022.xls
+2022/Arrowhead Regional Medical Center/106364231_Charge Master Cover Ltr.pdf
+2022/Arrowhead Regional Medical Center/106364231_Pharmacy_ChargeMaster_2022.xlsx
+2022/Arrowhead Regional Medical Center/106364231 Non-Pharmacy ChargeMaster2022.xlsx
+2022/Encompass Health Rehabilitation Hospital of Bakersfield/106154022_PCT_CHG_2022.xls
+2022/Encompass Health Rehabilitation Hospital of Bakersfield/106154022_Common25_Letter_2022.docx
+2022/Encompass Health Rehabilitation Hospital of Bakersfield/106154022_CDM_2022.xlsx
+2022/Children's Hospital at Mission/106304113_CDM_ALL_2022.xlsx
+2022/Jerold Phelps Community Hospital/106121031_PCT_CHG_2022.docx
+2022/Jerold Phelps Community Hospital/106121031_CDM_2022.xlsx
+2022/Jerold Phelps Community Hospital/106121031_Common25_2022.xlsx
+2022/Corona Regional Medical Center/106331152_PCT_CHG_2022.pdf
+2022/Corona Regional Medical Center/106331152_Common25_2022.xlsx
+2022/Corona Regional Medical Center/106331152_CDM_2022.xlsx
+2022/Banner Lassen Medical Center/106184008_CDM_All_2022.xlsx
+2022/Antelope Valley Hospital/106190034_CDM_ALL_2022.xlsx
+2022/Aurora Las Encinas Hospital/106190462_CDM_ALL_2022.xls
+2022/Laguna Honda Hospital and Rehabilitation Center/106380865_CDM_ALL_2022.xlsx
+2022/Temecula Valley Hospital/106334564_PCT_CHG_2022.pdf
+2022/Temecula Valley Hospital/106334564_CDM_2022.xlsx
+2022/Temecula Valley Hospital/106334564_Common25_2022.xlsx
+2022/Sonoma Valley Hospital/106491076_CDM_ALL_2022.xlsb
+2022/Valley Children's Hospital/106204019_CDM_ALL_2022.xlsx
+2022/San Mateo Medical Center/106410782_CDM_ALL_2022.xlsx
+2022/Alta Bates Summit Medical Center/106010937_CDM_ALL_2022.xlsx
+2022/Orchard Hospital/16040802_CDM_2022.xlsx
+2022/Orchard Hospital/106040802_PCT_CHG_2022.docx
+2022/Orchard Hospital/106040802_Common25_2022.xlsx
+2022/Del Amo Hospital/106190232_PCT_CHG_2022.docx
+2022/Del Amo Hospital/106190232_Common25_2022.xlsx
+2022/Del Amo Hospital/106190232_CDM_2022.rtf
+2022/Bakersfield Behavioral Healthcare Hospital/106154044_CDM_ALL_2022.xlsx
+2022/California Pacific Medical Center- Mission Bernal Campus/106384202_CDM_ALL_2022.xlsx
+2022/Adventist Health Vallejo/106481015_CDM_All_2022.xlsx
+2022/Alvarado Parkway Institute B.H.S/106370749_PCT_CHG_2022.docx
+2022/Alvarado Parkway Institute B.H.S/106370749_Common25_2022.xlsx
+2022/Alvarado Parkway Institute B.H.S/106370749_CDM_2022.xlsx
+2022/Surprise Valley Community Hospital/106250955_CDM_All.xlsx
+2022/Riverside Community Hospital/106331312_CDM_ALL_2022.xlsx
+2022/Seneca District Hospital/106321016_PCT_CHG.docx
+2022/Seneca District Hospital/106321016_CDM_2022.xlsx
+2022/Seneca District Hospital/106321016_Common25_.xlsx
+2022/Kindred Hospital- La Mirada/106190449_CDM_All.xlsx
+2022/West Hills Hospital and Medical Center/106190859_CDM_ALL.xls
+2022/Kaiser Foundation Hospital- Santa Clara/106434153_CDM_2022.xlsx
+2022/Kaiser Foundation Hospital- Santa Clara/106434153_PCT_CHG_2022.xlsx
+2022/Kaiser Foundation Hospital- Santa Clara/106434153_Common25_2022.xlsx
+2022/Kindred Hospital- San Diego/106370721_CDM_All_2022.xlsx
+2022/Bear Valley Community Hospital/106361110_CDM_2022.xlsm
+2022/Bear Valley Community Hospital/106361110_Common25_2022.xlsx
+2022/Bear Valley Community Hospital/106361110_PCT_CHG_2022.docx
+2022/Sacramento Behavioral Healthcare Hospital/106344210_CDM_ALL.xls
+2022/Sutter Roseville Medical Center/106311000_CDM_ALL_2022.xlsx
+2022/Redwood Memorial Hospital/106121051_CDM_ALL_2022.xlsx
+2022/Kaiser Foundation Hospital- Santa Rosa/106494019_PCT_CHG_2022.xlsx
+2022/Kaiser Foundation Hospital- Santa Rosa/106494019_Common25_2022.xlsx
+2022/Kaiser Foundation Hospital- Santa Rosa/106494019_CDM_2022.xlsx
+2022/College Medical Center/106190587_CDM_All.xlsx
+2022/USC Kenneth Norris Jr. Cancer Hospital/106191216_CDM_ALL_2022.xlsx
+2022/Southwest Healthcare System- Wildomar/106334001_Common25.xlsx
+2022/Southwest Healthcare System- Wildomar/106334001_CDM.xlsx
+2022/Southwest Healthcare System- Wildomar/SWHCS Charge Master Letter 2022.pdf
+2022/Plumas District Hospital/106320986_CDM_ALL_2022.xlsb
+2022/Community Regional Medical Center-Fresno/106100717_CDM_ALL_2022.xlsx
+2022/Alhambra Hospital Medical Center/106190017_CDM_ALL_2022.xlsx
+2022/San Joaquin Valley Rehabilitation Hospital/106104023_CDM_All_2022.xls
+2022/MarinHealth Medical Center/106211006_CDM_PCT_CHG.xlsx
+2022/MarinHealth Medical Center/106211006_PCT_CHG_2022.xlsx
+2022/MarinHealth Medical Center/106211006_Common25_2022.xlsx
+2022/Loma Linda University Medical Center-Murrieta/106334589_Common25_2022.xlsx
+2022/Loma Linda University Medical Center-Murrieta/106334589_CDM_2022.xlsx
+2022/Loma Linda University Medical Center-Murrieta/106334589_PCT_CHG_2022.xlsx
+2022/Washington Hospital- Fremont/106010987_CDM_ALL_2022.xlsx
+2022/Community Subacute and Transitional Care Center/206100718_CDM_ALL_2022.xlsx
+2022/Garfield Medical Center/106190315_CDM_ALL_2022.xlsx
+2022/Lompoc Valley Medical Center Comprehensive Care Center/206420552_PCT_CHG.xlsx
+2022/Lompoc Valley Medical Center Comprehensive Care Center/206420552_Common 25.xlsx
+2022/Lompoc Valley Medical Center Comprehensive Care Center/206420552_CDM.xlsx
+2022/Kedren Community Mental Health Center/106190150_CDM_All_2022.xlsx
+2022/Sharp Mesa Vista Hospital/106370745_PCT_CHG_2022.xlsx
+2022/Sharp Mesa Vista Hospital/106370745_CDM_2022.xlsx
+2022/Sharp Mesa Vista Hospital/106370745_Common25_2022.xlsx
+2022/SouthWest Healthcare System/106334068_Common25_2022.xlsx
+2022/SouthWest Healthcare System/106334068_CDM_2022.xlsx
+2022/SouthWest Healthcare System/106334068_PCT_CHG_2022.pdf
+2022/Kaiser Permanente Hospital- San Rafael/106210992_PCT_CHG_2022.xlsx
+2022/Kaiser Permanente Hospital- San Rafael/106210992_Common25_2022.xlsx
+2022/Kaiser Permanente Hospital- San Rafael/106210992_CDM_2022.xlsx
+2022/Enloe Medical Center- Cohasset/106040828_CDM_ALL_2022.xlsx
+2022/Adventist Health St. Helena/106281078_CDM_All_2022.xlsx
+2022/Sutter Surgical Hospital - North Valley/106034002_CDM_ALL_2022.xlsx
+2022/Cedars-Sinai Medical Center/106190555_Common25_2022.xlsx
+2022/Cedars-Sinai Medical Center/106190555_CDM_2022.xlsx
+2022/Cedars-Sinai Medical Center/106190555_PCT_CHG_2022.pdf
+2022/Adventist Health Reedley/106100797_CDM_All_2022.xlsx
+2022/Mission Hospital Regional Medical Center/106301262_CDM_ALL_2022.xlsx
+2022/Mark Twain Medical Center/OSHPD Cover Letter Mark Twain Medical Center.docx
+2022/Mark Twain Medical Center/106050932_CDM_ALL_2022.xlsx
+2022/Methodist Hospital of Sacramento/106340951_CDM_ALL_2022.xlsx
+2022/Methodist Hospital of Sacramento/106340951 Cover Letter Methodist Hospital of Sacramento.docx
+2022/Vibra Rehabilitation Hospital of Rancho Mirage/106334533_CDM_All_2022.xls
+2022/Los Robles Hospital & Medical Center East Campus/106564018_Common 25_2022.xlsx
+2022/Los Robles Hospital & Medical Center East Campus/106564018_.xlsx
+2022/Los Robles Hospital & Medical Center East Campus/106564018_CDM_2022.xlsx
+2022/Kaiser Foundation Hospital- San Francisco/106380857_Common25_2022.xlsx
+2022/Kaiser Foundation Hospital- San Francisco/106380857_PCT_CHG_2022.xlsx
+2022/Kaiser Foundation Hospital- San Francisco/106380857_CDM_2022.xlsx
+2022/Shriners Hospital for Children Northern California/106344114_PCT_CHG_2022.docx
+2022/Shriners Hospital for Children Northern California/106344114_Common25_2022.xlsx
+2022/Shriners Hospital for Children Northern California/106344114_CDM_2022.xlsx
+2022/Stanford Health Care/106430905_CDM_ALL_2022.xlsx
+2022/Kaiser Foundation Hospital- West LA/106190434_PCT_CHG_2022.xlsx
+2022/Kaiser Foundation Hospital- West LA/106190434_Common25_2022.xlsx
+2022/Kaiser Foundation Hospital- West LA/106190434_CDM_2022.xlsx
+2022/Kaiser Foundation Hospital- Downey/106196403_PCT_CHG_2022.xlsx
+2022/Kaiser Foundation Hospital- Downey/106196403_CDM_2022.xlsx
+2022/Kaiser Foundation Hospital- Downey/106196403_Common25_2022.xlsx
+2022/Enloe Medical Center/106040962_CDM_All_2022.xlsx
+2022/St. Joseph Hospital - Orange/106301340_CDM_ALL_2022.xlsx
+2022/Sonoma Specialty Hospital/106491338_CDM_ALL_2022.xlsm
+2022/Hoag Orthopedic Institute/106304460_CDM_ALL_2022.xlsx
+2022/Mission Oaks Hospital/106430915_PCT_CHG_2022.xlsx
+2022/Mission Oaks Hospital/106430915_Common25_2022.xlsx
+2022/Mission Oaks Hospital/106430915_CDM_2022.xlsx
+2022/Hoag Hospital Irvine/106304045_CDM_ALL_2022.xlsx
+2022/Paradise Valley Hospital/106370759_CDM_All_2022.xlsx
+2022/El Camino Health/106430763_CDM_2022.xlsx
+2022/El Camino Health/106430763_Common25_2022.xlsx
+2022/El Camino Health/106430763_PCT_CHG_2022.xlsx
+2022/Beverly Hospital/106190081_CDM_ALL_2022.xlsb
+2022/Encompass Health Rehabilitation Hospital of Tustin/106304585_CDM_ALL_2022.xls
+2022/Hemet Global Medical Center/106331194_Common 25.xlsx
+2022/Hemet Global Medical Center/106331194_CDM.xlsx
+2022/Hemet Global Medical Center/106331194_PCT_CHG.xlsx
+2022/Greater El Monte Community Hospital/106190352_CDM_ALL_2022.xlsx
+2022/Hemet Valley Health Care Center/206334032_CDM_2022.xlsx
+2022/Hemet Valley Health Care Center/206334032_PCT_CHG.xlsx
+2022/Hemet Valley Health Care Center/206334032_COMMON25_2022.xlsx
+2022/Doctors Hospital of Riverside/106331293_CDM_ALL_2022.xlsx
+2022/Orange County Global Medical Center/106301566_CDM.xlsx
+2022/Orange County Global Medical Center/106301566_PCT_CHG.xlsx
+2022/Orange County Global Medical Center/106301566_Common 25.xlsx
+2022/Anaheim Global Medical Center/106301188_PCT_CHG.xlsx
+2022/Anaheim Global Medical Center/106301188_CDM.xlsx
+2022/Anaheim Global Medical Center/106301188_Common 25.xlsx
+2022/Adventist Health Ukiah Valley/106231396_CDM_All_AHUV_2022.xlsx
+2022/Scripps Green Hospital/106371256_CDM_ALL_2022.xlsx
+2022/Vibra Hospital of Northern California/106454012_CDM_ALL_2022.xls
+2022/Clovis Community Medical Center/106100005_CDM_ALL_2022.xlsx
+2022/Kindred Hospital- Baldwin Park/106190049_CDM_All_2022.xlsx
+2022/Patton State Hospital/106361768_CDM_ALL_2022.xlsx
+2022/Patton State Hospital/FY21.22 Supporting Documentation.pdf
+2022/Joyce Eisenberg Keefer Medical Center/106196404_ Common 25_Response Letter _62022.docx
+2022/Joyce Eisenberg Keefer Medical Center/106196404_ 25CommonOPProcedures_062022.xlsx
+2022/Joyce Eisenberg Keefer Medical Center/106196404_PCT_CHG _Estimate of percentage change_062022.xlsx
+2022/Joyce Eisenberg Keefer Medical Center/106196404_Ancillary Chargemaster_Acute_062022.xlsx
+2022/Joyce Eisenberg Keefer Medical Center/106196404_Room Chargemaster_Acute_062022.xlsx
+2022/Joyce Eisenberg Keefer Medical Center/106196404_Room Chargemaster_DPSNF_062022.xlsx
+2022/Joyce Eisenberg Keefer Medical Center/106196404_Ancillary Chargemaster_DPSNF_062022.xlsx
+2022/Joyce Eisenberg Keefer Medical Center/106196404_Calculation of Percentage Change in Gross Income_62022.docx
+2022/Sutter Tracy Hospital/106391056_CDM_ALL_2022.xlsx
+2022/Mad River Community Hospital/106121002_Common 25.xlsx
+2022/Mad River Community Hospital/106121002_PCT_CHG.XLSX
+2022/Mad River Community Hospital/106121002_CDM.CSV
+2022/Healdsburg Hospital/106490964_CDM_ALL_2022.xlsx
+2022/Sutter Delta Medical Center/106070934_CDM_ALL_2022.xlsx
+2022/San Antonio Regional Hospital/106361318_CDM_ALL_2022.xlsb
+2022/Trinity Hospital/106531059_CDM_ALL.xlsx
+2022/Kaiser Foundation Hospital- Moreno Valey/106334048_Common25_2022.xlsx
+2022/Kaiser Foundation Hospital- Moreno Valey/106334048_CDM_2022.xlsx
+2022/Kaiser Foundation Hospital- Moreno Valey/106334048_PCT_CHG_2022.xlsx
+2022/Community Memorial Hospital- San Buenaventura/106560473_CDM_ALL_2022.xlsx
+2022/MemorialCare Long Beach Medical Center/106190525_Comments(2)_2022.docx
+2022/MemorialCare Long Beach Medical Center/106190525_Comments(1)_2022.docx
+2022/MemorialCare Long Beach Medical Center/106190525_CDM_ALL_2022.xlsx
+2022/Ballard Rehabilitation Hospital/106364121_CDM_All_2022.xls
+2022/Adventist Health Simi Valley/106560525_CDM_All_2022.xlsx
+2022/Kaiser Foundation Hospital- Fremont/106014132_CDM_2022.xlsx
+2022/Kaiser Foundation Hospital- Fremont/106014132_Common25_2022.xlsx
+2022/Kaiser Foundation Hospital- Fremont/106014132_PCT_CHG_2022.xlsx
+2022/St. Jude Medical Center/106301342_CDM_ALL_2022.xlsx
+2022/Scripps Memorial Hospital- Encinitas/106371394_CDM_ALL_2022.xlsx
+2022/Colorado River Medical Center/106361458_PCT_CHG_2022.pdf
+2022/Colorado River Medical Center/106361458_CDM_2022.csv
+2022/Colorado River Medical Center/106361458_Common25_2022.xlsx
+2022/Gateways Hospital & Mental Health Center/106190317_CDM_All_2022.xlsx
+2022/Chapman Global Medical Center/106301140_CDM.xlsx
+2022/Chapman Global Medical Center/106301140_PCT_CHG.xlsx
+2022/Chapman Global Medical Center/106301140_Common 25.xlsx
+2022/Victor Valley Global Medical Center/106361370_PCT_CHG.xlsx
+2022/Victor Valley Global Medical Center/106361370_Common 25.xlsx
+2022/Victor Valley Global Medical Center/106361370_CDM.xlsx
+2022/Aurora Behavioral Healthcare- Santa Rosa/106494048_CDM_ALL_2022.xlsx
+2022/Highland Hospital/106010846_CDM_ALL_2022.xlsx
+2022/Paradise Calley Hospital- Bayview Behavioral Health/106370775_CDM_ALL_2022.xlsx
+2022/California Pacific Medical Center D.P. APH/106380031_CDM_ALL_2022.xlsx
+2022/Southern California Hospital at Van Nuys/106190814_PCT_CHG_2022.doc
+2022/Southern California Hospital at Van Nuys/106190814_Common25_2022.xlsx
+2022/Southern California Hospital at Van Nuys/106190814_CDM_2022.xlsx
+2022/Palmdale Regional Medical Center/106196405_CDM_2022.xlsx
+2022/Palmdale Regional Medical Center/106196405_PCT_CHG_2022.pdf
+2022/Palmdale Regional Medical Center/106196405_Common25_2022.xlsx
+2022/Santa Rosa Memorial Hospital-Montgomery/106491064_CDM_ALL_2022.xlsx
+2022/PIH Health Hospital- Downey/106190243_CDM_ALL_2022.xlsx
+2022/Kaiser Foundation Hospital- Woodland Hills/106191450_CDM_2022.xlsx
+2022/Kaiser Foundation Hospital- Woodland Hills/106191450_PCT_CHG_2022.xlsx
+2022/Kaiser Foundation Hospital- Woodland Hills/106191450_Common25_2022.xlsx
+2022/Kaiser Foundation Hospital- Manteca/106394009_CDM_2022.xlsx
+2022/Kaiser Foundation Hospital- Manteca/106394009_PCT_CHG_2022.xlsx
+2022/Kaiser Foundation Hospital- Manteca/106394009_Common25_2022.xlsx
+2022/Los Robles Hospital & Medical Center/106560492_PCT_CHG_2022.xlsx
+2022/Los Robles Hospital & Medical Center/106560492_Common 25_2022.xlsx
+2022/Los Robles Hospital & Medical Center/106560492_CDM_2022.xlsx
+2022/Emanate Health Queen of the Valley Hospital/106190636_Common25_2022_.XLS
+2022/Emanate Health Queen of the Valley Hospital/106190636_CDM_2022.xlsx
+2022/Emanate Health Queen of the Valley Hospital/106190636_PCT_CHG_2022.docx
+2022/Modoc Medical Center/106254005_PCT_CHG_2022.xlsx
+2022/Modoc Medical Center/106254005_CDM_2022.xls
+2022/Modoc Medical Center/106254005_Common25_2022.xlsx
+2022/Coast Plaza Hospital/106190766_PCT_CHG_2022.docx
+2022/Coast Plaza Hospital/106190766_Common25_2022.xlsx
+2022/Coast Plaza Hospital/106190766_CDM_2022.xlsx
+2022/Henry Mayo Newhall Hospital/106190949_CDM_ALL_2022.xlsx
+2022/Redlands Community Hospital/106361308_CDM_ALL_2022.xlsb
+2022/Sutter Lakeside Hospital/106171395_CDM_ALL_2022.xlsx
+2022/Kindred Hospital Rancho/106364188_CDM_All.xlsx
+2022/St. Louise Regional Hospital/106434138_CDM_ALL.xlsx
+2022/Sutter Amador Hospital/106034002_CDM_ALL_2022.xlsx
+2022/Porterville Developmental Center/106541123_CDM_All.xlsx
+2022/La Palma Intercommunity Hospital/106301234_CDM_ALL_2022.xlsx
+2022/University of California Davis Medical Center/106341006_CDM_2022.xlsx
+2022/University of California Davis Medical Center/106341006_PCT_CHG_2022.pdf
+2022/University of California Davis Medical Center/106341006_Common25_2022.pdf
+2022/Kaweah Health Rehabilitation Hospital/106544075_PCT_CHG_2022.doc
+2022/Kaweah Health Rehabilitation Hospital/106544075_CDM_2022.xls
+2022/Kaweah Health Rehabilitation Hospital/106544075_Common25_2022.docx
+2022/Mills-Peninsula Medical Center/106410852_CDM_ALL_2022.xlsx
+2022/Vibra Hospital of Sacramento/106344035_CDM_ALL_2022.xlsx
+2022/Contra Costa Regional Medical Center/106070924_Common25_2022.xlsx
+2022/Contra Costa Regional Medical Center/106070924_PCT_CHG_2022.xlsx
+2022/Contra Costa Regional Medical Center/106070924 Cover Letter.pdf
+2022/Contra Costa Regional Medical Center/106070924_CDM_2022.xlsx
+2022/Palomar Medical Center/106374382_CDM_ALL_2022.xlsx
+2022/Alvarado Hospital Medical Center/Alvarado Hospital_106370652_CDM_ALL_2022.xlsx
+2022/Sharp Coronado Hospital and Healthcare Center/106370689_Common25_2022.xlsx
+2022/Sharp Coronado Hospital and Healthcare Center/106370689_PCT_CHG_2022.xlsx
+2022/Sharp Coronado Hospital and Healthcare Center/106370689_CDM_2022.xlsx
+2022/Memorial Hospital Los Banos/106240924_CDM_ALL_2022.xlsx
+2022/Lakewood Regional Medical Center/106190240_CDM_ALL_2022.xlsx
+2022/Sutter Santa Rosa Regional Hospital/106494106_CDM_ALL_2022.xlsx
+2022/Mammoth Hospital/106260011_CDM_All_2022.xlsx
+2022/Cedars-Sinai Marina Del Rey Hospital/106190500_PCT_CHG_2022.pdf
+2022/Cedars-Sinai Marina Del Rey Hospital/106190500_Common25_2022.xlsx
+2022/Cedars-Sinai Marina Del Rey Hospital/106190500_CDM_2022.xlsx
+2022/Grossmont Hospital/106370714_CDM_2022.xlsx
+2022/Grossmont Hospital/106370714_PCT_CHG_2022.xlsx
+2022/Grossmont Hospital/106370714_Common25_2022.xlsx
+2022/Casa Colina Hospital/106190137_CDM_ALL_2022.xlsx
+2022/Bakersfield Rehabilitation Hospital/106150820_CDM_All_2022.xls
+2022/College Hospital/106190184_Common25_2022.xlsx
+2022/College Hospital/106190184_CDM_2022.xlsx
+2022/College Hospital/106190184_PCT_CHG_2022.pdf
+2022/Santa Ynez Valley College Hospital/106420522_CDM_ALL_2022.xlsx
+2022/Los Angeles Community Hospital at Bellflower/106190066 BELLFLOWER_CDM_2022.xlsx
+2022/Los Angeles Community Hospital at Bellflower/106190066_Common25_2022.xlsx
+2022/Los Angeles Community Hospital at Bellflower/106190066_BELLFLOWER_PCT_CHG_2022.doc
+2022/Emanate Health Foothill Presbyterian Hospital/106190298_CDM_2022.xlsx
+2022/Emanate Health Foothill Presbyterian Hospital/106190298_PCT_CHG_2022.docx
+2022/Emanate Health Foothill Presbyterian Hospital/106190298_Common25_2022_.XLS
+2022/Colusa Medical Center/106060870_CDM_ALL_2022.xls
+2022/Community Hospital of Huntington Park/106190197_CDM_2022.xlsx
+2022/Community Hospital of Huntington Park/106190197_Common25_2022.xlsx
+2022/Community Hospital of Huntington Park/106190197_PCT_CHG_2022.docx
+2022/Sutter Coast Hospital/106084001_CDM_ALL_2022.xlsx
+2022/Alta Bates Summit Medical Center- Summit Campus/106013626_CDM_ALL_2022.xlsx
+2022/Fresno Surgical Hospital/106104047_CDM_ALL_2022.xlsx
+2022/Northern Inyo Hospital/106141273_CDM_2022.xlsx
+2022/Northern Inyo Hospital/106141273_Common25_2022.xlsx
+2022/Northern Inyo Hospital/106141273_PCT_CHG_2022.xlsx
+2022/Eisenhower Medical Center/106331168_CDM_ALL_2022.xls
+2022/Hi-Desert Medical Center/106362041_CDM_ALL_2022.xlsx
+2022/Enloe Rehabilitation Center/106044011_CDM_ALL_2022.xlsx
+2022/Kaiser Foundation Hospital- Los Angeles- Mental Health/106190646_PCT_CHG_2022.xlsx
+2022/Kaiser Foundation Hospital- Los Angeles- Mental Health/106190646_CDM_2022.xlsx
+2022/Kaiser Foundation Hospital- Los Angeles- Mental Health/106190646_Common25_2022.xlsx
+2022/West Anaheim Medical Center/106301379_CDM_ALL_2022.xlsx
+2022/Adventist Health Lodi Memorial/106390923_CDM_All_2022.xlsx
+2022/Santa Clara Valley Medical Center/106430883_CDM_ALL_2022.xlsx
+2022/MemorialCare Orange Coast Medical Center/106300225_Comments(1)_2022.docx
+2022/MemorialCare Orange Coast Medical Center/106300225_CDM_ALL_2022.xlsx
+2022/MemorialCare Orange Coast Medical Center/106300225_Comments(2)_2022.docx
+2022/Sutter Medical Center- Sacramento/106341051_CDM_ALL_2022.xlsx
+2022/Lucile Packard Children's Hospital Stanford/106434040_CDM_2022.xlsx
+2022/Lucile Packard Children's Hospital Stanford/106434040_PCT_CHG_2022.docx
+2022/Lucile Packard Children's Hospital Stanford/106434040_Common25_2022.xlsx
+2022/Kindred Hospital- Santa Ana/106301167_CDM_ALL_2022.xlsx
+2022/Adventist Health Bakersfield/106150788_CDM_All_2022.xlsx
+2022/Aurora Charter Oak/106190163_CDM_ALL_2022.xlsx
+2022/Bella Sera/206154001_CDM_ALL_2022.xls
+2022/Chino Valley Medical Center/106361144_CDM_All_2022.xlsx
+2022/Kaiser Foundation Hospital- Orange County- Anaheim/106304409_CDM_2022.xlsx
+2022/Kaiser Foundation Hospital- Orange County- Anaheim/106304409_Common25_2022.xlsx
+2022/Kaiser Foundation Hospital- Orange County- Anaheim/106304409_PCT_CHG_2022.xlsx
+2022/Foothill Regional Medical Center/106301357_Common25_2022.xlsx
+2022/Foothill Regional Medical Center/106301357_CDM_2022.xlsx
+2022/Foothill Regional Medical Center/106301357_PCT_CHG_2022.doc
+2022/Adventist Health and Rideout/106580996_CDM_All_AHRO_2022.xlsx
+2022/Sharp Chula Vista Medical Center/106370875_CDM_2022.xlsx
+2022/Sharp Chula Vista Medical Center/16370875_PCT_CHG_2022.xlsx
+2022/Sharp Chula Vista Medical Center/106370875_Common25_2022.xlsx
+2022/Martin Luther King Jr. Community Hospital/106191230_CDM_ALL_2022.xlsx
+2022/Alta Bates Summit Medical Center- Alta Bates Campus/106010739_CDM_ALL_20222.xlsx
+2022/USC Arcadia Hospital/106190529_CDM_All_2022.xlsx
+2022/Department of State Hospital- Metropolitan/FY21.22 Supporting Documentation.pdf
+2022/Department of State Hospital- Metropolitan/106190958_CDM_ALL_2022.xlsx
+2022/John Muir Medical Center- Walnut Creek Campus/106070988_Common 25_2022.xlsx
+2022/John Muir Medical Center- Walnut Creek Campus/106070988_CDM_2022.xlsx
+2022/John Muir Medical Center- Walnut Creek Campus/106070988_PCT_CHG_2022.xlsx
+2022/Children's Hospital of Los Angeles/106190170_Common25_2022.xlsx
+2022/Children's Hospital of Los Angeles/106190170_PCT_CHG_2022.xlsx
+2022/Children's Hospital of Los Angeles/106190170_CDM_2022.xls
+2022/Bakersfield Memorial Hospital/106150722_CDM_ALL_2022.xlsx
+2022/Bakersfield Memorial Hospital/OSHPD Cover Letter Bakersfield Memorial Hospital.docx
+2022/John Muir Medical Center- Concord/106071018_PCT_CHG_2022.xlsx
+2022/John Muir Medical Center- Concord/106071018_CDM_2022.xlsx
+2022/John Muir Medical Center- Concord/106071018_Common 25_2022.xlsx
+2022/Alta Bates Summit Medical Center- Herrick Campus/106010844_CDM_ALL_2022.xlsx
+2022/Kindred Hospital- Riverside/106332172_CDM_All.xlsx
+2022/Bakerfield Heart Hospital/106154101_CDM_2022.xlsx
+2022/Bakerfield Heart Hospital/106154101_Common25_2022.xlsx
+2022/Bakerfield Heart Hospital/106154101_PCT_CHG_2022.docx
+2022/Southern Inyo Hospital/106141338_CDM_ALL_2022.xlsx
+2022/Huntington Beach Hospital/106301209_CDM_ALL_2022.xlsx
+2022/Kindred Hospital- South Bay/106190196_CDM_All.xlsx
+2022/Providence Little Company of Mary Medical Center, San Pedro/106190680_CDM_ALL_2022.xlsx
+2022/Ojai Valley Community Skilled Nursing Facility/206560500_CDM_ALL_2022.xlsx
+2022/Sierra Nevada Memorial Hospital/106291023_CDM_ALL_2022.xlsx
+2022/Sierra Nevada Memorial Hospital/106291023 Cover Letter Sierra Nevada Memorial Hospital.docx
+2022/MemorialCare SaddleBack Medical Center/106301317_Comments(2)_2022.docx
+2022/MemorialCare SaddleBack Medical Center/106301317_CDM_ALL_2022.xlsx
+2022/MemorialCare SaddleBack Medical Center/106301317_Comments(1)_2022.docx
+2022/Loma Linda University Children's Hospital/106364502_PCT_CHG_2022.xlsx
+2022/Loma Linda University Children's Hospital/106364502_Common25_2022.xlsx
+2022/Loma Linda University Children's Hospital/106364502_CDM_2022.xlsx
+2022/San Jose Behavioral Health/106434032_CDM_ALL_2022.xlsx
+2022/Kaiser Foundation Hospital- Richmond/106074093_PCT_CHG_2022.xlsx
+2022/Kaiser Foundation Hospital- Richmond/106074093_CDM_2022.xlsx
+2022/Kaiser Foundation Hospital- Richmond/106074093_Common25_2022.xlsx
+2022/Adventist Health Howard Memorial/106234038_CDM_All_2022.xlsx
+2022/Whittier Hospital Medical Center/106190883_CDM_ALL_2022.xlsx
+2022/Dameron Hospital/106390846_CDM_ALL_2022.xlsx
+2022/Motion Picture and Television Hospital/106190552_CDM_ALL_2022.xlsx
+2022/Kaiser Foundation Hospital- Roseville/106314024_PCT_CHG_2022.xlsx
+2022/Kaiser Foundation Hospital- Roseville/106314024_Common25_2022.xlsx
+2022/Kaiser Foundation Hospital- Roseville/106314024_CDM_2022.xlsx
+2022/Queen of the Valley Medical Center/106281047_CDM_ALL_2022.xlsx
+2022/French Hospital Medical Center/106400480_CDM_ALL_2022.xlsx
+2022/French Hospital Medical Center/OSHPD Cover Letter French Hospital Medical Center.docx
+2022/Encompass Health Rehabilitation Hospital of Murrieta/106334678_CDM_All.xlsx
+2022/University of California Irvine Medical Center/106301279_CDM_2022.xlsx
+2022/University of California Irvine Medical Center/106301279_Common25_2022.xlsx
+2022/University of California Irvine Medical Center/106301279_PCT_CHG_2022.xlsx
+2022/Kaiser Foundation Hospital- Sacramento/106340913_PCT_CHG_2022.xlsx
+2022/Kaiser Foundation Hospital- Sacramento/106340913_CDM_2022.xlsx
+2022/Kaiser Foundation Hospital- Sacramento/106340913_Common25_2022.xlsx
+2022/Madera Community Hospital/106201281_Common25_2022.xlsx
+2022/Madera Community Hospital/106201281_CDM_2022.xlsx
+2022/Madera Community Hospital/106201281_PCT_CHG_2022.pdf
+2022/Hollywood Presbyterian Medical Center/106190382_CDM_2022.xlsx
+2022/Hollywood Presbyterian Medical Center/106190382_Common_25_2022.xlsx
+2022/Hollywood Presbyterian Medical Center/106190382_PCT_CHG_2022.xlsx
+2022/Catalina Island Medical Center/106190045_CDM_ALL_2022.xlsb
+2022/Los Angeles County- Harbor-UCLA Medical Center/106191227_CDM_ALL_2022.xlsx
+2022/Ridgecrest Regional Hospital/106150782_Common 25.xls
+2022/Ridgecrest Regional Hospital/106150782_PCT_CHG.xlsx
+2022/Ridgecrest Regional Hospital/106150782_CDM.csv
+2022/Kaiser Foundation Hospital- Redwood City/106414139_PCT_CHG_2022.xlsx
+2022/Kaiser Foundation Hospital- Redwood City/106414139_Common25_2022.xlsx
+2022/Kaiser Foundation Hospital- Redwood City/106414139_CDM_2022.xlsx
+2022/PIH Health Hospital- Whittier/106190631_CDM_ALL_2022.xlsx
 2023/Canyon Ridge Hospital/106364050_CDM_ALL_2023.xls
 2023/Healthbridge Children's Hospital - Orange/106304159_CDM_All.xlsx
 2023/AHMC Anaheim Regional Medical Center/106301098_CDM_ALL.xlsm
