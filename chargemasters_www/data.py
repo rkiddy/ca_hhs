@@ -177,6 +177,12 @@ def chargemasters_hcai_ids():
  
     return context
 
+def shorter(s):
+    parts = str(s).split('.')
+    first = parts[0]
+    second = parts[1][0:4]
+    return f"{first}.{second}"
+
 
 def chargemasters_hcai_id(id):
     context = dict()
@@ -199,6 +205,18 @@ def chargemasters_hcai_id(id):
     pprint(rows, stream=strm, sort_dicts=False)
 
     context['fac_data'] = strm.getvalue()
+
+    context['location'] = f"{rows[0]['latitude']},{rows[0]['longitude']}"
+
+    # https://www.openstreetmap.org/search?query=34.68935389%2C-118.15856172o
+    # https://www.openstreetmap.org/search?query=34.68935389%2C-118.15856172#map=10/34.6894/-118.1586
+
+    long = rows[0]['longitude']
+    lat = rows[0]['latitude']
+    s_long = shorter(long)
+    s_lat = shorter(lat)
+
+    context['location_url'] = f"https://www.openstreetmap.org/search?query={lat}%2C{long}#10/{s_lat}/{s_long}"
 
     return context
 
