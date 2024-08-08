@@ -3659,7 +3659,7 @@
 2014/San Joaquin Community Hospital/106150788_PCT_CHG_2014.xlsx
 2014/San Joaquin Community Hospital/106150788_CDM_2014.xlsx
 2014/Hazel Hawkins Memorial Hospital/106350784_Comments_2014.docx
-2014/Hazel Hawkins Memorial Hospital/106350784_CDM_All_2014.xls.xlsx
+2014/Hazel Hawkins Memorial Hospital/106350784_CDM_All_2014.xlsx
 2014/Geroge L Mee Memorial Hospital/106270777_CDM_All_2014.xlsx
 2014/Geroge L Mee Memorial Hospital/106270777_Comments_2014.xlsx
 2014/Monterey Park Hospital/106190547_Comments_2014.docx
@@ -3712,7 +3712,7 @@
 2014/Eastern Plumas District Hospital/106320859_CDM_2014.xls
 2014/Eastern Plumas District Hospital/106320859_Common25_2014.xls
 2014/Community Hospital of the Monterey Peninsula/106270744_Comments_2014.docx
-2014/Community Hospital of the Monterey Peninsula/106270744_CDM_All_2014.xls.xlsx
+2014/Community Hospital of the Monterey Peninsula/106270744_CDM_All_2014.xlsx
 2014/Twin Cities Community Hospital/106400548_CDM_All_2014.xls
 2014/Twin Cities Community Hospital/106400548_Comments_2014.pdf
 2014/Huntington Beach Medical Center/106301209_CDM_All_2014.xlsx
@@ -3769,7 +3769,7 @@
 2014/Healdsburg District Hospital/106490964_CDM_2014.xls
 2014/Healdsburg District Hospital/106490964_Common25_2014.xls
 2014/Barstow Community Hospital/106364430_CDM_All_2014.xls
-2014/Chinese Hospital/106382715_CDM_2014.xls.xlsx
+2014/Chinese Hospital/106382715_CDM_2014.xlsx
 2014/Chinese Hospital/106382715_PCT_CHG_2014.doc
 2014/Chinese Hospital/106382715_Commnon25_2014.xls
 2014/San Joaquin Valley Rehabilitation Center/106104023_CDM_All_2014.xls
@@ -3969,7 +3969,7 @@
 2014/Queen of the Valley Hospital - Napa/106281047_Comments(1)_2014.docx
 2014/Palo Verde Hospital/106331288_Comments_2014.docx
 2014/Palo Verde Hospital/106331288_CDM_All_2014.xls
-2014/Aurora Charter Oak Hospital/106190163_CDM_ALL_2014.xls.xlsx
+2014/Aurora Charter Oak Hospital/106190163_CDM_ALL_2014.xlsx
 2014/Sierra View District Hospital/106540798_Common25_2014.xls
 2014/Sierra View District Hospital/106540798_PCT_CHG_2014.xls
 2014/Sierra View District Hospital/106540798_CDM_2014.xlsx
@@ -4037,7 +4037,7 @@
 2014/Dominican Santa Cruz Hospital/106440755_Comments(2)_2014.docx
 2014/Dominican Santa Cruz Hospital/106440755_Comments(1)_2014.docx
 2014/Dominican Santa Cruz Hospital/106440755_CDM_All_2014.xlsx
-2014/California Hospital Medical Center/106190125_CDM_All_2014.xls.xlsx
+2014/California Hospital Medical Center/106190125_CDM_All_2014.xlsx
 2014/California Hospital Medical Center/106190125_Comments(2)_2014.doc
 2014/California Hospital Medical Center/106190125_Comments(1)_2014.docx
 2014/Kaiser Foundation Hospital - Riverside/106334025_PCT_CHG_2014.xlsx
@@ -4054,7 +4054,7 @@
 2014/St. Joseph Hospital - Eureka/106121080_CDM_ALL_2014.xlsx
 2014/St. Joseph Hospital - Eureka/106121080_COMMENTS(2)_2014.docx
 2014/St. Joseph Hospital - Eureka/106121080_COMMENTS(1)_2014.docx
-2014/Childrens Hospital & Research Center at Oakland/106010776_CDM_All_2014.xls.xlsx
+2014/Childrens Hospital & Research Center at Oakland/106010776_CDM_All_2014.xlsx
 2014/Childrens Hospital & Research Center at Oakland/106010776_Comments_2014.docx
 2014/Tri-City Medical Center/106370780_CDM_All_2014.xlsx
 2014/St. Helena Hospital - Behavioral Health/106481015_COMMON25_2014.xls
@@ -4067,17 +4067,17 @@
 2014/Ukiah Valley Medical Center/106231396_CDM_2014.xlsx
 2014/Mark Twain-St. Joseph Hospital/106050932_CDM_All_2014.xlsx
 2014/Mark Twain-St. Joseph Hospital/106050932_Comments_2014.docx
-2014/Frank R. Howard Memorial Hospital/106230949_PCT_CHG_2014.xls.xlsx
+2014/Frank R. Howard Memorial Hospital/106230949_PCT_CHG_2014.xlsx
 2014/Frank R. Howard Memorial Hospital/106230949_Comments_2014.docx
 2014/Frank R. Howard Memorial Hospital/106230949_Common25_2014.xlsx
-2014/Frank R. Howard Memorial Hospital/106230949_CDM_2014.xls.xlsx
+2014/Frank R. Howard Memorial Hospital/106230949_CDM_2014.xlsx
 2014/Sutter Auburn Faith Hospital/106310791_CDM_ALL_2014.xlsx
 2014/Sutter Auburn Faith Hospital/106310791_COMMENTS_2014.docx
 2014/Kaiser Foundation Hospital - Redwood City/106410804_Common25_2014.xls
 2014/Kaiser Foundation Hospital - Redwood City/106410804_Comments_2014.docx
 2014/Kaiser Foundation Hospital - Redwood City/106410804_CDM_2014.xlsx
 2014/Kaiser Foundation Hospital - Redwood City/106410804_PCT_CHG_2014.xls
-2014/Downey Regional Medical Center/106190243_CDM_All_2014.xls.xlsx
+2014/Downey Regional Medical Center/106190243_CDM_All_2014.xlsx
 2014/Downey Regional Medical Center/106190243_Comments_2014.docx
 2014/St. Francis Medical Center - Lynwood/106190754_CDM_All_2014.xls
 2014/St. Francis Medical Center - Lynwood/106190754_Comments_2014.docx
@@ -4204,9 +4204,9 @@
 2014/Providence Little Company of Mary Medical Center - Torrance/106190470_Common25_2014.xlsx
 2014/Providence Little Company of Mary Medical Center - Torrance/106190470_Comments_2014.docx
 2014/Feather River Hospital/106040875_Common25_2014.xls
-2014/Feather River Hospital/106040875_CDM_2014.xls.xlsx
+2014/Feather River Hospital/106040875_CDM_2014.xlsx
 2014/Feather River Hospital/106040875_Comments_2014.docx
-2014/Feather River Hospital/106040875_PCT_CHG_2014.xls.xlsx
+2014/Feather River Hospital/106040875_PCT_CHG_2014.xlsx
 2014/Good Samaritan Hospital - Bakersfield/106150775_CDM_All_2014.xls
 2014/Mercy Hospital - Bakersfield/106150761_Comments(1)_2014.docx
 2014/Mercy Hospital - Bakersfield/106150761_CDM_2014.xlsx
@@ -4245,7 +4245,7 @@
 2014/Arrowhead Regional Medical Center/106364231_Comments(1)_2014.docx
 2014/Arrowhead Regional Medical Center/106364231_Comments(3)_2014.pdf
 2014/Arrowhead Regional Medical Center/106364231_PCT_CHG_2014.xls
-2014/Aurora Behavioral Healthcare - Santa Rosa/106494048_CDM_All_ 2014.xls.xlsx
+2014/Aurora Behavioral Healthcare - Santa Rosa/106494048_CDM_All_ 2014.xlsx
 2014/Jerold Phelps Community Hospital/106121031_CDM_All_2014.xls
 2014/Corona Regional Medical Center/106331152_Common25_2014.xls
 2014/Corona Regional Medical Center/106331152_CDM_2014.xlsx
@@ -4325,9 +4325,9 @@
 2014/Vibra Hospital of San Diego/106374094_Common25_2014.xlsx
 2014/Garfield Medical Center/106190315_CDM_All_2014.xls
 2014/Glendale Adventist Medical Center/106190323_Comments_2014.docx
-2014/Glendale Adventist Medical Center/106190323_CDM_2014.xls.xlsx
-2014/Glendale Adventist Medical Center/106190323_Common25_2014.xls.xlsx
-2014/Glendale Adventist Medical Center/106190323_PCT_CHG_2014.xls.xlsx
+2014/Glendale Adventist Medical Center/106190323_CDM_2014.xlsx
+2014/Glendale Adventist Medical Center/106190323_Common25_2014.xlsx
+2014/Glendale Adventist Medical Center/106190323_PCT_CHG_2014.xlsx
 2014/Sharp Mesa Vista Hospital/106370745_Common25_2014.xls
 2014/Sharp Mesa Vista Hospital/106370745_CDM_2014.xlsx
 2014/Sharp Mesa Vista Hospital/106370745_PCT_CHG_2014.docx
@@ -4352,7 +4352,7 @@
 2014/State - Patton State Hospital/106361768_COMMENTS_2014.docx
 2014/State - Patton State Hospital/106361768_CDM_ALL_2014.xls
 2014/Santa Ynez Valley Cottage Hospital/106420522_CDM_All_2014.xls
-2014/Enloe Medical Center/106040962_CDM_All_2014.xls.xlsx
+2014/Enloe Medical Center/106040962_CDM_All_2014.xlsx
 2014/Santa Rosa Memorial Hospital/106491064_CDM_All_2014.xlsx
 2014/Santa Rosa Memorial Hospital/106491064_Comments(1)_2014.docx
 2014/Santa Rosa Memorial Hospital/106491064_Comments(2)_2014.docx
@@ -4487,7 +4487,7 @@
 2014/French Hospital - San Luis Obispo/106400480_CDM_All_2014.xlsx
 2014/Colorado River Medical Center/106361458_Comments_2014.pdf
 2014/Colorado River Medical Center/106361458_Common25_2014.xls
-2014/Colorado River Medical Center/106361458_CDM_2014.xls.xlsx
+2014/Colorado River Medical Center/106361458_CDM_2014.xlsx
 2014/Victor Valley Global Medical Center/106361370_CDM_All_2014.xlsx
 2014/St. Mary Regional Medical Center/106361343_CDM_ALL_2014.xlsx
 2014/St. Mary Regional Medical Center/106361343_COMMENTS(2)_2014.doc
@@ -4553,9 +4553,9 @@
 2014/University of California Davis Medical Center/106341006_PCT_CHG_2014.xlsx
 2014/University of California Davis Medical Center/106341006_CDM_2014.xlsx
 2014/Central Valley General Hospital/106160787_Comments_2014.docx
-2014/Central Valley General Hospital/106160787_CDM_2014.xls.xlsx
-2014/Central Valley General Hospital/106160787_Common25_2014.xls.xlsx
-2014/Central Valley General Hospital/106160787_PCT_CHG_2014.xls.xlsx
+2014/Central Valley General Hospital/106160787_CDM_2014.xlsx
+2014/Central Valley General Hospital/106160787_Common25_2014.xlsx
+2014/Central Valley General Hospital/106160787_PCT_CHG_2014.xlsx
 2014/Mills-Peninsula Medical Center/106410852_Comments_2014.docx
 2014/Mills-Peninsula Medical Center/106410852_CDM_All_2014.xls
 2014/Marina Del Rey Hospital/106190500_PCT_CHG_2014.docx
@@ -4611,7 +4611,7 @@
 2014/State - Lanterman Developmental Center/106191014_COMMENTS_2014.docx
 2014/Adventist Medical Center - Reedley/106100797_PCT_CHG_2014.xls
 2014/Adventist Medical Center - Reedley/106100797_Comments_2014..docx
-2014/Adventist Medical Center - Reedley/106100797_CDM_2014.xls.xlsx
+2014/Adventist Medical Center - Reedley/106100797_CDM_2014.xlsx
 2014/Adventist Medical Center - Reedley/106100797_Common25_2014.xls
 2014/Healthsouth Bakersfield Rehabilitation Hospital/106154022_Comments_2014.docx
 2014/Healthsouth Bakersfield Rehabilitation Hospital/106154022_PCT_CHG_2014.xls
@@ -4649,10 +4649,10 @@
 2014/Santa Clara Valley Medical Center/106430883_Comments(1)_2014.docx
 2014/Santa Clara Valley Medical Center/106430883_CDM_2014.xlsx
 2014/Glendale Memorial Hospital/106190522_Comments(1)_2014.docx
-2014/Glendale Memorial Hospital/106190522_CDM_2014.xls.xlsx
-2014/Glendale Memorial Hospital/106190522_Common25_2014.xls.xlsx
+2014/Glendale Memorial Hospital/106190522_CDM_2014.xlsx
+2014/Glendale Memorial Hospital/106190522_Common25_2014.xlsx
 2014/Glendale Memorial Hospital/106190522_Comments(2)_2014.doc
-2014/Glendale Memorial Hospital/106190522_PCT_CHG_2014.xls.xlsx
+2014/Glendale Memorial Hospital/106190522_PCT_CHG_2014.xlsx
 2014/San Antonio Community Hospital/106361318_Comments_2014.docx
 2014/San Antonio Community Hospital/106361318_CDM_All_2014.xls
 2014/Memorial Hospital - Los Banos/106240924_Comments_2014.docx
@@ -4776,32 +4776,32 @@
 2015/Ventura County Medical Center/106560481_COMMON25_2015.xlsx
 2015/Ventura County Medical Center/106560481_PCT_CHG_2015.xlsx
 2015/Ventura County Medical Center/106560481_COMMENTS_2015.doc
-2015/Newport Bay Hospital/106301304_CDM_2015.xls.xlsx
+2015/Newport Bay Hospital/106301304_CDM_2015.xlsx
 2015/Newport Bay Hospital/106301304_PCT_CHG_2015.doc
 2015/Newport Bay Hospital/106301304_Common25_2015.doc
-2015/AHMC Anaheim Regional Medical Center/106301098_CDM_All_2015.xls.xlsx
-2015/LAC Olive View Medical Center/106191231_CDM_2015.xls.xlsx
+2015/AHMC Anaheim Regional Medical Center/106301098_CDM_All_2015.xlsx
+2015/LAC Olive View Medical Center/106191231_CDM_2015.xlsx
 2015/LAC Olive View Medical Center/106191231_PCT_CHG_2015.xls
-2015/LAC Olive View Medical Center/106191231_Common25_2015.xls.xlsx
-2015/San Joaquin Community Hospital/106150788_PCT_CHG_2015.xls.xlsx
-2015/San Joaquin Community Hospital/106150788_CDM_2015.xls.xlsx
-2015/San Joaquin Community Hospital/106150788_Common25_2015.xls.xlsx
+2015/LAC Olive View Medical Center/106191231_Common25_2015.xlsx
+2015/San Joaquin Community Hospital/106150788_PCT_CHG_2015.xlsx
+2015/San Joaquin Community Hospital/106150788_CDM_2015.xlsx
+2015/San Joaquin Community Hospital/106150788_Common25_2015.xlsx
 2015/San Joaquin Community Hospital/106150788_Comments_2015.doc
-2015/Hazel Hawkins Memorial Hospital/106350784_CDM_All_2015.xls.xlsx
+2015/Hazel Hawkins Memorial Hospital/106350784_CDM_All_2015.xlsx
 2015/Hazel Hawkins Memorial Hospital/106350784_Comments_2015.doc
 2015/Geroge L Mee Memorial Hospital/106270777_CDM_All_2015.xls
-2015/Monterey Park Hospital/106190547_CDM_All_2015.xls.xlsx
+2015/Monterey Park Hospital/106190547_CDM_All_2015.xlsx
 2015/Valleycare Medical Center/106014050_PCT_CHG_2015.xls
 2015/Valleycare Medical Center/106014050_CDM_2015.xls
 2015/Valleycare Medical Center/106014050_COMMON25_2015.xls
-2015/College Hospital - Costa Mesa/106301155_Common25_2015.xls.xlsx
+2015/College Hospital - Costa Mesa/106301155_Common25_2015.xlsx
 2015/College Hospital - Costa Mesa/106301155_Comments_2015.doc
-2015/College Hospital - Costa Mesa/106301155_CDM_2015.xls.xlsx
-2015/College Hospital - Costa Mesa/106301155_PCT_CHG_2015.xls.xlsx
+2015/College Hospital - Costa Mesa/106301155_CDM_2015.xlsx
+2015/College Hospital - Costa Mesa/106301155_PCT_CHG_2015.xlsx
 2015/Sutter Center for Psychiatry/106344017_CDM_ALL_2015.xlsx
 2015/Sutter Center for Psychiatry/106344017_COMMENTS_2015.doc
 2015/San Francisco General Hospital Medical Center/106380939_Comments_2015.doc
-2015/San Francisco General Hospital Medical Center/106380939_CDM_All_2015.xls.xlsx
+2015/San Francisco General Hospital Medical Center/106380939_CDM_All_2015.xlsx
 2015/St Helena Hospital - Clearlake/106171049_COMMENTS_2015.doc
 2015/St Helena Hospital - Clearlake/106171049_PCT_CHG_2015.xlsx
 2015/St Helena Hospital - Clearlake/106171049_CDM_2015.xlsx
@@ -4811,9 +4811,9 @@
 2015/BHC Heritage Oaks Hospital/106344021_CDM_All_2015.xls
 2015/San Diego County Psychiatric Hospital/106374055_CDM_ALL_2015.xls
 2015/San Diego County Psychiatric Hospital/106374055_Comments_2015.doc
-2015/Oroville Hospital/106040937_CDM_2015.xls.xlsx
-2015/Oroville Hospital/106040937_Common25_2015.xls.xlsx
-2015/Oroville Hospital/106040937_PCT_CHG_2015.xls.xlsx
+2015/Oroville Hospital/106040937_CDM_2015.xlsx
+2015/Oroville Hospital/106040937_Common25_2015.xlsx
+2015/Oroville Hospital/106040937_PCT_CHG_2015.xlsx
 2015/Hoag Memorial Hospital/106301205_Comments_2015.doc
 2015/Hoag Memorial Hospital/106301205_CDM_All_2015.xls
 2015/Kaiser Foundation Hospital - Oakland-Richmond/106010856_PCT_CHG_2015.xls
@@ -4827,34 +4827,34 @@
 2015/Mayers Memorial Hospital/106450936_Comments_2015.doc
 2015/Doctors Hospital - Manteca/106392287_CDM_All_2015.xls
 2015/Doctors Hospital - Manteca/106392287_Comments_2015.pdf.pdf
-2015/Montclair Hospital Medical Center/106361166_CDM_All_2015.xls.xlsx
-2015/Ronald Reagan UCLA Medical Center/106190796_MSDRG_2015.xls.xlsx
-2015/Ronald Reagan UCLA Medical Center/106190796_PCT_CHG_2015.xls.xlsx
+2015/Montclair Hospital Medical Center/106361166_CDM_All_2015.xlsx
+2015/Ronald Reagan UCLA Medical Center/106190796_MSDRG_2015.xlsx
+2015/Ronald Reagan UCLA Medical Center/106190796_PCT_CHG_2015.xlsx
 2015/Ronald Reagan UCLA Medical Center/106190796_Comments_2015.doc
-2015/Ronald Reagan UCLA Medical Center/106190796_CDM_2015.xls.xlsx
-2015/Ronald Reagan UCLA Medical Center/106190796_Common25_2015.xls.xlsx
+2015/Ronald Reagan UCLA Medical Center/106190796_CDM_2015.xlsx
+2015/Ronald Reagan UCLA Medical Center/106190796_Common25_2015.xlsx
 2015/Aurora San Diego Hospital/106374024_CDM_All_2015.xls
-2015/Northridge Hospital Medical Center/106190568_CDM_2015.xls.xlsx
-2015/Northridge Hospital Medical Center/106190568_Common25_2015.xls.xlsx
+2015/Northridge Hospital Medical Center/106190568_CDM_2015.xlsx
+2015/Northridge Hospital Medical Center/106190568_Common25_2015.xlsx
 2015/Northridge Hospital Medical Center/106190568_Comments(2)_2015.doc
 2015/Northridge Hospital Medical Center/106190568_Comments(1)_2015.doc
-2015/Northridge Hospital Medical Center/106190568_PCT_CHG_2015.xls.xlsx
-2015/Memorial Hospital - Gardena/106190521_CDM_All_2015.xls.xlsx
+2015/Northridge Hospital Medical Center/106190568_PCT_CHG_2015.xlsx
+2015/Memorial Hospital - Gardena/106190521_CDM_All_2015.xlsx
 2015/Memorial Hospital - Gardena/106190521_Comments_2015.doc
 2015/Memorial Hospital - Gardena/106190521_PCT_CHG_2015.pdf.pdf
-2015/Ojai Valley Community Hospital/106560501_CDM_All_2015.xls.xlsx
+2015/Ojai Valley Community Hospital/106560501_CDM_All_2015.xlsx
 2015/Eastern Plumas District Hospital/106320859_Common25_2015.xls
-2015/Eastern Plumas District Hospital/106320859_Comments_2015.docx.docx
+2015/Eastern Plumas District Hospital/106320859_Comments_2015.docx
 2015/Eastern Plumas District Hospital/106320859_CDM_2015.xls
 2015/Community Hospital of the Monterey Peninsula/106270744_Comments_2015.doc
-2015/Community Hospital of the Monterey Peninsula/106270744_CDM_All_2015.xls.xlsx
-2015/O'Connor Hospital/106430837_CDM_All_2015.xls.xlsx
+2015/Community Hospital of the Monterey Peninsula/106270744_CDM_All_2015.xlsx
+2015/O'Connor Hospital/106430837_CDM_All_2015.xlsx
 2015/O'Connor Hospital/106430837_Comments_2015.doc
 2015/Twin Cities Community Hospital/106400548_COMMENTS_2015.pdf
 2015/Twin Cities Community Hospital/106400548_CDM_ALL_2015.xls
 2015/Huntington Beach Medical Center/106301209_Comments_2015.doc
-2015/Huntington Beach Medical Center/106301209_CDM_All_2015.xls.xlsx
-2015/Marina del Rey Hospital/106190500_CDM_2015.xls.xlsx
+2015/Huntington Beach Medical Center/106301209_CDM_All_2015.xlsx
+2015/Marina del Rey Hospital/106190500_CDM_2015.xlsx
 2015/Marina del Rey Hospital/106190500_Common25_2015.xls
 2015/Marina del Rey Hospital/106190500_Comments_2015.doc
 2015/Kindred Hospital - Los Angeles/106190305_CDM_All_2015.xlsx
@@ -4862,7 +4862,7 @@
 2015/Kaiser Foundation Hospital - Walnut Creek/106070990_PCT_CHG_2015.xls
 2015/Kaiser Foundation Hospital - Walnut Creek/106070990_Comments_2015.doc
 2015/Kaiser Foundation Hospital - Walnut Creek/106070990_CDM_2015.xls
-2015/Providence Holy Cross Medical Center/106190385_CDM_2015.xls.xlsx
+2015/Providence Holy Cross Medical Center/106190385_CDM_2015.xlsx
 2015/Providence Holy Cross Medical Center/106190385_Comments_2015.doc
 2015/Providence Holy Cross Medical Center/106190385_Common25_2015.xls
 2015/Sharp Grossmont Disrict Hospital/106370714_COMMENTS_2015.doc
@@ -4873,7 +4873,7 @@
 2015/Sonora Regional Medical Center/106554011_COMMENTS_2015.doc
 2015/Sonora Regional Medical Center/106554011_PCT_CHG_2015.xlsx
 2015/Salinas Valley Memorial Hospital/106270875_Comments_2015.doc
-2015/Salinas Valley Memorial Hospital/106270875_CDM_All_2015.xls.xlsx
+2015/Salinas Valley Memorial Hospital/106270875_CDM_All_2015.xlsx
 2015/Tarzana Treatment Center/106190782_CDM_ALL_2015.xls
 2015/St Jude Medical Center/106301342_CDM_ALL_2015.xlsx
 2015/St Jude Medical Center/106301342_COMMENTS_2015.doc
@@ -4883,9 +4883,9 @@
 2015/Bakersfield Heart Hospital/106154101_Comments(2)_2015.xls
 2015/Desert Regional Medical Center/106331164_Comments_2015.docx.pdf
 2015/Desert Regional Medical Center/106331164_CDM_All_2015.xls
-2015/Riverside County Regional Medical Center/106334487_PCT_CHG_2015.xls.xlsx
+2015/Riverside County Regional Medical Center/106334487_PCT_CHG_2015.xlsx
 2015/Riverside County Regional Medical Center/106334487_Common25_2015.xls
-2015/Riverside County Regional Medical Center/106334487_CDM_2015.xls.xlsx
+2015/Riverside County Regional Medical Center/106334487_CDM_2015.xlsx
 2015/Riverside County Regional Medical Center/106334487_Comments_2015.doc
 2015/Kaiser Foundation Hospital - Fremont/106014132_Common25_2015.xlsx
 2015/Kaiser Foundation Hospital - Fremont/106014132_PCT_CHG_2015.xls
@@ -4893,22 +4893,22 @@
 2015/Kaiser Foundation Hospital - Fremont/106014132_Comments_2015.doc
 2015/Pioneers Memorial Hospital/106130760_Comments(3)_2015.pdf.pdf
 2015/Pioneers Memorial Hospital/106130760_Comments(2)_2015.doc
-2015/Pioneers Memorial Hospital/106130760_CDM_2015.xls.xlsx
-2015/Pioneers Memorial Hospital/106130760_Common25_2015.xls.xlsx
+2015/Pioneers Memorial Hospital/106130760_CDM_2015.xlsx
+2015/Pioneers Memorial Hospital/106130760_Common25_2015.xlsx
 2015/Pioneers Memorial Hospital/106130760_Comments(1)_2015.doc
 2015/Whittier Hosptial Medical Center/106190883_CDM_All_2015.xlsx
-2015/San Gorgonio Memorial Hospital/106331326_Common25_2015.xls.xlsx
+2015/San Gorgonio Memorial Hospital/106331326_Common25_2015.xlsx
 2015/San Gorgonio Memorial Hospital/106331326_CDM_2015.xls
-2015/San Gorgonio Memorial Hospital/106331326_PCT_CHG_2015.xls.xlsx
+2015/San Gorgonio Memorial Hospital/106331326_PCT_CHG_2015.xlsx
 2015/Casa Colina Hospital for Rehabilitation/106190137_Comments_2015.doc
-2015/Casa Colina Hospital for Rehabilitation/106190137_CDM_All_2015.xls.xlsx
+2015/Casa Colina Hospital for Rehabilitation/106190137_CDM_All_2015.xlsx
 2015/Glenn Medical Center/106110889_Common25_2015.xls
 2015/Glenn Medical Center/106110889_CDM_2015.xlsm
 2015/Glenn Medical Center/106110889_Comments_2015.doc
 2015/Orange Coast Memorial Medical Center/106300225_Comments(2)_2015.doc
 2015/Orange Coast Memorial Medical Center/106300225_Comments(1)_2015.doc
 2015/Orange Coast Memorial Medical Center/106300225_CDM_All_2015.xls
-2015/City of Hope Helford Clinical Research Hospital/106190176_CDM_All_2015.xls.xlsx
+2015/City of Hope Helford Clinical Research Hospital/106190176_CDM_All_2015.xlsx
 2015/Healdsburg District Hospital/106490964_CDM_2015.xls
 2015/Healdsburg District Hospital/106490964_Comments_2015.pdf
 2015/Healdsburg District Hospital/106490964_Common25_2015.xls
@@ -4919,23 +4919,23 @@
 2015/St Joseph Medical Center - Stockton/106391042_CDM_ALL_2015.xlsx
 2015/Chinese Hospital/106382715_CDM_2015.xls
 2015/Chinese Hospital/106382715_Common25_2015.xls
-2015/Chinese Hospital/106382715_PCT_CHG_2015.xls.xlsx
+2015/Chinese Hospital/106382715_PCT_CHG_2015.xlsx
 2015/Kaiser Foundation Hospital - Sunset (Los Angeles)/106190429_CDM_2015.xls
 2015/Kaiser Foundation Hospital - Sunset (Los Angeles)/106190429_PCT_CHG_2015.xlsx
 2015/Kaiser Foundation Hospital - Sunset (Los Angeles)/106190429_Comments_2015.doc
 2015/Kaiser Foundation Hospital - Sunset (Los Angeles)/106190429_Common25_2015.xlsx
 2015/San Joaquin Valley Rehabilitation Center/106104023_Comments_2015.doc
 2015/San Joaquin Valley Rehabilitation Center/106104023_Common25_2015.xls
-2015/San Joaquin Valley Rehabilitation Center/106104023_CDM_2015.xls.xlsx
+2015/San Joaquin Valley Rehabilitation Center/106104023_CDM_2015.xlsx
 2015/Marin General Hospital/106211006_Common25_2015.xls
 2015/Marin General Hospital/106211006_Comments_2015.doc
-2015/Marin General Hospital/106211006_PCT_CHG_2015.xls.xlsx
-2015/Marin General Hospital/106211006_CDM_2015.xls.xlsx
-2015/Monrovia Medical Center/106190541_CDM_2015.xls.xlsx
+2015/Marin General Hospital/106211006_PCT_CHG_2015.xlsx
+2015/Marin General Hospital/106211006_CDM_2015.xlsx
+2015/Monrovia Medical Center/106190541_CDM_2015.xlsx
 2015/Monrovia Medical Center/106190541_PCT_CHG_2015.doc
 2015/Monrovia Medical Center/106190541_Common25_2015.xls
 2015/Children's Hospital of Orange County/106300032_Comments_2015.doc
-2015/Children's Hospital of Orange County/106300032_CDM_All_2015.xls.xlsx
+2015/Children's Hospital of Orange County/106300032_CDM_All_2015.xlsx
 2015/Watsonville Community Hospital/106444013_CDM_All_2015.xls
 2015/Woodland Memorial Hospital/106571086_Comments(1)_2015.doc
 2015/Woodland Memorial Hospital/106571086_CDM_All_2015.xls
@@ -4944,10 +4944,10 @@
 2015/Marian Medical Center/106420493_CDM_All_2015.xls
 2015/Marian Medical Center/106420493_Comments(1)_2015.doc
 2015/Marian Medical Center/106400466_CDM_All_2015.xls
-2015/San Dimas Community Hospital/106190673_CDM_All_2015.xls.xlsx
+2015/San Dimas Community Hospital/106190673_CDM_All_2015.xlsx
 2015/Providence St. John's Health Center/106190756_Comments_2015.doc
 2015/Providence St. John's Health Center/106190756_Common25_2015.xls.xls
-2015/Providence St. John's Health Center/106190756_CDM_2015.xls.xlsx
+2015/Providence St. John's Health Center/106190756_CDM_2015.xlsx
 2015/Sharp Coronado Hospital/106370689_COMMENTS_2015.doc
 2015/Sharp Coronado Hospital/106370689_CDM_2015.xlsx
 2015/Sharp Coronado Hospital/106370689_COMMON25_2015.xls
@@ -4955,22 +4955,22 @@
 2015/Central Valley Specialty Hospital/106500954_CDM_2015.xlsx
 2015/Stanilaus Surgical Hospital/106504038_CDM_ALL_2015.xlsm
 2015/Stanilaus Surgical Hospital/106504038_COMMENTS_2015.doc
-2015/Hi Desert Medical Center/106362041_CDM_All_2015.xls.xlsx
+2015/Hi Desert Medical Center/106362041_CDM_All_2015.xlsx
 2015/Hi Desert Medical Center/106362041_Comments_2015.doc
 2015/East Los Angeles Doctors Hospital/106190256_Comments(1)_2015.doc
 2015/East Los Angeles Doctors Hospital/106190256_Comments(2)_2015.pdf.pdf
-2015/East Los Angeles Doctors Hospital/106190256_CDM_All_2015.xls.xlsx
+2015/East Los Angeles Doctors Hospital/106190256_CDM_All_2015.xlsx
 2015/Emanuel Medical Center/106500867_CDM_All_2015.xls
 2015/St Mary's Medical Center - San Francisco/106380965_COMMENTS(2)_2015.doc
 2015/St Mary's Medical Center - San Francisco/106380965_COMMENTS(1)_2015.doc
 2015/St Mary's Medical Center - San Francisco/106380965_CDM_ALL_2015.xls
-2015/El Centro Regional Medical Center/106130699_CDM_2015.xls.xlsx
+2015/El Centro Regional Medical Center/106130699_CDM_2015.xlsx
 2015/El Centro Regional Medical Center/106130699_PCT_CHG_2015.xls
-2015/El Centro Regional Medical Center/106130699_Common25_2015.xls.xlsx
+2015/El Centro Regional Medical Center/106130699_Common25_2015.xlsx
 2015/El Centro Regional Medical Center/106130699_Comments_2015.doc
-2015/Community Memorial Hospital San Buenaventura/106560473_CDM_All_2015.xls.xlsx
+2015/Community Memorial Hospital San Buenaventura/106560473_CDM_All_2015.xlsx
 2015/Laguna Honda Hospital/106380865_Comments_2015.doc
-2015/Laguna Honda Hospital/106380865_CDM_All_2015.xls.xlsx
+2015/Laguna Honda Hospital/106380865_CDM_All_2015.xlsx
 2015/Kaiser Foundation Hospital - San Jose/106431506_PCT_CHG_2015.xls
 2015/Kaiser Foundation Hospital - San Jose/106431506_CDM_2015.xls
 2015/Kaiser Foundation Hospital - San Jose/106431506_Common25_2015.xlsx
@@ -4991,45 +4991,45 @@
 2015/Kaiser Foundation Hospital - Manteca-Modesto/106394009_Comments_2015.docx
 2015/Kaiser Foundation Hospital - Manteca-Modesto/106394009_PCT_CHG_2015.xls
 2015/Coast Plaza Doctors Hospital/106190766_Comments(2)_2015.pdf.pdf
-2015/Coast Plaza Doctors Hospital/106190766_CDM_All_2015.xls.xlsx
+2015/Coast Plaza Doctors Hospital/106190766_CDM_All_2015.xlsx
 2015/Coast Plaza Doctors Hospital/106190766_Comments(1)_2015.doc
 2015/Kindred Hospital - Ontario/106361274_CDM_All_2015.xlsx
 2015/Kindred Hospital - South Bay/106190196_PCT_CHG_2015.xlsx
 2015/Kindred Hospital - South Bay/106190196_Common25_2015.xls
 2015/Kindred Hospital - South Bay/106190196_CDM_2015.xlsx
-2015/Natividad Medical Center/106274043_CDM_All_2015.xls.xlsx
+2015/Natividad Medical Center/106274043_CDM_All_2015.xlsx
 2015/Resnick Neuropsychiatric Hospital at UCLA/106190930_Comments_2015.doc
-2015/Resnick Neuropsychiatric Hospital at UCLA/106190930_Common25_2015.xls.xlsx
-2015/Resnick Neuropsychiatric Hospital at UCLA/106190930_MSDRG_2015.xls.xlsx
-2015/Resnick Neuropsychiatric Hospital at UCLA/106190930_PCT_CHG_2015.xls.xlsx
-2015/Resnick Neuropsychiatric Hospital at UCLA/106190930_CDM_2015.xls.xlsx
+2015/Resnick Neuropsychiatric Hospital at UCLA/106190930_Common25_2015.xlsx
+2015/Resnick Neuropsychiatric Hospital at UCLA/106190930_MSDRG_2015.xlsx
+2015/Resnick Neuropsychiatric Hospital at UCLA/106190930_PCT_CHG_2015.xlsx
+2015/Resnick Neuropsychiatric Hospital at UCLA/106190930_CDM_2015.xlsx
 2015/Barlow Respiratory Hospital/106190052_Comments_2015.doc
 2015/Barlow Respiratory Hospital/106190052_CDM_2015.xls
 2015/Barlow Respiratory Hospital/106190052_PCT_CHG_2015.xls
 2015/Barlow Respiratory Hospital/106190052_Common25_2015.xls
-2015/Los Angeles Community Hospital/106190570_PCT_CHG(1)_2015.xls.xlsx
+2015/Los Angeles Community Hospital/106190570_PCT_CHG(1)_2015.xlsx
 2015/Los Angeles Community Hospital/106190198_Common25_2015.xls
 2015/Los Angeles Community Hospital/106190198_PCT_CHG_2015.doc
 2015/Los Angeles Community Hospital/106190570_Common25_2015.xls
 2015/Los Angeles Community Hospital/106190570_PCT_CHG(2)_2015.doc
-2015/Los Angeles Community Hospital/106190198_CDM_2015.xls.xlsx
+2015/Los Angeles Community Hospital/106190198_CDM_2015.xlsx
 2015/Los Angeles Community Hospital/106190198_Comments_2015.doc
 2015/Los Angeles Community Hospital/106190570_CDM_2015.xlsx
-2015/Miracle Mile Medical Center/106190681_CDM_All_2015.xls.xlsx
+2015/Miracle Mile Medical Center/106190681_CDM_All_2015.xlsx
 2015/State - Atascadero State Hospital/106400683_COMMENTS_2015.doc
 2015/State - Atascadero State Hospital/106400683_CDM_ALL_2015.xls
 2015/Methodist Hospital - Southern California/106190529_CDM_All_2015.xls
 2015/Providence St. Joseph Medical Center/106190758_Common25_2015.xls
 2015/Providence St. Joseph Medical Center/106190758_Comments_2015.doc
-2015/Providence St. Joseph Medical Center/106190758_CDM_2015.xls.xlsx
+2015/Providence St. Joseph Medical Center/106190758_CDM_2015.xlsx
 2015/Rideout Memorial Hospital/106580996_PCT_CHG_2015.pdf.pdf
-2015/Rideout Memorial Hospital/106580996_CDM_2015.xls.xlsx
+2015/Rideout Memorial Hospital/106580996_CDM_2015.xlsx
 2015/Rideout Memorial Hospital/106580996_Comments_2015.doc
 2015/Rideout Memorial Hospital/106580996_Common25_2015.xls
 2015/Sierra Vista Regional Medical Center/106400524_COMMENTS_2015.pdf
 2015/Sierra Vista Regional Medical Center/106400524_CDM_ALL_2015.xls
 2015/Regional Medical Center of San Jose/106430705_CDM_All_2015.xls
-2015/Providence Little Company of Mary Medical Center - San Pedro/106190680_CDM_2015.xls.xlsx
+2015/Providence Little Company of Mary Medical Center - San Pedro/106190680_CDM_2015.xlsx
 2015/Providence Little Company of Mary Medical Center - San Pedro/106190680_Common25_2015.xls
 2015/Providence Little Company of Mary Medical Center - San Pedro/106190680_Comments_2015.doc
 2015/Shasta Regional Medical Center/106450940_CDM_ALL_2015.xlsx
@@ -5040,17 +5040,17 @@
 2015/Kaiser Foundation Hospital - San Leandro/106014337_PCT_CHG_2015.xls
 2015/Kaiser Foundation Hospital - San Leandro/106014337_Comments_2015.doc
 2015/Barton Memorial Hospital/106090793_PCT_CHG_2015.doc
-2015/Barton Memorial Hospital/106090793 _CDM_2015.xls.xlsx
-2015/Barton Memorial Hospital/106090793 _Common25_2015.xls.xlsx
+2015/Barton Memorial Hospital/106090793 _CDM_2015.xlsx
+2015/Barton Memorial Hospital/106090793 _Common25_2015.xlsx
 2015/Barton Memorial Hospital/106090793 _Comments(2)_2015.xlsx
 2015/Barton Memorial Hospital/106090793 _Comments(1)_2015.doc
-2015/Barton Memorial Hospital/106090793 _CDM_RX_2015.xls.xlsx
+2015/Barton Memorial Hospital/106090793 _CDM_RX_2015.xlsx
 2015/Kaiser Foundation Hospital - Roseville/106314024_Comments_2015.doc
 2015/Kaiser Foundation Hospital - Roseville/106314024_CDM_2015.xls
 2015/Kaiser Foundation Hospital - Roseville/106314024_PCT_CHG_2015.xls
 2015/Kaiser Foundation Hospital - Roseville/106314024_Common25_2015.xlsx
 2015/Jewish Home/106380842_CDM_All_2015.xls
-2015/Memorial Hospital - Modesto/106500939_CDM_All_2015.xls.xlsx
+2015/Memorial Hospital - Modesto/106500939_CDM_All_2015.xlsx
 2015/Memorial Hospital - Modesto/106500939_Comments_2015.doc
 2015/St Bernardine Medical Center/106361339_COMMENTS(2)_2015.doc
 2015/St Bernardine Medical Center/106361339_CDM_RX_2015.xlsx
@@ -5061,18 +5061,18 @@
 2015/St Francis Memorial Hospital - San Francisco/106380960_COMMENTS(2)_2015.doc
 2015/St Francis Memorial Hospital - San Francisco/106380960_CDM_ALL_2015.xls
 2015/St Francis Memorial Hospital - San Francisco/106380960_COMMENTS(1)_2015.doc
-2015/Lompoc Valley Medical Center/106420491_CDM_All_2015.xls.xlsx
+2015/Lompoc Valley Medical Center/106420491_CDM_All_2015.xlsx
 2015/Loma Linda University Medical Center/106361246_Comments_2015.doc
 2015/Loma Linda University Medical Center/106361246_Common25_2015.xls
 2015/Loma Linda University Medical Center/106361246_PCT_CHG_2015.xls
-2015/Loma Linda University Medical Center/106361246_CDM_2015.xls.xlsx
+2015/Loma Linda University Medical Center/106361246_CDM_2015.xlsx
 2015/Pomerado Hospital/106370977_CDM_All_2015.xls
 2015/Pomerado Hospital/106370977_Comments_2015.doc
 2015/Marshall Medical Center/106090933_PCT_CHG_2015.doc
-2015/Marshall Medical Center/106090933_CDM_All_2015.xls.xlsx
+2015/Marshall Medical Center/106090933_CDM_All_2015.xlsx
 2015/Pacifica Hospital of the Valley/106190696_CDM_2015.xls
 2015/Pacifica Hospital of the Valley/106190696_Common25_2015.xls
-2015/California Pacific Medical Center - Pacific Campus/106380929_CDM_All_2015.xls.xlsx
+2015/California Pacific Medical Center - Pacific Campus/106380929_CDM_All_2015.xlsx
 2015/California Pacific Medical Center - Pacific Campus/106380929_Comments_2015.doc
 2015/Sutter Santa Rosa Memorial Hospital/106490919_COMMENTS_2015.doc
 2015/Sutter Santa Rosa Memorial Hospital/106490919_CDM_ALL_2015.xlsx
@@ -5083,8 +5083,8 @@
 2015/State - Lanterman Developement Center/106191014_COMMENTS_2015.doc
 2015/Keck Hospital of USC/106194219_Comments_2015.doc
 2015/Keck Hospital of USC/106194219_CDM_All_2015.xls
-2015/Santa Barbara Cottage Hospital/106420514_CDM_All_2015.xls.xlsx
-2015/Kern Medical Center/106150736_CDM_All_2015.xls.xlsx
+2015/Santa Barbara Cottage Hospital/106420514_CDM_All_2015.xlsx
+2015/Kern Medical Center/106150736_CDM_All_2015.xlsx
 2015/Kaiser Foundation Hospital - Santa Rosa/106494019_Common25_2015.xlsx
 2015/Kaiser Foundation Hospital - Santa Rosa/106494019_CDM_2015.xls
 2015/Kaiser Foundation Hospital - Santa Rosa/106494019_PCT_CHG_2015.xls
@@ -5094,16 +5094,16 @@
 2015/Kindred Hospital - Brea/106301127_PCT_CHG_2015.xls
 2015/Los Alamitos Medical Center/106301248_CDM_All_2015.xls
 2015/Los Alamitos Medical Center/106301248_Comments_2015.pdf.pdf
-2015/Lodi Memorial Hospital/106390923_PCT_CHG_2015.xls.xlsx
+2015/Lodi Memorial Hospital/106390923_PCT_CHG_2015.xlsx
 2015/Lodi Memorial Hospital/106390923_Common25_2015.xls
-2015/Lodi Memorial Hospital/106390923_CDM_2015.xls.xlsx
+2015/Lodi Memorial Hospital/106390923_CDM_2015.xlsx
 2015/Lodi Memorial Hospital/106390923_Comments_2015.doc
 2015/Memorial Hosptial - Los Banos/106240924_Comment_2015.doc
-2015/Memorial Hosptial - Los Banos/106240924_CDM_All_ 2015.xls.xlsx
-2015/Coalinga Regional Medical Center/106100697_Common25_2015.xls.xlsx
+2015/Memorial Hosptial - Los Banos/106240924_CDM_All_ 2015.xlsx
+2015/Coalinga Regional Medical Center/106100697_Common25_2015.xlsx
 2015/Coalinga Regional Medical Center/106100697_Comments_2015.doc
-2015/Coalinga Regional Medical Center/106100697_PCT_CHG_2015.xls.xlsx
-2015/Coalinga Regional Medical Center/106100697_CDM_2015.xls.xlsx
+2015/Coalinga Regional Medical Center/106100697_PCT_CHG_2015.xlsx
+2015/Coalinga Regional Medical Center/106100697_CDM_2015.xlsx
 2015/St John's Regional Medical Center - Oxnard/106560529_COMMENTS(2)_2015.doc
 2015/St John's Regional Medical Center - Oxnard/106560529_CDM_2015.xlsx
 2015/St John's Regional Medical Center - Oxnard/106560529_PCT_CHG_2015.xlsx
@@ -5112,12 +5112,12 @@
 2015/West Hills Hospital & Medical Center/106190859_Comments_2015.doc
 2015/West Hills Hospital & Medical Center/106190859_CDM_2015.xls
 2015/West Hills Hospital & Medical Center/106190859_Common25_2015.xls
-2015/Queen of the Valley Hospital - Napa/106281047_CDM_All_2015.xls.xlsx
+2015/Queen of the Valley Hospital - Napa/106281047_CDM_All_2015.xlsx
 2015/Queen of the Valley Hospital - Napa/106281047_Comments(2)_2015.doc
 2015/Queen of the Valley Hospital - Napa/106281047_Comments(1)_2015.pdf.pdf
 2015/Palo Verde Hospital/106331288_Comments_2015.doc
 2015/Palo Verde Hospital/106331288_CDM_All_2015.xls
-2015/Aurora Charter Oak Hospital/106190163_CDM_ALL_2015.xls.xlsx
+2015/Aurora Charter Oak Hospital/106190163_CDM_ALL_2015.xlsx
 2015/Aurora Charter Oak Hospital/106190163_Comments_2015.doc
 2015/Sierra View District Hospital/106540798_PCT_CHG_2015.xls
 2015/Sierra View District Hospital/106540798_CDM_2015.xls
@@ -5144,12 +5144,12 @@
 2015/St Elizabeth Community Hospital/106521041_COMMENTS(1)_2015.doc
 2015/St Elizabeth Community Hospital/106521041_CDM_ALL_2015.xls
 2015/St Elizabeth Community Hospital/106521041_COMMENTS(2)_2015.doc
-2015/Encino Hospital Medical Center/106190280_CDM_All_2015.xls.xlsx
+2015/Encino Hospital Medical Center/106190280_CDM_All_2015.xlsx
 2015/San Joaquin General Hospital/106391010_Comments(1)_2015.doc
 2015/San Joaquin General Hospital/106391010_Comments(4)_2015.doc
 2015/San Joaquin General Hospital/106391010_Comments(3)_2015.doc
-2015/San Joaquin General Hospital/106391010_CDM_2015.xls.xlsx
-2015/San Joaquin General Hospital/106391010_PCT_CHG_2015.xls.xlsx
+2015/San Joaquin General Hospital/106391010_CDM_2015.xlsx
+2015/San Joaquin General Hospital/106391010_PCT_CHG_2015.xlsx
 2015/San Joaquin General Hospital/106391010_Common25_2015.xls
 2015/San Joaquin General Hospital/106391010_Comments(2)_2015.doc
 2015/Kaiser Foundation Northern Region/106015000_PCT_CHG_2015.xls
@@ -5158,13 +5158,13 @@
 2015/Shriner's Children's Hospital - Northern California/106344114_COMMENTS_2015.doc
 2015/Shriner's Children's Hospital - Northern California/106344114_CDM_2015.xlsx
 2015/Shriner's Children's Hospital - Northern California/106344114_COMMON25_2015.xlsx
-2015/Glendora Community Hospital/106190328_CDM_All_2015.xls.xlsx
+2015/Glendora Community Hospital/106190328_CDM_All_2015.xlsx
 2015/Saddleback Memorial Medical Center/106301317_CDM_All_2015.xls
 2015/Saddleback Memorial Medical Center/106301317_Comments(2)_2015.doc
 2015/Saddleback Memorial Medical Center/106301317_Comments(1)_2015.doc
 2015/John Muir Medical Center - Concord Campus/106071018_Common25_2015.xls
-2015/John Muir Medical Center - Concord Campus/106071018_CDM_2015.xls.xlsx
-2015/John Muir Medical Center - Concord Campus/106071018_PCT_CHG_2015.xls.xlsx
+2015/John Muir Medical Center - Concord Campus/106071018_CDM_2015.xlsx
+2015/John Muir Medical Center - Concord Campus/106071018_PCT_CHG_2015.xlsx
 2015/John Muir Medical Center - Concord Campus/106071018_Comments_2015.doc
 2015/Valley Presbyterian Hospital/106190812_COMMENTS(2)_2015.xlsx
 2015/Valley Presbyterian Hospital/106190812_CDM_ALL_2015.xlsx
@@ -5174,13 +5174,13 @@
 2015/Southwest Healthcare System - Murrieta/106334068_COMMON25_2015.xls
 2015/Southwest Healthcare System - Murrieta/106334068_CDM_2015.xls
 2015/Southwest Healthcare System - Murrieta/106334068_PCT_CHG_2015.pdf
-2015/Parkview Community Hospital/106331293_CDM_All_2015.xls.xlsx
+2015/Parkview Community Hospital/106331293_CDM_All_2015.xlsx
 2015/St Vincent Medical Center/106190762_CDM_ALL_2015.xlsx
 2015/St Vincent Medical Center/106190762_COMMENTS_2015.doc
-2015/BHC Alhambra Hospital/106190020_PCT_CHG_2015.xls.xlsx
-2015/BHC Alhambra Hospital/106190020_CDM_2015.xls.xlsx
+2015/BHC Alhambra Hospital/106190020_PCT_CHG_2015.xlsx
+2015/BHC Alhambra Hospital/106190020_CDM_2015.xlsx
 2015/BHC Alhambra Hospital/106190020_Comments_2015.doc
-2015/BHC Alhambra Hospital/106190020_Common25_2015.xls.xlsx
+2015/BHC Alhambra Hospital/106190020_Common25_2015.xlsx
 2015/Mercy General Hospital/106340947_CDM_All_2015.xls
 2015/Mercy General Hospital/106340947_Comments(1)_2015.doc
 2015/Mercy General Hospital/106340947_Comments(2)_2015.doc
@@ -5189,16 +5189,16 @@
 2015/Dominican Santa Cruz Hospital/106440755_Comments(2)_2015.doc
 2015/Dominican Santa Cruz Hospital/106440755_Comments(1)_2015.doc
 2015/Dominican Santa Cruz Hospital/106440755_CDM_All_2015.xls
-2015/Kentfield Rehabiltiation Hospital/106210993_CDM_All_2015.xls.xlsx
+2015/Kentfield Rehabiltiation Hospital/106210993_CDM_All_2015.xlsx
 2015/Kaiser Foundation Hospital - Geary (San Francisco)/106380857_Common25_2015.xlsx
 2015/Kaiser Foundation Hospital - Geary (San Francisco)/106380857_Comments_2015.doc
 2015/Kaiser Foundation Hospital - Geary (San Francisco)/106380857_PCT_CHG_2015.xls
 2015/Kaiser Foundation Hospital - Geary (San Francisco)/106380857_CDM_2015.xls
 2015/California Hospital Medical Center/106190125_Comments(2)_2015.doc
 2015/California Hospital Medical Center/106190125_Comments(1)_2015.doc
-2015/California Hospital Medical Center/106190125_Common25_2015.xls.xlsx
-2015/California Hospital Medical Center/106190125_CDM_2015.xls.xlsx
-2015/California Hospital Medical Center/106190125_PCT_CHG_2015.xls.xlsx
+2015/California Hospital Medical Center/106190125_Common25_2015.xlsx
+2015/California Hospital Medical Center/106190125_CDM_2015.xlsx
+2015/California Hospital Medical Center/106190125_PCT_CHG_2015.xlsx
 2015/Kaiser Foundation Hospital - Riverside/106334025_Comments_2015.doc
 2015/Kaiser Foundation Hospital - Riverside/106334025_CDM_2015.xls
 2015/Kaiser Foundation Hospital - Riverside/106334025_Common25_2015.xlsx
@@ -5206,8 +5206,8 @@
 2015/Methodist Hospital - Sacramento/106340951_Comment(2)_2015.doc
 2015/Methodist Hospital - Sacramento/106340951_CDM_All_2015.xls
 2015/Methodist Hospital - Sacramento/106340951_Comment(1)_2015.doc
-2015/San Leandro Hospital/106013619_CDM_All_2015.xls.xlsx
-2015/Mountians Communty Hospital/106361266_CDM_All_2015.xls.xlsx
+2015/San Leandro Hospital/106013619_CDM_All_2015.xlsx
+2015/Mountians Communty Hospital/106361266_CDM_All_2015.xlsx
 2015/Kaiser Foundation Hospital - West Los Angeles/106190434_PCT_CHG_2015.xlsx
 2015/Kaiser Foundation Hospital - West Los Angeles/106190434_Common25_2015.xlsx
 2015/Kaiser Foundation Hospital - West Los Angeles/106190434_Comments_2015.doc
@@ -5217,8 +5217,8 @@
 2015/Ukiah Valley Medical Center/106231396_COMMENTS_2015.doc
 2015/Ukiah Valley Medical Center/106231396_CDM_2015.xlsx
 2015/Ukiah Valley Medical Center/106231396_PCT_CHG_2015.xlsx
-2015/Lucile Salter Packard Children's Hospital/106434040_Common25_2015.xls.xlsx
-2015/Lucile Salter Packard Children's Hospital/106434040_CDM_2015.xls.xlsx
+2015/Lucile Salter Packard Children's Hospital/106434040_Common25_2015.xlsx
+2015/Lucile Salter Packard Children's Hospital/106434040_CDM_2015.xlsx
 2015/Lucile Salter Packard Children's Hospital/106434040_PCT_CHG_2015.wd.docx
 2015/Lucile Salter Packard Children's Hospital/106434040_Comments_2015.doc
 2015/Sutter Auburn Faith Hospital/106310791_CDM_ALL_2015.xlsx
@@ -5231,7 +5231,7 @@
 2015/Kaiser Foundation Hospital - Redwood City/106410804_Comments_2015.doc
 2015/Kaiser Foundation Hospital - Redwood City/106410804_PCT_CHG_2015.xls
 2015/Kaiser Foundation Hospital - Redwood City/106410804_CDM_2015.xls
-2015/Downey Regional Medical Center/106190243_CDM_All_2015.xls.xlsx
+2015/Downey Regional Medical Center/106190243_CDM_All_2015.xlsx
 2015/St Helena Hospital & Health Center/106281078_COMMON25_2015.xls
 2015/St Helena Hospital & Health Center/106281078_PCT_CHG_2015.xlsx
 2015/St Helena Hospital & Health Center/106281078_COMMENTS_2015.doc
@@ -5245,13 +5245,13 @@
 2015/Kaiser Foundation Hospital - Downey/106196403_Comments_2015.doc
 2015/Kaiser Foundation Hospital - Downey/106196403_Common25_2015.xlsx
 2015/Langley Porter Psychiatric Institute/106380868_CDM_All_2015.xlsx
-2015/Alameda Hospital/106010735_CDM_All_2015.xls.xlsx
+2015/Alameda Hospital/106010735_CDM_All_2015.xlsx
 2015/Alameda Hospital/106010735_Comments_2015.doc
-2015/El Camino Hospital/106430763_CDM_2015.xls.xlsx
-2015/El Camino Hospital/106430763_Common25_2015.xls.xlsx
+2015/El Camino Hospital/106430763_CDM_2015.xlsx
+2015/El Camino Hospital/106430763_Common25_2015.xlsx
 2015/El Camino Hospital/106430763_Comments_2015.doc
-2015/El Camino Hospital/106430763_PCT_CHG_2015.xls.xlsx
-2015/Loma Linda University Behavioral Medical Center/106364014_CDM_2015.xls.xlsx
+2015/El Camino Hospital/106430763_PCT_CHG_2015.xlsx
+2015/Loma Linda University Behavioral Medical Center/106364014_CDM_2015.xlsx
 2015/Loma Linda University Behavioral Medical Center/106364014_Common25_2015.xls
 2015/Loma Linda University Behavioral Medical Center/106364014_PCT_CHG_2015.xls
 2015/Loma Linda University Behavioral Medical Center/106364014_Comments_2015.doc
@@ -5264,7 +5264,7 @@
 2015/Kaiser Foundation Hospital - Baldwin Park/106196035_PCT_CHG_2015.xlsx
 2015/Kaiser Foundation Hospital - Baldwin Park/106196035_Common25_2015.xlsx
 2015/College Hospital - Cerritos/106190184_CDM_2015.xls
-2015/College Hospital - Cerritos/106190184_Common25_2015.xls.xlsx
+2015/College Hospital - Cerritos/106190184_Common25_2015.xlsx
 2015/Adventist Medical Center - Hanford/106164029_Common25_2015.xlsx
 2015/Adventist Medical Center - Hanford/106164029_PCT_CHG_2015.xlsx
 2015/Adventist Medical Center - Hanford/106164029_Comments_2015.doc
@@ -5274,18 +5274,18 @@
 2015/Kaiser Foundation Hospital - Antioch/106074097_Comments_2015.doc
 2015/Kaiser Foundation Hospital - Antioch/106074097_PCT_CHG_2015.xls
 2015/Garden Grove Hospital & Medical Center/106301283_Comments_2015.doc
-2015/Garden Grove Hospital & Medical Center/106301283_CDM_All_2015.xls.xlsx
+2015/Garden Grove Hospital & Medical Center/106301283_CDM_All_2015.xlsx
 2015/St Francis Medical Center - Lynwood/106190754_COMMENTS_2015.doc
 2015/St Francis Medical Center - Lynwood/106190754_CDM_ALL_2015.xlsx
 2015/LAC Rancho Los Amigos Hospital/106191306_Comment_2015.pdf.pdf
-2015/LAC Rancho Los Amigos Hospital/106191306_CDM_All_2015.xls.xlsx
-2015/Henry Mayo Newhall Memorial Hospital/106190949_CDM_ALL_2015.xls.xlsx
+2015/LAC Rancho Los Amigos Hospital/106191306_CDM_All_2015.xlsx
+2015/Henry Mayo Newhall Memorial Hospital/106190949_CDM_ALL_2015.xlsx
 2015/St Joseph Hospital - Orange/106301340_CDM_ALL_2015.xlsx
 2015/Frank R Howard Memorial Hospital/106230949_Comments_2015.doc
 2015/Frank R Howard Memorial Hospital/106230949_Common25_2015.xls
-2015/Frank R Howard Memorial Hospital/106230949_CDM_2015.xls.xlsx
-2015/Frank R Howard Memorial Hospital/106230949_PCT_CHG_2015.xls.xlsx
-2015/Goleta Valley Cottage Hospital/106420483_CDM_All_2015.xls.xlsx
+2015/Frank R Howard Memorial Hospital/106230949_CDM_2015.xlsx
+2015/Frank R Howard Memorial Hospital/106230949_PCT_CHG_2015.xlsx
+2015/Goleta Valley Cottage Hospital/106420483_CDM_All_2015.xlsx
 2015/Seneca Hospital/106321016_COMMON25_2015.xls
 2015/Seneca Hospital/106321016_CDM_2015.xlsm
 2015/Seneca Hospital/106321016_COMMENTS_2015.doc
@@ -5298,9 +5298,9 @@
 2015/Mercy Medical Center - Redding/106450949_Comment(2)_2015.doc
 2015/Mercy Medical Center - Redding/106450949_CDM_All_2015.xls
 2015/Mercy Medical Center - Redding/106450949_Comment(1)_2015.doc
-2015/LAC USC Medical Center/160191228_CDM_All_2015.xls.xlsx
+2015/LAC USC Medical Center/160191228_CDM_All_2015.xlsx
 2015/Petaluma Valley Hospital/106491001_Comments(2)_2015.pdf.pdf
-2015/Petaluma Valley Hospital/106491001_CDM_All_2015.xls.xlsx
+2015/Petaluma Valley Hospital/106491001_CDM_All_2015.xlsx
 2015/Petaluma Valley Hospital/106491001_Comments(1)_2015.doc
 2015/UCSD Medical Center/106370782_CDM_2015.xlsx
 2015/UCSD Medical Center/106370782_COMMENTS(2)_2015.xlsx
@@ -5319,7 +5319,7 @@
 2015/Alvarado Parkway Institute BHS/106370749_PCT_CHG_2015.xlsx
 2015/Alvarado Parkway Institute BHS/106370749_Comments_2015.doc
 2015/Centinela Hospital Medical Center/106190148_Comments_2015.doc
-2015/Centinela Hospital Medical Center/106190148_CDM_All_2015.xls.xlsx
+2015/Centinela Hospital Medical Center/106190148_CDM_All_2015.xlsx
 2015/UCSF Medical Center/106381154_COMMENTS_2015.doc
 2015/UCSF Medical Center/106381154_PCT_CHG_2015.xlsx
 2015/UCSF Medical Center/106381154_CDM_2015.xlsx
@@ -5328,10 +5328,10 @@
 2015/Mercy San Juan Hospital/106340950_Comment(2)_2015.doc
 2015/Mercy San Juan Hospital/106340950_Comment(1)_2015.doc
 2015/Eden Medical Center/106014233_Comments_2015.doc
-2015/Eden Medical Center/106014233_CDM_All_2015.xls.xlsx
+2015/Eden Medical Center/106014233_CDM_All_2015.xlsx
 2015/Sutter Davis Hospital/106574010_COMMENTS_2015.doc
 2015/Sutter Davis Hospital/106574010_CDM_ALL_2015.xlsx
-2015/San Gabriel Valley Medical Center/106190200_CDM_All_2015.xls.xlsx
+2015/San Gabriel Valley Medical Center/106190200_CDM_All_2015.xlsx
 2015/Sharp Memorial Hospital/106370694_CDM_2015.xlsx
 2015/Sharp Memorial Hospital/106370694_COMMENTS_2015.doc
 2015/Sharp Memorial Hospital/106370694_COMMON25_2015.xls
@@ -5343,20 +5343,20 @@
 2015/Kindred Hospital - Riverside/106332172_CDM_2015.xls
 2015/Kindred Hospital - Riverside/106332172_Comments_2015.doc
 2015/Providence Little Company of Mary Medical Center - Torrance/106190470_Common25_2015.xls
-2015/Providence Little Company of Mary Medical Center - Torrance/106190470_CDM_2015.xls.xlsx
+2015/Providence Little Company of Mary Medical Center - Torrance/106190470_CDM_2015.xlsx
 2015/Providence Little Company of Mary Medical Center - Torrance/106190470_Comments_2015.doc
 2015/Feather River Hospital/106040875_Comments_2015.doc
-2015/Feather River Hospital/106040875_PCT_CHG_2015.xls.xlsx
+2015/Feather River Hospital/106040875_PCT_CHG_2015.xlsx
 2015/Feather River Hospital/106040875_Common25_2015.xls
-2015/Feather River Hospital/106040875_CDM_2015.xls.xlsx
+2015/Feather River Hospital/106040875_CDM_2015.xlsx
 2015/Good Samaritan Hospital - Bakersfield/106150775_CDM_All_2015.xls
 2015/Mercy Hospital - Bakersfield/106150761_PCT_CHG_2015.xls
 2015/Mercy Hospital - Bakersfield/106150761_Common25_2015.xls
 2015/Mercy Hospital - Bakersfield/106150761_Comments(2)_2015.doc
 2015/Mercy Hospital - Bakersfield/106150761_Comments(1)_2015.doc
-2015/Mercy Hospital - Bakersfield/106150761_CDM_2015.xls.xlsx
+2015/Mercy Hospital - Bakersfield/106150761_CDM_2015.xlsx
 2015/Children's Hospital & Research Center at Oakland/106010776_Comments_2015.doc
-2015/Children's Hospital & Research Center at Oakland/106010776_CDM_All_2015.xls.xlsx
+2015/Children's Hospital & Research Center at Oakland/106010776_CDM_All_2015.xlsx
 2015/Totally Kids Rehabilitation Hospital/106364451_PCT_CHG_2015.docx
 2015/Totally Kids Rehabilitation Hospital/106364451_CDM_2015.xlsx
 2015/Totally Kids Rehabilitation Hospital/106364451_Common25_2015.xls
@@ -5367,11 +5367,11 @@
 2015/Desert Valley Hospital/106364144_CDM_All_2015.xlsx
 2015/St Joseph Hospital - Eureka/106121080_CDM_ALL_2015.xlsx
 2015/St Joseph Hospital - Eureka/106121080_COMMENTS_2015.pdf
-2015/Fairchild Medical Center/106474007_CDM_2015.xls.xlsx
+2015/Fairchild Medical Center/106474007_CDM_2015.xlsx
 2015/Fairchild Medical Center/106474007_Common25_2015.xls
 2015/Fairchild Medical Center/106474007_PCT_CHG_2015.xls
 2015/Los Robles Medical Center/106560492_PCT_CHG_2015.xls.xlsm
-2015/Los Robles Medical Center/106560492_CDM_2015.xls.xlsx
+2015/Los Robles Medical Center/106560492_CDM_2015.xlsx
 2015/Los Robles Medical Center/106564018_Common25_2015.xls
 2015/Los Robles Medical Center/106560492_Common25_2015.xls
 2015/Los Robles Medical Center/106564121_Common25_2015.xls
@@ -5384,15 +5384,15 @@
 2015/Kaiser Foundation Hospital - Anahein-Irvine/106304409_PCT_CHG_2015.xlsx
 2015/Kaiser Foundation Hospital - Anahein-Irvine/106304409_Comments_2015.doc
 2015/Arrowhead Regional Medical Center/106364231_Common25_2015.xls
-2015/Arrowhead Regional Medical Center/106364231_CDM_2015.xls.xlsx
-2015/Arrowhead Regional Medical Center/106364231_CDM_Rx_ 2015.xls.xlsx
+2015/Arrowhead Regional Medical Center/106364231_CDM_2015.xlsx
+2015/Arrowhead Regional Medical Center/106364231_CDM_Rx_ 2015.xlsx
 2015/Arrowhead Regional Medical Center/106364231_Comments(1)_2015.dot
 2015/Arrowhead Regional Medical Center/106364231_PCT_CHG_2015.xls
 2015/Arrowhead Regional Medical Center/106364231_Comments(3)_2015.pdf.pdf
 2015/Arrowhead Regional Medical Center/106364231_Comments(2)_2015.pdf.pdf
 2015/Aurora Behavioral Healthcare - Santa Rosa/106494048_Comments_ 2015.doc
-2015/Aurora Behavioral Healthcare - Santa Rosa/106494048_CDM_All_ 2015.xls.xlsx
-2015/Children's Hospital at Mission/106304113_CDM_All_2015.xls.xlsx
+2015/Aurora Behavioral Healthcare - Santa Rosa/106494048_CDM_All_ 2015.xlsx
+2015/Children's Hospital at Mission/106304113_CDM_All_2015.xlsx
 2015/Children's Hospital at Mission/106304113_Comments_2015.doc
 2015/Jerold Phelps Community Hospital/106121031_CDM_All_2015.xls
 2015/Corona Regional Medical Center/106331152_Comments_2015.pdf.pdf
@@ -5409,7 +5409,7 @@
 2015/Kindred Hospital - La Mirada/106190449_CDM_All_2015.xls
 2015/Aurora Las Encinas Hospital/106190462_Comments_2015.doc
 2015/Aurora Las Encinas Hospital/106190462_CDM_All_2015.xls
-2015/Kern Valley Hospital/106150737_CDM_All_2015.xls.xlsx
+2015/Kern Valley Hospital/106150737_CDM_All_2015.xlsx
 2015/Temecula Valley Hospital/106334564_CDM_2015.xls
 2015/Temecula Valley Hospital/106334564_COMMENTS_2015.pdf
 2015/Temecula Valley Hospital/106334564_COMMON25_2015.xls
@@ -5424,11 +5424,11 @@
 2015/Sherman Oaks Hospital & Medical Center/106190708_CDM_All_2015.xlsx
 2015/Sherman Oaks Hospital & Medical Center/106190708_COMMENTS_2015.xlsx
 2015/Good Samaritan Hospital - San Jose/106430779_Comments(2)_2015.doc
-2015/Good Samaritan Hospital - San Jose/106430779_CDM_2015.xls.xlsx
+2015/Good Samaritan Hospital - San Jose/106430779_CDM_2015.xlsx
 2015/Good Samaritan Hospital - San Jose/106430779_PCT_CHG_2015.xls
-2015/Good Samaritan Hospital - San Jose/106430779_Common25_2015.xls.xlsx
+2015/Good Samaritan Hospital - San Jose/106430779_Common25_2015.xlsx
 2015/Good Samaritan Hospital - San Jose/106430779_Comments(1)_2015.doc
-2015/Rady's Children's Hospital of San Diego/106370673_CDM_2015.xls.xlsx
+2015/Rady's Children's Hospital of San Diego/106370673_CDM_2015.xlsx
 2015/Rady's Children's Hospital of San Diego/106370673_Comments(2)_2015.doc
 2015/Rady's Children's Hospital of San Diego/106370673_Common25_2015.xls.xls
 2015/Rady's Children's Hospital of San Diego/106370673_Comments(1)_2015.doc
@@ -5443,45 +5443,45 @@
 2015/Menlo Park Surgical Hospital/106414018_Comments_2015.doc
 2015/Doctors Hospital - West Covina/106190857_Comments(1)_2015.pdf.pdf
 2015/Doctors Hospital - West Covina/106190857_Comments(2)_2015.doc
-2015/Doctors Hospital - West Covina/106190857_CDM_All_2015.xls.xlsx
+2015/Doctors Hospital - West Covina/106190857_CDM_All_2015.xlsx
 2015/Bear Valley Community Hospital/106361110_Comments_2015.doc
-2015/Bear Valley Community Hospital/106361110_CDM_All_2015.xls.xlsx
+2015/Bear Valley Community Hospital/106361110_CDM_All_2015.xlsx
 2015/Alta Bates - Summit Medical Center - Summit Campus/106010937_Comments_2015.doc
-2015/Alta Bates - Summit Medical Center - Summit Campus/106010937_CDM_All_2015.xls.xlsx
+2015/Alta Bates - Summit Medical Center - Summit Campus/106010937_CDM_All_2015.xlsx
 2015/Mercy Hospital - Mt. Shasta/106470871_Comments(2)_2015.doc
 2015/Mercy Hospital - Mt. Shasta/106470871_CDM_All_2015.xls
 2015/Mercy Hospital - Mt. Shasta/106470871_Comments(1)_2015.doc
 2015/Sutter Roseville Medical Center/106311000_COMMENTS_2015.doc
 2015/Sutter Roseville Medical Center/106311000_CDM_ALL_2015.xlsx
 2015/Kindred Hospital - San Diego/106370721_CDM_All_2015.xlsx
-2015/Redwood Memorial Hospital/106121051_CDM_All_2015.xls.xlsx
+2015/Redwood Memorial Hospital/106121051_CDM_All_2015.xlsx
 2015/Redwood Memorial Hospital/106121051_Comments_2015.pdf.pdf
 2015/North Bay Medical Center/106481357_Comments_2015.doc
-2015/North Bay Medical Center/106481357_CDM_All_2015.xls.xlsx
+2015/North Bay Medical Center/106481357_CDM_All_2015.xlsx
 2015/College Medical Center/106190587_Common25_2015.xlsx
 2015/College Medical Center/106190587_CDM_2015.xlsx
 2015/College Medical Center/106190587_Comments_2015.docx
 2015/Community Hospital of San Benardino/106361323_Comments(1)_2015.doc
-2015/Community Hospital of San Benardino/106361323_CDM_All_2015.xls.xlsx
+2015/Community Hospital of San Benardino/106361323_CDM_All_2015.xlsx
 2015/Community Hospital of San Benardino/106361323_Comments(2)_2015.doc
 2015/Plumas District Hospital/106320986_CDM_All_2015.xls
 2015/Long Beach Memoral Medical Center/106190525_Comments(1)_2015.doc
 2015/Long Beach Memoral Medical Center/106190525_CDM_All_2015.xls
 2015/Long Beach Memoral Medical Center/106190525_Comments(2)_2015.doc
-2015/Garfield Medical Center/106190315_CDM_All_2015.xls.xlsx
-2015/Promise Hospital of East Los Angeles/106190468_Common25_2015.xls.xlsx
+2015/Garfield Medical Center/106190315_CDM_All_2015.xlsx
+2015/Promise Hospital of East Los Angeles/106190468_Common25_2015.xlsx
 2015/Promise Hospital of East Los Angeles/106190468_CDM_2015.xls
 2015/Promise Hospital of East Los Angeles/106190468_PCT_CHG_2015.xls
-2015/Glendale Adventist Medical Center/106190323_PCT_CHG_2015.xls.xlsx
-2015/Glendale Adventist Medical Center/106190323_CDM_2015.xls.xlsx
-2015/Glendale Adventist Medical Center/106190323_Common25_2015.xls.xlsx
+2015/Glendale Adventist Medical Center/106190323_PCT_CHG_2015.xlsx
+2015/Glendale Adventist Medical Center/106190323_CDM_2015.xlsx
+2015/Glendale Adventist Medical Center/106190323_Common25_2015.xlsx
 2015/Glendale Adventist Medical Center/106190323_Comments_2015.doc
 2015/Sharp Mesa Vista Hospital/106370745_COMMON25_2015.xls
 2015/Sharp Mesa Vista Hospital/106370745_COMMENTS_2015.doc
 2015/Sharp Mesa Vista Hospital/106370745_CDM_2015.xlsx
 2015/Loma Linda University Medical Center - Murrieta/106334589_PCT_CHG_2015.xls
 2015/Loma Linda University Medical Center - Murrieta/106334589_Comments_2015.doc
-2015/Loma Linda University Medical Center - Murrieta/106334589_CDM_2015.xls.xlsx
+2015/Loma Linda University Medical Center - Murrieta/106334589_CDM_2015.xlsx
 2015/Loma Linda University Medical Center - Murrieta/106334589_Common25_2015.xls
 2015/Promise Hospital of San Diego/106370787_CDM_2015.xls
 2015/Promise Hospital of San Diego/106370787_PCT_CHG_2015.xls
@@ -5491,8 +5491,8 @@
 2015/Healthsouth Tustin Rehabilitation Hopsital/109304079_CDM_All_2015.xls
 2015/Cedars-Sinai Medical Center/106190555_PCT_CHG_2015.pdf.pdf
 2015/Cedars-Sinai Medical Center/106190555_Comments_2015.doc
-2015/Cedars-Sinai Medical Center/106190555_CDM_2015.xls.xlsx
-2015/Cedars-Sinai Medical Center/106190555_Common25_2015.xls.xlsx
+2015/Cedars-Sinai Medical Center/106190555_CDM_2015.xlsx
+2015/Cedars-Sinai Medical Center/106190555_Common25_2015.xlsx
 2015/St John's Pleasant Valley Hospital/106560508_CDM_2015.xlsx
 2015/St John's Pleasant Valley Hospital/106560508_COMMENTS(1)_2015.doc
 2015/St John's Pleasant Valley Hospital/106560508_PCT_CHG_2015.xlsx
@@ -5503,15 +5503,15 @@
 2015/St Rose Hospital/106010967_COMMON25_2015.xlsx
 2015/State - Patton State Hospital/106361768_COMMENTS_2015.doc
 2015/State - Patton State Hospital/106361768_CDM_ALL_2015.xls
-2015/Santa Ynez Valley Cottage Hospital/106420522_CDM_All_2015.xls.xlsx
-2015/Foothill Regional Medical Cneter/106301357_CDM_2015.xls.xlsx
+2015/Santa Ynez Valley Cottage Hospital/106420522_CDM_All_2015.xlsx
+2015/Foothill Regional Medical Cneter/106301357_CDM_2015.xlsx
 2015/Foothill Regional Medical Cneter/106301357_PCT_CHG_2015(2).xlsx
 2015/Foothill Regional Medical Cneter/106301357_PCT_CHG_2015(1).doc
 2015/Foothill Regional Medical Cneter/106301357_Comments_2015.doc
 2015/Foothill Regional Medical Cneter/106301357_Common25_2015.xls
-2015/Enloe Medical Center/106040962_CDM_All_2015.xls.xlsx
+2015/Enloe Medical Center/106040962_CDM_All_2015.xlsx
 2015/Enloe Medical Center/106040962_Comments_2015.doc
-2015/Santa Rosa Memorial Hospital/106491064_CDM_All_2015.xls.xlsx
+2015/Santa Rosa Memorial Hospital/106491064_CDM_All_2015.xlsx
 2015/Santa Rosa Memorial Hospital/106491064_Comments_2015.doc
 2015/Kindred Hospital - Baldwin Park/106190049_Common25_ 2015.xls
 2015/Kindred Hospital - Baldwin Park/106190049_PCT_CHG_2015.xls.pdf
@@ -5521,31 +5521,31 @@
 2015/Placentia-Linda Community Hospital/106301297_CDM_All_2015.xls
 2015/Placentia-Linda Community Hospital/106301297_Comments_2015.pdf.pdf
 2015/Stanford University Hospital/106430905_CDM_ALL_2015.xlsx
-2015/Paradise Valley Hospital/106370759_CDM_All_2015.xls.xlsx
+2015/Paradise Valley Hospital/106370759_CDM_All_2015.xlsx
 2015/Colusa Regional Medical Center/106060870_PCT_CHG_2015.doc
 2015/Colusa Regional Medical Center/106060870_CDM_2015.xlsx
 2015/Colusa Regional Medical Center/106060870_Common25_2015.xls
 2015/Beverly Hospital/106190081_Comments_2015.doc
 2015/Beverly Hospital/106190081_CDM_All_2015.xls
-2015/Children's Hospital - Central California/106204019_CDM_All_2015.xls.xlsx
+2015/Children's Hospital - Central California/106204019_CDM_All_2015.xlsx
 2015/Children's Hospital - Central California/106204019_Comments_2015.doc
 2015/Motion Picture & Television Fund Hospital/106190552_CDM_All_2015.xls
 2015/Motion Picture & Television Fund Hospital/106190552_Comments_2015.doc
 2015/Gateways Hospital Mental Health Center/106190317_CDM_All_2015.xls
-2015/Mission Community Hospital - Panorama/106190524_CDM_2015.xls.xlsx
-2015/Mission Community Hospital - Panorama/106190524_Common25_2015.xls.xlsx
+2015/Mission Community Hospital - Panorama/106190524_CDM_2015.xlsx
+2015/Mission Community Hospital - Panorama/106190524_Common25_2015.xlsx
 2015/Mission Community Hospital - Panorama/106190524_PCT_CHG_2015.doc
-2015/Greater El Monte Community Hospital/106190352_CDM_All_2015.xls.xlsx
+2015/Greater El Monte Community Hospital/106190352_CDM_All_2015.xlsx
 2015/Kaiser Foundation Hospital - South Sacramento/106342344_CDM_2015.xls
 2015/Kaiser Foundation Hospital - South Sacramento/106342344_Common25_2015.xlsx
 2015/Kaiser Foundation Hospital - South Sacramento/106342344_Comments_2015.doc
 2015/Kaiser Foundation Hospital - South Sacramento/106342344_PCT_CHG_2015.xls
-2015/Mission Regional Medical Center/106301262_CDM_All_2015.xls.xlsx
+2015/Mission Regional Medical Center/106301262_CDM_All_2015.xlsx
 2015/Sutter Maternity & Surgery Center/106444012_COMMENTS_2015.doc
 2015/Sutter Maternity & Surgery Center/106444012_CDM_ALL_2015.xlsx
 2015/Alta Bates - Summit Medical Center - Alta Bates Campus/106010739_Comments_2015.doc
-2015/Alta Bates - Summit Medical Center - Alta Bates Campus/106010739_CDM_All_2015.xls.xlsx
-2015/Anaheim Global Medical Center/106301188_PCT_CHG_2015.xls.xlsx
+2015/Alta Bates - Summit Medical Center - Alta Bates Campus/106010739_CDM_All_2015.xlsx
+2015/Anaheim Global Medical Center/106301188_PCT_CHG_2015.xlsx
 2015/Anaheim Global Medical Center/106301188_Common25_2015.xls
 2015/Anaheim Global Medical Center/106301188_CDM_2015.xls
 2015/Anaheim Global Medical Center/106301188_Comments_2015.doc
@@ -5563,18 +5563,18 @@
 2015/Palomar Downtown Health Campus/106370755_CDM_All_2015.xls
 2015/Palomar Downtown Health Campus/106374382_CDM_All_2015.xls
 2015/Clovis Community Medical Center/106100005_CDM_All_2015.xls
-2015/Joyce Eisenberg Keefer Medical Center/106196404_R&B_Acute_2015.xls.xlsx
-2015/Joyce Eisenberg Keefer Medical Center/106196404_PCT_CHG(1)_2015.xls.xlsx
-2015/Joyce Eisenberg Keefer Medical Center/106196404_R&B_DPSNF_2015.xls.xlsx
-2015/Joyce Eisenberg Keefer Medical Center/106196404_Common25_2015.xls.xlsx
+2015/Joyce Eisenberg Keefer Medical Center/106196404_R&B_Acute_2015.xlsx
+2015/Joyce Eisenberg Keefer Medical Center/106196404_PCT_CHG(1)_2015.xlsx
+2015/Joyce Eisenberg Keefer Medical Center/106196404_R&B_DPSNF_2015.xlsx
+2015/Joyce Eisenberg Keefer Medical Center/106196404_Common25_2015.xlsx
 2015/Joyce Eisenberg Keefer Medical Center/106196404_Comments(1)_2015.doc
 2015/Joyce Eisenberg Keefer Medical Center/106196404_Comments(2)_2015.doc
-2015/Joyce Eisenberg Keefer Medical Center/106196404_Ancillary_DPSNF_2015.xls.xlsx
+2015/Joyce Eisenberg Keefer Medical Center/106196404_Ancillary_DPSNF_2015.xlsx
 2015/Joyce Eisenberg Keefer Medical Center/106196404_PCT_CHG(2)_2015.doc
 2015/Joyce Eisenberg Keefer Medical Center/106196404_Ancillary_Acute_2015.xlsx
 2015/John F Kennedy Memorial Hospital/106331216_Comments_2015.pdf.pdf
 2015/John F Kennedy Memorial Hospital/106331216_CDM_All_2015.xls
-2015/Foothill Presbyterian Hospital/106190298_CDM_2015.xls.xlsx
+2015/Foothill Presbyterian Hospital/106190298_CDM_2015.xlsx
 2015/Foothill Presbyterian Hospital/106190298_Comments_2015.doc
 2015/Foothill Presbyterian Hospital/106190298_Common25_2015.xls
 2015/Kaweah Delta District Hospital/106540734_Comments_2015.doc
@@ -5583,8 +5583,8 @@
 2015/Silver Lake Medical Center/106190661_CDM_All_2015.xlsx
 2015/Citrus Valley Medical Center - QV Campus/106190413_Common25_2015.xls
 2015/Citrus Valley Medical Center - QV Campus/106190636_Common25_2015.xls
-2015/Citrus Valley Medical Center - QV Campus/106190413_CDM_2015.xls.xlsx
-2015/Citrus Valley Medical Center - QV Campus/106190636_CDM_2015.xls.xlsx
+2015/Citrus Valley Medical Center - QV Campus/106190413_CDM_2015.xlsx
+2015/Citrus Valley Medical Center - QV Campus/106190636_CDM_2015.xlsx
 2015/Citrus Valley Medical Center - QV Campus/106190636_Comments_2015.doc
 2015/Mad River Community Hospital/106121002_Common25_2015.xls
 2015/Mad River Community Hospital/106121002_PCT_CHG_2015.xls
@@ -5600,7 +5600,7 @@
 2015/Shriner's Children's Hospital - Los Angeles/106190712_Common25_2015.xls
 2015/Shriner's Children's Hospital - Los Angeles/106190712_Comments_2015.doc
 2015/Ballard Rehabilitation Hospital/106364121_Comments_2015.doc
-2015/Ballard Rehabilitation Hospital/106364121_CDM_2015.xls.xlsx
+2015/Ballard Rehabilitation Hospital/106364121_CDM_2015.xlsx
 2015/Ballard Rehabilitation Hospital/106364121_Common25_2015.xls
 2015/Kindred Hospital - Westminster/106301380_Comments_2015.doc
 2015/Kindred Hospital - Westminster/106301380_CDM_2015.xlsx
@@ -5632,16 +5632,16 @@
 2015/Chapman Global Medical Center/106301140_CDM_2015.xls
 2015/Chapman Global Medical Center/106301140_Comments_2015.doc
 2015/Chapman Global Medical Center/106301140_Common25_2015.xls
-2015/Chapman Global Medical Center/106301140_PCT_CHG_2015.xls.xlsx
+2015/Chapman Global Medical Center/106301140_PCT_CHG_2015.xlsx
 2015/Victor Valley Global Medical Center/106361370_CDM_ALL_2015.xls
 2015/Victor Valley Global Medical Center/106361370_COMMENTS_2015.doc
 2015/Highland Hospital/106010846_Comments_2015.doc
-2015/Highland Hospital/106010846_CDM_2015.xls.xlsx
+2015/Highland Hospital/106010846_CDM_2015.xlsx
 2015/White Memorial Medical Center/106190878_Comments_2015.doc
 2015/White Memorial Medical Center/106190878_PCT_CHG_2015.xlsx
 2015/White Memorial Medical Center/106190878_Common25_2015.xlsx
 2015/White Memorial Medical Center/106190878_CDM_2015.xlsx
-2015/Mercy Medical Center/106240942_CDM_All_2015.xls.xlsx
+2015/Mercy Medical Center/106240942_CDM_All_2015.xlsx
 2015/Mercy Medical Center/106240942_Comment(1)_2015.doc
 2015/Mercy Medical Center/106240942_Comment(2)_2015.doc
 2015/Mercy Medical Center/106240942_Comment(3)_2015.doc
@@ -5650,11 +5650,11 @@
 2015/Gardens Regional Hospital & Medical Center/106190159_Comments(2)_2015.doc
 2015/Gardens Regional Hospital & Medical Center/106190159_PCT_CHG_2015.xls
 2015/Gardens Regional Hospital & Medical Center/106190159_Common25_2015.xls
-2015/California Pacific Medical Center - St. Luke's Campus/106380964_CDM_All_2015.xls.xlsx
+2015/California Pacific Medical Center - St. Luke's Campus/106380964_CDM_All_2015.xlsx
 2015/California Pacific Medical Center - St. Luke's Campus/106380964_Comments_2015.doc
 2015/Northen Inyo Hospital/106141273_Common25_2015.xls
-2015/Northen Inyo Hospital/106141273_PCT_CHG_2015.xls.xlsx
-2015/Northen Inyo Hospital/106141273_CDM_2015.xls.xlsx
+2015/Northen Inyo Hospital/106141273_PCT_CHG_2015.xlsx
+2015/Northen Inyo Hospital/106141273_CDM_2015.xlsx
 2015/Northen Inyo Hospital/106141273_Comments_2015.doc
 2015/Palmdale Regional Medical Center/106196405_Common25_2015.xls
 2015/Palmdale Regional Medical Center/106196405_PCT_CHG_2015.xls.pdf
@@ -5663,11 +5663,11 @@
 2015/State - Porterville State Hospital/106541123_CDM_ALL_2015.xls
 2015/Menifee Valley Medical Center/106334018_CDM_2015.xls
 2015/Menifee Valley Medical Center/106334018_Comments_2015.doc
-2015/Menifee Valley Medical Center/106334018_PCT_CHG_2015.xls.xlsx
-2015/Menifee Valley Medical Center/106334018_Common25_2015.xls.xlsx
-2015/John Muir Behavioral Health/106074039_CDM_2015.xls.xlsx
+2015/Menifee Valley Medical Center/106334018_PCT_CHG_2015.xlsx
+2015/Menifee Valley Medical Center/106334018_Common25_2015.xlsx
+2015/John Muir Behavioral Health/106074039_CDM_2015.xlsx
 2015/John Muir Behavioral Health/106074039_Common25_2015.xls
-2015/John Muir Behavioral Health/106074039_PCT_CHG_2015.xls.xlsx
+2015/John Muir Behavioral Health/106074039_PCT_CHG_2015.xlsx
 2015/John Muir Behavioral Health/106074039_Comments_2015.doc
 2015/Modoc Medical Center/106250956_CDM_All_2015.xls
 2015/Doctors Medical Center - Modesto/106500852_CDM_All_2015.xls
@@ -5679,7 +5679,7 @@
 2015/Mercy Hospital - Folsom/106344029_CDM_All_2015.xls
 2015/Mercy Hospital - Folsom/106344029_Comments(1)_2015.doc
 2015/Orange County Gloabal Medical Center/106301566_CDM_2015.xls
-2015/Orange County Gloabal Medical Center/106301566_PCT_CHG_2015.xls.xlsx
+2015/Orange County Gloabal Medical Center/106301566_PCT_CHG_2015.xlsx
 2015/Orange County Gloabal Medical Center/106301566_Common25_2015.xls
 2015/Kaiser Foundation Hospital - Vacaville/106484044_CDM_2015.xls
 2015/Kaiser Foundation Hospital - Vacaville/106484044_Common25_2015.xlsx
@@ -5689,7 +5689,7 @@
 2015/Redlands Community Hospital/106361308_CDM_All_2015.xls
 2015/Sutter Lakeside Hospital/106171395_CDM_ALL_2015.xls
 2015/Sutter Lakeside Hospital/106171395_COMMENTS_2015.doc
-2015/Presbyterian Intercommunty Hospital/106190631_CDM_All_2015.xls.xlsx
+2015/Presbyterian Intercommunty Hospital/106190631_CDM_All_2015.xlsx
 2015/Presbyterian Intercommunty Hospital/106190631_Comments_2015.doc
 2015/Sutter Amador Hospital/106034002_CDM_ALL_2015.xlsx
 2015/Sutter Amador Hospital/106034002_COMMENTS_2015.doc
@@ -5700,26 +5700,26 @@
 2015/Tehachapi Hospital/106150808_CDM_ALL_2015.xlsx
 2015/Tehachapi Hospital/106150808_COMMENTS_2015.doc
 2015/La Palma Intercommunity Hospital/106301234_Comments_2015.doc
-2015/La Palma Intercommunity Hospital/106301234_CDM_All_2015.xls.xlsx
+2015/La Palma Intercommunity Hospital/106301234_CDM_All_2015.xlsx
 2015/University of California Davis Medical Center/106341006_PCT_CHG_2015.xlsx
 2015/University of California Davis Medical Center/106341006_COMMON25_2015.xls
 2015/University of California Davis Medical Center/106341006_CDM_2015.xlsx
 2015/University of California Davis Medical Center/106341006_COMMENTS_2015.doc
-2015/Central Valley General Hospital/106160787_CDM_2015.xls.xlsx
-2015/Central Valley General Hospital/106160787_Common25_2015.xls.xlsx
-2015/Central Valley General Hospital/106160787_PCT_CHG_2015.xls.xlsx
+2015/Central Valley General Hospital/106160787_CDM_2015.xlsx
+2015/Central Valley General Hospital/106160787_Common25_2015.xlsx
+2015/Central Valley General Hospital/106160787_PCT_CHG_2015.xlsx
 2015/Central Valley General Hospital/106160787_Comments_2015.doc
-2015/Mills-Peninsula Medical Center/106410852_CDM_All_2015.xls.xlsx
+2015/Mills-Peninsula Medical Center/106410852_CDM_All_2015.xlsx
 2015/Mills-Peninsula Medical Center/106410852_Comments_2015.doc
 2015/Vibra Hospital of Sacramento/106344035_CDM_ALL_2015.xlsx
 2015/Contra Costa Regional Medical Center/106070924_Common25_2015.xls
-2015/Contra Costa Regional Medical Center/106070924_CDM_2015.xls.xlsx
+2015/Contra Costa Regional Medical Center/106070924_CDM_2015.xlsx
 2015/Contra Costa Regional Medical Center/106070924_PCT_CHG_2015.xls
 2015/Contra Costa Regional Medical Center/106070924_Comments(1)_2015.doc
 2015/Contra Costa Regional Medical Center/106070924_Comments(2)_2015.pdf.pdf
 2015/Alvarado Hospital Medical Center/106370652_CDM_All_2015.xls
 2015/Alvarado Hospital Medical Center/106370652_Comments_2015.doc
-2015/Providence Tarzana Medical Center/106190517_CDM_2015.xls.xlsx
+2015/Providence Tarzana Medical Center/106190517_CDM_2015.xlsx
 2015/Providence Tarzana Medical Center/106190517_Common25_2015.xls
 2015/Providence Tarzana Medical Center/106190517_Comments_2015.doc
 2015/Lakewood Regional Medical Center/106190240_Comments_2015.pdf.pdf
@@ -5730,13 +5730,13 @@
 2015/Kaiser Foundation Hospital - Woodland Hills/106191450_Common25_2015.xlsx
 2015/Mammoth Hospital/106260011_CDM_2015.xls
 2015/Mammoth Hospital/106260011_Common25_2015.xls
-2015/Mammoth Hospital/106260011_PCT_CHG_2015.xls.xlsx
+2015/Mammoth Hospital/106260011_PCT_CHG_2015.xlsx
 2015/State - Fairview Developmental Center/106301781_COMMENTS_2015.doc
 2015/State - Fairview Developmental Center/106301781_CDM_ALL_2015.xls
-2015/Adventist Medical Center - Reedley/106100797_Common25_2015.xls.xlsx
+2015/Adventist Medical Center - Reedley/106100797_Common25_2015.xlsx
 2015/Adventist Medical Center - Reedley/106100797_Comments_2014.doc
-2015/Adventist Medical Center - Reedley/106100797_PCT_CHG_2015.xls.xlsx
-2015/Adventist Medical Center - Reedley/106100797_CDM_2015.xls.xlsx
+2015/Adventist Medical Center - Reedley/106100797_PCT_CHG_2015.xlsx
+2015/Adventist Medical Center - Reedley/106100797_CDM_2015.xlsx
 2015/Healthsouth Bakersfield Rehabilitation Hospital/106154022_PCT_CHG_2015.xls
 2015/Healthsouth Bakersfield Rehabilitation Hospital/106154022_CDM_2015.xls
 2015/Healthsouth Bakersfield Rehabilitation Hospital/106154022_Comments_2015.doc
@@ -5749,21 +5749,21 @@
 2015/Kaiser Foundation Hospital - Fontana-Ontario/106361223_CDM_2015.xls
 2015/Sutter Coast Hospital/106084001_COMMENTS_2015.doc
 2015/Sutter Coast Hospital/106084001_CDM_ALL_2015.xlsx
-2015/Fresno Surgical Hospital/106104047_CDM_All_2015.xls.xlsx
-2015/Eisenhower Medical Center/106331168_CDM_All_2015.xls.xlsx
+2015/Fresno Surgical Hospital/106104047_CDM_All_2015.xlsx
+2015/Eisenhower Medical Center/106331168_CDM_All_2015.xlsx
 2015/West Anaheim Medical Center/106301379_CDM_All_2015.xlsx
 2015/West Anaheim Medical Center/106301379_Comments_2015.doc
 2015/Kaiser Foundation Hospital - Moreno Valley/106334048_Common25_2015.xlsx
 2015/Kaiser Foundation Hospital - Moreno Valley/106334048_Comments_2015.doc
 2015/Kaiser Foundation Hospital - Moreno Valley/106334048_PCT_CHG_2015.xlsx
 2015/Kaiser Foundation Hospital - Moreno Valley/106334048_CDM_2015.xls
-2015/Santa Clara Valley Medical Center/106430883_CDM_All_2015.xls.xlsx
-2015/Santa Clara Valley Medical Center/106430883_CDM_RX_2015.xls.xlsx
+2015/Santa Clara Valley Medical Center/106430883_CDM_All_2015.xlsx
+2015/Santa Clara Valley Medical Center/106430883_CDM_RX_2015.xlsx
 2015/Santa Clara Valley Medical Center/106430883_Comments_2015.doc
-2015/Glendale Memorial Hospital/106190522_CDM_2015.xls.xlsx
+2015/Glendale Memorial Hospital/106190522_CDM_2015.xlsx
 2015/Glendale Memorial Hospital/106190522_Comments(2)_2015.doc
-2015/Glendale Memorial Hospital/106190522_PCT_CHG_2015.xls.xlsx
-2015/Glendale Memorial Hospital/106190522_Common25_2015.xls.xlsx
+2015/Glendale Memorial Hospital/106190522_PCT_CHG_2015.xlsx
+2015/Glendale Memorial Hospital/106190522_Common25_2015.xlsx
 2015/Glendale Memorial Hospital/106190522_Comments(1)_2015.doc
 2015/San Antonio Community Hospital/106361318_CDM_All_2015.xls
 2015/St Helena Hospital - Behavioral Health/106481015_COMMON25_2015.xls
@@ -5773,15 +5773,15 @@
 2015/Earl & Lorraine Miller Children's Hospital/106196168_CDM_ALL_2015.xls.xls
 2015/Earl & Lorraine Miller Children's Hospital/106196168_Comments(2)_2015.doc
 2015/Earl & Lorraine Miller Children's Hospital/106196168_Comments(1)_2015.doc
-2015/Santa Monica Hospital - UCLA/106190687_CDM_2015.xls.xlsx
-2015/Santa Monica Hospital - UCLA/106190687_CDM_MSDRG_2015.xls.xlsx
-2015/Santa Monica Hospital - UCLA/106190687_Common25_2015.xls.xlsx
+2015/Santa Monica Hospital - UCLA/106190687_CDM_2015.xlsx
+2015/Santa Monica Hospital - UCLA/106190687_CDM_MSDRG_2015.xlsx
+2015/Santa Monica Hospital - UCLA/106190687_Common25_2015.xlsx
 2015/Santa Monica Hospital - UCLA/106190687_Comments_2015.doc
-2015/Santa Monica Hospital - UCLA/106190687_PCT_CHG_2015.xls.xlsx
+2015/Santa Monica Hospital - UCLA/106190687_PCT_CHG_2015.xlsx
 2015/St Mary Regional Medical Center/106361343_CDM_ALL_2015.xlsx
 2015/St Mary Regional Medical Center/106361343_COMMENTS_2015.pdf
 2015/Chino Valley Medical Center/106361144_Comments_2015.doc
-2015/Chino Valley Medical Center/106361144_CDM_All_2015.xls.xlsx
+2015/Chino Valley Medical Center/106361144_CDM_All_2015.xlsx
 2015/Kaiser Foundation Rehabilitation Hospital - Vallejo/106480989_Common25_2015.xlsx
 2015/Kaiser Foundation Rehabilitation Hospital - Vallejo/106480989_Comments_2015.doc
 2015/Kaiser Foundation Rehabilitation Hospital - Vallejo/106480989_PCT_CHG_2015.xls
@@ -5805,19 +5805,19 @@
 2015/Fountain Valley Regional Hospital/106301175_CDM_All_2015.xls
 2015/Children's Recovery Center/106434051_Comments_2015.doc
 2015/Children's Recovery Center/106434051_CDM_All_2015.xls.xls
-2015/Delano Regional Medical Center/106150706_CDM_All_2015.xls.xlsx
+2015/Delano Regional Medical Center/106150706_CDM_All_2015.xlsx
 2015/St Louise Health Center/106434138_COMMENTS_2015.doc
 2015/St Louise Health Center/106434138_CDM_ALL_2015.xlsx
-2015/Hemet Valley Hospital District/106331194_Common25_2015.xls.xlsx
+2015/Hemet Valley Hospital District/106331194_Common25_2015.xlsx
 2015/Hemet Valley Hospital District/106331194_CDM_2015.xls
 2015/Hemet Valley Hospital District/106331194_Comment_2015.doc
-2015/Hemet Valley Hospital District/106331194_PCT_CHG_2015.xls.xlsx
-2015/Children's Hospital of Los Angeles/106190170_PCT_CHG_2015.xls.xlsx
+2015/Hemet Valley Hospital District/106331194_PCT_CHG_2015.xlsx
+2015/Children's Hospital of Los Angeles/106190170_PCT_CHG_2015.xlsx
 2015/Children's Hospital of Los Angeles/106190170_Common25_2015.xls.xls
 2015/Children's Hospital of Los Angeles/106190170_CDM_2015.xls.xls
 2015/Bakersfield Memorial Hospital/106150722_Comments(1)_2015.doc
 2015/Bakersfield Memorial Hospital/106150722_Comments(2)_2015.doc
-2015/Bakersfield Memorial Hospital/106150722_CDM_2015.xls.xlsx
+2015/Bakersfield Memorial Hospital/106150722_CDM_2015.xlsx
 2015/Bakersfield Memorial Hospital/106150722_PCT_CHG_2015.xls
 2015/Bakersfield Memorial Hospital/106150722_Common25_2015.xls
 2015/BHC Sierra Vista Hospital/106342392_CDM_All_2015.xls
@@ -5826,13 +5826,13 @@
 2015/Huntington Memorial Community Hospital/106190400_CDM_All_2015.xls
 2015/Huntington Memorial Community Hospital/106190400_Comments_2015.doc
 2015/Mark Twain-St Joseph Hospital/106050932_Comments (1)_2015.doc
-2015/Mark Twain-St Joseph Hospital/106050932_CDM_All_2015.xls.xlsx
+2015/Mark Twain-St Joseph Hospital/106050932_CDM_All_2015.xlsx
 2015/Mark Twain-St Joseph Hospital/106050932_Comments (2)_2015.doc
 2015/Southern Inyo Hospital/106141338_Common25_2015.xls
 2015/Southern Inyo Hospital/106141338_Comments_2015.pdf
 2015/Southern Inyo Hospital/106141338_CDM_2015.txt
 2015/Community & Mission Hospital at Huntington Park/106190197_Comments_2015.pdf.pdf
-2015/Community & Mission Hospital at Huntington Park/106190197_CDM_All_2015.xls.xlsx
+2015/Community & Mission Hospital at Huntington Park/106190197_CDM_All_2015.xlsx
 2015/Tulare District Hospital/106540816_PCT_CHG_2015.xlsx
 2015/Tulare District Hospital/106540816_COMMON25_2015.xls
 2015/Tulare District Hospital/106540816_CDM_2015.xls
@@ -5840,7 +5840,7 @@
 2015/Sierra Nevada Memorial Hospital/106291023_COMMENTS(2)_2015.doc
 2015/Sierra Nevada Memorial Hospital/106291023_CDM_ALL_2015.xls
 2015/Loma Linda University Children's Hospital/106364502_Comments_2015.doc
-2015/Loma Linda University Children's Hospital/106364502_CDM_2015.xls.xlsx
+2015/Loma Linda University Children's Hospital/106364502_CDM_2015.xlsx
 2015/Loma Linda University Children's Hospital/106364502_PCT_CHG_2015.xls.xls
 2015/Loma Linda University Children's Hospital/106364502_Common25_2015.xls.xls
 2015/State - Sonoma Developmental Center/106491267_CDM_ALL_2015.xls
@@ -5850,22 +5850,22 @@
 2015/Kaiser Foundation Hospital - Panorama City/106190432_Comments_2015.doc
 2015/Kaiser Foundation Hospital - Panorama City/106190432_CDM_2015.xls
 2015/Dameron Hospital/106390846_CDM_All_2015.xls
-2015/Olympia Medical Center/106190534_Common25_2015.xls.xlsx
-2015/Olympia Medical Center/106190534_PCT_CHG_2015.xls.xlsx
-2015/Olympia Medical Center/106190534_CDM_2015.xls.xlsx
+2015/Olympia Medical Center/106190534_Common25_2015.xlsx
+2015/Olympia Medical Center/106190534_PCT_CHG_2015.xlsx
+2015/Olympia Medical Center/106190534_CDM_2015.xlsx
 2015/University of California Irvine Medical Center/106301279_PCT_CHG_2015.xlsx
 2015/University of California Irvine Medical Center/106301279_COMMENTS_2015.doc
 2015/University of California Irvine Medical Center/106301279_CDM_2015.xlsx
 2015/University of California Irvine Medical Center/106301279_COMMON25_2015.xlsx
 2015/Pomona Valley Community Hospital/106190630_Common25_2015.xls
-2015/Pomona Valley Community Hospital/106190630_CDM_2015.xls.xlsx
+2015/Pomona Valley Community Hospital/106190630_CDM_2015.xlsx
 2015/Pomona Valley Community Hospital/106190630_CPT_CHG_2015.xls
 2015/John Muir Medical Center - Walnut Creek Campus/106070988_Common25_2015.xls
-2015/John Muir Medical Center - Walnut Creek Campus/106070988_CDM_2015.xls.xlsx
+2015/John Muir Medical Center - Walnut Creek Campus/106070988_CDM_2015.xlsx
 2015/John Muir Medical Center - Walnut Creek Campus/106070988_Comments_2015.doc
-2015/John Muir Medical Center - Walnut Creek Campus/106070988_PCT_CHG_2015.xls.xlsx
+2015/John Muir Medical Center - Walnut Creek Campus/106070988_PCT_CHG_2015.xlsx
 2015/Madera Community Hospital/106201281_Comments_2015.doc
-2015/Madera Community Hospital/106201281_CDM_2015.xls.xlsx
+2015/Madera Community Hospital/106201281_CDM_2015.xlsx
 2015/Madera Community Hospital/106201281_Common25_2015.xls
 2015/Madera Community Hospital/106201281_PCT_CHG_2015.xls
 2015/Hollywood Presbyterian Medical Center/106190382_CDM_All_2015.xls
@@ -5874,7 +5874,7 @@
 2015/Catalina Island Medical Center/106190045_CDM_2015.xls
 2015/Catalina Island Medical Center/106190045_PCT_CHG_2015.xls
 2015/Catalina Island Medical Center/106190045_Common25_2015.xls
-2015/Ridgecrest Regional Hospital/106150782_CDM_All_2015.xls.xlsx
+2015/Ridgecrest Regional Hospital/106150782_CDM_All_2015.xlsx
 2015/Sutter Delta Memorial Hospital/106070934_CDM_ALL_2015.xlsx
 2015/Sutter Delta Memorial Hospital/106070934_COMMENTS_2015.doc
 2016/Canyon Ridge Hospital/106364050_Common25_2016.xls
@@ -5950,7 +5950,7 @@
 2016/Community Hospital of the Monterey Peninsula/106270774_Comments_2016.docx
 2016/Twin Cities Community Hospital/106400548_Comments_2016.pdf
 2016/Twin Cities Community Hospital/106400548_CDM_All_2016.xls
-2016/Huntington Beach Medical Center/106301209_CDM_All_2016.xls.xlsx
+2016/Huntington Beach Medical Center/106301209_CDM_All_2016.xlsx
 2016/Kindred Hospital - Los Angeles/106190305_Common25_2016.xls
 2016/Kindred Hospital - Los Angeles/106190305_CDM_2016.xlsx
 2016/Kindred Hospital - Los Angeles/106190305_PCT_CHG_2016.pdf
@@ -6182,7 +6182,7 @@
 2016/St Josephs Behavioral Health Center/106392232_CDM_ALL_2016.xlsx
 2016/St Josephs Behavioral Health Center/106392232_Comments_2016.doc
 2016/St Elizabeth Community Hospital/106521041_CDM_ALL_2016.xls
-2016/Encino Hospital Medical Center/106190280_CDM_All_2016.xls.xlsx
+2016/Encino Hospital Medical Center/106190280_CDM_All_2016.xlsx
 2016/San Joaquin General Hospital/106391010 _Comment(1)_2016.doc
 2016/San Joaquin General Hospital/106391010 _Common25_2016.xls
 2016/San Joaquin General Hospital/106391010 _CDM_2016.xlsx
@@ -6303,7 +6303,7 @@
 2016/Kindred Hospital - San Francisco Bay Area/10610887_CDM_2016.xlsx
 2016/Kindred Hospital - San Francisco Bay Area/10610887_PCT_CHG_2016.xls
 2016/Petaluma Valley Hospital/106491001_CDM_All_2016.xlsx
-2016/Childrens Hospital of Orange County/106300032_CDM_All_2016.xls.xlsx
+2016/Childrens Hospital of Orange County/106300032_CDM_All_2016.xlsx
 2016/UCSD Medical Center/106370782_PCT_CHG(1)_2016.xlsx
 2016/UCSD Medical Center/106370782_PCT_CHG(2)_2016.xlsx
 2016/UCSD Medical Center/106370782_Common25_2016.xls
@@ -6421,7 +6421,7 @@
 2016/Queen of the Valley - Napa/106281047_CDM_All_2016.xlsx
 2016/St Francis Memorial Hospital - S.F/106380960_CDM_ALL_2016.xls
 2016/St Francis Memorial Hospital - S.F/106380960_Comments_2016.docx
-2016/Bear Valley Community Hospital/106361110_CDM_All_2016.xls.xlsx
+2016/Bear Valley Community Hospital/106361110_CDM_All_2016.xlsx
 2016/Sutter Roseville Medical Center/106311000_CDM_ALL_2016.xlsx
 2016/Sutter Roseville Medical Center/106311000_Comment(1)_2016.docx
 2016/Kindred Hospital - San Diego/106370721_CDM_All_2016.xls
@@ -6648,7 +6648,7 @@
 2016/Contra Costa Regional Medical Center/106070924_Comment(1)_2016.docx
 2016/Contra Costa Regional Medical Center/106070924_Comment(2)_2016.pdf
 2016/Alvarado Hospital Medical Center/106370652_CDM_All_2016.xls
-2016/Childrens Hospital at Mission/106304113_CDM_All_2016.xls.xlsx
+2016/Childrens Hospital at Mission/106304113_CDM_All_2016.xlsx
 2016/Providence Tarzana Medical Center/106190517_CDM_All_2016.xlsx
 2016/Providence Tarzana Medical Center/106190517_Common25_2016.xls
 2016/Lakewood Regional Medical Center/106190240_CDM_All_2016.xls
@@ -6791,7 +6791,7 @@
 2016/Madera Community Hospital/106201281_CDM_2016.xlsx
 2016/Madera Community Hospital/106201281_PCT_CHG_2016.xls
 2016/Madera Community Hospital/106201281_Common25_2016.xls
-2016/Hollywood Presbyterian Medical Center/106190382_CDM_2016.xls.xlsx
+2016/Hollywood Presbyterian Medical Center/106190382_CDM_2016.xlsx
 2016/Hollywood Presbyterian Medical Center/106190382_Comments_2016.docx
 2016/Hollywood Presbyterian Medical Center/106190382_Common25_2016.xls
 2016/Catalina Island Medical Center/106190045_PCT_CHG_2016.docx
