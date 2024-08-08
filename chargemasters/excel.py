@@ -20,6 +20,12 @@ def name_has_something_common(name):
         return True
     return False
 
+def sheet_names(ext, wbook):
+    if ext == 'xlsx':
+        return wbook.sheetnames
+    if ext == 'xls':
+        raise Exception("what")
+
 
 # Find the "Common25" sheet, acitvate it (however) and return the sheet.
 #
