@@ -17,7 +17,9 @@ env = Environment(loader=PackageLoader('chargemasters'))
 
 @chargemasters.route(f"/{cfg['WWW']}/")
 def chargemasters_main():
-    return redirect(f"/{cfg['WWW']}/year/2023")
+    main = env.get_template('chargemasters_main.html')
+    context = data.chargemasters_main(year=None)
+    return main.render(**context)
 
 
 @chargemasters.route(f"/{cfg['WWW']}/year/<year>")
@@ -27,15 +29,25 @@ def chargemasters_main_year(year):
     return main.render(**context)
 
 
-@chargemasters.route(f"/{cfg['WWW']}/noC25")
-def chargemasters_main_noC25(year):
-    return redirect(f"/{cfg['WWW']}/noC25/year/2023")
+@chargemasters.route(f"/{cfg['WWW']}/facilities/")
+@chargemasters.route(f"/{cfg['WWW']}/facilities/<initial>/")
+def chargemasters_facilities(initial=None):
+    main = env.get_template('chargemasters_fac.html')
+    context = data.chargemasters_facilities(initial)
+    return main.render(**context)
 
 
-@chargemasters.route(f"/{cfg['WWW']}/noC25/year/<year>")
-def chargemasters_main_noC25_year(year):
-    main = env.get_template('chargemasters_noC25.html')
-    context = data.chargemasters_main_noC25(year)
+@chargemasters.route(f"/{cfg['WWW']}/hcai_ids/")
+def chargemasters_hcai_ids():
+    main = env.get_template('chargemasters_hcai_ids.html')
+    context = data.chargemasters_hcai_ids()
+    return main.render(**context)
+
+
+@chargemasters.route(f"/{cfg['WWW']}/hcai_id/<id>")
+def chargemasters_hcai_id(id):
+    main = env.get_template('chargemasters_hcai_id.html')
+    context = data.chargemasters_hcai_id(id)
     return main.render(**context)
 
 

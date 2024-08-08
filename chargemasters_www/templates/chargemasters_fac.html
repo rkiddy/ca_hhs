@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+    <title>Chargemasters</title>
+    {% include "styles.html" %}
+</head>
+<body>
+<div style="padding: 25px 25px 25px 25px;">
+{% include "top_list.html" %}
+<h2>Facilities: {{ initial }}*</h2>
+<table class="table striped-table">
+<thead>
+<tr>
+    <th>Directory</th>
+    <th>HCAI Id(s)</th>
+</tr>
+</thead>
+<tbody>
+{% for name in names %}
+    <tr>
+        <td>{{ name }}</td>
+        <td>
+        {% for hcai_id in names[name]['hcai_ids'] %}
+            {{ hcai_id }}<br/>
+        {% endfor %}
+        </td>
+    </tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+</body></html>

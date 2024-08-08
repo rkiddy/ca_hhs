@@ -1,0 +1,16 @@
+<p>
+Years:
+    {% for year in years %}
+    <a href="/hcai/year/{{ year }}">{{ year }}</a>&nbsp;-&nbsp;
+    {% endfor %}
+</p>
+<p>
+Facilities:
+    {% for initial in initials %}
+    <a href="/hcai/facilities/{{ initial }}">{{ initial }}</a>&nbsp;-&nbsp;
+    {% endfor %}
+</p>
+<p>
+    HCAI Ids: <a href="/hcai/hcai_ids/">All</a>
+</p>
+
