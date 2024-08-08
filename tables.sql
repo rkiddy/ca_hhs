@@ -112,13 +112,24 @@ CREATE TABLE `chargemasters_cpt_codes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `chargemasters_dir_hcai_id_joins`
+--
+
+DROP TABLE IF EXISTS `chargemasters_dir_hcai_id_joins`;
+CREATE TABLE `chargemasters_dir_hcai_id_joins` (
+  `dir_pk` int NOT NULL,
+  `hcai_id` varchar(10) NOT NULL,
+  PRIMARY KEY (`dir_pk`,`hcai_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `chargemasters_dirs`
 --
 
 DROP TABLE IF EXISTS `chargemasters_dirs`;
 CREATE TABLE `chargemasters_dirs` (
   `pk` int NOT NULL,
-  `directory` varchar(1027) DEFAULT NULL,
+  `directory` varchar(255) DEFAULT NULL,
   `year` int DEFAULT NULL,
   `hcai_id` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`pk`)
@@ -136,9 +147,12 @@ CREATE TABLE `chargemasters_files` (
   `full_name` varchar(255) DEFAULT NULL,
   `hcai_id` varchar(15) DEFAULT NULL,
   `file_type` varchar(15) DEFAULT NULL,
-  `file_ext` varchar(4) DEFAULT NULL,
+  `file_ext` varchar(63) DEFAULT NULL,
   `common25` int DEFAULT NULL,
   PRIMARY KEY (`pk`),
+  KEY `file_ext` (`file_ext`),
+  KEY `full_name` (`full_name`),
+  KEY `dir_pk` (`dir_pk`),
   KEY `hcai_id` (`hcai_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -153,13 +167,13 @@ CREATE TABLE `chargemasters_hcai_ids` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `chargemasters_tabs`
+-- Table structure for table `chargemasters_sheets`
 --
 
-DROP TABLE IF EXISTS `chargemasters_tabs`;
-CREATE TABLE `chargemasters_tabs` (
+DROP TABLE IF EXISTS `chargemasters_sheets`;
+CREATE TABLE `chargemasters_sheets` (
   `file_pk` int DEFAULT NULL,
-  `tab_name` varchar(255) DEFAULT NULL
+  `sheet_name` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -612,6 +626,22 @@ CREATE TABLE `hospital_buildings` (
   `latitude` decimal(12,8) DEFAULT NULL,
   `longitude` decimal(12,8) DEFAULT NULL,
   `count` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `infant_mortality_per_1000_births`
+--
+
+DROP TABLE IF EXISTS `infant_mortality_per_1000_births`;
+CREATE TABLE `infant_mortality_per_1000_births` (
+  `lghc_indicator_name` varchar(63) DEFAULT NULL,
+  `geography` varchar(63) DEFAULT NULL,
+  `year` varchar(31) DEFAULT NULL,
+  `strata` varchar(63) DEFAULT NULL,
+  `strata_name` varchar(63) DEFAULT NULL,
+  `rate` varchar(15) DEFAULT NULL,
+  `lower_95_ci` varchar(15) DEFAULT NULL,
+  `upper_95_ci` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -1104,4 +1134,4 @@ CREATE TABLE `wic_products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2024-08-05 18:57:50
+-- Dump completed on 2024-08-07 22:34:54

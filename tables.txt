@@ -8,11 +8,13 @@ admin_tools:
 table updates
 
 dataset chargemasters
-table chargemasters_files
 table chargemasters_common25
-table chargemasters_dirs
 table chargemasters_cpt_codes MAYBE_NOT_WORKING
+table chargemasters_dir_hcai_id_joins
+table chargemasters_dirs
+table chargemasters_files
 table chargemasters_hcai_ids HANDCURATED
+table chargemasters_sheets
 
 dataset covid-19-sewershed-restricted-case-data
 table watershed_cases
@@ -45,6 +47,9 @@ table inpatient_deaths
 table inpatient_diagnoses
 table inpatient_diagnosis
 table inpatient_procedures
+
+dataset infant-mortality-deaths-per-1000-live-births-lghc-indicator-01
+table infant_mortality_per_1000_births
 
 dataset licensed-facility-crosswalk
 table none
