@@ -34,7 +34,11 @@ if [ "$1" != "--no-fetch" ] && [ "$uuid1" != "none" ]; then
 
     mv -f *.csv *.xls* *.docx *.html *.kml *.geojson *.json *.zip sources/ 2>/dev/null
 
-    wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id-$hash.zip"
+    if [ "$hash" != "" ]; then
+        wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id-$hash.zip"
+    else
+        wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id.zip"
+    fi
 
     unzip $id-$hash.zip
 fi
