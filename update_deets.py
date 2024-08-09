@@ -1,17 +1,34 @@
-
+import argparse
 import os
-
 import re
+from pprint import pprint
 
 import requests
 
-from pprint import pprint
+
+def arguments():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--file', '-f', nargs='?', help="Name of single file to process.")
+    parser.add_argument('--verbose', '-v', action='store_true')
+    return parser.parse_args()
+
+
+def dprint(msg):
+    if args.verbose:
+        print(msg)
+
 
 def find_ids():
 
     found = list()
 
-    for f in os.listdir():
+    files = os.listdir()
+    if args.file:
+        files = [args.file]
+
+    dprint(f"files: {files}")
+
+    for f in files:
         deets = f"{f}/deets.sh"
         try:
             deets_dict = dict()
@@ -33,10 +50,19 @@ def find_ids():
                 if len(deets_dict) > 0:
                     found.append(deets_dict)
 
+            dprint(f"deets now read: {deets_dict}")
+
         except:
             pass
 
     return found
+
+def url_for_id(vdict):
+    if vdict['id'] == 'measurable-hospital-acquired-conditions-composite-patient' \
+                      '-safety-indicator-statewide-rate-califo':
+        return 'https://data.chhs.ca.gov/dataset/measurable-hospital-acquired-conditions' \
+               '-composite-patient-safety-indicator-statewide-rate-california'
+    return f"https://data.chhs.ca.gov/dataset/{vdict['id']}"
 
 
 def read_deets(values):
@@ -44,8 +70,10 @@ def read_deets(values):
     found = list()
 
     for value_dict in values:
+        
+        url = url_for_id(value_dict)
 
-        url = f"https://data.chhs.ca.gov/dataset/{value_dict['id']}"
+        # url = f"https://data.chhs.ca.gov/dataset/{value_dict['id']}"
 
         print(f"url: {url}")
 
@@ -56,6 +84,8 @@ def read_deets(values):
         aUrl = None
         dload = None
 
+        dprint(f"found page with length: {len(body.text)}")
+
         for line in str(body.text).split('\n'):
             if re.search("primary", line):
                 aUrl = line
@@ -63,7 +93,7 @@ def read_deets(values):
                 parts = aUrl.split('"')
                 dload = parts[-2]
 
-        # print(f"dload: {dload}")
+        dprint(f"dload: {dload}")
 
         parts = dload.split('/')
 
@@ -77,10 +107,15 @@ def read_deets(values):
 
         deets = dict()
         deets['id'] = value_dict['id']
-        deets['script'] = value_dict['script']
+        if 'script' in value_dict:
+            deets['script'] = value_dict['script']
+        else:
+            deets['script'] = "none"
         deets['uuid1'] = uuid1
         deets['uuid2'] = uuid2
         deets['hash'] = hash
+
+        dprint(f"deets found: {deets}")
 
         found.append(deets)
 
@@ -90,6 +125,7 @@ def read_deets(values):
 def write_deets(deets):
     for deets_dict in deets:
         filename = f"{deets_dict['id']}/deets.sh"
+        dprint(f"writing deets: {filename}")
         with open(filename, 'w') as f:
             f.write(f"export uuid1=\"{deets_dict['uuid1']}\"\n")
             f.write(f"export uuid2=\"{deets_dict['uuid2']}\"\n")
@@ -100,6 +136,8 @@ def write_deets(deets):
 
 
 if __name__ == '__main__':
+
+    args = arguments()
 
     print("reading ids...")
     ids = find_ids()
@@ -113,7 +151,4 @@ if __name__ == '__main__':
 
     print("writing...")
     write_deets(deets)
-
-    print("diffs:")
-    os.system('git diff */deets.sh')
 
