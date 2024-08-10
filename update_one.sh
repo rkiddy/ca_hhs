@@ -8,7 +8,7 @@ fi
 
 if [ "$1" = "--help" ] || [ "$1" = "-help" ] || [ "$1" = "-h" ] || [ "$1" = "--h" ]; then
     echo ""
-    echo "usage: bash update.sh [ --no-fetch ]"
+    echo "usage: bash update.sh [ --no-fetch | --only-fetch ]"
     echo ""
     exit 
 fi
@@ -32,7 +32,7 @@ if [ "$1" != "--no-fetch" ] && [ "$uuid1" != "none" ]; then
         mkdir sources
     fi
 
-    mv -f *.csv *.xls* *.docx *.html *.kml *.geojson *.json *.zip sources/ 2>/dev/null
+    mv -f *.csv *.xls* *.docx *.html *.kml *.geojson *.json *-api *.zip sources/ 2>/dev/null
 
     if [ "$hash" != "" ]; then
         wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id-$hash.zip"
@@ -40,7 +40,7 @@ if [ "$1" != "--no-fetch" ] && [ "$uuid1" != "none" ]; then
         wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id.zip"
     fi
 
-    unzip $id-$hash.zip
+    unzip -o $id-$hash.zip
 fi
 
 if [ "$1" != "--only-fetch" ] && [ -f $script.py ]; then
@@ -55,7 +55,7 @@ if [ "$1" != "--only-fetch" ] && [ -f $script.py ]; then
 
     # move the current data sources to the sources directory
     #
-    mv -f *.csv *.xls* *.docx *.html *.kml *.geojson *.json *.zip sources/ 2>/dev/null
+    mv -f *.csv *.xls* *.docx *.html *.kml *.geojson *.json *-api *.zip sources/ 2>/dev/null
 fi
 
 if [ -f ./.venv/bin/python ]; then
