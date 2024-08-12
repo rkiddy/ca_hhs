@@ -71,20 +71,6 @@ CREATE TABLE `chargemasters_cdm` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `chargemasters_column_heads`
---
-
-DROP TABLE IF EXISTS `chargemasters_column_heads`;
-CREATE TABLE `chargemasters_column_heads` (
-  `file_pk` int DEFAULT NULL,
-  `sheet` varchar(127) DEFAULT NULL,
-  `code_head` varchar(5) DEFAULT NULL,
-  `desc_head` varchar(5) DEFAULT NULL,
-  `cost_head` varchar(5) DEFAULT NULL,
-  `full_name` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
 -- Table structure for table `chargemasters_common25`
 --
 
@@ -93,22 +79,12 @@ CREATE TABLE `chargemasters_common25` (
   `file_pk` int DEFAULT NULL,
   `procedure_desc` varchar(1027) DEFAULT NULL,
   `cpt_code` varchar(31) DEFAULT NULL,
-  `charge_str` varchar(31) DEFAULT NULL,
+  `cpt_code_fixed` varchar(11) DEFAULT NULL,
+  `charge_str` varchar(700) DEFAULT NULL,
   `charge` decimal(10,2) DEFAULT NULL,
   KEY `charge_str` (`charge_str`),
   KEY `charge` (`charge`),
   KEY `file_pk` (`file_pk`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `chargemasters_cpt_codes`
---
-
-DROP TABLE IF EXISTS `chargemasters_cpt_codes`;
-CREATE TABLE `chargemasters_cpt_codes` (
-  `cpt_code` varchar(11) DEFAULT NULL,
-  `cpt_desc` varchar(1027) DEFAULT NULL,
-  `file_pk` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -131,7 +107,6 @@ CREATE TABLE `chargemasters_dirs` (
   `pk` int NOT NULL,
   `directory` varchar(255) DEFAULT NULL,
   `year` int DEFAULT NULL,
-  `hcai_id` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`pk`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -157,33 +132,34 @@ CREATE TABLE `chargemasters_files` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `chargemasters_hcai_ids`
+-- Table structure for table `chargemasters_files_cache`
 --
 
-DROP TABLE IF EXISTS `chargemasters_hcai_ids`;
-CREATE TABLE `chargemasters_hcai_ids` (
-  `directory` varchar(255) DEFAULT NULL,
-  `hcai_id` varchar(15) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `chargemasters_sheets`
---
-
-DROP TABLE IF EXISTS `chargemasters_sheets`;
-CREATE TABLE `chargemasters_sheets` (
+DROP TABLE IF EXISTS `chargemasters_files_cache`;
+CREATE TABLE `chargemasters_files_cache` (
   `file_pk` int DEFAULT NULL,
-  `sheet_name` varchar(255) DEFAULT NULL
+  `full_name` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `deaths`
+-- Table structure for table `chargemasters_hcai_id_known`
 --
 
-DROP TABLE IF EXISTS `deaths`;
-CREATE TABLE `deaths` (
+DROP TABLE IF EXISTS `chargemasters_hcai_id_known`;
+CREATE TABLE `chargemasters_hcai_id_known` (
+  `full_name` varchar(255) DEFAULT NULL,
+  `hcai_id` varchar(9) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `death_profiles_by_county`
+--
+
+DROP TABLE IF EXISTS `death_profiles_by_county`;
+CREATE TABLE `death_profiles_by_county` (
   `year` int DEFAULT NULL,
   `month` int DEFAULT NULL,
+  `county` varchar(31) DEFAULT NULL,
   `geography_type` varchar(31) DEFAULT NULL,
   `strata` varchar(31) DEFAULT NULL,
   `strata_name` varchar(63) DEFAULT NULL,
@@ -194,31 +170,28 @@ CREATE TABLE `deaths` (
   `annotation_code` varchar(31) DEFAULT NULL,
   `annotation_desc` varchar(63) DEFAULT NULL,
   `data_extract_date` varchar(31) DEFAULT NULL,
-  `data_revision_date` varchar(31) DEFAULT NULL
+  `data_revision_date` varchar(31) DEFAULT NULL,
+  KEY `year` (`year`,`month`),
+  KEY `county` (`county`),
+  KEY `cause` (`cause`),
+  KEY `month` (`month`),
+  KEY `geography_type` (`geography_type`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `facility_admins`
+-- Table structure for table `dhcs_county_code_references`
 --
 
-DROP TABLE IF EXISTS `facility_admins`;
-CREATE TABLE `facility_admins` (
-  `fac_id` varchar(15) DEFAULT NULL,
-  `name` varchar(127) DEFAULT NULL,
-  `email` varchar(127) DEFAULT NULL,
-  `fax` varchar(15) DEFAULT NULL,
-  `phone` varchar(15) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `facility_hospitals`
---
-
-DROP TABLE IF EXISTS `facility_hospitals`;
-CREATE TABLE `facility_hospitals` (
-  `fac_id` varchar(15) NOT NULL,
-  `name` varchar(127) DEFAULT NULL,
-  PRIMARY KEY (`fac_id`)
+DROP TABLE IF EXISTS `dhcs_county_code_references`;
+CREATE TABLE `dhcs_county_code_references` (
+  `objectid` int DEFAULT NULL,
+  `dhcs_county_code` int DEFAULT NULL,
+  `county_name` varchar(63) DEFAULT NULL,
+  `county_region_code` char(1) DEFAULT NULL,
+  `county_region_description` varchar(255) DEFAULT NULL,
+  `fips_county_code` int DEFAULT NULL,
+  `fips_state_county_code` int DEFAULT NULL,
+  `north_south_indicator` char(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -299,19 +272,6 @@ CREATE TABLE `healthcare_facilities_across_time` (
   `provider_type` varchar(127) DEFAULT NULL,
   `fac_fdr` varchar(127) DEFAULT NULL,
   `count` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `healthcare_facilities_digests`
---
-
-DROP TABLE IF EXISTS `healthcare_facilities_digests`;
-CREATE TABLE `healthcare_facilities_digests` (
-  `facid` char(9) DEFAULT NULL,
-  `update_date` char(10) DEFAULT NULL,
-  `dgst_sha256` char(64) DEFAULT NULL,
-  KEY `facid` (`facid`),
-  KEY `facid_2` (`facid`,`update_date`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -919,6 +879,29 @@ CREATE TABLE `providers_suspended_ineligible_us` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `school_immunizations`
+--
+
+DROP TABLE IF EXISTS `school_immunizations`;
+CREATE TABLE `school_immunizations` (
+  `school_year` varchar(31) DEFAULT NULL,
+  `school_code` varchar(31) DEFAULT NULL,
+  `school_name` varchar(255) DEFAULT NULL,
+  `city` varchar(31) DEFAULT NULL,
+  `county` varchar(31) DEFAULT NULL,
+  `public_private` varchar(31) DEFAULT NULL,
+  `public_school_district` varchar(63) DEFAULT NULL,
+  `enrollment` int DEFAULT NULL,
+  `reported` varchar(31) DEFAULT NULL,
+  `category` varchar(31) DEFAULT NULL,
+  `count` varchar(31) DEFAULT NULL,
+  `percent` int DEFAULT NULL,
+  `annotation_code` int DEFAULT NULL,
+  `annotation_count_desc` varchar(255) DEFAULT NULL,
+  `annotation_percent_desc` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `ssi_for_procedures_24`
 --
 
@@ -1050,6 +1033,27 @@ CREATE TABLE `ssi_for_procedures_in_patients_pooled` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `statewide_death_profiles`
+--
+
+DROP TABLE IF EXISTS `statewide_death_profiles`;
+CREATE TABLE `statewide_death_profiles` (
+  `year` int DEFAULT NULL,
+  `month` int DEFAULT NULL,
+  `geography_type` varchar(31) DEFAULT NULL,
+  `strata` varchar(31) DEFAULT NULL,
+  `strata_name` varchar(63) DEFAULT NULL,
+  `cause` varchar(31) DEFAULT NULL,
+  `cause_desc` varchar(63) DEFAULT NULL,
+  `icd_revision` varchar(31) DEFAULT NULL,
+  `count` int DEFAULT NULL,
+  `annotation_code` varchar(31) DEFAULT NULL,
+  `annotation_desc` varchar(63) DEFAULT NULL,
+  `data_extract_date` varchar(31) DEFAULT NULL,
+  `data_revision_date` varchar(31) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `sud_facilities`
 --
 
@@ -1134,4 +1138,4 @@ CREATE TABLE `wic_products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2024-08-07 22:34:54
+-- Dump completed on 2024-08-12 11:11:57

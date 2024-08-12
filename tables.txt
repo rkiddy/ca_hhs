@@ -1,20 +1,20 @@
-resource_type resource_name commnent
 
-dataset ??????
-table facility_admins
-table facility_hospitals
-
-admin_tools:
 table updates
 
+dataset adap-base
+
+dataset asthma-deaths-by-county
+
 dataset chargemasters
+table chargemasters_cdm
 table chargemasters_common25
-table chargemasters_cpt_codes MAYBE_NOT_WORKING
 table chargemasters_dir_hcai_id_joins
 table chargemasters_dirs
 table chargemasters_files
-table chargemasters_hcai_ids HANDCURATED
-table chargemasters_sheets
+table chargemasters_files_cache
+table chargemasters_hcai_id_known
+
+dataset county-health-status-profiles
 
 dataset covid-19-sewershed-restricted-case-data
 table watershed_cases
@@ -22,6 +22,12 @@ table watershed_sites
 
 dataset dataset-catalog
 table catalog
+
+dataset death-profiles-by-county
+table death_profiles_by_county
+
+dataset dhcs-county-code-reference-table
+table dhcs_county_code_references
 
 dataset health-and-human-services-program-counts
 table hhs_program_annual_counts
@@ -33,10 +39,14 @@ dataset healthcare-facility-locations
 table healthcare_facilities
 table healthcare_facilities_across_time
 
+dataset healthcare-facility-services
+
 dataset healthcare-payments-data-snapshot
 table payments_snapshot_enrollment
 table payments_snapshot_medical
 table payments_snapshot_pharmaceutical
+
+dataset healthcare-workforce-geography-crosswalk
 
 dataset hospital-building-data
 table hospital_buildings
@@ -52,10 +62,17 @@ dataset infant-mortality-deaths-per-1000-live-births-lghc-indicator-01
 table infant_mortality_per_1000_births
 
 dataset licensed-facility-crosswalk
-table none
 
 dataset licensed-healthcare-facility-listing
 table licensed_facilities
+
+dataset live-birth-profiles-by-county
+
+dataset measurable-hospital-acquired-conditions-composite-patient-safety-indicator-statewide-rate-california
+
+dataset newborn-screening-disorders
+
+dataset postoperative-sepsis-outcomes-for-elective-surgeries-in-california-hospitals
 
 dataset primary-care-clinic-annual-utilization-data
 table pccu_facilities
@@ -64,8 +81,12 @@ table pccu_files
 dataset profile-of-enrolled-medi-cal-fee-for-service-ffs-providers
 table medicaid_ffs_providers
 
+dataset provider-suspended-and-ineligible-list-s-i-list
+table providers_suspended_ineligible
+table providers_suspended_ineligible_us
+
 dataset statewide-death-profiles
-table deaths
+table statewide_death_profiles
 
 dataset sud-recovery-treatment-facilities
 table sud_facilities
@@ -77,8 +98,11 @@ table ssi_for_procedures_in_patients_pooled
 table ssi_for_procedures_5
 table ssi_for_procedures_24
 
-dataset suspended-and-ineligible-list-s-i-list
-table suspended-and-ineligible-list-s-i-list
+dataset test-cdph-immunizations-in-first-grade-by-academic-year
+table school_immunizations
+
+dataset wic-authorized-product-list-apl
+table wic_products
 
 dataset women-infants-and-children-wic-authorized-vendors
 table authorized_wic_vendors
