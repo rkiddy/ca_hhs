@@ -6,6 +6,8 @@ dataset adap-base
 dataset asthma-deaths-by-county
 table asthma_deaths_by_county
 
+dataset asthma-prevalence
+
 dataset chargemasters
 table chargemasters_cdm
 table chargemasters_common25
