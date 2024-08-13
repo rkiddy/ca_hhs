@@ -6,6 +6,21 @@
 
 
 --
+-- Table structure for table `asthma_deaths_by_county`
+--
+
+DROP TABLE IF EXISTS `asthma_deaths_by_county`;
+CREATE TABLE `asthma_deaths_by_county` (
+  `county` varchar(31) DEFAULT NULL,
+  `years` varchar(31) DEFAULT NULL,
+  `strata` varchar(31) DEFAULT NULL,
+  `age_group` varchar(31) DEFAULT NULL,
+  `number_of_deaths` int DEFAULT NULL,
+  `age_adjusted_mortality_rate` decimal(4,2) DEFAULT NULL,
+  `comment` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `authorized_wic_vendors`
 --
 
@@ -1157,4 +1172,4 @@ CREATE TABLE `wic_products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2024-08-12 17:35:23
+-- Dump completed on 2024-08-12 18:45:28
