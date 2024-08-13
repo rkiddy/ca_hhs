@@ -689,6 +689,25 @@ CREATE TABLE `licensed_facilities` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `live_birth_profiles_by_county`
+--
+
+DROP TABLE IF EXISTS `live_birth_profiles_by_county`;
+CREATE TABLE `live_birth_profiles_by_county` (
+  `year` int DEFAULT NULL,
+  `month` int DEFAULT NULL,
+  `county` varchar(31) DEFAULT NULL,
+  `geography_type` varchar(31) DEFAULT NULL,
+  `strata` varchar(63) DEFAULT NULL,
+  `strata_name` varchar(63) DEFAULT NULL,
+  `count` int DEFAULT NULL,
+  `annotation_code` varchar(31) DEFAULT NULL,
+  `annotation_desc` varchar(63) DEFAULT NULL,
+  `data_extract_date` varchar(31) DEFAULT NULL,
+  `data_revision_date` varchar(31) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `medicaid_ffs_providers`
 --
 
@@ -884,21 +903,21 @@ CREATE TABLE `providers_suspended_ineligible_us` (
 
 DROP TABLE IF EXISTS `school_immunizations`;
 CREATE TABLE `school_immunizations` (
-  `school_year` varchar(31) DEFAULT NULL,
-  `school_code` varchar(31) DEFAULT NULL,
+  `school_year` char(9) DEFAULT NULL,
+  `school_code` varchar(7) DEFAULT NULL,
   `school_name` varchar(255) DEFAULT NULL,
   `city` varchar(31) DEFAULT NULL,
   `county` varchar(31) DEFAULT NULL,
-  `public_private` varchar(31) DEFAULT NULL,
+  `is_public` char(1) DEFAULT NULL,
   `public_school_district` varchar(63) DEFAULT NULL,
   `enrollment` int DEFAULT NULL,
-  `reported` varchar(31) DEFAULT NULL,
+  `reported` char(1) DEFAULT NULL,
   `category` varchar(31) DEFAULT NULL,
-  `count` varchar(31) DEFAULT NULL,
+  `count` int DEFAULT NULL,
   `percent` int DEFAULT NULL,
   `annotation_code` int DEFAULT NULL,
-  `annotation_count_desc` varchar(255) DEFAULT NULL,
-  `annotation_percent_desc` varchar(255) DEFAULT NULL
+  `annotation_count_desc` varchar(63) DEFAULT NULL,
+  `annotation_percent_desc` varchar(63) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -1138,4 +1157,4 @@ CREATE TABLE `wic_products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2024-08-12 11:11:57
+-- Dump completed on 2024-08-12 17:35:23

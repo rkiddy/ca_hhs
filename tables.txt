@@ -67,6 +67,7 @@ dataset licensed-healthcare-facility-listing
 table licensed_facilities
 
 dataset live-birth-profiles-by-county
+table live_birth_profiles_by_county
 
 dataset measurable-hospital-acquired-conditions-composite-patient-safety-indicator-statewide-rate-california
 

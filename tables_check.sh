@@ -21,3 +21,8 @@ fi
 echo ""
 echo "If no lines appear above, or if only 2's appear, then all is good."
 echo ""
+echo "Regenerating the tables.sql file"
+echo ""
+
+mysqldump --no-data ca_hhs | grep -v '\/\*' > tables.sql
+
