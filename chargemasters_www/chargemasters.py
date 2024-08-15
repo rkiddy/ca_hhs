@@ -2,7 +2,7 @@
 import sys
 
 from dotenv import dotenv_values
-from flask import Flask, redirect
+from flask import Flask, redirect, request
 from jinja2 import Environment, PackageLoader
 
 cfg = dotenv_values(".env")
@@ -19,6 +19,13 @@ env = Environment(loader=PackageLoader('chargemasters'))
 def chargemasters_main():
     main = env.get_template('chargemasters_main.html')
     context = data.chargemasters_main(year=None)
+    return main.render(**context)
+
+
+@chargemasters.route(f"/{cfg['WWW']}/years/")
+def chargemasters_main_years():
+    main = env.get_template('chargemasters_years.html')
+    context = data.chargemasters_years()
     return main.render(**context)
 
 
@@ -49,6 +56,26 @@ def chargemasters_hcai_id(id):
     main = env.get_template('chargemasters_hcai_id.html')
     context = data.chargemasters_hcai_id(id)
     return main.render(**context)
+
+
+@chargemasters.route(f"/{cfg['WWW']}/no_hcai_id/")
+def chargemasters_no_hcai_id():
+    main = env.get_template('chargemasters_files.html')
+    context = data.chargemasters_no_hcai_id()
+    return main.render(**context)
+
+@chargemasters.route(f"/{cfg['WWW']}/changes/")
+def chargemasters_changes():
+    main = env.get_template('chargemasters_changes.html')
+    context = data.chargemasters_changes()
+    return main.render(**context)
+
+
+@chargemasters.route(f"/{cfg['WWW']}/read_changes/", methods=['POST'])
+def chargemasters_read_changes():
+    main = env.get_template('chargemasters_changes.html')
+    print(data.chargemasters_calc_changes(request.form['change_info']))
+    return redirect(f"/{cfg['WWW']}/")
 
 
 if __name__ == '__main__':

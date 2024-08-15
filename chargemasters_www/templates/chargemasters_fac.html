@@ -8,7 +8,7 @@
 <div style="padding: 25px 25px 25px 25px;">
 {% include "top_list.html" %}
 <h2>Facilities: {{ initial }}*</h2>
-<table class="table striped-table">
+<table class="table table-striped">
 <thead>
 <tr>
     <th>Directory</th>
@@ -21,7 +21,7 @@
         <td>{{ name }}</td>
         <td>
         {% for hcai_id in names[name]['hcai_ids'] %}
-            {{ hcai_id }}<br/>
+            <a href="/hcai/hcai_id/{{ hcai_id }}">{{ hcai_id }}</a><br/>
         {% endfor %}
         </td>
     </tr>

@@ -1,0 +1,16 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+    <title>Chargemasters</title>
+    {% include "styles.html" %}
+</head>
+<body>
+<div style="padding: 25px 25px 25px 25px;">
+    {% include "top_list.html" %}
+    <h2>Changes Info:</h2>
+    <form action="/hcai/read_changes" method="post"> 
+         <textarea id="change_info" name="change_info" rows="10" cols="180"></textarea><br/>
+         <button type="submit" class="btn btn-primary">Submit</button>
+    </form> 
+</div>
+</body></html>

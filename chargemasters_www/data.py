@@ -1,6 +1,7 @@
 
 import io
 from pprint import pprint
+import re
 
 from dotenv import dotenv_values
 from flask import request
@@ -24,17 +25,24 @@ def db_exec(engine, sql):
         return engine.execute(sql)
 
 
-def chargemasters_main(year):
-    context = dict()
-
-    context['year'] = year
+def top_list_data():
+    results = dict()
 
     rows = db_exec(conn, "select distinct(year) from chargemasters_files order by year")
-    context['years'] = [r['year'] for r in rows]
+    results['years'] = [r['year'] for r in rows]
 
     sql = "select distinct(substr(directory,6,1)) as initial from chargemasters_dirs order by initial;"
     rows = db_exec(conn, sql)
-    context['initials'] = [r['initial'] for r in rows]
+    results['initials'] = [r['initial'] for r in rows]
+
+    return results
+
+
+def chargemasters_main(year):
+    context = dict()
+    context.update(top_list_data())
+
+    context['year'] = year
 
     if year is None:
         return context
@@ -79,15 +87,10 @@ def name_from_directory(dir):
 
 def chargemasters_facilities(initial):
     context = dict()
+    context.update(top_list_data())
 
     context['initial'] = initial
 
-    rows = db_exec(conn, "select distinct(year) from chargemasters_files order by year")
-    context['years'] = [r['year'] for r in rows]
-
-    sql = "select distinct(substr(directory,6,1)) as initial from chargemasters_dirs order by initial;"
-    rows = db_exec(conn, sql)
-    context['initials'] = [r['initial'] for r in rows]
 
     sql = f"select * from chargemasters_dirs where substr(directory,6,1) = '{initial}'"
     print(f"sql: {sql}")
@@ -98,7 +101,7 @@ def chargemasters_facilities(initial):
     sql = f"select * from chargemasters_dir_hcai_id_joins where dir_pk in ({dpks})"
     id_rows = db_exec(conn, sql)
     print(f"id_rows #: {len(id_rows)}")
- 
+
     found = dict()
 
     for d_row in dir_rows:
@@ -126,17 +129,40 @@ def chargemasters_facilities(initial):
     return context
 
 
-def chargemasters_hcai_ids():
-
+def chargemasters_years():
     context = dict()
- 
-    rows = db_exec(conn, "select distinct(year) from chargemasters_files order by year")
-    context['years'] = [r['year'] for r in rows]
- 
-    sql = "select distinct(substr(directory,6,1)) as initial from chargemasters_dirs order by initial;"
+    context.update(top_list_data())
+
+    sql = "select year, full_name, hcai_id from chargemasters_files"
     rows = db_exec(conn, sql)
-    context['initials'] = [r['initial'] for r in rows]
- 
+
+    found = dict()
+
+    for row in rows:
+
+        id = row['hcai_id']
+
+        if id not in found:
+            found[id] = dict()
+            found[id]['name'] = row['full_name'].split('/')[1]
+            found[id]['years'] = list()
+
+        found[id]['years'].append(str(row['year']))
+
+    for id in found:
+        found[id]['years'] = sorted(list(set(found[id]['years'])))
+
+    # print(f"found: {found}")
+
+    context['ids'] = found
+
+    return context
+
+
+def chargemasters_hcai_ids():
+    context = dict()
+    context.update(top_list_data())
+
     sql = f"select * from chargemasters_dirs"
     print(f"sql: {sql}")
     dir_rows = db_exec(conn, sql)
@@ -174,7 +200,7 @@ def chargemasters_hcai_ids():
         found[id]['files'] = sorted(list(set(found[id]['files'])))
 
     context['ids'] = found
- 
+
     return context
 
 def shorter(s):
@@ -186,15 +212,9 @@ def shorter(s):
 
 def chargemasters_hcai_id(id):
     context = dict()
+    context.update(top_list_data())
 
     context['id'] = id
-
-    rows = db_exec(conn, "select distinct(year) from chargemasters_files order by year")
-    context['years'] = [r['year'] for r in rows]
- 
-    sql = "select distinct(substr(directory,6,1)) as initial from chargemasters_dirs order by initial;"
-    rows = db_exec(conn, sql)
-    context['initials'] = [r['initial'] for r in rows]
 
     sql = f"select full_name from chargemasters_files where hcai_id = '{id}'"
     context['files'] = [r['full_name'] for r in db_exec(conn, sql)]
@@ -219,4 +239,41 @@ def chargemasters_hcai_id(id):
     context['location_url'] = f"https://www.openstreetmap.org/search?query={lat}%2C{long}#10/{s_lat}/{s_long}"
 
     return context
+
+def chargemasters_no_hcai_id():
+    context = dict()
+    context.update(top_list_data())
+
+    context['files'] = db_exec(conn, "select * from chargemasters_files where hcai_id is NULL order by full_name")
+    context['count'] = len(context['files'])
+
+    return context
+
+
+def chargemasters_changes():
+
+    context = dict()
+    context.update(top_list_data())
+
+    return context
+
+def chargemasters_calc_changes(s):
+
+    found = list()
+
+    for line in s.split('\n'):
+        done = False
+
+        offset = 0
+        while not done:
+            r1 = re.search(r'\([a-z0-9\-]+\):', line[offset:])
+            if r1 is None:
+                done = True
+            else:
+                found.append(line[offset+r1.start():offset+r1.end()][1:][:-2])
+                offset += r1.end()
+
+    found = list(set(found))
+
+    return found
 

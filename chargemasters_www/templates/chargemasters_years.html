@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+    <title>Chargemasters</title>
+    {% include "styles.html" %}
+</head>
+<body>
+<div style="padding: 25px 25px 25px 25px;">
+{% include "top_list.html" %}
+<table class="table table-striped">
+<thead>
+<tr>
+    <th>HCAI Id</th>
+    <th>Directory</th>
+    <th>2011</th>
+    <th>2012</th>
+    <th>2013</th>
+    <th>2014</th>
+    <th>2015</th>
+    <th>2016</th>
+    <th>2017</th>
+    <th>2018</th>
+    <th>2019</th>
+    <th>2020</th>
+    <th>2021</th>
+    <th>2022</th>
+    <th>2023</th>
+</tr>
+</thead>
+<tbody>
+{% for id in ids %}
+    <tr>
+        <td><a href="/hcai/hcai_id/{{ id }}">{{ id }}</a></td>
+        <td>{{ ids[id]['name'] }}</td>
+        <td>{% if '2011' in ids[id]['years'] %}x{% endif %}</td>
+        <td>{% if '2012' in ids[id]['years'] %}x{% endif %}</td>
+        <td>{% if '2013' in ids[id]['years'] %}x{% endif %}</td>
+        <td>{% if '2014' in ids[id]['years'] %}x{% endif %}</td>
+        <td>{% if '2015' in ids[id]['years'] %}x{% endif %}</td>
+        <td>{% if '2016' in ids[id]['years'] %}x{% endif %}</td>
+        <td>{% if '2017' in ids[id]['years'] %}x{% endif %}</td>
+        <td>{% if '2018' in ids[id]['years'] %}x{% endif %}</td>
+        <td>{% if '2019' in ids[id]['years'] %}x{% endif %}</td>
+        <td>{% if '2020' in ids[id]['years'] %}x{% endif %}</td>
+        <td>{% if '2021' in ids[id]['years'] %}x{% endif %}</td>
+        <td>{% if '2022' in ids[id]['years'] %}x{% endif %}</td>
+        <td>{% if '2023' in ids[id]['years'] %}x{% endif %}</td>
+    </tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+</body></html>

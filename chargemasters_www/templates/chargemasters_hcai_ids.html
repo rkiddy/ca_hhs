@@ -7,7 +7,7 @@
 <body>
 <div style="padding: 25px 25px 25px 25px;">
 {% include "top_list.html" %}
-<table class="table striped-table">
+<table class="table table-striped">
 <thead>
 <tr>
     <th>HCAI Id</th>
@@ -18,7 +18,7 @@
 <tbody>
 {% for id in ids %}
     <tr>
-        <td>{{ id }}</td>
+        <td><a href="/hcai/hcai_id/{{ id }}">{{ id }}</a></td>
         <td>
         {% for name in ids[id]['names'] %}
             {{ name }}<br/>

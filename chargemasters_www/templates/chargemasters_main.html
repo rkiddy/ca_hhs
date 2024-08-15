@@ -19,7 +19,7 @@
     <tbody>
         {% for file in files %}
         <tr>
-            <td>{{ file.hcai_id }}</td>
+            <td><a href="/hcai/hcai_id/{{ file.hcai_id }}">{{ file.hcai_id }}</a></td>
             <td>{{ file.full_name }}</td>
         </tr>
         <tr>
