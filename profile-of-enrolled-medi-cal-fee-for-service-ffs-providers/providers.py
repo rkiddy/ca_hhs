@@ -1,5 +1,6 @@
 
 import csv
+import os
 import sys
 import traceback
 
@@ -80,7 +81,9 @@ if __name__ == '__main__':
               countyname decimal(12,8))"""
     db_exec(conn, sql)
 
-    with open('medi_cal_ffs_provider_listing_7_29_24.csv', newline='', encoding='latin1') as csvfile:
+    files = [f for f in os.listdir() if f.startswith('medi_cal_ffs_provider_listing_')]
+
+    with open(files[0], newline='', encoding='latin1') as csvfile:
         rdr = csv.DictReader(csvfile)
 
         for row in rdr:

@@ -10,6 +10,8 @@
 **/*.xls
 **/*.xlsx
 **/*.zip
+**/*.geojson
+**/*.kml
 **/sources
 **/20*
 **/log*

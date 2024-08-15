@@ -5,7 +5,25 @@ TBD
 </details>
 
 <details>
+<summary>asthma-deaths-by-county</summary>
+
+TBD
+</details>
+
+<details>
+<summary>asthma-prevalence</summary>
+
+TBD
+</details>
+
+<details>
 <summary>chargemasters</summary>
+
+TBD
+</details>
+
+<details>
+<summary>county-health-status-profiles</summary>
 
 TBD
 </details>
@@ -17,16 +35,22 @@ TBD
 </details>
 
 <details>
-<summary>chargemasters</summary>
+<summary>dataset-catalog</summary>
+
+The dataset-catalog directory includes code to download and import the data. The dataset-catalog-www will
+vend it in a simple application. There is a lot of data here but not of it is ... accurate or perhaps up-to-date. There are some datasets in this dataset that are missing web pages or do not seem to exist now. It is, thougn, not very clear.
+</details>
+
+<details>
+<summary>death-profiles-by-county</summary>
 
 TBD
 </details>
 
 <details>
-<summary>dataset-catalog</summary>
+<summary>dhcs-county-code-reference-table</summary>
 
-The dataset-catalog directory includes code to download and import the data. The dataset-catalog-www will
-vend it in a simple application. There is a lot of data here but not of it is ... accurate or perhaps up-to-date. There are some datasets in this dataset that are missing web pages or do not seem to exist now. It is, thougn, not very clear.
+TBD
 </details>
 
 <details>
@@ -50,7 +74,7 @@ TBD
 </details>
 
 <details>
-<summary>healthcare-facility-services</summary>
+<summary>healthcare-payments-data-snapshot</summary>
 
 TBD
 </details>
@@ -77,6 +101,12 @@ TBD
 </details>
 
 <details>
+<summary>infant-mortality-deaths-per-1000-live-births-lghc-indicator-01</summary>
+
+TBD
+</details>
+
+<details>
 <summary>licensed-facility-crosswalk</summary>
 
 TBD
@@ -89,9 +119,33 @@ TBD
 </details>
 
 <details>
+<summary>live-birth-profiles-by-county</summary>
+
+TBD
+</details>
+
+<details>
+<summary>measurable-hospital-acquired-conditions-composite-patient-safety-indicator-statewide-rate-california</summary>
+
+TBD
+</details>
+
+<details>
+<summary>newborn-screening-disorders</summary>
+
+TBD
+</details>
+
+<details>
 <summary>oshpd-healthcare-facilities-BLOCKED</summary>
 
 This dataset is marked on the CalHHS Open Data Portal as blocked. No idea why.
+</details>
+
+<details>
+<summary>postoperative-sepsis-outcomes-for-elective-surgeries-in-california-hospitals</summary>
+
+TBD
 </details>
 
 <details>
@@ -101,9 +155,35 @@ TBD
 </details>
 
 <details>
+<summary>profile-of-enrolled-medi-cal-fee-for-service-ffs-providers</summary>
+
+TBD
+</details>
+
+<details>
+<summary>provider-suspended-and-ineligible-list-s-i-list</summary>
+
+TBD
+</details>
+
+<details>
 <summary>statewide-death-profiles</summary>
 
 Causes thereof.
+</details>
+
+<details>
+<summary>sud-recovery-treatment-facilities</summary>
+
+TBD
+</details>
+
+<details>
+<summary>surgical-site-infections-ssis-for-28-operative-procedures-in-california-hospitals</summary>
+
+There could also be something interesting here:
+
+https://www.cdph.ca.gov/Programs/CHCQ/HAI/Pages/AnnualHAIReports.aspx
 </details>
 
 <details>
@@ -138,10 +218,11 @@ TBD
 * IHSS
 * Medicaid
 * Medi-Cal
+* OSHPDID - A unique number established by the Department of Health Care Access and Information (HCAI) for identifying facilities and used in the Licensed Facility Information System (LFIS).
 * SIR - Standardized Infection Ratio
 * SMR - Standardized Mortality Ratio
 * SNAP
 * SUD - Substance-Use Disorder
-* TANF
+* TANF - Temporary Assistance for Needy Families
 * WIC
 
