@@ -43,19 +43,19 @@ CREATE TABLE `authorized_wic_vendors` (
 DROP TABLE IF EXISTS `catalog`;
 CREATE TABLE `catalog` (
   `_id` int DEFAULT NULL,
-  `title` varchar(153) DEFAULT NULL,
+  `title` varchar(151) DEFAULT NULL,
   `description` text,
-  `department` varchar(49) DEFAULT NULL,
+  `department` varchar(48) DEFAULT NULL,
   `program` varchar(379) DEFAULT NULL,
   `contact_email` varchar(43) DEFAULT NULL,
-  `homepage_url` varchar(203) DEFAULT NULL,
+  `homepage_url` varchar(188) DEFAULT NULL,
   `temporal_coverage` varchar(889) DEFAULT NULL,
-  `spatial_geographic_coverage` varchar(549) DEFAULT NULL,
+  `spatial_geographic_coverage` varchar(548) DEFAULT NULL,
   `geographic_granularity` varchar(26) DEFAULT NULL,
   `language` varchar(17) DEFAULT NULL,
   `frequency` varchar(13) DEFAULT NULL,
   `de_identification_method` varchar(845) DEFAULT NULL,
-  `source_link` varchar(203) DEFAULT NULL,
+  `source_link` varchar(188) DEFAULT NULL,
   `data_collection_tool` text,
   `license` varchar(12) DEFAULT NULL,
   `limitations` varchar(11) DEFAULT NULL,
@@ -66,9 +66,9 @@ CREATE TABLE `catalog` (
   `citation` varchar(624) DEFAULT NULL,
   `created` varchar(26) DEFAULT NULL,
   `last_updated` varchar(26) DEFAULT NULL,
-  `topic` varchar(58) DEFAULT NULL,
+  `topic` varchar(60) DEFAULT NULL,
   `tags` text,
-  `dataset_url` varchar(155) DEFAULT NULL,
+  `dataset_url` varchar(133) DEFAULT NULL,
   `dataset_id` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -755,9 +755,9 @@ CREATE TABLE `medicaid_ffs_providers` (
   `dhcs_county_cd` varchar(63) DEFAULT NULL,
   `fips_county_cd` varchar(63) DEFAULT NULL,
   `county` varchar(63) DEFAULT NULL,
-  `latitude` decimal(12,8) DEFAULT NULL,
+  `latitude` varchar(63) DEFAULT NULL,
   `longitude` decimal(12,8) DEFAULT NULL,
-  `countyname` varchar(63) DEFAULT NULL
+  `countyname` decimal(12,8) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -1137,9 +1137,11 @@ CREATE TABLE `updates` (
 DROP TABLE IF EXISTS `watershed_cases`;
 CREATE TABLE `watershed_cases` (
   `episode_date` char(10) DEFAULT NULL,
-  `site_pk` int DEFAULT NULL,
+  `short_name` varchar(255) DEFAULT NULL,
+  `full_name` varchar(255) DEFAULT NULL,
+  `area_type` varchar(31) DEFAULT NULL,
   `masked` char(1) DEFAULT NULL,
-  `cases` int DEFAULT NULL,
+  `cases` varchar(31) DEFAULT NULL,
   `cum_cases` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -1149,11 +1151,10 @@ CREATE TABLE `watershed_cases` (
 
 DROP TABLE IF EXISTS `watershed_sites`;
 CREATE TABLE `watershed_sites` (
-  `pk` int NOT NULL,
-  `short_name` varchar(255) DEFAULT NULL,
-  `full_name` varchar(255) DEFAULT NULL,
-  `area_type` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`pk`)
+  `short_name` varchar(255) NOT NULL,
+  `full_name` varchar(255) NOT NULL,
+  `area_type` varchar(31) NOT NULL,
+  PRIMARY KEY (`short_name`,`full_name`,`area_type`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -1172,4 +1173,4 @@ CREATE TABLE `wic_products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2024-08-12 18:45:28
+-- Dump completed on 2024-08-17 16:05:33
