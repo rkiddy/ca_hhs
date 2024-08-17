@@ -336,3 +336,25 @@ def chargemasters_calc_changes(s):
 
     return found
 
+def table_info():
+    context = dict()
+    rows = db_exec(conn, "show tables")
+    table_names = dict()
+    columns = dict()
+
+    for row in rows:
+        table_names[row[0]] = dict()
+
+    for table in table_names:
+        rows = [dict(r) for r in db_exec(conn, f"desc {table}")]
+        for row in rows:
+            col_name = row['Field']
+            if col_name not in columns:
+                columns[col_name] = dict()
+            columns[col_name][table] = row['Type']
+
+    context['columns'] = columns
+    context['names'] = sorted(list(columns.keys()))
+
+    return context
+

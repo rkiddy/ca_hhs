@@ -38,6 +38,7 @@ cat <<EOF > /tmp/ca_hhs_$$.html
 </head>
 <body>
 <div style="padding: 25px 25px 25px 25px;">
+<h2>Datasets:</h2>
 EOF
 
 
@@ -51,6 +52,7 @@ cat tables.txt | grep dataset | \
     bash >> /tmp/ca_hhs_$$.html
 
 cat <<EOF >> /tmp/ca_hhs_$$.html
+<p>or see <a href="/hcai/table_columns/">table columns</a>.
 </div>
 </body></html>
 EOF
