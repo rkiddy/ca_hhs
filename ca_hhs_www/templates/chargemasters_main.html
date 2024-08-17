@@ -6,7 +6,7 @@
 </head>
 <body>
 <div style="padding: 25px 25px 25px 25px;">
-    {% include "top_list.html" %}
+    {% include "chargemasters_top.html" %}
     {% if year %}
     <table class="table table-striped">
     <caption>Files # {{ all_count }}</caption>
@@ -19,7 +19,7 @@
     <tbody>
         {% for file in files %}
         <tr>
-            <td><a href="/hcai/hcai_id/{{ file.hcai_id }}">{{ file.hcai_id }}</a></td>
+            <td><a href="/hcai/chargemasters/hcai_id/{{ file.hcai_id }}">{{ file.hcai_id }}</a></td>
             <td>{{ file.full_name }}</td>
         </tr>
         <tr>

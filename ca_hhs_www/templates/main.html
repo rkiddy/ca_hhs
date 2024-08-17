@@ -1,16 +1,13 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
 <html>
 <head>
-    <title>HHS</title>
+    <title>HCAI</title>
     {% include "styles.html" %}
 </head>
 <body>
 <div style="padding: 25px 25px 25px 25px;">
-<h2>Blank Descriptions</h2>
-<ul>
-{% for row in rows %}
-<li>{{ row }}</li>
-{% endfor %}
-</ul>
+    {% include "catalog_top.html" %}
+    <hr/>
+    {% include "chargemasters_top.html" %}
 </div>
 </body></html>

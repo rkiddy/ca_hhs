@@ -6,7 +6,7 @@
 </head>
 <body>
 <div style="padding: 25px 25px 25px 25px;">
-{% include "top_list.html" %}
+{% include "chargemasters_top.html" %}
 <h2>Facilities: {{ initial }}*</h2>
 <table class="table table-striped">
 <thead>
@@ -21,7 +21,7 @@
         <td>{{ name }}</td>
         <td>
         {% for hcai_id in names[name]['hcai_ids'] %}
-            <a href="/hcai/hcai_id/{{ hcai_id }}">{{ hcai_id }}</a><br/>
+            <a href="/hcai/chargemasters/hcai_id/{{ hcai_id }}">{{ hcai_id }}</a><br/>
         {% endfor %}
         </td>
     </tr>

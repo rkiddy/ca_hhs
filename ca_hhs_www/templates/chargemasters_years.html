@@ -6,7 +6,7 @@
 </head>
 <body>
 <div style="padding: 25px 25px 25px 25px;">
-{% include "top_list.html" %}
+{% include "chargemasters_top.html" %}
 <table class="table table-striped">
 <thead>
 <tr>
@@ -30,7 +30,7 @@
 <tbody>
 {% for id in ids %}
     <tr>
-        <td><a href="/hcai/hcai_id/{{ id }}">{{ id }}</a></td>
+        <td><a href="/hcai/chargemasters/hcai_id/{{ id }}">{{ id }}</a></td>
         <td>{{ ids[id]['name'] }}</td>
         <td>{% if '2011' in ids[id]['years'] %}x{% endif %}</td>
         <td>{% if '2012' in ids[id]['years'] %}x{% endif %}</td>

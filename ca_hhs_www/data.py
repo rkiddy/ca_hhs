@@ -1,7 +1,7 @@
 
 import io
-from pprint import pprint
 import re
+from pprint import pprint
 
 from dotenv import dotenv_values
 from flask import request
@@ -24,8 +24,20 @@ def db_exec(engine, sql):
     else:
         return engine.execute(sql)
 
+def main():
+    context = dict()
+    context.update(top_list_data())
+    return context
+
 
 def top_list_data():
+    context = dict()
+    context.update(chargemasters_top_data())
+    context.update(catalog_top_data())
+    return context
+
+
+def chargemasters_top_data():
     results = dict()
 
     rows = db_exec(conn, "select distinct(year) from chargemasters_files order by year")
@@ -36,6 +48,53 @@ def top_list_data():
     results['initials'] = [r['initial'] for r in rows]
 
     return results
+
+
+def catalog_top_data():
+    results = dict()
+    results['catalog_count'] = db_exec(conn, "select count(0) as count from catalog")[0]['count']
+    return results
+
+
+def catalog_main():
+    context = dict()
+    datasets = list()
+    for row in db_exec(conn, "select * from catalog"):
+        datasets.append(catalog_fixes(row))
+    context['datasets'] = datasets
+    return context
+
+
+def catalog_fixes(row):
+    row['created'] = row['created'][:10]
+    row['last_updated'] = row['last_updated'][:10]
+    row['tags'] = row['tags'].replace(',', ', ')
+    return row
+
+
+def catalog_detail(id_num):
+    context = dict()
+    sql = f"select * from catalog where _id = {id_num}"
+    dataset = db_exec(conn, sql)
+    context['dataset'] = catalog_fixes(dataset[0])
+    context['id'] = id_num
+    return context
+
+
+def catalog_next(id_num):
+    next_id = db_exec(conn, f"select _id from catalog where _id > {id_num} order by _id limit 1")
+    if not next_id or len(next_id) == 0:
+        return None
+    else:
+        return next_id[0]['_id']
+
+
+def catalog_prev(id_num):
+    prev_id = db_exec(conn, f"select _id from catalog where _id < {id_num} order by _id desc limit 1")
+    if not prev_id or len(prev_id) == 0:
+        return None
+    else:
+        return prev_id[0]['_id']
 
 
 def chargemasters_main(year):

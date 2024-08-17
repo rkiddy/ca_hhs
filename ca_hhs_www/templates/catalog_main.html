@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+    <title>HHS</title>
+    {% include "styles.html" %}
+    {% include "datatable.html" %}
+    <script>
+        $(document).ready(function () {
+            $('#hhs').DataTable(
+            {
+                    "columns": [
+                        {"name": "Title", "orderable": true},
+                        {"name": "Time Coverage", "orderable": false},
+                        {"name": "Geo Coverage", "orderable": false},
+                        {"name": "Created", "orderable": true},
+                        {"name": "Updated", "orderable": true},
+                        {"name": "Tags", "orderable": false}
+                    ]
+                }
+            );
+        });
+    </script>
+</head>
+<body>
+<div style="padding: 25px 25px 25px 25px;">
+    <p align="left"><a href="/hcai/">Home</a></p>
+    <table id="hhs" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Time Coverage</th>
+                <th>Geo Coverage</th>
+                <th>Created</th>
+                <th>Updated</th>
+                <th>Tags</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for dataset in datasets %}
+            <tr>
+                <td><a href="/hcai/catalog/detail/{{ dataset._id }}">{{ dataset.title }}</a></td>
+                <td>{{ dataset.temporal_coverage }}</td>
+                <td>{{ dataset.spatial_geographic_coverage }}</td>
+                <td>{{ dataset.created }}</td>
+                <td>{{ dataset.last_updated }}</td>
+                <td>{{ dataset.tags }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body></html>
