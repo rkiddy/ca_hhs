@@ -30,6 +30,18 @@ def main():
     return context
 
 
+def county_names():
+    rows = db_exec(conn, "select dhcs_county_code, county_name from dhcs_county_code_references")
+    found = dict()
+    for row in rows:
+        found[row['dhcs_county_code']] = row['county_name']
+    return found
+
+
+def osm_url(lat, long):
+    return f"https://www.openstreetmap.org/search?query={lat}/{long}"
+
+
 def top_list_data():
     context = dict()
     context.update(chargemasters_top_data())
@@ -335,6 +347,19 @@ def chargemasters_calc_changes(s):
     found = list(set(found))
 
     return found
+
+
+def buildings_spc():
+    context = dict()
+    county = county_names()
+    found = list()
+    for row in db_exec(conn, "select * from hospital_buildings"):
+        row['county'] = county[row['county_code']]
+        row['location'] = osm_url(row['latitude'], row['longitude'])
+        found.append(row)
+    context['buildings'] = found
+    return context
+
 
 def table_info():
     context = dict()

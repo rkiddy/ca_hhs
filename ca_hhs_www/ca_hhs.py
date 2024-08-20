@@ -111,12 +111,18 @@ def chargemasters_changes():
 #     return redirect(f"/{cfg['WWW']}/")
 
 
+@ca_hhs.route(f"/{cfg['WWW']}/buildings/spc/")
+def buildings_spc_ratings():
+    main = env.get_template('buildings_spc.html')
+    context = data.buildings_spc()
+    return main.render(**context)
+
+
 @ca_hhs.route(f"/{cfg['WWW']}/table_columns/")
 def columns():
     main = env.get_template('ca_hhs_tables.html')
     context = data.table_info()
     return main.render(**context)
-
 
 if __name__ == '__main__':
     ca_hhs.run(port=8080)

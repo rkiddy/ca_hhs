@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+    <title>Chargemasters</title>
+    {% include "styles.html" %}
+    {% include "datatable.html" %}
+    <script>
+        $(document).ready(function () {
+            $('#buildings').DataTable(
+            {
+                    "pageLength": 100,
+                    "columns": [
+                        {"name": "SPC Rating", "orderable": true},
+                        {"name": "SPC Verified", "orderable": true},
+                        {"name": "Building Name", "orderable": true},
+                        {"name": "Building Status", "orderable": true},
+                        {"name": "Stories", "orderable": true},
+                        {"name": "County", "orderable": true},
+                        {"name": "Location", "orderable": false}
+                    ]
+                }
+            );
+        });
+    </script>
+</head>
+<body>
+<div style="padding: 25px 25px 25px 25px;">
+<table class="table table-striped" id="buildings">
+<thead>
+<tr>
+    <th><div title="Structural Performance Category used to rate the building structure, can be 1 to 5. SPC 1 is assigned to buildings that may be at risk of collapse in a strong earthquake and SPC 5 is assigned to buildings reasonably capable of providing services to the public following strong ground motion. A -1 is not documented but seems to indicate the building is proposed or in construction.">SPC Rating *</div></th>
+    <th><div title="A 's' is added when the rating is not confirmed by HCAI. An 'N' indicates that the SPC Rating is N/A. The 'D' value is not documented.">SPC Verified *</div></th>
+    <th>Building Name</th>
+    <th>Building Status</th>
+    <th>Stories</th>
+    <th>County</th>
+    <th>Location</th>
+</tr>
+</thead>
+<tbody>
+{% for b in buildings %}
+<tr>
+    <td>{{ b.spc_rating }}</td>
+    <td>{% if b.spc_verified %}{{ b.spc_verified }}{% endif %}</td>
+    <td>{{ b.building_name }}</td>
+    <td>{{ b.building_status }}</td>
+    <td>{{ b.stories }}</td>
+    <td>{{ b.county }}</td>
+    <td><a href="{{ b.location }}"><img src="https://opencalaccess.org/img/map_location.png" width="20" /></a></td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+</body></html>
