@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+    <title>Chargemasters</title>
+    {% include "styles.html" %}
+</head>
+<body>
+<div style="padding: 25px 25px 25px 25px;">
+    <table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Table</th>
+            <th>Dataset / Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for name in names %}
+        <tr>
+            <td>{{ name }}</a></td>
+            <td>
+            {% for table in columns[name] %}
+            {{ table }} - {{ columns[name][table] }}<br/>
+            {% endfor %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+</div>
+</body></html>

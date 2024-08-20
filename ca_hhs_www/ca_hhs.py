@@ -113,7 +113,7 @@ def chargemasters_changes():
 
 @ca_hhs.route(f"/{cfg['WWW']}/table_columns/")
 def columns():
-    main = env.get_template('tables.html')
+    main = env.get_template('ca_hhs_tables.html')
     context = data.table_info()
     return main.render(**context)
 
