@@ -118,6 +118,13 @@ def buildings_spc_ratings():
     return main.render(**context)
 
 
+@ca_hhs.route(f"/{cfg['WWW']}/buildings/detail/<perm_id>")
+def buildings_detail(perm_id):
+    main = env.get_template('buildings_detail.html')
+    context = data.building_details(perm_id)
+    return main.render(**context)
+
+
 @ca_hhs.route(f"/{cfg['WWW']}/table_columns/")
 def columns():
     main = env.get_template('ca_hhs_tables.html')

@@ -361,6 +361,12 @@ def buildings_spc():
     return context
 
 
+def building_details(perm_id):
+    context = dict()
+    context['buildings'] = db_exec(conn, f"select * from hospital_buildings where perm_id = {perm_id}")
+    return context
+
+
 def table_info():
     context = dict()
     rows = db_exec(conn, "show tables")
