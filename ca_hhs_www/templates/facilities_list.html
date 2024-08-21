@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+    <title>HCAI Facilities List</title>
+    {% include "styles.html" %}
+    {% include "datatable.html" %}
+    <script>
+        $(document).ready(function () {
+            $('#hhs').DataTable(
+            {
+                    "pageLength": 100,
+                    "columns": [
+                        {"name": "HCAI Id", "orderable": true},
+                        {"name": "Faciltiy Name", "orderable": true},
+                        {"name": "ER LoS", "orderable": true},
+                        {"name": "Beds", "orderable": true},
+                        {"name": "Status", "orderable": true},
+                        {"name": "Date From", "orderable": true},
+                        {"name": "Category", "orderable": true},
+                        {"name": "Location", "orderable": false}
+                    ]
+                }
+            );
+        });
+    </script>
+</head>
+<body>
+<div style="padding: 25px 25px 25px 25px;">
+    <h3>Filters:</h3>
+    <form action="/hcai/facilities_list/" method="post">
+    <table>
+        <tr>
+            <td><label for="county">County</label></td>
+            <td>
+            <select name="county_selected" id="county">
+                {% for county in counties %}
+                    {% if county['name'] == county_selected %}
+                    <option value="{{ county.name }}" selected>{{ county.name }}</option>
+                    {% else %}
+                    <option value="{{ county.name }}">{{ county.name }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+            </td>
+        </tr><tr>
+            <td><label for="category">Category</label></td>
+            <td>
+            <select name="category_selected" id="category">
+                {% for category in categories %}
+                    {% if category['name'] == category_selected %}
+                    <option value="{{ category.name }}" selected>{{ category.name }}</option>
+                    {% else %}
+                    <option value="{{ category.name }}">{{ category.name }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+            </td>
+        </tr><tr>
+            <td><label for="er_los">ER Level of Service</label></td>
+            <td>
+            <select name="er_los_selected" id="er_los">
+                {% for los in er_los %}
+                    {% if los['name'] == er_los_selected %}
+                    <option value="{{ los.name }}" selected>{{ los.name }}</option>
+                    {% else %}
+                    <option value="{{ los.name }}">{{ los.name }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+            </td>
+        </tr><tr>
+            <td>&nbsp;</td><td><input type="submit" name="submit" value="Fetch" /></td>
+        </tr></table>
+    </form>
+    {% if facilities %}
+    <table class="table table-striped">
+    <thead>
+        <tr>
+            <th>HCAI Id</th>
+            <th>Facility Name</th>
+            <th>County</th>
+            <th>ER LoS</th>
+            <th>Beds</th>
+            <th>Status</th>
+            <th>Date From</th>
+            <th>Category</th>
+            <th>Location</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for f in facilities %}
+        <tr>
+            <td><a href="/hcai/chargemasters/hcai_id/{{ f.oshpd_id }}">{{ f.oshpd_id }}</a></td>
+            <td>{{ f.facility_name }}</td>
+            <td>{{ f.county_name }}</td>
+            <td>{{ f.er_service_level_desc }}</td>
+            <td>{{ f.total_number_beds }}</td>
+            <td>{{ f.facility_status_desc }}</td>
+            <td>{{ f.facility_status_date }}</td>
+            <td>{{ f.license_category_desc }}</td>
+            <td><a href="{{ f.location }} target="_blank""><img src="https://opencalaccess.org/img/map_location.png" width="20" /></a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+    {% endif %}
+</div>
+</body></html>

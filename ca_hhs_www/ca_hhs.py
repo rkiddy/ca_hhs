@@ -125,6 +125,26 @@ def buildings_detail(perm_id):
     return main.render(**context)
 
 
+@ca_hhs.route(f"/{cfg['WWW']}/facilities/")
+def facilities_main():
+    main = env.get_template('facilities_main.html')
+    context = data.facilities_main()
+    return main.render(**context)
+
+
+@ca_hhs.route(f"/{cfg['WWW']}/facilities_filter/", methods=['POST'])
+def chargemasters_read_changes():
+    print(f"form: {request.form}")
+    return redirect(f"/{cfg['WWW']}/facilities_list/")
+
+
+@ca_hhs.route(f"/{cfg['WWW']}/facilities_list/", methods=['POST', 'GET'])
+def facilities_listing():
+    main = env.get_template('facilities_list.html')
+    context = data.facilities_list(request.form)
+    return main.render(**context)
+
+
 @ca_hhs.route(f"/{cfg['WWW']}/table_columns/")
 def columns():
     main = env.get_template('ca_hhs_tables.html')

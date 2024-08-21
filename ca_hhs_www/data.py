@@ -42,6 +42,20 @@ def osm_url(lat, long):
     return f"https://www.openstreetmap.org/search?query={lat}/{long}"
 
 
+def fix_int(start):
+    if start is None:
+        return 'NULL'
+    else:
+        return str(start).replace(',', '')
+
+
+def fix(start):
+    if start is None:
+       return 'NULL'
+    else:
+       return start.replace("'", "''").replace('%', '%%')
+
+
 def top_list_data():
     context = dict()
     context.update(chargemasters_top_data())
@@ -364,6 +378,64 @@ def buildings_spc():
 def building_details(perm_id):
     context = dict()
     context['buildings'] = db_exec(conn, f"select * from hospital_buildings where perm_id = {perm_id}")
+    return context
+
+
+def facilities_main():
+    context = dict()
+
+    sql = """select county_name as name, count(0) as count from licensed_facilities
+             group by county_name order by county_name"""
+    context['counties'] = db_exec(conn, sql)
+
+    sql = """select license_category_desc as name, count(0) as count from licensed_facilities
+             group by license_category_desc order by license_category_desc"""
+    context['categories'] = db_exec(conn, sql)
+
+    sql = """select er_service_level_desc as name, count(0) as count from licensed_facilities
+             group by er_service_level_desc order by er_service_level_desc"""
+    context['er_los'] = db_exec(conn, sql)
+
+    return context
+
+
+facilities_list_numbers = ['oshpd_id', 'total_number_beds']
+facilities_list_hidden = ['latitude', 'longitude']
+
+def facilities_list(form):
+    print(f"form: {form}")
+
+    context = facilities_main()
+
+    quals = list()
+    if 'county_selected' in form:
+        quals.append(f"county_name = '{form['county_selected']}'")
+        context['county_selected'] = form['county_selected']
+    if 'category_selected' in form and form['category_selected'] != '':
+        quals.append(f"license_category_desc = '{form['category_selected']}'")
+        context['category_selected'] = form['category_selected']
+    if 'er_los_selected' in form and form['er_los_selected'] != '':
+        quals.append(f"er_service_level_desc = '{form['er_los_selected']}'")
+        context['er_los_selected'] = form['er_los_selected']
+    print(f"quals: {quals}")
+
+    found = list()
+
+    if len(quals) > 0:
+        sql = f"select * from licensed_facilities where {' and '.join(quals)}"
+        for row in db_exec(conn, sql):
+            next_row = dict()
+            for key in row:
+                if key in facilities_list_hidden:
+                    continue
+                if key in facilities_list_numbers:
+                    next_row[key] = fix_int(row[key])
+                else:
+                    next_row[key] = fix(row[key])
+            next_row['location'] = osm_url(row['latitude'], row['longitude'])
+            found.append(next_row)
+    pprint(context)
+    context['facilities'] = found
     return context
 
 
