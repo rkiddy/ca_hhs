@@ -187,6 +187,12 @@ https://www.cdph.ca.gov/Programs/CHCQ/HAI/Pages/AnnualHAIReports.aspx
 </details>
 
 <details>
+<summary>test-cdph-immunizations-in-first-grade-by-academic-year</summary>
+
+TBD
+</details>
+
+<details>
 <summary>suspended-and-ineligible-list-s-i-list</summary>
 
 TBD
@@ -221,6 +227,7 @@ TBD
 * OSHPDID - A unique number established by the Department of Health Care Access and Information (HCAI) for identifying facilities and used in the Licensed Facility Information System (LFIS).
 * SIR - Standardized Infection Ratio
 * SMR - Standardized Mortality Ratio
+* SPC - Structural Performance Category (in re buildings)
 * SNAP
 * SUD - Substance-Use Disorder
 * TANF - Temporary Assistance for Needy Families

@@ -50,6 +50,9 @@ table payments_snapshot_medical
 table payments_snapshot_pharmaceutical
 
 dataset healthcare-workforce-geography-crosswalk
+table licensed_facility_elms_oshpd_crosswalk
+table licensed_facility_elms_aspen_crosswalk
+table licensed_facility_aspen_oshpd_crosswalk
 
 dataset hospital-building-data
 table hospital_buildings

@@ -201,9 +201,9 @@ DROP TABLE IF EXISTS `dhcs_county_code_references`;
 CREATE TABLE `dhcs_county_code_references` (
   `objectid` int DEFAULT NULL,
   `dhcs_county_code` int DEFAULT NULL,
-  `county_name` varchar(63) DEFAULT NULL,
+  `county_name` varchar(31) DEFAULT NULL,
   `county_region_code` char(1) DEFAULT NULL,
-  `county_region_description` varchar(255) DEFAULT NULL,
+  `county_region_description` varchar(31) DEFAULT NULL,
   `fips_county_code` int DEFAULT NULL,
   `fips_state_county_code` int DEFAULT NULL,
   `north_south_indicator` char(1) DEFAULT NULL
@@ -583,14 +583,15 @@ CREATE TABLE `hhs_program_july_masks` (
 
 DROP TABLE IF EXISTS `hospital_buildings`;
 CREATE TABLE `hospital_buildings` (
-  `county_code` varchar(31) DEFAULT NULL,
-  `perm_id` varchar(11) DEFAULT NULL,
+  `county_code` int DEFAULT NULL,
+  `perm_id` int DEFAULT NULL,
   `facility_name` varchar(127) DEFAULT NULL,
   `city` varchar(31) DEFAULT NULL,
   `building_nbr` varchar(63) DEFAULT NULL,
   `building_name` varchar(127) DEFAULT NULL,
-  `building_status` varchar(31) DEFAULT NULL,
-  `spc_rating` varchar(3) DEFAULT NULL,
+  `building_status` varchar(63) DEFAULT NULL,
+  `spc_rating` int DEFAULT NULL,
+  `spc_verified` char(1) DEFAULT NULL,
   `building_url` varchar(255) DEFAULT NULL,
   `height_ft` int DEFAULT NULL,
   `stories` int DEFAULT NULL,
@@ -701,6 +702,69 @@ CREATE TABLE `licensed_facilities` (
   `license_category_desc` varchar(63) DEFAULT NULL,
   `latitude` decimal(12,8) DEFAULT NULL,
   `longitude` decimal(12,8) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `licensed_facility_aspen_oshpd_crosswalk`
+--
+
+DROP TABLE IF EXISTS `licensed_facility_aspen_oshpd_crosswalk`;
+CREATE TABLE `licensed_facility_aspen_oshpd_crosswalk` (
+  `license_certified` varchar(63) DEFAULT NULL,
+  `elms_facid` char(10) DEFAULT NULL,
+  `license_number` char(10) DEFAULT NULL,
+  `license_status_description` varchar(63) DEFAULT NULL,
+  `oshpd_id` varchar(31) DEFAULT NULL,
+  `aspen_facid` varchar(31) DEFAULT NULL,
+  `ccn` varchar(10) DEFAULT NULL,
+  `npi` char(10) DEFAULT NULL,
+  `aspen_status` varchar(63) DEFAULT NULL,
+  `facname` varchar(255) DEFAULT NULL,
+  `fac_type_description` varchar(127) DEFAULT NULL,
+  `fac_fdr` varchar(63) DEFAULT NULL,
+  `fac_fac_relationship` varchar(63) DEFAULT NULL,
+  `elms_parent_facid` char(9) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `licensed_facility_elms_aspen_crosswalk`
+--
+
+DROP TABLE IF EXISTS `licensed_facility_elms_aspen_crosswalk`;
+CREATE TABLE `licensed_facility_elms_aspen_crosswalk` (
+  `xwalk_note` varchar(63) DEFAULT NULL,
+  `age` varchar(7) DEFAULT NULL,
+  `elms_facid` char(10) DEFAULT NULL,
+  `license_number` char(10) DEFAULT NULL,
+  `license_status_description` varchar(63) DEFAULT NULL,
+  `aspen_id` varchar(31) DEFAULT NULL,
+  `ccn` varchar(10) DEFAULT NULL,
+  `npi` char(10) DEFAULT NULL,
+  `aspen_status` varchar(63) DEFAULT NULL,
+  `facname` varchar(255) DEFAULT NULL,
+  `fac_type_description` varchar(127) DEFAULT NULL,
+  `fac_fdr` varchar(63) DEFAULT NULL,
+  `fac_fac_relationship` varchar(63) DEFAULT NULL,
+  `elms_parent_facid` char(9) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `licensed_facility_elms_oshpd_crosswalk`
+--
+
+DROP TABLE IF EXISTS `licensed_facility_elms_oshpd_crosswalk`;
+CREATE TABLE `licensed_facility_elms_oshpd_crosswalk` (
+  `xwalk_note` varchar(63) DEFAULT NULL,
+  `age` varchar(7) DEFAULT NULL,
+  `elms_facid` char(10) DEFAULT NULL,
+  `license_number` char(10) DEFAULT NULL,
+  `license_status_description` varchar(63) DEFAULT NULL,
+  `oshpd_id` char(9) DEFAULT NULL,
+  `facname` varchar(255) DEFAULT NULL,
+  `fac_type_description` varchar(127) DEFAULT NULL,
+  `fac_fdr` varchar(63) DEFAULT NULL,
+  `fac_fac_relationship` varchar(63) DEFAULT NULL,
+  `elms_parent_facid` char(9) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -1173,4 +1237,4 @@ CREATE TABLE `wic_products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2024-08-17 16:05:33
+-- Dump completed on 2024-08-22 11:16:59
