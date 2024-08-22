@@ -1,5 +1,5 @@
-export uuid1="b4ec63c6-48e0-41bf-83bb-490f789ac56e"
-export uuid2="fb9237cc-885f-4920-afa6-2d11e43fdaf6"
+export uuid1="1e5185d9-f48f-4ce8-9f6d-d1baf01001c6"
+export uuid2="5e01fe4d-a50d-4e97-bfa3-ceef9a9ca611"
 export id="dhcs-county-code-reference-table"
-export hash="ay3pg9fp"
+export hash="qjdg69qm"
 export script="counties"
