@@ -11,38 +11,11 @@ def load_my_workbook(ext, f):
         return open_workbook(f)
 
 
-def name_has_something_common(name):
-    if 'Common' in name or 'COMMON' in name:
-        return True
-    if 'AB 1045' in name:
-        return True
-    if 'Top 25' in name or 'TOP 25' in name:
-        return True
-    return False
-
 def sheet_names(ext, wbook):
     if ext == 'xlsx':
         return wbook.sheetnames
     if ext == 'xls':
         raise Exception("what")
-
-
-# Find the "Common25" sheet, acitvate it (however) and return the sheet.
-#
-def common25_sheet(ext, wbook):
-
-    if ext == 'xlsx':
-        for found_name in wbook.sheetnames:
-            if name_has_something_common(found_name):
-                wbook.active = wbook[found_name]
-                return wbook[found_name]
-
-    if ext == 'xls':
-        for found_name in wbook.sheet_names():
-            if name_has_something_common(found_name):
-                return wbook.sheet_by_name(found_name)
-
-    return None
 
 
 def only_sheet(ext, wbook):
@@ -56,51 +29,56 @@ def only_sheet(ext, wbook):
 cols = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
 
 
-def find_column_heads(ext, ws):
+def find_common25_col_heads(ext, wbook, sheet_name):
 
     if ext != 'xlsx':
         return None
 
     found = None
 
-    for row in range(10):
-        for col in cols:
+    ws = wbook[sheet_name]
 
-            key = f"{col}{(row+1)}"
+    for row in range(1,10):
+        for col_idx in range(len(cols)-2):
 
-            if ws[key].value is None:
-                continue
+            key1 = f"{cols[col_idx]}{(row)}"
+            key2 = f"{cols[col_idx+1]}{(row)}"
+            key3 = f"{cols[col_idx+2]}{(row)}"
+            # print(f"keys: {key1}, {key2}, {key3}")
 
-            ok = False
+            col_names = {key1: ws[key1].value, key2: ws[key2].value, key3: ws[key3].value}
+            if None not in col_names.values():
+                return col_names
+            # else:
+            #     print(f"NOT {col_names}")
 
-            ok |= str(ws[key].value).endswith('CPT Code')
+    return None
 
-            ok |= str(ws[key].value).endswith('CPT CODE')
 
-            ok |= str(ws[key].value).endswith('ChargeCode')
+def cell(ext, ws, key):
+    if ext == 'xlsx':
+        return ws[key]
+    return None
 
-            if ok:
-                found = {'CPT Code': {'row': row+1, 'col': col}}
 
-                prevCol = cols[cols.index(col) - 1]
-                found['Procedure'] = {'row': row+1, 'col': prevCol}
-
-                nextCol = cols[cols.index(col) + 1]
-                found['Cost'] = {'row': row+1, 'col': nextCol}
-
-    return found
+def cell_type(ext, wbook, ws, key):
+    t = cell(ext, wbook[ws], key)
+    if t is None:
+        return None
+    else:
+        return t.data_type
 
 
 def cell_value(ext, ws, key):
     if ext == 'xlsx':
         return ws[key].value
-
     return None
 
 
-def cell_value_str(ext, ws, key):
+def cell_value_str(ext, wbook, sheet_name, key):
 
     if ext == 'xlsx':
+        ws = wbook[sheet_name]
         if ws[key].value is None:
             return None
         else:
