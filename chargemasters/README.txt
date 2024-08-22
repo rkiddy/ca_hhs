@@ -2,6 +2,33 @@
 This dataset is complex. There are multiple problems with real data extraction and this is a work
 in progress.
 
+---------------------------------------------------------------------------------------
+
+There are files that are keeping track of something.
+
+diffs_2023_2024.txt - These are differences I found between the 2023 files and the 2024 files when the
+latter files were released in August of 2024.
+
+cdm.py - Reading from the CDM or 'CDM All' spreadsheets and, where it works, putting the data into a table.
+
+columns.py - Trying to find the column heads, as we need for the Common25 and CDM data.
+
+common25.py - Trying to save the Common25 data.
+
+diffs_2023_2024.txt - These are differences I found between the 2023 files and the 2024 files when the
+latter files were released in August of 2024.
+
+excel.py - Trying to abstract out the reading and writing of the various excel files.
+
+files_import.sh - DO NOT USE. This is complex and may not work. Test as you go.
+
+files.txt - Produced by the files_list.sh script, so that we can compare with the files as we started.
+
+sheets.py - Was trying to use a chargemasters_sheets table to keep track of what the various sheets were named.
+
+sources.txt - Produced by the sources/create_source_list.sh script, so that we can track our fixes for file names.
+
+---------------------------------------------------------------------------------------
 
 Each facility is supposed to send in multiple Excel files, or multiple sheets in a single Excel file,
 every year. The data one can download is the zip file that contains all of those files.

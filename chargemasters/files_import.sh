@@ -46,8 +46,7 @@ drop table if exists chargemasters_dirs;
 create table chargemasters_dirs (
     pk int primary key,
     directory varchar(255),
-    year int,
-    hcai_id varchar(15));
+    year int);
 update chargemasters_files set dir_pk = NULL;
 delete from chargemasters_dir_hcai_id_joins;
 EOF
@@ -132,8 +131,6 @@ if [ "$1" == "--files" ] || [ "$1" == "--all" ]; then
 
     echo "done"
 
-    # The HCAI id values will not end up here. They will be in the dirs table. But until then...
-    #
     echo "fixing hcai_id values..."
     echo "select full_name from chargemasters_files where hcai_id is NULL;" | \
         mysql --skip-column-names ca_hhs | \
