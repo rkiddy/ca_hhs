@@ -1,5 +1,6 @@
 
 import csv
+import sys
 import traceback
 
 from sqlalchemy import create_engine
