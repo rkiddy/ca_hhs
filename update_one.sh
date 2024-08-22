@@ -1,4 +1,6 @@
 
+HOME="/home/ray/Projects/ca_hhs"
+
 if [ ! -f ./deets.sh ]; then
     echo ""
     echo "Please put down a \"deets.sh\" file with the uuid1, uuid2, id, and hash values for downloading."
@@ -20,6 +22,13 @@ if [ "$1" != "" ] && [ "$1" != "--no-fetch" ] && [ "$1" != "--only-fetch" ]; the
     echo "usage: bash update.sh [ --no-fetch | --only-fetch ]"
     echo ""
     exit
+fi
+
+if [ `pwd` = $HOME'/chargemasters' ]; then
+    echo ""
+    echo "Aborting update to chargemasters as it cannot be automatically updated."
+    echo ""
+    exit 0
 fi
 
 source ./deets.sh
