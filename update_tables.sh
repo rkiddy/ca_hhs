@@ -1,5 +1,5 @@
 
-# list out the tables in the database, skipping the updates table, because that is administraive.
+# list out the tables in the database, skipping the updates table, because that is administrative.
 #
 echo "show tables;" | \
     mysql --skip-column-names ca_hhs | \
@@ -56,9 +56,24 @@ EOF
 
 cat tables.txt | \
     awk '{if ($1 == "dataset") print ""; print $2}' | \
-    awk 'BEGIN{FS="\n";RS=""}{print $1,(NF-1)}' | \
-    awk '{print "<p>"$1" (tables # "$2")<br/>{% include \"tops/"$1"-top.html\" %}</p>"}' >> /tmp/ca_hhs_$$.html
+    awk 'BEGIN{FS="\n";RS=""}{print $1"\n"(NF-1)"\n"}' > /tmp/ca_hhs_work_$$.txt
 
+# this is complex but I am pulling together output from the tables.txt file and the database. Simpler in python.
+#
+cat /tmp/ca_hhs_work_$$.txt | \
+    awk 'BEGIN{FS="\n";RS=""}
+         {print "echo \""$1"\"";
+          print "echo \""$2"\"";
+          print "( echo \"select from_unixtime(max(updated)) as updated\";";
+          print "echo \"    from updates where dataset_id = '\''"$1"'\'' order by updated desc limit 1\" ) | \\";
+          print "    mysql --skip-column-names ca_hhs | awk '\''{print $1}'\''";
+          print "echo \"\"";
+          print ""}' | \
+    bash > /tmp/ca_hhs_work2_$$.txt
+
+cat /tmp/ca_hhs_work2_$$.txt | \
+    awk 'BEGIN{FS="\n";RS=""}
+         {print "<p>"$1"<br/>tables # "$2", updated: "$3"<br/>{% include \"tops/"$1"-top.html\" %}</p>"}' >> /tmp/ca_hhs_$$.html
 
 cat <<EOF >> /tmp/ca_hhs_$$.html
 <p>or see <a href="/hcai/table_columns/">table columns</a>.
