@@ -1,8 +1,13 @@
 
+# list out the tables in the database, skipping the updates table, because that is administraive.
+#
 echo "show tables;" | \
     mysql --skip-column-names ca_hhs | \
+    grep -v '^updates$' | \
     awk '{print "table",$0}' > /tmp/tables_$$.txt
 
+# read out the dataset names from finding deets files.
+#
 find * -name deets.sh -print | \
     sed 's/\/deets.sh//' | \
     awk '{print "dataset",$0}' > /tmp/datasets_$$.txt
@@ -29,6 +34,14 @@ mysqldump --no-data ca_hhs | grep -v '\/\*' > tables.sql
 echo "Regenerating the ca_hhs_www/templates/main.html file"
 echo ""
 
+# make sure there is a top file for every dataset, even if it is empty.
+#
+d="ca_hhs_www/templates/tops"
+
+cat tables.txt | grep dataset | \
+    awk '{print "if [ ! -f '$d'/"$2"-top.html ]; then touch '$d'/"$2"-top.html ; fi"}' | \
+    bash
+
 cat <<EOF > /tmp/ca_hhs_$$.html
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
 <html>
@@ -41,15 +54,11 @@ cat <<EOF > /tmp/ca_hhs_$$.html
 <h2>Datasets:</h2>
 EOF
 
+cat tables.txt | \
+    awk '{if ($1 == "dataset") print ""; print $2}' | \
+    awk 'BEGIN{FS="\n";RS=""}{print $1,(NF-1)}' | \
+    awk '{print "<p>"$1" (tables # "$2")<br/>{% include \"tops/"$1"-top.html\" %}</p>"}' >> /tmp/ca_hhs_$$.html
 
-cat tables.txt | grep dataset | \
-    awk '{print "<p>"$2": {% include \"tops/"$2"-top.html\" %}</p>"}' >> /tmp/ca_hhs_$$.html
-
-d="ca_hhs_www/templates/tops"
-
-cat tables.txt | grep dataset | \
-    awk '{print "if [ ! -f '$d'/"$2"-top.html ]; then touch '$d'/"$2"-top.html ; fi"}' | \
-    bash >> /tmp/ca_hhs_$$.html
 
 cat <<EOF >> /tmp/ca_hhs_$$.html
 <p>or see <a href="/hcai/table_columns/">table columns</a>.
