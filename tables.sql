@@ -210,6 +210,16 @@ CREATE TABLE `dhcs_county_code_references` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `family_pact_total_provider_reimbursement`
+--
+
+DROP TABLE IF EXISTS `family_pact_total_provider_reimbursement`;
+CREATE TABLE `family_pact_total_provider_reimbursement` (
+  `fiscal_year` int DEFAULT NULL,
+  `amount` decimal(16,2) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `healthcare_facilities`
 --
 
@@ -1264,4 +1274,4 @@ CREATE TABLE `xray_providers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2024-08-22 19:14:05
+-- Dump completed on 2024-08-22 19:49:42
