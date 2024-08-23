@@ -1236,5 +1236,18 @@ CREATE TABLE `wic_products` (
   `uom` varchar(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Table structure for table `xray_providers`
+--
 
--- Dump completed on 2024-08-22 11:16:59
+DROP TABLE IF EXISTS `xray_providers`;
+CREATE TABLE `xray_providers` (
+  `license_type` varchar(127) DEFAULT NULL,
+  `first_name` varchar(127) DEFAULT NULL,
+  `last_name` varchar(127) DEFAULT NULL,
+  `city` varchar(31) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- Dump completed on 2024-08-22 18:41:57

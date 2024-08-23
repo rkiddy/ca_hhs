@@ -114,3 +114,6 @@ table wic_products
 dataset women-infants-and-children-wic-authorized-vendors
 table authorized_wic_vendors
 
+dataset x-ray-technologist-listing-in-california
+table xray_providers
+
