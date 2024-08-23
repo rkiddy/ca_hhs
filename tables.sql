@@ -977,6 +977,20 @@ CREATE TABLE `providers_suspended_ineligible_us` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `respiratory_virus_dashboard`
+--
+
+DROP TABLE IF EXISTS `respiratory_virus_dashboard`;
+CREATE TABLE `respiratory_virus_dashboard` (
+  `data_date` char(10) DEFAULT NULL,
+  `area` varchar(63) DEFAULT NULL,
+  `area_type` varchar(63) DEFAULT NULL,
+  `deaths_dc_dod_covid` int DEFAULT NULL,
+  `deaths_dc_dod_influenza` int DEFAULT NULL,
+  `deaths_dc_dod_all_disease` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `school_immunizations`
 --
 
@@ -1250,4 +1264,4 @@ CREATE TABLE `xray_providers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2024-08-22 18:41:57
+-- Dump completed on 2024-08-22 19:14:05

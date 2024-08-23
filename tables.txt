@@ -92,6 +92,9 @@ dataset provider-suspended-and-ineligible-list-s-i-list
 table providers_suspended_ineligible
 table providers_suspended_ineligible_us
 
+dataset respiratory-virus-dashboard-metrics
+table respiratory_virus_dashboard
+
 dataset statewide-death-profiles
 table statewide_death_profiles
 
