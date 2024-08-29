@@ -11,24 +11,35 @@
 <thead>
 <tr>
     <th>HCAI Id</th>
-    <th>Directories</th>
-    <th>Files</th>
+    <th>Hosptial Names</th>
 </tr>
 </thead>
 <tbody>
 {% for id in ids %}
     <tr>
         <td><a href="/hcai/chargemasters/hcai_id/{{ id }}">{{ id }}</a></td>
-        <td>
+        <td colspan="14">
         {% for name in ids[id]['names'] %}
             {{ name }}<br/>
         {% endfor %}
         </td>
-        <td>
-        {% for file in ids[id]['files'] %}
-             {{ file }}<br/>
-        {% endfor %}
-        </td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>{% if '2011' in ids[id]['missing'] %}*&nbsp;<font color="red">{% else %}<font color="black">{% endif %}2011</font></td>
+        <td>{% if '2012' in ids[id]['missing'] %}*&nbsp;<font color="red">{% else %}<font color="black">{% endif %}2012</font></td>
+        <td>{% if '2013' in ids[id]['missing'] %}*&nbsp;<font color="red">{% else %}<font color="black">{% endif %}2013</font></td>
+        <td>{% if '2014' in ids[id]['missing'] %}*&nbsp;<font color="red">{% else %}<font color="black">{% endif %}2014</font></td>
+        <td>{% if '2015' in ids[id]['missing'] %}*&nbsp;<font color="red">{% else %}<font color="black">{% endif %}2015</font></td>
+        <td>{% if '2016' in ids[id]['missing'] %}*&nbsp;<font color="red">{% else %}<font color="black">{% endif %}2016</font></td>
+        <td>{% if '2017' in ids[id]['missing'] %}*&nbsp;<font color="red">{% else %}<font color="black">{% endif %}2017</font></td>
+        <td>{% if '2018' in ids[id]['missing'] %}*&nbsp;<font color="red">{% else %}<font color="black">{% endif %}2018</font></td>
+        <td>{% if '2019' in ids[id]['missing'] %}*&nbsp;<font color="red">{% else %}<font color="black">{% endif %}2019</font></td>
+        <td>{% if '2020' in ids[id]['missing'] %}*&nbsp;<font color="red">{% else %}<font color="black">{% endif %}2020</font></td>
+        <td>{% if '2021' in ids[id]['missing'] %}*&nbsp;<font color="red">{% else %}<font color="black">{% endif %}2021</font></td>
+        <td>{% if '2022' in ids[id]['missing'] %}*&nbsp;<font color="red">{% else %}<font color="black">{% endif %}2022</font></td>
+        <td>{% if '2023' in ids[id]['missing'] %}*&nbsp;<font color="red">{% else %}<font color="black">{% endif %}2023</font></td>
     </tr>
 {% endfor %}
 </tbody>

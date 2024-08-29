@@ -69,7 +69,7 @@ def chargemasters_top_data():
     rows = db_exec(conn, "select distinct(year) from chargemasters_files order by year")
     results['years'] = [r['year'] for r in rows]
 
-    sql = "select distinct(substr(directory,6,1)) as initial from chargemasters_dirs order by initial;"
+    sql = "select distinct(substr(full_name,6,1)) as initial from chargemasters_dirs order by initial;"
     rows = db_exec(conn, sql)
     results['initials'] = [r['initial'] for r in rows]
 
@@ -177,7 +177,7 @@ def chargemasters_facilities(initial):
     context['initial'] = initial
 
 
-    sql = f"select * from chargemasters_dirs where substr(directory,6,1) = '{initial}'"
+    sql = f"select * from chargemasters_dirs where substr(full_name,6,1) = '{initial}'"
     print(f"sql: {sql}")
     dir_rows = db_exec(conn, sql)
 
@@ -190,7 +190,7 @@ def chargemasters_facilities(initial):
     found = dict()
 
     for d_row in dir_rows:
-        name = name_from_directory(d_row['directory'])
+        name = name_from_directory(d_row['full_name'])
         if name not in found:
             found[name] = dict()
             found[name]['d_pk'] = list()
@@ -243,50 +243,41 @@ def chargemasters_years():
 
     return context
 
+chargemasters_years_expected = ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2121', '2022', '2023']
 
 def chargemasters_hcai_ids():
     context = dict()
     context.update(top_list_data())
 
-    sql = f"select * from chargemasters_dirs"
-    print(f"sql: {sql}")
-    dir_rows = db_exec(conn, sql)
-    dpks = ', '.join([str(r['pk']) for r in dir_rows])
-
-    sql = f"select * from chargemasters_dir_hcai_id_joins where dir_pk in ({dpks})"
-    id_rows = db_exec(conn, sql)
-    print(f"id_rows #: {len(id_rows)}")
-
-    file_rows = db_exec(conn, "select * from chargemasters_files")
-
     found = dict()
 
-    for i_row in id_rows:
-        id = i_row['hcai_id']
+    sql = f"select * from chargemasters_dirs"
+    # print(f"sql: {sql}")
+    for row in db_exec(conn, sql):
+        id = row['hcai_id']
+        year = row['year']
+        parts = row['full_name'].split('/')
+        dir = '/'.join(parts[1:])
 
         if id not in found:
             found[id] = dict()
-            found[id]['d_pk'] = list()
             found[id]['names'] = list()
-            found[id]['files'] = list()
+            found[id]['years'] = list()
 
-        found[id]['d_pk'].append(i_row['dir_pk'])
-
-        for d_row in dir_rows:
-            if d_row['pk'] in found[id]['d_pk']:
-                found[id]['names'].append(name_from_directory(d_row['directory']))
-
-        for f_row in file_rows:
-            if f_row['dir_pk'] in found[id]['d_pk']:
-                found[id]['files'].append(f_row['full_name'])
+        found[id]['names'].append(dir)
+        found[id]['years'].append(str(year))
 
     for id in found:
         found[id]['names'] = list(set(found[id]['names']))
-        found[id]['files'] = sorted(list(set(found[id]['files'])))
+        found[id]['missing'] = list()
+        for yr in chargemasters_years_expected:
+            if yr not in found[id]['years']:
+                found[id]['missing'].append(yr)
 
     context['ids'] = found
 
     return context
+
 
 def shorter(s):
     parts = str(s).split('.')
@@ -361,6 +352,41 @@ def chargemasters_calc_changes(s):
     found = list(set(found))
 
     return found
+
+
+def chargemasters_columns():
+    context = dict()
+
+    files = dict()
+
+    sql = "select pk, full_name from chargemasters_files where file_ext = 'xlsx'"
+    for row in db_exec(conn, sql):
+        pk = row['pk']
+        files[pk] = dict()
+        files[pk]['full_name'] = row['full_name']
+
+    sql = "select * from chargemasters_columns"
+    for row in db_exec(conn, sql):
+        pk = row['file_pk']
+        sheet = row['sheet_name']
+
+        if 'sheets' not in files[pk]:
+            files[pk]['sheets'] = dict()
+        if sheet not in files[pk]['sheets']:
+            files[pk]['sheets'][sheet] = dict()
+            files[pk]['sheets'][sheet]['count'] = 1
+        else:
+            files[pk]['sheets'][sheet]['count'] += 1
+
+    sql = "select * from chargemasters_sheets"
+    for row in db_exec(conn, sql):
+        pk = row['file_pk']
+        sheet = row['name']
+        files[pk]['sheets'][sheet]['type'] = row['sheet_type']
+
+    context['files'] = files
+
+    return context
 
 
 def buildings_spc():

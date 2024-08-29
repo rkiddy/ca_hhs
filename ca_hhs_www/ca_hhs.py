@@ -104,6 +104,12 @@ def chargemasters_changes():
     return main.render(**context)
 
 
+@ca_hhs.route(f"/{cfg['WWW']}/chargemasters/columns/")
+def chargemasters_columns():
+    main = env.get_template('chargemasters_columns.html')
+    context = data.chargemasters_columns()
+    return main.render(**context)
+
 # @ca_hhs.route(f"/{cfg['WWW']}/read_changes/", methods=['POST'])
 # def chargemasters_read_changes():
 #     main = env.get_template('chargemasters_changes.html')
