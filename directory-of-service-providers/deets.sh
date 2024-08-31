@@ -1,0 +1,5 @@
+export uuid1="e8d55304-b058-41de-a59f-4f646d792c11"
+export uuid2="8476f5c6-b732-4464-81da-6c0b2acd2113"
+export id="directory-of-service-providers"
+export hash="uupmvgr1"
+export script="none"

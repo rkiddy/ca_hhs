@@ -1,5 +1,5 @@
 export uuid1="d1ac90ad-d583-426f-8012-828743cf4ac1"
 export uuid2="fef8fe44-95a5-42e9-b7e5-cdaa6dbb043c"
 export id="hospital-inpatient-diagnosis-procedure-and-external-cause-codes"
-export hash="ub9woi"
+export hash="ng5x90rt"
 export script="procedures"
