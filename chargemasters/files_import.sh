@@ -108,7 +108,7 @@ if [ "$1" == "--files" ] || [ "$1" == "--all" ]; then
 
     echo "done"
 
-    echo "adding hcai_id values..."
+    echo "adding oshpd_id values..."
     echo "select full_name from chargemasters_files;" | \
         mysql --skip-column-names ca_hhs | \
         sed 's/'\''/'\'\''/g' | \
@@ -117,27 +117,27 @@ if [ "$1" == "--files" ] || [ "$1" == "--all" ]; then
         awk '{print $1}' | \
         sort | uniq | \
         awk '{if (($0 ~ /^[0-9]*$/) && (length($0) > 8)) {
-                  print "update chargemasters_files set hcai_id = '\''"$0"'\''";
+                  print "update chargemasters_files set oshpd_id = '\''"$0"'\''";
                   print "where full_name like '\''%"$0"%'\'';"}}' | \
         mysql ca_hhs
 
     echo "done"
 
-    echo "fixing hcai_id values..."
-    echo "select full_name from chargemasters_files where hcai_id is NULL;" | \
+    echo "fixing oshpd_id values..."
+    echo "select full_name from chargemasters_files where oshpd_id is NULL;" | \
         mysql --skip-column-names ca_hhs | \
         awk 'BEGIN{FS="/"}{print $(NF)}' | \
         sort | uniq | \
         sed 's/'\''/'\'\''/g' | \
         awk '{print "select '\''"$0"'\'';";
-              print "select distinct(hcai_id) from chargemasters_files";
-              print "   where full_name like '\''%/"$0"/%'\'' and hcai_id is not NULL;";
+              print "select distinct(oshpd_id) from chargemasters_files";
+              print "   where full_name like '\''%/"$0"/%'\'' and oshpd_id is not NULL;";
               print "select '\'\'';"}' | \
         mysql --skip-column-names ca_hhs | \
         sed 's/'\''/'\'\''/g' | \
         awk 'BEGIN{FS="\n";RS=""}
              {if (NF == 2) {
-                  print "update chargemasters_files set hcai_id = '\''"$2"'\''";
+                  print "update chargemasters_files set oshpd_id = '\''"$2"'\''";
                   print "    where full_name like '\''%/"$1"/%'\'';"
              }}' | \
         mysql ca_hhs
@@ -170,21 +170,23 @@ if [ "$1" == "--dirs" ] || [ "$1" == "--all" ]; then
                             print " where full_name like '\''"$2"/%'\'';"}' | \
         mysql ca_hhs
 
-    echo "joining directories and hcai id values..."
-    echo "select dir_pk, hcai_id from chargemasters_files where hcai_id is not NULL;" | \
-        mysql --skip-column-names ca_hhs | \
-        sort | uniq | \
-        awk '{print "insert into chargemasters_dir_hcai_id_joins (dir_pk, hcai_id)";
-              print "    values ("$1", '\''"$2"'\'');"}' | \
-        mysql ca_hhs 
-
-    ( echo "select distinct(hcai_id), dir_pk from chargemasters_files ";
-      echo "where hcai_id is not NULL and dir_pk in (select dir_pk ";
-      echo "from chargemasters_dir_hcai_id_joins group by dir_pk having count(0) = 1);") | \
-        mysql --skip-column-names ca_hhs | \
-        awk '{print "update chargemasters_files set hcai_id = '\''"$1"'\'' ";
-              print "where dir_pk = "$2" and hcai_id is NULL;"}' | \
-        mysql ca_hhs
+# the join table is gone.
+#
+#    echo "joining directories and oshpd id values..."
+#    echo "select dir_pk, oshpd_id from chargemasters_files where oshpd_id is not NULL;" | \
+#        mysql --skip-column-names ca_hhs | \
+#        sort | uniq | \
+#        awk '{print "insert into chargemasters_dir_oshpd_id_joins (dir_pk, oshpd_id)";
+#              print "    values ("$1", '\''"$2"'\'');"}' | \
+#        mysql ca_hhs 
+#
+#    ( echo "select distinct(oshpd_id), dir_pk from chargemasters_files ";
+#      echo "where oshpd_id is not NULL and dir_pk in (select dir_pk ";
+#      echo "from chargemasters_dir_oshpd_id_joins group by dir_pk having count(0) = 1);") | \
+#        mysql --skip-column-names ca_hhs | \
+#        awk '{print "update chargemasters_files set oshpd_id = '\''"$1"'\'' ";
+#              print "where dir_pk = "$2" and oshpd_id is NULL;"}' | \
+#        mysql ca_hhs
 
     echo "done"
 

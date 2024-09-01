@@ -77,24 +77,24 @@ def chargemasters_facilities(initial=None):
     return main.render(**context)
 
 
-@ca_hhs.route(f"/{cfg['WWW']}/chargemasters/hcai_ids/")
-def chargemasters_hcai_ids():
-    main = env.get_template('chargemasters_hcai_ids.html')
-    context = data.chargemasters_hcai_ids()
+@ca_hhs.route(f"/{cfg['WWW']}/chargemasters/oshpd_ids/")
+def chargemasters_oshpd_ids():
+    main = env.get_template('chargemasters_oshpd_ids.html')
+    context = data.chargemasters_oshpd_ids()
     return main.render(**context)
 
 
-@ca_hhs.route(f"/{cfg['WWW']}/chargemasters/hcai_id/<id>")
-def chargemasters_hcai_id(id):
-    main = env.get_template('chargemasters_hcai_id.html')
-    context = data.chargemasters_hcai_id(id)
+@ca_hhs.route(f"/{cfg['WWW']}/chargemasters/oshpd_id/<id>")
+def chargemasters_oshpd_id(id):
+    main = env.get_template('chargemasters_oshpd_id.html')
+    context = data.chargemasters_oshpd_id(id)
     return main.render(**context)
 
 
-@ca_hhs.route(f"/{cfg['WWW']}/chargemasters/no_hcai_id/")
-def chargemasters_no_hcai_id():
+@ca_hhs.route(f"/{cfg['WWW']}/chargemasters/no_oshpd_id/")
+def chargemasters_no_oshpd_id():
     main = env.get_template('chargemasters_files.html')
-    context = data.chargemasters_no_hcai_id()
+    context = data.chargemasters_no_oshpd_id()
     return main.render(**context)
 
 @ca_hhs.route(f"/{cfg['WWW']}/chargemasters/changes/")

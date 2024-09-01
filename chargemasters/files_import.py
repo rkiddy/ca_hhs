@@ -83,14 +83,14 @@ if __name__ == '__main__':
 
     print(f"dirs added # {dirs_added}")
 
-    # connect dirs and files and add hcai_id values
+    # connect dirs and files and add oshpd_id values
     #
     updated = 0
-    sql = "select pk, dir_pk, full_name, hcai_id from chargemasters_files where dir_pk is NULL or hcai_id is NULL"
+    sql = "select pk, dir_pk, full_name, oshpd_id from chargemasters_files where dir_pk is NULL or oshpd_id is NULL"
     for row in db_exec(conn, sql):
         parts = row['full_name'].split('/')
         dir = '/'.join(parts[:-1])
-        hcai_id = parts[-1][:9]
+        oshpd_id = parts[-1][:9]
         pk = row['pk']
 
         sql = f"select pk from chargemasters_dirs where full_name = {fix(dir)}"
@@ -99,19 +99,19 @@ if __name__ == '__main__':
         if row['dir_pk'] is None:
             db_exec(conn, f"update chargemasters_files set dir_pk = {dir_pk} where pk = {pk}")
 
-        if re.match(r'^[0-9]{9}$', hcai_id):
-            #print(f"hcai_id: {hcai_id}, row: {row}")
-            db_exec(conn, f"update chargemasters_files set hcai_id = {fix(hcai_id)} where pk = {pk}")
-            db_exec(conn, f"update chargemasters_dirs set hcai_id = {fix(hcai_id)} where pk = {dir_pk}")
+        if re.match(r'^[0-9]{9}$', oshpd_id):
+            #print(f"oshpd_id: {oshpd_id}, row: {row}")
+            db_exec(conn, f"update chargemasters_files set oshpd_id = {fix(oshpd_id)} where pk = {pk}")
+            db_exec(conn, f"update chargemasters_dirs set oshpd_id = {fix(oshpd_id)} where pk = {dir_pk}")
             updated += 1
         else:
-            print(f"skipping BAD hcai_id: {hcai_id}, row: {row}")
+            print(f"skipping BAD oshpd_id: {oshpd_id}, row: {row}")
 
-    print(f"rows updated with hcai_id # {updated}")
+    print(f"rows updated with oshpd_id # {updated}")
 
-    # check whether dirs have only one hcai_id.
+    # check whether dirs have only one oshpd_id.
     #
     sql = f"""update chargemasters_files f1, chargemasters_dirs d1
-              set d1.hcai_id = f1.hcai_id where f1.dir_pk = d1.pk and d1.hcai_id is NULL"""
+              set d1.oshpd_id = f1.oshpd_id where f1.dir_pk = d1.pk and d1.oshpd_id is NULL"""
     db_exec(conn, sql)
 

@@ -124,8 +124,7 @@ def catalog_prev(id_num):
 
 
 def chargemasters_main(year):
-    context = dict()
-    context.update(top_list_data())
+    context = top_list_data()
 
     context['year'] = year
 
@@ -148,11 +147,11 @@ def chargemasters_main(year):
             next_rows[pk] = dict()
             next_rows[pk]['pk'] = pk
             next_rows[pk]['full_name'] = row['full_name']
-            next_rows[pk]['hcai_id'] = row['hcai_id']
+            next_rows[pk]['oshpd_id'] = row['oshpd_id']
             next_rows[pk]['count'] = 1
 
-            if row['hcai_id'] is not None:
-                sql = f"select * from healthcare_facilities where hcai_id = {row['hcai_id']}"
+            if row['oshpd_id'] is not None:
+                sql = f"select * from healthcare_facilities where oshpd_id = {row['oshpd_id']}"
                 facilities = db_exec(conn, sql)
                 if len(facilities) > 0:
                     next_rows[pk]['facilities'] = facilities
@@ -171,8 +170,7 @@ def name_from_directory(dir):
 
 
 def chargemasters_facilities(initial):
-    context = dict()
-    context.update(top_list_data())
+    context = top_list_data()
 
     context['initial'] = initial
 
@@ -183,7 +181,8 @@ def chargemasters_facilities(initial):
 
     dpks = ', '.join([str(r['pk']) for r in dir_rows])
 
-    sql = f"select * from chargemasters_dir_hcai_id_joins where dir_pk in ({dpks})"
+    raise Exception("no table: chargemasters_dir_oshpd_id_joins")
+    sql = f"select * from chargemasters_dir_oshpd_id_joins where dir_pk in ({dpks})"
     id_rows = db_exec(conn, sql)
     print(f"id_rows #: {len(id_rows)}")
 
@@ -194,38 +193,37 @@ def chargemasters_facilities(initial):
         if name not in found:
             found[name] = dict()
             found[name]['d_pk'] = list()
-            found[name]['hcai_ids'] = list()
+            found[name]['oshpd_ids'] = list()
 
         found[name]['d_pk'].append(d_row['pk'])
 
         for i_row in id_rows:
             if i_row['dir_pk'] == d_row['pk']:
-                found[name]['hcai_ids'].append(i_row['hcai_id'])
+                found[name]['oshpd_ids'].append(i_row['oshpd_id'])
 
         for name in found:
-            found[name]['hcai_ids'] = sorted(list(set(found[name]['hcai_ids'])))
+            found[name]['oshpd_ids'] = sorted(list(set(found[name]['oshpd_ids'])))
 
     context['names'] = found
 
-    # {'Aurora Vista Del Mar Hospital' = {'d_pk': [4617, 4165, 3825], 'hcai_ids': ['106301098']},
-    #  'Aurora San Diego': {'d_pk': [4616, 4164, 3824], 'hcai_ids': ['106010739']},
-    #  'Aurora Las Encinas Hospital': {'d_pk': [4615, 4163, 3823], 'hcai_ids': ['106364231']}}
+    # {'Aurora Vista Del Mar Hospital' = {'d_pk': [4617, 4165, 3825], 'oshpd_ids': ['106301098']},
+    #  'Aurora San Diego': {'d_pk': [4616, 4164, 3824], 'oshpd_ids': ['106010739']},
+    #  'Aurora Las Encinas Hospital': {'d_pk': [4615, 4163, 3823], 'oshpd_ids': ['106364231']}}
 
     return context
 
 
 def chargemasters_years():
-    context = dict()
-    context.update(top_list_data())
+    context = top_list_data()
 
-    sql = "select year, full_name, hcai_id from chargemasters_files"
+    sql = "select year, full_name, oshpd_id from chargemasters_files"
     rows = db_exec(conn, sql)
 
     found = dict()
 
     for row in rows:
 
-        id = row['hcai_id']
+        id = row['oshpd_id']
 
         if id not in found:
             found[id] = dict()
@@ -245,16 +243,15 @@ def chargemasters_years():
 
 chargemasters_years_expected = ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2121', '2022', '2023', '2024']
 
-def chargemasters_hcai_ids():
-    context = dict()
-    context.update(top_list_data())
+def chargemasters_oshpd_ids():
+    context = top_list_data()
 
     found = dict()
 
     sql = f"select * from chargemasters_dirs"
     # print(f"sql: {sql}")
     for row in db_exec(conn, sql):
-        id = row['hcai_id']
+        id = row['oshpd_id']
         year = row['year']
         parts = row['full_name'].split('/')
         dir = '/'.join(parts[1:])
@@ -286,16 +283,15 @@ def shorter(s):
     return f"{first}.{second}"
 
 
-def chargemasters_hcai_id(id):
-    context = dict()
-    context.update(top_list_data())
+def chargemasters_oshpd_id(id):
+    context = top_list_data()
 
     context['id'] = id
 
-    sql = f"select full_name from chargemasters_files where hcai_id = '{id}'"
+    sql = f"select full_name from chargemasters_files where oshpd_id = '{id}'"
     context['files'] = [r['full_name'] for r in db_exec(conn, sql)]
 
-    sql = f"select * from healthcare_facilities where hcai_id = '{id}'"
+    sql = f"select * from healthcare_facilities where oshpd_id = '{id}'"
     rows = db_exec(conn, sql)
     strm = io.StringIO()
     pprint(rows, stream=strm, sort_dicts=False)
@@ -316,20 +312,17 @@ def chargemasters_hcai_id(id):
 
     return context
 
-def chargemasters_no_hcai_id():
-    context = dict()
-    context.update(top_list_data())
+def chargemasters_no_oshpd_id():
+    context = top_list_data()
 
-    context['files'] = db_exec(conn, "select * from chargemasters_files where hcai_id is NULL order by full_name")
+    context['files'] = db_exec(conn, "select * from chargemasters_files where oshpd_id is NULL order by full_name")
     context['count'] = len(context['files'])
 
     return context
 
 
 def chargemasters_changes():
-
-    context = dict()
-    context.update(top_list_data())
+    context = top_list_data()
 
     return context
 
@@ -355,7 +348,7 @@ def chargemasters_calc_changes(s):
 
 
 def chargemasters_columns():
-    context = dict()
+    context = top_list_data()
 
     files = dict()
 
