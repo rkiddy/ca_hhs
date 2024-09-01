@@ -243,7 +243,7 @@ def chargemasters_years():
 
     return context
 
-chargemasters_years_expected = ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2121', '2022', '2023']
+chargemasters_years_expected = ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2121', '2022', '2023', '2024']
 
 def chargemasters_hcai_ids():
     context = dict()
@@ -467,6 +467,20 @@ def facilities_list(form):
 
 def table_info():
     context = dict()
+
+    source = dict()
+    with open('../tables.txt') as t:
+        lines = t.readlines()
+        dset = None
+        for line in lines:
+            parts = line.strip().split(' ')
+            if parts[0] == 'dataset':
+                dset = parts[1]
+            if parts[0] == 'table':
+                source[parts[1]] = dset
+
+    source['updates'] = None
+
     rows = db_exec(conn, "show tables")
     table_names = dict()
     columns = dict()
@@ -475,12 +489,13 @@ def table_info():
         table_names[row[0]] = dict()
 
     for table in table_names:
+        table_src = source[table]
         rows = [dict(r) for r in db_exec(conn, f"desc {table}")]
         for row in rows:
             col_name = row['Field']
             if col_name not in columns:
                 columns[col_name] = dict()
-            columns[col_name][table] = row['Type']
+            columns[col_name][table_src] = row['Type']
 
     context['columns'] = columns
     context['names'] = sorted(list(columns.keys()))

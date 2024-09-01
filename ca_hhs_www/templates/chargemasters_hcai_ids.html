@@ -5,7 +5,8 @@
     {% include "styles.html" %}
 </head>
 <body>
-<div style="padding: 25px 25px 25px 25px;">
+<ndiv style="padding: 25px 25px 25px 25px;">
+<p align="left"><a href="/hcai/">Home</a></p>
 {% include "tops/chargemasters-top.html" %}
 <table class="table table-striped">
 <thead>
@@ -26,7 +27,6 @@
     </tr>
     <tr>
         <td>&nbsp;</td>
-        <td>&nbsp;</td>
         <td>{% if '2011' in ids[id]['missing'] %}*&nbsp;<font color="red">{% else %}<font color="black">{% endif %}2011</font></td>
         <td>{% if '2012' in ids[id]['missing'] %}*&nbsp;<font color="red">{% else %}<font color="black">{% endif %}2012</font></td>
         <td>{% if '2013' in ids[id]['missing'] %}*&nbsp;<font color="red">{% else %}<font color="black">{% endif %}2013</font></td>
@@ -40,6 +40,7 @@
         <td>{% if '2021' in ids[id]['missing'] %}*&nbsp;<font color="red">{% else %}<font color="black">{% endif %}2021</font></td>
         <td>{% if '2022' in ids[id]['missing'] %}*&nbsp;<font color="red">{% else %}<font color="black">{% endif %}2022</font></td>
         <td>{% if '2023' in ids[id]['missing'] %}*&nbsp;<font color="red">{% else %}<font color="black">{% endif %}2023</font></td>
+        <td>{% if '2024' in ids[id]['missing'] %}*&nbsp;<font color="red">{% else %}<font color="black">{% endif %}2024</font></td>
     </tr>
 {% endfor %}
 </tbody>
