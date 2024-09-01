@@ -1,38 +1,20 @@
-<details>
-<summary>adap-base</summary>
+<details><summary>adap-base</summary>TBD</details>
 
-TBD
-</details>
+<details><summary>asthma-deaths-by-county</summary>TBD</details>
 
-<details>
-<summary>asthma-deaths-by-county</summary>
+<details><summary>asthma-prevalence</summary>TBD</details>
 
-TBD
-</details>
+<details><summary>average-reimbursement-per-family-pact-client-served-by-fiscal-year</summary>TBD</details>
 
-<details>
-<summary>asthma-prevalence</summary>
+<details><summary>change-in-the-number-of-family-pact-clients-served-by-sex-age-and-fiscal-years</summary>TBD</details>
 
-TBD
-</details>
+<details><summary>chargemasters</summary>TBD</details>
 
-<details>
-<summary>chargemasters</summary>
+<details><summary>chlamydia-screening-percentages-for-female-family-pact-clients-by-age</summary>TBD</details>
 
-TBD
-</details>
+<details><summary>county-health-status-profiles</summary>TBD</details>
 
-<details>
-<summary>county-health-status-profiles</summary>
-
-TBD
-</details>
-
-<details>
-<summary>covid-19-sewershed-restricted-case-data</summary>
-
-TBD
-</details>
+<details><summary>covid-19-sewershed-restricted-case-data</summary>TBD</details>
 
 <details>
 <summary>dataset-catalog</summary>
@@ -41,23 +23,31 @@ The dataset-catalog directory includes code to download and import the data. The
 vend it in a simple application. There is a lot of data here but not of it is ... accurate or perhaps up-to-date. There are some datasets in this dataset that are missing web pages or do not seem to exist now. It is, thougn, not very clear.
 </details>
 
-<details>
-<summary>death-profiles-by-county</summary>
+<details><summary>death-profiles-by-county</summary>TBD</details>
 
-TBD
-</details>
+<details><summary>dhcs-county-code-reference-table</summary>TBD</details>
 
-<details>
-<summary>dhcs-county-code-reference-table</summary>
+<details><summary>family-pact-adults-and-adolescents-receiving-an-contraceptive-iuc</summary>TBD</details>
 
-TBD
-</details>
+<details><summary>family-pact-client-demographics-by-county</summary>TBD</details>
 
-<details>
-<summary>health-and-human-services-program-counts</summary>
+<details><summary>family-pact-clients-served-by-service-type-combination-and-fiscal-years</summary>TBD</details>
 
-TBD
-</details>
+<details><summary>family-pact-female-clients-by-method-tier-and-race-ethnicity</summary>TBD</details>
+
+<details><summary>family-pact-provider-finder-app</summary>TBD</details>
+
+<details><summary>family-pact-providers-clients-and-reimbursement-by-county</summary>TBD</details>
+
+<details><summary>family-pact-providers-profile</summary>TBD</details>
+
+<details><summary>family-pact-reimbursement-by-service-type</summary>TBD</details>
+
+<details><summary>family-pact-sexually-transmitted-infection-test-volume-for-males-and-females-by-fiscal-years</summary>TBD</details>
+
+<details><summary>female-family-pact-clients-by-age</summary>TBD</details>
+
+<details><summary>health-and-human-services-program-counts</summary>TBD</details>
 
 <details>
 <summary>healthcare-facility-locations</summary>
@@ -67,23 +57,11 @@ See https://data.chhs.ca.gov/dataset/healthcare-facility-locations
 https://www.cdph.ca.gov/Programs/CHCQ/LCP/Pages/HealthCareFacilities.aspx.
 </details>
 
-<details>
-<summary>healthcare-facility-services</summary>
+<details><summary>healthcare-facility-services</summary>TBD</details>
 
-TBD
-</details>
+<details><summary>healthcare-payments-data-snapshot</summary>TBD</details>
 
-<details>
-<summary>healthcare-payments-data-snapshot</summary>
-
-TBD
-</details>
-
-<details>
-<summary>healthcare-workforce-geography-crosswalk</summary>
-
-TBD
-</details>
+<details><summary>healthcare-workforce-geography-crosswalk</summary>TBD</details>
 
 <details>
 <summary>hospital-building-data</summary>
@@ -94,47 +72,31 @@ per Facilities Development Division". Will this match up with the "facid" fields
 datasets? We will see.
 </details>
 
-<details>
-<summary>hospital-inpatient-diagnosis-procedure-and-external-cause-codes</summary>
+<details><summary>hospital-inpatient-diagnosis-procedure-and-external-cause-codes</summary>TBD</details>
 
-TBD
-</details>
+<details><summary>infant-mortality-deaths-per-1000-live-births-lghc-indicator-01</summary>TBD</details>
 
-<details>
-<summary>infant-mortality-deaths-per-1000-live-births-lghc-indicator-01</summary>
+<details><summary>licensed-facility-crosswalk</summary>TBD</details>
 
-TBD
-</details>
+<details><summary>licensed-healthcare-facility-listing</summary>TBD</details>
 
-<details>
-<summary>licensed-facility-crosswalk</summary>
+<details><summary>live-birth-profiles-by-county</summary>TBD</details>
 
-TBD
-</details>
+<details><summary>measurable-hospital-acquired-conditions-composite-patient-safety-indicator-statewide-rate-california</summary>TBD</details>
 
-<details>
-<summary>licensed-healthcare-facility-listing</summary>
+<details><summary>medi-cal-fpact-provider-listing</summary>TBD</details>
 
-TBD
-</details>
+<details><summary>newborn-screening-disorders</summary>TBD</details>
 
-<details>
-<summary>live-birth-profiles-by-county</summary>
+<details><summary>number-and-percentage-of-sexually-transmitted-infection-tests-in-family-pact-by-fiscal-years</summary>TBD</details>
 
-TBD
-</details>
+<details><summary>number-of-family-pact-clients-provided-sterilization-services-and-percentage-change</summary>TBD</details>
 
-<details>
-<summary>measurable-hospital-acquired-conditions-composite-patient-safety-indicator-statewide-rate-california</summary>
+<details><summary>number-of-family-pact-clients-served-with-family-planning-methods-services-by-fiscal-years</summary>TBD</details>
 
-TBD
-</details>
+<details><summary>percentage-of-fpact-clients-tested-for-selected-stis-by-sex</summary>TBD</details>
 
-<details>
-<summary>newborn-screening-disorders</summary>
-
-TBD
-</details>
+<details><summary>percent-of-all-family-pact-clients-served-with-sexually-transmitted-infection-tests-by-fiscal-years</summary>TBD</details>
 
 <details>
 <summary>oshpd-healthcare-facilities-BLOCKED</summary>
@@ -142,29 +104,17 @@ TBD
 This dataset is marked on the CalHHS Open Data Portal as blocked. No idea why.
 </details>
 
-<details>
-<summary>postoperative-sepsis-outcomes-for-elective-surgeries-in-california-hospitals</summary>
+<details><summary>postoperative-sepsis-outcomes-for-elective-surgeries-in-california-hospitals</summary>TBD</details>
 
-TBD
-</details>
+<details><summary>primary-care-clinic-annual-utilization-data</summary>TBD</details>
 
-<details>
-<summary>primary-care-clinic-annual-utilization-data</summary>
+<details><summary>profile-of-enrolled-medi-cal-fee-for-service-ffs-providers</summary>TBD</details>
 
-TBD
-</details>
+<details><summary>provider-suspended-and-ineligible-list-s-i-list</summary>TBD</details>
 
-<details>
-<summary>profile-of-enrolled-medi-cal-fee-for-service-ffs-providers</summary>
+<details><summary>provision-of-selected-family-pact-contraception-by-county</summary>TBD</details>
 
-TBD
-</details>
-
-<details>
-<summary>provider-suspended-and-ineligible-list-s-i-list</summary>
-
-TBD
-</details>
+<details><summary>respiratory-virus-dashboard-metrics</summary>TBD</details>
 
 <details>
 <summary>statewide-death-profiles</summary>
@@ -172,11 +122,7 @@ TBD
 Causes thereof.
 </details>
 
-<details>
-<summary>sud-recovery-treatment-facilities</summary>
-
-TBD
-</details>
+<details><summary>sud-recovery-treatment-facilities</summary>TBD</details>
 
 <details>
 <summary>surgical-site-infections-ssis-for-28-operative-procedures-in-california-hospitals</summary>
@@ -186,29 +132,17 @@ There could also be something interesting here:
 https://www.cdph.ca.gov/Programs/CHCQ/HAI/Pages/AnnualHAIReports.aspx
 </details>
 
-<details>
-<summary>test-cdph-immunizations-in-first-grade-by-academic-year</summary>
+<details><summary>test-cdph-immunizations-in-first-grade-by-academic-year</summary>TBD</details>
 
-TBD
-</details>
+<details><summary>total-provider-reimbursement-for-family-pact-services-by-fiscal-years</summary>TBD</details>
 
-<details>
-<summary>suspended-and-ineligible-list-s-i-list</summary>
+<details><summary>suspended-and-ineligible-list-s-i-list</summary>TBD</details>
 
-TBD
-</details>
+<details><summary>wic-authorized-product-list-apl</summary>TBD</details>
 
-<details>
-<summary>wic-authorized-product-list-apl</summary>
+<details><summary>women-infants-and-children-wic-authorized-vendors</summary>TBD</details>
 
-TBD
-</details>
-
-<details>
-<summary>women-infants-and-children-wic-authorized-vendors</summary>
-
-TBD
-</details>
+<details><summary>x-ray-technologist-listing-in-california</summary>TBD</details>
 
 <details>
 <summary>Glossary</summary>
