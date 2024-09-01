@@ -86,6 +86,19 @@ CREATE TABLE `chargemasters_cdm` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `chargemasters_columns`
+--
+
+DROP TABLE IF EXISTS `chargemasters_columns`;
+CREATE TABLE `chargemasters_columns` (
+  `file_pk` int DEFAULT NULL,
+  `sheet_name` varchar(127) DEFAULT NULL,
+  `key_str` varchar(5) DEFAULT NULL,
+  `val_str` varchar(1023) DEFAULT NULL,
+  KEY `file_pk` (`file_pk`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `chargemasters_common25`
 --
 
@@ -103,26 +116,17 @@ CREATE TABLE `chargemasters_common25` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `chargemasters_dir_hcai_id_joins`
---
-
-DROP TABLE IF EXISTS `chargemasters_dir_hcai_id_joins`;
-CREATE TABLE `chargemasters_dir_hcai_id_joins` (
-  `dir_pk` int NOT NULL,
-  `hcai_id` varchar(10) NOT NULL,
-  PRIMARY KEY (`dir_pk`,`hcai_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
 -- Table structure for table `chargemasters_dirs`
 --
 
 DROP TABLE IF EXISTS `chargemasters_dirs`;
 CREATE TABLE `chargemasters_dirs` (
   `pk` int NOT NULL,
-  `directory` varchar(255) DEFAULT NULL,
+  `full_name` varchar(255) DEFAULT NULL,
+  `hcai_id` char(9) DEFAULT NULL,
   `year` int DEFAULT NULL,
-  PRIMARY KEY (`pk`)
+  PRIMARY KEY (`pk`),
+  KEY `hcai_id` (`hcai_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -135,11 +139,12 @@ CREATE TABLE `chargemasters_files` (
   `dir_pk` int DEFAULT NULL,
   `year` int DEFAULT NULL,
   `full_name` varchar(255) DEFAULT NULL,
-  `hcai_id` varchar(15) DEFAULT NULL,
+  `hcai_id` varchar(9) DEFAULT NULL,
   `file_type` varchar(15) DEFAULT NULL,
   `file_ext` varchar(63) DEFAULT NULL,
   `common25` int DEFAULT NULL,
   PRIMARY KEY (`pk`),
+  UNIQUE KEY `full_name_2` (`full_name`),
   KEY `file_ext` (`file_ext`),
   KEY `full_name` (`full_name`),
   KEY `dir_pk` (`dir_pk`),
@@ -147,23 +152,54 @@ CREATE TABLE `chargemasters_files` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `chargemasters_files_cache`
+-- Table structure for table `chargemasters_sheets`
 --
 
-DROP TABLE IF EXISTS `chargemasters_files_cache`;
-CREATE TABLE `chargemasters_files_cache` (
+DROP TABLE IF EXISTS `chargemasters_sheets`;
+CREATE TABLE `chargemasters_sheets` (
   `file_pk` int DEFAULT NULL,
-  `full_name` varchar(255) DEFAULT NULL
+  `name` varchar(127) DEFAULT NULL,
+  `sheet_type` varchar(15) DEFAULT NULL,
+  `elements_read` int DEFAULT '0',
+  `errors_found` int DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `chargemasters_hcai_id_known`
+-- Table structure for table `county_health_status_profiles`
 --
 
-DROP TABLE IF EXISTS `chargemasters_hcai_id_known`;
-CREATE TABLE `chargemasters_hcai_id_known` (
-  `full_name` varchar(255) DEFAULT NULL,
-  `hcai_id` varchar(9) DEFAULT NULL
+DROP TABLE IF EXISTS `county_health_status_profiles`;
+CREATE TABLE `county_health_status_profiles` (
+  `publication_year` int DEFAULT NULL,
+  `table_name` varchar(63) DEFAULT NULL,
+  `health_indicator_desc` varchar(255) DEFAULT NULL,
+  `strata` varchar(63) DEFAULT NULL,
+  `strata_name` varchar(63) DEFAULT NULL,
+  `county` varchar(63) DEFAULT NULL,
+  `rank_order` int DEFAULT NULL,
+  `denominator_total` int DEFAULT NULL,
+  `denominator_average` decimal(10,2) DEFAULT NULL,
+  `denominator_label` varchar(63) DEFAULT NULL,
+  `denominator_year_period` int DEFAULT NULL,
+  `numerator_total` int DEFAULT NULL,
+  `numerator_average` decimal(10,2) DEFAULT NULL,
+  `numerator_label` varchar(63) DEFAULT NULL,
+  `numerator_year_period` varchar(63) DEFAULT NULL,
+  `rate_multiplier` int DEFAULT NULL,
+  `rate_percentage` decimal(10,2) DEFAULT NULL,
+  `rate_percentage_label` varchar(63) DEFAULT NULL,
+  `age_adjusted_rate` decimal(10,2) DEFAULT NULL,
+  `age_adjusted_rate_label` varchar(63) DEFAULT NULL,
+  `lower_confidence_limit` decimal(10,2) DEFAULT NULL,
+  `upper_confidence_limit` decimal(10,2) DEFAULT NULL,
+  `healthy_people_decade` int DEFAULT NULL,
+  `healthy_people_objective_number` varchar(63) DEFAULT NULL,
+  `healthy_people_objective_target` int DEFAULT NULL,
+  `healthy_people_objective_met` char(1) DEFAULT NULL,
+  `denominator_annotation_code` varchar(63) DEFAULT NULL,
+  `numerator_annotation_code` varchar(63) DEFAULT NULL,
+  `rates_annotation_code` varchar(63) DEFAULT NULL,
+  `annotation_desc` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -207,6 +243,122 @@ CREATE TABLE `dhcs_county_code_references` (
   `fips_county_code` int DEFAULT NULL,
   `fips_state_county_code` int DEFAULT NULL,
   `north_south_indicator` char(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `facility_profiles`
+--
+
+DROP TABLE IF EXISTS `facility_profiles`;
+CREATE TABLE `facility_profiles` (
+  `facility_desc` varchar(255) DEFAULT NULL,
+  `site_address1` varchar(63) DEFAULT NULL,
+  `site_address2` varchar(63) DEFAULT NULL,
+  `site_city` varchar(63) DEFAULT NULL,
+  `site_zip` varchar(63) DEFAULT NULL,
+  `site_x_coordinate` decimal(10,2) DEFAULT NULL,
+  `site_y_coordinate` decimal(10,2) DEFAULT NULL,
+  `oshpd_id` char(9) DEFAULT NULL,
+  `license_type_desc` varchar(63) DEFAULT NULL,
+  `license_category_desc` varchar(63) DEFAULT NULL,
+  `license_number` char(9) DEFAULT NULL,
+  `facility_level_desc` varchar(63) DEFAULT NULL,
+  `er_service_level_desc` varchar(63) DEFAULT NULL,
+  `licensed_beds` varchar(63) DEFAULT NULL,
+  `facility_status_desc` varchar(63) DEFAULT NULL,
+  `financial_facility_count` int DEFAULT NULL,
+  `consolidated_facility_desc_pipe` varchar(255) DEFAULT NULL,
+  `consolidated_facility_desc_comma` varchar(255) DEFAULT NULL,
+  `period_begin_date` varchar(63) DEFAULT NULL,
+  `period_end_date` varchar(63) DEFAULT NULL,
+  `net_pat_rev_medicare_traditional_ip` bigint DEFAULT NULL,
+  `net_pat_rev_medicare_managed_ip` bigint DEFAULT NULL,
+  `net_pat_rev_medi_cal_traditional_ip` bigint DEFAULT NULL,
+  `net_pat_rev_medi_cal_managed_ip` bigint DEFAULT NULL,
+  `net_pat_rev_county_indigent_traditional_ip` bigint DEFAULT NULL,
+  `net_pat_rev_county_indigent_managed_ip` bigint DEFAULT NULL,
+  `net_pat_rev_third_party_traditional_ip` bigint DEFAULT NULL,
+  `net_pat_rev_third_party_managed_ip` bigint DEFAULT NULL,
+  `net_pat_rev_other_indigent_ip` bigint DEFAULT NULL,
+  `net_pat_rev_other_payer_ip` bigint DEFAULT NULL,
+  `net_pat_rev_total_ip` bigint DEFAULT NULL,
+  `net_pat_rev_medicare_traditional_op` bigint DEFAULT NULL,
+  `net_pat_rev_medicare_managed_op` bigint DEFAULT NULL,
+  `net_pat_rev_medi_cal_traditional_op` bigint DEFAULT NULL,
+  `net_pat_rev_medi_cal_managed_op` bigint DEFAULT NULL,
+  `net_pat_rev_county_indigent_traditional_op` bigint DEFAULT NULL,
+  `net_pat_rev_county_indigent_managed_op` bigint DEFAULT NULL,
+  `net_pat_rev_third_party_traditional_op` bigint DEFAULT NULL,
+  `net_pat_rev_third_party_managed_op` bigint DEFAULT NULL,
+  `net_pat_rev_other_indigent_op` bigint DEFAULT NULL,
+  `net_pat_rev_other_payer_op` bigint DEFAULT NULL,
+  `net_pat_rev_total_op` bigint DEFAULT NULL,
+  `payer_mix_medicare_traditional_ip` decimal(14,12) DEFAULT NULL,
+  `payer_mix_medicare_traditional_ip_state` decimal(6,4) DEFAULT NULL,
+  `payer_mix_medicare_managed_ip` decimal(14,12) DEFAULT NULL,
+  `payer_mix_medicare_managed_ip_state` decimal(6,4) DEFAULT NULL,
+  `payer_mix_medi_cal_traditional_ip` decimal(14,12) DEFAULT NULL,
+  `payer_mix_medi_cal_traditional_ip_state` decimal(6,4) DEFAULT NULL,
+  `payer_mix_medi_cal_managed_ip` decimal(14,12) DEFAULT NULL,
+  `payer_mix_medi_cal_managed_ip_state` decimal(6,4) DEFAULT NULL,
+  `payer_mix_county_indigent_traditional_ip` decimal(14,12) DEFAULT NULL,
+  `payer_mix_county_indigent_traditional_ip_state` decimal(6,4) DEFAULT NULL,
+  `payer_mix_county_indigent_managed_ip` decimal(14,12) DEFAULT NULL,
+  `payer_mix_county_indigent_managed_ip_state` decimal(6,4) DEFAULT NULL,
+  `payer_mix_third_party_traditional_ip` decimal(14,12) DEFAULT NULL,
+  `payer_mix_third_party_traditional_ip_state` decimal(6,4) DEFAULT NULL,
+  `payer_mix_third_party_managed_ip` decimal(14,12) DEFAULT NULL,
+  `payer_mix_third_party_managed_ip_state` decimal(6,4) DEFAULT NULL,
+  `payer_mix_other_indigent_ip` decimal(14,12) DEFAULT NULL,
+  `payer_mix_other_indigent_ip_state` decimal(6,4) DEFAULT NULL,
+  `payer_mix_other_payer_ip` decimal(14,12) DEFAULT NULL,
+  `payer_mix_other_payer_ip_state` decimal(6,4) DEFAULT NULL,
+  `payer_mix_medicare_traditional_op` decimal(14,12) DEFAULT NULL,
+  `payer_mix_medicare_traditional_op_state` decimal(6,4) DEFAULT NULL,
+  `payer_mix_medicare_managed_op` decimal(14,12) DEFAULT NULL,
+  `payer_mix_medicare_managed_op_state` decimal(6,4) DEFAULT NULL,
+  `payer_mix_medi_cal_traditional_op` decimal(14,12) DEFAULT NULL,
+  `payer_mix_medi_cal_traditional_op_state` decimal(6,4) DEFAULT NULL,
+  `payer_mix_medi_cal_managed_op` decimal(14,12) DEFAULT NULL,
+  `payer_mix_medi_cal_managed_op_state` decimal(6,4) DEFAULT NULL,
+  `payer_mix_county_indigent_traditional_op` decimal(14,12) DEFAULT NULL,
+  `payer_mix_county_indigent_traditional_op_state` decimal(6,4) DEFAULT NULL,
+  `payer_mix_county_indigent_managed_op` decimal(14,12) DEFAULT NULL,
+  `payer_mix_county_indigent_managed_op_state` decimal(6,4) DEFAULT NULL,
+  `payer_mix_third_party_traditional_op` decimal(14,12) DEFAULT NULL,
+  `payer_mix_third_party_traditional_op_state` decimal(6,4) DEFAULT NULL,
+  `payer_mix_third_party_managed_op` decimal(14,12) DEFAULT NULL,
+  `payer_mix_third_party_managed_op_state` decimal(6,4) DEFAULT NULL,
+  `payer_mix_other_indigent_op` decimal(14,12) DEFAULT NULL,
+  `payer_mix_other_indigent_op_state` decimal(6,4) DEFAULT NULL,
+  `payer_mix_other_payer_op` decimal(14,12) DEFAULT NULL,
+  `payer_mix_other_payer_op_state` decimal(6,4) DEFAULT NULL,
+  `avg_stay_medicare_traditional` decimal(10,4) DEFAULT NULL,
+  `avg_stay_medicare_managed` decimal(10,4) DEFAULT NULL,
+  `avg_stay_medi_cal_traditional` decimal(10,4) DEFAULT NULL,
+  `avg_stay_medi_cal_managed` decimal(10,4) DEFAULT NULL,
+  `avg_stay_county_indigent_traditional` decimal(10,4) DEFAULT NULL,
+  `avg_stay_county_indigent_managed` decimal(10,4) DEFAULT NULL,
+  `avg_stay_third_party_traditional` decimal(10,4) DEFAULT NULL,
+  `avg_stay_third_party_managed` decimal(10,4) DEFAULT NULL,
+  `avg_stay_other_indigent_total` decimal(10,4) DEFAULT NULL,
+  `avg_stay_other_payer_total` decimal(10,4) DEFAULT NULL,
+  `avg_stay_total` decimal(10,4) DEFAULT NULL,
+  `active_projects` int DEFAULT NULL,
+  `active_project_costs` bigint DEFAULT NULL,
+  `active_projects_state` int DEFAULT NULL,
+  `active_project_costs_state` bigint DEFAULT NULL,
+  `spc_1` int DEFAULT NULL,
+  `spc_2` int DEFAULT NULL,
+  `spc_3` int DEFAULT NULL,
+  `spc_4` int DEFAULT NULL,
+  `spc_5` int DEFAULT NULL,
+  `spc_1_state` int DEFAULT NULL,
+  `spc_2_state` int DEFAULT NULL,
+  `spc_3_state` int DEFAULT NULL,
+  `spc_4_state` int DEFAULT NULL,
+  `spc_5_state` int DEFAULT NULL,
+  `sysdate` varchar(63) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -1203,8 +1355,8 @@ CREATE TABLE `sud_facilities` (
   `target_population` varchar(63) DEFAULT NULL,
   `incidental_medical_services` varchar(63) DEFAULT NULL,
   `adolescent_waiver` varchar(63) DEFAULT NULL,
-  `latitude` varchar(63) DEFAULT NULL,
-  `longitude` varchar(63) DEFAULT NULL,
+  `latitude` decimal(12,8) DEFAULT NULL,
+  `longitude` decimal(12,8) DEFAULT NULL,
   `countyname` varchar(63) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -1274,4 +1426,4 @@ CREATE TABLE `xray_providers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2024-08-22 19:49:42
+-- Dump completed on 2024-08-31 16:44:01

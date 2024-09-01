@@ -1,6 +1,7 @@
 import argparse
 import os
 import re
+import traceback
 from pprint import pprint
 
 import requests
@@ -8,7 +9,7 @@ import requests
 
 def arguments():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--file', '-f', nargs='?', help="Name of single file to process.")
+    parser.add_argument('--id', nargs='?', help="Name of single id to process.")
     parser.add_argument('--verbose', '-v', action='store_true')
     return parser.parse_args()
 
@@ -22,9 +23,9 @@ def find_ids():
 
     found = list()
 
-    files = os.listdir()
-    if args.file:
-        files = [args.file]
+    files = [f for f in os.listdir() if '-' in f and not f.startswith('.wget') and not f.endswith('BLOCKED')]
+    if args.id:
+        files = [args.id]
 
     dprint(f"files: {files}")
 
@@ -34,6 +35,7 @@ def find_ids():
             deets_dict = dict()
             with open(deets, 'r') as r:
                 lines = r.readlines()
+                dprint(f"lines read from web source: {len(lines)}")
                 # print(f"lines: {lines}")
 
                 for line in lines:
@@ -53,7 +55,9 @@ def find_ids():
             dprint(f"deets now read: {deets_dict}")
 
         except:
-            pass
+            print(f"EXCEPTION! Found in id: {f}")
+            if args.verbose:
+                traceback.print_exc()
 
     return found
 
@@ -94,6 +98,10 @@ def read_deets(values):
                 dload = parts[-2]
 
         dprint(f"dload: {dload}")
+
+        if not dload:
+            print("nothing found?")
+            continue
 
         parts = dload.split('/')
 

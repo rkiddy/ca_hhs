@@ -1,23 +1,33 @@
 
-table updates
-
 dataset adap-base
+
+dataset all-cause-unplanned-30-day-hospital-readmission-rate-california
 
 dataset asthma-deaths-by-county
 table asthma_deaths_by_county
 
 dataset asthma-prevalence
 
+dataset average-reimbursement-per-family-pact-client-served-by-fiscal-year
+
+dataset california-hospital-performance-ratings
+
+dataset change-in-the-number-of-family-pact-clients-served-by-sex-age-and-fiscal-years
+
+dataset chlamydia-screening-percentages-for-female-family-pact-clients-by-age
+
 dataset chargemasters
 table chargemasters_cdm
+table chargemasters_columns
 table chargemasters_common25
-table chargemasters_dir_hcai_id_joins
 table chargemasters_dirs
 table chargemasters_files
-table chargemasters_files_cache
-table chargemasters_hcai_id_known
+table chargemasters_sheets
+
+dataset cms-stc-datasets
 
 dataset county-health-status-profiles
+table county_health_status_profiles
 
 dataset covid-19-sewershed-restricted-case-data
 table watershed_cases
@@ -29,8 +39,35 @@ table catalog
 dataset death-profiles-by-county
 table death_profiles_by_county
 
+dataset demographic-profile-of-family-pact-clients-served-by-fiscal-year
+
 dataset dhcs-county-code-reference-table
 table dhcs_county_code_references
+
+dataset directory-of-service-providers
+
+dataset facility-profile-attributes
+table facility_profiles
+
+dataset family-pact-adults-and-adolescents-receiving-an-contraceptive-iuc
+
+dataset family-pact-client-demographics-by-county
+
+dataset family-pact-clients-served-by-service-type-combination-and-fiscal-years
+
+dataset family-pact-female-clients-by-method-tier-and-race-ethnicity
+
+dataset family-pact-provider-finder-app
+
+dataset family-pact-providers-clients-and-reimbursement-by-county
+
+dataset family-pact-providers-profile
+
+dataset family-pact-reimbursement-by-service-type
+
+dataset family-pact-sexually-transmitted-infection-test-volume-for-males-and-females-by-fiscal-years
+
+dataset female-family-pact-clients-by-age
 
 dataset health-and-human-services-program-counts
 table hhs_program_annual_counts
@@ -77,7 +114,19 @@ table live_birth_profiles_by_county
 
 dataset measurable-hospital-acquired-conditions-composite-patient-safety-indicator-statewide-rate-california
 
+dataset medi-cal-fpact-provider-listing
+
 dataset newborn-screening-disorders
+
+dataset number-and-percentage-of-sexually-transmitted-infection-tests-in-family-pact-by-fiscal-years
+
+dataset number-of-family-pact-clients-provided-sterilization-services-and-percentage-change
+
+dataset number-of-family-pact-clients-served-with-family-planning-methods-services-by-fiscal-years
+
+dataset percentage-of-fpact-clients-tested-for-selected-stis-by-sex
+
+dataset percent-of-all-family-pact-clients-served-with-sexually-transmitted-infection-tests-by-fiscal-years
 
 dataset postoperative-sepsis-outcomes-for-elective-surgeries-in-california-hospitals
 
@@ -91,6 +140,10 @@ table medicaid_ffs_providers
 dataset provider-suspended-and-ineligible-list-s-i-list
 table providers_suspended_ineligible
 table providers_suspended_ineligible_us
+
+dataset providers-delivering-family-planning-access-care-and-treatment-pact-services-by-fiscal-years
+
+dataset provision-of-selected-family-pact-contraception-by-county
 
 dataset respiratory-virus-dashboard-metrics
 table respiratory_virus_dashboard
