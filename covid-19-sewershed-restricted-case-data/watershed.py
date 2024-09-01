@@ -1,5 +1,6 @@
 
 import csv
+import sys
 import traceback
 
 from sqlalchemy import create_engine
@@ -50,6 +51,8 @@ if __name__ == '__main__':
               cases varchar(31),
               cum_cases int)"""
     db_exec(conn, sql)
+
+    db_exec(conn, "drop table if exists watershed_sites")
 
     sql = """
           create table watershed_sites (

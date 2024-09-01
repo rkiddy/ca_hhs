@@ -90,20 +90,22 @@ if __name__ == '__main__':
 
     db_exec(conn, "drop table if exists school_immunizations")
 
-    cols = list()
-    for c in columns:
-        if c in numbers:
-            cols.append(f"{c.lower()} int")
-        else:
-            if c in longs:
-                cols.append(f"{c.lower()} varchar(63)")
-            elif c in very_longs:
-                cols.append(f"{c.lower()} varchar(255)")
-            else:
-                cols.append(f"{c.lower()} varchar(31)")
-
-    sql = f"create table school_immunizations ({', '.join(cols)})"
-    # print(f"sql: {sql}")
+    sql = """create table school_immunizations (
+                 school_year char(9),
+                 school_code varchar(7),
+                 school_name varchar(255),
+                 city varchar(31),
+                 county varchar(31),
+                 is_public char(1),
+                 public_school_district varchar(63),
+                 enrollment int,
+                 reported char(1),
+                 category varchar(31),
+                 count int,
+                 percent int,
+                 annotation_code int,
+                 annotation_count_desc varchar(63),
+                 annotation_percent_desc varchar(63))"""
     db_exec(conn, sql)
 
     files = ['immunizations-in-first-grade-2021-2022-academic-school-year.csv']
@@ -126,7 +128,13 @@ if __name__ == '__main__':
                     next_row = dict()
 
                     for key in row:
-                        next_row[fix_column_head(key)] = row[key]
+                        if key == 'PUBLIC_PRIVATE':
+                            if row[key] == 'Public':
+                                next_row['is_public'] = 'Y'
+                            else:
+                                next_row['is_public'] = 'N'
+                        else:
+                            next_row[fix_column_head(key)] = row[key]
 
                     row = next_row
 

@@ -1,6 +1,6 @@
 import csv
-
 import os
+import sys
 
 from sqlalchemy import create_engine
 
@@ -47,7 +47,6 @@ columns = [
     "Data_Extract_Date",
     "Data_Revision_Date"]
 
-
 numbers = ["Year", "Month", "Count"]
 
 longs = ["Strata_Name", "Cause_Desc", "Annotation_Desc"]
@@ -59,7 +58,7 @@ def fix_value(start):
 
 if __name__ == '__main__':
 
-    db_exec(conn, "drop table if exists deaths")
+    db_exec(conn, "drop table if exists statewide-death-profiles")
 
     cols = list()
     for c in columns:

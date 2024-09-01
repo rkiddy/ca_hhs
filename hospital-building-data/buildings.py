@@ -1,5 +1,6 @@
 
 import csv
+import sys
 import traceback
 
 from sqlalchemy import create_engine
@@ -43,14 +44,15 @@ if __name__ == '__main__':
 
     sql = """
           create table hospital_buildings (
-                 county_code varchar(31),
-                 perm_id varchar(11),
+                 county_code int,
+                 perm_id int,
                  facility_name varchar(127),
                  city varchar(31),
                  building_nbr varchar(63),
                  building_name varchar(127),
-                 building_status varchar(31),
-                 spc_rating varchar(3),
+                 building_status varchar(63),
+                 spc_rating int,
+                 spc_verified char(1),
                  building_url varchar(255),
                  height_ft int,
                  stories int,
@@ -77,17 +79,40 @@ if __name__ == '__main__':
         # 'Latitude': '37.7626572', 'Longitude': '-122.2538986', 'Count': '1'}
         #
         for row in rdr:
-            row['Facility Name'] = row['Facility Name'].replace("'", "''")
-            row['Building Name'] = row['Building Name'].replace("'", "''")
+            row['County Code'] = int(row['County Code'].split(' ')[0])
+
+            row['SPC Verified'] = None
+
+            if row['SPC Rating *'] == 'N/A':
+                row['SPC Rating *'] = None
+                row['SPC Verified'] = 'N'
+
+            if row['SPC Rating *'] is not None:
+
+                if row['SPC Rating *'].endswith('s'):
+                    row['SPC Rating *'] = row['SPC Rating *'][:-1]
+                    row['SPC Verified'] = 's'
+
+                # the 'D' here is not documented. What does it mean?
+                #
+                if row['SPC Rating *'].endswith('D'):
+                    row['SPC Rating *'] = row['SPC Rating *'][:-1]
+                    row['SPC Verified'] = 'D'
+
+                row['SPC Rating *'] = int(row['SPC Rating *'])
 
             sql = f"""
-                  insert into hospital_buildings values ({fix(row['County Code'])}, {fix(row['Perm ID'])},
-                      {fix(row['Facility Name'])}, {fix(row['City'])}, {fix(row['Building Nbr'])},
-                      {fix(row['Building Name'])}, {fix(row['Building Status'])}, {fix(row['SPC Rating *'])},
-                      {fix(row['Building URL'])}, {fix_int(row['Height (ft)'])}, {fix_int(row['Stories'])},
+                  insert into hospital_buildings values (
+                      {fix_int(row['County Code'])}, {fix_int(row['Perm ID'])},
+                      {fix(row['Facility Name'])}, {fix(row['City'])},
+                      {fix(row['Building Nbr'])}, {fix(row['Building Name'])},
+                      {fix(row['Building Status'])}, {fix_int(row['SPC Rating *'])},
+                      {fix(row['SPC Verified'])}, {fix(row['Building URL'])},
+                      {fix_int(row['Height (ft)'])}, {fix_int(row['Stories'])},
                       {fix(row['Building Code'])}, {fix_int(row['Building Code Year'])},
-                      {fix_int(row['Year Completed'])}, {fix(row['AB 1882 Notice'])}, {row['Latitude']},
-                      {row['Longitude']}, {fix_int(row['Count'])})
+                      {fix_int(row['Year Completed'])}, {fix(row['AB 1882 Notice'])},
+                      {row['Latitude']}, {row['Longitude']},
+                      {fix_int(row['Count'])})
                   """
 
             db_exec(conn, sql)

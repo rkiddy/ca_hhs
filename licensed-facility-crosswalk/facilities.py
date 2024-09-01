@@ -118,7 +118,7 @@ def facility_elms_aspen():
                   elms_parent_facid char(9))"""
     db_exec(conn, sql)
 
-    f = "elms-aspen-licensed-and-certified-healthcare-facility-crosswalk.xlsx"
+    f = "elms-aspen-licensed-and-certified-healthcare-facility-crosswalk.xls"
 
     wb = excel.load_my_workbook('xlsx', f)
 
@@ -210,11 +210,11 @@ def facility_aspen_oshpd():
 
 if __name__ == '__main__':
 
-    facility_elms_oshpd()
+    # facility_elms_oshpd()
 
     # when I can read xls files, this will work.
     #
-    # facility_elms_aspen()
+    facility_elms_aspen()
 
-    facility_aspen_oshpd()
+    # facility_aspen_oshpd()
 

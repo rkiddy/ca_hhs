@@ -49,7 +49,11 @@ def fix_column_heads(row):
     next_row = dict()
 
     for key in row:
-        key2 = fix_column_head(key)
+
+        if key.lower().endswith('objectid'):
+            key2 = 'objectid'
+        else:
+            key2 = fix_column_head(key)
 
         next_row[key2] = row[key]
 
@@ -65,15 +69,15 @@ if __name__ == '__main__':
     sql = """create table dhcs_county_code_references (
                  objectid int,
                  dhcs_county_code int,
-                 county_name varchar(63),
+                 county_name varchar(31),
                  county_region_code char(1),
-                 county_region_description varchar(255),
+                 county_region_description varchar(31),
                  fips_county_code int,
                  fips_state_county_code int,
                  north_south_indicator char(1))"""
     db_exec(conn, sql)
 
-    f = "DHCS_County_Code_Reference_Table.csv"
+    f = ".csv"
 
     cols = ['objectid', 'dhcs_county_code', 'county_name', 'county_region_code', 
             'county_region_description', 'fips_county_code', 'fips_state_county_code', 

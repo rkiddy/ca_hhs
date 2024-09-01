@@ -72,8 +72,8 @@ if __name__ == '__main__':
               target_population varchar(63),
               incidental_medical_services varchar(63),
               adolescent_waiver varchar(63),
-              latitude varchar(63),
-              longitude varchar(63),
+              latitude decimal(12,8),
+              longitude decimal(12,8),
               countyname varchar(63))"""
     db_exec(conn, sql)
 
