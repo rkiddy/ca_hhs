@@ -1,59 +1,51 @@
 
-# Not the chargemasters_hcai_ids table, as this is manually-curated and needs to be kept.
+if [ "$1" == "" ] || [ $1 == "--help" ] || [ $1 == "-help" ] || [ $1 == "--h" ] || [ $1 == "-h" ]; then
+    echo ""
+    echo "usage: bash files_import.sh [ --all | --list-files-only | ... ]"
+    echo ""
+    echo "One must use one of the options above."
+    echo ""
+    exit
+fi
+
+if [ "$1" != "" ] && [ "$1" != "--all" ] && [ "$1" != "--list-files-only" ]; then
+    echo ""
+    echo "Do not understand option \""$1"\". Try --help instead."
+    echo ""
+    exit
+fi
+
+# Ok, we are now ready to begin:
 #
-cat <<EOF > /tmp/all_pre_$$.sql
-drop table if exists chargemasters_cdm;
-drop table if exists chargemasters_column_heads;
-drop table if exists chargemasters_common25;
-drop table if exists chargemasters_cpt_codes;
-drop table if exists chargemasters_dirs;
-drop table if exists chargemasters_files;
-drop table if exists chargemasters_sheets
-EOF
 
-cat <<EOF > /tmp/files_pre_$$.sql
-drop table if exists chargemasters_files;
-create table chargemasters_files (
-    pk int,
-    dir_pk int,
-    year int,
-    full_name varchar(255),
-    hcai_id varchar(15),
-    file_type varchar(15),
-    file_ext varchar(63),
-    common25 int);
-alter table chargemasters_files add index (file_ext);
-alter table chargemasters_files add index (full_name);
-alter table chargemasters_files add index (dir_pk);
-alter table chargemasters_files add index (hcai_id);
-EOF
+if [ $1 == "--list-files-only" ] || [ $1 == "--all" ]; then
 
-cat <<EOF > /tmp/files_post_$$.sql
-update chargemasters_files set year = cast(substr(full_name,1,4) as signed);
-update chargemasters_files set hcai_id = '106334048' where hcai_id = '106334048191300';
-update chargemasters_files cross join (select  @pk:=0) as init set chargemasters_files.pk=@pk:=@pk+1;
-alter table chargemasters_files add primary key (pk);
-drop table if exists chargemasters_dir_hcai_id_joins;
-create table chargemasters_dir_hcai_id_joins (dir_pk int, hcai_id varchar(10));
-alter table chargemasters_dir_hcai_id_joins add primary key (dir_pk, hcai_id);
--- delete from chargemasters_common25;
--- delete from chargemasters_column_heads;
--- delete from chargemasters_cdm;
-EOF
+    echo ""
+    echo "Files found but not in database:"
+    echo ""
 
-cat <<EOF > /tmp/dirs_pre_$$.sql
-drop table if exists chargemasters_dirs;
-create table chargemasters_dirs (
-    pk int primary key,
-    directory varchar(255),
-    year int);
-update chargemasters_files set dir_pk = NULL;
-delete from chargemasters_dir_hcai_id_joins;
-EOF
+    echo "select full_name from chargemasters_files;" | mysql --skip-column-names ca_hhs > /tmp/files_1_$$.txt
+    ls -l /tmp/files_1_$$.txt
 
-cat <<EOF > /tmp/types_$$.sql
--- clear values
-update chargemasters_files set file_type = NULL;
+    find 2* -type f > /tmp/files_2_$$.txt
+    ls -l /tmp/files_2_$$.txt
+
+    awk '{print $0"\tdb"}' /tmp/files_1_$$.txt > /tmp/files_3_$$.txt
+    awk '{print $0"\tdisk"}' /tmp/files_2_$$.txt >> /tmp/files_3_$$.txt
+
+    cat /tmp/files_3_$$.txt | sort | awk 'BEGIN{FS="\t";last=""}{if ($1 != last) print ""; print $0; last = $1}' > /tmp/files_4_$$.txt
+    ls -l /tmp/files_4_$$.txt
+
+    # Adding new files to chargemasters_files
+    #
+ 
+
+    if [ $1 != "--all" ]; then
+        exit
+    fi
+fi
+
+exit
 
 -- Common25
 update chargemasters_files set file_type = 'Common25'

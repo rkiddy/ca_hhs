@@ -28,6 +28,22 @@ def only_sheet(ext, wbook):
 
 cols = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
 
+def find_column_tops(ext, wbook):
+
+    tops = dict()
+
+    for name in sheet_names(ext, wbook):
+        tops[name] = dict()
+
+        for col in cols:
+            for num in range(10):
+                row = num + 1
+                key = f"{col}{row}"
+                val = cell_value_str(ext, wbook, name, key)
+                tops[name][f"{col}{row}"] = val
+
+    return tops
+
 
 def find_common25_col_heads(ext, wbook, sheet_name):
 

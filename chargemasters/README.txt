@@ -28,6 +28,9 @@ sheets.py - Was trying to use a chargemasters_sheets table to keep track of what
 
 sources.txt - Produced by the sources/create_source_list.sh script, so that we can track our fixes for file names.
 
+hcai_id_confusion.txt - uses the hcai_id_check.sh script to check the hcai_id in the files table and verify that
+the files in a directory all have the same hcai_id. (There are cases where there are differences. -rrk 2024-08-26)
+
 ---------------------------------------------------------------------------------------
 
 Each facility is supposed to send in multiple Excel files, or multiple sheets in a single Excel file,
