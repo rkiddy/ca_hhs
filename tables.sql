@@ -123,10 +123,10 @@ DROP TABLE IF EXISTS `chargemasters_dirs`;
 CREATE TABLE `chargemasters_dirs` (
   `pk` int NOT NULL,
   `full_name` varchar(255) DEFAULT NULL,
-  `hcai_id` char(9) DEFAULT NULL,
+  `oshpd_id` char(9) DEFAULT NULL,
   `year` int DEFAULT NULL,
   PRIMARY KEY (`pk`),
-  KEY `hcai_id` (`hcai_id`)
+  KEY `hcai_id` (`oshpd_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -139,7 +139,7 @@ CREATE TABLE `chargemasters_files` (
   `dir_pk` int DEFAULT NULL,
   `year` int DEFAULT NULL,
   `full_name` varchar(255) DEFAULT NULL,
-  `hcai_id` varchar(9) DEFAULT NULL,
+  `oshpd_id` char(9) DEFAULT NULL,
   `file_type` varchar(15) DEFAULT NULL,
   `file_ext` varchar(63) DEFAULT NULL,
   `common25` int DEFAULT NULL,
@@ -148,7 +148,7 @@ CREATE TABLE `chargemasters_files` (
   KEY `file_ext` (`file_ext`),
   KEY `full_name` (`full_name`),
   KEY `dir_pk` (`dir_pk`),
-  KEY `hcai_id` (`hcai_id`)
+  KEY `hcai_id` (`oshpd_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -426,7 +426,7 @@ CREATE TABLE `healthcare_facilities` (
   `latitude` decimal(12,8) DEFAULT NULL,
   `longitude` decimal(12,8) DEFAULT NULL,
   `location` varchar(255) DEFAULT NULL,
-  `hcai_id` varchar(9) DEFAULT NULL,
+  `oshpd_id` char(9) DEFAULT NULL,
   `cclho_code` varchar(255) DEFAULT NULL,
   `cclho_name` varchar(255) DEFAULT NULL,
   `fips_county_code` varchar(255) DEFAULT NULL,
@@ -1426,4 +1426,4 @@ CREATE TABLE `xray_providers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2024-08-31 16:44:01
+-- Dump completed on 2024-09-01 14:48:45

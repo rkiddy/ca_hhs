@@ -87,7 +87,7 @@ if __name__ == '__main__':
          latitude decimal(12,8),
          longitude decima(12,8),
          location varchar(255),
-         hcai_id varchar(9),
+         oshpd_id char(9),
          cclho_code varchar(255),
          cclho_name varchar(255),
          fips_county_code varchar(255),
