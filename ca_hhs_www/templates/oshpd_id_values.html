@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+    <title>Chargemasters</title>
+    {% include "styles.html" %}
+</head>
+<body>
+<div style="padding: 25px 25px 25px 25px;">
+<p align="left"><a href="/hcai/">Home</a></p>
+<h3>OSHPD_ID Values</h3>
+<p> {% if start >= 100 %} <a href="/hcai/oshpd_ids/{{ prev }}">Prev</a> {% endif %} &nbsp;-&nbsp;  <a href="/hcai/oshpd_ids/{{ end }}">Next</a> </p>
+<table class="table table-striped">
+{% for id in ids %}
+    <tr>
+        <td>{{ id }}</td>
+        <td>
+            {% for table in ids[id] %}
+                {{ table }}: {{ ids[id][table] }}<br/>
+                <hr/>
+            {% endfor %}
+        </td>
+    </tr>
+{% endfor %}
+</table>
+</div</body></html>

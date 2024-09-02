@@ -34,6 +34,7 @@ def catalog_detail(id):
     context = data.catalog_detail(id)
     return main.render(**context)
 
+
 @ca_hhs.route(f"/{cfg['WWW']}/catalog/next/<id>/")
 def catalog_next(id):
     id = data.catalog_next(id)
@@ -97,6 +98,7 @@ def chargemasters_no_oshpd_id():
     context = data.chargemasters_no_oshpd_id()
     return main.render(**context)
 
+
 @ca_hhs.route(f"/{cfg['WWW']}/chargemasters/changes/")
 def chargemasters_changes():
     main = env.get_template('chargemasters_changes.html')
@@ -109,6 +111,7 @@ def chargemasters_columns():
     main = env.get_template('chargemasters_columns.html')
     context = data.chargemasters_columns()
     return main.render(**context)
+
 
 # @ca_hhs.route(f"/{cfg['WWW']}/read_changes/", methods=['POST'])
 # def chargemasters_read_changes():
@@ -156,6 +159,19 @@ def columns():
     main = env.get_template('ca_hhs_tables.html')
     context = data.table_info()
     return main.render(**context)
+
+
+@ca_hhs.route(f"/{cfg['WWW']}/oshpd_ids/")
+def oshpd_ids_start():
+    return redirect(f"/{cfg['WWW']}/oshpd_ids/0")
+
+
+@ca_hhs.route(f"/{cfg['WWW']}/oshpd_ids/<start>")
+def oshpd_ids(start):
+    main = env.get_template('oshpd_id_values.html')
+    context = data.oshpd_id_values(start)
+    return main.render(**context)
+
 
 if __name__ == '__main__':
     ca_hhs.run(port=8080)

@@ -495,3 +495,53 @@ def table_info():
 
     return context
 
+
+def oshpd_id_values(start=0):
+    context = dict()
+
+    tables = ['chargemasters_dirs',
+              'facility_profiles',
+              'healthcare_facilities',
+              'licensed_facilities',
+              'licensed_facility_aspen_oshpd_crosswalk',
+              'licensed_facility_elms_oshpd_crosswalk']
+
+    id_values = list()
+
+    for table in tables:
+
+        sql = f"select oshpd_id from {table} group by oshpd_id order by oshpd_id"
+        id_values.extend([r['oshpd_id'] for r in db_exec(conn, sql)])
+
+    id_values = list(set(id_values))
+
+    ids = dict()
+
+    start = int(start)
+
+    end = start + 100
+
+    context['start'] = start
+    context['end'] = end
+    context['prev'] = start - 100
+
+    for id in id_values[start:end]:
+
+        if not id or id == '' or id == 'EXCLUDED':
+            continue
+
+        ids[id] = dict()
+
+        for table in tables:
+
+            if table == 'chargemasters_dirs':
+                sql = f"select year, count(0) from chargemasters_dirs where oshpd_id = {fix(id)} group by year order by year"
+            else:
+                sql = f"select * from {table} where oshpd_id = {fix(id)}"
+            print(f"sql: {sql}")
+            ids[id][table] = db_exec(conn, sql)
+            
+    context['ids'] = ids
+
+    return context
+
