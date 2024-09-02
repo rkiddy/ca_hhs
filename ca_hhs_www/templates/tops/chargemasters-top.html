@@ -1,13 +1,1 @@
-Years:
-    {% for year in years %}
-    <a href="/hcai/chargemasters/year/{{ year }}">{{ year }}</a>&nbsp;-&nbsp;
-    {% endfor %}
-<br/>
-Facilities:
-    {% for initial in initials %}
-    <a href="/hcai/chargemasters/facilities/{{ initial }}">{{ initial }}</a>&nbsp;-&nbsp;
-    {% endfor %}
-<br/>
-    HCAI Ids: <a href="/hcai/chargemasters/oshpd_ids/">All</a>&nbsp;-&nbsp;
-    Missing HCAH Ids: <a href="/hcai/chargemasters/no_oshpd_id/">All</a>&nbsp;-&nbsp;
-    Columns: <a href="/hcai/chargemasters/columns/">All</a>
+Years: {% for year in years %} <a href="/hcai/chargemasters/year/{{ year }}">{{ year }}</a>&nbsp;-&nbsp; {% endfor %}<br/>Facilities: {% for initial in initials %} <a href="/hcai/chargemasters/facilities/{{ initial }}">{{ initial }}</a>&nbsp;-&nbsp; {% endfor %}<br/>HCAI Ids: <a href="/hcai/chargemasters/oshpd_ids/">All</a>&nbsp;-&nbsp; Missing HCAH Ids: <a href="/hcai/chargemasters/no_oshpd_id/">All</a>&nbsp;-&nbsp; Columns: <a href="/hcai/chargemasters/columns/">All</a>

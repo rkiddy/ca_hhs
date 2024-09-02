@@ -1371,6 +1371,52 @@ CREATE TABLE `updates` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `voters_region_county_crosswalk`
+--
+
+DROP TABLE IF EXISTS `voters_region_county_crosswalk`;
+CREATE TABLE `voters_region_county_crosswalk` (
+  `county_fips` char(5) DEFAULT NULL,
+  `county` varchar(63) DEFAULT NULL,
+  `mpo_region` varchar(63) DEFAULT NULL,
+  `mpo_region_code` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `voters_registrations`
+--
+
+DROP TABLE IF EXISTS `voters_registrations`;
+CREATE TABLE `voters_registrations` (
+  `ind_id` int DEFAULT NULL,
+  `ind_definition` varchar(127) DEFAULT NULL,
+  `reportyear` int DEFAULT NULL,
+  `race_eth_code` int DEFAULT NULL,
+  `race_eth_name` varchar(31) DEFAULT NULL,
+  `geotype` varchar(5) DEFAULT NULL,
+  `geotypevalue` varchar(31) DEFAULT NULL,
+  `geoname` varchar(63) DEFAULT NULL,
+  `county_nam` varchar(63) DEFAULT NULL,
+  `county_fips` varchar(31) DEFAULT NULL,
+  `region_name` varchar(63) DEFAULT NULL,
+  `region_code` varchar(15) DEFAULT NULL,
+  `strata_one_code` varchar(15) DEFAULT NULL,
+  `strata_one_name` varchar(31) DEFAULT NULL,
+  `strata_two_code` varchar(15) DEFAULT NULL,
+  `strata_two_name` varchar(31) DEFAULT NULL,
+  `numerator` varchar(63) DEFAULT NULL,
+  `denominator` varchar(63) DEFAULT NULL,
+  `estimate` varchar(63) DEFAULT NULL,
+  `ll_95ci` varchar(63) DEFAULT NULL,
+  `ul_95ci` varchar(63) DEFAULT NULL,
+  `se` varchar(63) DEFAULT NULL,
+  `rse` varchar(63) DEFAULT NULL,
+  `ca_rr` varchar(63) DEFAULT NULL,
+  `version` varchar(63) DEFAULT NULL,
+  `vap` varchar(63) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `watershed_cases`
 --
 
@@ -1426,4 +1472,4 @@ CREATE TABLE `xray_providers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2024-09-01 14:48:45
+-- Dump completed on 2024-09-01 16:05:45

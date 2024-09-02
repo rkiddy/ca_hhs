@@ -167,6 +167,10 @@ table school_immunizations
 dataset total-provider-reimbursement-for-family-pact-services-by-fiscal-years
 table family_pact_total_provider_reimbursement
 
+dataset voter-registration-2002-2010
+table voters_region_county_crosswalk
+table voters_registrations
+
 dataset wic-authorized-product-list-apl
 table wic_products
 
