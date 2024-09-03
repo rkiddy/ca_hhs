@@ -40,7 +40,7 @@ if __name__ == '__main__':
     sql = f"""
               create table licensed_facilities (
                   period char(8),
-                  oshpd_id varchar(63),
+                  oshpd_id char(9),
                   facility_name varchar(127),
                   license_num varchar(63),
                   facility_level_desc varchar(63),
