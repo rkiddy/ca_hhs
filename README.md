@@ -1,16 +1,22 @@
 <details><summary>adap-base</summary>TBD</details>
 
+<details><summary>all-cause-unplanned-30-day-hospital-readmission-rate-california</summary>TBD</details>
+
 <details><summary>asthma-deaths-by-county</summary>TBD</details>
 
 <details><summary>asthma-prevalence</summary>TBD</details>
 
 <details><summary>average-reimbursement-per-family-pact-client-served-by-fiscal-year</summary>TBD</details>
 
+<details><summary>california-hospital-performance-ratings</summary>TBD</details>
+
 <details><summary>change-in-the-number-of-family-pact-clients-served-by-sex-age-and-fiscal-years</summary>TBD</details>
 
 <details><summary>chargemasters</summary>TBD</details>
 
 <details><summary>chlamydia-screening-percentages-for-female-family-pact-clients-by-age</summary>TBD</details>
+
+<detail><summary>cms-stc-datasets</summary>TBD</details>
 
 <details><summary>county-health-status-profiles</summary>TBD</details>
 
@@ -25,8 +31,17 @@ vend it in a simple application. There is a lot of data here but not of it is ..
 
 <details><summary>death-profiles-by-county</summary>TBD</details>
 
+<details><summary>demographic-profile-of-family-pact-clients-served-by-fiscal-year</summary>TBD</details>
+
 <details><summary>dhcs-county-code-reference-table</summary>TBD</details>
 
+<details><summary>directory-of-service-providers</summary>TBD</details>
+
+<details><summary>enrollment-data</summary>TBD</details>
+
+<details><summary>facilitylist</summary>TBD</details>
+
+<details><summary>facility-profile-attributes</summary>TBD</details>
 <details><summary>family-pact-adults-and-adolescents-receiving-an-contraceptive-iuc</summary>TBD</details>
 
 <details><summary>family-pact-client-demographics-by-county</summary>TBD</details>
@@ -63,6 +78,8 @@ https://www.cdph.ca.gov/Programs/CHCQ/LCP/Pages/HealthCareFacilities.aspx.
 
 <details><summary>healthcare-workforce-geography-crosswalk</summary>TBD</details>
 
+<details><summary>hiv-aids-cases</summary>TBD</details>
+
 <details>
 <summary>hospital-building-data</summary>
 
@@ -71,6 +88,8 @@ building code in effect when built. Includes a "perm_id" assigned as "Facility n
 per Facilities Development Division". Will this match up with the "facid" fields in other
 datasets? We will see.
 </details>
+
+<details><summary>hospital-characteristics-list-for-california-providers</summary>TBD</details>
 
 <details><summary>hospital-inpatient-diagnosis-procedure-and-external-cause-codes</summary>TBD</details>
 
@@ -110,6 +129,8 @@ This dataset is marked on the CalHHS Open Data Portal as blocked. No idea why.
 
 <details><summary>profile-of-enrolled-medi-cal-fee-for-service-ffs-providers</summary>TBD</details>
 
+<details><summary>providers-delivering-family-planning-access-care-and-treatment-pact-services-by-fiscal-years</summary>TBD</details>
+
 <details><summary>provider-suspended-and-ineligible-list-s-i-list</summary>TBD</details>
 
 <details><summary>provision-of-selected-family-pact-contraception-by-county</summary>TBD</details>
@@ -137,6 +158,8 @@ https://www.cdph.ca.gov/Programs/CHCQ/HAI/Pages/AnnualHAIReports.aspx
 <details><summary>total-provider-reimbursement-for-family-pact-services-by-fiscal-years</summary>TBD</details>
 
 <details><summary>suspended-and-ineligible-list-s-i-list</summary>TBD</details>
+
+<details><summary>voter-registration-2002-2010</summary>TBD</details>
 
 <details><summary>wic-authorized-product-list-apl</summary>TBD</details>
 

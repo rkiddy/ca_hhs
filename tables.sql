@@ -246,6 +246,93 @@ CREATE TABLE `dhcs_county_code_references` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `enrollment_data`
+--
+
+DROP TABLE IF EXISTS `enrollment_data`;
+CREATE TABLE `enrollment_data` (
+  `eligibility_date` date DEFAULT NULL,
+  `sex` char(1) DEFAULT NULL,
+  `county` varchar(31) DEFAULT NULL,
+  `region` varchar(31) DEFAULT NULL,
+  `age_group` varchar(15) DEFAULT NULL,
+  `ethnic_group` varchar(31) DEFAULT NULL,
+  `language` varchar(31) DEFAULT NULL,
+  `enrolled` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `facility_list`
+--
+
+DROP TABLE IF EXISTS `facility_list`;
+CREATE TABLE `facility_list` (
+  `x` decimal(16,8) DEFAULT NULL,
+  `y` decimal(16,8) DEFAULT NULL,
+  `id` int DEFAULT NULL,
+  `facilitynbr` int DEFAULT NULL,
+  `facilitystatus` varchar(63) DEFAULT NULL,
+  `facilityname` varchar(255) DEFAULT NULL,
+  `licensetype` varchar(63) DEFAULT NULL,
+  `streetnbr` varchar(63) DEFAULT NULL,
+  `streetname` varchar(63) DEFAULT NULL,
+  `city` varchar(63) DEFAULT NULL,
+  `state` varchar(63) DEFAULT NULL,
+  `zip` varchar(63) DEFAULT NULL,
+  `county` varchar(63) DEFAULT NULL,
+  `oblicensenbr` varchar(63) DEFAULT NULL,
+  `obbusinessname` varchar(255) DEFAULT NULL,
+  `obfname` varchar(63) DEFAULT NULL,
+  `oblname` varchar(63) DEFAULT NULL,
+  `obtitle` varchar(63) DEFAULT NULL,
+  `obaddress` varchar(63) DEFAULT NULL,
+  `obaddress2` varchar(63) DEFAULT NULL,
+  `obcity` varchar(63) DEFAULT NULL,
+  `obstate` varchar(63) DEFAULT NULL,
+  `obzip` varchar(63) DEFAULT NULL,
+  `obphone1` varchar(63) DEFAULT NULL,
+  `obphone2` varchar(63) DEFAULT NULL,
+  `obfax` varchar(63) DEFAULT NULL,
+  `date_opened` varchar(63) DEFAULT NULL,
+  `date_closed` varchar(63) DEFAULT NULL,
+  `latitude` varchar(63) DEFAULT NULL,
+  `longitude` varchar(63) DEFAULT NULL,
+  `addr1` varchar(63) DEFAULT NULL,
+  `addr2` varchar(63) DEFAULT NULL,
+  `f28` varchar(63) DEFAULT NULL,
+  `bing` varchar(63) DEFAULT NULL,
+  `type_` varchar(63) DEFAULT NULL,
+  `ffstationnetwork` varchar(63) DEFAULT NULL,
+  `ffstationnbr` varchar(63) DEFAULT NULL,
+  `stationnetwork` varchar(63) DEFAULT NULL,
+  `stationnbr` varchar(63) DEFAULT NULL,
+  `geographic_region` varchar(63) DEFAULT NULL,
+  `aco` varchar(63) DEFAULT NULL,
+  `aco_name` varchar(63) DEFAULT NULL,
+  `aco_phonenbr` varchar(63) DEFAULT NULL,
+  `dse` varchar(63) DEFAULT NULL,
+  `dse_name` varchar(63) DEFAULT NULL,
+  `dse_phonenbr` varchar(63) DEFAULT NULL,
+  `field_flso` varchar(63) DEFAULT NULL,
+  `flso_name` varchar(63) DEFAULT NULL,
+  `flso_phonenbr` varchar(63) DEFAULT NULL,
+  `senatedistrict` int DEFAULT NULL,
+  `assemblydistrict` int DEFAULT NULL,
+  `congressionaldistrict` int DEFAULT NULL,
+  `alirts_facility_id` int DEFAULT NULL,
+  `rco` varchar(63) DEFAULT NULL,
+  `rco_name` varchar(63) DEFAULT NULL,
+  `rco_phonenbr` varchar(63) DEFAULT NULL,
+  `pt1` varchar(63) DEFAULT NULL,
+  `pt1fullname` varchar(63) DEFAULT NULL,
+  `pt2` varchar(63) DEFAULT NULL,
+  `pt2fullname` varchar(63) DEFAULT NULL,
+  `responsible_region` varchar(63) DEFAULT NULL,
+  `proposedbldgs` varchar(1) DEFAULT NULL,
+  `objectid` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `facility_profiles`
 --
 
@@ -358,7 +445,8 @@ CREATE TABLE `facility_profiles` (
   `spc_3_state` int DEFAULT NULL,
   `spc_4_state` int DEFAULT NULL,
   `spc_5_state` int DEFAULT NULL,
-  `sysdate` varchar(63) DEFAULT NULL
+  `sysdate` varchar(63) DEFAULT NULL,
+  KEY `oshpd_id` (`oshpd_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -435,7 +523,8 @@ CREATE TABLE `healthcare_facilities` (
   `trauma_ctr` varchar(255) DEFAULT NULL,
   `type_of_care` varchar(255) DEFAULT NULL,
   `critical_access_hospital` varchar(255) DEFAULT NULL,
-  `data_date` varchar(255) DEFAULT NULL
+  `data_date` varchar(255) DEFAULT NULL,
+  KEY `oshpd_id` (`oshpd_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -767,6 +856,29 @@ CREATE TABLE `hospital_buildings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `hospital_characteristics`
+--
+
+DROP TABLE IF EXISTS `hospital_characteristics`;
+CREATE TABLE `hospital_characteristics` (
+  `oshpd_id` char(9) DEFAULT NULL,
+  `oshpd_provider_name` varchar(255) DEFAULT NULL,
+  `designated_nicu_as_defined_by_dhcs` varchar(15) DEFAULT NULL,
+  `dph` varchar(15) DEFAULT NULL,
+  `ndph` varchar(15) DEFAULT NULL,
+  `oshpd_rural_hospital` varchar(15) DEFAULT NULL,
+  `dhcs_designated_remote_rural` varchar(15) DEFAULT NULL,
+  `sfy_2019_20_cost_to_charge_ratio_pct` decimal(8,6) DEFAULT NULL,
+  `ffy_2019_wage_index_value` decimal(8,6) DEFAULT NULL,
+  `ffy_2019_wage_index_value_adjusted` decimal(8,6) DEFAULT NULL,
+  `sfy_2019_20_unadjusted_statewide_base_rate` int DEFAULT NULL,
+  `sfy_2019_20_wage_adjusted_statewide_base_rate` int DEFAULT NULL,
+  `sfy_2019_20_rehab_rate` int DEFAULT NULL,
+  `sfy_2019_20_admin_2_190_rate` decimal(7,2) DEFAULT NULL,
+  `sfy_2019_20_admin_2_199_rate` decimal(7,2) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `infant_mortality_per_1000_births`
 --
 
@@ -847,7 +959,7 @@ CREATE TABLE `inpatient_procedures` (
 DROP TABLE IF EXISTS `licensed_facilities`;
 CREATE TABLE `licensed_facilities` (
   `period` char(8) DEFAULT NULL,
-  `oshpd_id` varchar(63) DEFAULT NULL,
+  `oshpd_id` char(9) DEFAULT NULL,
   `facility_name` varchar(127) DEFAULT NULL,
   `license_num` varchar(63) DEFAULT NULL,
   `facility_level_desc` varchar(63) DEFAULT NULL,
@@ -863,7 +975,8 @@ CREATE TABLE `licensed_facilities` (
   `license_type_desc` varchar(63) DEFAULT NULL,
   `license_category_desc` varchar(63) DEFAULT NULL,
   `latitude` decimal(12,8) DEFAULT NULL,
-  `longitude` decimal(12,8) DEFAULT NULL
+  `longitude` decimal(12,8) DEFAULT NULL,
+  KEY `oshpd_id` (`oshpd_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -885,7 +998,8 @@ CREATE TABLE `licensed_facility_aspen_oshpd_crosswalk` (
   `fac_type_description` varchar(127) DEFAULT NULL,
   `fac_fdr` varchar(63) DEFAULT NULL,
   `fac_fac_relationship` varchar(63) DEFAULT NULL,
-  `elms_parent_facid` char(9) DEFAULT NULL
+  `elms_parent_facid` char(9) DEFAULT NULL,
+  KEY `oshpd_id` (`oshpd_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -926,7 +1040,8 @@ CREATE TABLE `licensed_facility_elms_oshpd_crosswalk` (
   `fac_type_description` varchar(127) DEFAULT NULL,
   `fac_fdr` varchar(63) DEFAULT NULL,
   `fac_fac_relationship` varchar(63) DEFAULT NULL,
-  `elms_parent_facid` char(9) DEFAULT NULL
+  `elms_parent_facid` char(9) DEFAULT NULL,
+  KEY `oshpd_id` (`oshpd_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -1472,4 +1587,4 @@ CREATE TABLE `xray_providers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2024-09-01 16:05:45
+-- Dump completed on 2024-09-02 19:11:53

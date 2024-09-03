@@ -46,6 +46,12 @@ table dhcs_county_code_references
 
 dataset directory-of-service-providers
 
+dataset enrollment-data
+table enrollment_data
+
+dataset facilitylist
+table facility_list
+
 dataset facility-profile-attributes
 table facility_profiles
 
@@ -91,8 +97,13 @@ table licensed_facility_elms_oshpd_crosswalk
 table licensed_facility_elms_aspen_crosswalk
 table licensed_facility_aspen_oshpd_crosswalk
 
+dataset hiv-aids-cases
+
 dataset hospital-building-data
 table hospital_buildings
+
+dataset hospital-characteristics-list-for-california-providers
+table hospital_characteristics
 
 dataset hospital-inpatient-diagnosis-procedure-and-external-cause-codes
 table inpatient_death_causes

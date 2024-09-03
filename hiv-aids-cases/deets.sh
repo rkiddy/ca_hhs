@@ -1,0 +1,5 @@
+export uuid1="2269414f-024a-47fa-b055-ee3b28dda27e"
+export uuid2="8194685d-c32a-4f15-a5f6-e532c0bf967b"
+export id="hiv-aids-cases"
+export hash="sw2o5ga6"
+export script="none"

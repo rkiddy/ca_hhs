@@ -61,12 +61,11 @@ def find_ids():
 
     return found
 
+
 def url_for_id(vdict):
-    if vdict['id'] == 'measurable-hospital-acquired-conditions-composite-patient' \
-                      '-safety-indicator-statewide-rate-califo':
-        return 'https://data.chhs.ca.gov/dataset/measurable-hospital-acquired-conditions' \
-               '-composite-patient-safety-indicator-statewide-rate-california'
-    return f"https://data.chhs.ca.gov/dataset/{vdict['id']}"
+    url = f"https://data.chhs.ca.gov/dataset/{vdict['id']}"
+    dprint(f"trying url... {url}")
+    return url
 
 
 def read_deets(values):
