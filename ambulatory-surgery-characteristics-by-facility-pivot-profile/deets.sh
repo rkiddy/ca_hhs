@@ -1,0 +1,5 @@
+export uuid1="18072f74-ae01-4d78-97ec-15fee6329c74"
+export uuid2="b724e036-b433-41e3-b08c-d30cdb9f5898"
+export id="ambulatory-surgery-characteristics-by-facility-pivot-profile"
+export hash="um72gjct"
+export script="none"

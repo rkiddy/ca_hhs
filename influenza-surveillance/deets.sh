@@ -1,0 +1,5 @@
+export uuid1="fc544658-35c5-4be0-af20-fc703bc57c13"
+export uuid2="96fb5413-c61b-428c-993d-953ead02ee9f"
+export id="influenza-surveillance"
+export hash="yin7eefz"
+export script="none"

@@ -1,0 +1,5 @@
+export uuid1="56436b25-193c-40bf-9ef2-922ad3807c4e"
+export uuid2="bb047d48-e91a-4c37-9aa2-3ea432d59a13"
+export id="population-percentage-within-a-quarter-mile-of-alcohol-outlets-2014"
+export hash="vehqazv2"
+export script="none"

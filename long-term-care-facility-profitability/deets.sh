@@ -1,0 +1,5 @@
+export uuid1="4327ea61-c69b-4f43-a0eb-a354476880bb"
+export uuid2="5fd9d08e-106d-444a-bedc-bb73e6474934"
+export id="long-term-care-facility-profitability"
+export hash="jfa2isgn"
+export script="none"

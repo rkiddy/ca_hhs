@@ -1,0 +1,5 @@
+export uuid1="31ea2cfd-bc1c-4bde-9626-f41b97cc1b93"
+export uuid2="9c16810e-6f91-47e3-a6f2-de2bd69cd605"
+export id="emergency-department-services-trends"
+export hash="3dmwxc09"
+export script="none"

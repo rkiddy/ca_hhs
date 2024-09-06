@@ -1,0 +1,5 @@
+export uuid1="0114f5bb-4975-419d-95d9-5f0179a8de06"
+export uuid2="bdafb620-7bf9-478c-9ec6-47c4b0f13736"
+export id="food-affordability-2006-2010"
+export hash="h6413oi2"
+export script="none"

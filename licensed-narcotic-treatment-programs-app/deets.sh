@@ -1,0 +1,5 @@
+export uuid1="12ae881a-9ead-4faa-9bd1-e292f2070b1e"
+export uuid2="ab14418d-fb52-4bb3-b3f6-f3b31f5d1fd7"
+export id="licensed-narcotic-treatment-programs-app"
+export hash="lncaux_0"
+export script="none"

@@ -1,0 +1,5 @@
+export uuid1="6e946377-6360-400b-b8df-3528cfdb8b4d"
+export uuid2="fb474414-4764-451b-9b0f-b674a76d02ad"
+export id="long-term-care-facility-staffing"
+export hash="fyxghnb3"
+export script="none"

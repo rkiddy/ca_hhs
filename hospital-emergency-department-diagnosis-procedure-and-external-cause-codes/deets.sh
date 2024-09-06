@@ -1,0 +1,5 @@
+export uuid1="0e43d826-14d2-4ee3-b4f7-4ef86b961b9c"
+export uuid2="3a9172c4-a07d-46b9-99e4-25e368cc81d0"
+export id="hospital-emergency-department-diagnosis-procedure-and-external-cause-codes"
+export hash="m0kz2uvz"
+export script="none"

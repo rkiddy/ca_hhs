@@ -1,0 +1,5 @@
+export uuid1="9bfdb084-9ca5-46f5-8121-20a53d59bfca"
+export uuid2="07dbb8c2-aae4-49ef-a4a5-4fd0c64c4006"
+export id="test-cdph-central-line-associated-bloodstream-infections-clabsi-in-california-hospitals"
+export hash="vnrjnlfx"
+export script="none"

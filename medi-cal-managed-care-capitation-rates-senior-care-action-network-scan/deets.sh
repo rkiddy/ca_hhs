@@ -1,0 +1,5 @@
+export uuid1="1603b8f8-1e2b-412f-9faa-c99f2e425452"
+export uuid2="c36a0cc9-8a11-4d80-886e-66a8797f7bbc"
+export id="medi-cal-managed-care-capitation-rates-senior-care-action-network-scan"
+export hash="l6uk2_lp"
+export script="none"

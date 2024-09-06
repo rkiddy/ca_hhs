@@ -1,0 +1,5 @@
+export uuid1="b16850c1-10e7-4eb5-9c6c-7f9444eb0ed7"
+export uuid2="89432dba-afea-42b3-8334-ced95a4fde05"
+export id="inhospitalbirthsbymothersagegroup"
+export hash="c1z4vhnb"
+export script="none"

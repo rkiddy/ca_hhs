@@ -1,0 +1,5 @@
+export uuid1="77b9bce3-dcda-44c9-9a80-3ff317138bdd"
+export uuid2="33627cca-eee1-4afc-82fb-22679ea136f3"
+export id="california-statewide-inpatient-mortality-rates"
+export hash="3zs1d13c"
+export script="none"

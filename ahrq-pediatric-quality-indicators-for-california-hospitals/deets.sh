@@ -1,0 +1,5 @@
+export uuid1="3285fa8d-fe4b-4984-802a-9bca4b0716e5"
+export uuid2="efbcf853-964b-4ef7-9f44-32e295e8297f"
+export id="ahrq-pediatric-quality-indicators-for-california-hospitals"
+export hash="0lb42jw7"
+export script="none"

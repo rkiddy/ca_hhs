@@ -1,0 +1,5 @@
+export uuid1="feb9acc8-4a0b-410c-8ccc-7b715a41eedc"
+export uuid2="97b049bf-df12-410a-91a8-98db8294a3ee"
+export id="key-characteristics-of-californians-age-60-and-over"
+export hash="xnvr14of"
+export script="none"

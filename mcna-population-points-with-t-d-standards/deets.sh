@@ -1,0 +1,5 @@
+export uuid1="4c976e91-a882-4c11-a2cc-dd00241a588c"
+export uuid2="2de8b0b7-095a-4d2a-8e2d-9ecb58a968da"
+export id="mcna-population-points-with-t-d-standards"
+export hash="g4rabgzb"
+export script="none"

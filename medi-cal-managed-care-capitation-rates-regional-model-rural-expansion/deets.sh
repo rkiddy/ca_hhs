@@ -1,0 +1,5 @@
+export uuid1="d84e6242-1b87-4dbe-b771-ed9510fdc797"
+export uuid2="7270e4c9-dfa6-4c71-91bf-ddcd9d9547f2"
+export id="medi-cal-managed-care-capitation-rates-regional-model-rural-expansion"
+export hash="s1lms_ba"
+export script="none"

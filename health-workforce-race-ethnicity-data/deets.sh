@@ -1,0 +1,5 @@
+export uuid1="74d14068-44c3-4dec-885d-c662d7a6ab6c"
+export uuid2="4cad77dc-db1d-4b58-9cb8-86c4e7d261c9"
+export id="health-workforce-race-ethnicity-data"
+export hash="os34mj_p"
+export script="none"

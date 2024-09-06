@@ -1,0 +1,5 @@
+export uuid1="14a22bcf-edde-4d60-8541-d06e86af16cb"
+export uuid2="4b36bc57-dc23-4247-820e-f2b19e695649"
+export id="income-inequality"
+export hash="0ky_a4qh"
+export script="none"

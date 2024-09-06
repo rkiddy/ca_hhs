@@ -1,0 +1,5 @@
+export uuid1="4d1be4b5-c559-49b3-9e8d-6a19b07fa80f"
+export uuid2="a3334f90-5134-481b-93ae-2fcc737f7ff2"
+export id="community-care-licensing-adult-residential-facility-locations"
+export hash="z5tx0v98"
+export script="none"

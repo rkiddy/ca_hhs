@@ -1,0 +1,5 @@
+export uuid1="430e3d9b-5129-4b2b-b466-c7819894817e"
+export uuid2="ae0e5f21-d086-4097-8fe3-7ac3ab1d60b3"
+export id="clostridioides-difficile-infections-cdi-in-california-hospitals"
+export hash="3_be7lez"
+export script="none"

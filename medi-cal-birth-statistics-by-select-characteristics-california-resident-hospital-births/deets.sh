@@ -1,0 +1,5 @@
+export uuid1="de523b4c-bd41-47df-89e6-a074836d3162"
+export uuid2="6bdf1fa2-a7c5-47f6-85ca-b683b4d7ca60"
+export id="medi-cal-birth-statistics-by-select-characteristics-california-resident-hospital-births"
+export hash="nr6tn4a6"
+export script="none"

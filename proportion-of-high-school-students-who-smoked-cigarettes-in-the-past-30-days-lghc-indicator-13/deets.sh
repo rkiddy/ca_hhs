@@ -1,0 +1,5 @@
+export uuid1="2b6dc2e3-83b5-45cc-8721-d5ab90d6b663"
+export uuid2="62822282-78de-430b-95bc-f4a86a400b08"
+export id="proportion-of-high-school-students-who-smoked-cigarettes-in-the-past-30-days-lghc-indicator-13"
+export hash="r"
+export script="none"

@@ -1,0 +1,5 @@
+export uuid1="4de76cd0-0ac9-4260-8ac3-0637acb444fb"
+export uuid2="1b05cadc-73c4-45e3-be1c-781a92f210ad"
+export id="stds-in-california-by-disease-county-year-and-sex"
+export hash="kajdl2sv"
+export script="none"

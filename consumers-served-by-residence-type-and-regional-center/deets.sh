@@ -1,0 +1,5 @@
+export uuid1="d1881982-1b2c-4232-87ab-1e0440af836d"
+export uuid2="4185aa56-632a-45c9-8855-13cee28a398c"
+export id="consumers-served-by-residence-type-and-regional-center"
+export hash="a_gv427k"
+export script="none"

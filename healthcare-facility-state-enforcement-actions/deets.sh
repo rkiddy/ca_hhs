@@ -1,0 +1,5 @@
+export uuid1="1e1e2904-1bfb-448c-97e1-cf3e228c9159"
+export uuid2="441db5d0-e17c-40e0-bf3c-22050bd64d4c"
+export id="healthcare-facility-state-enforcement-actions"
+export hash="7ycojrpt"
+export script="none"

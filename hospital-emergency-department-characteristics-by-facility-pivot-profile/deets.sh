@@ -1,0 +1,5 @@
+export uuid1="6d0c3448-6635-45ad-bd16-16eaf9e55ef7"
+export uuid2="c5cce1b6-2a82-4c1a-988d-01fe72d8e5ac"
+export id="hospital-emergency-department-characteristics-by-facility-pivot-profile"
+export hash="4oorq6du"
+export script="none"

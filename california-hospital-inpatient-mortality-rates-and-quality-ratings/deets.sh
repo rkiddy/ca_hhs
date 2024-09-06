@@ -1,0 +1,5 @@
+export uuid1="05fee607-cea9-4bf1-8b53-20ca584748a3"
+export uuid2="4f374245-6269-4843-a32d-b3a3c24f5caf"
+export id="california-hospital-inpatient-mortality-rates-and-quality-ratings"
+export hash="3i0owsnl"
+export script="none"

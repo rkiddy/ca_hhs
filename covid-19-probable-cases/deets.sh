@@ -1,0 +1,5 @@
+export uuid1="bb31bcdf-2085-4b47-92aa-13cdd6b37435"
+export uuid2="07a5f9b7-a82d-45b4-9717-49d9e0e449b0"
+export id="covid-19-probable-cases"
+export hash="1l3lanyc"
+export script="none"

@@ -1,0 +1,5 @@
+export uuid1="bb703230-1f5f-44b5-8a90-55e45e08c452"
+export uuid2="8be299e0-8fa2-4489-a67e-863eb061cece"
+export id="sugar-sweetened-beverage-consumption-in-california-residents-2012-2013"
+export hash="753xhqs6"
+export script="none"

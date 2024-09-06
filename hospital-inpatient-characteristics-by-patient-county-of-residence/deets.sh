@@ -1,0 +1,5 @@
+export uuid1="44f54d54-e12c-4c06-b32e-924ecf4410d5"
+export uuid2="bcdb3907-2c35-4391-b239-61891591b19d"
+export id="hospital-inpatient-characteristics-by-patient-county-of-residence"
+export hash="ztw2bjkn"
+export script="none"

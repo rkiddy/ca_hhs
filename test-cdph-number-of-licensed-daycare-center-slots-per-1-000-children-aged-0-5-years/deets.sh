@@ -1,0 +1,5 @@
+export uuid1="e5095eba-b0f3-4050-a971-cf5c17f5ede3"
+export uuid2="2fe8f320-948b-43d2-b566-62e258cc7cdc"
+export id="test-cdph-number-of-licensed-daycare-center-slots-per-1-000-children-aged-0-5-years"
+export hash="45zmgn62"
+export script="none"

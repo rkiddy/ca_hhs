@@ -1,0 +1,5 @@
+export uuid1="c0165909-b95c-4693-9c4c-b74dadc44c68"
+export uuid2="8a01df66-c93f-4f6a-a51e-6eecab33da60"
+export id="insurance-affordability-programs-applications-received-through-county-offices-by-submission-channel"
+export hash="chan"
+export script="none"

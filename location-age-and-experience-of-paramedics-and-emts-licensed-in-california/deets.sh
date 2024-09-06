@@ -1,0 +1,5 @@
+export uuid1="1664c988-99c3-44b6-bb62-08ffb487ce04"
+export uuid2="a8056af9-9399-4ca5-9f99-56991fd45f2f"
+export id="location-age-and-experience-of-paramedics-and-emts-licensed-in-california"
+export hash="jrx0aqdt"
+export script="none"

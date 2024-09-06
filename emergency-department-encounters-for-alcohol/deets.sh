@@ -1,0 +1,5 @@
+export uuid1="c8ab496f-7d04-49c9-b44d-f26f9025ab99"
+export uuid2="5fbd794a-d361-496d-8e4b-b67e9d76e070"
+export id="emergency-department-encounters-for-alcohol"
+export hash="01rfjmb9"
+export script="none"

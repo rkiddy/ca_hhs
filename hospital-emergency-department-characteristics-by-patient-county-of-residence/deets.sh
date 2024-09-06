@@ -1,0 +1,5 @@
+export uuid1="b91d0f25-d2b1-4c9f-b22d-13be3a6c5c90"
+export uuid2="66a1dfe9-a6ff-441f-a038-ddd3d61a88de"
+export id="hospital-emergency-department-characteristics-by-patient-county-of-residence"
+export hash="b4gaz95w"
+export script="none"

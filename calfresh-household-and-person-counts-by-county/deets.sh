@@ -1,0 +1,5 @@
+export uuid1="a83fcac1-9e4f-4322-bab4-4e4438135535"
+export uuid2="97f81d35-ed63-4ad6-b582-104a5d296b58"
+export id="calfresh-household-and-person-counts-by-county"
+export hash="6pr5904c"
+export script="none"

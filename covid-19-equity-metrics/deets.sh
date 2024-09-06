@@ -1,0 +1,5 @@
+export uuid1="f88f9d7f-635d-4334-9dac-4ce773afe4e5"
+export uuid2="2ebf66da-8317-4caf-863d-76288d4f6649"
+export id="covid-19-equity-metrics"
+export hash="3fztyk80"
+export script="none"

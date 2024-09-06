@@ -1,0 +1,5 @@
+export uuid1="636a9b7d-33f1-4b82-847b-d46ec3f7c10f"
+export uuid2="c049efc3-2864-40ab-a47e-8324ff546fa7"
+export id="total-effectuated-qualified-health-plan-qhp-enrollment-covered-ca-qhps"
+export hash="_cvgvpwb"
+export script="none"

@@ -1,0 +1,5 @@
+export uuid1="b0397867-b5c2-413e-8337-63582ab5ffd5"
+export uuid2="cb97599a-301b-43b9-bd28-4d9c1b769403"
+export id="hospital-encounters-for-homeless-patients"
+export hash="w18ta_wm"
+export script="none"
