@@ -102,7 +102,14 @@ def read_deets(values):
             print("nothing found?")
             continue
 
+        # eg url: https://data.chhs.ca.gov/dataset/7ca184c4-9267-4490-8876-21f848d34f5b/
+        #               resource/3aeeb9d9-8d8c-4e26-b416-a4907e268a1b/download/emsa-dhv-volunteers-by-org-upkhkz0c.zip
+
         parts = dload.split('/')
+
+        if len(parts) < 6 or parts[3] != 'dataset' or parts[5] != 'resource':
+            print(f"NOT a proper url.\n{dload}")
+            continue
 
         uuid1 = parts[-5]
 
