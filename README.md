@@ -22,7 +22,7 @@
 
 <details><summary>chlamydia-screening-percentages-for-female-family-pact-clients-by-age</summary>TBD</details>
 
-<summary>cms-stc-datasets</summary>TBD
+<summary>cms-stc-datasets</summary>
 
 <details><summary>county-and-plan-ecm-data-MISSING</summary>TBD</details>
 
