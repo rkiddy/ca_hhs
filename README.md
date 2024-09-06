@@ -1,12 +1,18 @@
-<details><summary>adap-base</summary>TBD</details>
+<details><summary>adap-base-MISSING</summary>TBD</details>
 
 <details><summary>all-cause-unplanned-30-day-hospital-readmission-rate-california</summary>TBD</details>
+
+<details><summary>approved-research-projects-by-the-committee-for-the-protection-of-human-subjects</summary>TBD</details>
+
+<details><summary>areas-with-potential-for-naturally-occurring-asbestos1-MISSING</summary>TBD</details>
 
 <details><summary>asthma-deaths-by-county</summary>TBD</details>
 
 <details><summary>asthma-prevalence</summary>TBD</details>
 
 <details><summary>average-reimbursement-per-family-pact-client-served-by-fiscal-year</summary>TBD</details>
+
+<details><summary>calcat</summary>TBD</details>
 
 <details><summary>california-hospital-performance-ratings</summary>TBD</details>
 
@@ -16,11 +22,15 @@
 
 <details><summary>chlamydia-screening-percentages-for-female-family-pact-clients-by-age</summary>TBD</details>
 
-<detail><summary>cms-stc-datasets</summary>TBD</details>
+<summary>cms-stc-datasets</summary>TBD
+
+<details><summary>county-and-plan-ecm-data-MISSING</summary>TBD</details>
 
 <details><summary>county-health-status-profiles</summary>TBD</details>
 
 <details><summary>covid-19-sewershed-restricted-case-data</summary>TBD</details>
+
+<details><summary>data-table-for-map-of-counties-and-number-of-community-supports-available</summary>TBD</details>
 
 <details>
 <summary>dataset-catalog</summary>
@@ -36,6 +46,8 @@ vend it in a simple application. There is a lot of data here but not of it is ..
 <details><summary>dhcs-county-code-reference-table</summary>TBD</details>
 
 <details><summary>directory-of-service-providers</summary>TBD</details>
+
+<details><summary>ecm-community-support-data-tables-for-quarterly-implementation-report</summary>TBD</details>
 
 <details><summary>enrollment-data</summary>TBD</details>
 
@@ -62,6 +74,8 @@ vend it in a simple application. There is a lot of data here but not of it is ..
 
 <details><summary>female-family-pact-clients-by-age</summary>TBD</details>
 
+<details><summary>food-affordability-2006-2010</summary>TBD</details>
+
 <details><summary>health-and-human-services-program-counts</summary>TBD</details>
 
 <details>
@@ -73,6 +87,8 @@ https://www.cdph.ca.gov/Programs/CHCQ/LCP/Pages/HealthCareFacilities.aspx.
 </details>
 
 <details><summary>healthcare-facility-services</summary>TBD</details>
+
+<details><summary>healthcare-facility-state-enforcement-actions</summary>TBD</details>
 
 <details><summary>healthcare-payments-data-snapshot</summary>TBD</details>
 
@@ -137,6 +153,8 @@ This dataset is marked on the CalHHS Open Data Portal as blocked. No idea why.
 
 <details><summary>respiratory-virus-dashboard-metrics</summary>TBD</details>
 
+<details><summary>state-test-sites-MISSING</summary>TBS</details>
+
 <details>
 <summary>statewide-death-profiles</summary>
 
@@ -176,6 +194,7 @@ https://www.cdph.ca.gov/Programs/CHCQ/HAI/Pages/AnnualHAIReports.aspx
 * CalWORKs
 * CPS - Child Protective Services
 * DDS 
+* ELMS - Electronic Licensing Management System
 * Family PACT
 * HAI - Hospital-Acquired Infection
 * IHSS
