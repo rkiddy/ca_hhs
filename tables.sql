@@ -37,6 +37,24 @@ CREATE TABLE `authorized_wic_vendors` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `cal_cat`
+--
+
+DROP TABLE IF EXISTS `cal_cat`;
+CREATE TABLE `cal_cat` (
+  `source` varchar(63) DEFAULT NULL,
+  `disease` varchar(63) DEFAULT NULL,
+  `location_level` varchar(63) DEFAULT NULL,
+  `location` varchar(255) DEFAULT NULL,
+  `target_date` date DEFAULT NULL,
+  `target` varchar(63) DEFAULT NULL,
+  `model` varchar(63) DEFAULT NULL,
+  `value_num` decimal(7,2) DEFAULT NULL,
+  `quantile` varchar(63) DEFAULT NULL,
+  `archivedt` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `catalog`
 --
 
@@ -1073,10 +1091,10 @@ CREATE TABLE `medicaid_ffs_providers` (
   `provider_source` varchar(63) DEFAULT NULL,
   `provider_number` varchar(63) DEFAULT NULL,
   `npi` varchar(63) DEFAULT NULL,
-  `owner_number` varchar(63) DEFAULT NULL,
-  `service_location_number` varchar(63) DEFAULT NULL,
+  `owner_number` int DEFAULT NULL,
+  `service_location_number` int DEFAULT NULL,
   `legal_name` varchar(63) DEFAULT NULL,
-  `enroll_status_eff_dt` varchar(63) DEFAULT NULL,
+  `enroll_status_eff_dt` date DEFAULT NULL,
   `provider_taxonomy` varchar(63) DEFAULT NULL,
   `anc_provider_type` varchar(63) DEFAULT NULL,
   `fi_provider_type_cd` varchar(63) DEFAULT NULL,
@@ -1084,7 +1102,7 @@ CREATE TABLE `medicaid_ffs_providers` (
   `provider_license` varchar(63) DEFAULT NULL,
   `fi_provider_specialty_cd` varchar(63) DEFAULT NULL,
   `fi_provider_specialty` varchar(63) DEFAULT NULL,
-  `out_of_state_indicator` varchar(63) DEFAULT NULL,
+  `out_of_state_indicator` int DEFAULT NULL,
   `in_out_state` varchar(63) DEFAULT NULL,
   `address_attention` varchar(63) DEFAULT NULL,
   `address` varchar(63) DEFAULT NULL,
@@ -1096,9 +1114,9 @@ CREATE TABLE `medicaid_ffs_providers` (
   `dhcs_county_cd` varchar(63) DEFAULT NULL,
   `fips_county_cd` varchar(63) DEFAULT NULL,
   `county` varchar(63) DEFAULT NULL,
-  `latitude` varchar(63) DEFAULT NULL,
+  `latitude` decimal(12,8) DEFAULT NULL,
   `longitude` decimal(12,8) DEFAULT NULL,
-  `countyname` decimal(12,8) DEFAULT NULL
+  `countyname` varchar(63) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -1251,6 +1269,35 @@ CREATE TABLE `providers_suspended_ineligible_us` (
   `reindate` varchar(31) DEFAULT NULL,
   `waiverdate` varchar(31) DEFAULT NULL,
   `wvrstate` varchar(31) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `research_projects_approved`
+--
+
+DROP TABLE IF EXISTS `research_projects_approved`;
+CREATE TABLE `research_projects_approved` (
+  `affiliation_and_data_source` text,
+  `application_type` varchar(63) DEFAULT NULL,
+  `completed` varchar(63) DEFAULT NULL,
+  `data_source` text,
+  `defined` varchar(63) DEFAULT NULL,
+  `id` varchar(63) DEFAULT NULL,
+  `initial_approval` varchar(63) DEFAULT NULL,
+  `institution` varchar(255) DEFAULT NULL,
+  `latest_approval` varchar(63) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `pi` varchar(255) DEFAULT NULL,
+  `pi_first_name` varchar(63) DEFAULT NULL,
+  `pi_last_name` varchar(63) DEFAULT NULL,
+  `pi_name` varchar(255) DEFAULT NULL,
+  `pi_organization` varchar(255) DEFAULT NULL,
+  `project_site` varchar(63) DEFAULT NULL,
+  `project_title` varchar(1027) DEFAULT NULL,
+  `project_type` varchar(255) DEFAULT NULL,
+  `protocol_id` varchar(63) DEFAULT NULL,
+  `title` varchar(1027) DEFAULT NULL,
+  `type_of_activity` varchar(63) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -1587,4 +1634,4 @@ CREATE TABLE `xray_providers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2024-09-02 19:11:53
+-- Dump completed on 2024-09-06 14:39:54

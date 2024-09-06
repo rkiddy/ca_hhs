@@ -9,6 +9,7 @@ echo "show tables;" | \
 # read out the dataset names from finding deets files.
 #
 find * -name deets.sh -print | \
+    grep -v NO_DATA | \
     sed 's/\/deets.sh//' | \
     awk '{print "dataset",$0}' > /tmp/datasets_$$.txt
 
@@ -38,12 +39,6 @@ cat tables.txt | grep dataset | \
     awk '{print "if [ ! -f '$d'/"$2"-top.html ]; then touch '$d'/"$2"-top.html ; fi"}' | \
     bash
 
-echo "Are there duplicate directories in unused?"
-
-find * -type d -prune > /tmp/ca_hhs_$$_1.txt
-( cd unused ; find * -type d -prune >> /tmp/ca_hhs_$$_1.txt )
-cat /tmp/ca_hhs_$$_1.txt | sort | uniq -c | awk '{if ($1 != 1) print $0}'
-
 echo ""
 echo "Regenerating the ca_hhs_www/templates/main.html file"
 echo ""
@@ -68,10 +63,6 @@ cat /tmp/ca_hhs_work_$$.txt | \
 cat /tmp/ca_hhs_work2_$$.txt | \
     awk 'BEGIN{FS="\n";RS=""}
          {print "<p>"$1"<br/>tables # "$2", updated: "$3"<br/>{% include \"tops/"$1"-top.html\" %}</p>"}' >> /tmp/ca_hhs_work3_$$.html
-
-find unused/* -type d -prune | \
-    grep -v deleted | \
-    awk 'BEGIN{FS="/"}{print "<p>"$2"<br/>"}' >> /tmp/ca_hhs_work3_$$.html
 
 cat <<EOF > /tmp/ca_hhs_$$_2.html
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
