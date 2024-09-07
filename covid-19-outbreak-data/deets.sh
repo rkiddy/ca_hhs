@@ -1,5 +1,5 @@
 export uuid1="e3507cc2-5a02-496c-bcff-bdf37b45a0e3"
 export uuid2="01cb9cec-61e9-412d-9975-443f942623ac"
 export id="covid-19-outbreak-data"
-export hash="j0_ma86h"
+export hash="0lmfp5ys"
 export script="none"
