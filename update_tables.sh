@@ -39,7 +39,6 @@ cat tables.txt | grep dataset | \
     awk '{print "if [ ! -f '$d'/"$2"-top.html ]; then touch '$d'/"$2"-top.html ; fi"}' | \
     bash
 
-echo ""
 echo "Regenerating the ca_hhs_www/templates/main.html file"
 echo ""
 

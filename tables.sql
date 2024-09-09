@@ -6,6 +6,150 @@
 
 
 --
+-- Table structure for table `abortion_services_aid_code_groups`
+--
+
+DROP TABLE IF EXISTS `abortion_services_aid_code_groups`;
+CREATE TABLE `abortion_services_aid_code_groups` (
+  `aid_code_group` varchar(63) DEFAULT NULL,
+  `corresponding_aid_code` char(2) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `abortion_services_by_age_group_and_race`
+--
+
+DROP TABLE IF EXISTS `abortion_services_by_age_group_and_race`;
+CREATE TABLE `abortion_services_by_age_group_and_race` (
+  `calendar_year` int DEFAULT NULL,
+  `age_group` varchar(12) DEFAULT NULL,
+  `race_ethnicity` varchar(29) DEFAULT NULL,
+  `total_abortion_related_services` varchar(5) DEFAULT NULL,
+  `date_of_data` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `abortion_services_by_delivery_system_and_age_group`
+--
+
+DROP TABLE IF EXISTS `abortion_services_by_delivery_system_and_age_group`;
+CREATE TABLE `abortion_services_by_delivery_system_and_age_group` (
+  `calendar_year` int DEFAULT NULL,
+  `delivery_system` varchar(15) DEFAULT NULL,
+  `age_group` varchar(12) DEFAULT NULL,
+  `total_abortion_related_services` varchar(5) DEFAULT NULL,
+  `date_of_data` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `abortion_services_by_delivery_system_and_aid_group`
+--
+
+DROP TABLE IF EXISTS `abortion_services_by_delivery_system_and_aid_group`;
+CREATE TABLE `abortion_services_by_delivery_system_and_aid_group` (
+  `calendar_year` int DEFAULT NULL,
+  `delivery_system` varchar(15) DEFAULT NULL,
+  `aid_group` varchar(37) DEFAULT NULL,
+  `total_abortion_related_services` varchar(5) DEFAULT NULL,
+  `date_of_data` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `abortion_services_by_delivery_system_and_county`
+--
+
+DROP TABLE IF EXISTS `abortion_services_by_delivery_system_and_county`;
+CREATE TABLE `abortion_services_by_delivery_system_and_county` (
+  `calendar_year` int DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `delivery_system` varchar(15) DEFAULT NULL,
+  `total_abortion_related_services` varchar(6) DEFAULT NULL,
+  `annotation_code` varchar(1) DEFAULT NULL,
+  `annotation_description` varchar(38) DEFAULT NULL,
+  `date_of_data` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `abortion_services_expenditures_by_age_group`
+--
+
+DROP TABLE IF EXISTS `abortion_services_expenditures_by_age_group`;
+CREATE TABLE `abortion_services_expenditures_by_age_group` (
+  `calendar_year` int DEFAULT NULL,
+  `delivery_system` varchar(15) DEFAULT NULL,
+  `age_group` varchar(12) DEFAULT NULL,
+  `total_expenditures` varchar(14) DEFAULT NULL,
+  `date_of_data` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `abortion_services_expenditures_by_age_group_and_race`
+--
+
+DROP TABLE IF EXISTS `abortion_services_expenditures_by_age_group_and_race`;
+CREATE TABLE `abortion_services_expenditures_by_age_group_and_race` (
+  `calendar_year` int DEFAULT NULL,
+  `age_group` varchar(12) DEFAULT NULL,
+  `race_ethnicity` varchar(25) DEFAULT NULL,
+  `total_expenditures` varchar(13) DEFAULT NULL,
+  `date_of_data` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `abortion_services_expenditures_by_aid_group`
+--
+
+DROP TABLE IF EXISTS `abortion_services_expenditures_by_aid_group`;
+CREATE TABLE `abortion_services_expenditures_by_aid_group` (
+  `calendar_year` int DEFAULT NULL,
+  `delivery_system` varchar(15) DEFAULT NULL,
+  `aid_group` varchar(37) DEFAULT NULL,
+  `total_expenditures` varchar(14) DEFAULT NULL,
+  `date_of_data` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `abortion_services_expenditures_by_county`
+--
+
+DROP TABLE IF EXISTS `abortion_services_expenditures_by_county`;
+CREATE TABLE `abortion_services_expenditures_by_county` (
+  `calendar_year` int DEFAULT NULL,
+  `delivery_system` varchar(15) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `total_expenditures` varchar(14) DEFAULT NULL,
+  `date_of_data` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `abortion_services_procedure_codes`
+--
+
+DROP TABLE IF EXISTS `abortion_services_procedure_codes`;
+CREATE TABLE `abortion_services_procedure_codes` (
+  `type_of_code` varchar(5) DEFAULT NULL,
+  `code` varchar(11) DEFAULT NULL,
+  `description` varchar(36) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `adolescent_births`
+--
+
+DROP TABLE IF EXISTS `adolescent_births`;
+CREATE TABLE `adolescent_births` (
+  `year` varchar(9) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `strata` varchar(9) DEFAULT NULL,
+  `strata_name` varchar(8) DEFAULT NULL,
+  `population` int DEFAULT NULL,
+  `births` varchar(5) DEFAULT NULL,
+  `abr` varchar(4) DEFAULT NULL,
+  `lower_` varchar(4) DEFAULT NULL,
+  `upper_` varchar(4) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `asthma_deaths_by_county`
 --
 
@@ -18,6 +162,50 @@ CREATE TABLE `asthma_deaths_by_county` (
   `number_of_deaths` int DEFAULT NULL,
   `age_adjusted_mortality_rate` decimal(4,2) DEFAULT NULL,
   `comment` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `asthma_visits_by_county`
+--
+
+DROP TABLE IF EXISTS `asthma_visits_by_county`;
+CREATE TABLE `asthma_visits_by_county` (
+  `county` varchar(15) DEFAULT NULL,
+  `year` int DEFAULT NULL,
+  `strata` varchar(16) DEFAULT NULL,
+  `strata_name` varchar(11) DEFAULT NULL,
+  `age_group` varchar(11) DEFAULT NULL,
+  `number_of_ed_visits` int DEFAULT NULL,
+  `age_adjusted_ed_visit_rate` decimal(6,1) DEFAULT NULL,
+  `comment` varchar(78) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `asthma_visits_by_zip`
+--
+
+DROP TABLE IF EXISTS `asthma_visits_by_zip`;
+CREATE TABLE `asthma_visits_by_zip` (
+  `year` int DEFAULT NULL,
+  `zip_code` varchar(5) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `age_group` varchar(8) DEFAULT NULL,
+  `number_of_asthma_ed_visits` int DEFAULT NULL,
+  `age_adjusted_rate_of_asthma_ed_v` decimal(6,1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `asthma_visits_by_zip_and_age`
+--
+
+DROP TABLE IF EXISTS `asthma_visits_by_zip_and_age`;
+CREATE TABLE `asthma_visits_by_zip_and_age` (
+  `year` int DEFAULT NULL,
+  `zip_code` varchar(5) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `age_group` varchar(5) DEFAULT NULL,
+  `number_of_asthma_ed_visits` int DEFAULT NULL,
+  `age_adjusted_rate_of_asthma_ed_v` decimal(6,1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -294,10 +482,10 @@ CREATE TABLE `facility_list` (
   `licensetype` varchar(63) DEFAULT NULL,
   `streetnbr` varchar(63) DEFAULT NULL,
   `streetname` varchar(63) DEFAULT NULL,
-  `city` varchar(63) DEFAULT NULL,
-  `state` varchar(63) DEFAULT NULL,
+  `city` varchar(31) DEFAULT NULL,
+  `state` char(2) DEFAULT NULL,
   `zip` varchar(63) DEFAULT NULL,
-  `county` varchar(63) DEFAULT NULL,
+  `county` varchar(31) DEFAULT NULL,
   `oblicensenbr` varchar(63) DEFAULT NULL,
   `obbusinessname` varchar(255) DEFAULT NULL,
   `obfname` varchar(63) DEFAULT NULL,
@@ -311,10 +499,10 @@ CREATE TABLE `facility_list` (
   `obphone1` varchar(63) DEFAULT NULL,
   `obphone2` varchar(63) DEFAULT NULL,
   `obfax` varchar(63) DEFAULT NULL,
-  `date_opened` varchar(63) DEFAULT NULL,
-  `date_closed` varchar(63) DEFAULT NULL,
-  `latitude` varchar(63) DEFAULT NULL,
-  `longitude` varchar(63) DEFAULT NULL,
+  `date_opened` date DEFAULT NULL,
+  `date_closed` date DEFAULT NULL,
+  `latitude` decimal(12,8) DEFAULT NULL,
+  `longitude` decimal(12,8) DEFAULT NULL,
   `addr1` varchar(63) DEFAULT NULL,
   `addr2` varchar(63) DEFAULT NULL,
   `f28` varchar(63) DEFAULT NULL,
@@ -1087,36 +1275,36 @@ CREATE TABLE `live_birth_profiles_by_county` (
 
 DROP TABLE IF EXISTS `medicaid_ffs_providers`;
 CREATE TABLE `medicaid_ffs_providers` (
-  `objectid` varchar(63) DEFAULT NULL,
-  `provider_source` varchar(63) DEFAULT NULL,
-  `provider_number` varchar(63) DEFAULT NULL,
-  `npi` varchar(63) DEFAULT NULL,
+  `objectid` varchar(6) DEFAULT NULL,
+  `provider_source` varchar(34) DEFAULT NULL,
+  `provider_number` varchar(10) DEFAULT NULL,
+  `npi` varchar(10) DEFAULT NULL,
   `owner_number` int DEFAULT NULL,
   `service_location_number` int DEFAULT NULL,
-  `legal_name` varchar(63) DEFAULT NULL,
+  `legal_name` varchar(50) DEFAULT NULL,
   `enroll_status_eff_dt` date DEFAULT NULL,
-  `provider_taxonomy` varchar(63) DEFAULT NULL,
-  `anc_provider_type` varchar(63) DEFAULT NULL,
-  `fi_provider_type_cd` varchar(63) DEFAULT NULL,
-  `fi_provider_type` varchar(255) DEFAULT NULL,
-  `provider_license` varchar(63) DEFAULT NULL,
-  `fi_provider_specialty_cd` varchar(63) DEFAULT NULL,
-  `fi_provider_specialty` varchar(63) DEFAULT NULL,
+  `provider_taxonomy` varchar(23) DEFAULT NULL,
+  `anc_provider_type` varchar(36) DEFAULT NULL,
+  `fi_provider_type_cd` varchar(3) DEFAULT NULL,
+  `fi_provider_type` varchar(85) DEFAULT NULL,
+  `provider_license` varchar(14) DEFAULT NULL,
+  `fi_provider_specialty_cd` varchar(3) DEFAULT NULL,
+  `fi_provider_specialty` varchar(51) DEFAULT NULL,
   `out_of_state_indicator` int DEFAULT NULL,
-  `in_out_state` varchar(63) DEFAULT NULL,
-  `address_attention` varchar(63) DEFAULT NULL,
-  `address` varchar(63) DEFAULT NULL,
-  `address2` varchar(63) DEFAULT NULL,
-  `city` varchar(63) DEFAULT NULL,
-  `state` varchar(63) DEFAULT NULL,
-  `zip` varchar(63) DEFAULT NULL,
-  `zip_4` varchar(63) DEFAULT NULL,
-  `dhcs_county_cd` varchar(63) DEFAULT NULL,
-  `fips_county_cd` varchar(63) DEFAULT NULL,
-  `county` varchar(63) DEFAULT NULL,
+  `in_out_state` varchar(56) DEFAULT NULL,
+  `address_attention` varchar(43) DEFAULT NULL,
+  `address` varchar(24) DEFAULT NULL,
+  `address2` varchar(24) DEFAULT NULL,
+  `city` varchar(17) DEFAULT NULL,
+  `state` varchar(3) DEFAULT NULL,
+  `zip` varchar(5) DEFAULT NULL,
+  `zip_4` varchar(4) DEFAULT NULL,
+  `dhcs_county_cd` varchar(2) DEFAULT NULL,
+  `fips_county_cd` varchar(5) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
   `latitude` decimal(12,8) DEFAULT NULL,
   `longitude` decimal(12,8) DEFAULT NULL,
-  `countyname` varchar(63) DEFAULT NULL
+  `countyname` varchar(46) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -1277,27 +1465,27 @@ CREATE TABLE `providers_suspended_ineligible_us` (
 
 DROP TABLE IF EXISTS `research_projects_approved`;
 CREATE TABLE `research_projects_approved` (
-  `affiliation_and_data_source` text,
-  `application_type` varchar(63) DEFAULT NULL,
-  `completed` varchar(63) DEFAULT NULL,
+  `protocol_id` varchar(59) DEFAULT NULL,
+  `pi_last_name` varchar(18) DEFAULT NULL,
+  `pi_first_name` varchar(14) DEFAULT NULL,
+  `application_type` varchar(35) DEFAULT NULL,
+  `pi_organization` varchar(75) DEFAULT NULL,
   `data_source` text,
-  `defined` varchar(63) DEFAULT NULL,
-  `id` varchar(63) DEFAULT NULL,
-  `initial_approval` varchar(63) DEFAULT NULL,
-  `institution` varchar(255) DEFAULT NULL,
-  `latest_approval` varchar(63) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `pi` varchar(255) DEFAULT NULL,
-  `pi_first_name` varchar(63) DEFAULT NULL,
-  `pi_last_name` varchar(63) DEFAULT NULL,
-  `pi_name` varchar(255) DEFAULT NULL,
-  `pi_organization` varchar(255) DEFAULT NULL,
-  `project_site` varchar(63) DEFAULT NULL,
-  `project_title` varchar(1027) DEFAULT NULL,
-  `project_type` varchar(255) DEFAULT NULL,
-  `protocol_id` varchar(63) DEFAULT NULL,
-  `title` varchar(1027) DEFAULT NULL,
-  `type_of_activity` varchar(63) DEFAULT NULL
+  `project_title` varchar(776) DEFAULT NULL,
+  `completed` date DEFAULT NULL,
+  `initial_approval` date DEFAULT NULL,
+  `latest_approval` date DEFAULT NULL,
+  `project_type` varchar(96) DEFAULT NULL,
+  `pi_name` varchar(70) DEFAULT NULL,
+  `defined` varchar(10) DEFAULT NULL,
+  `name` varchar(70) DEFAULT NULL,
+  `id` varchar(3) DEFAULT NULL,
+  `project_site` varchar(59) DEFAULT NULL,
+  `type_of_activity` varchar(16) DEFAULT NULL,
+  `pi` varchar(65) DEFAULT NULL,
+  `institution` varchar(66) DEFAULT NULL,
+  `title` varchar(776) DEFAULT NULL,
+  `affiliation_and_data_source` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -1634,4 +1822,4 @@ CREATE TABLE `xray_providers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2024-09-06 14:39:54
+-- Dump completed on 2024-09-08 21:09:50

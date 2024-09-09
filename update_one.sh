@@ -31,6 +31,10 @@ if [ `pwd` = $HOME'/chargemasters' ]; then
     exit 0
 fi
 
+id=`pwd | awk 'BEGIN{FS="/"}{print $NF}'`
+
+( cd .. ; ./.venv/bin/python update_deets.py --id $id )
+
 source ./deets.sh
 
 if [ "$1" != "--no-fetch" ] && [ "$uuid1" != "none" ]; then
@@ -41,7 +45,7 @@ if [ "$1" != "--no-fetch" ] && [ "$uuid1" != "none" ]; then
         mkdir sources
     fi
 
-    mv -f *.csv *.xls* *.docx *.html *.kml *.geojson *.json *-api *.zip sources/ 2>/dev/null
+    mv -f *.csv *.xls* *.docx *.html *.pdf *.kml *.geojson *.json *-api *.zip sources/ 2>/dev/null
 
     if [ "$hash" != "" ]; then
         wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id-$hash.zip"
@@ -56,7 +60,11 @@ if [ "$1" != "--only-fetch" ] && [ -f $script.py ]; then
 
     echo "into data..."
 
-    SQLALCHEMY_SILENCE_UBER_WARNING=1 ./.venv/bin/python $script.py
+    if [ -f ./.venv/bin/python ]; then
+        SQLALCHEMY_SILENCE_UBER_WARNING=1 ./.venv/bin/python $script.py
+    else
+        SQLALCHEMY_SILENCE_UBER_WARNING=1 ../.venv/bin/python $script.py
+    fi
 
     # get rid of any older copies of the data sources.
     #
@@ -64,12 +72,8 @@ if [ "$1" != "--only-fetch" ] && [ -f $script.py ]; then
 
     # move the current data sources to the sources directory
     #
-    mv -f *.csv *.xls* *.docx *.html *.kml *.geojson *.json *-api *.zip sources/ 2>/dev/null
+    mv -f *.csv *.xls* *.docx *.html *.pdf *.kml *.geojson *.json *-api *.zip sources/ 2>/dev/null
 fi
 
-if [ -f ./.venv/bin/python ]; then
-    SQLALCHEMY_SILENCE_UBER_WARNING=1 ./.venv/bin/python ../update_time.py
-else
-    echo "No note taken of update time. No python present."
-fi
+SQLALCHEMY_SILENCE_UBER_WARNING=1 ../.venv/bin/python ../update_time.py
 

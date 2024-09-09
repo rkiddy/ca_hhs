@@ -1,6 +1,16 @@
 dataset abcd-350-annual-recipient-report
 
 dataset abortion-related-services-funded-by-medi-cal
+table abortion_services_aid_code_groups
+table abortion_services_by_age_group_and_race
+table abortion_services_by_delivery_system_and_age_group
+table abortion_services_by_delivery_system_and_aid_group
+table abortion_services_by_delivery_system_and_county
+table abortion_services_expenditures_by_age_group
+table abortion_services_expenditures_by_age_group_and_race
+table abortion_services_expenditures_by_aid_group
+table abortion_services_expenditures_by_county
+table abortion_services_procedure_codes
 
 dataset aces-aware-clinician-directory
 
@@ -13,6 +23,7 @@ dataset adap-base-MISSING
 dataset adap-base-MISSING
 
 dataset adolescent-births
+table adolescent_births
 
 dataset adult-ab470-datasets
 
@@ -73,6 +84,9 @@ table asthma_deaths_by_county
 dataset asthma-ed-visit-rates-lghc-indicator-07
 
 dataset asthma-emergency-department-visit-rates
+table asthma_visits_by_county
+table asthma_visits_by_zip
+table asthma_visits_by_zip_and_age
 
 dataset asthma-hospitalization-rates-by-county
 
