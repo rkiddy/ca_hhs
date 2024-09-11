@@ -225,6 +225,20 @@ CREATE TABLE `authorized_wic_vendors` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `baby_names`
+--
+
+DROP TABLE IF EXISTS `baby_names`;
+CREATE TABLE `baby_names` (
+  `year` int DEFAULT NULL,
+  `sex` varchar(6) DEFAULT NULL,
+  `rank_` varchar(2) DEFAULT NULL,
+  `name` varchar(11) DEFAULT NULL,
+  `count` varchar(4) DEFAULT NULL,
+  `data_revision_date` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `cal_cat`
 --
 
@@ -273,7 +287,7 @@ CREATE TABLE `catalog` (
   `created` varchar(26) DEFAULT NULL,
   `last_updated` varchar(26) DEFAULT NULL,
   `topic` varchar(60) DEFAULT NULL,
-  `tags` text,
+  `tags` varchar(441) DEFAULT NULL,
   `dataset_url` varchar(133) DEFAULT NULL,
   `dataset_id` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -414,25 +428,40 @@ CREATE TABLE `county_health_status_profiles` (
 
 DROP TABLE IF EXISTS `death_profiles_by_county`;
 CREATE TABLE `death_profiles_by_county` (
-  `year` int DEFAULT NULL,
-  `month` int DEFAULT NULL,
-  `county` varchar(31) DEFAULT NULL,
-  `geography_type` varchar(31) DEFAULT NULL,
-  `strata` varchar(31) DEFAULT NULL,
-  `strata_name` varchar(63) DEFAULT NULL,
-  `cause` varchar(31) DEFAULT NULL,
-  `cause_desc` varchar(63) DEFAULT NULL,
-  `icd_revision` varchar(31) DEFAULT NULL,
-  `count` int DEFAULT NULL,
-  `annotation_code` varchar(31) DEFAULT NULL,
-  `annotation_desc` varchar(63) DEFAULT NULL,
-  `data_extract_date` varchar(31) DEFAULT NULL,
-  `data_revision_date` varchar(31) DEFAULT NULL,
-  KEY `year` (`year`,`month`),
-  KEY `county` (`county`),
-  KEY `cause` (`cause`),
-  KEY `month` (`month`),
-  KEY `geography_type` (`geography_type`)
+  `annotation_code` varchar(1) DEFAULT NULL,
+  `annotation_desc` varchar(38) DEFAULT NULL,
+  `cause_desc` varchar(53) DEFAULT NULL,
+  `cause` varchar(3) DEFAULT NULL,
+  `count` varchar(6) DEFAULT NULL,
+  `data_extract_date` varchar(10) DEFAULT NULL,
+  `data_revision_date` varchar(10) DEFAULT NULL,
+  `geography_type` varchar(10) DEFAULT NULL,
+  `icd_revision` varchar(6) DEFAULT NULL,
+  `month` varchar(2) DEFAULT NULL,
+  `strata_name` varchar(49) DEFAULT NULL,
+  `strata` varchar(23) DEFAULT NULL,
+  `year` varchar(4) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `deaths_statewide`
+--
+
+DROP TABLE IF EXISTS `deaths_statewide`;
+CREATE TABLE `deaths_statewide` (
+  `year` varchar(4) DEFAULT NULL,
+  `month` varchar(10) DEFAULT NULL,
+  `geography_type` varchar(23) DEFAULT NULL,
+  `strata` varchar(49) DEFAULT NULL,
+  `strata_name` varchar(36) DEFAULT NULL,
+  `cause` varchar(53) DEFAULT NULL,
+  `cause_desc` varchar(53) DEFAULT NULL,
+  `count` varchar(6) DEFAULT NULL,
+  `annotation_code` varchar(38) DEFAULT NULL,
+  `annotation_desc` varchar(38) DEFAULT NULL,
+  `icd_revision` varchar(38) DEFAULT NULL,
+  `data_revision_date` varchar(10) DEFAULT NULL,
+  `data_extract_date` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -477,63 +506,63 @@ CREATE TABLE `facility_list` (
   `y` decimal(16,8) DEFAULT NULL,
   `id` int DEFAULT NULL,
   `facilitynbr` int DEFAULT NULL,
-  `facilitystatus` varchar(63) DEFAULT NULL,
-  `facilityname` varchar(255) DEFAULT NULL,
-  `licensetype` varchar(63) DEFAULT NULL,
-  `streetnbr` varchar(63) DEFAULT NULL,
-  `streetname` varchar(63) DEFAULT NULL,
-  `city` varchar(31) DEFAULT NULL,
-  `state` char(2) DEFAULT NULL,
-  `zip` varchar(63) DEFAULT NULL,
-  `county` varchar(31) DEFAULT NULL,
-  `oblicensenbr` varchar(63) DEFAULT NULL,
-  `obbusinessname` varchar(255) DEFAULT NULL,
-  `obfname` varchar(63) DEFAULT NULL,
-  `oblname` varchar(63) DEFAULT NULL,
-  `obtitle` varchar(63) DEFAULT NULL,
-  `obaddress` varchar(63) DEFAULT NULL,
-  `obaddress2` varchar(63) DEFAULT NULL,
-  `obcity` varchar(63) DEFAULT NULL,
-  `obstate` varchar(63) DEFAULT NULL,
-  `obzip` varchar(63) DEFAULT NULL,
-  `obphone1` varchar(63) DEFAULT NULL,
-  `obphone2` varchar(63) DEFAULT NULL,
-  `obfax` varchar(63) DEFAULT NULL,
-  `date_opened` date DEFAULT NULL,
-  `date_closed` date DEFAULT NULL,
+  `facilitystatus` varchar(1) DEFAULT NULL,
+  `facilityname` varchar(87) DEFAULT NULL,
+  `licensetype` varchar(41) DEFAULT NULL,
+  `streetnbr` varchar(5) DEFAULT NULL,
+  `streetname` varchar(30) DEFAULT NULL,
+  `city` varchar(20) DEFAULT NULL,
+  `state` varchar(2) DEFAULT NULL,
+  `zip` varchar(10) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `oblicensenbr` varchar(7) DEFAULT NULL,
+  `obbusinessname` varchar(87) DEFAULT NULL,
+  `obfname` varchar(9) DEFAULT NULL,
+  `oblname` varchar(9) DEFAULT NULL,
+  `obtitle` varchar(46) DEFAULT NULL,
+  `obaddress` varchar(38) DEFAULT NULL,
+  `obaddress2` varchar(9) DEFAULT NULL,
+  `obcity` varchar(20) DEFAULT NULL,
+  `obstate` varchar(9) DEFAULT NULL,
+  `obzip` varchar(9) DEFAULT NULL,
+  `obphone1` varchar(10) DEFAULT NULL,
+  `obphone2` varchar(9) DEFAULT NULL,
+  `obfax` varchar(10) DEFAULT NULL,
+  `date_opened` varchar(22) DEFAULT NULL,
+  `date_closed` varchar(22) DEFAULT NULL,
   `latitude` decimal(12,8) DEFAULT NULL,
   `longitude` decimal(12,8) DEFAULT NULL,
   `addr1` varchar(63) DEFAULT NULL,
-  `addr2` varchar(63) DEFAULT NULL,
-  `f28` varchar(63) DEFAULT NULL,
-  `bing` varchar(63) DEFAULT NULL,
-  `type_` varchar(63) DEFAULT NULL,
-  `ffstationnetwork` varchar(63) DEFAULT NULL,
-  `ffstationnbr` varchar(63) DEFAULT NULL,
-  `stationnetwork` varchar(63) DEFAULT NULL,
-  `stationnbr` varchar(63) DEFAULT NULL,
-  `geographic_region` varchar(63) DEFAULT NULL,
-  `aco` varchar(63) DEFAULT NULL,
-  `aco_name` varchar(63) DEFAULT NULL,
-  `aco_phonenbr` varchar(63) DEFAULT NULL,
-  `dse` varchar(63) DEFAULT NULL,
-  `dse_name` varchar(63) DEFAULT NULL,
-  `dse_phonenbr` varchar(63) DEFAULT NULL,
-  `field_flso` varchar(63) DEFAULT NULL,
-  `flso_name` varchar(63) DEFAULT NULL,
-  `flso_phonenbr` varchar(63) DEFAULT NULL,
+  `addr2` varchar(61) DEFAULT NULL,
+  `f28` varchar(0) DEFAULT NULL,
+  `bing` varchar(0) DEFAULT NULL,
+  `type_` varchar(0) DEFAULT NULL,
+  `ffstationnetwork` varchar(5) DEFAULT NULL,
+  `ffstationnbr` varchar(5) DEFAULT NULL,
+  `stationnetwork` varchar(8) DEFAULT NULL,
+  `stationnbr` varchar(19) DEFAULT NULL,
+  `geographic_region` varchar(24) DEFAULT NULL,
+  `aco` varchar(13) DEFAULT NULL,
+  `aco_name` varchar(19) DEFAULT NULL,
+  `aco_phonenbr` varchar(10) DEFAULT NULL,
+  `dse` varchar(9) DEFAULT NULL,
+  `dse_name` varchar(16) DEFAULT NULL,
+  `dse_phonenbr` varchar(10) DEFAULT NULL,
+  `field_flso` varchar(15) DEFAULT NULL,
+  `flso_name` varchar(21) DEFAULT NULL,
+  `flso_phonenbr` varchar(10) DEFAULT NULL,
   `senatedistrict` int DEFAULT NULL,
   `assemblydistrict` int DEFAULT NULL,
   `congressionaldistrict` int DEFAULT NULL,
   `alirts_facility_id` int DEFAULT NULL,
-  `rco` varchar(63) DEFAULT NULL,
-  `rco_name` varchar(63) DEFAULT NULL,
-  `rco_phonenbr` varchar(63) DEFAULT NULL,
-  `pt1` varchar(63) DEFAULT NULL,
-  `pt1fullname` varchar(63) DEFAULT NULL,
-  `pt2` varchar(63) DEFAULT NULL,
-  `pt2fullname` varchar(63) DEFAULT NULL,
-  `responsible_region` varchar(63) DEFAULT NULL,
+  `rco` varchar(9) DEFAULT NULL,
+  `rco_name` varchar(15) DEFAULT NULL,
+  `rco_phonenbr` varchar(10) DEFAULT NULL,
+  `pt1` varchar(6) DEFAULT NULL,
+  `pt1fullname` varchar(13) DEFAULT NULL,
+  `pt2` varchar(6) DEFAULT NULL,
+  `pt2fullname` varchar(14) DEFAULT NULL,
+  `responsible_region` varchar(24) DEFAULT NULL,
   `proposedbldgs` varchar(1) DEFAULT NULL,
   `objectid` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -651,8 +680,7 @@ CREATE TABLE `facility_profiles` (
   `spc_3_state` int DEFAULT NULL,
   `spc_4_state` int DEFAULT NULL,
   `spc_5_state` int DEFAULT NULL,
-  `sysdate` varchar(63) DEFAULT NULL,
-  KEY `oshpd_id` (`oshpd_id`)
+  `sysdate` varchar(63) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -671,66 +699,65 @@ CREATE TABLE `family_pact_total_provider_reimbursement` (
 
 DROP TABLE IF EXISTS `healthcare_facilities`;
 CREATE TABLE `healthcare_facilities` (
-  `licensed_certified` varchar(255) DEFAULT NULL,
-  `flag` varchar(255) DEFAULT NULL,
-  `t18_19` varchar(31) DEFAULT NULL,
-  `facid` char(9) DEFAULT NULL,
-  `fac_status_type_code` varchar(31) DEFAULT NULL,
-  `aspen_facid` varchar(255) DEFAULT NULL,
-  `ccn` varchar(31) DEFAULT NULL,
-  `terminat_sw` char(1) DEFAULT NULL,
-  `participation_date` varchar(255) DEFAULT NULL,
-  `approval_date` varchar(255) DEFAULT NULL,
-  `npi` varchar(11) DEFAULT NULL,
-  `can_be_deemed_fac_type` char(1) DEFAULT NULL,
-  `can_be_certified_fac_type` char(1) DEFAULT NULL,
-  `deemed` varchar(255) DEFAULT NULL,
-  `ao_cd` varchar(255) DEFAULT NULL,
-  `dmg_efctv_dt` varchar(255) DEFAULT NULL,
-  `ao_trmntn_dt` varchar(255) DEFAULT NULL,
-  `ao_name` varchar(255) DEFAULT NULL,
-  `facname` varchar(255) DEFAULT NULL,
-  `fac_type_code` varchar(255) DEFAULT NULL,
-  `fac_fdr` varchar(255) DEFAULT NULL,
-  `ltc` varchar(255) DEFAULT NULL,
-  `capacity` bigint DEFAULT NULL,
-  `address` varchar(255) DEFAULT NULL,
-  `city` varchar(255) DEFAULT NULL,
-  `zip` varchar(9) DEFAULT NULL,
-  `zip9` varchar(9) DEFAULT NULL,
-  `facadmin` varchar(255) DEFAULT NULL,
-  `contact_email` varchar(255) DEFAULT NULL,
-  `contact_fax` varchar(15) DEFAULT NULL,
-  `contact_phone_number` varchar(15) DEFAULT NULL,
-  `county_code` varchar(255) DEFAULT NULL,
-  `county_name` varchar(255) DEFAULT NULL,
-  `district_number` bigint DEFAULT NULL,
-  `district_name` varchar(255) DEFAULT NULL,
-  `isfacmain` char(1) DEFAULT NULL,
+  `licensed_certified` varchar(35) DEFAULT NULL,
+  `flag` varchar(16) DEFAULT NULL,
+  `t18_19` varchar(13) DEFAULT NULL,
+  `facid` varchar(9) DEFAULT NULL,
+  `fac_status_type_code` varchar(4) DEFAULT NULL,
+  `aspen_facid` varchar(16) DEFAULT NULL,
+  `ccn` varchar(10) DEFAULT NULL,
+  `terminat_sw` varchar(1) DEFAULT NULL,
+  `participation_date` varchar(9) DEFAULT NULL,
+  `approval_date` varchar(9) DEFAULT NULL,
+  `npi` varchar(10) DEFAULT NULL,
+  `can_be_deemed_fac_type` varchar(1) DEFAULT NULL,
+  `can_be_certified_fac_type` varchar(1) DEFAULT NULL,
+  `deemed` varchar(1) DEFAULT NULL,
+  `ao_cd` varchar(2) DEFAULT NULL,
+  `dmg_efctv_dt` varchar(15) DEFAULT NULL,
+  `ao_trmntn_dt` varchar(15) DEFAULT NULL,
+  `ao_name` varchar(6) DEFAULT NULL,
+  `facname` varchar(77) DEFAULT NULL,
+  `fac_type_code` varchar(10) DEFAULT NULL,
+  `fac_fdr` varchar(44) DEFAULT NULL,
+  `ltc` varchar(7) DEFAULT NULL,
+  `capacity` varchar(4) DEFAULT NULL,
+  `address` varchar(67) DEFAULT NULL,
+  `city` varchar(20) DEFAULT NULL,
+  `zip` varchar(5) DEFAULT NULL,
+  `zip9` varchar(4) DEFAULT NULL,
+  `facadmin` varchar(37) DEFAULT NULL,
+  `contact_email` varchar(48) DEFAULT NULL,
+  `contact_fax` varchar(14) DEFAULT NULL,
+  `contact_phone_number` varchar(14) DEFAULT NULL,
+  `county_code` varchar(3) DEFAULT NULL,
+  `county_name` varchar(15) DEFAULT NULL,
+  `district_number` varchar(2) DEFAULT NULL,
+  `district_name` varchar(24) DEFAULT NULL,
+  `isfacmain` varchar(1) DEFAULT NULL,
   `parent_facid` varchar(9) DEFAULT NULL,
-  `fac_fac_relationship_type_code` varchar(255) DEFAULT NULL,
-  `start_date` varchar(255) DEFAULT NULL,
-  `license_number` varchar(255) DEFAULT NULL,
-  `business_name` varchar(255) DEFAULT NULL,
-  `license_status_description` varchar(255) DEFAULT NULL,
-  `initial_license_date` varchar(255) DEFAULT NULL,
-  `license_effective_date` varchar(255) DEFAULT NULL,
-  `license_expiration_date` varchar(255) DEFAULT NULL,
-  `entity_type_description` varchar(255) DEFAULT NULL,
-  `latitude` decimal(12,8) DEFAULT NULL,
-  `longitude` decimal(12,8) DEFAULT NULL,
-  `location` varchar(255) DEFAULT NULL,
-  `oshpd_id` char(9) DEFAULT NULL,
-  `cclho_code` varchar(255) DEFAULT NULL,
-  `cclho_name` varchar(255) DEFAULT NULL,
-  `fips_county_code` varchar(255) DEFAULT NULL,
-  `birthing_facility_flag` varchar(255) DEFAULT NULL,
-  `trauma_ped_ctr` varchar(255) DEFAULT NULL,
-  `trauma_ctr` varchar(255) DEFAULT NULL,
-  `type_of_care` varchar(255) DEFAULT NULL,
-  `critical_access_hospital` varchar(255) DEFAULT NULL,
-  `data_date` varchar(255) DEFAULT NULL,
-  KEY `oshpd_id` (`oshpd_id`)
+  `fac_fac_relationship_type_code` varchar(22) DEFAULT NULL,
+  `start_date` varchar(9) DEFAULT NULL,
+  `license_number` varchar(9) DEFAULT NULL,
+  `business_name` varchar(74) DEFAULT NULL,
+  `license_status_description` varchar(25) DEFAULT NULL,
+  `initial_license_date` varchar(9) DEFAULT NULL,
+  `license_effective_date` varchar(9) DEFAULT NULL,
+  `license_expiration_date` varchar(9) DEFAULT NULL,
+  `entity_type_description` varchar(25) DEFAULT NULL,
+  `latitude` varchar(11) DEFAULT NULL,
+  `longitude` varchar(12) DEFAULT NULL,
+  `location` varchar(27) DEFAULT NULL,
+  `hcai_id` varchar(9) DEFAULT NULL,
+  `cclho_code` varchar(2) DEFAULT NULL,
+  `cclho_name` varchar(15) DEFAULT NULL,
+  `fips_county_code` varchar(5) DEFAULT NULL,
+  `birthing_facility_flag` varchar(3) DEFAULT NULL,
+  `trauma_ped_ctr` varchar(12) DEFAULT NULL,
+  `trauma_ctr` varchar(9) DEFAULT NULL,
+  `type_of_care` varchar(26) DEFAULT NULL,
+  `critical_access_hospital` varchar(1) DEFAULT NULL,
+  `data_date` varchar(9) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -739,11 +766,11 @@ CREATE TABLE `healthcare_facilities` (
 
 DROP TABLE IF EXISTS `healthcare_facilities_across_time`;
 CREATE TABLE `healthcare_facilities_across_time` (
-  `state_fiscal_year` char(10) DEFAULT NULL,
-  `county_name` varchar(63) DEFAULT NULL,
-  `provider_type` varchar(127) DEFAULT NULL,
-  `fac_fdr` varchar(127) DEFAULT NULL,
-  `count` int DEFAULT NULL
+  `state_fiscal_year` varchar(10) DEFAULT NULL,
+  `county_name` varchar(15) DEFAULT NULL,
+  `provider_type` varchar(18) DEFAULT NULL,
+  `fac_fdr` varchar(44) DEFAULT NULL,
+  `count` varchar(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -1040,25 +1067,24 @@ CREATE TABLE `hhs_program_july_masks` (
 
 DROP TABLE IF EXISTS `hospital_buildings`;
 CREATE TABLE `hospital_buildings` (
-  `county_code` int DEFAULT NULL,
-  `perm_id` int DEFAULT NULL,
-  `facility_name` varchar(127) DEFAULT NULL,
-  `city` varchar(31) DEFAULT NULL,
-  `building_nbr` varchar(63) DEFAULT NULL,
-  `building_name` varchar(127) DEFAULT NULL,
-  `building_status` varchar(63) DEFAULT NULL,
-  `spc_rating` int DEFAULT NULL,
-  `spc_verified` char(1) DEFAULT NULL,
-  `building_url` varchar(255) DEFAULT NULL,
-  `height_ft` int DEFAULT NULL,
-  `stories` int DEFAULT NULL,
-  `building_code` varchar(63) DEFAULT NULL,
-  `building_code_year` int DEFAULT NULL,
-  `year_completed` int DEFAULT NULL,
-  `ab_1882_notice` varchar(255) DEFAULT NULL,
-  `latitude` decimal(12,8) DEFAULT NULL,
-  `longitude` decimal(12,8) DEFAULT NULL,
-  `count` int DEFAULT NULL
+  `county_code` varchar(20) DEFAULT NULL,
+  `perm_id` varchar(5) DEFAULT NULL,
+  `facility_name` varchar(85) DEFAULT NULL,
+  `city` varchar(19) DEFAULT NULL,
+  `building_nbr` varchar(9) DEFAULT NULL,
+  `building_name` varchar(87) DEFAULT NULL,
+  `building_status` varchar(40) DEFAULT NULL,
+  `spc_rating` varchar(3) DEFAULT NULL,
+  `building_url` varchar(144) DEFAULT NULL,
+  `height_ft` varchar(6) DEFAULT NULL,
+  `stories` varchar(2) DEFAULT NULL,
+  `building_code` varchar(35) DEFAULT NULL,
+  `building_code_year` varchar(4) DEFAULT NULL,
+  `year_completed` varchar(4) DEFAULT NULL,
+  `ab_1882_notice` varchar(118) DEFAULT NULL,
+  `latitude` varchar(10) DEFAULT NULL,
+  `longitude` varchar(12) DEFAULT NULL,
+  `count` varchar(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -1181,8 +1207,7 @@ CREATE TABLE `licensed_facilities` (
   `license_type_desc` varchar(63) DEFAULT NULL,
   `license_category_desc` varchar(63) DEFAULT NULL,
   `latitude` decimal(12,8) DEFAULT NULL,
-  `longitude` decimal(12,8) DEFAULT NULL,
-  KEY `oshpd_id` (`oshpd_id`)
+  `longitude` decimal(12,8) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -1305,6 +1330,23 @@ CREATE TABLE `medicaid_ffs_providers` (
   `latitude` decimal(12,8) DEFAULT NULL,
   `longitude` decimal(12,8) DEFAULT NULL,
   `countyname` varchar(46) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `open_data_publishing`
+--
+
+DROP TABLE IF EXISTS `open_data_publishing`;
+CREATE TABLE `open_data_publishing` (
+  `publishing_quarter` varchar(7) DEFAULT NULL,
+  `publishing_year` varchar(4) DEFAULT NULL,
+  `dataset_name` varchar(201) DEFAULT NULL,
+  `dataset_description` varchar(1706) DEFAULT NULL,
+  `dataset_category` varchar(37) DEFAULT NULL,
+  `publishing_department` varchar(59) DEFAULT NULL,
+  `published_date` varchar(22) DEFAULT NULL,
+  `status` varchar(9) DEFAULT NULL,
+  `notes` varchar(90) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -1526,6 +1568,20 @@ CREATE TABLE `school_immunizations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `sewershed_cases`
+--
+
+DROP TABLE IF EXISTS `sewershed_cases`;
+CREATE TABLE `sewershed_cases` (
+  `date` varchar(10) DEFAULT NULL,
+  `area` varchar(23) DEFAULT NULL,
+  `label_name` varchar(43) DEFAULT NULL,
+  `area_type` varchar(9) DEFAULT NULL,
+  `cases` varchar(6) DEFAULT NULL,
+  `cumulative_cases` varchar(0) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `ssi_for_procedures_24`
 --
 
@@ -1683,31 +1739,31 @@ CREATE TABLE `statewide_death_profiles` (
 
 DROP TABLE IF EXISTS `sud_facilities`;
 CREATE TABLE `sud_facilities` (
-  `x` varchar(63) DEFAULT NULL,
-  `y` varchar(63) DEFAULT NULL,
-  `objectid` varchar(63) DEFAULT NULL,
-  `county_code` varchar(63) DEFAULT NULL,
-  `record_id` varchar(63) DEFAULT NULL,
-  `legal_name` varchar(255) DEFAULT NULL,
-  `program_name` varchar(255) DEFAULT NULL,
-  `facility_address` varchar(255) DEFAULT NULL,
-  `facility_address_2` varchar(255) DEFAULT NULL,
-  `additional_facility_locations` varchar(255) DEFAULT NULL,
-  `facility_city` varchar(63) DEFAULT NULL,
-  `facility_state` varchar(63) DEFAULT NULL,
-  `facility_zip` varchar(63) DEFAULT NULL,
-  `facility_phone` varchar(63) DEFAULT NULL,
-  `type_of_application` varchar(63) DEFAULT NULL,
-  `service_type` varchar(63) DEFAULT NULL,
-  `resident_capacity` varchar(63) DEFAULT NULL,
-  `total_occupancy` varchar(63) DEFAULT NULL,
-  `expiration_date` varchar(63) DEFAULT NULL,
-  `target_population` varchar(63) DEFAULT NULL,
-  `incidental_medical_services` varchar(63) DEFAULT NULL,
-  `adolescent_waiver` varchar(63) DEFAULT NULL,
+  `x` decimal(18,15) DEFAULT NULL,
+  `y` decimal(18,15) DEFAULT NULL,
+  `objectid` varchar(4) DEFAULT NULL,
+  `county_code` varchar(2) DEFAULT NULL,
+  `record_id` varchar(9) DEFAULT NULL,
+  `legal_name` varchar(100) DEFAULT NULL,
+  `program_name` varchar(100) DEFAULT NULL,
+  `facility_address` varchar(39) DEFAULT NULL,
+  `facility_address_2` varchar(133) DEFAULT NULL,
+  `additional_facility_locations` varchar(141) DEFAULT NULL,
+  `facility_city` varchar(22) DEFAULT NULL,
+  `facility_state` varchar(2) DEFAULT NULL,
+  `facility_zip` varchar(10) DEFAULT NULL,
+  `facility_phone` varchar(16) DEFAULT NULL,
+  `type_of_application` varchar(22) DEFAULT NULL,
+  `service_type` varchar(9) DEFAULT NULL,
+  `resident_capacity` int DEFAULT NULL,
+  `total_occupancy` int DEFAULT NULL,
+  `expiration_date` date DEFAULT NULL,
+  `target_population` varchar(25) DEFAULT NULL,
+  `incidental_medical_services` varchar(3) DEFAULT NULL,
+  `adolescent_waiver` varchar(3) DEFAULT NULL,
   `latitude` decimal(12,8) DEFAULT NULL,
   `longitude` decimal(12,8) DEFAULT NULL,
-  `countyname` varchar(63) DEFAULT NULL
+  `countyname` varchar(22) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -1767,33 +1823,6 @@ CREATE TABLE `voters_registrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `watershed_cases`
---
-
-DROP TABLE IF EXISTS `watershed_cases`;
-CREATE TABLE `watershed_cases` (
-  `episode_date` char(10) DEFAULT NULL,
-  `short_name` varchar(255) DEFAULT NULL,
-  `full_name` varchar(255) DEFAULT NULL,
-  `area_type` varchar(31) DEFAULT NULL,
-  `masked` char(1) DEFAULT NULL,
-  `cases` varchar(31) DEFAULT NULL,
-  `cum_cases` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `watershed_sites`
---
-
-DROP TABLE IF EXISTS `watershed_sites`;
-CREATE TABLE `watershed_sites` (
-  `short_name` varchar(255) NOT NULL,
-  `full_name` varchar(255) NOT NULL,
-  `area_type` varchar(31) NOT NULL,
-  PRIMARY KEY (`short_name`,`full_name`,`area_type`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
 -- Table structure for table `wic_products`
 --
 
@@ -1822,4 +1851,4 @@ CREATE TABLE `xray_providers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2024-09-08 21:09:50
+-- Dump completed on 2024-09-11 11:59:59

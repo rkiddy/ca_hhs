@@ -45,7 +45,7 @@ if [ "$1" != "--no-fetch" ] && [ "$uuid1" != "none" ]; then
         mkdir sources
     fi
 
-    mv -f *.csv *.xls* *.docx *.html *.pdf *.kml *.geojson *.json *-api *.zip sources/ 2>/dev/null
+    mv -f *.csv *.xls* *.accdb *.docx *.html *.pdf *.pptx *.website *.web-link *.chart *.kml *.geojson *.json *-api *.zip sources/ 2>/dev/null
 
     if [ "$hash" != "" ]; then
         wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id-$hash.zip"
@@ -54,6 +54,14 @@ if [ "$1" != "--no-fetch" ] && [ "$uuid1" != "none" ]; then
     fi
 
     unzip -o $id-$hash.zip
+fi
+
+# Handle spacial crud needed for this dataset.
+#
+if [ "$id" = "death-profiles-by-leading-causes-of-death" ]; then
+
+    bash fetch_weblink_data.sh
+
 fi
 
 if [ "$1" != "--only-fetch" ] && [ -f $script.py ]; then
@@ -72,7 +80,7 @@ if [ "$1" != "--only-fetch" ] && [ -f $script.py ]; then
 
     # move the current data sources to the sources directory
     #
-    mv -f *.csv *.xls* *.docx *.html *.pdf *.kml *.geojson *.json *-api *.zip sources/ 2>/dev/null
+    mv -f *.csv *.xls* *.accdb *.docx *.html *.pdf *.pptx *.website *.web-link *.chart *.kml *.geojson *.json *-api *.zip sources/ 2>/dev/null
 fi
 
 SQLALCHEMY_SILENCE_UBER_WARNING=1 ../.venv/bin/python ../update_time.py

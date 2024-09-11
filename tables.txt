@@ -269,8 +269,7 @@ dataset covid-19-post-vaccination-infection-data
 dataset covid-19-probable-cases
 
 dataset covid-19-sewershed-restricted-case-data
-table watershed_cases
-table watershed_sites
+table sewershed_cases
 
 dataset covid-19-staff-data
 
@@ -289,6 +288,7 @@ dataset death-profiles-by-county
 table death_profiles_by_county
 
 dataset death-profiles-by-leading-causes-of-death
+table deaths_statewide
 
 dataset death-profiles-by-zip-code
 
@@ -659,6 +659,7 @@ dataset modified-retail-food-environment-index
 dataset mortality-following-hip-fracture-repair-in-california-hospitals
 
 dataset most-popular-baby-names-2005-current
+table baby_names
 
 dataset near-drowning-by-age-group
 
@@ -691,6 +692,7 @@ dataset older-americans-act-title-iiic-1-nutrition-services-congregate-meals-pro
 dataset older-americans-act-title-iiic-2-nutrition-services-home-delivered-meals-program-and-participants
 
 dataset open-data-publishing-resources
+table open_data_publishing
 
 dataset park-beach-open-space-or-coastline-access
 
