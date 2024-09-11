@@ -176,7 +176,7 @@ def chargemasters_facilities(initial):
 
 
     sql = f"select * from chargemasters_dirs where substr(full_name,6,1) = '{initial}'"
-    print(f"sql: {sql}")
+    # print(f"sql: {sql}")
     dir_rows = db_exec(conn, sql)
 
     dpks = ', '.join([str(r['pk']) for r in dir_rows])
@@ -184,7 +184,7 @@ def chargemasters_facilities(initial):
     raise Exception("no table: chargemasters_dir_oshpd_id_joins")
     sql = f"select * from chargemasters_dir_oshpd_id_joins where dir_pk in ({dpks})"
     id_rows = db_exec(conn, sql)
-    print(f"id_rows #: {len(id_rows)}")
+    # print(f"id_rows #: {len(id_rows)}")
 
     found = dict()
 
@@ -422,7 +422,7 @@ facilities_list_numbers = ['oshpd_id', 'total_number_beds']
 facilities_list_hidden = ['latitude', 'longitude']
 
 def facilities_list(form):
-    print(f"form: {form}")
+    # print(f"form: {form}")
 
     context = facilities_main()
 
@@ -436,7 +436,7 @@ def facilities_list(form):
     if 'er_los_selected' in form and form['er_los_selected'] != '':
         quals.append(f"er_service_level_desc = '{form['er_los_selected']}'")
         context['er_los_selected'] = form['er_los_selected']
-    print(f"quals: {quals}")
+    # print(f"quals: {quals}")
 
     found = list()
 
@@ -453,8 +453,43 @@ def facilities_list(form):
                     next_row[key] = fix(row[key])
             next_row['location'] = osm_url(row['latitude'], row['longitude'])
             found.append(next_row)
-    pprint(context)
+    # pprint(context)
     context['facilities'] = found
+    return context
+
+
+def table_info_for(dataset):
+    context = dict()
+
+    context['dataset'] = dataset
+
+    text = ''
+
+    target = f"dataset {dataset}\n"
+
+    with open('../tables.txt', 'r') as t:
+        in_target = False
+        for line in t:
+
+            if in_target and not line.startswith('table'):
+                in_target = False
+
+            if in_target:
+                table = line.strip().replace('table ', '')
+
+                text += f"table: {table}<br/>\n"
+
+                for x in db_exec(conn, f"desc {table}"):
+
+                    d = dict(x)
+
+                    text += f"&nbsp;&nbsp;&nbsp;&nbsp;{d['Field']} {d['Type']}<br/>\n"
+
+            if line == target:
+                in_target = True
+
+    context['text'] = text
+
     return context
 
 
@@ -482,7 +517,10 @@ def table_info():
         table_names[row[0]] = dict()
 
     for table in table_names:
-        table_src = source[table]
+        if table in source:
+            table_src = source[table]
+        else:
+            table_src = f"TABLE-{table}"
         rows = [dict(r) for r in db_exec(conn, f"desc {table}")]
         for row in rows:
             col_name = row['Field']
@@ -538,9 +576,9 @@ def oshpd_id_values(start=0):
                 sql = f"select year, count(0) from chargemasters_dirs where oshpd_id = {fix(id)} group by year order by year"
             else:
                 sql = f"select * from {table} where oshpd_id = {fix(id)}"
-            print(f"sql: {sql}")
+            # print(f"sql: {sql}")
             ids[id][table] = db_exec(conn, sql)
-            
+
     context['ids'] = ids
 
     return context

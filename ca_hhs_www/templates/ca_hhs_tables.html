@@ -20,7 +20,7 @@
             <td>{{ name }}</a></td>
             <td>
             {% for table in columns[name] %}
-            {{ table }} - {{ columns[name][table] }}<br/>
+            <a href="/hcai/table_columns_for/{{ table }}">{{ table }}</a> - {{ columns[name][table] }}<br/>
             {% endfor %}
             </td>
         </tr>

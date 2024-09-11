@@ -155,9 +155,16 @@ def facilities_listing():
 
 
 @ca_hhs.route(f"/{cfg['WWW']}/table_columns/")
-def columns():
+def columns(dataset=None):
     main = env.get_template('ca_hhs_tables.html')
     context = data.table_info()
+    return main.render(**context)
+
+
+@ca_hhs.route(f"/{cfg['WWW']}/table_columns_for/<dataset>")
+def columns_for(dataset):
+    main = env.get_template('ca_hhs_tables_for.html')
+    context = data.table_info_for(dataset)
     return main.render(**context)
 
 
