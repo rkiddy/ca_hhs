@@ -12,7 +12,9 @@ if __name__ == '__main__':
 
     types = {'baby_names': {'data_revision_date': 'date', 'year': 'int'}}
 
-    csv.create_tables(tables, types)
+    replaces = {'rank': 'rank_'}
 
-    csv.read_data(tables, types)
+    csv.create_tables(tables, types, replaces)
+
+    csv.read_data(tables, types, replaces)
 
