@@ -29,7 +29,7 @@ def fix(start):
     if not start:
         return 'NULL'
     else:
-        start = start.replace("'", "''").replace('%', '%%')
+        start = start.replace("'", "''").replace('%', '%%').replace('\\', '')
         return f"'{start}'"
 
 
@@ -61,13 +61,16 @@ def fix_date(start):
     return f"'{year}-{mon}-{dat}'"
 
 
-def fix_col_head(start):
-    return fix_first_key(start.lower().replace(' ', '_').replace('-', '_').replace('/', '_'))
+def fix_col_head(start, replaces={}):
+    col = fix_first_key(start.lower().replace(' ', '_').replace('-', '_').replace('/', '_').replace('+_', '_plus_'))
+    for key in replaces:
+        col = col.replace(key, replaces[key])
+    return col
 
 
-def fix_col_heads(start):
+def fix_col_heads(start, replaces={}):
     # print(f"fix_col_heads: start: {start}")
-    return [fix_col_head(c) for c in start]
+    return [fix_col_head(c,replaces) for c in start]
 
 
 def fix_first_key(key):
@@ -83,7 +86,7 @@ def fix_first_key(key):
         return key[offset+1:]
 
 
-def create_tables(tables, types={}):
+def create_tables(tables, types={}, replaces={}):
 
     for table in tables:
 
@@ -101,7 +104,7 @@ def create_tables(tables, types={}):
 
                 next_row = dict()
                 for key in row:
-                    next_row[fix_col_head(key)] = row[key]
+                    next_row[fix_col_head(key, replaces)] = row[key]
                 row = next_row
 
                 if len(cols) == 0:
@@ -133,7 +136,7 @@ def create_tables(tables, types={}):
         db_exec(conn, sql)
 
 
-def read_data(tables, types={}):
+def read_data(tables, types={}, replaces={}):
 
     # print(f"read_data: types: {types}")
 
@@ -158,14 +161,14 @@ def read_data(tables, types={}):
                 for row in rdr:
 
                     if cols is None:
-                        cols = fix_col_heads(list(row.keys()))
+                        cols = fix_col_heads(list(row.keys()), replaces)
                         # print(f"read_data: fixed cols: {cols}")
 
                     next_vals = list()
 
                     for col in row:
 
-                        fcol = fix_col_head(col)
+                        fcol = fix_col_head(col, replaces)
 
                         val = None
 
