@@ -1,5 +1,5 @@
 export uuid1="dab37323-5b23-492e-9328-3bcc93bd1335"
 export uuid2="eeea3559-f0a2-4aad-babe-43a070a569ea"
 export id="hospital-building-data"
-export hash="1i7_zmzi"
+export hash="0i5u4nr3"
 export script="buildings"

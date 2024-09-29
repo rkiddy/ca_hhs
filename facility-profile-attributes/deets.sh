@@ -1,5 +1,5 @@
 export uuid1="8b82d5b9-fc18-4eb6-a4f3-e8a639d92796"
 export uuid2="07f4ac2b-1b46-49ef-b75c-87d86303d9a1"
 export id="facility-profile-attributes"
-export hash="_rvf3byi"
+export hash="edgsw17p"
 export script="facilities"

@@ -1,5 +1,5 @@
 export uuid1="7a456555-87b9-4830-817c-72d72e628745"
 export uuid2="9964e86b-8796-4f59-8880-c5f736763e7b"
 export id="statewide-death-profiles"
-export hash="yhw6ika3"
+export hash="dqzpb6kl"
 export script="deaths"
