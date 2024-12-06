@@ -140,13 +140,18 @@ def write_deets(deets):
     for deets_dict in deets:
         filename = f"{deets_dict['id']}/deets.sh"
         dprint(f"writing deets: {filename}")
-        with open(filename, 'w') as f:
-            f.write(f"export uuid1=\"{deets_dict['uuid1']}\"\n")
-            f.write(f"export uuid2=\"{deets_dict['uuid2']}\"\n")
-            f.write(f"export id=\"{deets_dict['id']}\"\n")
-            f.write(f"export hash=\"{deets_dict['hash']}\"\n")
-            f.write(f"export script=\"{deets_dict['script']}\"\n")
-            f.close()
+        try:
+            with open(filename, 'w') as f:
+                f.write(f"export uuid1=\"{deets_dict['uuid1']}\"\n")
+                f.write(f"export uuid2=\"{deets_dict['uuid2']}\"\n")
+                f.write(f"export id=\"{deets_dict['id']}\"\n")
+                f.write(f"export hash=\"{deets_dict['hash']}\"\n")
+                f.write(f"export script=\"{deets_dict['script']}\"\n")
+                f.close()
+        except Exception as e:
+            print(f"BAD filename: {filename}")
+            traceback.print_exc()
+            raise e
 
 
 if __name__ == '__main__':

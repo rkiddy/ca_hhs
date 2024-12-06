@@ -10,7 +10,7 @@ import os
 
 cfg = config.cfg()
 
-engine = create_engine(f"mysql+pymysql://{cfg['USR']}:{cfg['PWD']}@{cfg['HOST']}/{cfg['DB']}")
+engine = create_engine(f"mysql+pymysql://{cfg['USR']}:{cfg['PWD']}@{cfg['HOST']}/ca_hhs_meta")
 conn = engine.connect()
 
 
@@ -23,9 +23,9 @@ def db_exec(eng, this_sql):
         return eng.execute(this_sql)
         foo = intput()
 
+
 if __name__ == '__main__':
 
-    
     id = os.getcwd().split('/')[-1]
     sql = f"insert into updates values ('{id}', {int(time())})"
     db_exec(conn, sql)

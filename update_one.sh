@@ -45,23 +45,39 @@ if [ "$1" != "--no-fetch" ] && [ "$uuid1" != "none" ]; then
         mkdir sources
     fi
 
-    mv -f *.csv *.xls* *.accdb *.docx *.html *.pdf *.pptx *.website *.web-link *.chart *.kml *.geojson *.json *-api *.zip sources/ 2>/dev/null
+    mv -f *.csv *.xls* *.accdb *.docx *.html *.pdf *.pptx *.website \
+          *.web-link *.chart *.kml *.geojson *.json *-api *.zip \
+          sources/ 2>/dev/null
 
-    if [ "$hash" != "" ]; then
-        wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id-$hash.zip"
+    if [ -f "fetch_special.sh" ]; then
+
+        bash fetch_special.sh
+
+    elif [ -f "fetch_special.txt" ]; then
+
+        cat fetch_special.txt | awk 'BEGIN{FS="/"}
+            {print "if [ ! -f \""$NF"\" ]; then wget '\''"$0"'\''; fi"}'
+
     else
-        wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id.zip"
+        if [ "$hash" != "" ]; then
+            wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id-$hash.zip"
+        else
+            wget -q "https://data.chhs.ca.gov/dataset/$uuid1/resource/$uuid2/download/$id.zip"
+        fi
+
+        if [ $? -ne 0 ]; then
+            echo ""
+            echo "There was some error on downloading. Aborting script."
+            echo ""
+            exit 1
+        fi
     fi
 
-    unzip -o $id-$hash.zip
-fi
+    unzip -o *.zip
 
-# Handle spacial crud needed for this dataset.
-#
-if [ "$id" = "death-profiles-by-leading-causes-of-death" ]; then
-
-    bash fetch_weblink_data.sh
-
+    if [ -f fetch_extra.sh ]; then
+        bash fetch_extra.sh
+    fi
 fi
 
 if [ "$1" != "--only-fetch" ] && [ -f $script.py ]; then
