@@ -3,20 +3,23 @@
 #
 echo "show tables;" | \
     mysql --skip-column-names ca_hhs | \
-    grep -v '^updates$' | \
     awk '{print "table",$0}' > /tmp/tables_$$.txt
 
-# read out the dataset names from finding deets files.
+# read out the dataset names from finding sources directories.
 #
 find * -name deets.sh -print | \
     grep -v NO_DATA | \
-    sed 's/\/deets.sh//' | \
+    sed 's/\/deets\.sh//' | \
     awk '{print "dataset",$0}' > /tmp/datasets_$$.txt
 
+# combine the tables list and datasets list
+#
 cat /tmp/tables_$$.txt /tmp/datasets_$$.txt tables.txt | \
     grep -v '^$' | \
     sort | uniq -c > /tmp/results_$$.txt
 
+# display the list that we care about
+#
 if [ "$1" = "-v" ]; then
     cat /tmp/results_$$.txt
     echo ""
@@ -53,8 +56,8 @@ cat /tmp/ca_hhs_work_$$.txt | \
          {print "echo \""$1"\"";
           print "echo \""$2"\"";
           print "( echo \"select from_unixtime(max(updated)) as updated\";";
-          print "echo \"    from updates where dataset_id = '\''"$1"'\'' order by updated desc limit 1\" ) | \\";
-          print "    mysql --skip-column-names ca_hhs | awk '\''{print $1}'\''";
+          print "echo \"    from updates where name = '\''"$1"'\'' order by updated desc limit 1\" ) | \\";
+          print "    mysql --skip-column-names ca_hhs_meta | awk '\''{print $1}'\''";
           print "echo \"\"";
           print ""}' | \
     bash > /tmp/ca_hhs_work2_$$.txt
