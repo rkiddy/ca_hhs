@@ -1,3 +1,4 @@
+
 dataset abcd-350-annual-recipient-report
 
 dataset abortion-related-services-funded-by-medi-cal
@@ -18,34 +19,64 @@ dataset aces-aware-clinician-listing
 
 dataset acute-care-hospital-transfers-by-major-diagnostic-category-mdc
 
-dataset adap-base-MISSING
-
-dataset adap-base-MISSING
-
 dataset adolescent-births
 table adolescent_births
+table adolescent_births_partial_data
 
 dataset adult-ab470-datasets
+table top_10_icd10_diagnosis_code_categories_for_adults_by_age_group
+table top_10_icd10_diagnosis_code_categories_for_adults_by_language
+table top_10_icd10_diagnosis_code_categories_for_adults_by_race_group
+table top_10_icd10_diagnosis_code_categories_for_adults_by_sex
+table adult_demo_by_age_group
+table adult_demo_by_language
+table adult_demo_by_race_group
+table adult_demo_by_sex
+table adult_mental_health_services_utilization_by_age_group
+table adult_mental_health_services_utilization_by_language
+table adult_mental_health_services_utilization_by_race_group
+table adult_mental_health_services_utilization_by_sex
+table adult_snapshot_report_by_age_group
+table adult_snapshot_report_by_language
+table adult_snapshot_report_by_race_group
+table adult_snapshot_report_by_sex
+table adult_time_to_step_down_by_age_group
+table adult_time_to_step_down_by_language
+table adult_time_to_step_down_by_race_group
+table adult_time_to_step_down_by_sex
 
 dataset adult-cigarette-and-tobacco-use-prevalence
+table cigarette_use_in_adults
+table tobacco_use_in_adults
 
 dataset adult-depression-lghc-indicator-24
+table adult_depression_indicator
 
 dataset adult-population-performance-dashboard
+table adult_perf_adult_demo
+table adult_perf_adult_smhs_utilization
+table adult_perf_adult_snapshot
+table adult_perf_adult_ttsd
 
 dataset adults-meeting-physical-activity-guidelines-lghc-indicator-16
+table adults_meeting_phys_activity_indicator
 
 dataset adults-with-diabetes-per-100-lghc-indicator-23
+table adults_with_diabetes_per_100
 
 dataset aevs-carrier-codes-for-other-health-coverage
+table carriers
+table carrier_codes
 
 dataset age-and-gender-of-eligible-individuals-selecting-covered-california-qualified-health-plan
 
 dataset age-and-gender-of-newly-medi-cal-eligible-individuals
 
 dataset ahrq-pediatric-quality-indicators-for-california-hospitals
+table pediatric_quality_indicators
 
 dataset all-cause-unplanned-30-day-hospital-readmission-rate-california
+table unplanned_30_day_hospital_readmission_rate
 
 dataset alw-assisted-living-facilities
 
@@ -60,10 +91,18 @@ dataset alw-public-subsidized-housing
 dataset ambulatory-surgery-characteristics-by-facility-pivot-profile
 
 dataset ambulatory-surgery-characteristics-by-patient-county-of-residence_
+table amb_surj_char_disposition_by_patient_county
+table amb_surj_char_expected_payer_by_county
+table amb_surj_char_race_by_county
+table amb_surj_char_sex_by_county
 
 dataset ambulatory-surgery-diagnosis-procedure-and-external-cause-codes
 
 dataset annual-beneficiary-grievance-and-appeal-report-abgar
+table beneficiary_appeal_type
+table beneficiary_expedited_appeal_type
+table beneficiary_grievance_type
+table beneficiary_notice_of_adverse_benefit_determ_type
 
 dataset annual-miles-traveled-2002-2010
 
@@ -73,10 +112,6 @@ dataset applications-submitted-for-insurance-affordability-programs-with-the-hel
 
 dataset approved-research-projects-by-the-committee-for-the-protection-of-human-subjects
 table research_projects_approved
-
-dataset areas-with-potential-for-naturally-occurring-asbestos1-MISSING
-
-dataset areas-with-potential-for-naturally-occurring-asbestos1-MISSING
 
 dataset asthma-deaths-by-county
 table asthma_deaths_by_county
@@ -105,11 +140,19 @@ dataset california-children-s-services-ccs
 
 dataset california-diagnostic-catheterization-dxcath-volume-and-sociodemographic-comparisons
 
+dataset california-diagnostic-catheterization-dxcath-volume-by-sociodemographic-categories
+
+dataset california-diagnostic-catheterization-volume-and-sociodemographic-categories
+
+dataset california-diagnostic-catheterization-volume-by-sociodemographic-categories
+
 dataset california-hospital-inpatient-mortality-rates-and-quality-ratings
 
 dataset california-hospital-performance-ratings
 
 dataset california-hospital-performance-ratings-for-coronary-artery-bypass-graft-cabg-surgery
+
+dataset california-hospital-ratings-for-transcatheter-aortic-valve-replacement-tavr-procedures
 
 dataset california-independent-living-and-traumatic-brain-injury-center-locations
 
@@ -187,6 +230,12 @@ dataset chdp-summary-of-all-health-assessments-by-funding-source-sfy-2008-2014
 
 dataset chemicals-in-cosmetics
 
+dataset chhs-ckan-google-analytics
+table analytics_date_and_users
+table analytics_dates_pages_page_views
+table analytics_pages_and_events
+table analytics_users_by_locations
+
 dataset child-health-and-disability-prevention-chdp-children-receiving-other-tests-by-age-sfy-2008-14
 
 dataset child-health-and-disability-prevention-chdp-program-number-of-immunizations-by-age-sfy-2008-2014
@@ -241,10 +290,6 @@ dataset contraceptive-care-for-women-use-by-race-ethnicity-contraceptive-type-an
 
 dataset counts-and-status-of-california-work-opportunity-and-responsibility-to-kids-calworks-applications
 
-dataset county-and-plan-ecm-data-MISSING
-
-dataset county-and-plan-ecm-data-MISSING
-
 dataset county-health-status-profiles
 table county_health_status_profiles
 
@@ -281,8 +326,13 @@ dataset covid-19-variant-data
 
 dataset dataset-catalog
 table catalog
+table catalog_agency
 
 dataset data-table-for-map-of-counties-and-number-of-community-supports-available
+
+dataset data-table-for-map-of-ecm-counties
+
+dataset dds-regionalcenters
 
 dataset death-profiles-by-county
 table death_profiles_by_county
@@ -291,8 +341,11 @@ dataset death-profiles-by-leading-causes-of-death
 table deaths_statewide
 
 dataset death-profiles-by-zip-code
+table deaths_by_zip
 
 dataset demographic-profile-of-family-pact-clients-served-by-fiscal-year
+
+dataset dental-utilization-measures-and-sealant-data-by-county-ethnicity-age-calendar-year-2013-to-2021
 
 dataset dental-utilization-per-provider
 
@@ -346,6 +399,7 @@ dataset early-and-periodic-screening-diagnosis-and-treatment-of-children-and-you
 dataset ecm-community-support-data-tables-for-quarterly-implementation-report
 
 dataset educational-attainment
+table educational_attainment
 
 dataset effects-of-covid-19-on-hospital-utilization-trends
 
@@ -380,9 +434,13 @@ dataset enforcement-actions-trend
 dataset enrollment-data
 table enrollment_data
 
+dataset eoc-map-public
+
 dataset ethnicity-of-individuals-selecting-covered-california-qualified-health-plan-qhp
 
 dataset every-woman-counts-regional-contractors-map
+
+dataset facility-finder-detail-map
 
 dataset facilitylist
 table facility_list
@@ -436,6 +494,10 @@ dataset friendship-line-california-calls-in-response-to-covid-19
 
 dataset fruit-and-vegetable-consumption-in-california-residents-2012-2013
 
+dataset google-analytics
+
+dataset hcai-facilities-emergency-operations-center-app-public
+
 dataset health-and-human-services-program-counts
 table hhs_program_annual_counts
 table hhs_program_annual_masks
@@ -459,6 +521,8 @@ table payments_snapshot_enrollment
 table payments_snapshot_medical
 table payments_snapshot_pharmaceutical
 
+dataset health-care-quality-report
+
 dataset healthcare-workforce-geography-crosswalk
 table licensed_facility_elms_oshpd_crosswalk
 table licensed_facility_elms_aspen_crosswalk
@@ -478,11 +542,16 @@ dataset hiv-aids-cases
 
 dataset home-delivered-meals-in-response-to-covid-19
 
+dataset home-health-hospice-annual-utilization-report-complete-data-set
+
 dataset horizontal-integration-bridge-data-report
 
 dataset hospice-utilization-patient-demographics
 
 dataset hospital-annual-financial-data-selected-data-pivot-tables
+
+dataset hospital-annual-financial-disclosure-report-complete-data-set
+table hafd_columns
 
 dataset hospital-annual-utilization-report
 
@@ -533,6 +602,8 @@ dataset housing-cost-burden-2006-2010
 
 dataset housing-crowding
 
+dataset hpd-fee-for-service-drug-costs-in-the-commercial-market
+
 dataset https-opainternetauthoring-reportcards-pages-default-aspx
 
 dataset immunizations-in-child-care-by-academic-year
@@ -566,7 +637,13 @@ dataset katie-a-specialty-mental-health-datasets
 
 dataset key-characteristics-of-californians-age-60-and-over
 
+dataset licensed-and-certified-health-care-facilities
+
+dataset licensed-and-certified-healthcare-facilities
+
 dataset licensed-bed-classification-and-designations-trends
+
+dataset licensed-driving-under-the-influence-provider-directory
 
 dataset licensed-facility-crosswalk
 
@@ -594,6 +671,8 @@ dataset location-age-and-experience-of-paramedics-and-emts-licensed-in-californi
 
 dataset long-term-care-facilities-annual-utilization-data
 
+dataset long-term-care-facility-disclosure-report-data
+
 dataset long-term-care-facility-profitability
 
 dataset long-term-care-facility-staffing
@@ -616,6 +695,8 @@ dataset mcna-t-d-standards-by-county
 
 dataset measurable-hospital-acquired-conditions-composite-patient-safety-indicator-statewide-rate-california
 
+dataset medi-cal-adult-expansion
+
 dataset medi-cal-annual-renewals-by-county
 
 dataset medi-cal-birth-statistics-by-select-characteristics-california-resident-hospital-births
@@ -624,9 +705,13 @@ dataset medi-cal-certified-eligible-counts-by-month-of-eligibility-zip-code-and-
 
 dataset medi-cal-certified-eligibles-tables-by-county-from-2010-to-most-recent-reportable-month
 
+dataset medi-cal-certified-eligibles-with-demographics-by-month
+
 dataset medi-cal-dental-fee-for-service-provider-listing
 
 dataset medi-cal-enrollment-by-eligibility-group
+
+dataset medi-cal-ffs-provider-listing
 
 dataset medi-cal-fpact-provider-listing
 
@@ -644,7 +729,11 @@ dataset medi-cal-managed-care-capitation-rates-two-plan-model
 
 dataset medi-cal-managed-care-enrollment-report
 
+dataset medi-cal-managed-care-provider-listing
+
 dataset medi-cal-managed-care-supplemental-rates-hepatitis-c
+
+dataset medical-service-study-area-data-dictionary
 
 dataset medical-service-study-areas
 
@@ -655,6 +744,7 @@ dataset mental-and-behavioral-health-diagnoses-in-emergency-department-and-inpat
 dataset methicillin-resistant-staphylococcus-aureus-mrsa-bloodstream-infections-bsi-in-california-hospitals
 
 dataset modified-retail-food-environment-index
+table modified_retail_food_env
 
 dataset mortality-following-hip-fracture-repair-in-california-hospitals
 
@@ -691,12 +781,16 @@ dataset older-americans-act-title-iiic-1-nutrition-services-congregate-meals-pro
 
 dataset older-americans-act-title-iiic-2-nutrition-services-home-delivered-meals-program-and-participants
 
+dataset opa-has-moved
+
 dataset open-data-publishing-resources
 table open_data_publishing
 
 dataset park-beach-open-space-or-coastline-access
 
 dataset patient-demographics
+
+dataset patient-origin-market-share-pivot-profile-inpatient-emergency-department-and-ambulatory-surgery
 
 dataset patients-leaving-california-hospitals-against-medical-advice-ama
 
@@ -725,6 +819,8 @@ dataset population-percentage-within-a-quarter-mile-of-alcohol-outlets-2014
 dataset postoperative-sepsis-outcomes-for-elective-surgeries-in-california-hospitals
 
 dataset poverty-rate-by-california-regions
+
+dataset pre-2012-home-health-agencies-hospice-annual-utilization-report-complete-data-set
 
 dataset pre-2012-hospital-annual-financial-data-selected-data-pivot-tables
 
@@ -757,6 +853,8 @@ dataset preterm-and-very-preterm-live-births
 dataset primary-care-clinic-annual-utilization-data
 table pccu_facilities
 table pccu_files
+
+dataset primary-care-shortage-area-pcsa
 
 dataset primary-care-shortage-areas-in-california
 
@@ -795,6 +893,8 @@ dataset quality-incentive-pool-qip-program-py1-py2-data
 
 dataset quarterly-certified-eligible-counts-by-month-of-eligibility-county-and-threshold-language
 
+dataset quarterly-provider-complaints
+
 dataset race-ethnicity-health-workforce-trends
 
 dataset race-ethnicity-of-newly-medi-cal-eligible-individuals
@@ -813,6 +913,8 @@ dataset rates-of-selected-hospital-procedures-examined-for-over-or-under-use-by-
 
 dataset readmissions-for-isolated-coronary-artery-bypass-graft-cabg-complications
 
+dataset regionalcenter-catchmentareas
+
 dataset regional-center-information
 
 dataset registered-nurse-shortage-areas-in-california
@@ -821,6 +923,18 @@ dataset reported-positive-covid-19-tests-of-regional-center-consumers-by-gender
 
 dataset respiratory-virus-dashboard-metrics
 table respiratory_virus_dashboard
+
+dataset respiratory-virus-weekly-report
+table covid_19_age_distribution
+table sars_wastewater_aggregated
+table percentage_of_covid_19_deaths
+table percentage_of_infouenza_deaths
+table percentage_of_rsv_deaths
+table percentage_of_influenza_detect_at_clinical
+table percentage_of_other_respitory
+table percentage_rsv_admissions_kaiser
+table percentage_rsv_detect_clinical
+table percentage_of_sars_detect_from_test
 
 dataset respondents-indicating-at-least-1-type-of-adverse-childhood-experience-lghc-indicator-04
 
@@ -840,13 +954,25 @@ dataset seismic-deadline-extensions-granted-for-california-hospitals
 
 dataset seismic-ratings-and-collapse-probabilities-of-california-hospitals
 
+dataset social-determinants-of-health-sdoh-and-preventable-hospitalization-rates
+
 dataset social-drivers-of-health-sdoh-and-preventable-hospitalization-rates
 
 dataset specialty-care-clinic-complete-data-set
-
-dataset state-test-sites-MISSING
-
-dataset state-test-sites-MISSING
+table specialty_care_clinic_2012
+table specialty_care_clinic_2013
+table specialty_care_clinic_2014
+table specialty_care_clinic_2015
+table specialty_care_clinic_2016
+table specialty_care_clinic_2017
+table specialty_care_clinic_2018
+table specialty_care_clinic_2019
+table specialty_care_clinic_2020
+table specialty_care_clinic_2021
+table specialty_care_clinic_2022
+table specialty_care_clinic_2023
+table specialty_care_clinics
+table specialty_care_clinic
 
 dataset statewide-death-profiles
 table statewide_death_profiles
@@ -880,6 +1006,8 @@ dataset test-cdph-number-of-licensed-daycare-center-slots-per-1-000-children-age
 
 dataset test-cdph-statewide-live-birth-profiles
 
+dataset test-dhcs-dental-utilization-measures-and-sealant-data-by-age-groups-calendar-year-2013-to-2021
+
 dataset test-dhcs-multi-year-dental-measures-data-by-age-groups-calendar-year-2013-to-2021
 
 dataset test-dhcs-multi-year-dental-measures-data-by-county-calendar-year-2013-to-2021
@@ -901,6 +1029,7 @@ dataset top-25-ms-drgs-statewide-benchmark-pivot-profile
 dataset top-five-major-diagnostic-categories-mdcs-for-california-hospitals
 
 dataset total-construction-cost-of-healthcare-projects
+table construction_costs
 
 dataset total-effectuated-qualified-health-plan-qhp-enrollment-covered-ca-qhps
 
@@ -953,7 +1082,12 @@ table voters_registrations
 
 dataset walkable-distance-public-transit-2008-2012
 
+dataset wastewater-surveillance-data-california
+table wastewater_surveillance_log
+table wastewater_surveillance
+
 dataset west-nile-virus-cases-2006-present
+table west_nile_virus_cases
 
 dataset wic-authorized-product-list-apl
 table wic_products
@@ -962,7 +1096,7 @@ dataset women-infants-and-children-wic-authorized-vendors
 table authorized_wic_vendors
 
 dataset workforce-quality-incentive-program-performance
+table wqip_quarterly_performance
 
 dataset x-ray-technologist-listing-in-california
 table xray_providers
-
