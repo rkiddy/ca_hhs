@@ -1,5 +1,5 @@
 export uuid1="490e41c3-a797-4bf9-8978-6ce6fe91b403"
 export uuid2="3e2cb5fb-72fd-4cb5-a908-f8679f2c9245"
 export id="chart-1-6-mcp-penetration-rates-for-ecm-in-the-last-12-months-of-the-reporting-period"
-export hash="04xs1nhu"
+export hash="d7fhfc7y"
 export script="none"

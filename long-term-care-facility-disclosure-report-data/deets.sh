@@ -1,0 +1,5 @@
+export uuid1="70fcfed4-c9b8-4c13-8c5f-06591261cba4"
+export uuid2="74aa90d5-5b2e-4572-83ba-9c5b03af04a6"
+export id="long-term-care-facility-disclosure-report-data"
+export hash="14oo2f"
+export script="none"

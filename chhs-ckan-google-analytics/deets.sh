@@ -1,0 +1,5 @@
+export uuid1="df798d09-ef10-4608-b64f-1fedb9fffad9"
+export uuid2="f0a0e651-a3b7-417c-b6b5-e49da8be1c19"
+export id="chhs-ckan-google-analytics"
+export hash="5b13slc8"
+export script="analytics"
