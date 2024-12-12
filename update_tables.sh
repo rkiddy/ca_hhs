@@ -55,16 +55,17 @@ cat /tmp/ca_hhs_work_$$.txt | \
     awk 'BEGIN{FS="\n";RS=""}
          {print "echo \""$1"\"";
           print "echo \""$2"\"";
-          print "( echo \"select from_unixtime(max(updated)) as updated\";";
-          print "echo \"    from updates where name = '\''"$1"'\'' order by updated desc limit 1\" ) | \\";
+          print "( echo \"select from_unixtime(max(u1.updated)) as upd\";"
+          print "echo \"    from updates u1, datasets d1 \""
+          print "echo \"    where u1.ds_pk = d1.pk and d1.name = '\''"$1"'\'' order by upd desc limit 1\" ) | \\";
           print "    mysql --skip-column-names ca_hhs_meta | awk '\''{print $1}'\''";
-          print "echo \"\"";
-          print ""}' | \
+          print "echo \"\""}' | \
     bash > /tmp/ca_hhs_work2_$$.txt
 
 cat /tmp/ca_hhs_work2_$$.txt | \
     awk 'BEGIN{FS="\n";RS=""}
-         {print "<p>"$1"<br/>tables # "$2", updated: "$3"<br/>{% include \"tops/"$1"-top.html\" %}</p>"}' >> /tmp/ca_hhs_work3_$$.html
+              {print "<tr><td>"$1"</td><td>"$2"</td><td>"$3"</td></tr>{% include \"tops/"$1"-top.html\" %}"}' >> /tmp/ca_hhs_work3_$$.html
+
 
 cat <<EOF > /tmp/ca_hhs_$$_2.html
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
@@ -76,11 +77,14 @@ cat <<EOF > /tmp/ca_hhs_$$_2.html
 <body>
 <div style="padding: 25px 25px 25px 25px;">
 <h2>Datasets:</h2>
+<table class="table table-striped">
+<tr><th>Dataset</th><th># Tables</th><th>Updated</th></tr>
 EOF
 
 sort < /tmp/ca_hhs_work3_$$.html >> /tmp/ca_hhs_$$_2.html
 
 cat <<EOF >> /tmp/ca_hhs_$$_2.html
+</table>
 <p>or see <a href="/hcai/table_columns/">table columns</a>.
 </div>
 </body></html>
