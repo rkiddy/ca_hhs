@@ -86,8 +86,10 @@ if [ "$1" != "--only-fetch" ] && [ -f $script.py ]; then
 
     if [ -f ./.venv/bin/python ]; then
         SQLALCHEMY_SILENCE_UBER_WARNING=1 ./.venv/bin/python $script.py
+        r=$?
     else
         SQLALCHEMY_SILENCE_UBER_WARNING=1 ../.venv/bin/python $script.py
+        r=$?
     fi
 
     # get rid of any older copies of the data sources.
@@ -96,7 +98,9 @@ if [ "$1" != "--only-fetch" ] && [ -f $script.py ]; then
 
     # move the current data sources to the sources directory
     #
-    mv -f *.csv *.xls* *.accdb *.docx *.html *.pdf *.pptx *.website *.web-link *.chart *.kml *.geojson *.json *-api *.zip sources/ 2>/dev/null
+    mv -f *.csv *.xls* *.accdb *.docx *.html *.pdf *.pptx *.website \
+          *.web-link *.chart *.kml *.geojson *.json *-api *.zip \
+          sources/ 2>/dev/null
 fi
 
 SQLALCHEMY_SILENCE_UBER_WARNING=1 ../.venv/bin/python ../update_time.py
