@@ -1,5 +1,5 @@
 export uuid1="e961df15-50b8-4217-9628-b696ea121ee0"
 export uuid2="beb4d2d1-f9fd-413b-8657-cf7603b18cad"
 export id="seismic-deadline-extensions-granted-for-california-hospitals"
-export hash="v8cjdf7l"
+export hash="zb8g74k6"
 export script="none"
