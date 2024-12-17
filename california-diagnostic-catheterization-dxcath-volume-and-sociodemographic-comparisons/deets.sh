@@ -1,5 +1,0 @@
-export uuid1="956c66f2-6bed-42dd-836a-2500219e252b"
-export uuid2="64a640f8-be7c-4591-942d-50c63c05d56d"
-export id="california-diagnostic-catheterization-dxcath-volume-and-sociodemographic-comparisons"
-export hash="wpyi1ae7"
-export script="catheter"
