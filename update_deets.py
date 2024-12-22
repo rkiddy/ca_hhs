@@ -168,6 +168,6 @@ if __name__ == '__main__':
     # print("deets:")
     # pprint(deets)
 
-    print("writing...")
+    print("writing deets...")
     write_deets(deets)
 
