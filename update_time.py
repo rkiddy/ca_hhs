@@ -1,4 +1,5 @@
 
+import argparse
 import time
 
 from sqlalchemy import create_engine
@@ -24,9 +25,24 @@ def db_exec(eng, this_sql):
         foo = intput()
 
 
+def arguments():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--result')
+    return parser.parse_args()
+
+
 if __name__ == '__main__':
 
+    args = arguments()
+
+    if args.result is None:
+        result = -1
+    else:
+        result = args.result
+
     id = os.getcwd().split('/')[-1]
-    sql = f"insert into updates values ('{id}', {int(time())})"
+    sql = f"""insert into updates (ds_pk, updated, result)
+              values
+              ((select pk from datasets where name = '{id}'), {int(time())}, {result})"""
     db_exec(conn, sql)
 
