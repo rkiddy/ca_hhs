@@ -1,5 +1,0 @@
-export uuid1="c614f79a-65fc-496f-969b-2d4b59f437f7"
-export uuid2="ec631fb6-66a0-49c9-91cf-ab37ff86b8d9"
-export id="https-opainternetauthoring-reportcards-pages-default-aspx"
-export hash="16p8dn9k"
-export script="none"
