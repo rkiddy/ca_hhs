@@ -1,7 +1,14 @@
 
+if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
+    echo ""
+    echo "Move the data files scattered around in the datasets directories to the sources directories."
+    echo ""
+    exit 0
+fi
+
 for d in $*; do
 
-    if [ -d $d ]; then
+    if [ -d $d ] && [ $d != "ca_hhs_www" ] && [ $d != "__pycache__" ]; then
         pushd . 2>/dev/null
         cd $d
 
