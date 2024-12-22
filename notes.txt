@@ -1,8 +1,15 @@
 
+ISSUE: Chargemasters:
+
 after creating the chargemasters_sheets table:
 
 mysql> update chargemasters_sheets set sheet_type = 'Common25' where sheet_type is NULL
        and (name like '%AB 1045%' or name like '%Common%');
 
 mysql> update chargemasters_sheets set sheet_type = 'PCT CHG' where sheet_type is NULL and name like '%PCT CH%';
+
+QUESTION: We have the pcs_quarterly_received_claims table, which keeps track of complaints against a provider. Where
+else is the provider used? Is it connected to facilities?
+
+what is this file really doing?
 
