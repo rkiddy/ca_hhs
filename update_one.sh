@@ -1,6 +1,8 @@
 
 HOME="/home/ray/Projects/ca_hhs"
 
+show_usage="no"
+
 if [ ! -f ./deets.sh ]; then
     echo ""
     echo "Please put down a \"deets.sh\" file with the uuid1, uuid2, id, and hash values for downloading."
@@ -9,20 +11,46 @@ if [ ! -f ./deets.sh ]; then
 fi
 
 if [ "$1" = "--help" ] || [ "$1" = "-help" ] || [ "$1" = "-h" ] || [ "$1" = "--h" ]; then
-    echo ""
-    echo "usage: bash update.sh [ --no-fetch | --only-fetch ]"
-    echo ""
-    exit
+    show_usage="yes"
 fi
 
 if [ "$1" != "" ] && [ "$1" != "--no-fetch" ] && [ "$1" != "--only-fetch" ]; then
+    show_usage="yes"
+fi
+
+if [ $show_usage = "yes" ]; then
     echo ""
-    echo "Received bad parameter: \"$1\""
+    echo "A deets.sh file must exist and must contain at least \"export id=<val>\"."
     echo ""
     echo "usage: bash update.sh [ --no-fetch | --only-fetch ]"
     echo ""
-    exit
+    echo "These files can also affect the process, if a file exists:"
+    echo ""
+    echo "    fetch_special_before.sh, fetch_special_after.sh, fetch_special_instead.sh"
+    echo "    - these are scripts that will be executed around the data fetching."
+    echo ""
+    echo "    exec_special_before.sh, exec_special_after.sh, exec_special_instead.sh"
+    echo "    - these are also scripts that will be executed around the processing part."
+    echo ""
+    exit 0
 fi
+
+# drive this via some variables.
+#
+# fetch - yes, I should fetch. If not, I already have data.
+# process - yes, I should process. If I am just getting data, then no.
+
+fetch="yes"
+process="yes"
+
+if [ "$1" = "--no-fetch" ] || [ "$1" = "--fetch-no" ]; then
+    fetch="no"
+fi
+
+if [ "$1" = "--only-fetch" ] || [ "$1" = "--fetch-only" ]; then
+    process="no"
+fi
+
 
 if [ `pwd` = $HOME'/chargemasters' ]; then
     echo ""
@@ -33,36 +61,38 @@ fi
 
 id=`pwd | awk 'BEGIN{FS="/"}{print $NF}'`
 
-( cd .. ; ./.venv/bin/python update_deets.py --id $id )
+if [ $fetch = "yes" ]; then
 
-source ./deets.sh
-
-( echo "select c1.file_name, c1.table_name from datasets d1, csv_sources c1";
-  echo " where d1.pk = c1.ds_pk and auto_run = 1 and d1.name = '$id';" ) | \
-    mysql --user=ray --password=alexna11 --skip-column-names ca_hhs_meta 2>/dev/null > /tmp/csv_$$.txt
-
-if [ "$1" != "--no-fetch" ] && [ "$uuid1" != "none" ]; then
-
-    echo "fetching..."
-
-    if [ ! -d sources ]; then
-        mkdir sources
-    fi
-
-    mv -f *.csv *.xls* *.accdb *.docx *.html *.pdf *.pptx *.website \
-          *.web-link *.chart *.kml *.geojson *.json *-api *.zip \
-          sources/ 2>/dev/null
-
-    if [ -f "fetch_special.sh" ]; then
-
-        bash fetch_special.sh
-
-    elif [ -f "fetch_special.txt" ]; then
-
-        cat fetch_special.txt | awk 'BEGIN{FS="/"}
-            {print "if [ ! -f \""$NF"\" ]; then wget '\''"$0"'\''; fi"}'
-
+    if [ -f fetch_special_instead.sh ]; then
+        echo "executing fetch_special_instead.sh..."
+        bash fetch_special_instead.sh
     else
+
+        if [ -f fetch_special_before.sh ]; then
+            echo "executing fetch_special_before.sh..."
+            bash fetch_special_before.sh
+        fi
+
+        echo "updating deets..."
+
+        source ./deets.sh
+
+        ( cd .. ; ./.venv/bin/python update_deets.py --id $id )
+
+        ( echo "select c1.file_name, c1.table_name from datasets d1, csv_sources c1";
+          echo " where d1.pk = c1.ds_pk and auto_run = 1 and d1.name = '$id';" ) | \
+            mysql --user=ray --password=alexna11 --skip-column-names ca_hhs_meta 2>/dev/null > /tmp/csv_$$.txt
+
+        echo "fetching data..."
+
+        if [ ! -d sources ]; then
+            mkdir sources
+        fi
+
+        mv -f *.csv *.xls* *.accdb *.docx *.html *.pdf *.pptx *.website \
+              *.web-link *.chart *.kml *.geojson *.json *-api *.zip \
+              sources/ 2>/dev/null
+
         err="no"
 
         if [ "$hash" != "" ]; then
@@ -88,61 +118,77 @@ if [ "$1" != "--no-fetch" ] && [ "$uuid1" != "none" ]; then
             echo ""
             echo "There was some error on downloading."
             echo ""
+            exit
+        fi
+
+        unzip -o *.zip
+
+        if [ -f fetch_special_after.sh ]; then
+            echo "executing fetch_special_after.sh..."
+            bash fetch_special_after.sh
         fi
     fi
+fi
 
-    unzip -o *.zip
+if [ $process = "no" ]; then
+    exit
+fi
 
-    if [ -f fetch_extra.sh ]; then
-        bash fetch_extra.sh
+source ./deets.sh
+
+# Locate any csv source files.
+#
+( echo "select c1.file_name, c1.table_name from datasets d1, csv_sources c1";
+  echo " where d1.pk = c1.ds_pk and auto_run = 1 and d1.name = '$id';" ) | \
+    mysql --user=ray --password=alexna11 --skip-column-names ca_hhs_meta 2>/dev/null > /tmp/csv_$$.txt
+
+# Identify correct python executable to use.
+#
+upy="SQLALCHEMY_SILENCE_UBER_WARNING=1 ../.venv/bin/python"
+
+# Sometimes we need particular things installed but usually we do not.
+#
+if [ -f ./.venv/bin/python ]; then
+    py="SQLALCHEMY_SILENCE_UBER_WARNING=1 ./.venv/bin/python"
+else
+    py="SQLALCHEMY_SILENCE_UBER_WARNING=1 ../.venv/bin/python"
+fi
+
+if [ -f exec_special_instead.sh ]; then
+    echo "executing exec_special_instead.sh..."
+    bash exec_special_instead.sh
+else
+
+    if [ -f exec_special_before.sh ]; then
+        echo "executing exec_special_before.sh..."
+        bash exec_special_before.sh
     fi
-fi
 
-if [ -f exec_special.sh ]; then
+    if [ "$script" != "none" ] && [ -f "$script.py" ]; then
 
-    echo "executing special..."
-    bash exec_special.sh
-    if [ $? -ne 0 ]; then
-        echo "exec_special led to an ERROR."
-        echo ""
-        exit
-    fi
-    echo ""
-fi
+        echo "executing $script.py..."
 
-if [ ! -f $script.py ] && [ -s /tmp/csv_$$.txt ]; then
-    echo "yes. there are csv sources"
-
-    SQLALCHEMY_SILENCE_UBER_WARNING=1 ../.venv/bin/python3 ../csv_import.py --file /tmp/csv_$$.txt
-    r=$?
-
-    /bin/rm -f sources/*
-
-    mv -f *.csv *.xls* *.accdb *.docx *.html *.pdf *.pptx *.website \
-          *.web-link *.chart *.kml *.geojson *.json *-api *.zip \
-          sources/ 2>/dev/null
-
-    SQLALCHEMY_SILENCE_UBER_WARNING=1 ../.venv/bin/python ../update_time.py --result $r
-fi
-
-if [ "$1" != "--only-fetch" ] && [ -f $script.py ]; then
-
-    echo "into data..."
-
-    if [ -f ./.venv/bin/python ]; then
-        SQLALCHEMY_SILENCE_UBER_WARNING=1 ./.venv/bin/python $script.py
+        eval $py $script.py
         r=$?
-    else
-        SQLALCHEMY_SILENCE_UBER_WARNING=1 ../.venv/bin/python $script.py
-        r=$?
+
+        eval $upy ../update_time.py --result $r
     fi
 
-    /bin/rm -f sources/*
+    if [ -s /tmp/csv_$$.txt ]; then
 
-    mv -f *.csv *.xls* *.accdb *.docx *.html *.pdf *.pptx *.website \
-          *.web-link *.chart *.kml *.geojson *.json *-api *.zip \
-          sources/ 2>/dev/null
+        echo "import csv files..."
 
-    SQLALCHEMY_SILENCE_UBER_WARNING=1 ../.venv/bin/python ../update_time.py --result $r
+        eval $py ../csv_import.py --file /tmp/csv_$$.txt
+        r=$?
+
+        eval $upy ../update_time.py --result $r
+    fi
+
+    if [ -f exec_special_after.sh ]; then
+        echo "executing exec_special_after.sh..."
+        bash exec_special_after.sh
+    fi
+
+    bash ../mv_sources.sh .
 fi
 
