@@ -1,14 +1,14 @@
 
 import csv
+import os
 import traceback
 
-from sqlalchemy import create_engine
-
 import config
+from sqlalchemy import create_engine
 
 cfg = config.cfg()
 
-engine = create_engine(f"mysql+pymysql://{cfg['USR']}:{cfg['PWD']}@{cfg['HOST']}/{cfg['DB']}")
+engine = create_engine(f"mysql+pymysql://ray:__zekret__@localhost/ca_hhs")
 conn = engine.connect()
 
 
@@ -88,7 +88,7 @@ def fix_date(start):
     elif len(parts[0]) == 4 and len(parts[1]) <= 2 and len(parts[2]) <= 2:
         year = parts[0]
         mon = str(parts[1]).zfill(2)
-        dat = str(parts[1]).zfill(2)
+        dat = str(parts[2]).zfill(2)
     else:
         raise Exception(f"Cannot understand date format of value: {start}")
     return f"'{year}-{mon}-{dat}'"
@@ -96,7 +96,8 @@ def fix_date(start):
 
 known_replacements = {'system': 'system_name',
                       'rank': 'rank_name',
-                      'procedure': 'procedure_name'}
+                      'procedure': 'procedure_name',
+                      'condition': 'condition_name'}
 
 def fix_col_head(start, replaces={}):
     """Many of the column headers in these files are not compatible with mysql databases."""
@@ -126,9 +127,12 @@ def fix_col_head(start, replaces={}):
     col = col.replace('#', 'num')
     col = col.replace('%', 'pct')
     col = col.replace('?', '')
+    col = col.replace('&', '')
+    col = col.replace('*', '')
     col = col.replace('>=', '_ge_')
     col = col.replace('<=', '_le_')
     col = col.replace('"', '')
+    col = col.replace("'", '')
     col = col.replace(':', '')
     col = col.replace('>', '_gt_')
     col = col.replace('<', '_lt_')
@@ -139,6 +143,9 @@ def fix_col_head(start, replaces={}):
 
     for key in replaces:
         col = col.replace(key, replaces[key])
+
+    if len(col) > 64:
+        col = col[:63]
 
     return col
 
@@ -163,11 +170,48 @@ def fix_first_key(key):
         return key[offset+1:]
 
 
+def fix_file(name1):
+    """Some of the excel files have bad column names because the lines looks to split. What
+       is actually happening is that the column heads have a '\n' chracter in them, when a
+       real end-of-line is a '\r\n' pair. This function fixes a file by removing lone '\n'
+       characters."""
+
+    last = None
+
+    name2 = f"{name1}__"
+
+    w = open(name2, 'wb')
+
+    with open(name1, 'rb') as f:
+        while 1:
+            curr = f.read(1)
+
+            # we want to keep '\r\n' pairs, but eliminiate other instances of '\n'.
+            #
+            if not curr:
+                break
+            if last:
+                w.write(last)
+            if ord(curr) != 10 or (last and ord(last) == 13):
+                last = curr
+            else:
+                last = bytes(' ', "utf-8")
+
+        w.write(last)
+
+    w.close()
+
+    os.remove(name1)
+    os.rename(name2, name1)
+
+
 def create_tables(tables, types={}, replaces={}, length_pad=0, verbose=False):
     """Do the right thing for most csv files based on the column header strings found.
        Also determines the optimal length for a string column, though this process reads
        all of the data and so is probably not optimal and is probably doable in a smarter
        way."""
+
+    created = list()
 
     for table in tables:
 
@@ -216,6 +260,19 @@ def create_tables(tables, types={}, replaces={}, length_pad=0, verbose=False):
 
         col_defs = list()
         # print(f"lengths: {lengths}")
+
+        names_too_long = list()
+        for key in lengths:
+            if len(key) > 64:
+                names_too_long.append(key)
+
+        if len(names_too_long) > 0:
+            print(f"table: {table}")
+            print(f"BAD COLUMN NAMES: {names_too_long}")
+            continue
+
+        created.append(table)
+
         for col in lengths:
             # print(f"col: {col}")
             if table in types and col in types[table]:
@@ -235,6 +292,8 @@ def create_tables(tables, types={}, replaces={}, length_pad=0, verbose=False):
 
         # print(f"sql: {sql}")
         db_exec(conn, sql)
+
+    return created
 
 
 def read_data(tables, types={}, replaces={}, start_row=None, bucket=1000):
