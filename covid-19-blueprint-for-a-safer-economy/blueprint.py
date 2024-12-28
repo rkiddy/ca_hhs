@@ -5,36 +5,6 @@ sys.path.append('..')
 
 import csv_helper as csv
 
-def fix_file(name1):
-
-    last = None
-
-    name2 = f"{name1}__"
-
-    w = open(name2, 'wb')
-
-    with open(name1, 'rb') as f:
-        while 1:
-            curr = f.read(1)
-
-            # we want to keep '\r\n' pairs, but eliminiate other instances of '\n'.
-            #
-            if not curr:
-                break
-            if last:
-                w.write(last)
-            if ord(curr) != 10 or (last and ord(last) == 13):
-                last = curr
-            else:
-                last = bytes(' ', "utf-8")
-   
-        w.write(last) 
-
-    w.close()
-
-    os.remove(name1)
-    os.rename(name2, name1)
-
 
 if __name__ == '__main__':
 
@@ -52,7 +22,7 @@ if __name__ == '__main__':
 
     for tn in tables:
         csv_file = tables[tn]
-        fix_file(csv_file)
+        csv.fix_file(csv_file)
 
     types = {}
     # {'table': {'col': 'type'}}
