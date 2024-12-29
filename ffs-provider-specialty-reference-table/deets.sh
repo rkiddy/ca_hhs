@@ -1,5 +1,5 @@
-export uuid1="16e43864-f287-442a-a66c-c368863928ab"
-export uuid2="79d45f29-b009-4c67-a8ea-afee3c5abc9b"
+export uuid1="502d3c45-a02c-46f8-9fb6-b17daa7ce0db"
+export uuid2="91a00473-66ad-4e04-9bde-8d97aebfc571"
 export id="ffs-provider-specialty-reference-table"
-export hash="bkib39jf"
+export hash="v7wfnhfp"
 export script="none"

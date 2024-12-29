@@ -1,5 +1,5 @@
-export uuid1="6dfe5134-6b53-4a1d-9003-bc76ffb35fe9"
-export uuid2="6562d9a1-6be8-4308-8d5d-914f7ab53d3b"
+export uuid1="c3056bf5-a6dc-492b-a770-75b159160655"
+export uuid2="1bccb871-6b42-4146-ad51-c8e19e1f93bd"
 export id="every-woman-counts-regional-contractors-map"
-export hash="28coyxym"
+export hash="wa14ozaw"
 export script="none"

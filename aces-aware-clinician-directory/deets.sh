@@ -1,5 +1,5 @@
-export uuid1="b3af678d-1b60-43c4-bd27-05d81cb4f96e"
-export uuid2="a026ec10-f743-485c-8710-13b2ecff87df"
+export uuid1="adc4dbfc-f6c6-4c96-9c35-a51690324c1e"
+export uuid2="3312f276-8613-4b42-ad58-c3dda3968c87"
 export id="aces-aware-clinician-directory"
-export hash="r9hs5yut"
+export hash="zhaqc5yv"
 export script="none"

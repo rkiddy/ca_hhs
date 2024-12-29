@@ -1,5 +1,5 @@
 export uuid1="09b8ad0e-aca6-4147-b78d-bdaad872f30b"
 export uuid2="44fbe181-910c-4434-8316-055586dd30b8"
 export id="healthcare-facility-bed-types-and-counts"
-export hash="du0w0xpz"
+export hash="zt21e8fe"
 export script="none"

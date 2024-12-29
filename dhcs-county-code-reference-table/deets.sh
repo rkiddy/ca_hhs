@@ -1,5 +1,5 @@
-export uuid1="1e5185d9-f48f-4ce8-9f6d-d1baf01001c6"
-export uuid2="5e01fe4d-a50d-4e97-bfa3-ceef9a9ca611"
+export uuid1="a8246848-26c3-4e54-a9cb-ad3ca64e282a"
+export uuid2="420c1794-7319-4ac1-9231-745df9e54104"
 export id="dhcs-county-code-reference-table"
-export hash="rw_wi4z2"
+export hash="kpqkq8qc"
 export script="none"

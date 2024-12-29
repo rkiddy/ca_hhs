@@ -1,5 +1,5 @@
-export uuid1="c03f1e7b-2741-4272-ab24-d1e1b8db9c3b"
-export uuid2="d9591a43-fa85-476b-9751-ae266ab93288"
+export uuid1="ea701ed9-4e7e-4a32-858f-de57c7764c24"
+export uuid2="d9b5047c-ce0a-4699-8949-e26f09d4fe36"
 export id="covid19-emergency-dental-providers"
-export hash="94_o3qp5"
+export hash="41bn9w4w"
 export script="none"

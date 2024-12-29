@@ -1,5 +1,5 @@
 export uuid1="e302d346-bd59-4138-b0e9-49c7696a5aff"
 export uuid2="511174dc-04ae-45e5-83ed-e5e0ecd76e2f"
 export id="cdph_live-birth-by-zip-code"
-export hash="v821aajx"
+export hash="dzi7uwt3"
 export script="none"
