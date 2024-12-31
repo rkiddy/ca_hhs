@@ -81,7 +81,7 @@ if [ $fetch = "yes" ]; then
 
         ( echo "select c1.file_name, c1.table_name from datasets d1, csv_sources c1";
           echo " where d1.pk = c1.ds_pk and auto_run = 1 and d1.name = '$id';" ) | \
-            mysql --user=ray --password=alexna11 --skip-column-names ca_hhs_meta 2>/dev/null > /tmp/csv_$$.txt
+            ssh opencal mysql --skip-column-names ca_hhs_meta 2>/dev/null > /tmp/csv_$$.txt
 
         echo "fetching data..."
 
@@ -89,9 +89,7 @@ if [ $fetch = "yes" ]; then
             mkdir sources
         fi
 
-        mv -f *.csv *.xls* *.accdb *.docx *.html *.pdf *.pptx *.website \
-              *.web-link *.chart *.kml *.geojson *.json *-api *.zip \
-              sources/ 2>/dev/null
+        bash ../mv_sources .
 
         err="no"
 
@@ -140,7 +138,7 @@ source ./deets.sh
 #
 ( echo "select c1.file_name, c1.table_name from datasets d1, csv_sources c1";
   echo " where d1.pk = c1.ds_pk and auto_run = 1 and d1.name = '$id';" ) | \
-    mysql --user=ray --password=alexna11 --skip-column-names ca_hhs_meta 2>/dev/null > /tmp/csv_$$.txt
+    ssh opencal mysql --skip-column-names ca_hhs_meta 2>/dev/null > /tmp/csv_$$.txt
 
 # Identify correct python executable to use.
 #
@@ -189,6 +187,12 @@ else
         bash exec_special_after.sh
     fi
 
-    bash ../mv_sources.sh .
+    bash $HOME/mv_sources.sh .
+
+    bash $HOME/update_sources.sh
+
+    if [ `pwd` = $HOME'/dataset-catalog' ]; then
+        mysqldump ca_hhs catalog | ssh opencal mysql ca_hhs
+    fi
 fi
 
