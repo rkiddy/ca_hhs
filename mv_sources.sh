@@ -1,5 +1,5 @@
 
-if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
+if [ "$1" = "" ] || [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
     echo ""
     echo "Move the data files scattered around in the datasets directories to the sources directories."
     echo ""
@@ -9,15 +9,15 @@ fi
 for d in $*; do
 
     if [ -d $d ] && [ $d != "ca_hhs_www" ] && [ $d != "__pycache__" ]; then
-        pushd . 2>/dev/null
+        pushd . 1>/dev/null 2>/dev/null
         cd $d
 
         if [ $? -eq 0 ]; then
             echo $d
-            mv -f *.csv *.xls* *.accdb *.docx *.html *.pdf *.pptx *.website \
-            *.web-link *.chart *.kml *.geojson *.json *-api *.zip \
+            mv -f *.aspx *.csv *.xls* *.accdb *.docx *.html *.pdf *.pptx *.website \
+            *.web-link *.chart *.kml *.geojson *.json *-api *.zip *.doc .csv .geojson .kml \
             sources/ 2>/dev/null
         fi
-        popd
+        popd 1>/dev/null 2>/dev/null
     fi
 done
