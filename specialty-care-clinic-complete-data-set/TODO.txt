@@ -1,0 +1,6 @@
+
+These two datasets are really two parts of one:
+
+	specialty-care-clinic-complete-data-set
+	pre-2012-specialty-care-clinic-utilization-data
+
