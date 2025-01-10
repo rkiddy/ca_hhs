@@ -1,6 +1,7 @@
 
 import csv
 import os
+import re
 import traceback
 
 import config
@@ -8,7 +9,7 @@ from sqlalchemy import create_engine
 
 cfg = config.cfg()
 
-engine = create_engine(f"mysql+pymysql://ray:__zekret__@localhost/ca_hhs")
+engine = create_engine(f"mysql+pymysql://{cfg['LOC_USR']}:{cfg['LOC_PWD']}@localhost/ca_hhs")
 conn = engine.connect()
 
 
@@ -97,7 +98,14 @@ def fix_date(start):
 known_replacements = {'system': 'system_name',
                       'rank': 'rank_name',
                       'procedure': 'procedure_name',
-                      'condition': 'condition_name'}
+                      'condition': 'condition_name',
+                      'year_month': 'year_month_str',
+                      'key': 'key_str',
+                      'values': 'values_str',
+                      'table': 'table_name',
+                      'grouping': 'grouping_name',
+                      'year': 'year_str',
+                      'all': 'all_str'}
 
 def fix_col_head(start, replaces={}):
     """Many of the column headers in these files are not compatible with mysql databases."""
@@ -110,7 +118,8 @@ def fix_col_head(start, replaces={}):
     col = col.lower()
 
     for key in known_replacements:
-        col = col.replace(key, known_replacements[key])
+        if col == key:
+            col = known_replacements[key]
 
     while col.startswith(' '):
         col = col[1:]
@@ -144,15 +153,52 @@ def fix_col_head(start, replaces={}):
     for key in replaces:
         col = col.replace(key, replaces[key])
 
+    for key in known_replacements:
+        if col == key:
+            col = known_replacements[key]
+
     if len(col) > 64:
         col = col[:63]
 
     return col
 
 
+def uniqify_columns(cols):
+    colsD = dict()
+    for idx in range(len(cols)):
+        aCol = cols[idx]
+        if aCol not in colsD:
+            colsD[aCol] = list()
+        colsD[aCol].append(idx)
+    # print(f"colsD: {colsD}")
+    next_cols = [None] * len(cols)
+
+    for key in colsD:
+        if len(colsD[key]) == 1:
+            idx = colsD[key][0]
+            next_cols[idx] = key
+        else:
+            for jdx in range(len(colsD[key])):
+                idx = colsD[key][jdx]
+                next_cols[idx] = f"{key}{jdx+1}"
+    # print(f"next_cols: {next_cols}")
+    return next_cols
+
+
 def fix_col_heads(start, replaces={}):
     # print(f"fix_col_heads: start: {start}")
-    return [fix_col_head(c,replaces) for c in start]
+
+    heads = [fix_col_head(c,replaces) for c in start]
+
+    while heads[-1] == '':
+        heads = heads[:-1]
+
+    # automatically fix when there is a duplicate column.
+    #
+    if len(heads) != len(list(set(heads))):
+        heads = uniqify_columns(heads)
+
+    return heads
 
 
 def fix_first_key(key):
@@ -170,8 +216,54 @@ def fix_first_key(key):
         return key[offset+1:]
 
 
+def fix_empty_col_heads(name1):
+    """At least one csv file has a first row like 'one,two,three,,four' even if this makes
+       no sense. So add names."""
+
+    first = True
+
+    name2 = f"{name1}__"
+
+    w = open(name2, 'w')
+
+    added = 0
+
+    with open(name1, 'rb') as f:
+        for line in f:
+
+            # This is only done for the first line and no other.
+            #
+            if first:
+                parts = re.split(br',(?=(?:[^"]*"[^"]*")*[^"]*$)', line)
+                # print(f"STARTING: parts: {parts}")
+                for idx in range(len(parts)):
+                    if len(parts[idx]) == 0:
+                        parts[idx] = f"Added{added}".encode("utf-8")
+                        added += 1
+                    else:
+                        pass
+
+                next_parts = list()
+                for part in parts:
+                    next_parts.append(part.decode("utf-8"))
+
+                line = ','.join(next_parts)
+                first = False
+
+                # print(f"AFTER: line: {line}")
+            else:
+                line = line.decode("utf-8")
+
+            w.write(line)
+
+    w.close()
+
+    os.remove(name1)
+    os.rename(name2, name1)
+
+
 def fix_file(name1):
-    """Some of the excel files have bad column names because the lines looks to split. What
+    """Some of the csv files have bad column names because the lines looks to split. What
        is actually happening is that the column heads have a '\n' chracter in them, when a
        real end-of-line is a '\r\n' pair. This function fixes a file by removing lone '\n'
        characters."""
@@ -205,6 +297,20 @@ def fix_file(name1):
     os.rename(name2, name1)
 
 
+def find_column_lengths(csv_rdr):
+
+    found = dict()
+
+    for row in csv_rdr:
+        for key in row:
+            if key not in found:
+                found[key] = -1
+            if row[key] is not None and len(row[key]) > found[key]:
+                found[key] = len(row[key])
+
+    return found
+
+
 def create_tables(tables, types={}, replaces={}, length_pad=0, verbose=False):
     """Do the right thing for most csv files based on the column header strings found.
        Also determines the optimal length for a string column, though this process reads
@@ -219,56 +325,33 @@ def create_tables(tables, types={}, replaces={}, length_pad=0, verbose=False):
         if verbose:
             print(f"file: {file}")
 
-        cols = list()
         lengths = dict()
 
+        csvfile = open(file, newline='', encoding='latin1')
+
+        line = csvfile.readline().strip()
+
+        # See https://dnmtechs.com/splitting-quoted-strings-in-python-3-ignoring-separators/
+        # result = re.split(r',(?=(?:[^"]*"[^"]*")*[^"]*$)', string)
+
+        cols = fix_col_heads(re.split(r',(?=(?:[^"]*"[^"]*")*[^"]*$)', line), {})
+        csvfile.close()
+
+        first_read = False
+
         with open(file, newline='', encoding='latin1') as csvfile:
-            rdr = csv.DictReader(csvfile)
+            rdr = csv.DictReader(csvfile, fieldnames=cols)
 
-            # read through the file once to create the table. Wasteful? Maybe, but more sure.
-            #
-            for row in rdr:
-                if '' in row:
-                    row.pop('')
-                if None in row:
-                    row.pop(None)
-
-                next_row = dict()
-                for key in row:
-                    next_row[fix_col_head(key, replaces)] = row[key]
-                row = next_row
-                if verbose:
-                    print(f"row: {row}")
-
-                if len(cols) == 0:
-
-                    cols = list(row.keys())
-                    for col in cols:
-                        lengths[col] = 0
-                    if verbose:
-                        print(f"starting columns: {col}")
-
-                for key in row:
-                    try:
-                        if len(row[key]) > lengths[key]:
-                            lengths[key] = len(row[key])
-                    except:
-                        if verbose:
-                            print(f"bad row: {row}")
+            lengths = find_column_lengths(rdr)
 
         # print(f"types: {types}\n")
 
         col_defs = list()
         # print(f"lengths: {lengths}")
 
-        names_too_long = list()
-        for key in lengths:
-            if len(key) > 64:
-                names_too_long.append(key)
-
-        if len(names_too_long) > 0:
-            print(f"table: {table}")
-            print(f"BAD COLUMN NAMES: {names_too_long}")
+        max_lengths = [len(name) for name in cols]
+        if max(max_lengths) > 64:
+            print(f"We have BAD COLUMN NAMES in: {cols}")
             continue
 
         created.append(table)
@@ -321,8 +404,18 @@ def read_data(tables, types={}, replaces={}, start_row=None, bucket=1000):
 
             sqls = list()
 
+            csvfile = open(f, newline='', encoding='latin1')
+
+            line = csvfile.readline().strip()
+ 
+            # See: https://dnmtechs.com/splitting-quoted-strings-in-python-3-ignoring-separators/
+            # result = re.split(r',(?=(?:[^"]*"[^"]*")*[^"]*$)', string)
+
+            cols = fix_col_heads(re.split(r',(?=(?:[^"]*"[^"]*")*[^"]*$)', line), {})
+            csvfile.close()
+
             with open(f, newline='', encoding='latin1') as csvfile:
-                rdr = csv.DictReader(csvfile)
+                rdr = csv.DictReader(csvfile, fieldnames=cols)
 
                 for row in rdr:
 
@@ -331,10 +424,7 @@ def read_data(tables, types={}, replaces={}, start_row=None, bucket=1000):
                     if None in row:
                         row.pop(None)
 
-                    if cols is None:
-                        cols = fix_col_heads(list(row.keys()), replaces)
-                        # print(f"read_data: fixed cols: {cols}")
-
+                    # TODO I think I am not using this...
                     if start_row is not None and rdr.line_num < start_row:
                         continue
 
@@ -342,17 +432,15 @@ def read_data(tables, types={}, replaces={}, start_row=None, bucket=1000):
 
                     for col in row:
 
-                        fcol = fix_col_head(col, replaces)
-
                         val = None
 
                         # print(f"is {table} in types and is {col} in {types[table]}?")
-                        if table in types and fcol in types[table]:
-                            if types[table][fcol] == 'int' or types[table][fcol].startswith('decimal'):
+                        if table in types and col in types[table]:
+                            if types[table][col] == 'int' or types[table][col].startswith('decimal'):
                                 val = fix_int(row[col])
-                            if types[table][fcol] == 'date':
+                            if types[table][col] == 'date':
                                 val = fix_date(row[col])
-                            if types[table][fcol] == 'text':
+                            if types[table][col] == 'text':
                                 val = fix(row[col])
                         else:
                             val = fix(row[col])
