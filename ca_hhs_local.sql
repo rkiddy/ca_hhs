@@ -39,6 +39,346 @@ CREATE TABLE `1960_2022_final_births_by_year_statewide` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `1960_2023_top_25_baby_names_by_sex_by_year`
+--
+
+DROP TABLE IF EXISTS `1960_2023_top_25_baby_names_by_sex_by_year`;
+CREATE TABLE `1960_2023_top_25_baby_names_by_sex_by_year` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `sex` varchar(6) DEFAULT NULL,
+  `rank_name` varchar(4) DEFAULT NULL,
+  `name` varchar(11) DEFAULT NULL,
+  `count` varchar(5) DEFAULT NULL,
+  `data_revision_date` varchar(18) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `1970_1978_final_deaths_by_month_by_county`
+--
+
+DROP TABLE IF EXISTS `1970_1978_final_deaths_by_month_by_county`;
+CREATE TABLE `1970_1978_final_deaths_by_month_by_county` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `month` varchar(5) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
+  `strata` varchar(16) DEFAULT NULL,
+  `strata_name` varchar(17) DEFAULT NULL,
+  `cause` varchar(5) DEFAULT NULL,
+  `cause_desc` varchar(18) DEFAULT NULL,
+  `count` varchar(5) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
+  `annotation_desc` varchar(38) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `1970_1978_final_deaths_by_year_by_county`
+--
+
+DROP TABLE IF EXISTS `1970_1978_final_deaths_by_year_by_county`;
+CREATE TABLE `1970_1978_final_deaths_by_year_by_county` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
+  `strata` varchar(16) DEFAULT NULL,
+  `strata_name` varchar(17) DEFAULT NULL,
+  `cause` varchar(5) DEFAULT NULL,
+  `cause_desc` varchar(18) DEFAULT NULL,
+  `count` varchar(5) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
+  `annotation_desc` varchar(38) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `1979_1988_final_deaths_by_month_by_county`
+--
+
+DROP TABLE IF EXISTS `1979_1988_final_deaths_by_month_by_county`;
+CREATE TABLE `1979_1988_final_deaths_by_month_by_county` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `month` varchar(5) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
+  `strata` varchar(16) DEFAULT NULL,
+  `strata_name` varchar(17) DEFAULT NULL,
+  `cause` varchar(5) DEFAULT NULL,
+  `cause_desc` varchar(53) DEFAULT NULL,
+  `count` varchar(5) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
+  `annotation_desc` varchar(38) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `1979_1998_final_deaths_by_year_by_county`
+--
+
+DROP TABLE IF EXISTS `1979_1998_final_deaths_by_year_by_county`;
+CREATE TABLE `1979_1998_final_deaths_by_year_by_county` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
+  `strata` varchar(16) DEFAULT NULL,
+  `strata_name` varchar(17) DEFAULT NULL,
+  `cause` varchar(5) DEFAULT NULL,
+  `cause_desc` varchar(53) DEFAULT NULL,
+  `count` varchar(5) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
+  `annotation_desc` varchar(38) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `1989_1998_final_deaths_by_month_by_county`
+--
+
+DROP TABLE IF EXISTS `1989_1998_final_deaths_by_month_by_county`;
+CREATE TABLE `1989_1998_final_deaths_by_month_by_county` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `month` varchar(5) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
+  `strata` varchar(16) DEFAULT NULL,
+  `strata_name` varchar(17) DEFAULT NULL,
+  `cause` varchar(5) DEFAULT NULL,
+  `cause_desc` varchar(53) DEFAULT NULL,
+  `count` varchar(5) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
+  `annotation_desc` varchar(38) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `1995_cy_hospital_annual_selected_file`
+--
+
+DROP TABLE IF EXISTS `1995_cy_hospital_annual_selected_file`;
+CREATE TABLE `1995_cy_hospital_annual_selected_file` (
+  `fac_no` varchar(9) DEFAULT NULL,
+  `fac_name` varchar(44) DEFAULT NULL,
+  `beg_date` varchar(8) DEFAULT NULL,
+  `end_date` varchar(8) DEFAULT NULL,
+  `day_per` varchar(3) DEFAULT NULL,
+  `data_ind` varchar(7) DEFAULT NULL,
+  `audit_ind` varchar(0) DEFAULT NULL,
+  `county` varchar(2) DEFAULT NULL,
+  `hsa` varchar(2) DEFAULT NULL,
+  `hfpa` varchar(4) DEFAULT NULL,
+  `type_cntrl` varchar(11) DEFAULT NULL,
+  `type_care` varchar(11) DEFAULT NULL,
+  `type_hosp` varchar(20) DEFAULT NULL,
+  `teach_rurl` varchar(11) DEFAULT NULL,
+  `phone` varchar(13) DEFAULT NULL,
+  `address` varchar(31) DEFAULT NULL,
+  `city` varchar(19) DEFAULT NULL,
+  `zip_code` varchar(10) DEFAULT NULL,
+  `ceo` varchar(29) DEFAULT NULL,
+  `ceo_title` varchar(25) DEFAULT NULL,
+  `rpt_prep` varchar(30) DEFAULT NULL,
+  `owner` varchar(64) DEFAULT NULL,
+  `er_desig` varchar(1) DEFAULT NULL,
+  `mcar_pronum` varchar(8) DEFAULT NULL,
+  `mcal_pronum` varchar(9) DEFAULT NULL,
+  `reg_mcalnum` varchar(9) DEFAULT NULL,
+  `bed_lic` varchar(4) DEFAULT NULL,
+  `bed_avl` varchar(4) DEFAULT NULL,
+  `bed_stf` varchar(4) DEFAULT NULL,
+  `day_mcar` varchar(6) DEFAULT NULL,
+  `day_mcal` varchar(6) DEFAULT NULL,
+  `day_cnty` varchar(6) DEFAULT NULL,
+  `day_thrd` varchar(6) DEFAULT NULL,
+  `day_oth` varchar(6) DEFAULT NULL,
+  `day_tot` varchar(6) DEFAULT NULL,
+  `dis_mcar` varchar(5) DEFAULT NULL,
+  `dis_mcal` varchar(5) DEFAULT NULL,
+  `dis_cnty` varchar(5) DEFAULT NULL,
+  `dis_thrd` varchar(5) DEFAULT NULL,
+  `dis_oth` varchar(4) DEFAULT NULL,
+  `dis_tot` varchar(5) DEFAULT NULL,
+  `bed_acute` varchar(4) DEFAULT NULL,
+  `bed_psych` varchar(3) DEFAULT NULL,
+  `bed_chem` varchar(3) DEFAULT NULL,
+  `bed_rehab` varchar(3) DEFAULT NULL,
+  `bed_ltc` varchar(4) DEFAULT NULL,
+  `bed_resdnt` varchar(2) DEFAULT NULL,
+  `day_acute` varchar(6) DEFAULT NULL,
+  `day_psych` varchar(6) DEFAULT NULL,
+  `day_chem` varchar(5) DEFAULT NULL,
+  `day_rehab` varchar(5) DEFAULT NULL,
+  `day_ltc` varchar(6) DEFAULT NULL,
+  `day_resdnt` varchar(5) DEFAULT NULL,
+  `dis_acute` varchar(5) DEFAULT NULL,
+  `dis_psych` varchar(4) DEFAULT NULL,
+  `dis_chem` varchar(4) DEFAULT NULL,
+  `dis_rehab` varchar(4) DEFAULT NULL,
+  `dis_ltc` varchar(4) DEFAULT NULL,
+  `dis_resdnt` varchar(4) DEFAULT NULL,
+  `occ_lic` varchar(5) DEFAULT NULL,
+  `occ_avl` varchar(5) DEFAULT NULL,
+  `alos_all` varchar(6) DEFAULT NULL,
+  `alos_exltc` varchar(6) DEFAULT NULL,
+  `bas_nursry` varchar(2) DEFAULT NULL,
+  `day_nursry` varchar(5) DEFAULT NULL,
+  `dis_nursry` varchar(4) DEFAULT NULL,
+  `vis_mcar` varchar(6) DEFAULT NULL,
+  `vis_mcal` varchar(6) DEFAULT NULL,
+  `vis_cnty` varchar(6) DEFAULT NULL,
+  `vis_thrd` varchar(6) DEFAULT NULL,
+  `vis_oth` varchar(6) DEFAULT NULL,
+  `vis_tot` varchar(6) DEFAULT NULL,
+  `vis_er` varchar(6) DEFAULT NULL,
+  `vis_clin` varchar(6) DEFAULT NULL,
+  `vis_home` varchar(6) DEFAULT NULL,
+  `vis_ref_op` varchar(6) DEFAULT NULL,
+  `day_hmo` varchar(5) DEFAULT NULL,
+  `day_man_cr` varchar(5) DEFAULT NULL,
+  `vis_hmo` varchar(6) DEFAULT NULL,
+  `vis_man_cr` varchar(6) DEFAULT NULL,
+  `days_pips` varchar(5) DEFAULT NULL,
+  `op_room` varchar(2) DEFAULT NULL,
+  `op_min_ip` varchar(7) DEFAULT NULL,
+  `op_min_op` varchar(7) DEFAULT NULL,
+  `surg_ip` varchar(5) DEFAULT NULL,
+  `surg_op` varchar(5) DEFAULT NULL,
+  `card_cath` varchar(5) DEFAULT NULL,
+  `ct_scans` varchar(5) DEFAULT NULL,
+  `gr_pt_rev` varchar(10) DEFAULT NULL,
+  `ded_fr_rev` varchar(10) DEFAULT NULL,
+  `net_pt_rev` varchar(10) DEFAULT NULL,
+  `oth_op_rev` varchar(8) DEFAULT NULL,
+  `tot_op_exp` varchar(10) DEFAULT NULL,
+  `net_frm_op` varchar(9) DEFAULT NULL,
+  `nonop_rev` varchar(9) DEFAULT NULL,
+  `nonop_exp` varchar(8) DEFAULT NULL,
+  `inc_tax` varchar(8) DEFAULT NULL,
+  `ext_item` varchar(7) DEFAULT NULL,
+  `net_income` varchar(9) DEFAULT NULL,
+  `gr_rev_dly` varchar(10) DEFAULT NULL,
+  `gr_rev_amb` varchar(9) DEFAULT NULL,
+  `gr_rev_anc` varchar(9) DEFAULT NULL,
+  `gr_rev_pip` varchar(8) DEFAULT NULL,
+  `gr_ip_mcar` varchar(9) DEFAULT NULL,
+  `gr_ip_mcal` varchar(9) DEFAULT NULL,
+  `gr_ip_cnty` varchar(9) DEFAULT NULL,
+  `gr_ip_thrd` varchar(9) DEFAULT NULL,
+  `gr_ip_oth` varchar(8) DEFAULT NULL,
+  `gr_ip_tot` varchar(10) DEFAULT NULL,
+  `gr_op_mcar` varchar(8) DEFAULT NULL,
+  `gr_op_mcal` varchar(9) DEFAULT NULL,
+  `gr_op_cnty` varchar(9) DEFAULT NULL,
+  `gr_op_thrd` varchar(9) DEFAULT NULL,
+  `gr_op_oth` varchar(8) DEFAULT NULL,
+  `gr_op_tot` varchar(9) DEFAULT NULL,
+  `c_adj_mcar` varchar(9) DEFAULT NULL,
+  `c_adj_mcal` varchar(9) DEFAULT NULL,
+  `disp_855` varchar(10) DEFAULT NULL,
+  `c_adj_cnty` varchar(9) DEFAULT NULL,
+  `c_adj_hmo` varchar(9) DEFAULT NULL,
+  `cap_rev` varchar(1) DEFAULT NULL,
+  `c_adj_oth` varchar(9) DEFAULT NULL,
+  `bad_debt` varchar(8) DEFAULT NULL,
+  `char_hb` varchar(7) DEFAULT NULL,
+  `char_oth` varchar(9) DEFAULT NULL,
+  `sub_indgnt` varchar(8) DEFAULT NULL,
+  `ded_oth` varchar(8) DEFAULT NULL,
+  `netrv_mcar` varchar(9) DEFAULT NULL,
+  `netrv_mcal` varchar(9) DEFAULT NULL,
+  `netrv_cnty` varchar(8) DEFAULT NULL,
+  `netrv_thrd` varchar(9) DEFAULT NULL,
+  `netrv_oth` varchar(8) DEFAULT NULL,
+  `disp_trnfr` varchar(9) DEFAULT NULL,
+  `inter_tfr` varchar(9) DEFAULT NULL,
+  `contribtns` varchar(8) DEFAULT NULL,
+  `inc_invest` varchar(8) DEFAULT NULL,
+  `dist_rev` varchar(7) DEFAULT NULL,
+  `cnty_appro` varchar(8) DEFAULT NULL,
+  `exp_dly` varchar(9) DEFAULT NULL,
+  `exp_amb` varchar(8) DEFAULT NULL,
+  `exp_anc` varchar(9) DEFAULT NULL,
+  `exp_pip` varchar(8) DEFAULT NULL,
+  `exp_res` varchar(8) DEFAULT NULL,
+  `exp_ed` varchar(8) DEFAULT NULL,
+  `exp_gen` varchar(9) DEFAULT NULL,
+  `exp_fisc` varchar(8) DEFAULT NULL,
+  `exp_adm` varchar(9) DEFAULT NULL,
+  `exp_unassg` varchar(8) DEFAULT NULL,
+  `exp_sal` varchar(9) DEFAULT NULL,
+  `exp_ben` varchar(9) DEFAULT NULL,
+  `exp_phys` varchar(8) DEFAULT NULL,
+  `exp_othpro` varchar(8) DEFAULT NULL,
+  `exp_supp` varchar(9) DEFAULT NULL,
+  `exp_purch` varchar(8) DEFAULT NULL,
+  `exp_depre` varchar(8) DEFAULT NULL,
+  `exp_leases` varchar(8) DEFAULT NULL,
+  `exp_insur` varchar(8) DEFAULT NULL,
+  `exp_intrst` varchar(8) DEFAULT NULL,
+  `exp_oth` varchar(8) DEFAULT NULL,
+  `cur_asst` varchar(9) DEFAULT NULL,
+  `asst_limtd` varchar(9) DEFAULT NULL,
+  `net_ppe` varchar(10) DEFAULT NULL,
+  `const_prog` varchar(9) DEFAULT NULL,
+  `inv_oth` varchar(9) DEFAULT NULL,
+  `intan_asst` varchar(8) DEFAULT NULL,
+  `tot_asst` varchar(10) DEFAULT NULL,
+  `cur_liab` varchar(9) DEFAULT NULL,
+  `def_cred` varchar(9) DEFAULT NULL,
+  `net_ltdebt` varchar(9) DEFAULT NULL,
+  `equity` varchar(10) DEFAULT NULL,
+  `liab_eq` varchar(10) DEFAULT NULL,
+  `cash` varchar(8) DEFAULT NULL,
+  `bldgs` varchar(10) DEFAULT NULL,
+  `equipment` varchar(9) DEFAULT NULL,
+  `tot_ppe` varchar(10) DEFAULT NULL,
+  `acc_depre` varchar(11) DEFAULT NULL,
+  `mort_pay` varchar(8) DEFAULT NULL,
+  `cap_lease` varchar(8) DEFAULT NULL,
+  `bond_pay` varchar(9) DEFAULT NULL,
+  `tot_ltdebt` varchar(9) DEFAULT NULL,
+  `cur_mat` varchar(7) DEFAULT NULL,
+  `inter_rec` varchar(9) DEFAULT NULL,
+  `inter_pay` varchar(9) DEFAULT NULL,
+  `cur_rat` varchar(6) DEFAULT NULL,
+  `days_ar` varchar(6) DEFAULT NULL,
+  `bd_rate` varchar(6) DEFAULT NULL,
+  `ltd_asst` varchar(6) DEFAULT NULL,
+  `net_rtn_eq` varchar(9) DEFAULT NULL,
+  `op_margin` varchar(9) DEFAULT NULL,
+  `age_plant` varchar(6) DEFAULT NULL,
+  `ppe_bed` varchar(6) DEFAULT NULL,
+  `hosp_emp` varchar(4) DEFAULT NULL,
+  `hosp_fte` varchar(4) DEFAULT NULL,
+  `nurs_emp` varchar(11) DEFAULT NULL,
+  `prod_hrs` varchar(8) DEFAULT NULL,
+  `non_prd_hr` varchar(7) DEFAULT NULL,
+  `paid_hrs` varchar(8) DEFAULT NULL,
+  `med_staff` varchar(4) DEFAULT NULL,
+  `stdnt_fte` varchar(3) DEFAULT NULL,
+  `prd_hr_mgt` varchar(7) DEFAULT NULL,
+  `prd_hr_tch` varchar(7) DEFAULT NULL,
+  `prd_hr_rn` varchar(7) DEFAULT NULL,
+  `prd_hr_lvn` varchar(6) DEFAULT NULL,
+  `prd_hr_aid` varchar(7) DEFAULT NULL,
+  `prd_hr_clr` varchar(7) DEFAULT NULL,
+  `prd_hr_env` varchar(7) DEFAULT NULL,
+  `prd_hr_oth` varchar(7) DEFAULT NULL,
+  `cnt_hr_rn` varchar(6) DEFAULT NULL,
+  `cnt_hr_oth` varchar(7) DEFAULT NULL,
+  `prd_hr_dly` varchar(7) DEFAULT NULL,
+  `prd_hr_amb` varchar(7) DEFAULT NULL,
+  `prd_hr_anc` varchar(7) DEFAULT NULL,
+  `prd_hr_ed` varchar(7) DEFAULT NULL,
+  `prd_hr_gen` varchar(7) DEFAULT NULL,
+  `prd_hr_fis` varchar(7) DEFAULT NULL,
+  `prd_hr_adm` varchar(7) DEFAULT NULL,
+  `prd_hr_non` varchar(6) DEFAULT NULL,
+  `pd_hr_dly` varchar(7) DEFAULT NULL,
+  `pd_hr_amb` varchar(7) DEFAULT NULL,
+  `pd_hr_anc` varchar(7) DEFAULT NULL,
+  `pd_hr_ed` varchar(7) DEFAULT NULL,
+  `pd_hr_gen` varchar(7) DEFAULT NULL,
+  `pd_hr_fis` varchar(7) DEFAULT NULL,
+  `pd_hr_adm` varchar(7) DEFAULT NULL,
+  `pd_hr_non` varchar(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `1995_quarter_4_sum_of_four_quarters`
 --
 
@@ -132,6 +472,239 @@ CREATE TABLE `1995_quarter_4_sum_of_four_quarters` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `1996_cy_hospital_annual_selected_file`
+--
+
+DROP TABLE IF EXISTS `1996_cy_hospital_annual_selected_file`;
+CREATE TABLE `1996_cy_hospital_annual_selected_file` (
+  `fac_no` varchar(9) DEFAULT NULL,
+  `fac_name` varchar(44) DEFAULT NULL,
+  `beg_date` varchar(8) DEFAULT NULL,
+  `end_date` varchar(8) DEFAULT NULL,
+  `day_per` varchar(3) DEFAULT NULL,
+  `data_ind` varchar(7) DEFAULT NULL,
+  `audit_ind` varchar(0) DEFAULT NULL,
+  `county` varchar(2) DEFAULT NULL,
+  `hsa` varchar(2) DEFAULT NULL,
+  `hfpa` varchar(4) DEFAULT NULL,
+  `type_cntrl` varchar(11) DEFAULT NULL,
+  `type_care` varchar(11) DEFAULT NULL,
+  `type_hosp` varchar(20) DEFAULT NULL,
+  `teach_rurl` varchar(11) DEFAULT NULL,
+  `phone` varchar(13) DEFAULT NULL,
+  `address` varchar(31) DEFAULT NULL,
+  `city` varchar(19) DEFAULT NULL,
+  `zip_code` varchar(10) DEFAULT NULL,
+  `ceo` varchar(29) DEFAULT NULL,
+  `ceo_title` varchar(25) DEFAULT NULL,
+  `rpt_prep` varchar(28) DEFAULT NULL,
+  `owner` varchar(64) DEFAULT NULL,
+  `er_desig` varchar(1) DEFAULT NULL,
+  `mcar_pronum` varchar(8) DEFAULT NULL,
+  `mcal_pronum` varchar(9) DEFAULT NULL,
+  `reg_mcalnum` varchar(9) DEFAULT NULL,
+  `bed_lic` varchar(4) DEFAULT NULL,
+  `bed_avl` varchar(4) DEFAULT NULL,
+  `bed_stf` varchar(4) DEFAULT NULL,
+  `day_mcar` varchar(6) DEFAULT NULL,
+  `day_mcal` varchar(6) DEFAULT NULL,
+  `day_cnty` varchar(6) DEFAULT NULL,
+  `day_thrd` varchar(6) DEFAULT NULL,
+  `day_oth` varchar(6) DEFAULT NULL,
+  `day_tot` varchar(6) DEFAULT NULL,
+  `dis_mcar` varchar(5) DEFAULT NULL,
+  `dis_mcal` varchar(5) DEFAULT NULL,
+  `dis_cnty` varchar(5) DEFAULT NULL,
+  `dis_thrd` varchar(5) DEFAULT NULL,
+  `dis_oth` varchar(4) DEFAULT NULL,
+  `dis_tot` varchar(5) DEFAULT NULL,
+  `bed_acute` varchar(4) DEFAULT NULL,
+  `bed_psych` varchar(3) DEFAULT NULL,
+  `bed_chem` varchar(3) DEFAULT NULL,
+  `bed_rehab` varchar(3) DEFAULT NULL,
+  `bed_ltc` varchar(4) DEFAULT NULL,
+  `bed_resdnt` varchar(2) DEFAULT NULL,
+  `day_acute` varchar(6) DEFAULT NULL,
+  `day_psych` varchar(6) DEFAULT NULL,
+  `day_chem` varchar(5) DEFAULT NULL,
+  `day_rehab` varchar(5) DEFAULT NULL,
+  `day_ltc` varchar(6) DEFAULT NULL,
+  `day_resdnt` varchar(5) DEFAULT NULL,
+  `dis_acute` varchar(5) DEFAULT NULL,
+  `dis_psych` varchar(4) DEFAULT NULL,
+  `dis_chem` varchar(4) DEFAULT NULL,
+  `dis_rehab` varchar(3) DEFAULT NULL,
+  `dis_ltc` varchar(4) DEFAULT NULL,
+  `dis_resdnt` varchar(4) DEFAULT NULL,
+  `occ_lic` varchar(4) DEFAULT NULL,
+  `occ_avl` varchar(5) DEFAULT NULL,
+  `alos_all` varchar(6) DEFAULT NULL,
+  `alos_exltc` varchar(5) DEFAULT NULL,
+  `bas_nursry` varchar(2) DEFAULT NULL,
+  `day_nursry` varchar(5) DEFAULT NULL,
+  `dis_nursry` varchar(4) DEFAULT NULL,
+  `vis_mcar` varchar(6) DEFAULT NULL,
+  `vis_mcal` varchar(6) DEFAULT NULL,
+  `vis_cnty` varchar(6) DEFAULT NULL,
+  `vis_thrd` varchar(6) DEFAULT NULL,
+  `vis_oth` varchar(6) DEFAULT NULL,
+  `vis_tot` varchar(6) DEFAULT NULL,
+  `vis_er` varchar(6) DEFAULT NULL,
+  `vis_clin` varchar(6) DEFAULT NULL,
+  `vis_home` varchar(6) DEFAULT NULL,
+  `vis_ref_op` varchar(6) DEFAULT NULL,
+  `day_hmo` varchar(5) DEFAULT NULL,
+  `day_man_cr` varchar(5) DEFAULT NULL,
+  `vis_hmo` varchar(6) DEFAULT NULL,
+  `vis_man_cr` varchar(5) DEFAULT NULL,
+  `days_pips` varchar(5) DEFAULT NULL,
+  `op_room` varchar(2) DEFAULT NULL,
+  `op_min_ip` varchar(7) DEFAULT NULL,
+  `op_min_op` varchar(7) DEFAULT NULL,
+  `surg_ip` varchar(5) DEFAULT NULL,
+  `surg_op` varchar(5) DEFAULT NULL,
+  `card_cath` varchar(5) DEFAULT NULL,
+  `ct_scans` varchar(5) DEFAULT NULL,
+  `gr_pt_rev` varchar(10) DEFAULT NULL,
+  `ded_fr_rev` varchar(10) DEFAULT NULL,
+  `net_pt_rev` varchar(10) DEFAULT NULL,
+  `oth_op_rev` varchar(8) DEFAULT NULL,
+  `tot_op_exp` varchar(10) DEFAULT NULL,
+  `net_frm_op` varchar(9) DEFAULT NULL,
+  `nonop_rev` varchar(9) DEFAULT NULL,
+  `nonop_exp` varchar(8) DEFAULT NULL,
+  `inc_tax` varchar(8) DEFAULT NULL,
+  `ext_item` varchar(8) DEFAULT NULL,
+  `net_income` varchar(9) DEFAULT NULL,
+  `gr_rev_dly` varchar(10) DEFAULT NULL,
+  `gr_rev_amb` varchar(9) DEFAULT NULL,
+  `gr_rev_anc` varchar(10) DEFAULT NULL,
+  `gr_rev_pip` varchar(8) DEFAULT NULL,
+  `gr_ip_mcar` varchar(9) DEFAULT NULL,
+  `gr_ip_mcal` varchar(9) DEFAULT NULL,
+  `gr_ip_cnty` varchar(9) DEFAULT NULL,
+  `gr_ip_thrd` varchar(9) DEFAULT NULL,
+  `gr_ip_oth` varchar(8) DEFAULT NULL,
+  `gr_ip_tot` varchar(10) DEFAULT NULL,
+  `gr_op_mcar` varchar(8) DEFAULT NULL,
+  `gr_op_mcal` varchar(9) DEFAULT NULL,
+  `gr_op_cnty` varchar(9) DEFAULT NULL,
+  `gr_op_thrd` varchar(9) DEFAULT NULL,
+  `gr_op_oth` varchar(8) DEFAULT NULL,
+  `gr_op_tot` varchar(9) DEFAULT NULL,
+  `c_adj_mcar` varchar(9) DEFAULT NULL,
+  `c_adj_mcal` varchar(9) DEFAULT NULL,
+  `disp_855` varchar(10) DEFAULT NULL,
+  `c_adj_cnty` varchar(9) DEFAULT NULL,
+  `c_adj_hmo` varchar(9) DEFAULT NULL,
+  `cap_rev` varchar(1) DEFAULT NULL,
+  `c_adj_oth` varchar(9) DEFAULT NULL,
+  `bad_debt` varchar(8) DEFAULT NULL,
+  `char_hb` varchar(7) DEFAULT NULL,
+  `char_oth` varchar(8) DEFAULT NULL,
+  `sub_indgnt` varchar(8) DEFAULT NULL,
+  `ded_oth` varchar(8) DEFAULT NULL,
+  `netrv_mcar` varchar(9) DEFAULT NULL,
+  `netrv_mcal` varchar(9) DEFAULT NULL,
+  `netrv_cnty` varchar(8) DEFAULT NULL,
+  `netrv_thrd` varchar(9) DEFAULT NULL,
+  `netrv_oth` varchar(8) DEFAULT NULL,
+  `disp_trnfr` varchar(9) DEFAULT NULL,
+  `inter_tfr` varchar(9) DEFAULT NULL,
+  `contribtns` varchar(8) DEFAULT NULL,
+  `inc_invest` varchar(8) DEFAULT NULL,
+  `dist_rev` varchar(7) DEFAULT NULL,
+  `cnty_appro` varchar(9) DEFAULT NULL,
+  `exp_dly` varchar(9) DEFAULT NULL,
+  `exp_amb` varchar(9) DEFAULT NULL,
+  `exp_anc` varchar(9) DEFAULT NULL,
+  `exp_pip` varchar(8) DEFAULT NULL,
+  `exp_res` varchar(8) DEFAULT NULL,
+  `exp_ed` varchar(8) DEFAULT NULL,
+  `exp_gen` varchar(9) DEFAULT NULL,
+  `exp_fisc` varchar(8) DEFAULT NULL,
+  `exp_adm` varchar(8) DEFAULT NULL,
+  `exp_unassg` varchar(8) DEFAULT NULL,
+  `exp_sal` varchar(9) DEFAULT NULL,
+  `exp_ben` varchar(9) DEFAULT NULL,
+  `exp_phys` varchar(8) DEFAULT NULL,
+  `exp_othpro` varchar(8) DEFAULT NULL,
+  `exp_supp` varchar(8) DEFAULT NULL,
+  `exp_purch` varchar(8) DEFAULT NULL,
+  `exp_depre` varchar(8) DEFAULT NULL,
+  `exp_leases` varchar(8) DEFAULT NULL,
+  `exp_insur` varchar(8) DEFAULT NULL,
+  `exp_intrst` varchar(8) DEFAULT NULL,
+  `exp_oth` varchar(8) DEFAULT NULL,
+  `cur_asst` varchar(9) DEFAULT NULL,
+  `asst_limtd` varchar(9) DEFAULT NULL,
+  `net_ppe` varchar(10) DEFAULT NULL,
+  `const_prog` varchar(9) DEFAULT NULL,
+  `inv_oth` varchar(9) DEFAULT NULL,
+  `intan_asst` varchar(8) DEFAULT NULL,
+  `tot_asst` varchar(10) DEFAULT NULL,
+  `cur_liab` varchar(9) DEFAULT NULL,
+  `def_cred` varchar(9) DEFAULT NULL,
+  `net_ltdebt` varchar(9) DEFAULT NULL,
+  `equity` varchar(10) DEFAULT NULL,
+  `liab_eq` varchar(10) DEFAULT NULL,
+  `cash` varchar(9) DEFAULT NULL,
+  `bldgs` varchar(10) DEFAULT NULL,
+  `equipment` varchar(9) DEFAULT NULL,
+  `tot_ppe` varchar(10) DEFAULT NULL,
+  `acc_depre` varchar(11) DEFAULT NULL,
+  `mort_pay` varchar(8) DEFAULT NULL,
+  `cap_lease` varchar(8) DEFAULT NULL,
+  `bond_pay` varchar(9) DEFAULT NULL,
+  `tot_ltdebt` varchar(9) DEFAULT NULL,
+  `cur_mat` varchar(8) DEFAULT NULL,
+  `inter_rec` varchar(9) DEFAULT NULL,
+  `inter_pay` varchar(9) DEFAULT NULL,
+  `cur_rat` varchar(7) DEFAULT NULL,
+  `days_ar` varchar(7) DEFAULT NULL,
+  `bd_rate` varchar(5) DEFAULT NULL,
+  `ltd_asst` varchar(7) DEFAULT NULL,
+  `net_rtn_eq` varchar(8) DEFAULT NULL,
+  `op_margin` varchar(9) DEFAULT NULL,
+  `age_plant` varchar(5) DEFAULT NULL,
+  `ppe_bed` varchar(7) DEFAULT NULL,
+  `hosp_emp` varchar(4) DEFAULT NULL,
+  `hosp_fte` varchar(4) DEFAULT NULL,
+  `nurs_emp` varchar(11) DEFAULT NULL,
+  `prod_hrs` varchar(8) DEFAULT NULL,
+  `non_prd_hr` varchar(7) DEFAULT NULL,
+  `paid_hrs` varchar(8) DEFAULT NULL,
+  `med_staff` varchar(4) DEFAULT NULL,
+  `stdnt_fte` varchar(4) DEFAULT NULL,
+  `prd_hr_mgt` varchar(7) DEFAULT NULL,
+  `prd_hr_tch` varchar(7) DEFAULT NULL,
+  `prd_hr_rn` varchar(7) DEFAULT NULL,
+  `prd_hr_lvn` varchar(6) DEFAULT NULL,
+  `prd_hr_aid` varchar(7) DEFAULT NULL,
+  `prd_hr_clr` varchar(7) DEFAULT NULL,
+  `prd_hr_env` varchar(7) DEFAULT NULL,
+  `prd_hr_oth` varchar(7) DEFAULT NULL,
+  `cnt_hr_rn` varchar(6) DEFAULT NULL,
+  `cnt_hr_oth` varchar(6) DEFAULT NULL,
+  `prd_hr_dly` varchar(7) DEFAULT NULL,
+  `prd_hr_amb` varchar(7) DEFAULT NULL,
+  `prd_hr_anc` varchar(7) DEFAULT NULL,
+  `prd_hr_ed` varchar(7) DEFAULT NULL,
+  `prd_hr_gen` varchar(7) DEFAULT NULL,
+  `prd_hr_fis` varchar(7) DEFAULT NULL,
+  `prd_hr_adm` varchar(7) DEFAULT NULL,
+  `prd_hr_non` varchar(6) DEFAULT NULL,
+  `pd_hr_dly` varchar(7) DEFAULT NULL,
+  `pd_hr_amb` varchar(7) DEFAULT NULL,
+  `pd_hr_anc` varchar(7) DEFAULT NULL,
+  `pd_hr_ed` varchar(7) DEFAULT NULL,
+  `pd_hr_gen` varchar(7) DEFAULT NULL,
+  `pd_hr_fis` varchar(7) DEFAULT NULL,
+  `pd_hr_adm` varchar(7) DEFAULT NULL,
+  `pd_hr_non` varchar(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `1996_quarter_4_sum_of_four_quarters`
 --
 
@@ -214,6 +787,664 @@ CREATE TABLE `1996_quarter_4_sum_of_four_quarters` (
   `puripday` varchar(11) DEFAULT NULL,
   `puripexp` varchar(11) DEFAULT NULL,
   `puriprev` varchar(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `1997_cy_hospital_annual_selected_file`
+--
+
+DROP TABLE IF EXISTS `1997_cy_hospital_annual_selected_file`;
+CREATE TABLE `1997_cy_hospital_annual_selected_file` (
+  `fac_no` varchar(9) DEFAULT NULL,
+  `fac_name` varchar(44) DEFAULT NULL,
+  `beg_date` varchar(8) DEFAULT NULL,
+  `end_date` varchar(8) DEFAULT NULL,
+  `day_per` varchar(3) DEFAULT NULL,
+  `data_ind` varchar(7) DEFAULT NULL,
+  `audit_ind` varchar(16) DEFAULT NULL,
+  `county` varchar(2) DEFAULT NULL,
+  `hsa` varchar(2) DEFAULT NULL,
+  `hfpa` varchar(4) DEFAULT NULL,
+  `type_cntrl` varchar(11) DEFAULT NULL,
+  `type_care` varchar(11) DEFAULT NULL,
+  `type_hosp` varchar(20) DEFAULT NULL,
+  `teach_rurl` varchar(11) DEFAULT NULL,
+  `phone` varchar(13) DEFAULT NULL,
+  `address` varchar(31) DEFAULT NULL,
+  `city` varchar(19) DEFAULT NULL,
+  `zip_code` varchar(10) DEFAULT NULL,
+  `ceo` varchar(29) DEFAULT NULL,
+  `ceo_title` varchar(25) DEFAULT NULL,
+  `rpt_prep` varchar(27) DEFAULT NULL,
+  `owner` varchar(62) DEFAULT NULL,
+  `er_desig` varchar(1) DEFAULT NULL,
+  `mcar_pronum` varchar(7) DEFAULT NULL,
+  `mcal_pronum` varchar(9) DEFAULT NULL,
+  `reg_mcalnum` varchar(9) DEFAULT NULL,
+  `bed_lic` varchar(4) DEFAULT NULL,
+  `bed_avl` varchar(4) DEFAULT NULL,
+  `bed_stf` varchar(4) DEFAULT NULL,
+  `day_mcar` varchar(6) DEFAULT NULL,
+  `day_mcal` varchar(6) DEFAULT NULL,
+  `day_cnty` varchar(6) DEFAULT NULL,
+  `day_thrd` varchar(6) DEFAULT NULL,
+  `day_oth` varchar(6) DEFAULT NULL,
+  `day_tot` varchar(6) DEFAULT NULL,
+  `dis_mcar` varchar(5) DEFAULT NULL,
+  `dis_mcal` varchar(5) DEFAULT NULL,
+  `dis_cnty` varchar(5) DEFAULT NULL,
+  `dis_thrd` varchar(5) DEFAULT NULL,
+  `dis_oth` varchar(4) DEFAULT NULL,
+  `dis_tot` varchar(5) DEFAULT NULL,
+  `bed_acute` varchar(4) DEFAULT NULL,
+  `bed_psych` varchar(3) DEFAULT NULL,
+  `bed_chem` varchar(3) DEFAULT NULL,
+  `bed_rehab` varchar(2) DEFAULT NULL,
+  `bed_ltc` varchar(4) DEFAULT NULL,
+  `bed_resdnt` varchar(3) DEFAULT NULL,
+  `day_acute` varchar(6) DEFAULT NULL,
+  `day_psych` varchar(6) DEFAULT NULL,
+  `day_chem` varchar(5) DEFAULT NULL,
+  `day_rehab` varchar(5) DEFAULT NULL,
+  `day_ltc` varchar(6) DEFAULT NULL,
+  `day_resdnt` varchar(5) DEFAULT NULL,
+  `dis_acute` varchar(5) DEFAULT NULL,
+  `dis_psych` varchar(4) DEFAULT NULL,
+  `dis_chem` varchar(4) DEFAULT NULL,
+  `dis_rehab` varchar(4) DEFAULT NULL,
+  `dis_ltc` varchar(4) DEFAULT NULL,
+  `dis_resdnt` varchar(4) DEFAULT NULL,
+  `occ_lic` varchar(4) DEFAULT NULL,
+  `occ_avl` varchar(5) DEFAULT NULL,
+  `alos_all` varchar(6) DEFAULT NULL,
+  `alos_exltc` varchar(6) DEFAULT NULL,
+  `bas_nursry` varchar(2) DEFAULT NULL,
+  `day_nursry` varchar(5) DEFAULT NULL,
+  `dis_nursry` varchar(4) DEFAULT NULL,
+  `vis_mcar` varchar(6) DEFAULT NULL,
+  `vis_mcal` varchar(6) DEFAULT NULL,
+  `vis_cnty` varchar(6) DEFAULT NULL,
+  `vis_thrd` varchar(6) DEFAULT NULL,
+  `vis_oth` varchar(5) DEFAULT NULL,
+  `vis_tot` varchar(6) DEFAULT NULL,
+  `vis_er` varchar(6) DEFAULT NULL,
+  `vis_clin` varchar(6) DEFAULT NULL,
+  `vis_home` varchar(6) DEFAULT NULL,
+  `vis_ref_op` varchar(6) DEFAULT NULL,
+  `day_hmo` varchar(5) DEFAULT NULL,
+  `day_man_cr` varchar(5) DEFAULT NULL,
+  `vis_hmo` varchar(6) DEFAULT NULL,
+  `vis_man_cr` varchar(6) DEFAULT NULL,
+  `days_pips` varchar(5) DEFAULT NULL,
+  `op_room` varchar(2) DEFAULT NULL,
+  `op_min_ip` varchar(7) DEFAULT NULL,
+  `op_min_op` varchar(7) DEFAULT NULL,
+  `surg_ip` varchar(5) DEFAULT NULL,
+  `surg_op` varchar(5) DEFAULT NULL,
+  `card_cath` varchar(5) DEFAULT NULL,
+  `ct_scans` varchar(5) DEFAULT NULL,
+  `gr_pt_rev` varchar(10) DEFAULT NULL,
+  `ded_fr_rev` varchar(10) DEFAULT NULL,
+  `net_pt_rev` varchar(10) DEFAULT NULL,
+  `oth_op_rev` varchar(8) DEFAULT NULL,
+  `tot_op_exp` varchar(10) DEFAULT NULL,
+  `net_frm_op` varchar(10) DEFAULT NULL,
+  `nonop_rev` varchar(9) DEFAULT NULL,
+  `nonop_exp` varchar(8) DEFAULT NULL,
+  `inc_tax` varchar(8) DEFAULT NULL,
+  `ext_item` varchar(8) DEFAULT NULL,
+  `net_income` varchar(9) DEFAULT NULL,
+  `gr_rev_dly` varchar(10) DEFAULT NULL,
+  `gr_rev_amb` varchar(9) DEFAULT NULL,
+  `gr_rev_anc` varchar(10) DEFAULT NULL,
+  `gr_rev_pip` varchar(8) DEFAULT NULL,
+  `gr_ip_mcar` varchar(9) DEFAULT NULL,
+  `gr_ip_mcal` varchar(9) DEFAULT NULL,
+  `gr_ip_cnty` varchar(9) DEFAULT NULL,
+  `gr_ip_thrd` varchar(9) DEFAULT NULL,
+  `gr_ip_oth` varchar(8) DEFAULT NULL,
+  `gr_ip_tot` varchar(10) DEFAULT NULL,
+  `gr_op_mcar` varchar(9) DEFAULT NULL,
+  `gr_op_mcal` varchar(8) DEFAULT NULL,
+  `gr_op_cnty` varchar(9) DEFAULT NULL,
+  `gr_op_thrd` varchar(9) DEFAULT NULL,
+  `gr_op_oth` varchar(8) DEFAULT NULL,
+  `gr_op_tot` varchar(9) DEFAULT NULL,
+  `c_adj_mcar` varchar(9) DEFAULT NULL,
+  `c_adj_mcal` varchar(9) DEFAULT NULL,
+  `disp_855` varchar(10) DEFAULT NULL,
+  `c_adj_cnty` varchar(9) DEFAULT NULL,
+  `c_adj_hmo` varchar(9) DEFAULT NULL,
+  `cap_rev` varchar(9) DEFAULT NULL,
+  `c_adj_oth` varchar(8) DEFAULT NULL,
+  `bad_debt` varchar(8) DEFAULT NULL,
+  `char_hb` varchar(7) DEFAULT NULL,
+  `char_oth` varchar(8) DEFAULT NULL,
+  `sub_indgnt` varchar(8) DEFAULT NULL,
+  `ded_oth` varchar(9) DEFAULT NULL,
+  `netrv_mcar` varchar(9) DEFAULT NULL,
+  `netrv_mcal` varchar(9) DEFAULT NULL,
+  `netrv_cnty` varchar(8) DEFAULT NULL,
+  `netrv_thrd` varchar(9) DEFAULT NULL,
+  `netrv_oth` varchar(9) DEFAULT NULL,
+  `disp_trnfr` varchar(9) DEFAULT NULL,
+  `inter_tfr` varchar(9) DEFAULT NULL,
+  `contribtns` varchar(8) DEFAULT NULL,
+  `inc_invest` varchar(8) DEFAULT NULL,
+  `dist_rev` varchar(7) DEFAULT NULL,
+  `cnty_appro` varchar(9) DEFAULT NULL,
+  `exp_dly` varchar(9) DEFAULT NULL,
+  `exp_amb` varchar(9) DEFAULT NULL,
+  `exp_anc` varchar(9) DEFAULT NULL,
+  `exp_pip` varchar(8) DEFAULT NULL,
+  `exp_res` varchar(8) DEFAULT NULL,
+  `exp_ed` varchar(8) DEFAULT NULL,
+  `exp_gen` varchar(9) DEFAULT NULL,
+  `exp_fisc` varchar(8) DEFAULT NULL,
+  `exp_adm` varchar(8) DEFAULT NULL,
+  `exp_unassg` varchar(8) DEFAULT NULL,
+  `exp_sal` varchar(9) DEFAULT NULL,
+  `exp_ben` varchar(9) DEFAULT NULL,
+  `exp_phys` varchar(8) DEFAULT NULL,
+  `exp_othpro` varchar(8) DEFAULT NULL,
+  `exp_supp` varchar(9) DEFAULT NULL,
+  `exp_purch` varchar(9) DEFAULT NULL,
+  `exp_depre` varchar(8) DEFAULT NULL,
+  `exp_leases` varchar(8) DEFAULT NULL,
+  `exp_insur` varchar(8) DEFAULT NULL,
+  `exp_intrst` varchar(8) DEFAULT NULL,
+  `exp_oth` varchar(8) DEFAULT NULL,
+  `cur_asst` varchar(9) DEFAULT NULL,
+  `asst_limtd` varchar(9) DEFAULT NULL,
+  `net_ppe` varchar(10) DEFAULT NULL,
+  `const_prog` varchar(9) DEFAULT NULL,
+  `inv_oth` varchar(9) DEFAULT NULL,
+  `intan_asst` varchar(8) DEFAULT NULL,
+  `tot_asst` varchar(10) DEFAULT NULL,
+  `cur_liab` varchar(9) DEFAULT NULL,
+  `def_cred` varchar(9) DEFAULT NULL,
+  `net_ltdebt` varchar(9) DEFAULT NULL,
+  `equity` varchar(10) DEFAULT NULL,
+  `liab_eq` varchar(10) DEFAULT NULL,
+  `cash` varchar(9) DEFAULT NULL,
+  `bldgs` varchar(10) DEFAULT NULL,
+  `equipment` varchar(9) DEFAULT NULL,
+  `tot_ppe` varchar(10) DEFAULT NULL,
+  `acc_depre` varchar(11) DEFAULT NULL,
+  `mort_pay` varchar(8) DEFAULT NULL,
+  `cap_lease` varchar(8) DEFAULT NULL,
+  `bond_pay` varchar(9) DEFAULT NULL,
+  `tot_ltdebt` varchar(9) DEFAULT NULL,
+  `cur_mat` varchar(8) DEFAULT NULL,
+  `inter_rec` varchar(9) DEFAULT NULL,
+  `inter_pay` varchar(9) DEFAULT NULL,
+  `cur_rat` varchar(6) DEFAULT NULL,
+  `days_ar` varchar(7) DEFAULT NULL,
+  `bd_rate` varchar(5) DEFAULT NULL,
+  `ltd_asst` varchar(6) DEFAULT NULL,
+  `net_rtn_eq` varchar(7) DEFAULT NULL,
+  `op_margin` varchar(9) DEFAULT NULL,
+  `age_plant` varchar(7) DEFAULT NULL,
+  `ppe_bed` varchar(7) DEFAULT NULL,
+  `hosp_emp` varchar(4) DEFAULT NULL,
+  `hosp_fte` varchar(4) DEFAULT NULL,
+  `nurs_emp` varchar(11) DEFAULT NULL,
+  `prod_hrs` varchar(8) DEFAULT NULL,
+  `non_prd_hr` varchar(7) DEFAULT NULL,
+  `paid_hrs` varchar(8) DEFAULT NULL,
+  `med_staff` varchar(4) DEFAULT NULL,
+  `stdnt_fte` varchar(3) DEFAULT NULL,
+  `prd_hr_mgt` varchar(7) DEFAULT NULL,
+  `prd_hr_tch` varchar(7) DEFAULT NULL,
+  `prd_hr_rn` varchar(7) DEFAULT NULL,
+  `prd_hr_lvn` varchar(6) DEFAULT NULL,
+  `prd_hr_aid` varchar(6) DEFAULT NULL,
+  `prd_hr_clr` varchar(7) DEFAULT NULL,
+  `prd_hr_env` varchar(7) DEFAULT NULL,
+  `prd_hr_oth` varchar(7) DEFAULT NULL,
+  `cnt_hr_rn` varchar(7) DEFAULT NULL,
+  `cnt_hr_oth` varchar(6) DEFAULT NULL,
+  `prd_hr_dly` varchar(7) DEFAULT NULL,
+  `prd_hr_amb` varchar(7) DEFAULT NULL,
+  `prd_hr_anc` varchar(7) DEFAULT NULL,
+  `prd_hr_ed` varchar(7) DEFAULT NULL,
+  `prd_hr_gen` varchar(7) DEFAULT NULL,
+  `prd_hr_fis` varchar(6) DEFAULT NULL,
+  `prd_hr_adm` varchar(7) DEFAULT NULL,
+  `prd_hr_non` varchar(6) DEFAULT NULL,
+  `pd_hr_dly` varchar(7) DEFAULT NULL,
+  `pd_hr_amb` varchar(7) DEFAULT NULL,
+  `pd_hr_anc` varchar(7) DEFAULT NULL,
+  `pd_hr_ed` varchar(7) DEFAULT NULL,
+  `pd_hr_gen` varchar(7) DEFAULT NULL,
+  `pd_hr_fis` varchar(7) DEFAULT NULL,
+  `pd_hr_adm` varchar(7) DEFAULT NULL,
+  `pd_hr_non` varchar(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `1997_part_a_long_term_care_annual_financial_data`
+--
+
+DROP TABLE IF EXISTS `1997_part_a_long_term_care_annual_financial_data`;
+CREATE TABLE `1997_part_a_long_term_care_annual_financial_data` (
+  `fac_no` varchar(9) DEFAULT NULL,
+  `fac_name` varchar(40) DEFAULT NULL,
+  `beg_date` varchar(8) DEFAULT NULL,
+  `end_date` varchar(8) DEFAULT NULL,
+  `day_per` varchar(7) DEFAULT NULL,
+  `data_ind` varchar(8) DEFAULT NULL,
+  `comparable` varchar(10) DEFAULT NULL,
+  `county` varchar(6) DEFAULT NULL,
+  `hsa` varchar(3) DEFAULT NULL,
+  `hfpa` varchar(4) DEFAULT NULL,
+  `lic_cat` varchar(7) DEFAULT NULL,
+  `type_cntrl` varchar(14) DEFAULT NULL,
+  `legal_org` varchar(14) DEFAULT NULL,
+  `phone` varchar(13) DEFAULT NULL,
+  `address` varchar(30) DEFAULT NULL,
+  `city` varchar(19) DEFAULT NULL,
+  `zip_code` varchar(10) DEFAULT NULL,
+  `mcal_pronum` varchar(9) DEFAULT NULL,
+  `adminis` varchar(27) DEFAULT NULL,
+  `related` varchar(7) DEFAULT NULL,
+  `parent` varchar(41) DEFAULT NULL,
+  `bed_end` varchar(7) DEFAULT NULL,
+  `bed_avg` varchar(7) DEFAULT NULL,
+  `day_totl` varchar(8) DEFAULT NULL,
+  `occup` varchar(5) DEFAULT NULL,
+  `admits` varchar(6) DEFAULT NULL,
+  `dischs` varchar(6) DEFAULT NULL,
+  `day_mcar` varchar(8) DEFAULT NULL,
+  `day_mcal` varchar(8) DEFAULT NULL,
+  `day_self` varchar(8) DEFAULT NULL,
+  `day_oth` varchar(7) DEFAULT NULL,
+  `day_sn` varchar(6) DEFAULT NULL,
+  `day_ic` varchar(6) DEFAULT NULL,
+  `day_md` varchar(6) DEFAULT NULL,
+  `day_dd` varchar(6) DEFAULT NULL,
+  `day_subacu` varchar(10) DEFAULT NULL,
+  `day_subped` varchar(10) DEFAULT NULL,
+  `day_tic` varchar(7) DEFAULT NULL,
+  `day_hospic` varchar(10) DEFAULT NULL,
+  `day_oth_rt` varchar(10) DEFAULT NULL,
+  `nr_rt_totl` varchar(10) DEFAULT NULL,
+  `nr_an_totl` varchar(10) DEFAULT NULL,
+  `oth_op_rev` varchar(10) DEFAULT NULL,
+  `tot_hc_rev` varchar(10) DEFAULT NULL,
+  `tot_hc_exp` varchar(10) DEFAULT NULL,
+  `net_frm_hc` varchar(10) DEFAULT NULL,
+  `nonhc_net` varchar(9) DEFAULT NULL,
+  `inc_tax` varchar(7) DEFAULT NULL,
+  `ext_item` varchar(8) DEFAULT NULL,
+  `net_income` varchar(10) DEFAULT NULL,
+  `nr_rt_mcar` varchar(10) DEFAULT NULL,
+  `nr_rt_mcal` varchar(10) DEFAULT NULL,
+  `nr_rt_self` varchar(10) DEFAULT NULL,
+  `nr_rt_oth` varchar(9) DEFAULT NULL,
+  `nr_sn` varchar(7) DEFAULT NULL,
+  `nr_ic` varchar(7) DEFAULT NULL,
+  `nr_md` varchar(7) DEFAULT NULL,
+  `nr_dd` varchar(7) DEFAULT NULL,
+  `nr_subacu` varchar(9) DEFAULT NULL,
+  `nr_subped` varchar(9) DEFAULT NULL,
+  `nr_tic` varchar(6) DEFAULT NULL,
+  `nr_hospic` varchar(9) DEFAULT NULL,
+  `nr_oth_rt` varchar(9) DEFAULT NULL,
+  `nr_an_mcar` varchar(10) DEFAULT NULL,
+  `nr_an_mcal` varchar(10) DEFAULT NULL,
+  `nr_an_self` varchar(10) DEFAULT NULL,
+  `nr_an_oth` varchar(9) DEFAULT NULL,
+  `nr_psupply` varchar(10) DEFAULT NULL,
+  `nr_pt` varchar(7) DEFAULT NULL,
+  `nr_pharm` varchar(8) DEFAULT NULL,
+  `nr_lab` varchar(6) DEFAULT NULL,
+  `nr_hmhlth` varchar(9) DEFAULT NULL,
+  `nr_oth_an` varchar(9) DEFAULT NULL,
+  `exp_sal` varchar(7) DEFAULT NULL,
+  `exp_ben` varchar(7) DEFAULT NULL,
+  `exp_other` varchar(9) DEFAULT NULL,
+  `work_comp` varchar(9) DEFAULT NULL,
+  `exp_sn` varchar(7) DEFAULT NULL,
+  `exp_ic` varchar(6) DEFAULT NULL,
+  `exp_md` varchar(7) DEFAULT NULL,
+  `exp_dd` varchar(7) DEFAULT NULL,
+  `exp_subacu` varchar(10) DEFAULT NULL,
+  `exp_subped` varchar(10) DEFAULT NULL,
+  `exp_tic` varchar(7) DEFAULT NULL,
+  `exp_hospic` varchar(10) DEFAULT NULL,
+  `exp_oth_rt` varchar(10) DEFAULT NULL,
+  `exp_psuppl` varchar(10) DEFAULT NULL,
+  `exp_pt` varchar(6) DEFAULT NULL,
+  `exp_pharm` varchar(9) DEFAULT NULL,
+  `exp_lab` varchar(7) DEFAULT NULL,
+  `exp_hmhlth` varchar(10) DEFAULT NULL,
+  `exp_oth_an` varchar(10) DEFAULT NULL,
+  `exp_pom` varchar(7) DEFAULT NULL,
+  `exp_hkp` varchar(7) DEFAULT NULL,
+  `exp_ll` varchar(6) DEFAULT NULL,
+  `exp_diet` varchar(8) DEFAULT NULL,
+  `exp_ss` varchar(6) DEFAULT NULL,
+  `exp_actv` varchar(8) DEFAULT NULL,
+  `exp_insv` varchar(8) DEFAULT NULL,
+  `exp_admn` varchar(8) DEFAULT NULL,
+  `exp_dprec` varchar(9) DEFAULT NULL,
+  `exp_lease` varchar(9) DEFAULT NULL,
+  `exp_prptax` varchar(10) DEFAULT NULL,
+  `exp_prpins` varchar(10) DEFAULT NULL,
+  `exp_intppe` varchar(10) DEFAULT NULL,
+  `exp_intoth` varchar(10) DEFAULT NULL,
+  `exp_bdebt` varchar(9) DEFAULT NULL,
+  `cur_asst` varchar(8) DEFAULT NULL,
+  `asst_limtd` varchar(10) DEFAULT NULL,
+  `net_ppe` varchar(8) DEFAULT NULL,
+  `const_prog` varchar(10) DEFAULT NULL,
+  `inv_oth` varchar(8) DEFAULT NULL,
+  `intan_asst` varchar(10) DEFAULT NULL,
+  `tot_asst` varchar(8) DEFAULT NULL,
+  `cur_liab` varchar(8) DEFAULT NULL,
+  `def_cred` varchar(8) DEFAULT NULL,
+  `net_ltdebt` varchar(10) DEFAULT NULL,
+  `equity` varchar(9) DEFAULT NULL,
+  `liab_eq` varchar(8) DEFAULT NULL,
+  `rel_rec_cr` varchar(10) DEFAULT NULL,
+  `rel_rec_lt` varchar(10) DEFAULT NULL,
+  `rel_pay_cr` varchar(10) DEFAULT NULL,
+  `rel_pay_lt` varchar(10) DEFAULT NULL,
+  `landimp` varchar(8) DEFAULT NULL,
+  `bldgsimp` varchar(9) DEFAULT NULL,
+  `lease_imp` varchar(9) DEFAULT NULL,
+  `equipment` varchar(9) DEFAULT NULL,
+  `tot_ppe` varchar(8) DEFAULT NULL,
+  `acc_deprec` varchar(10) DEFAULT NULL,
+  `mort_pay` varchar(8) DEFAULT NULL,
+  `cap_lease` varchar(9) DEFAULT NULL,
+  `bond_pay` varchar(8) DEFAULT NULL,
+  `tot_ltdebt` varchar(10) DEFAULT NULL,
+  `cur_mat` varchar(8) DEFAULT NULL,
+  `cur_ratio` varchar(9) DEFAULT NULL,
+  `acid_ratio` varchar(10) DEFAULT NULL,
+  `days_ar` varchar(7) DEFAULT NULL,
+  `ltd_asst` varchar(8) DEFAULT NULL,
+  `debt_cov` varchar(8) DEFAULT NULL,
+  `op_margin` varchar(9) DEFAULT NULL,
+  `net_rtn_eq` varchar(10) DEFAULT NULL,
+  `trnovr_opr` varchar(10) DEFAULT NULL,
+  `asst_equty` varchar(10) DEFAULT NULL,
+  `ppe_bed` varchar(7) DEFAULT NULL,
+  `prdhr_mgt` varchar(9) DEFAULT NULL,
+  `prdhr_gnp` varchar(9) DEFAULT NULL,
+  `prdhr_rn` varchar(8) DEFAULT NULL,
+  `prdhr_lvn` varchar(9) DEFAULT NULL,
+  `prdhr_na` varchar(8) DEFAULT NULL,
+  `prdhr_tsp` varchar(9) DEFAULT NULL,
+  `prdhr_psy` varchar(9) DEFAULT NULL,
+  `prdhr_oth` varchar(9) DEFAULT NULL,
+  `prdhr_an` varchar(8) DEFAULT NULL,
+  `prdhr_pom` varchar(9) DEFAULT NULL,
+  `prdhr_hkp` varchar(9) DEFAULT NULL,
+  `prdhr_ll` varchar(8) DEFAULT NULL,
+  `prdhr_diet` varchar(10) DEFAULT NULL,
+  `prdhr_ss` varchar(8) DEFAULT NULL,
+  `prdhr_actv` varchar(10) DEFAULT NULL,
+  `prdhr_insv` varchar(10) DEFAULT NULL,
+  `prdhr_admn` varchar(10) DEFAULT NULL,
+  `prdhr_totl` varchar(10) DEFAULT NULL,
+  `tmp_hr_gnp` varchar(10) DEFAULT NULL,
+  `tmp_hr_rn` varchar(9) DEFAULT NULL,
+  `tmp_hr_lvn` varchar(10) DEFAULT NULL,
+  `tmp_hr_na` varchar(9) DEFAULT NULL,
+  `tmp_hr_psy` varchar(10) DEFAULT NULL,
+  `tmp_hr_oth` varchar(10) DEFAULT NULL,
+  `tmp_hr_tot` varchar(10) DEFAULT NULL,
+  `sw_mgt` varchar(7) DEFAULT NULL,
+  `sw_gnp` varchar(7) DEFAULT NULL,
+  `sw_rn` varchar(7) DEFAULT NULL,
+  `sw_lvn` varchar(7) DEFAULT NULL,
+  `sw_na` varchar(7) DEFAULT NULL,
+  `sw_tsp` varchar(7) DEFAULT NULL,
+  `sw_psy` varchar(7) DEFAULT NULL,
+  `sw_oth` varchar(7) DEFAULT NULL,
+  `sw_anc` varchar(7) DEFAULT NULL,
+  `sw_pom` varchar(7) DEFAULT NULL,
+  `sw_hkp` varchar(7) DEFAULT NULL,
+  `sw_ll` varchar(6) DEFAULT NULL,
+  `sw_diet` varchar(8) DEFAULT NULL,
+  `sw_ss` varchar(6) DEFAULT NULL,
+  `sw_actv` varchar(8) DEFAULT NULL,
+  `sw_insv` varchar(8) DEFAULT NULL,
+  `sw_admn` varchar(8) DEFAULT NULL,
+  `sw_totl` varchar(8) DEFAULT NULL,
+  `tmp_pd_gnp` varchar(10) DEFAULT NULL,
+  `tmp_pd_rn` varchar(9) DEFAULT NULL,
+  `tmp_pd_lvn` varchar(10) DEFAULT NULL,
+  `tmp_pd_na` varchar(9) DEFAULT NULL,
+  `tmp_pd_psy` varchar(10) DEFAULT NULL,
+  `tmp_pd_oth` varchar(10) DEFAULT NULL,
+  `tmp_pd_tot` varchar(10) DEFAULT NULL,
+  `emp_avg` varchar(7) DEFAULT NULL,
+  `emp_trnovr` varchar(10) DEFAULT NULL,
+  `emp_cont` varchar(8) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `1997_part_b_long_term_care_annual_financial_data`
+--
+
+DROP TABLE IF EXISTS `1997_part_b_long_term_care_annual_financial_data`;
+CREATE TABLE `1997_part_b_long_term_care_annual_financial_data` (
+  `fac_no` varchar(9) DEFAULT NULL,
+  `fac_name` varchar(40) DEFAULT NULL,
+  `beg_date` varchar(8) DEFAULT NULL,
+  `end_date` varchar(8) DEFAULT NULL,
+  `day_per` varchar(7) DEFAULT NULL,
+  `data_ind` varchar(10) DEFAULT NULL,
+  `comparable` varchar(10) DEFAULT NULL,
+  `county` varchar(6) DEFAULT NULL,
+  `hsa` varchar(3) DEFAULT NULL,
+  `hfpa` varchar(4) DEFAULT NULL,
+  `lic_cat` varchar(7) DEFAULT NULL,
+  `type_cntrl` varchar(14) DEFAULT NULL,
+  `legal_org` varchar(14) DEFAULT NULL,
+  `phone` varchar(13) DEFAULT NULL,
+  `address` varchar(30) DEFAULT NULL,
+  `city` varchar(16) DEFAULT NULL,
+  `zip_code` varchar(10) DEFAULT NULL,
+  `mcal_pronum` varchar(9) DEFAULT NULL,
+  `adminis` varchar(28) DEFAULT NULL,
+  `related` varchar(7) DEFAULT NULL,
+  `parent` varchar(40) DEFAULT NULL,
+  `bed_end` varchar(7) DEFAULT NULL,
+  `bed_avg` varchar(7) DEFAULT NULL,
+  `day_totl` varchar(8) DEFAULT NULL,
+  `occup` varchar(6) DEFAULT NULL,
+  `admits` varchar(6) DEFAULT NULL,
+  `dischs` varchar(6) DEFAULT NULL,
+  `day_mcar` varchar(8) DEFAULT NULL,
+  `day_mcal` varchar(8) DEFAULT NULL,
+  `day_self` varchar(8) DEFAULT NULL,
+  `day_oth` varchar(7) DEFAULT NULL,
+  `day_sn` varchar(6) DEFAULT NULL,
+  `day_ic` varchar(6) DEFAULT NULL,
+  `day_md` varchar(6) DEFAULT NULL,
+  `day_dd` varchar(6) DEFAULT NULL,
+  `day_subacu` varchar(10) DEFAULT NULL,
+  `day_subped` varchar(10) DEFAULT NULL,
+  `day_tic` varchar(7) DEFAULT NULL,
+  `day_hospic` varchar(10) DEFAULT NULL,
+  `day_oth_rt` varchar(10) DEFAULT NULL,
+  `gr_rt_totl` varchar(10) DEFAULT NULL,
+  `gr_an_totl` varchar(10) DEFAULT NULL,
+  `dfr_totl` varchar(8) DEFAULT NULL,
+  `oth_op_rev` varchar(10) DEFAULT NULL,
+  `tot_hc_rev` varchar(10) DEFAULT NULL,
+  `tot_hc_exp` varchar(10) DEFAULT NULL,
+  `net_frm_hc` varchar(10) DEFAULT NULL,
+  `nonhc_net` varchar(9) DEFAULT NULL,
+  `inc_tax` varchar(7) DEFAULT NULL,
+  `ext_item` varchar(8) DEFAULT NULL,
+  `net_income` varchar(10) DEFAULT NULL,
+  `gr_rt_mcar` varchar(10) DEFAULT NULL,
+  `gr_rt_mcal` varchar(10) DEFAULT NULL,
+  `gr_rt_self` varchar(10) DEFAULT NULL,
+  `gr_rt_oth` varchar(9) DEFAULT NULL,
+  `gr_sn` varchar(8) DEFAULT NULL,
+  `gr_ic` varchar(7) DEFAULT NULL,
+  `gr_md` varchar(7) DEFAULT NULL,
+  `gr_dd` varchar(7) DEFAULT NULL,
+  `gr_subacu` varchar(9) DEFAULT NULL,
+  `gr_subped` varchar(9) DEFAULT NULL,
+  `gr_tic` varchar(6) DEFAULT NULL,
+  `gr_hospic` varchar(9) DEFAULT NULL,
+  `gr_oth_rt` varchar(9) DEFAULT NULL,
+  `gr_an_mcar` varchar(10) DEFAULT NULL,
+  `gr_an_mcal` varchar(10) DEFAULT NULL,
+  `gr_an_self` varchar(10) DEFAULT NULL,
+  `gr_an_oth` varchar(9) DEFAULT NULL,
+  `gr_psupply` varchar(10) DEFAULT NULL,
+  `gr_spsurf` varchar(9) DEFAULT NULL,
+  `gr_pt` varchar(7) DEFAULT NULL,
+  `gr_rt` varchar(7) DEFAULT NULL,
+  `gr_ot` varchar(7) DEFAULT NULL,
+  `gr_sp` varchar(7) DEFAULT NULL,
+  `gr_pharm` varchar(8) DEFAULT NULL,
+  `gr_lab` varchar(6) DEFAULT NULL,
+  `gr_hmhlth` varchar(9) DEFAULT NULL,
+  `gr_oth_an` varchar(9) DEFAULT NULL,
+  `dfr_charit` varchar(10) DEFAULT NULL,
+  `dfr_admin` varchar(9) DEFAULT NULL,
+  `ca_mcare` varchar(8) DEFAULT NULL,
+  `ca_mcal` varchar(7) DEFAULT NULL,
+  `ca_other` varchar(8) DEFAULT NULL,
+  `dfr_other` varchar(9) DEFAULT NULL,
+  `exp_sal` varchar(7) DEFAULT NULL,
+  `exp_ben` varchar(7) DEFAULT NULL,
+  `exp_other` varchar(9) DEFAULT NULL,
+  `work_comp` varchar(9) DEFAULT NULL,
+  `exp_sn` varchar(7) DEFAULT NULL,
+  `exp_ic` varchar(7) DEFAULT NULL,
+  `exp_md` varchar(7) DEFAULT NULL,
+  `exp_dd` varchar(7) DEFAULT NULL,
+  `exp_subacu` varchar(10) DEFAULT NULL,
+  `exp_subped` varchar(10) DEFAULT NULL,
+  `exp_tic` varchar(7) DEFAULT NULL,
+  `exp_hospic` varchar(10) DEFAULT NULL,
+  `exp_oth_rt` varchar(10) DEFAULT NULL,
+  `exp_psuppl` varchar(10) DEFAULT NULL,
+  `exp_spsurf` varchar(10) DEFAULT NULL,
+  `exp_pt` varchar(7) DEFAULT NULL,
+  `exp_rt` varchar(6) DEFAULT NULL,
+  `exp_ot` varchar(7) DEFAULT NULL,
+  `exp_sp` varchar(6) DEFAULT NULL,
+  `exp_pharm` varchar(9) DEFAULT NULL,
+  `exp_lab` varchar(7) DEFAULT NULL,
+  `exp_hmhlth` varchar(10) DEFAULT NULL,
+  `exp_oth_an` varchar(10) DEFAULT NULL,
+  `exp_pom` varchar(7) DEFAULT NULL,
+  `exp_hkp` varchar(7) DEFAULT NULL,
+  `exp_ll` varchar(6) DEFAULT NULL,
+  `exp_diet` varchar(8) DEFAULT NULL,
+  `exp_ss` varchar(6) DEFAULT NULL,
+  `exp_actv` varchar(8) DEFAULT NULL,
+  `exp_insv` varchar(8) DEFAULT NULL,
+  `exp_admn` varchar(8) DEFAULT NULL,
+  `exp_dprec` varchar(9) DEFAULT NULL,
+  `exp_lease` varchar(9) DEFAULT NULL,
+  `exp_prptax` varchar(10) DEFAULT NULL,
+  `exp_prpins` varchar(10) DEFAULT NULL,
+  `exp_intppe` varchar(10) DEFAULT NULL,
+  `exp_intoth` varchar(10) DEFAULT NULL,
+  `exp_bdebt` varchar(9) DEFAULT NULL,
+  `cur_asst` varchar(8) DEFAULT NULL,
+  `asst_limtd` varchar(10) DEFAULT NULL,
+  `net_ppe` varchar(8) DEFAULT NULL,
+  `const_prog` varchar(10) DEFAULT NULL,
+  `inv_oth` varchar(8) DEFAULT NULL,
+  `intan_asst` varchar(10) DEFAULT NULL,
+  `tot_asst` varchar(8) DEFAULT NULL,
+  `cur_liab` varchar(8) DEFAULT NULL,
+  `def_cred` varchar(8) DEFAULT NULL,
+  `net_ltdebt` varchar(10) DEFAULT NULL,
+  `equity` varchar(8) DEFAULT NULL,
+  `liab_eq` varchar(8) DEFAULT NULL,
+  `rel_rec_cr` varchar(10) DEFAULT NULL,
+  `rel_rec_lt` varchar(10) DEFAULT NULL,
+  `rel_pay_cr` varchar(10) DEFAULT NULL,
+  `rel_pay_lt` varchar(10) DEFAULT NULL,
+  `landimp` varchar(8) DEFAULT NULL,
+  `bldgsimp` varchar(9) DEFAULT NULL,
+  `lease_imp` varchar(9) DEFAULT NULL,
+  `equipment` varchar(9) DEFAULT NULL,
+  `tot_ppe` varchar(8) DEFAULT NULL,
+  `acc_deprec` varchar(10) DEFAULT NULL,
+  `mort_pay` varchar(8) DEFAULT NULL,
+  `cap_lease` varchar(9) DEFAULT NULL,
+  `bond_pay` varchar(8) DEFAULT NULL,
+  `tot_ltdebt` varchar(10) DEFAULT NULL,
+  `cur_mat` varchar(8) DEFAULT NULL,
+  `cur_ratio` varchar(9) DEFAULT NULL,
+  `acid_ratio` varchar(10) DEFAULT NULL,
+  `days_ar` varchar(7) DEFAULT NULL,
+  `ltd_asst` varchar(8) DEFAULT NULL,
+  `debt_cov` varchar(8) DEFAULT NULL,
+  `op_margin` varchar(9) DEFAULT NULL,
+  `net_rtn_eq` varchar(10) DEFAULT NULL,
+  `trnovr_opr` varchar(10) DEFAULT NULL,
+  `asst_equty` varchar(10) DEFAULT NULL,
+  `ppe_bed` varchar(7) DEFAULT NULL,
+  `prdhr_mgt` varchar(9) DEFAULT NULL,
+  `prdhr_gnp` varchar(9) DEFAULT NULL,
+  `prdhr_rn` varchar(8) DEFAULT NULL,
+  `prdhr_lvn` varchar(9) DEFAULT NULL,
+  `prdhr_na` varchar(8) DEFAULT NULL,
+  `prdhr_tsp` varchar(9) DEFAULT NULL,
+  `prdhr_psy` varchar(9) DEFAULT NULL,
+  `prdhr_oth` varchar(9) DEFAULT NULL,
+  `prdhr_an` varchar(8) DEFAULT NULL,
+  `prdhr_pom` varchar(9) DEFAULT NULL,
+  `prdhr_hkp` varchar(9) DEFAULT NULL,
+  `prdhr_ll` varchar(8) DEFAULT NULL,
+  `prdhr_diet` varchar(10) DEFAULT NULL,
+  `prdhr_ss` varchar(8) DEFAULT NULL,
+  `prdhr_actv` varchar(10) DEFAULT NULL,
+  `prdhr_insv` varchar(10) DEFAULT NULL,
+  `prdhr_admn` varchar(10) DEFAULT NULL,
+  `prdhr_totl` varchar(10) DEFAULT NULL,
+  `tmp_hr_gnp` varchar(10) DEFAULT NULL,
+  `tmp_hr_rn` varchar(9) DEFAULT NULL,
+  `tmp_hr_lvn` varchar(10) DEFAULT NULL,
+  `tmp_hr_na` varchar(9) DEFAULT NULL,
+  `tmp_hr_psy` varchar(10) DEFAULT NULL,
+  `tmp_hr_oth` varchar(10) DEFAULT NULL,
+  `tmp_hr_tot` varchar(10) DEFAULT NULL,
+  `sw_mgt` varchar(7) DEFAULT NULL,
+  `sw_gnp` varchar(7) DEFAULT NULL,
+  `sw_rn` varchar(7) DEFAULT NULL,
+  `sw_lvn` varchar(7) DEFAULT NULL,
+  `sw_na` varchar(7) DEFAULT NULL,
+  `sw_tsp` varchar(7) DEFAULT NULL,
+  `sw_psy` varchar(7) DEFAULT NULL,
+  `sw_oth` varchar(7) DEFAULT NULL,
+  `sw_anc` varchar(7) DEFAULT NULL,
+  `sw_pom` varchar(7) DEFAULT NULL,
+  `sw_hkp` varchar(7) DEFAULT NULL,
+  `sw_ll` varchar(6) DEFAULT NULL,
+  `sw_diet` varchar(8) DEFAULT NULL,
+  `sw_ss` varchar(6) DEFAULT NULL,
+  `sw_actv` varchar(8) DEFAULT NULL,
+  `sw_insv` varchar(8) DEFAULT NULL,
+  `sw_admn` varchar(8) DEFAULT NULL,
+  `sw_totl` varchar(8) DEFAULT NULL,
+  `tmp_pd_gnp` varchar(10) DEFAULT NULL,
+  `tmp_pd_rn` varchar(9) DEFAULT NULL,
+  `tmp_pd_lvn` varchar(10) DEFAULT NULL,
+  `tmp_pd_na` varchar(9) DEFAULT NULL,
+  `tmp_pd_psy` varchar(10) DEFAULT NULL,
+  `tmp_pd_oth` varchar(10) DEFAULT NULL,
+  `tmp_pd_tot` varchar(10) DEFAULT NULL,
+  `emp_avg` varchar(7) DEFAULT NULL,
+  `emp_trnovr` varchar(10) DEFAULT NULL,
+  `emp_cont` varchar(8) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -303,6 +1534,459 @@ CREATE TABLE `1997_quarter_4_sum_of_four_quarters` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `1998_cy_hospital_annual_selected_file`
+--
+
+DROP TABLE IF EXISTS `1998_cy_hospital_annual_selected_file`;
+CREATE TABLE `1998_cy_hospital_annual_selected_file` (
+  `fac_no` varchar(9) DEFAULT NULL,
+  `fac_name` varchar(44) DEFAULT NULL,
+  `beg_date` varchar(8) DEFAULT NULL,
+  `end_date` varchar(8) DEFAULT NULL,
+  `day_per` varchar(3) DEFAULT NULL,
+  `data_ind` varchar(7) DEFAULT NULL,
+  `audit_ind` varchar(16) DEFAULT NULL,
+  `county` varchar(2) DEFAULT NULL,
+  `hsa` varchar(2) DEFAULT NULL,
+  `hfpa` varchar(4) DEFAULT NULL,
+  `type_cntrl` varchar(11) DEFAULT NULL,
+  `type_care` varchar(11) DEFAULT NULL,
+  `type_hosp` varchar(20) DEFAULT NULL,
+  `teach_rurl` varchar(11) DEFAULT NULL,
+  `phone` varchar(13) DEFAULT NULL,
+  `address` varchar(30) DEFAULT NULL,
+  `city` varchar(19) DEFAULT NULL,
+  `zip_code` varchar(10) DEFAULT NULL,
+  `ceo` varchar(29) DEFAULT NULL,
+  `ceo_title` varchar(25) DEFAULT NULL,
+  `rpt_prep` varchar(28) DEFAULT NULL,
+  `owner` varchar(60) DEFAULT NULL,
+  `er_desig` varchar(1) DEFAULT NULL,
+  `mcar_pronum` varchar(7) DEFAULT NULL,
+  `mcal_pronum` varchar(9) DEFAULT NULL,
+  `reg_mcalnum` varchar(9) DEFAULT NULL,
+  `bed_lic` varchar(4) DEFAULT NULL,
+  `bed_avl` varchar(4) DEFAULT NULL,
+  `bed_stf` varchar(4) DEFAULT NULL,
+  `day_mcar` varchar(6) DEFAULT NULL,
+  `day_mcal` varchar(6) DEFAULT NULL,
+  `day_cnty` varchar(6) DEFAULT NULL,
+  `day_thrd` varchar(6) DEFAULT NULL,
+  `day_oth` varchar(6) DEFAULT NULL,
+  `day_tot` varchar(6) DEFAULT NULL,
+  `dis_mcar` varchar(5) DEFAULT NULL,
+  `dis_mcal` varchar(5) DEFAULT NULL,
+  `dis_cnty` varchar(5) DEFAULT NULL,
+  `dis_thrd` varchar(5) DEFAULT NULL,
+  `dis_oth` varchar(4) DEFAULT NULL,
+  `dis_tot` varchar(5) DEFAULT NULL,
+  `bed_acute` varchar(4) DEFAULT NULL,
+  `bed_psych` varchar(3) DEFAULT NULL,
+  `bed_chem` varchar(3) DEFAULT NULL,
+  `bed_rehab` varchar(2) DEFAULT NULL,
+  `bed_ltc` varchar(4) DEFAULT NULL,
+  `bed_resdnt` varchar(2) DEFAULT NULL,
+  `day_acute` varchar(6) DEFAULT NULL,
+  `day_psych` varchar(6) DEFAULT NULL,
+  `day_chem` varchar(5) DEFAULT NULL,
+  `day_rehab` varchar(5) DEFAULT NULL,
+  `day_ltc` varchar(6) DEFAULT NULL,
+  `day_resdnt` varchar(5) DEFAULT NULL,
+  `dis_acute` varchar(5) DEFAULT NULL,
+  `dis_psych` varchar(4) DEFAULT NULL,
+  `dis_chem` varchar(4) DEFAULT NULL,
+  `dis_rehab` varchar(3) DEFAULT NULL,
+  `dis_ltc` varchar(4) DEFAULT NULL,
+  `dis_resdnt` varchar(3) DEFAULT NULL,
+  `occ_lic` varchar(4) DEFAULT NULL,
+  `occ_avl` varchar(4) DEFAULT NULL,
+  `alos_all` varchar(6) DEFAULT NULL,
+  `alos_exltc` varchar(6) DEFAULT NULL,
+  `bas_nursry` varchar(2) DEFAULT NULL,
+  `day_nursry` varchar(5) DEFAULT NULL,
+  `dis_nursry` varchar(4) DEFAULT NULL,
+  `vis_mcar` varchar(6) DEFAULT NULL,
+  `vis_mcal` varchar(6) DEFAULT NULL,
+  `vis_cnty` varchar(6) DEFAULT NULL,
+  `vis_thrd` varchar(6) DEFAULT NULL,
+  `vis_oth` varchar(5) DEFAULT NULL,
+  `vis_tot` varchar(7) DEFAULT NULL,
+  `vis_er` varchar(6) DEFAULT NULL,
+  `vis_clin` varchar(6) DEFAULT NULL,
+  `vis_home` varchar(6) DEFAULT NULL,
+  `vis_ref_op` varchar(6) DEFAULT NULL,
+  `day_hmo` varchar(5) DEFAULT NULL,
+  `day_man_cr` varchar(5) DEFAULT NULL,
+  `vis_hmo` varchar(6) DEFAULT NULL,
+  `vis_man_cr` varchar(6) DEFAULT NULL,
+  `days_pips` varchar(5) DEFAULT NULL,
+  `op_room` varchar(2) DEFAULT NULL,
+  `op_min_ip` varchar(7) DEFAULT NULL,
+  `op_min_op` varchar(7) DEFAULT NULL,
+  `surg_ip` varchar(5) DEFAULT NULL,
+  `surg_op` varchar(5) DEFAULT NULL,
+  `card_cath` varchar(6) DEFAULT NULL,
+  `ct_scans` varchar(5) DEFAULT NULL,
+  `gr_pt_rev` varchar(10) DEFAULT NULL,
+  `ded_fr_rev` varchar(10) DEFAULT NULL,
+  `net_pt_rev` varchar(10) DEFAULT NULL,
+  `oth_op_rev` varchar(8) DEFAULT NULL,
+  `tot_op_exp` varchar(10) DEFAULT NULL,
+  `net_frm_op` varchar(10) DEFAULT NULL,
+  `nonop_rev` varchar(9) DEFAULT NULL,
+  `nonop_exp` varchar(8) DEFAULT NULL,
+  `inc_tax` varchar(8) DEFAULT NULL,
+  `ext_item` varchar(9) DEFAULT NULL,
+  `net_income` varchar(10) DEFAULT NULL,
+  `gr_rev_dly` varchar(10) DEFAULT NULL,
+  `gr_rev_amb` varchar(9) DEFAULT NULL,
+  `gr_rev_anc` varchar(10) DEFAULT NULL,
+  `gr_rev_pip` varchar(8) DEFAULT NULL,
+  `gr_ip_mcar` varchar(9) DEFAULT NULL,
+  `gr_ip_mcal` varchar(9) DEFAULT NULL,
+  `gr_ip_cnty` varchar(9) DEFAULT NULL,
+  `gr_ip_thrd` varchar(9) DEFAULT NULL,
+  `gr_ip_oth` varchar(8) DEFAULT NULL,
+  `gr_ip_tot` varchar(10) DEFAULT NULL,
+  `gr_op_mcar` varchar(9) DEFAULT NULL,
+  `gr_op_mcal` varchar(8) DEFAULT NULL,
+  `gr_op_cnty` varchar(9) DEFAULT NULL,
+  `gr_op_thrd` varchar(9) DEFAULT NULL,
+  `gr_op_oth` varchar(8) DEFAULT NULL,
+  `gr_op_tot` varchar(9) DEFAULT NULL,
+  `c_adj_mcar` varchar(9) DEFAULT NULL,
+  `c_adj_mcal` varchar(9) DEFAULT NULL,
+  `disp_855` varchar(10) DEFAULT NULL,
+  `c_adj_cnty` varchar(9) DEFAULT NULL,
+  `c_adj_hmo` varchar(9) DEFAULT NULL,
+  `cap_rev` varchar(9) DEFAULT NULL,
+  `c_adj_oth` varchar(9) DEFAULT NULL,
+  `bad_debt` varchar(8) DEFAULT NULL,
+  `char_hb` varchar(7) DEFAULT NULL,
+  `char_oth` varchar(8) DEFAULT NULL,
+  `sub_indgnt` varchar(9) DEFAULT NULL,
+  `ded_oth` varchar(9) DEFAULT NULL,
+  `netrv_mcar` varchar(9) DEFAULT NULL,
+  `netrv_mcal` varchar(9) DEFAULT NULL,
+  `netrv_cnty` varchar(8) DEFAULT NULL,
+  `netrv_thrd` varchar(9) DEFAULT NULL,
+  `netrv_oth` varchar(8) DEFAULT NULL,
+  `disp_trnfr` varchar(9) DEFAULT NULL,
+  `inter_tfr` varchar(9) DEFAULT NULL,
+  `contribtns` varchar(8) DEFAULT NULL,
+  `inc_invest` varchar(8) DEFAULT NULL,
+  `dist_rev` varchar(7) DEFAULT NULL,
+  `cnty_appro` varchar(9) DEFAULT NULL,
+  `exp_dly` varchar(9) DEFAULT NULL,
+  `exp_amb` varchar(9) DEFAULT NULL,
+  `exp_anc` varchar(9) DEFAULT NULL,
+  `exp_pip` varchar(8) DEFAULT NULL,
+  `exp_res` varchar(8) DEFAULT NULL,
+  `exp_ed` varchar(8) DEFAULT NULL,
+  `exp_gen` varchar(9) DEFAULT NULL,
+  `exp_fisc` varchar(8) DEFAULT NULL,
+  `exp_adm` varchar(8) DEFAULT NULL,
+  `exp_unassg` varchar(8) DEFAULT NULL,
+  `exp_sal` varchar(9) DEFAULT NULL,
+  `exp_ben` varchar(9) DEFAULT NULL,
+  `exp_phys` varchar(8) DEFAULT NULL,
+  `exp_othpro` varchar(8) DEFAULT NULL,
+  `exp_supp` varchar(9) DEFAULT NULL,
+  `exp_purch` varchar(9) DEFAULT NULL,
+  `exp_depre` varchar(8) DEFAULT NULL,
+  `exp_leases` varchar(8) DEFAULT NULL,
+  `exp_insur` varchar(8) DEFAULT NULL,
+  `exp_intrst` varchar(8) DEFAULT NULL,
+  `exp_oth` varchar(8) DEFAULT NULL,
+  `cur_asst` varchar(9) DEFAULT NULL,
+  `asst_limtd` varchar(9) DEFAULT NULL,
+  `net_ppe` varchar(10) DEFAULT NULL,
+  `const_prog` varchar(9) DEFAULT NULL,
+  `inv_oth` varchar(9) DEFAULT NULL,
+  `intan_asst` varchar(8) DEFAULT NULL,
+  `tot_asst` varchar(10) DEFAULT NULL,
+  `cur_liab` varchar(9) DEFAULT NULL,
+  `def_cred` varchar(9) DEFAULT NULL,
+  `net_ltdebt` varchar(9) DEFAULT NULL,
+  `equity` varchar(10) DEFAULT NULL,
+  `liab_eq` varchar(10) DEFAULT NULL,
+  `cash` varchar(9) DEFAULT NULL,
+  `bldgs` varchar(10) DEFAULT NULL,
+  `equipment` varchar(9) DEFAULT NULL,
+  `tot_ppe` varchar(10) DEFAULT NULL,
+  `acc_depre` varchar(9) DEFAULT NULL,
+  `mort_pay` varchar(8) DEFAULT NULL,
+  `cap_lease` varchar(8) DEFAULT NULL,
+  `bond_pay` varchar(9) DEFAULT NULL,
+  `tot_ltdebt` varchar(9) DEFAULT NULL,
+  `cur_mat` varchar(7) DEFAULT NULL,
+  `inter_rec` varchar(9) DEFAULT NULL,
+  `inter_pay` varchar(9) DEFAULT NULL,
+  `cur_rat` varchar(6) DEFAULT NULL,
+  `days_ar` varchar(6) DEFAULT NULL,
+  `bd_rate` varchar(5) DEFAULT NULL,
+  `ltd_asst` varchar(6) DEFAULT NULL,
+  `net_rtn_eq` varchar(8) DEFAULT NULL,
+  `op_margin` varchar(8) DEFAULT NULL,
+  `age_plant` varchar(7) DEFAULT NULL,
+  `ppe_bed` varchar(7) DEFAULT NULL,
+  `hosp_emp` varchar(4) DEFAULT NULL,
+  `hosp_fte` varchar(4) DEFAULT NULL,
+  `nurs_emp` varchar(11) DEFAULT NULL,
+  `prod_hrs` varchar(8) DEFAULT NULL,
+  `non_prd_hr` varchar(7) DEFAULT NULL,
+  `paid_hrs` varchar(8) DEFAULT NULL,
+  `med_staff` varchar(4) DEFAULT NULL,
+  `stdnt_fte` varchar(3) DEFAULT NULL,
+  `prd_hr_mgt` varchar(7) DEFAULT NULL,
+  `prd_hr_tch` varchar(7) DEFAULT NULL,
+  `prd_hr_rn` varchar(7) DEFAULT NULL,
+  `prd_hr_lvn` varchar(6) DEFAULT NULL,
+  `prd_hr_aid` varchar(6) DEFAULT NULL,
+  `prd_hr_clr` varchar(7) DEFAULT NULL,
+  `prd_hr_env` varchar(7) DEFAULT NULL,
+  `prd_hr_oth` varchar(7) DEFAULT NULL,
+  `cnt_hr_rn` varchar(6) DEFAULT NULL,
+  `cnt_hr_oth` varchar(6) DEFAULT NULL,
+  `prd_hr_dly` varchar(7) DEFAULT NULL,
+  `prd_hr_amb` varchar(7) DEFAULT NULL,
+  `prd_hr_anc` varchar(7) DEFAULT NULL,
+  `prd_hr_ed` varchar(7) DEFAULT NULL,
+  `prd_hr_gen` varchar(7) DEFAULT NULL,
+  `prd_hr_fis` varchar(6) DEFAULT NULL,
+  `prd_hr_adm` varchar(7) DEFAULT NULL,
+  `prd_hr_non` varchar(6) DEFAULT NULL,
+  `pd_hr_dly` varchar(7) DEFAULT NULL,
+  `pd_hr_amb` varchar(7) DEFAULT NULL,
+  `pd_hr_anc` varchar(7) DEFAULT NULL,
+  `pd_hr_ed` varchar(7) DEFAULT NULL,
+  `pd_hr_gen` varchar(7) DEFAULT NULL,
+  `pd_hr_fis` varchar(7) DEFAULT NULL,
+  `pd_hr_adm` varchar(7) DEFAULT NULL,
+  `pd_hr_non` varchar(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `1998_long_term_care_annual_financial_data`
+--
+
+DROP TABLE IF EXISTS `1998_long_term_care_annual_financial_data`;
+CREATE TABLE `1998_long_term_care_annual_financial_data` (
+  `fac_no` varchar(9) DEFAULT NULL,
+  `fac_name` varchar(40) DEFAULT NULL,
+  `beg_date` varchar(8) DEFAULT NULL,
+  `end_date` varchar(8) DEFAULT NULL,
+  `day_per` varchar(7) DEFAULT NULL,
+  `data_ind` varchar(10) DEFAULT NULL,
+  `comparable` varchar(10) DEFAULT NULL,
+  `county` varchar(6) DEFAULT NULL,
+  `hsa` varchar(3) DEFAULT NULL,
+  `hfpa` varchar(4) DEFAULT NULL,
+  `lic_cat` varchar(7) DEFAULT NULL,
+  `type_cntrl` varchar(14) DEFAULT NULL,
+  `legal_org` varchar(14) DEFAULT NULL,
+  `phone` varchar(13) DEFAULT NULL,
+  `address` varchar(30) DEFAULT NULL,
+  `city` varchar(19) DEFAULT NULL,
+  `zip_code` varchar(10) DEFAULT NULL,
+  `mcal_pronum` varchar(10) DEFAULT NULL,
+  `adminis` varchar(29) DEFAULT NULL,
+  `related` varchar(7) DEFAULT NULL,
+  `parent` varchar(40) DEFAULT NULL,
+  `bed_end` varchar(7) DEFAULT NULL,
+  `bed_avg` varchar(7) DEFAULT NULL,
+  `day_totl` varchar(8) DEFAULT NULL,
+  `occup` varchar(6) DEFAULT NULL,
+  `admits` varchar(6) DEFAULT NULL,
+  `dischs` varchar(6) DEFAULT NULL,
+  `day_mcar` varchar(8) DEFAULT NULL,
+  `day_mcal` varchar(8) DEFAULT NULL,
+  `day_self` varchar(8) DEFAULT NULL,
+  `day_oth` varchar(7) DEFAULT NULL,
+  `day_sn` varchar(6) DEFAULT NULL,
+  `day_ic` varchar(6) DEFAULT NULL,
+  `day_md` varchar(6) DEFAULT NULL,
+  `day_dd` varchar(6) DEFAULT NULL,
+  `day_subacu` varchar(10) DEFAULT NULL,
+  `day_subped` varchar(10) DEFAULT NULL,
+  `day_tic` varchar(7) DEFAULT NULL,
+  `day_hospic` varchar(10) DEFAULT NULL,
+  `day_oth_rt` varchar(10) DEFAULT NULL,
+  `gr_rt_totl` varchar(10) DEFAULT NULL,
+  `gr_an_totl` varchar(10) DEFAULT NULL,
+  `dfr_totl` varchar(8) DEFAULT NULL,
+  `oth_op_rev` varchar(10) DEFAULT NULL,
+  `tot_hc_rev` varchar(10) DEFAULT NULL,
+  `tot_hc_exp` varchar(10) DEFAULT NULL,
+  `net_frm_hc` varchar(10) DEFAULT NULL,
+  `nonhc_net` varchar(9) DEFAULT NULL,
+  `inc_tax` varchar(7) DEFAULT NULL,
+  `ext_item` varchar(8) DEFAULT NULL,
+  `net_income` varchar(10) DEFAULT NULL,
+  `gr_rt_mcar` varchar(10) DEFAULT NULL,
+  `gr_rt_mcal` varchar(10) DEFAULT NULL,
+  `gr_rt_self` varchar(10) DEFAULT NULL,
+  `gr_rt_oth` varchar(9) DEFAULT NULL,
+  `gr_sn` varchar(8) DEFAULT NULL,
+  `gr_ic` varchar(7) DEFAULT NULL,
+  `gr_md` varchar(7) DEFAULT NULL,
+  `gr_dd` varchar(7) DEFAULT NULL,
+  `gr_subacu` varchar(9) DEFAULT NULL,
+  `gr_subped` varchar(9) DEFAULT NULL,
+  `gr_tic` varchar(7) DEFAULT NULL,
+  `gr_hospic` varchar(9) DEFAULT NULL,
+  `gr_oth_rt` varchar(9) DEFAULT NULL,
+  `gr_an_mcar` varchar(10) DEFAULT NULL,
+  `gr_an_mcal` varchar(10) DEFAULT NULL,
+  `gr_an_self` varchar(10) DEFAULT NULL,
+  `gr_an_oth` varchar(9) DEFAULT NULL,
+  `gr_psupply` varchar(10) DEFAULT NULL,
+  `gr_spsurf` varchar(9) DEFAULT NULL,
+  `gr_pt` varchar(7) DEFAULT NULL,
+  `gr_rt` varchar(7) DEFAULT NULL,
+  `gr_ot` varchar(7) DEFAULT NULL,
+  `gr_sp` varchar(7) DEFAULT NULL,
+  `gr_pharm` varchar(8) DEFAULT NULL,
+  `gr_lab` varchar(6) DEFAULT NULL,
+  `gr_hmhlth` varchar(9) DEFAULT NULL,
+  `gr_oth_an` varchar(9) DEFAULT NULL,
+  `dfr_charit` varchar(10) DEFAULT NULL,
+  `dfr_admin` varchar(9) DEFAULT NULL,
+  `ca_mcare` varchar(8) DEFAULT NULL,
+  `ca_mcal` varchar(8) DEFAULT NULL,
+  `ca_other` varchar(8) DEFAULT NULL,
+  `dfr_other` varchar(9) DEFAULT NULL,
+  `exp_sal` varchar(7) DEFAULT NULL,
+  `exp_ben` varchar(7) DEFAULT NULL,
+  `exp_other` varchar(9) DEFAULT NULL,
+  `work_comp` varchar(9) DEFAULT NULL,
+  `exp_sn` varchar(7) DEFAULT NULL,
+  `exp_ic` varchar(7) DEFAULT NULL,
+  `exp_md` varchar(7) DEFAULT NULL,
+  `exp_dd` varchar(7) DEFAULT NULL,
+  `exp_subacu` varchar(10) DEFAULT NULL,
+  `exp_subped` varchar(10) DEFAULT NULL,
+  `exp_tic` varchar(7) DEFAULT NULL,
+  `exp_hospic` varchar(10) DEFAULT NULL,
+  `exp_oth_rt` varchar(10) DEFAULT NULL,
+  `exp_psuppl` varchar(10) DEFAULT NULL,
+  `exp_spsurf` varchar(10) DEFAULT NULL,
+  `exp_pt` varchar(7) DEFAULT NULL,
+  `exp_rt` varchar(6) DEFAULT NULL,
+  `exp_ot` varchar(7) DEFAULT NULL,
+  `exp_sp` varchar(6) DEFAULT NULL,
+  `exp_pharm` varchar(9) DEFAULT NULL,
+  `exp_lab` varchar(7) DEFAULT NULL,
+  `exp_hmhlth` varchar(10) DEFAULT NULL,
+  `exp_oth_an` varchar(10) DEFAULT NULL,
+  `exp_pom` varchar(7) DEFAULT NULL,
+  `exp_hkp` varchar(7) DEFAULT NULL,
+  `exp_ll` varchar(6) DEFAULT NULL,
+  `exp_diet` varchar(8) DEFAULT NULL,
+  `exp_ss` varchar(6) DEFAULT NULL,
+  `exp_actv` varchar(8) DEFAULT NULL,
+  `exp_insv` varchar(8) DEFAULT NULL,
+  `exp_admn` varchar(8) DEFAULT NULL,
+  `exp_dprec` varchar(9) DEFAULT NULL,
+  `exp_lease` varchar(9) DEFAULT NULL,
+  `exp_prptax` varchar(10) DEFAULT NULL,
+  `exp_prpins` varchar(10) DEFAULT NULL,
+  `exp_intppe` varchar(10) DEFAULT NULL,
+  `exp_intoth` varchar(10) DEFAULT NULL,
+  `exp_bdebt` varchar(9) DEFAULT NULL,
+  `cur_asst` varchar(8) DEFAULT NULL,
+  `asst_limtd` varchar(10) DEFAULT NULL,
+  `net_ppe` varchar(9) DEFAULT NULL,
+  `const_prog` varchar(10) DEFAULT NULL,
+  `inv_oth` varchar(8) DEFAULT NULL,
+  `intan_asst` varchar(10) DEFAULT NULL,
+  `tot_asst` varchar(9) DEFAULT NULL,
+  `cur_liab` varchar(8) DEFAULT NULL,
+  `def_cred` varchar(8) DEFAULT NULL,
+  `net_ltdebt` varchar(10) DEFAULT NULL,
+  `equity` varchar(9) DEFAULT NULL,
+  `liab_eq` varchar(9) DEFAULT NULL,
+  `rel_rec_cr` varchar(10) DEFAULT NULL,
+  `rel_rec_lt` varchar(10) DEFAULT NULL,
+  `rel_pay_cr` varchar(10) DEFAULT NULL,
+  `rel_pay_lt` varchar(10) DEFAULT NULL,
+  `landimp` varchar(8) DEFAULT NULL,
+  `bldgsimp` varchar(9) DEFAULT NULL,
+  `lease_imp` varchar(9) DEFAULT NULL,
+  `equipment` varchar(9) DEFAULT NULL,
+  `tot_ppe` varchar(9) DEFAULT NULL,
+  `acc_deprec` varchar(10) DEFAULT NULL,
+  `mort_pay` varchar(8) DEFAULT NULL,
+  `cap_lease` varchar(9) DEFAULT NULL,
+  `bond_pay` varchar(8) DEFAULT NULL,
+  `tot_ltdebt` varchar(10) DEFAULT NULL,
+  `cur_mat` varchar(8) DEFAULT NULL,
+  `cur_ratio` varchar(9) DEFAULT NULL,
+  `acid_ratio` varchar(10) DEFAULT NULL,
+  `days_ar` varchar(7) DEFAULT NULL,
+  `ltd_asst` varchar(8) DEFAULT NULL,
+  `debt_cov` varchar(9) DEFAULT NULL,
+  `op_margin` varchar(9) DEFAULT NULL,
+  `net_rtn_eq` varchar(10) DEFAULT NULL,
+  `trnovr_opr` varchar(10) DEFAULT NULL,
+  `asst_equty` varchar(10) DEFAULT NULL,
+  `ppe_bed` varchar(7) DEFAULT NULL,
+  `prdhr_mgt` varchar(9) DEFAULT NULL,
+  `prdhr_gnp` varchar(9) DEFAULT NULL,
+  `prdhr_rn` varchar(8) DEFAULT NULL,
+  `prdhr_lvn` varchar(9) DEFAULT NULL,
+  `prdhr_na` varchar(8) DEFAULT NULL,
+  `prdhr_tsp` varchar(9) DEFAULT NULL,
+  `prdhr_psy` varchar(9) DEFAULT NULL,
+  `prdhr_oth` varchar(9) DEFAULT NULL,
+  `prdhr_an` varchar(8) DEFAULT NULL,
+  `prdhr_pom` varchar(9) DEFAULT NULL,
+  `prdhr_hkp` varchar(9) DEFAULT NULL,
+  `prdhr_ll` varchar(8) DEFAULT NULL,
+  `prdhr_diet` varchar(10) DEFAULT NULL,
+  `prdhr_ss` varchar(8) DEFAULT NULL,
+  `prdhr_actv` varchar(10) DEFAULT NULL,
+  `prdhr_insv` varchar(10) DEFAULT NULL,
+  `prdhr_admn` varchar(10) DEFAULT NULL,
+  `prdhr_totl` varchar(10) DEFAULT NULL,
+  `tmp_hr_gnp` varchar(10) DEFAULT NULL,
+  `tmp_hr_rn` varchar(9) DEFAULT NULL,
+  `tmp_hr_lvn` varchar(10) DEFAULT NULL,
+  `tmp_hr_na` varchar(9) DEFAULT NULL,
+  `tmp_hr_psy` varchar(10) DEFAULT NULL,
+  `tmp_hr_oth` varchar(10) DEFAULT NULL,
+  `tmp_hr_tot` varchar(10) DEFAULT NULL,
+  `sw_mgt` varchar(7) DEFAULT NULL,
+  `sw_gnp` varchar(7) DEFAULT NULL,
+  `sw_rn` varchar(7) DEFAULT NULL,
+  `sw_lvn` varchar(7) DEFAULT NULL,
+  `sw_na` varchar(7) DEFAULT NULL,
+  `sw_tsp` varchar(7) DEFAULT NULL,
+  `sw_psy` varchar(7) DEFAULT NULL,
+  `sw_oth` varchar(7) DEFAULT NULL,
+  `sw_anc` varchar(7) DEFAULT NULL,
+  `sw_pom` varchar(7) DEFAULT NULL,
+  `sw_hkp` varchar(7) DEFAULT NULL,
+  `sw_ll` varchar(6) DEFAULT NULL,
+  `sw_diet` varchar(8) DEFAULT NULL,
+  `sw_ss` varchar(6) DEFAULT NULL,
+  `sw_actv` varchar(8) DEFAULT NULL,
+  `sw_insv` varchar(8) DEFAULT NULL,
+  `sw_admn` varchar(8) DEFAULT NULL,
+  `sw_totl` varchar(8) DEFAULT NULL,
+  `tmp_pd_gnp` varchar(10) DEFAULT NULL,
+  `tmp_pd_rn` varchar(9) DEFAULT NULL,
+  `tmp_pd_lvn` varchar(10) DEFAULT NULL,
+  `tmp_pd_na` varchar(9) DEFAULT NULL,
+  `tmp_pd_psy` varchar(10) DEFAULT NULL,
+  `tmp_pd_oth` varchar(10) DEFAULT NULL,
+  `tmp_pd_tot` varchar(10) DEFAULT NULL,
+  `emp_avg` varchar(7) DEFAULT NULL,
+  `emp_trnovr` varchar(10) DEFAULT NULL,
+  `emp_cont` varchar(8) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `1998_quarter_4_sum_of_four_quarters`
 --
 
@@ -386,6 +2070,282 @@ CREATE TABLE `1998_quarter_4_sum_of_four_quarters` (
   `puripday` varchar(11) DEFAULT NULL,
   `puripexp` varchar(11) DEFAULT NULL,
   `puriprev` varchar(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `1999_2003_final_deaths_by_month_by_occurrence_county`
+--
+
+DROP TABLE IF EXISTS `1999_2003_final_deaths_by_month_by_occurrence_county`;
+CREATE TABLE `1999_2003_final_deaths_by_month_by_occurrence_county` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `month` varchar(5) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
+  `strata` varchar(16) DEFAULT NULL,
+  `strata_name` varchar(30) DEFAULT NULL,
+  `cause` varchar(5) DEFAULT NULL,
+  `cause_desc` varchar(53) DEFAULT NULL,
+  `count` varchar(5) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
+  `annotation_desc` varchar(38) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `1999_2003_final_deaths_by_month_by_residence_county`
+--
+
+DROP TABLE IF EXISTS `1999_2003_final_deaths_by_month_by_residence_county`;
+CREATE TABLE `1999_2003_final_deaths_by_month_by_residence_county` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `month` varchar(5) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
+  `strata` varchar(16) DEFAULT NULL,
+  `strata_name` varchar(30) DEFAULT NULL,
+  `cause` varchar(5) DEFAULT NULL,
+  `cause_desc` varchar(53) DEFAULT NULL,
+  `count` varchar(5) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
+  `annotation_desc` varchar(38) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `1999_2013_final_deaths_by_year_by_county`
+--
+
+DROP TABLE IF EXISTS `1999_2013_final_deaths_by_year_by_county`;
+CREATE TABLE `1999_2013_final_deaths_by_year_by_county` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
+  `strata` varchar(16) DEFAULT NULL,
+  `strata_name` varchar(30) DEFAULT NULL,
+  `cause` varchar(5) DEFAULT NULL,
+  `cause_desc` varchar(53) DEFAULT NULL,
+  `count` varchar(5) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
+  `annotation_desc` varchar(38) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `1999_long_term_care_annual_financial_data`
+--
+
+DROP TABLE IF EXISTS `1999_long_term_care_annual_financial_data`;
+CREATE TABLE `1999_long_term_care_annual_financial_data` (
+  `fac_no` varchar(9) DEFAULT NULL,
+  `fac_name` varchar(40) DEFAULT NULL,
+  `beg_date` varchar(8) DEFAULT NULL,
+  `end_date` varchar(8) DEFAULT NULL,
+  `day_per` varchar(7) DEFAULT NULL,
+  `data_ind` varchar(10) DEFAULT NULL,
+  `comparable` varchar(10) DEFAULT NULL,
+  `county` varchar(6) DEFAULT NULL,
+  `hsa` varchar(3) DEFAULT NULL,
+  `hfpa` varchar(4) DEFAULT NULL,
+  `lic_cat` varchar(7) DEFAULT NULL,
+  `type_cntrl` varchar(14) DEFAULT NULL,
+  `legal_org` varchar(14) DEFAULT NULL,
+  `phone` varchar(13) DEFAULT NULL,
+  `address` varchar(30) DEFAULT NULL,
+  `city` varchar(19) DEFAULT NULL,
+  `zip_code` varchar(10) DEFAULT NULL,
+  `mcal_pronum` varchar(9) DEFAULT NULL,
+  `adminis` varchar(30) DEFAULT NULL,
+  `related` varchar(7) DEFAULT NULL,
+  `parent` varchar(40) DEFAULT NULL,
+  `bed_end` varchar(7) DEFAULT NULL,
+  `bed_avg` varchar(7) DEFAULT NULL,
+  `day_totl` varchar(8) DEFAULT NULL,
+  `occup` varchar(8) DEFAULT NULL,
+  `admits` varchar(6) DEFAULT NULL,
+  `dischs` varchar(6) DEFAULT NULL,
+  `day_mcar` varchar(8) DEFAULT NULL,
+  `day_mcal` varchar(8) DEFAULT NULL,
+  `day_self` varchar(8) DEFAULT NULL,
+  `day_oth` varchar(7) DEFAULT NULL,
+  `day_sn` varchar(6) DEFAULT NULL,
+  `day_ic` varchar(6) DEFAULT NULL,
+  `day_md` varchar(6) DEFAULT NULL,
+  `day_dd` varchar(6) DEFAULT NULL,
+  `day_subacu` varchar(10) DEFAULT NULL,
+  `day_subped` varchar(10) DEFAULT NULL,
+  `day_tic` varchar(7) DEFAULT NULL,
+  `day_hospic` varchar(10) DEFAULT NULL,
+  `day_oth_rt` varchar(10) DEFAULT NULL,
+  `gr_rt_totl` varchar(10) DEFAULT NULL,
+  `gr_an_totl` varchar(10) DEFAULT NULL,
+  `dfr_totl` varchar(8) DEFAULT NULL,
+  `oth_op_rev` varchar(10) DEFAULT NULL,
+  `tot_hc_rev` varchar(10) DEFAULT NULL,
+  `tot_hc_exp` varchar(10) DEFAULT NULL,
+  `net_frm_hc` varchar(10) DEFAULT NULL,
+  `nonhc_net` varchar(9) DEFAULT NULL,
+  `inc_tax` varchar(7) DEFAULT NULL,
+  `ext_item` varchar(8) DEFAULT NULL,
+  `net_income` varchar(10) DEFAULT NULL,
+  `gr_rt_mcar` varchar(10) DEFAULT NULL,
+  `gr_rt_mcal` varchar(10) DEFAULT NULL,
+  `gr_rt_self` varchar(10) DEFAULT NULL,
+  `gr_rt_oth` varchar(9) DEFAULT NULL,
+  `gr_sn` varchar(8) DEFAULT NULL,
+  `gr_ic` varchar(7) DEFAULT NULL,
+  `gr_md` varchar(8) DEFAULT NULL,
+  `gr_dd` varchar(7) DEFAULT NULL,
+  `gr_subacu` varchar(9) DEFAULT NULL,
+  `gr_subped` varchar(9) DEFAULT NULL,
+  `gr_tic` varchar(6) DEFAULT NULL,
+  `gr_hospic` varchar(9) DEFAULT NULL,
+  `gr_oth_rt` varchar(9) DEFAULT NULL,
+  `gr_an_mcar` varchar(10) DEFAULT NULL,
+  `gr_an_mcal` varchar(10) DEFAULT NULL,
+  `gr_an_self` varchar(10) DEFAULT NULL,
+  `gr_an_oth` varchar(9) DEFAULT NULL,
+  `gr_psupply` varchar(10) DEFAULT NULL,
+  `gr_spsurf` varchar(9) DEFAULT NULL,
+  `gr_pt` varchar(7) DEFAULT NULL,
+  `gr_rt` varchar(7) DEFAULT NULL,
+  `gr_ot` varchar(7) DEFAULT NULL,
+  `gr_sp` varchar(7) DEFAULT NULL,
+  `gr_pharm` varchar(8) DEFAULT NULL,
+  `gr_lab` varchar(6) DEFAULT NULL,
+  `gr_hmhlth` varchar(9) DEFAULT NULL,
+  `gr_oth_an` varchar(9) DEFAULT NULL,
+  `dfr_charit` varchar(10) DEFAULT NULL,
+  `dfr_admin` varchar(9) DEFAULT NULL,
+  `ca_mcare` varchar(8) DEFAULT NULL,
+  `ca_mcal` varchar(7) DEFAULT NULL,
+  `ca_other` varchar(8) DEFAULT NULL,
+  `dfr_other` varchar(9) DEFAULT NULL,
+  `exp_sal` varchar(7) DEFAULT NULL,
+  `exp_ben` varchar(7) DEFAULT NULL,
+  `exp_other` varchar(9) DEFAULT NULL,
+  `work_comp` varchar(9) DEFAULT NULL,
+  `exp_sn` varchar(7) DEFAULT NULL,
+  `exp_ic` varchar(6) DEFAULT NULL,
+  `exp_md` varchar(7) DEFAULT NULL,
+  `exp_dd` varchar(7) DEFAULT NULL,
+  `exp_subacu` varchar(10) DEFAULT NULL,
+  `exp_subped` varchar(10) DEFAULT NULL,
+  `exp_tic` varchar(7) DEFAULT NULL,
+  `exp_hospic` varchar(10) DEFAULT NULL,
+  `exp_oth_rt` varchar(10) DEFAULT NULL,
+  `exp_psuppl` varchar(10) DEFAULT NULL,
+  `exp_spsurf` varchar(10) DEFAULT NULL,
+  `exp_pt` varchar(6) DEFAULT NULL,
+  `exp_rt` varchar(6) DEFAULT NULL,
+  `exp_ot` varchar(6) DEFAULT NULL,
+  `exp_sp` varchar(6) DEFAULT NULL,
+  `exp_pharm` varchar(9) DEFAULT NULL,
+  `exp_lab` varchar(7) DEFAULT NULL,
+  `exp_hmhlth` varchar(10) DEFAULT NULL,
+  `exp_oth_an` varchar(10) DEFAULT NULL,
+  `exp_pom` varchar(7) DEFAULT NULL,
+  `exp_hkp` varchar(7) DEFAULT NULL,
+  `exp_ll` varchar(6) DEFAULT NULL,
+  `exp_diet` varchar(8) DEFAULT NULL,
+  `exp_ss` varchar(6) DEFAULT NULL,
+  `exp_actv` varchar(8) DEFAULT NULL,
+  `exp_insv` varchar(8) DEFAULT NULL,
+  `exp_admn` varchar(8) DEFAULT NULL,
+  `exp_dprec` varchar(9) DEFAULT NULL,
+  `exp_lease` varchar(9) DEFAULT NULL,
+  `exp_prptax` varchar(10) DEFAULT NULL,
+  `exp_prpins` varchar(10) DEFAULT NULL,
+  `exp_intppe` varchar(10) DEFAULT NULL,
+  `exp_intoth` varchar(10) DEFAULT NULL,
+  `exp_bdebt` varchar(9) DEFAULT NULL,
+  `cur_asst` varchar(8) DEFAULT NULL,
+  `asst_limtd` varchar(10) DEFAULT NULL,
+  `net_ppe` varchar(9) DEFAULT NULL,
+  `const_prog` varchar(10) DEFAULT NULL,
+  `inv_oth` varchar(8) DEFAULT NULL,
+  `intan_asst` varchar(10) DEFAULT NULL,
+  `tot_asst` varchar(9) DEFAULT NULL,
+  `cur_liab` varchar(8) DEFAULT NULL,
+  `def_cred` varchar(8) DEFAULT NULL,
+  `net_ltdebt` varchar(10) DEFAULT NULL,
+  `equity` varchar(9) DEFAULT NULL,
+  `liab_eq` varchar(9) DEFAULT NULL,
+  `rel_rec_cr` varchar(10) DEFAULT NULL,
+  `rel_rec_lt` varchar(10) DEFAULT NULL,
+  `rel_pay_cr` varchar(10) DEFAULT NULL,
+  `rel_pay_lt` varchar(10) DEFAULT NULL,
+  `landimp` varchar(8) DEFAULT NULL,
+  `bldgsimp` varchar(9) DEFAULT NULL,
+  `lease_imp` varchar(9) DEFAULT NULL,
+  `equipment` varchar(9) DEFAULT NULL,
+  `tot_ppe` varchar(9) DEFAULT NULL,
+  `acc_deprec` varchar(10) DEFAULT NULL,
+  `mort_pay` varchar(8) DEFAULT NULL,
+  `cap_lease` varchar(9) DEFAULT NULL,
+  `bond_pay` varchar(8) DEFAULT NULL,
+  `tot_ltdebt` varchar(10) DEFAULT NULL,
+  `cur_mat` varchar(8) DEFAULT NULL,
+  `cur_ratio` varchar(9) DEFAULT NULL,
+  `acid_ratio` varchar(10) DEFAULT NULL,
+  `days_ar` varchar(7) DEFAULT NULL,
+  `ltd_asst` varchar(8) DEFAULT NULL,
+  `debt_cov` varchar(9) DEFAULT NULL,
+  `op_margin` varchar(9) DEFAULT NULL,
+  `net_rtn_eq` varchar(10) DEFAULT NULL,
+  `trnovr_opr` varchar(10) DEFAULT NULL,
+  `asst_equty` varchar(10) DEFAULT NULL,
+  `ppe_bed` varchar(7) DEFAULT NULL,
+  `prdhr_mgt` varchar(9) DEFAULT NULL,
+  `prdhr_gnp` varchar(9) DEFAULT NULL,
+  `prdhr_rn` varchar(8) DEFAULT NULL,
+  `prdhr_lvn` varchar(9) DEFAULT NULL,
+  `prdhr_na` varchar(8) DEFAULT NULL,
+  `prdhr_tsp` varchar(9) DEFAULT NULL,
+  `prdhr_psy` varchar(9) DEFAULT NULL,
+  `prdhr_oth` varchar(9) DEFAULT NULL,
+  `prdhr_an` varchar(8) DEFAULT NULL,
+  `prdhr_pom` varchar(9) DEFAULT NULL,
+  `prdhr_hkp` varchar(9) DEFAULT NULL,
+  `prdhr_ll` varchar(8) DEFAULT NULL,
+  `prdhr_diet` varchar(10) DEFAULT NULL,
+  `prdhr_ss` varchar(8) DEFAULT NULL,
+  `prdhr_actv` varchar(10) DEFAULT NULL,
+  `prdhr_insv` varchar(10) DEFAULT NULL,
+  `prdhr_admn` varchar(10) DEFAULT NULL,
+  `prdhr_totl` varchar(10) DEFAULT NULL,
+  `tmp_hr_gnp` varchar(10) DEFAULT NULL,
+  `tmp_hr_rn` varchar(9) DEFAULT NULL,
+  `tmp_hr_lvn` varchar(10) DEFAULT NULL,
+  `tmp_hr_na` varchar(9) DEFAULT NULL,
+  `tmp_hr_psy` varchar(10) DEFAULT NULL,
+  `tmp_hr_oth` varchar(10) DEFAULT NULL,
+  `tmp_hr_tot` varchar(10) DEFAULT NULL,
+  `sw_mgt` varchar(7) DEFAULT NULL,
+  `sw_gnp` varchar(7) DEFAULT NULL,
+  `sw_rn` varchar(7) DEFAULT NULL,
+  `sw_lvn` varchar(7) DEFAULT NULL,
+  `sw_na` varchar(7) DEFAULT NULL,
+  `sw_tsp` varchar(7) DEFAULT NULL,
+  `sw_psy` varchar(7) DEFAULT NULL,
+  `sw_oth` varchar(7) DEFAULT NULL,
+  `sw_anc` varchar(7) DEFAULT NULL,
+  `sw_pom` varchar(7) DEFAULT NULL,
+  `sw_hkp` varchar(7) DEFAULT NULL,
+  `sw_ll` varchar(6) DEFAULT NULL,
+  `sw_diet` varchar(8) DEFAULT NULL,
+  `sw_ss` varchar(6) DEFAULT NULL,
+  `sw_actv` varchar(8) DEFAULT NULL,
+  `sw_insv` varchar(8) DEFAULT NULL,
+  `sw_admn` varchar(8) DEFAULT NULL,
+  `sw_totl` varchar(8) DEFAULT NULL,
+  `tmp_pd_gnp` varchar(10) DEFAULT NULL,
+  `tmp_pd_rn` varchar(9) DEFAULT NULL,
+  `tmp_pd_lvn` varchar(10) DEFAULT NULL,
+  `tmp_pd_na` varchar(9) DEFAULT NULL,
+  `tmp_pd_psy` varchar(10) DEFAULT NULL,
+  `tmp_pd_oth` varchar(10) DEFAULT NULL,
+  `tmp_pd_tot` varchar(10) DEFAULT NULL,
+  `emp_avg` varchar(7) DEFAULT NULL,
+  `emp_trnovr` varchar(10) DEFAULT NULL,
+  `emp_cont` varchar(8) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -475,6 +2435,583 @@ CREATE TABLE `1999_quarter_4_sum_of_four_quarters` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `2000_part_a_long_term_care_annual_financial_data`
+--
+
+DROP TABLE IF EXISTS `2000_part_a_long_term_care_annual_financial_data`;
+CREATE TABLE `2000_part_a_long_term_care_annual_financial_data` (
+  `fac_no` varchar(9) DEFAULT NULL,
+  `fac_name` varchar(40) DEFAULT NULL,
+  `beg_date` varchar(8) DEFAULT NULL,
+  `end_date` varchar(8) DEFAULT NULL,
+  `day_per` varchar(7) DEFAULT NULL,
+  `data_ind` varchar(8) DEFAULT NULL,
+  `comparable` varchar(10) DEFAULT NULL,
+  `county` varchar(6) DEFAULT NULL,
+  `hsa` varchar(3) DEFAULT NULL,
+  `hfpa` varchar(4) DEFAULT NULL,
+  `lic_cat` varchar(7) DEFAULT NULL,
+  `type_cntrl` varchar(14) DEFAULT NULL,
+  `legal_org` varchar(14) DEFAULT NULL,
+  `phone` varchar(13) DEFAULT NULL,
+  `address` varchar(30) DEFAULT NULL,
+  `city` varchar(19) DEFAULT NULL,
+  `zip_code` varchar(10) DEFAULT NULL,
+  `mcal_pronum` varchar(9) DEFAULT NULL,
+  `adminis` varchar(30) DEFAULT NULL,
+  `related` varchar(7) DEFAULT NULL,
+  `parent` varchar(40) DEFAULT NULL,
+  `bed_end` varchar(7) DEFAULT NULL,
+  `bed_avg` varchar(7) DEFAULT NULL,
+  `day_totl` varchar(8) DEFAULT NULL,
+  `occup` varchar(6) DEFAULT NULL,
+  `admits` varchar(6) DEFAULT NULL,
+  `dischs` varchar(6) DEFAULT NULL,
+  `day_mcar` varchar(8) DEFAULT NULL,
+  `day_mcal` varchar(8) DEFAULT NULL,
+  `day_self` varchar(8) DEFAULT NULL,
+  `day_oth` varchar(7) DEFAULT NULL,
+  `day_sn` varchar(6) DEFAULT NULL,
+  `day_ic` varchar(6) DEFAULT NULL,
+  `day_md` varchar(6) DEFAULT NULL,
+  `day_dd` varchar(6) DEFAULT NULL,
+  `day_subacu` varchar(10) DEFAULT NULL,
+  `day_subped` varchar(10) DEFAULT NULL,
+  `day_tic` varchar(7) DEFAULT NULL,
+  `day_hospic` varchar(10) DEFAULT NULL,
+  `day_oth_rt` varchar(10) DEFAULT NULL,
+  `gr_rt_totl` varchar(10) DEFAULT NULL,
+  `gr_an_totl` varchar(10) DEFAULT NULL,
+  `dfr_totl` varchar(8) DEFAULT NULL,
+  `oth_op_rev` varchar(10) DEFAULT NULL,
+  `tot_hc_rev` varchar(10) DEFAULT NULL,
+  `tot_hc_exp` varchar(10) DEFAULT NULL,
+  `net_frm_hc` varchar(10) DEFAULT NULL,
+  `nonhc_net` varchar(9) DEFAULT NULL,
+  `inc_tax` varchar(7) DEFAULT NULL,
+  `ext_item` varchar(8) DEFAULT NULL,
+  `net_income` varchar(10) DEFAULT NULL,
+  `gr_rt_mcar` varchar(10) DEFAULT NULL,
+  `gr_rt_mcal` varchar(10) DEFAULT NULL,
+  `gr_rt_self` varchar(10) DEFAULT NULL,
+  `gr_rt_oth` varchar(9) DEFAULT NULL,
+  `gr_sn` varchar(8) DEFAULT NULL,
+  `gr_ic` varchar(7) DEFAULT NULL,
+  `gr_md` varchar(7) DEFAULT NULL,
+  `gr_dd` varchar(7) DEFAULT NULL,
+  `gr_subacu` varchar(9) DEFAULT NULL,
+  `gr_subped` varchar(9) DEFAULT NULL,
+  `gr_tic` varchar(6) DEFAULT NULL,
+  `gr_hospic` varchar(9) DEFAULT NULL,
+  `gr_oth_rt` varchar(9) DEFAULT NULL,
+  `gr_an_mcar` varchar(10) DEFAULT NULL,
+  `gr_an_mcal` varchar(10) DEFAULT NULL,
+  `gr_an_self` varchar(10) DEFAULT NULL,
+  `gr_an_oth` varchar(9) DEFAULT NULL,
+  `gr_psupply` varchar(10) DEFAULT NULL,
+  `gr_spsurf` varchar(9) DEFAULT NULL,
+  `gr_pt` varchar(7) DEFAULT NULL,
+  `gr_rt` varchar(7) DEFAULT NULL,
+  `gr_ot` varchar(7) DEFAULT NULL,
+  `gr_sp` varchar(6) DEFAULT NULL,
+  `gr_pharm` varchar(8) DEFAULT NULL,
+  `gr_lab` varchar(6) DEFAULT NULL,
+  `gr_hmhlth` varchar(9) DEFAULT NULL,
+  `gr_oth_an` varchar(9) DEFAULT NULL,
+  `dfr_charit` varchar(10) DEFAULT NULL,
+  `dfr_admin` varchar(9) DEFAULT NULL,
+  `ca_mcare` varchar(8) DEFAULT NULL,
+  `ca_mcal` varchar(7) DEFAULT NULL,
+  `ca_other` varchar(8) DEFAULT NULL,
+  `dfr_other` varchar(9) DEFAULT NULL,
+  `exp_sal` varchar(7) DEFAULT NULL,
+  `exp_ben` varchar(7) DEFAULT NULL,
+  `exp_other` varchar(9) DEFAULT NULL,
+  `work_comp` varchar(9) DEFAULT NULL,
+  `exp_sn` varchar(7) DEFAULT NULL,
+  `exp_ic` varchar(6) DEFAULT NULL,
+  `exp_md` varchar(7) DEFAULT NULL,
+  `exp_dd` varchar(7) DEFAULT NULL,
+  `exp_subacu` varchar(10) DEFAULT NULL,
+  `exp_subped` varchar(10) DEFAULT NULL,
+  `exp_tic` varchar(7) DEFAULT NULL,
+  `exp_hospic` varchar(10) DEFAULT NULL,
+  `exp_oth_rt` varchar(10) DEFAULT NULL,
+  `exp_psuppl` varchar(10) DEFAULT NULL,
+  `exp_spsurf` varchar(10) DEFAULT NULL,
+  `exp_pt` varchar(7) DEFAULT NULL,
+  `exp_rt` varchar(7) DEFAULT NULL,
+  `exp_ot` varchar(6) DEFAULT NULL,
+  `exp_sp` varchar(6) DEFAULT NULL,
+  `exp_pharm` varchar(9) DEFAULT NULL,
+  `exp_lab` varchar(7) DEFAULT NULL,
+  `exp_hmhlth` varchar(10) DEFAULT NULL,
+  `exp_oth_an` varchar(10) DEFAULT NULL,
+  `exp_pom` varchar(7) DEFAULT NULL,
+  `exp_hkp` varchar(7) DEFAULT NULL,
+  `exp_ll` varchar(6) DEFAULT NULL,
+  `exp_diet` varchar(8) DEFAULT NULL,
+  `exp_ss` varchar(6) DEFAULT NULL,
+  `exp_actv` varchar(8) DEFAULT NULL,
+  `exp_insv` varchar(8) DEFAULT NULL,
+  `exp_admn` varchar(8) DEFAULT NULL,
+  `exp_dprec` varchar(9) DEFAULT NULL,
+  `exp_lease` varchar(9) DEFAULT NULL,
+  `exp_prptax` varchar(10) DEFAULT NULL,
+  `exp_prpins` varchar(10) DEFAULT NULL,
+  `exp_intppe` varchar(10) DEFAULT NULL,
+  `exp_intoth` varchar(10) DEFAULT NULL,
+  `exp_bdebt` varchar(9) DEFAULT NULL,
+  `cur_asst` varchar(8) DEFAULT NULL,
+  `asst_limtd` varchar(10) DEFAULT NULL,
+  `net_ppe` varchar(9) DEFAULT NULL,
+  `const_prog` varchar(10) DEFAULT NULL,
+  `inv_oth` varchar(8) DEFAULT NULL,
+  `intan_asst` varchar(10) DEFAULT NULL,
+  `tot_asst` varchar(9) DEFAULT NULL,
+  `cur_liab` varchar(8) DEFAULT NULL,
+  `def_cred` varchar(8) DEFAULT NULL,
+  `net_ltdebt` varchar(10) DEFAULT NULL,
+  `equity` varchar(9) DEFAULT NULL,
+  `liab_eq` varchar(9) DEFAULT NULL,
+  `rel_rec_cr` varchar(10) DEFAULT NULL,
+  `rel_rec_lt` varchar(10) DEFAULT NULL,
+  `rel_pay_cr` varchar(10) DEFAULT NULL,
+  `rel_pay_lt` varchar(10) DEFAULT NULL,
+  `landimp` varchar(8) DEFAULT NULL,
+  `bldgsimp` varchar(9) DEFAULT NULL,
+  `lease_imp` varchar(9) DEFAULT NULL,
+  `equipment` varchar(9) DEFAULT NULL,
+  `tot_ppe` varchar(9) DEFAULT NULL,
+  `acc_deprec` varchar(10) DEFAULT NULL,
+  `mort_pay` varchar(8) DEFAULT NULL,
+  `cap_lease` varchar(9) DEFAULT NULL,
+  `bond_pay` varchar(8) DEFAULT NULL,
+  `tot_ltdebt` varchar(10) DEFAULT NULL,
+  `cur_mat` varchar(8) DEFAULT NULL,
+  `cur_ratio` varchar(9) DEFAULT NULL,
+  `acid_ratio` varchar(10) DEFAULT NULL,
+  `days_ar` varchar(7) DEFAULT NULL,
+  `ltd_asst` varchar(8) DEFAULT NULL,
+  `debt_cov` varchar(9) DEFAULT NULL,
+  `op_margin` varchar(9) DEFAULT NULL,
+  `net_rtn_eq` varchar(10) DEFAULT NULL,
+  `trnovr_opr` varchar(10) DEFAULT NULL,
+  `asst_equty` varchar(10) DEFAULT NULL,
+  `ppe_bed` varchar(7) DEFAULT NULL,
+  `prdhr_mgt` varchar(9) DEFAULT NULL,
+  `prdhr_gnp` varchar(9) DEFAULT NULL,
+  `prdhr_rn` varchar(8) DEFAULT NULL,
+  `prdhr_lvn` varchar(9) DEFAULT NULL,
+  `prdhr_na` varchar(8) DEFAULT NULL,
+  `prdhr_tsp` varchar(9) DEFAULT NULL,
+  `prdhr_psy` varchar(9) DEFAULT NULL,
+  `prdhr_oth` varchar(9) DEFAULT NULL,
+  `prdhr_an` varchar(8) DEFAULT NULL,
+  `prdhr_pom` varchar(9) DEFAULT NULL,
+  `prdhr_hkp` varchar(9) DEFAULT NULL,
+  `prdhr_ll` varchar(8) DEFAULT NULL,
+  `prdhr_diet` varchar(10) DEFAULT NULL,
+  `prdhr_ss` varchar(8) DEFAULT NULL,
+  `prdhr_actv` varchar(10) DEFAULT NULL,
+  `prdhr_insv` varchar(10) DEFAULT NULL,
+  `prdhr_admn` varchar(10) DEFAULT NULL,
+  `prdhr_totl` varchar(10) DEFAULT NULL,
+  `tmp_hr_gnp` varchar(10) DEFAULT NULL,
+  `tmp_hr_rn` varchar(9) DEFAULT NULL,
+  `tmp_hr_lvn` varchar(10) DEFAULT NULL,
+  `tmp_hr_na` varchar(9) DEFAULT NULL,
+  `tmp_hr_psy` varchar(10) DEFAULT NULL,
+  `tmp_hr_oth` varchar(10) DEFAULT NULL,
+  `tmp_hr_tot` varchar(10) DEFAULT NULL,
+  `sw_mgt` varchar(7) DEFAULT NULL,
+  `sw_gnp` varchar(7) DEFAULT NULL,
+  `sw_rn` varchar(7) DEFAULT NULL,
+  `sw_lvn` varchar(7) DEFAULT NULL,
+  `sw_na` varchar(7) DEFAULT NULL,
+  `sw_tsp` varchar(7) DEFAULT NULL,
+  `sw_psy` varchar(7) DEFAULT NULL,
+  `sw_oth` varchar(7) DEFAULT NULL,
+  `sw_anc` varchar(7) DEFAULT NULL,
+  `sw_pom` varchar(7) DEFAULT NULL,
+  `sw_hkp` varchar(7) DEFAULT NULL,
+  `sw_ll` varchar(6) DEFAULT NULL,
+  `sw_diet` varchar(8) DEFAULT NULL,
+  `sw_ss` varchar(6) DEFAULT NULL,
+  `sw_actv` varchar(8) DEFAULT NULL,
+  `sw_insv` varchar(8) DEFAULT NULL,
+  `sw_admn` varchar(8) DEFAULT NULL,
+  `sw_totl` varchar(8) DEFAULT NULL,
+  `tmp_pd_gnp` varchar(10) DEFAULT NULL,
+  `tmp_pd_rn` varchar(9) DEFAULT NULL,
+  `tmp_pd_lvn` varchar(10) DEFAULT NULL,
+  `tmp_pd_na` varchar(9) DEFAULT NULL,
+  `tmp_pd_psy` varchar(10) DEFAULT NULL,
+  `tmp_pd_oth` varchar(10) DEFAULT NULL,
+  `tmp_pd_tot` varchar(10) DEFAULT NULL,
+  `emp_avg` varchar(7) DEFAULT NULL,
+  `emp_trnovr` varchar(10) DEFAULT NULL,
+  `emp_cont` varchar(8) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2000_part_b_long_term_care_annual_financial_data`
+--
+
+DROP TABLE IF EXISTS `2000_part_b_long_term_care_annual_financial_data`;
+CREATE TABLE `2000_part_b_long_term_care_annual_financial_data` (
+  `fac_no` varchar(9) DEFAULT NULL,
+  `fac_name` varchar(40) DEFAULT NULL,
+  `beg_date` varchar(8) DEFAULT NULL,
+  `end_date` varchar(8) DEFAULT NULL,
+  `day_per` varchar(7) DEFAULT NULL,
+  `data_ind` varchar(10) DEFAULT NULL,
+  `comparable` varchar(10) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `hsa` varchar(3) DEFAULT NULL,
+  `hfpa` varchar(4) DEFAULT NULL,
+  `lic_cat` varchar(7) DEFAULT NULL,
+  `type_cntrl` varchar(14) DEFAULT NULL,
+  `legal_org` varchar(14) DEFAULT NULL,
+  `phone` varchar(13) DEFAULT NULL,
+  `address` varchar(30) DEFAULT NULL,
+  `city` varchar(19) DEFAULT NULL,
+  `zip_code` varchar(10) DEFAULT NULL,
+  `mcal_pronum` varchar(9) DEFAULT NULL,
+  `adminis` varchar(28) DEFAULT NULL,
+  `related` varchar(7) DEFAULT NULL,
+  `parent` varchar(40) DEFAULT NULL,
+  `bed_end` varchar(7) DEFAULT NULL,
+  `bed_avg` varchar(7) DEFAULT NULL,
+  `day_totl` varchar(8) DEFAULT NULL,
+  `occup` varchar(6) DEFAULT NULL,
+  `admits` varchar(6) DEFAULT NULL,
+  `dischs` varchar(6) DEFAULT NULL,
+  `day_mcar` varchar(8) DEFAULT NULL,
+  `day_mcal` varchar(8) DEFAULT NULL,
+  `day_self` varchar(8) DEFAULT NULL,
+  `day_mgd` varchar(7) DEFAULT NULL,
+  `day_oth` varchar(7) DEFAULT NULL,
+  `day_sn` varchar(6) DEFAULT NULL,
+  `day_ic` varchar(6) DEFAULT NULL,
+  `day_md` varchar(6) DEFAULT NULL,
+  `day_dd` varchar(6) DEFAULT NULL,
+  `day_subacu` varchar(10) DEFAULT NULL,
+  `day_subped` varchar(10) DEFAULT NULL,
+  `day_tic` varchar(7) DEFAULT NULL,
+  `day_hospic` varchar(10) DEFAULT NULL,
+  `day_oth_rt` varchar(10) DEFAULT NULL,
+  `gr_rt_totl` varchar(10) DEFAULT NULL,
+  `gr_an_totl` varchar(10) DEFAULT NULL,
+  `dfr_totl` varchar(8) DEFAULT NULL,
+  `oth_op_rev` varchar(10) DEFAULT NULL,
+  `tot_hc_rev` varchar(10) DEFAULT NULL,
+  `tot_hc_exp` varchar(10) DEFAULT NULL,
+  `net_frm_hc` varchar(10) DEFAULT NULL,
+  `nonhc_net` varchar(9) DEFAULT NULL,
+  `inc_tax` varchar(7) DEFAULT NULL,
+  `ext_item` varchar(8) DEFAULT NULL,
+  `net_income` varchar(10) DEFAULT NULL,
+  `gr_rt_mcar` varchar(10) DEFAULT NULL,
+  `gr_rt_mcal` varchar(10) DEFAULT NULL,
+  `gr_rt_self` varchar(10) DEFAULT NULL,
+  `gr_rt_mgd` varchar(9) DEFAULT NULL,
+  `gr_rt_oth` varchar(9) DEFAULT NULL,
+  `gr_sn` varchar(8) DEFAULT NULL,
+  `gr_ic` varchar(7) DEFAULT NULL,
+  `gr_md` varchar(8) DEFAULT NULL,
+  `gr_dd` varchar(7) DEFAULT NULL,
+  `gr_subacu` varchar(9) DEFAULT NULL,
+  `gr_subped` varchar(9) DEFAULT NULL,
+  `gr_tic` varchar(6) DEFAULT NULL,
+  `gr_hospic` varchar(9) DEFAULT NULL,
+  `gr_oth_rt` varchar(9) DEFAULT NULL,
+  `gr_an_mcar_ip` varchar(13) DEFAULT NULL,
+  `gr_an_mcar_op` varchar(13) DEFAULT NULL,
+  `gr_an_mcal_ip` varchar(13) DEFAULT NULL,
+  `gr_an_mcal_op` varchar(13) DEFAULT NULL,
+  `gr_an_self_ip` varchar(13) DEFAULT NULL,
+  `gr_an_self_op` varchar(13) DEFAULT NULL,
+  `gr_an_mgd_ip` varchar(12) DEFAULT NULL,
+  `gr_an_mgd_op` varchar(12) DEFAULT NULL,
+  `gr_an_oth_ip` varchar(12) DEFAULT NULL,
+  `gr_an_oth_op` varchar(12) DEFAULT NULL,
+  `gr_psupply` varchar(10) DEFAULT NULL,
+  `gr_spsurf` varchar(9) DEFAULT NULL,
+  `gr_pt` varchar(7) DEFAULT NULL,
+  `gr_rt` varchar(7) DEFAULT NULL,
+  `gr_ot` varchar(7) DEFAULT NULL,
+  `gr_sp` varchar(7) DEFAULT NULL,
+  `gr_pharm` varchar(8) DEFAULT NULL,
+  `gr_lab` varchar(7) DEFAULT NULL,
+  `gr_hmhlth` varchar(9) DEFAULT NULL,
+  `gr_oth_an` varchar(9) DEFAULT NULL,
+  `dfr_charit` varchar(10) DEFAULT NULL,
+  `dfr_admin` varchar(9) DEFAULT NULL,
+  `ca_mcare` varchar(8) DEFAULT NULL,
+  `ca_mcal` varchar(8) DEFAULT NULL,
+  `ca_mgd` varchar(8) DEFAULT NULL,
+  `ca_other` varchar(8) DEFAULT NULL,
+  `dfr_other` varchar(9) DEFAULT NULL,
+  `exp_sal` varchar(7) DEFAULT NULL,
+  `exp_ben` varchar(7) DEFAULT NULL,
+  `exp_other` varchar(9) DEFAULT NULL,
+  `work_comp` varchar(9) DEFAULT NULL,
+  `exp_sn` varchar(7) DEFAULT NULL,
+  `exp_ic` varchar(6) DEFAULT NULL,
+  `exp_md` varchar(7) DEFAULT NULL,
+  `exp_dd` varchar(7) DEFAULT NULL,
+  `exp_subacu` varchar(10) DEFAULT NULL,
+  `exp_subped` varchar(10) DEFAULT NULL,
+  `exp_tic` varchar(7) DEFAULT NULL,
+  `exp_hospic` varchar(10) DEFAULT NULL,
+  `exp_oth_rt` varchar(10) DEFAULT NULL,
+  `exp_psuppl` varchar(10) DEFAULT NULL,
+  `exp_spsurf` varchar(10) DEFAULT NULL,
+  `exp_pt` varchar(6) DEFAULT NULL,
+  `exp_rt` varchar(6) DEFAULT NULL,
+  `exp_ot` varchar(6) DEFAULT NULL,
+  `exp_sp` varchar(6) DEFAULT NULL,
+  `exp_pharm` varchar(9) DEFAULT NULL,
+  `exp_lab` varchar(7) DEFAULT NULL,
+  `exp_hmhlth` varchar(10) DEFAULT NULL,
+  `exp_oth_an` varchar(10) DEFAULT NULL,
+  `exp_pom` varchar(7) DEFAULT NULL,
+  `exp_hkp` varchar(7) DEFAULT NULL,
+  `exp_ll` varchar(6) DEFAULT NULL,
+  `exp_diet` varchar(8) DEFAULT NULL,
+  `exp_ss` varchar(6) DEFAULT NULL,
+  `exp_actv` varchar(8) DEFAULT NULL,
+  `exp_insv` varchar(8) DEFAULT NULL,
+  `exp_admn` varchar(8) DEFAULT NULL,
+  `exp_dprec` varchar(9) DEFAULT NULL,
+  `exp_lease` varchar(9) DEFAULT NULL,
+  `exp_prptax` varchar(10) DEFAULT NULL,
+  `exp_prpins` varchar(10) DEFAULT NULL,
+  `exp_intppe` varchar(10) DEFAULT NULL,
+  `exp_intoth` varchar(10) DEFAULT NULL,
+  `exp_bdebt` varchar(9) DEFAULT NULL,
+  `cur_asst` varchar(8) DEFAULT NULL,
+  `asst_limtd` varchar(10) DEFAULT NULL,
+  `net_ppe` varchar(8) DEFAULT NULL,
+  `const_prog` varchar(10) DEFAULT NULL,
+  `inv_oth` varchar(8) DEFAULT NULL,
+  `intan_asst` varchar(10) DEFAULT NULL,
+  `tot_asst` varchar(8) DEFAULT NULL,
+  `cur_liab` varchar(8) DEFAULT NULL,
+  `def_cred` varchar(8) DEFAULT NULL,
+  `net_ltdebt` varchar(10) DEFAULT NULL,
+  `equity` varchar(9) DEFAULT NULL,
+  `liab_eq` varchar(8) DEFAULT NULL,
+  `rel_rec_cr` varchar(10) DEFAULT NULL,
+  `rel_rec_lt` varchar(10) DEFAULT NULL,
+  `rel_pay_cr` varchar(10) DEFAULT NULL,
+  `rel_pay_lt` varchar(10) DEFAULT NULL,
+  `landimp` varchar(8) DEFAULT NULL,
+  `bldgsimp` varchar(9) DEFAULT NULL,
+  `lease_imp` varchar(9) DEFAULT NULL,
+  `equipment` varchar(9) DEFAULT NULL,
+  `tot_ppe` varchar(8) DEFAULT NULL,
+  `acc_deprec` varchar(10) DEFAULT NULL,
+  `mort_pay` varchar(8) DEFAULT NULL,
+  `cap_lease` varchar(9) DEFAULT NULL,
+  `bond_pay` varchar(8) DEFAULT NULL,
+  `tot_ltdebt` varchar(10) DEFAULT NULL,
+  `cur_mat` varchar(8) DEFAULT NULL,
+  `cur_ratio` varchar(9) DEFAULT NULL,
+  `acid_ratio` varchar(10) DEFAULT NULL,
+  `days_ar` varchar(7) DEFAULT NULL,
+  `ltd_asst` varchar(8) DEFAULT NULL,
+  `debt_cov` varchar(8) DEFAULT NULL,
+  `op_margin` varchar(9) DEFAULT NULL,
+  `net_rtn_eq` varchar(10) DEFAULT NULL,
+  `trnovr_opr` varchar(10) DEFAULT NULL,
+  `asst_equty` varchar(10) DEFAULT NULL,
+  `ppe_bed` varchar(7) DEFAULT NULL,
+  `prdhr_mgt` varchar(9) DEFAULT NULL,
+  `prdhr_gnp` varchar(9) DEFAULT NULL,
+  `prdhr_rn` varchar(8) DEFAULT NULL,
+  `prdhr_lvn` varchar(9) DEFAULT NULL,
+  `prdhr_na` varchar(8) DEFAULT NULL,
+  `prdhr_tsp` varchar(9) DEFAULT NULL,
+  `prdhr_psy` varchar(9) DEFAULT NULL,
+  `prdhr_oth` varchar(9) DEFAULT NULL,
+  `prdhr_an` varchar(8) DEFAULT NULL,
+  `prdhr_pom` varchar(9) DEFAULT NULL,
+  `prdhr_hkp` varchar(9) DEFAULT NULL,
+  `prdhr_ll` varchar(8) DEFAULT NULL,
+  `prdhr_diet` varchar(10) DEFAULT NULL,
+  `prdhr_ss` varchar(8) DEFAULT NULL,
+  `prdhr_actv` varchar(10) DEFAULT NULL,
+  `prdhr_insv` varchar(10) DEFAULT NULL,
+  `prdhr_admn` varchar(10) DEFAULT NULL,
+  `prdhr_totl` varchar(10) DEFAULT NULL,
+  `tmp_hr_gnp` varchar(10) DEFAULT NULL,
+  `tmp_hr_rn` varchar(9) DEFAULT NULL,
+  `tmp_hr_lvn` varchar(10) DEFAULT NULL,
+  `tmp_hr_na` varchar(9) DEFAULT NULL,
+  `tmp_hr_psy` varchar(10) DEFAULT NULL,
+  `tmp_hr_oth` varchar(10) DEFAULT NULL,
+  `tmp_hr_tot` varchar(10) DEFAULT NULL,
+  `sw_mgt` varchar(7) DEFAULT NULL,
+  `sw_gnp` varchar(7) DEFAULT NULL,
+  `sw_rn` varchar(7) DEFAULT NULL,
+  `sw_lvn` varchar(7) DEFAULT NULL,
+  `sw_na` varchar(7) DEFAULT NULL,
+  `sw_tsp` varchar(7) DEFAULT NULL,
+  `sw_psy` varchar(7) DEFAULT NULL,
+  `sw_oth` varchar(7) DEFAULT NULL,
+  `sw_anc` varchar(7) DEFAULT NULL,
+  `sw_pom` varchar(7) DEFAULT NULL,
+  `sw_hkp` varchar(7) DEFAULT NULL,
+  `sw_ll` varchar(6) DEFAULT NULL,
+  `sw_diet` varchar(8) DEFAULT NULL,
+  `sw_ss` varchar(6) DEFAULT NULL,
+  `sw_actv` varchar(8) DEFAULT NULL,
+  `sw_insv` varchar(8) DEFAULT NULL,
+  `sw_admn` varchar(8) DEFAULT NULL,
+  `sw_totl` varchar(8) DEFAULT NULL,
+  `tmp_pd_gnp` varchar(10) DEFAULT NULL,
+  `tmp_pd_rn` varchar(9) DEFAULT NULL,
+  `tmp_pd_lvn` varchar(10) DEFAULT NULL,
+  `tmp_pd_na` varchar(9) DEFAULT NULL,
+  `tmp_pd_psy` varchar(10) DEFAULT NULL,
+  `tmp_pd_oth` varchar(10) DEFAULT NULL,
+  `tmp_pd_tot` varchar(10) DEFAULT NULL,
+  `emp_avg` varchar(7) DEFAULT NULL,
+  `emp_trnovr` varchar(10) DEFAULT NULL,
+  `emp_cont` varchar(8) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2001_specialty_care_clinic_utilization_data`
+--
+
+DROP TABLE IF EXISTS `2001_specialty_care_clinic_utilization_data`;
+CREATE TABLE `2001_specialty_care_clinic_utilization_data` (
+  `facid` varchar(10) DEFAULT NULL,
+  `county` varchar(8) DEFAULT NULL,
+  `permid` varchar(8) DEFAULT NULL,
+  `lictype` varchar(8) DEFAULT NULL,
+  `licdate` varchar(8) DEFAULT NULL,
+  `lstat` varchar(8) DEFAULT NULL,
+  `lstatdt` varchar(8) DEFAULT NULL,
+  `ostat` varchar(8) DEFAULT NULL,
+  `ostatdt` varchar(8) DEFAULT NULL,
+  `dbaname` varchar(50) DEFAULT NULL,
+  `dbaaddr` varchar(30) DEFAULT NULL,
+  `dbacity` varchar(19) DEFAULT NULL,
+  `dbazip` varchar(10) DEFAULT NULL,
+  `mlattn` varchar(30) DEFAULT NULL,
+  `mladdr` varchar(30) DEFAULT NULL,
+  `mlcity` varchar(19) DEFAULT NULL,
+  `mlstate` varchar(8) DEFAULT NULL,
+  `mlzip` varchar(10) DEFAULT NULL,
+  `hsa` varchar(8) DEFAULT NULL,
+  `hfpa` varchar(8) DEFAULT NULL,
+  `compstat` varchar(8) DEFAULT NULL,
+  `p000103` varchar(8) DEFAULT NULL,
+  `p010301` varchar(10) DEFAULT NULL,
+  `p020101` varchar(8) DEFAULT NULL,
+  `p020102` varchar(8) DEFAULT NULL,
+  `p021901` varchar(7) DEFAULT NULL,
+  `p021902` varchar(7) DEFAULT NULL,
+  `p022601` varchar(7) DEFAULT NULL,
+  `p022701` varchar(7) DEFAULT NULL,
+  `p022801` varchar(7) DEFAULT NULL,
+  `p022901` varchar(7) DEFAULT NULL,
+  `p023001` varchar(7) DEFAULT NULL,
+  `p023101` varchar(7) DEFAULT NULL,
+  `p030101` varchar(7) DEFAULT NULL,
+  `p030102` varchar(10) DEFAULT NULL,
+  `p030104` varchar(8) DEFAULT NULL,
+  `p032101` varchar(7) DEFAULT NULL,
+  `p032102` varchar(10) DEFAULT NULL,
+  `p032201` varchar(7) DEFAULT NULL,
+  `p032202` varchar(8) DEFAULT NULL,
+  `p032301` varchar(10) DEFAULT NULL,
+  `p032401` varchar(8) DEFAULT NULL,
+  `p032501` varchar(10) DEFAULT NULL,
+  `p032601` varchar(9) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2004_2008_final_deaths_by_month_by_occurrence_county`
+--
+
+DROP TABLE IF EXISTS `2004_2008_final_deaths_by_month_by_occurrence_county`;
+CREATE TABLE `2004_2008_final_deaths_by_month_by_occurrence_county` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `month` varchar(5) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
+  `strata` varchar(16) DEFAULT NULL,
+  `strata_name` varchar(30) DEFAULT NULL,
+  `cause` varchar(5) DEFAULT NULL,
+  `cause_desc` varchar(53) DEFAULT NULL,
+  `count` varchar(5) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
+  `annotation_desc` varchar(38) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2004_2008_final_deaths_by_month_by_residence_county`
+--
+
+DROP TABLE IF EXISTS `2004_2008_final_deaths_by_month_by_residence_county`;
+CREATE TABLE `2004_2008_final_deaths_by_month_by_residence_county` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `month` varchar(5) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
+  `strata` varchar(16) DEFAULT NULL,
+  `strata_name` varchar(30) DEFAULT NULL,
+  `cause` varchar(5) DEFAULT NULL,
+  `cause_desc` varchar(53) DEFAULT NULL,
+  `count` varchar(5) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
+  `annotation_desc` varchar(38) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2009_2013_final_deaths_by_month_by_occurrence_county`
+--
+
+DROP TABLE IF EXISTS `2009_2013_final_deaths_by_month_by_occurrence_county`;
+CREATE TABLE `2009_2013_final_deaths_by_month_by_occurrence_county` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `month` varchar(5) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
+  `strata` varchar(16) DEFAULT NULL,
+  `strata_name` varchar(30) DEFAULT NULL,
+  `cause` varchar(5) DEFAULT NULL,
+  `cause_desc` varchar(53) DEFAULT NULL,
+  `count` varchar(5) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
+  `annotation_desc` varchar(38) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2009_2013_final_deaths_by_month_by_residence_county`
+--
+
+DROP TABLE IF EXISTS `2009_2013_final_deaths_by_month_by_residence_county`;
+CREATE TABLE `2009_2013_final_deaths_by_month_by_residence_county` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `month` varchar(5) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
+  `strata` varchar(16) DEFAULT NULL,
+  `strata_name` varchar(30) DEFAULT NULL,
+  `cause` varchar(5) DEFAULT NULL,
+  `cause_desc` varchar(53) DEFAULT NULL,
+  `count` varchar(5) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
+  `annotation_desc` varchar(38) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `2012_2017_cy_hospital_annual_selected_file_machine_read_ee501c9c`
 --
 
@@ -484,35 +3021,37 @@ CREATE TABLE `2012_2017_cy_hospital_annual_selected_file_machine_read_ee501c9c` 
   `fac_name` varchar(49) DEFAULT NULL,
   `beg_date` varchar(9) DEFAULT NULL,
   `end_date` varchar(9) DEFAULT NULL,
-  `day_per` varchar(3) DEFAULT NULL,
+  `day_per` varchar(7) DEFAULT NULL,
   `data_ind` varchar(10) DEFAULT NULL,
   `audit_ind` varchar(21) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
-  `hsa` varchar(2) DEFAULT NULL,
+  `hsa` varchar(3) DEFAULT NULL,
   `hfpa` varchar(4) DEFAULT NULL,
   `type_cntrl` varchar(11) DEFAULT NULL,
   `type_care` varchar(11) DEFAULT NULL,
   `type_hosp` varchar(10) DEFAULT NULL,
-  `teach_rurl` varchar(8) DEFAULT NULL,
+  `teach_rurl` varchar(10) DEFAULT NULL,
   `phone` varchar(14) DEFAULT NULL,
   `address` varchar(28) DEFAULT NULL,
   `city` varchar(16) DEFAULT NULL,
   `zip_code` varchar(10) DEFAULT NULL,
   `ceo` varchar(23) DEFAULT NULL,
   `ceo_title` varchar(18) DEFAULT NULL,
-  `web_site` varchar(32) DEFAULT NULL,
+  `web_site1` varchar(32) DEFAULT NULL,
   `owner` varchar(45) DEFAULT NULL,
   `rpt_prep` varchar(23) DEFAULT NULL,
-  `org_name` varchar(40) DEFAULT NULL,
-  `er_desig` varchar(1) DEFAULT NULL,
-  `mcar_pronum` varchar(7) DEFAULT NULL,
+  `org_name1` varchar(44) DEFAULT NULL,
+  `er_desig` varchar(8) DEFAULT NULL,
+  `mcar_pronum` varchar(9) DEFAULT NULL,
   `mcal_pronum` varchar(9) DEFAULT NULL,
   `reg_mcalnum` varchar(9) DEFAULT NULL,
-  `bed_lic` varchar(5) DEFAULT NULL,
-  `bed_avl` varchar(5) DEFAULT NULL,
-  `bed_stf` varchar(5) DEFAULT NULL,
+  `bed_lic` varchar(7) DEFAULT NULL,
+  `bed_avl` varchar(7) DEFAULT NULL,
+  `bed_stf` varchar(7) DEFAULT NULL,
   `variable` varchar(15) DEFAULT NULL,
-  `amount` varchar(12) DEFAULT NULL
+  `amount` varchar(12) DEFAULT NULL,
+  `web_site2` varchar(32) DEFAULT NULL,
+  `org_name2` varchar(40) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -1049,6 +3588,68 @@ CREATE TABLE `2013_quarter_4_sum_of_four_quarters_rev_7_15` (
   `cap_exp` varchar(12) DEFAULT NULL,
   `ending_fix_assets` varchar(14) DEFAULT NULL,
   `disp_trnfr` varchar(12) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2014_2018_final_deaths_by_month_by_occurrence_county`
+--
+
+DROP TABLE IF EXISTS `2014_2018_final_deaths_by_month_by_occurrence_county`;
+CREATE TABLE `2014_2018_final_deaths_by_month_by_occurrence_county` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `month` varchar(5) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
+  `strata` varchar(16) DEFAULT NULL,
+  `strata_name` varchar(36) DEFAULT NULL,
+  `cause` varchar(5) DEFAULT NULL,
+  `cause_desc` varchar(53) DEFAULT NULL,
+  `icd_revision` varchar(12) DEFAULT NULL,
+  `count` varchar(5) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
+  `annotation_desc` varchar(38) DEFAULT NULL,
+  `data_revision_date` varchar(18) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2014_2018_final_deaths_by_month_by_residence_county`
+--
+
+DROP TABLE IF EXISTS `2014_2018_final_deaths_by_month_by_residence_county`;
+CREATE TABLE `2014_2018_final_deaths_by_month_by_residence_county` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `month` varchar(5) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
+  `strata` varchar(16) DEFAULT NULL,
+  `strata_name` varchar(36) DEFAULT NULL,
+  `cause` varchar(5) DEFAULT NULL,
+  `cause_desc` varchar(53) DEFAULT NULL,
+  `icd_revision` varchar(12) DEFAULT NULL,
+  `count` varchar(5) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
+  `annotation_desc` varchar(38) DEFAULT NULL,
+  `data_revision_date` varchar(18) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2014_2022_final_deaths_by_year_by_county`
+--
+
+DROP TABLE IF EXISTS `2014_2022_final_deaths_by_year_by_county`;
+CREATE TABLE `2014_2022_final_deaths_by_year_by_county` (
+  `year` varchar(4) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
+  `strata` varchar(16) DEFAULT NULL,
+  `strata_name` varchar(36) DEFAULT NULL,
+  `cause` varchar(5) DEFAULT NULL,
+  `cause_desc` varchar(53) DEFAULT NULL,
+  `icd_revision` varchar(12) DEFAULT NULL,
+  `count` varchar(5) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
+  `annotation_desc` varchar(38) DEFAULT NULL,
+  `data_revision_date` varchar(18) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -5116,6 +7717,31 @@ CREATE TABLE `2018_quarter_4_sum_of_four_quarters` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `2019_2020_homeless_hosp_encs_age_race_sex_exp_payer_by_fac`
+--
+
+DROP TABLE IF EXISTS `2019_2020_homeless_hosp_encs_age_race_sex_exp_payer_by_fac`;
+CREATE TABLE `2019_2020_homeless_hosp_encs_age_race_sex_exp_payer_by_fac` (
+  `encountertype` varchar(26) DEFAULT NULL,
+  `hospitalcounty` varchar(15) DEFAULT NULL,
+  `oshpd_id` varchar(8) DEFAULT NULL,
+  `facilityname` varchar(79) DEFAULT NULL,
+  `system_name` varchar(33) DEFAULT NULL,
+  `ownership` varchar(10) DEFAULT NULL,
+  `urban_rural` varchar(14) DEFAULT NULL,
+  `teaching` varchar(12) DEFAULT NULL,
+  `licensedbedsize` varchar(15) DEFAULT NULL,
+  `primarycareshortagearea` varchar(23) DEFAULT NULL,
+  `mentalhealthshortagearea` varchar(24) DEFAULT NULL,
+  `homelessindicator` varchar(17) DEFAULT NULL,
+  `demographic` varchar(11) DEFAULT NULL,
+  `demographicvalue` varchar(29) DEFAULT NULL,
+  `encounters` varchar(10) DEFAULT NULL,
+  `totalencounters` varchar(15) DEFAULT NULL,
+  `percent` varchar(7) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `2019_2020_to_2021_22_kindergarten_immunizations`
 --
 
@@ -5136,6 +7762,48 @@ CREATE TABLE `2019_2020_to_2021_22_kindergarten_immunizations` (
   `annotation_code` varchar(1) DEFAULT NULL,
   `annotation_count_desc` varchar(136) DEFAULT NULL,
   `annotation_percent_desc` varchar(73) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2019_2022_final_deaths_by_month_by_occurrence_county`
+--
+
+DROP TABLE IF EXISTS `2019_2022_final_deaths_by_month_by_occurrence_county`;
+CREATE TABLE `2019_2022_final_deaths_by_month_by_occurrence_county` (
+  `year` varchar(4) DEFAULT NULL,
+  `month` varchar(5) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
+  `strata` varchar(16) DEFAULT NULL,
+  `strata_name` varchar(36) DEFAULT NULL,
+  `cause` varchar(5) DEFAULT NULL,
+  `cause_desc` varchar(53) DEFAULT NULL,
+  `icd_revision` varchar(12) DEFAULT NULL,
+  `count` varchar(5) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
+  `annotation_desc` varchar(38) DEFAULT NULL,
+  `data_revision_date` varchar(18) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2019_2022_final_deaths_by_month_by_residence_county`
+--
+
+DROP TABLE IF EXISTS `2019_2022_final_deaths_by_month_by_residence_county`;
+CREATE TABLE `2019_2022_final_deaths_by_month_by_residence_county` (
+  `year` varchar(4) DEFAULT NULL,
+  `month` varchar(5) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
+  `strata` varchar(16) DEFAULT NULL,
+  `strata_name` varchar(36) DEFAULT NULL,
+  `cause` varchar(5) DEFAULT NULL,
+  `cause_desc` varchar(53) DEFAULT NULL,
+  `icd_revision` varchar(12) DEFAULT NULL,
+  `count` varchar(5) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
+  `annotation_desc` varchar(38) DEFAULT NULL,
+  `data_revision_date` varchar(18) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -5985,6 +8653,76 @@ CREATE TABLE `2019_quarter_4_sum_of_four_quarters` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `2021_hospital_supplier_diversity_individual_report_extract`
+--
+
+DROP TABLE IF EXISTS `2021_hospital_supplier_diversity_individual_report_extract`;
+CREATE TABLE `2021_hospital_supplier_diversity_individual_report_extract` (
+  `hospital_name` varchar(79) DEFAULT NULL,
+  `hospital_address` varchar(59) DEFAULT NULL,
+  `hcai_id` varchar(9) DEFAULT NULL,
+  `license_number` varchar(9) DEFAULT NULL,
+  `licensee` varchar(60) DEFAULT NULL,
+  `type_control` varchar(45) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `mssa` varchar(5) DEFAULT NULL,
+  `hsa` varchar(26) DEFAULT NULL,
+  `hfpa` varchar(4) DEFAULT NULL,
+  `reporting_organization` varchar(95) DEFAULT NULL,
+  `report_start_date` varchar(10) DEFAULT NULL,
+  `report_end_date` varchar(10) DEFAULT NULL,
+  `supplier_diversity_statement` text,
+  `encourage_suppliers` text,
+  `encourage_employees` text,
+  `conduct_outreach_comm` text,
+  `certification_support` text,
+  `require_certification` varchar(3) DEFAULT NULL,
+  `self_certification` varchar(3) DEFAULT NULL,
+  `tier_i_african_american` varchar(8) DEFAULT NULL,
+  `tier_ii_african_american` varchar(7) DEFAULT NULL,
+  `total_african_american` varchar(8) DEFAULT NULL,
+  `tier_i_hispanic_american` varchar(7) DEFAULT NULL,
+  `tier_ii_hispanic_american` varchar(7) DEFAULT NULL,
+  `total_hispanic_american` varchar(7) DEFAULT NULL,
+  `tier_i_native_american` varchar(6) DEFAULT NULL,
+  `tier_ii_native_american` varchar(6) DEFAULT NULL,
+  `total_native_american` varchar(6) DEFAULT NULL,
+  `tier_i_asian_pacific_american` varchar(8) DEFAULT NULL,
+  `tier_ii_asian_pacific_american` varchar(8) DEFAULT NULL,
+  `total_asian_pacific_american` varchar(8) DEFAULT NULL,
+  `tier_i_unknown_minority` varchar(9) DEFAULT NULL,
+  `tier_ii_unknown_minority` varchar(7) DEFAULT NULL,
+  `total_unknown_minority` varchar(9) DEFAULT NULL,
+  `total_tier_i_minority` varchar(9) DEFAULT NULL,
+  `total_tier_ii_minority` varchar(8) DEFAULT NULL,
+  `total_minority` varchar(9) DEFAULT NULL,
+  `tier_i_women` varchar(9) DEFAULT NULL,
+  `tier_ii_women` varchar(7) DEFAULT NULL,
+  `total_women` varchar(9) DEFAULT NULL,
+  `tier_i_lgbt` varchar(8) DEFAULT NULL,
+  `tier_ii_lgbt` varchar(4) DEFAULT NULL,
+  `total_lgbt` varchar(8) DEFAULT NULL,
+  `tier_i_disabled_veteran` varchar(7) DEFAULT NULL,
+  `tier_ii_disabled_veteran` varchar(7) DEFAULT NULL,
+  `total_disabled_veteran` varchar(7) DEFAULT NULL,
+  `tier_i_less_duplicated_amount` varchar(8) DEFAULT NULL,
+  `tier_ii_less_duplicated_amount` varchar(6) DEFAULT NULL,
+  `total_less_duplicated_amount` varchar(8) DEFAULT NULL,
+  `combined_tier_i_total` varchar(9) DEFAULT NULL,
+  `combined_tier_ii_total` varchar(8) DEFAULT NULL,
+  `combined_total` varchar(9) DEFAULT NULL,
+  `total_hospital_procurement` varchar(11) DEFAULT NULL,
+  `contact_name` varchar(51) DEFAULT NULL,
+  `contact_email` varchar(51) DEFAULT NULL,
+  `contact_phone_number` varchar(10) DEFAULT NULL,
+  `website_link` varchar(111) DEFAULT NULL,
+  `third_party` varchar(3) DEFAULT NULL,
+  `third_party_name` varchar(58) DEFAULT NULL,
+  `third_party_website` varchar(137) DEFAULT NULL,
+  `other_relevant_info` text
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `2021_hospital_supplier_diversity_regional_report_extract`
 --
 
@@ -6084,24 +8822,46 @@ CREATE TABLE `2023_2024_provisional_births_by_month_statewide` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `2023_2024_provisional_deaths_by_month_by_county`
+--
+
+DROP TABLE IF EXISTS `2023_2024_provisional_deaths_by_month_by_county`;
+CREATE TABLE `2023_2024_provisional_deaths_by_month_by_county` (
+  `year` varchar(4) DEFAULT NULL,
+  `month` varchar(5) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
+  `strata` varchar(16) DEFAULT NULL,
+  `strata_name` varchar(36) DEFAULT NULL,
+  `cause` varchar(5) DEFAULT NULL,
+  `cause_desc` varchar(53) DEFAULT NULL,
+  `icd_revision` varchar(12) DEFAULT NULL,
+  `count` varchar(5) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
+  `annotation_desc` varchar(38) DEFAULT NULL,
+  `data_extract_date` varchar(17) DEFAULT NULL,
+  `data_revision_date` varchar(18) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `2023_low_income_home_energy_assistance_program_liheap_h_fb0839ed`
 --
 
 DROP TABLE IF EXISTS `2023_low_income_home_energy_assistance_program_liheap_h_fb0839ed`;
 CREATE TABLE `2023_low_income_home_energy_assistance_program_liheap_h_fb0839ed` (
-  `key_str` varchar(3) DEFAULT NULL,
-  `year` varchar(4) DEFAULT NULL,
+  `key_str` varchar(6) DEFAULT NULL,
+  `year_str` varchar(4) DEFAULT NULL,
   `liheap_assistance_type` varchar(24) DEFAULT NULL,
   `county` varchar(16) DEFAULT NULL,
-  `assisted_households` varchar(5) DEFAULT NULL,
-  `under_75pct_poverty` varchar(5) DEFAULT NULL,
-  `75pct_100pct_poverty` varchar(4) DEFAULT NULL,
-  `101pct_125pct_poverty` varchar(5) DEFAULT NULL,
-  `126pct_150pct_poverty` varchar(4) DEFAULT NULL,
-  `over_150pct_poverty` varchar(4) DEFAULT NULL,
-  `60_years_or_older_elderly` varchar(5) DEFAULT NULL,
-  `disabled` varchar(5) DEFAULT NULL,
-  `age_5_years_or_under_young_child` varchar(4) DEFAULT NULL
+  `assisted_households` varchar(19) DEFAULT NULL,
+  `under_75pct_poverty` varchar(17) DEFAULT NULL,
+  `75pct_100pct_poverty` varchar(16) DEFAULT NULL,
+  `101pct_125pct_poverty` varchar(17) DEFAULT NULL,
+  `126pct_150pct_poverty` varchar(17) DEFAULT NULL,
+  `over_150pct_poverty` varchar(17) DEFAULT NULL,
+  `60_years_or_older_elderly` varchar(27) DEFAULT NULL,
+  `disabled` varchar(8) DEFAULT NULL,
+  `age_5_years_or_under_young_child` varchar(34) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6131,15 +8891,15 @@ DROP TABLE IF EXISTS `ab470_adult_demo_by_age_group`;
 CREATE TABLE `ab470_adult_demo_by_age_group` (
   `population_name` varchar(55) DEFAULT NULL,
   `population_type` varchar(55) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `age_grp` varchar(15) DEFAULT NULL,
-  `total_ct` varchar(7) DEFAULT NULL,
-  `total_ct_annot` varchar(1) DEFAULT NULL,
-  `mhs1_ct` varchar(6) DEFAULT NULL,
-  `mhs1_ct_annot` varchar(1) DEFAULT NULL,
-  `mhs5_ct` varchar(6) DEFAULT NULL,
-  `mhs5_ct_annot` varchar(1) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `total_ct` varchar(8) DEFAULT NULL,
+  `total_ct_annot` varchar(14) DEFAULT NULL,
+  `mhs1_ct` varchar(7) DEFAULT NULL,
+  `mhs1_ct_annot` varchar(13) DEFAULT NULL,
+  `mhs5_ct` varchar(7) DEFAULT NULL,
+  `mhs5_ct_annot` varchar(13) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6150,15 +8910,15 @@ DROP TABLE IF EXISTS `ab470_adult_demo_by_language`;
 CREATE TABLE `ab470_adult_demo_by_language` (
   `population_name` varchar(55) DEFAULT NULL,
   `population_type` varchar(55) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `wlang_desc` varchar(54) DEFAULT NULL,
-  `total_ct` varchar(7) DEFAULT NULL,
-  `total_ct_annot` varchar(1) DEFAULT NULL,
-  `mhs1_ct` varchar(6) DEFAULT NULL,
-  `mhs1_ct_annot` varchar(1) DEFAULT NULL,
-  `mhs5_ct` varchar(6) DEFAULT NULL,
-  `mhs5_ct_annot` varchar(1) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `total_ct` varchar(8) DEFAULT NULL,
+  `total_ct_annot` varchar(14) DEFAULT NULL,
+  `mhs1_ct` varchar(7) DEFAULT NULL,
+  `mhs1_ct_annot` varchar(13) DEFAULT NULL,
+  `mhs5_ct` varchar(7) DEFAULT NULL,
+  `mhs5_ct_annot` varchar(13) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6169,15 +8929,15 @@ DROP TABLE IF EXISTS `ab470_adult_demo_by_race_group`;
 CREATE TABLE `ab470_adult_demo_by_race_group` (
   `population_name` varchar(55) DEFAULT NULL,
   `population_type` varchar(55) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `race_grp` varchar(36) DEFAULT NULL,
-  `total_ct` varchar(7) DEFAULT NULL,
-  `total_ct_annot` varchar(1) DEFAULT NULL,
-  `mhs1_ct` varchar(6) DEFAULT NULL,
-  `mhs1_ct_annot` varchar(1) DEFAULT NULL,
-  `mhs5_ct` varchar(6) DEFAULT NULL,
-  `mhs5_ct_annot` varchar(1) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `total_ct` varchar(8) DEFAULT NULL,
+  `total_ct_annot` varchar(14) DEFAULT NULL,
+  `mhs1_ct` varchar(7) DEFAULT NULL,
+  `mhs1_ct_annot` varchar(13) DEFAULT NULL,
+  `mhs5_ct` varchar(7) DEFAULT NULL,
+  `mhs5_ct_annot` varchar(13) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6188,15 +8948,15 @@ DROP TABLE IF EXISTS `ab470_adult_demo_by_sex`;
 CREATE TABLE `ab470_adult_demo_by_sex` (
   `population_name` varchar(55) DEFAULT NULL,
   `population_type` varchar(55) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `sex` varchar(9) DEFAULT NULL,
-  `total_ct` varchar(7) DEFAULT NULL,
-  `total_ct_annot` varchar(1) DEFAULT NULL,
-  `mhs1_ct` varchar(6) DEFAULT NULL,
-  `mhs1_ct_annot` varchar(1) DEFAULT NULL,
-  `mhs5_ct` varchar(6) DEFAULT NULL,
-  `mhs5_ct_annot` varchar(1) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `total_ct` varchar(8) DEFAULT NULL,
+  `total_ct_annot` varchar(14) DEFAULT NULL,
+  `mhs1_ct` varchar(7) DEFAULT NULL,
+  `mhs1_ct_annot` varchar(13) DEFAULT NULL,
+  `mhs5_ct` varchar(7) DEFAULT NULL,
+  `mhs5_ct_annot` varchar(13) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6207,13 +8967,13 @@ DROP TABLE IF EXISTS `ab470_adult_mental_health_services_utilization_by_age_grou
 CREATE TABLE `ab470_adult_mental_health_services_utilization_by_age_group` (
   `population_name` varchar(55) DEFAULT NULL,
   `population_type` varchar(55) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `age_grp` varchar(15) DEFAULT NULL,
   `svc_desc` varchar(52) DEFAULT NULL,
   `unit_type` varchar(13) DEFAULT NULL,
   `amount` varchar(11) DEFAULT NULL,
-  `amount_annot` varchar(1) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `amount_annot` varchar(12) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6224,13 +8984,13 @@ DROP TABLE IF EXISTS `ab470_adult_mental_health_services_utilization_by_language
 CREATE TABLE `ab470_adult_mental_health_services_utilization_by_language` (
   `population_name` varchar(55) DEFAULT NULL,
   `population_type` varchar(55) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `wlang_desc` varchar(54) DEFAULT NULL,
   `svc_desc` varchar(52) DEFAULT NULL,
   `unit_type` varchar(13) DEFAULT NULL,
   `amount` varchar(11) DEFAULT NULL,
-  `amount_annot` varchar(1) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `amount_annot` varchar(12) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6241,13 +9001,13 @@ DROP TABLE IF EXISTS `ab470_adult_mental_health_services_utilization_by_race_gro
 CREATE TABLE `ab470_adult_mental_health_services_utilization_by_race_group` (
   `population_name` varchar(55) DEFAULT NULL,
   `population_type` varchar(55) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `race_grp` varchar(36) DEFAULT NULL,
   `svc_desc` varchar(52) DEFAULT NULL,
   `unit_type` varchar(13) DEFAULT NULL,
   `amount` varchar(11) DEFAULT NULL,
-  `amount_annot` varchar(1) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `amount_annot` varchar(12) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6258,13 +9018,13 @@ DROP TABLE IF EXISTS `ab470_adult_mental_health_services_utilization_by_sex`;
 CREATE TABLE `ab470_adult_mental_health_services_utilization_by_sex` (
   `population_name` varchar(55) DEFAULT NULL,
   `population_type` varchar(55) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `sex` varchar(9) DEFAULT NULL,
   `svc_desc` varchar(52) DEFAULT NULL,
   `unit_type` varchar(13) DEFAULT NULL,
   `amount` varchar(11) DEFAULT NULL,
-  `amount_annot` varchar(1) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `amount_annot` varchar(12) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6275,23 +9035,23 @@ DROP TABLE IF EXISTS `ab470_adult_snapshot_report_by_age_group`;
 CREATE TABLE `ab470_adult_snapshot_report_by_age_group` (
   `population_name` varchar(55) DEFAULT NULL,
   `population_type` varchar(55) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `age_grp` varchar(15) DEFAULT NULL,
-  `arrivals_ct` varchar(5) DEFAULT NULL,
-  `arrivals_ct_annot` varchar(1) DEFAULT NULL,
-  `svc_cont_2yr_ct` varchar(5) DEFAULT NULL,
-  `svc_cont_2yr_ct_annot` varchar(1) DEFAULT NULL,
-  `svc_cont_ct` varchar(5) DEFAULT NULL,
-  `svc_cont_ct_annot` varchar(1) DEFAULT NULL,
-  `exiting_ct` varchar(5) DEFAULT NULL,
-  `exiting_ct_annot` varchar(1) DEFAULT NULL,
-  `arriving_and_exit_ct` varchar(6) DEFAULT NULL,
-  `arriving_and_exit_ct_annot` varchar(1) DEFAULT NULL,
-  `svc_cont_and_exit_ct` varchar(4) DEFAULT NULL,
-  `svc_cont_and_exit_ct_annot` varchar(1) DEFAULT NULL,
-  `total_ct` varchar(6) DEFAULT NULL,
-  `total_ct_annot` varchar(1) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `arrivals_ct` varchar(11) DEFAULT NULL,
+  `arrivals_ct_annot` varchar(17) DEFAULT NULL,
+  `svc_cont_2yr_ct` varchar(15) DEFAULT NULL,
+  `svc_cont_2yr_ct_annot` varchar(21) DEFAULT NULL,
+  `svc_cont_ct` varchar(11) DEFAULT NULL,
+  `svc_cont_ct_annot` varchar(17) DEFAULT NULL,
+  `exiting_ct` varchar(10) DEFAULT NULL,
+  `exiting_ct_annot` varchar(16) DEFAULT NULL,
+  `arriving_and_exit_ct` varchar(20) DEFAULT NULL,
+  `arriving_and_exit_ct_annot` varchar(26) DEFAULT NULL,
+  `svc_cont_and_exit_ct` varchar(20) DEFAULT NULL,
+  `svc_cont_and_exit_ct_annot` varchar(26) DEFAULT NULL,
+  `total_ct` varchar(8) DEFAULT NULL,
+  `total_ct_annot` varchar(14) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6302,23 +9062,23 @@ DROP TABLE IF EXISTS `ab470_adult_snapshot_report_by_language`;
 CREATE TABLE `ab470_adult_snapshot_report_by_language` (
   `population_name` varchar(55) DEFAULT NULL,
   `population_type` varchar(55) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `wlang_desc` varchar(54) DEFAULT NULL,
-  `arrivals_ct` varchar(6) DEFAULT NULL,
-  `arrivals_ct_annot` varchar(1) DEFAULT NULL,
-  `svc_cont_2yr_ct` varchar(5) DEFAULT NULL,
-  `svc_cont_2yr_ct_annot` varchar(1) DEFAULT NULL,
-  `svc_cont_ct` varchar(5) DEFAULT NULL,
-  `svc_cont_ct_annot` varchar(1) DEFAULT NULL,
-  `exiting_ct` varchar(5) DEFAULT NULL,
-  `exiting_ct_annot` varchar(1) DEFAULT NULL,
-  `arriving_and_exit_ct` varchar(6) DEFAULT NULL,
-  `arriving_and_exit_ct_annot` varchar(1) DEFAULT NULL,
-  `svc_cont_and_exit_ct` varchar(5) DEFAULT NULL,
-  `svc_cont_and_exit_ct_annot` varchar(1) DEFAULT NULL,
-  `total_ct` varchar(6) DEFAULT NULL,
-  `total_ct_annot` varchar(1) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `arrivals_ct` varchar(11) DEFAULT NULL,
+  `arrivals_ct_annot` varchar(17) DEFAULT NULL,
+  `svc_cont_2yr_ct` varchar(15) DEFAULT NULL,
+  `svc_cont_2yr_ct_annot` varchar(21) DEFAULT NULL,
+  `svc_cont_ct` varchar(11) DEFAULT NULL,
+  `svc_cont_ct_annot` varchar(17) DEFAULT NULL,
+  `exiting_ct` varchar(10) DEFAULT NULL,
+  `exiting_ct_annot` varchar(16) DEFAULT NULL,
+  `arriving_and_exit_ct` varchar(20) DEFAULT NULL,
+  `arriving_and_exit_ct_annot` varchar(26) DEFAULT NULL,
+  `svc_cont_and_exit_ct` varchar(20) DEFAULT NULL,
+  `svc_cont_and_exit_ct_annot` varchar(26) DEFAULT NULL,
+  `total_ct` varchar(8) DEFAULT NULL,
+  `total_ct_annot` varchar(14) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6329,23 +9089,23 @@ DROP TABLE IF EXISTS `ab470_adult_snapshot_report_by_race_group`;
 CREATE TABLE `ab470_adult_snapshot_report_by_race_group` (
   `population_name` varchar(55) DEFAULT NULL,
   `population_type` varchar(55) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `race_grp` varchar(36) DEFAULT NULL,
-  `arrivals_ct` varchar(5) DEFAULT NULL,
-  `arrivals_ct_annot` varchar(1) DEFAULT NULL,
-  `svc_cont_2yr_ct` varchar(5) DEFAULT NULL,
-  `svc_cont_2yr_ct_annot` varchar(1) DEFAULT NULL,
-  `svc_cont_ct` varchar(5) DEFAULT NULL,
-  `svc_cont_ct_annot` varchar(1) DEFAULT NULL,
-  `exiting_ct` varchar(5) DEFAULT NULL,
-  `exiting_ct_annot` varchar(1) DEFAULT NULL,
-  `arriving_and_exit_ct` varchar(6) DEFAULT NULL,
-  `arriving_and_exit_ct_annot` varchar(1) DEFAULT NULL,
-  `svc_cont_and_exit_ct` varchar(4) DEFAULT NULL,
-  `svc_cont_and_exit_ct_annot` varchar(1) DEFAULT NULL,
-  `total_ct` varchar(6) DEFAULT NULL,
-  `total_ct_annot` varchar(1) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `arrivals_ct` varchar(11) DEFAULT NULL,
+  `arrivals_ct_annot` varchar(17) DEFAULT NULL,
+  `svc_cont_2yr_ct` varchar(15) DEFAULT NULL,
+  `svc_cont_2yr_ct_annot` varchar(21) DEFAULT NULL,
+  `svc_cont_ct` varchar(11) DEFAULT NULL,
+  `svc_cont_ct_annot` varchar(17) DEFAULT NULL,
+  `exiting_ct` varchar(10) DEFAULT NULL,
+  `exiting_ct_annot` varchar(16) DEFAULT NULL,
+  `arriving_and_exit_ct` varchar(20) DEFAULT NULL,
+  `arriving_and_exit_ct_annot` varchar(26) DEFAULT NULL,
+  `svc_cont_and_exit_ct` varchar(20) DEFAULT NULL,
+  `svc_cont_and_exit_ct_annot` varchar(26) DEFAULT NULL,
+  `total_ct` varchar(8) DEFAULT NULL,
+  `total_ct_annot` varchar(14) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6356,23 +9116,23 @@ DROP TABLE IF EXISTS `ab470_adult_snapshot_report_by_sex`;
 CREATE TABLE `ab470_adult_snapshot_report_by_sex` (
   `population_name` varchar(55) DEFAULT NULL,
   `population_type` varchar(55) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `sex` varchar(9) DEFAULT NULL,
-  `arrivals_ct` varchar(5) DEFAULT NULL,
-  `arrivals_ct_annot` varchar(1) DEFAULT NULL,
-  `svc_cont_2yr_ct` varchar(5) DEFAULT NULL,
-  `svc_cont_2yr_ct_annot` varchar(1) DEFAULT NULL,
-  `svc_cont_ct` varchar(5) DEFAULT NULL,
-  `svc_cont_ct_annot` varchar(1) DEFAULT NULL,
-  `exiting_ct` varchar(5) DEFAULT NULL,
-  `exiting_ct_annot` varchar(1) DEFAULT NULL,
-  `arriving_and_exit_ct` varchar(6) DEFAULT NULL,
-  `arriving_and_exit_ct_annot` varchar(1) DEFAULT NULL,
-  `svc_cont_and_exit_ct` varchar(5) DEFAULT NULL,
-  `svc_cont_and_exit_ct_annot` varchar(1) DEFAULT NULL,
-  `total_ct` varchar(6) DEFAULT NULL,
-  `total_ct_annot` varchar(1) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `arrivals_ct` varchar(11) DEFAULT NULL,
+  `arrivals_ct_annot` varchar(17) DEFAULT NULL,
+  `svc_cont_2yr_ct` varchar(15) DEFAULT NULL,
+  `svc_cont_2yr_ct_annot` varchar(21) DEFAULT NULL,
+  `svc_cont_ct` varchar(11) DEFAULT NULL,
+  `svc_cont_ct_annot` varchar(17) DEFAULT NULL,
+  `exiting_ct` varchar(10) DEFAULT NULL,
+  `exiting_ct_annot` varchar(16) DEFAULT NULL,
+  `arriving_and_exit_ct` varchar(20) DEFAULT NULL,
+  `arriving_and_exit_ct_annot` varchar(26) DEFAULT NULL,
+  `svc_cont_and_exit_ct` varchar(20) DEFAULT NULL,
+  `svc_cont_and_exit_ct_annot` varchar(26) DEFAULT NULL,
+  `total_ct` varchar(8) DEFAULT NULL,
+  `total_ct_annot` varchar(14) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6383,22 +9143,22 @@ DROP TABLE IF EXISTS `ab470_adult_time_to_step_down_by_age_group`;
 CREATE TABLE `ab470_adult_time_to_step_down_by_age_group` (
   `population_name` varchar(55) DEFAULT NULL,
   `population_type` varchar(55) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `age_grp` varchar(15) DEFAULT NULL,
-  `less7_ct` varchar(5) DEFAULT NULL,
-  `less7_ct_annot` varchar(1) DEFAULT NULL,
-  `between_8and30_ct` varchar(4) DEFAULT NULL,
-  `between_8and30_ct_annot` varchar(1) DEFAULT NULL,
-  `more30_ct` varchar(4) DEFAULT NULL,
-  `more30_ct_annot` varchar(1) DEFAULT NULL,
-  `no_step_ct` varchar(5) DEFAULT NULL,
-  `no_step_ct_annot` varchar(1) DEFAULT NULL,
-  `min_days` varchar(4) DEFAULT NULL,
-  `max_days` varchar(3) DEFAULT NULL,
+  `less7_ct` varchar(8) DEFAULT NULL,
+  `less7_ct_annot` varchar(14) DEFAULT NULL,
+  `between_8and30_ct` varchar(17) DEFAULT NULL,
+  `between_8and30_ct_annot` varchar(23) DEFAULT NULL,
+  `more30_ct` varchar(9) DEFAULT NULL,
+  `more30_ct_annot` varchar(15) DEFAULT NULL,
+  `no_step_ct` varchar(10) DEFAULT NULL,
+  `no_step_ct_annot` varchar(16) DEFAULT NULL,
+  `min_days` varchar(8) DEFAULT NULL,
+  `max_days` varchar(8) DEFAULT NULL,
   `mean_days` varchar(11) DEFAULT NULL,
-  `median_days` varchar(5) DEFAULT NULL,
-  `bene_count` varchar(5) DEFAULT NULL,
-  `bene_count_annot` varchar(1) DEFAULT NULL
+  `median_days` varchar(11) DEFAULT NULL,
+  `bene_count` varchar(10) DEFAULT NULL,
+  `bene_count_annot` varchar(16) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6409,22 +9169,22 @@ DROP TABLE IF EXISTS `ab470_adult_time_to_step_down_by_language`;
 CREATE TABLE `ab470_adult_time_to_step_down_by_language` (
   `population_name` varchar(55) DEFAULT NULL,
   `population_type` varchar(55) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `wlang_desc` varchar(54) DEFAULT NULL,
-  `less7_ct` varchar(5) DEFAULT NULL,
-  `less7_ct_annot` varchar(1) DEFAULT NULL,
-  `between_8and30_ct` varchar(4) DEFAULT NULL,
-  `between_8and30_ct_annot` varchar(1) DEFAULT NULL,
-  `more30_ct` varchar(4) DEFAULT NULL,
-  `more30_ct_annot` varchar(1) DEFAULT NULL,
-  `no_step_ct` varchar(5) DEFAULT NULL,
-  `no_step_ct_annot` varchar(1) DEFAULT NULL,
-  `min_days` varchar(4) DEFAULT NULL,
-  `max_days` varchar(3) DEFAULT NULL,
+  `less7_ct` varchar(8) DEFAULT NULL,
+  `less7_ct_annot` varchar(14) DEFAULT NULL,
+  `between_8and30_ct` varchar(17) DEFAULT NULL,
+  `between_8and30_ct_annot` varchar(23) DEFAULT NULL,
+  `more30_ct` varchar(9) DEFAULT NULL,
+  `more30_ct_annot` varchar(15) DEFAULT NULL,
+  `no_step_ct` varchar(10) DEFAULT NULL,
+  `no_step_ct_annot` varchar(16) DEFAULT NULL,
+  `min_days` varchar(8) DEFAULT NULL,
+  `max_days` varchar(8) DEFAULT NULL,
   `mean_days` varchar(11) DEFAULT NULL,
-  `median_days` varchar(5) DEFAULT NULL,
-  `bene_count` varchar(5) DEFAULT NULL,
-  `bene_count_annot` varchar(1) DEFAULT NULL
+  `median_days` varchar(11) DEFAULT NULL,
+  `bene_count` varchar(10) DEFAULT NULL,
+  `bene_count_annot` varchar(16) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6435,22 +9195,22 @@ DROP TABLE IF EXISTS `ab470_adult_time_to_step_down_by_race_group`;
 CREATE TABLE `ab470_adult_time_to_step_down_by_race_group` (
   `population_name` varchar(55) DEFAULT NULL,
   `population_type` varchar(55) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `race_grp` varchar(36) DEFAULT NULL,
-  `less7_ct` varchar(5) DEFAULT NULL,
-  `less7_ct_annot` varchar(1) DEFAULT NULL,
-  `between_8and30_ct` varchar(4) DEFAULT NULL,
-  `between_8and30_ct_annot` varchar(1) DEFAULT NULL,
-  `more30_ct` varchar(4) DEFAULT NULL,
-  `more30_ct_annot` varchar(1) DEFAULT NULL,
-  `no_step_ct` varchar(5) DEFAULT NULL,
-  `no_step_ct_annot` varchar(1) DEFAULT NULL,
-  `min_days` varchar(4) DEFAULT NULL,
-  `max_days` varchar(3) DEFAULT NULL,
+  `less7_ct` varchar(8) DEFAULT NULL,
+  `less7_ct_annot` varchar(14) DEFAULT NULL,
+  `between_8and30_ct` varchar(17) DEFAULT NULL,
+  `between_8and30_ct_annot` varchar(23) DEFAULT NULL,
+  `more30_ct` varchar(9) DEFAULT NULL,
+  `more30_ct_annot` varchar(15) DEFAULT NULL,
+  `no_step_ct` varchar(10) DEFAULT NULL,
+  `no_step_ct_annot` varchar(16) DEFAULT NULL,
+  `min_days` varchar(8) DEFAULT NULL,
+  `max_days` varchar(8) DEFAULT NULL,
   `mean_days` varchar(11) DEFAULT NULL,
-  `median_days` varchar(5) DEFAULT NULL,
-  `bene_count` varchar(4) DEFAULT NULL,
-  `bene_count_annot` varchar(1) DEFAULT NULL
+  `median_days` varchar(11) DEFAULT NULL,
+  `bene_count` varchar(10) DEFAULT NULL,
+  `bene_count_annot` varchar(16) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6461,22 +9221,22 @@ DROP TABLE IF EXISTS `ab470_adult_time_to_step_down_by_sex`;
 CREATE TABLE `ab470_adult_time_to_step_down_by_sex` (
   `population_name` varchar(55) DEFAULT NULL,
   `population_type` varchar(55) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `sex` varchar(9) DEFAULT NULL,
-  `less7_ct` varchar(5) DEFAULT NULL,
-  `less7_ct_annot` varchar(1) DEFAULT NULL,
-  `between_8and30_ct` varchar(4) DEFAULT NULL,
-  `between_8and30_ct_annot` varchar(1) DEFAULT NULL,
-  `more30_ct` varchar(4) DEFAULT NULL,
-  `more30_ct_annot` varchar(1) DEFAULT NULL,
-  `no_step_ct` varchar(5) DEFAULT NULL,
-  `no_step_ct_annot` varchar(1) DEFAULT NULL,
-  `min_days` varchar(4) DEFAULT NULL,
-  `max_days` varchar(3) DEFAULT NULL,
+  `less7_ct` varchar(8) DEFAULT NULL,
+  `less7_ct_annot` varchar(14) DEFAULT NULL,
+  `between_8and30_ct` varchar(17) DEFAULT NULL,
+  `between_8and30_ct_annot` varchar(23) DEFAULT NULL,
+  `more30_ct` varchar(9) DEFAULT NULL,
+  `more30_ct_annot` varchar(15) DEFAULT NULL,
+  `no_step_ct` varchar(10) DEFAULT NULL,
+  `no_step_ct_annot` varchar(16) DEFAULT NULL,
+  `min_days` varchar(8) DEFAULT NULL,
+  `max_days` varchar(8) DEFAULT NULL,
   `mean_days` varchar(11) DEFAULT NULL,
-  `median_days` varchar(5) DEFAULT NULL,
-  `bene_count` varchar(5) DEFAULT NULL,
-  `bene_count_annot` varchar(1) DEFAULT NULL
+  `median_days` varchar(11) DEFAULT NULL,
+  `bene_count` varchar(10) DEFAULT NULL,
+  `bene_count_annot` varchar(16) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6485,14 +9245,14 @@ CREATE TABLE `ab470_adult_time_to_step_down_by_sex` (
 
 DROP TABLE IF EXISTS `ab470_adult_top_10_icd10_diag_code_categories_by_age_group`;
 CREATE TABLE `ab470_adult_top_10_icd10_diag_code_categories_by_age_group` (
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `age_grp` varchar(15) DEFAULT NULL,
   `dx_top10_desc` varchar(80) DEFAULT NULL,
-  `mhs1_ct` varchar(6) DEFAULT NULL,
-  `mhs1_ct_annot` varchar(0) DEFAULT NULL,
-  `mhs5_ct` varchar(5) DEFAULT NULL,
-  `mhs5_ct_annot` varchar(0) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `mhs1_ct` varchar(7) DEFAULT NULL,
+  `mhs1_ct_annot` varchar(13) DEFAULT NULL,
+  `mhs5_ct` varchar(7) DEFAULT NULL,
+  `mhs5_ct_annot` varchar(13) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6501,14 +9261,14 @@ CREATE TABLE `ab470_adult_top_10_icd10_diag_code_categories_by_age_group` (
 
 DROP TABLE IF EXISTS `ab470_adult_top_10_icd10_diag_code_categories_by_language`;
 CREATE TABLE `ab470_adult_top_10_icd10_diag_code_categories_by_language` (
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `wlang_desc` varchar(54) DEFAULT NULL,
   `dx_top10_desc` varchar(101) DEFAULT NULL,
-  `mhs1_ct` varchar(6) DEFAULT NULL,
-  `mhs1_ct_annot` varchar(1) DEFAULT NULL,
-  `mhs5_ct` varchar(5) DEFAULT NULL,
-  `mhs5_ct_annot` varchar(1) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `mhs1_ct` varchar(7) DEFAULT NULL,
+  `mhs1_ct_annot` varchar(13) DEFAULT NULL,
+  `mhs5_ct` varchar(7) DEFAULT NULL,
+  `mhs5_ct_annot` varchar(13) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6517,14 +9277,14 @@ CREATE TABLE `ab470_adult_top_10_icd10_diag_code_categories_by_language` (
 
 DROP TABLE IF EXISTS `ab470_adult_top_10_icd10_diag_code_categories_by_race_group`;
 CREATE TABLE `ab470_adult_top_10_icd10_diag_code_categories_by_race_group` (
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `race_grp` varchar(36) DEFAULT NULL,
   `dx_top10_desc` varchar(80) DEFAULT NULL,
-  `mhs1_ct` varchar(6) DEFAULT NULL,
-  `mhs1_ct_annot` varchar(0) DEFAULT NULL,
-  `mhs5_ct` varchar(5) DEFAULT NULL,
-  `mhs5_ct_annot` varchar(0) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `mhs1_ct` varchar(7) DEFAULT NULL,
+  `mhs1_ct_annot` varchar(13) DEFAULT NULL,
+  `mhs5_ct` varchar(7) DEFAULT NULL,
+  `mhs5_ct_annot` varchar(13) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6533,14 +9293,14 @@ CREATE TABLE `ab470_adult_top_10_icd10_diag_code_categories_by_race_group` (
 
 DROP TABLE IF EXISTS `ab470_adult_top_10_icd10_diag_code_categories_by_sex`;
 CREATE TABLE `ab470_adult_top_10_icd10_diag_code_categories_by_sex` (
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `sex` varchar(9) DEFAULT NULL,
   `dx_top10_desc` varchar(80) DEFAULT NULL,
-  `mhs1_ct` varchar(6) DEFAULT NULL,
-  `mhs1_ct_annot` varchar(0) DEFAULT NULL,
-  `mhs5_ct` varchar(5) DEFAULT NULL,
-  `mhs5_ct_annot` varchar(0) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `mhs1_ct` varchar(7) DEFAULT NULL,
+  `mhs1_ct_annot` varchar(13) DEFAULT NULL,
+  `mhs5_ct` varchar(7) DEFAULT NULL,
+  `mhs5_ct_annot` varchar(13) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6551,15 +9311,15 @@ DROP TABLE IF EXISTS `ab470_youth_demographics_by_age`;
 CREATE TABLE `ab470_youth_demographics_by_age` (
   `population_name` varchar(53) DEFAULT NULL,
   `population_type` varchar(53) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `age_grp` varchar(17) DEFAULT NULL,
-  `total_ct` varchar(7) DEFAULT NULL,
-  `total_ct_annot` varchar(1) DEFAULT NULL,
-  `mhs1_ct` varchar(6) DEFAULT NULL,
-  `mhs1_ct_annot` varchar(1) DEFAULT NULL,
-  `mhs5_ct` varchar(5) DEFAULT NULL,
-  `mhs5_ct_annot` varchar(1) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `total_ct` varchar(8) DEFAULT NULL,
+  `total_ct_annot` varchar(14) DEFAULT NULL,
+  `mhs1_ct` varchar(7) DEFAULT NULL,
+  `mhs1_ct_annot` varchar(13) DEFAULT NULL,
+  `mhs5_ct` varchar(7) DEFAULT NULL,
+  `mhs5_ct_annot` varchar(13) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6570,15 +9330,15 @@ DROP TABLE IF EXISTS `ab470_youth_demographics_by_language`;
 CREATE TABLE `ab470_youth_demographics_by_language` (
   `population_name` varchar(53) DEFAULT NULL,
   `population_type` varchar(53) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `wlang_desc` varchar(54) DEFAULT NULL,
-  `total_ct` varchar(7) DEFAULT NULL,
-  `total_ct_annot` varchar(1) DEFAULT NULL,
-  `mhs1_ct` varchar(6) DEFAULT NULL,
-  `mhs1_ct_annot` varchar(1) DEFAULT NULL,
-  `mhs5_ct` varchar(6) DEFAULT NULL,
-  `mhs5_ct_annot` varchar(1) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `total_ct` varchar(8) DEFAULT NULL,
+  `total_ct_annot` varchar(14) DEFAULT NULL,
+  `mhs1_ct` varchar(7) DEFAULT NULL,
+  `mhs1_ct_annot` varchar(13) DEFAULT NULL,
+  `mhs5_ct` varchar(7) DEFAULT NULL,
+  `mhs5_ct_annot` varchar(13) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6589,15 +9349,15 @@ DROP TABLE IF EXISTS `ab470_youth_demographics_by_race`;
 CREATE TABLE `ab470_youth_demographics_by_race` (
   `population_name` varchar(53) DEFAULT NULL,
   `population_type` varchar(53) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `race_grp` varchar(36) DEFAULT NULL,
-  `total_ct` varchar(7) DEFAULT NULL,
-  `total_ct_annot` varchar(1) DEFAULT NULL,
-  `mhs1_ct` varchar(6) DEFAULT NULL,
-  `mhs1_ct_annot` varchar(1) DEFAULT NULL,
-  `mhs5_ct` varchar(6) DEFAULT NULL,
-  `mhs5_ct_annot` varchar(1) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `total_ct` varchar(8) DEFAULT NULL,
+  `total_ct_annot` varchar(14) DEFAULT NULL,
+  `mhs1_ct` varchar(7) DEFAULT NULL,
+  `mhs1_ct_annot` varchar(13) DEFAULT NULL,
+  `mhs5_ct` varchar(7) DEFAULT NULL,
+  `mhs5_ct_annot` varchar(13) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6608,79 +9368,79 @@ DROP TABLE IF EXISTS `ab470_youth_demographics_by_sex`;
 CREATE TABLE `ab470_youth_demographics_by_sex` (
   `population_name` varchar(53) DEFAULT NULL,
   `population_type` varchar(53) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `sex` varchar(9) DEFAULT NULL,
-  `total_ct` varchar(7) DEFAULT NULL,
-  `total_ct_annot` varchar(1) DEFAULT NULL,
-  `mhs1_ct` varchar(6) DEFAULT NULL,
-  `mhs1_ct_annot` varchar(1) DEFAULT NULL,
-  `mhs5_ct` varchar(6) DEFAULT NULL,
-  `mhs5_ct_annot` varchar(1) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `total_ct` varchar(8) DEFAULT NULL,
+  `total_ct_annot` varchar(14) DEFAULT NULL,
+  `mhs1_ct` varchar(7) DEFAULT NULL,
+  `mhs1_ct_annot` varchar(13) DEFAULT NULL,
+  `mhs5_ct` varchar(7) DEFAULT NULL,
+  `mhs5_ct_annot` varchar(13) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `ab470_youth_diagnosis_by_age`
+-- Table structure for table `ab470_youth_diag_code_categories_by_age`
 --
 
-DROP TABLE IF EXISTS `ab470_youth_diagnosis_by_age`;
-CREATE TABLE `ab470_youth_diagnosis_by_age` (
-  `fiscal_year` varchar(4) DEFAULT NULL,
+DROP TABLE IF EXISTS `ab470_youth_diag_code_categories_by_age`;
+CREATE TABLE `ab470_youth_diag_code_categories_by_age` (
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `age_grp` varchar(17) DEFAULT NULL,
   `dx_top10_desc` varchar(101) DEFAULT NULL,
-  `mhs1_ct` varchar(6) DEFAULT NULL,
-  `mhs1_ct_annot` varchar(0) DEFAULT NULL,
-  `mhs5_ct` varchar(5) DEFAULT NULL,
-  `mhs5_ct_annot` varchar(1) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `mhs1_ct` varchar(7) DEFAULT NULL,
+  `mhs1_ct_annot` varchar(13) DEFAULT NULL,
+  `mhs5_ct` varchar(7) DEFAULT NULL,
+  `mhs5_ct_annot` varchar(13) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `ab470_youth_diagnosis_by_language`
+-- Table structure for table `ab470_youth_diag_code_categories_by_language`
 --
 
-DROP TABLE IF EXISTS `ab470_youth_diagnosis_by_language`;
-CREATE TABLE `ab470_youth_diagnosis_by_language` (
-  `fiscal_year` varchar(4) DEFAULT NULL,
+DROP TABLE IF EXISTS `ab470_youth_diag_code_categories_by_language`;
+CREATE TABLE `ab470_youth_diag_code_categories_by_language` (
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `wlang_desc` varchar(54) DEFAULT NULL,
   `dx_top10_desc` varchar(101) DEFAULT NULL,
-  `mhs1_ct` varchar(6) DEFAULT NULL,
-  `mhs1_ct_annot` varchar(1) DEFAULT NULL,
-  `mhs5_ct` varchar(5) DEFAULT NULL,
-  `mhs5_ct_annot` varchar(1) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `mhs1_ct` varchar(7) DEFAULT NULL,
+  `mhs1_ct_annot` varchar(13) DEFAULT NULL,
+  `mhs5_ct` varchar(7) DEFAULT NULL,
+  `mhs5_ct_annot` varchar(13) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `ab470_youth_diagnosis_by_race`
+-- Table structure for table `ab470_youth_diag_code_categories_by_race`
 --
 
-DROP TABLE IF EXISTS `ab470_youth_diagnosis_by_race`;
-CREATE TABLE `ab470_youth_diagnosis_by_race` (
-  `fiscal_year` varchar(4) DEFAULT NULL,
+DROP TABLE IF EXISTS `ab470_youth_diag_code_categories_by_race`;
+CREATE TABLE `ab470_youth_diag_code_categories_by_race` (
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `race_grp` varchar(36) DEFAULT NULL,
   `dx_top10_desc` varchar(101) DEFAULT NULL,
-  `mhs1_ct` varchar(6) DEFAULT NULL,
-  `mhs1_ct_annot` varchar(0) DEFAULT NULL,
-  `mhs5_ct` varchar(5) DEFAULT NULL,
-  `mhs5_ct_annot` varchar(1) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `mhs1_ct` varchar(7) DEFAULT NULL,
+  `mhs1_ct_annot` varchar(13) DEFAULT NULL,
+  `mhs5_ct` varchar(7) DEFAULT NULL,
+  `mhs5_ct_annot` varchar(13) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `ab470_youth_diagnosis_by_sex`
+-- Table structure for table `ab470_youth_diag_code_categories_by_sex`
 --
 
-DROP TABLE IF EXISTS `ab470_youth_diagnosis_by_sex`;
-CREATE TABLE `ab470_youth_diagnosis_by_sex` (
-  `fiscal_year` varchar(4) DEFAULT NULL,
+DROP TABLE IF EXISTS `ab470_youth_diag_code_categories_by_sex`;
+CREATE TABLE `ab470_youth_diag_code_categories_by_sex` (
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `sex` varchar(9) DEFAULT NULL,
   `dx_top10_desc` varchar(58) DEFAULT NULL,
-  `mhs1_ct` varchar(6) DEFAULT NULL,
-  `mhs1_ct_annot` varchar(0) DEFAULT NULL,
-  `mhs5_ct` varchar(5) DEFAULT NULL,
-  `mhs5_ct_annot` varchar(0) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `mhs1_ct` varchar(7) DEFAULT NULL,
+  `mhs1_ct_annot` varchar(13) DEFAULT NULL,
+  `mhs5_ct` varchar(7) DEFAULT NULL,
+  `mhs5_ct_annot` varchar(13) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6691,23 +9451,23 @@ DROP TABLE IF EXISTS `ab470_youth_snapshot_by_age`;
 CREATE TABLE `ab470_youth_snapshot_by_age` (
   `population_name` varchar(53) DEFAULT NULL,
   `population_type` varchar(53) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `age_grp` varchar(17) DEFAULT NULL,
-  `arrivals_ct` varchar(5) DEFAULT NULL,
-  `arrivals_ct_annot` varchar(1) DEFAULT NULL,
-  `svc_cont_2yr_ct` varchar(5) DEFAULT NULL,
-  `svc_cont_2yr_ct_annot` varchar(1) DEFAULT NULL,
-  `svc_cont_ct` varchar(5) DEFAULT NULL,
-  `svc_cont_ct_annot` varchar(1) DEFAULT NULL,
-  `exiting_ct` varchar(5) DEFAULT NULL,
-  `exiting_ct_annot` varchar(1) DEFAULT NULL,
-  `arriving_and_exit_ct` varchar(6) DEFAULT NULL,
-  `arriving_and_exit_ct_annot` varchar(1) DEFAULT NULL,
-  `svc_cont_and_exit_ct` varchar(4) DEFAULT NULL,
-  `svc_cont_and_exit_ct_annot` varchar(1) DEFAULT NULL,
-  `total_ct` varchar(6) DEFAULT NULL,
-  `total_ct_annot` varchar(1) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `arrivals_ct` varchar(11) DEFAULT NULL,
+  `arrivals_ct_annot` varchar(17) DEFAULT NULL,
+  `svc_cont_2yr_ct` varchar(15) DEFAULT NULL,
+  `svc_cont_2yr_ct_annot` varchar(21) DEFAULT NULL,
+  `svc_cont_ct` varchar(11) DEFAULT NULL,
+  `svc_cont_ct_annot` varchar(17) DEFAULT NULL,
+  `exiting_ct` varchar(10) DEFAULT NULL,
+  `exiting_ct_annot` varchar(16) DEFAULT NULL,
+  `arriving_and_exit_ct` varchar(20) DEFAULT NULL,
+  `arriving_and_exit_ct_annot` varchar(26) DEFAULT NULL,
+  `svc_cont_and_exit_ct` varchar(20) DEFAULT NULL,
+  `svc_cont_and_exit_ct_annot` varchar(26) DEFAULT NULL,
+  `total_ct` varchar(8) DEFAULT NULL,
+  `total_ct_annot` varchar(14) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6718,23 +9478,23 @@ DROP TABLE IF EXISTS `ab470_youth_snapshot_by_language`;
 CREATE TABLE `ab470_youth_snapshot_by_language` (
   `population_name` varchar(53) DEFAULT NULL,
   `population_type` varchar(53) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `wlang_desc` varchar(54) DEFAULT NULL,
-  `arrivals_ct` varchar(5) DEFAULT NULL,
-  `arrivals_ct_annot` varchar(1) DEFAULT NULL,
-  `svc_cont_2yr_ct` varchar(5) DEFAULT NULL,
-  `svc_cont_2yr_ct_annot` varchar(1) DEFAULT NULL,
-  `svc_cont_ct` varchar(5) DEFAULT NULL,
-  `svc_cont_ct_annot` varchar(1) DEFAULT NULL,
-  `exiting_ct` varchar(5) DEFAULT NULL,
-  `exiting_ct_annot` varchar(1) DEFAULT NULL,
-  `arriving_and_exit_ct` varchar(6) DEFAULT NULL,
-  `arriving_and_exit_ct_annot` varchar(1) DEFAULT NULL,
-  `svc_cont_and_exit_ct` varchar(5) DEFAULT NULL,
-  `svc_cont_and_exit_ct_annot` varchar(1) DEFAULT NULL,
-  `total_ct` varchar(6) DEFAULT NULL,
-  `total_ct_annot` varchar(1) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `arrivals_ct` varchar(11) DEFAULT NULL,
+  `arrivals_ct_annot` varchar(17) DEFAULT NULL,
+  `svc_cont_2yr_ct` varchar(15) DEFAULT NULL,
+  `svc_cont_2yr_ct_annot` varchar(21) DEFAULT NULL,
+  `svc_cont_ct` varchar(11) DEFAULT NULL,
+  `svc_cont_ct_annot` varchar(17) DEFAULT NULL,
+  `exiting_ct` varchar(10) DEFAULT NULL,
+  `exiting_ct_annot` varchar(16) DEFAULT NULL,
+  `arriving_and_exit_ct` varchar(20) DEFAULT NULL,
+  `arriving_and_exit_ct_annot` varchar(26) DEFAULT NULL,
+  `svc_cont_and_exit_ct` varchar(20) DEFAULT NULL,
+  `svc_cont_and_exit_ct_annot` varchar(26) DEFAULT NULL,
+  `total_ct` varchar(8) DEFAULT NULL,
+  `total_ct_annot` varchar(14) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6745,23 +9505,23 @@ DROP TABLE IF EXISTS `ab470_youth_snapshot_by_race`;
 CREATE TABLE `ab470_youth_snapshot_by_race` (
   `population_name` varchar(53) DEFAULT NULL,
   `population_type` varchar(53) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `race_grp` varchar(36) DEFAULT NULL,
-  `arrivals_ct` varchar(5) DEFAULT NULL,
-  `arrivals_ct_annot` varchar(1) DEFAULT NULL,
-  `svc_cont_2yr_ct` varchar(5) DEFAULT NULL,
-  `svc_cont_2yr_ct_annot` varchar(1) DEFAULT NULL,
-  `svc_cont_ct` varchar(5) DEFAULT NULL,
-  `svc_cont_ct_annot` varchar(1) DEFAULT NULL,
-  `exiting_ct` varchar(5) DEFAULT NULL,
-  `exiting_ct_annot` varchar(1) DEFAULT NULL,
-  `arriving_and_exit_ct` varchar(6) DEFAULT NULL,
-  `arriving_and_exit_ct_annot` varchar(1) DEFAULT NULL,
-  `svc_cont_and_exit_ct` varchar(4) DEFAULT NULL,
-  `svc_cont_and_exit_ct_annot` varchar(1) DEFAULT NULL,
-  `total_ct` varchar(6) DEFAULT NULL,
-  `total_ct_annot` varchar(1) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `arrivals_ct` varchar(11) DEFAULT NULL,
+  `arrivals_ct_annot` varchar(17) DEFAULT NULL,
+  `svc_cont_2yr_ct` varchar(15) DEFAULT NULL,
+  `svc_cont_2yr_ct_annot` varchar(21) DEFAULT NULL,
+  `svc_cont_ct` varchar(11) DEFAULT NULL,
+  `svc_cont_ct_annot` varchar(17) DEFAULT NULL,
+  `exiting_ct` varchar(10) DEFAULT NULL,
+  `exiting_ct_annot` varchar(16) DEFAULT NULL,
+  `arriving_and_exit_ct` varchar(20) DEFAULT NULL,
+  `arriving_and_exit_ct_annot` varchar(26) DEFAULT NULL,
+  `svc_cont_and_exit_ct` varchar(20) DEFAULT NULL,
+  `svc_cont_and_exit_ct_annot` varchar(26) DEFAULT NULL,
+  `total_ct` varchar(8) DEFAULT NULL,
+  `total_ct_annot` varchar(14) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6772,23 +9532,23 @@ DROP TABLE IF EXISTS `ab470_youth_snapshot_by_sex`;
 CREATE TABLE `ab470_youth_snapshot_by_sex` (
   `population_name` varchar(53) DEFAULT NULL,
   `population_type` varchar(53) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `sex` varchar(9) DEFAULT NULL,
-  `arrivals_ct` varchar(5) DEFAULT NULL,
-  `arrivals_ct_annot` varchar(1) DEFAULT NULL,
-  `svc_cont_2yr_ct` varchar(5) DEFAULT NULL,
-  `svc_cont_2yr_ct_annot` varchar(1) DEFAULT NULL,
-  `svc_cont_ct` varchar(5) DEFAULT NULL,
-  `svc_cont_ct_annot` varchar(1) DEFAULT NULL,
-  `exiting_ct` varchar(5) DEFAULT NULL,
-  `exiting_ct_annot` varchar(1) DEFAULT NULL,
-  `arriving_and_exit_ct` varchar(6) DEFAULT NULL,
-  `arriving_and_exit_ct_annot` varchar(1) DEFAULT NULL,
-  `svc_cont_and_exit_ct` varchar(4) DEFAULT NULL,
-  `svc_cont_and_exit_ct_annot` varchar(1) DEFAULT NULL,
-  `total_ct` varchar(6) DEFAULT NULL,
-  `total_ct_annot` varchar(1) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `arrivals_ct` varchar(11) DEFAULT NULL,
+  `arrivals_ct_annot` varchar(17) DEFAULT NULL,
+  `svc_cont_2yr_ct` varchar(15) DEFAULT NULL,
+  `svc_cont_2yr_ct_annot` varchar(21) DEFAULT NULL,
+  `svc_cont_ct` varchar(11) DEFAULT NULL,
+  `svc_cont_ct_annot` varchar(17) DEFAULT NULL,
+  `exiting_ct` varchar(10) DEFAULT NULL,
+  `exiting_ct_annot` varchar(16) DEFAULT NULL,
+  `arriving_and_exit_ct` varchar(20) DEFAULT NULL,
+  `arriving_and_exit_ct_annot` varchar(26) DEFAULT NULL,
+  `svc_cont_and_exit_ct` varchar(20) DEFAULT NULL,
+  `svc_cont_and_exit_ct_annot` varchar(26) DEFAULT NULL,
+  `total_ct` varchar(8) DEFAULT NULL,
+  `total_ct_annot` varchar(14) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6799,22 +9559,22 @@ DROP TABLE IF EXISTS `ab470_youth_time_to_step_down_by_age`;
 CREATE TABLE `ab470_youth_time_to_step_down_by_age` (
   `population_name` varchar(53) DEFAULT NULL,
   `population_type` varchar(53) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `age_grp` varchar(17) DEFAULT NULL,
-  `less7_ct` varchar(4) DEFAULT NULL,
-  `less7_ct_annot` varchar(1) DEFAULT NULL,
-  `between_8and30_ct` varchar(4) DEFAULT NULL,
-  `between_8and30_ct_annot` varchar(1) DEFAULT NULL,
-  `more30_ct` varchar(3) DEFAULT NULL,
-  `more30_ct_annot` varchar(1) DEFAULT NULL,
-  `no_step_ct` varchar(5) DEFAULT NULL,
-  `no_step_ct_annot` varchar(1) DEFAULT NULL,
-  `min_days` varchar(3) DEFAULT NULL,
-  `max_days` varchar(3) DEFAULT NULL,
+  `less7_ct` varchar(8) DEFAULT NULL,
+  `less7_ct_annot` varchar(14) DEFAULT NULL,
+  `between_8and30_ct` varchar(17) DEFAULT NULL,
+  `between_8and30_ct_annot` varchar(23) DEFAULT NULL,
+  `more30_ct` varchar(9) DEFAULT NULL,
+  `more30_ct_annot` varchar(15) DEFAULT NULL,
+  `no_step_ct` varchar(10) DEFAULT NULL,
+  `no_step_ct_annot` varchar(16) DEFAULT NULL,
+  `min_days` varchar(8) DEFAULT NULL,
+  `max_days` varchar(8) DEFAULT NULL,
   `mean_days` varchar(11) DEFAULT NULL,
-  `median_days` varchar(5) DEFAULT NULL,
-  `bene_count` varchar(4) DEFAULT NULL,
-  `bene_count_annot` varchar(1) DEFAULT NULL
+  `median_days` varchar(11) DEFAULT NULL,
+  `bene_count` varchar(10) DEFAULT NULL,
+  `bene_count_annot` varchar(16) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6825,22 +9585,22 @@ DROP TABLE IF EXISTS `ab470_youth_time_to_step_down_by_language`;
 CREATE TABLE `ab470_youth_time_to_step_down_by_language` (
   `population_name` varchar(53) DEFAULT NULL,
   `population_type` varchar(53) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `wlang_desc` varchar(37) DEFAULT NULL,
-  `less7_ct` varchar(5) DEFAULT NULL,
-  `less7_ct_annot` varchar(1) DEFAULT NULL,
-  `between_8and30_ct` varchar(4) DEFAULT NULL,
-  `between_8and30_ct_annot` varchar(1) DEFAULT NULL,
-  `more30_ct` varchar(4) DEFAULT NULL,
-  `more30_ct_annot` varchar(1) DEFAULT NULL,
-  `no_step_ct` varchar(5) DEFAULT NULL,
-  `no_step_ct_annot` varchar(1) DEFAULT NULL,
-  `min_days` varchar(3) DEFAULT NULL,
-  `max_days` varchar(3) DEFAULT NULL,
+  `less7_ct` varchar(8) DEFAULT NULL,
+  `less7_ct_annot` varchar(14) DEFAULT NULL,
+  `between_8and30_ct` varchar(17) DEFAULT NULL,
+  `between_8and30_ct_annot` varchar(23) DEFAULT NULL,
+  `more30_ct` varchar(9) DEFAULT NULL,
+  `more30_ct_annot` varchar(15) DEFAULT NULL,
+  `no_step_ct` varchar(10) DEFAULT NULL,
+  `no_step_ct_annot` varchar(16) DEFAULT NULL,
+  `min_days` varchar(8) DEFAULT NULL,
+  `max_days` varchar(8) DEFAULT NULL,
   `mean_days` varchar(11) DEFAULT NULL,
-  `median_days` varchar(5) DEFAULT NULL,
-  `bene_count` varchar(4) DEFAULT NULL,
-  `bene_count_annot` varchar(1) DEFAULT NULL
+  `median_days` varchar(11) DEFAULT NULL,
+  `bene_count` varchar(10) DEFAULT NULL,
+  `bene_count_annot` varchar(16) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6851,22 +9611,22 @@ DROP TABLE IF EXISTS `ab470_youth_time_to_step_down_by_race`;
 CREATE TABLE `ab470_youth_time_to_step_down_by_race` (
   `population_name` varchar(53) DEFAULT NULL,
   `population_type` varchar(53) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `race_grp` varchar(36) DEFAULT NULL,
-  `less7_ct` varchar(4) DEFAULT NULL,
-  `less7_ct_annot` varchar(1) DEFAULT NULL,
-  `between_8and30_ct` varchar(4) DEFAULT NULL,
-  `between_8and30_ct_annot` varchar(1) DEFAULT NULL,
-  `more30_ct` varchar(3) DEFAULT NULL,
-  `more30_ct_annot` varchar(1) DEFAULT NULL,
-  `no_step_ct` varchar(4) DEFAULT NULL,
-  `no_step_ct_annot` varchar(1) DEFAULT NULL,
-  `min_days` varchar(4) DEFAULT NULL,
-  `max_days` varchar(3) DEFAULT NULL,
+  `less7_ct` varchar(8) DEFAULT NULL,
+  `less7_ct_annot` varchar(14) DEFAULT NULL,
+  `between_8and30_ct` varchar(17) DEFAULT NULL,
+  `between_8and30_ct_annot` varchar(23) DEFAULT NULL,
+  `more30_ct` varchar(9) DEFAULT NULL,
+  `more30_ct_annot` varchar(15) DEFAULT NULL,
+  `no_step_ct` varchar(10) DEFAULT NULL,
+  `no_step_ct_annot` varchar(16) DEFAULT NULL,
+  `min_days` varchar(8) DEFAULT NULL,
+  `max_days` varchar(8) DEFAULT NULL,
   `mean_days` varchar(11) DEFAULT NULL,
-  `median_days` varchar(5) DEFAULT NULL,
-  `bene_count` varchar(4) DEFAULT NULL,
-  `bene_count_annot` varchar(1) DEFAULT NULL
+  `median_days` varchar(11) DEFAULT NULL,
+  `bene_count` varchar(10) DEFAULT NULL,
+  `bene_count_annot` varchar(16) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6877,22 +9637,22 @@ DROP TABLE IF EXISTS `ab470_youth_time_to_step_down_by_sex`;
 CREATE TABLE `ab470_youth_time_to_step_down_by_sex` (
   `population_name` varchar(53) DEFAULT NULL,
   `population_type` varchar(53) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `sex` varchar(9) DEFAULT NULL,
-  `less7_ct` varchar(4) DEFAULT NULL,
-  `less7_ct_annot` varchar(1) DEFAULT NULL,
-  `between_8and30_ct` varchar(4) DEFAULT NULL,
-  `between_8and30_ct_annot` varchar(1) DEFAULT NULL,
-  `more30_ct` varchar(3) DEFAULT NULL,
-  `more30_ct_annot` varchar(1) DEFAULT NULL,
-  `no_step_ct` varchar(5) DEFAULT NULL,
-  `no_step_ct_annot` varchar(1) DEFAULT NULL,
-  `min_days` varchar(3) DEFAULT NULL,
-  `max_days` varchar(3) DEFAULT NULL,
+  `less7_ct` varchar(8) DEFAULT NULL,
+  `less7_ct_annot` varchar(14) DEFAULT NULL,
+  `between_8and30_ct` varchar(17) DEFAULT NULL,
+  `between_8and30_ct_annot` varchar(23) DEFAULT NULL,
+  `more30_ct` varchar(9) DEFAULT NULL,
+  `more30_ct_annot` varchar(15) DEFAULT NULL,
+  `no_step_ct` varchar(10) DEFAULT NULL,
+  `no_step_ct_annot` varchar(16) DEFAULT NULL,
+  `min_days` varchar(8) DEFAULT NULL,
+  `max_days` varchar(8) DEFAULT NULL,
   `mean_days` varchar(11) DEFAULT NULL,
-  `median_days` varchar(5) DEFAULT NULL,
-  `bene_count` varchar(4) DEFAULT NULL,
-  `bene_count_annot` varchar(1) DEFAULT NULL
+  `median_days` varchar(11) DEFAULT NULL,
+  `bene_count` varchar(10) DEFAULT NULL,
+  `bene_count_annot` varchar(16) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6903,13 +9663,13 @@ DROP TABLE IF EXISTS `ab470_youth_utilization_by_age`;
 CREATE TABLE `ab470_youth_utilization_by_age` (
   `population_name` varchar(53) DEFAULT NULL,
   `population_type` varchar(53) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `age_grp` varchar(17) DEFAULT NULL,
   `svc_desc` varchar(52) DEFAULT NULL,
   `unit_type` varchar(13) DEFAULT NULL,
   `amount` varchar(11) DEFAULT NULL,
-  `amount_annot` varchar(1) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `amount_annot` varchar(12) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6920,13 +9680,13 @@ DROP TABLE IF EXISTS `ab470_youth_utilization_by_language`;
 CREATE TABLE `ab470_youth_utilization_by_language` (
   `population_name` varchar(53) DEFAULT NULL,
   `population_type` varchar(53) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `wlang_desc` varchar(54) DEFAULT NULL,
   `svc_desc` varchar(52) DEFAULT NULL,
   `unit_type` varchar(13) DEFAULT NULL,
   `amount` varchar(11) DEFAULT NULL,
-  `amount_annot` varchar(1) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `amount_annot` varchar(12) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6937,13 +9697,13 @@ DROP TABLE IF EXISTS `ab470_youth_utilization_by_race`;
 CREATE TABLE `ab470_youth_utilization_by_race` (
   `population_name` varchar(53) DEFAULT NULL,
   `population_type` varchar(53) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `race_grp` varchar(36) DEFAULT NULL,
   `svc_desc` varchar(52) DEFAULT NULL,
   `unit_type` varchar(13) DEFAULT NULL,
   `amount` varchar(11) DEFAULT NULL,
-  `amount_annot` varchar(1) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `amount_annot` varchar(12) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6954,13 +9714,13 @@ DROP TABLE IF EXISTS `ab470_youth_utilization_by_sex`;
 CREATE TABLE `ab470_youth_utilization_by_sex` (
   `population_name` varchar(53) DEFAULT NULL,
   `population_type` varchar(53) DEFAULT NULL,
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `sex` varchar(9) DEFAULT NULL,
   `svc_desc` varchar(52) DEFAULT NULL,
   `unit_type` varchar(13) DEFAULT NULL,
   `amount` varchar(11) DEFAULT NULL,
-  `amount_annot` varchar(1) DEFAULT NULL,
-  `medi_cal_delivery_system` varchar(4) DEFAULT NULL
+  `amount_annot` varchar(12) DEFAULT NULL,
+  `medi_cal_delivery_system` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6993,7 +9753,7 @@ CREATE TABLE `abortion_services_by_age_group_and_race` (
 DROP TABLE IF EXISTS `abortion_services_by_delivery_system_and_age_group`;
 CREATE TABLE `abortion_services_by_delivery_system_and_age_group` (
   `calendar_year` varchar(4) DEFAULT NULL,
-  `delivery_system` varchar(15) DEFAULT NULL,
+  `delivery_system_name` varchar(15) DEFAULT NULL,
   `age_group` varchar(12) DEFAULT NULL,
   `total_abortion_related_services` varchar(5) DEFAULT NULL,
   `date_of_data` varchar(9) DEFAULT NULL
@@ -7006,7 +9766,7 @@ CREATE TABLE `abortion_services_by_delivery_system_and_age_group` (
 DROP TABLE IF EXISTS `abortion_services_by_delivery_system_and_aid_group`;
 CREATE TABLE `abortion_services_by_delivery_system_and_aid_group` (
   `calendar_year` varchar(4) DEFAULT NULL,
-  `delivery_system` varchar(15) DEFAULT NULL,
+  `delivery_system_name` varchar(15) DEFAULT NULL,
   `aid_group` varchar(37) DEFAULT NULL,
   `total_abortion_related_services` varchar(5) DEFAULT NULL,
   `date_of_data` varchar(9) DEFAULT NULL
@@ -7020,7 +9780,7 @@ DROP TABLE IF EXISTS `abortion_services_by_delivery_system_and_county`;
 CREATE TABLE `abortion_services_by_delivery_system_and_county` (
   `calendar_year` varchar(4) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
-  `delivery_system` varchar(15) DEFAULT NULL,
+  `delivery_system_name` varchar(15) DEFAULT NULL,
   `total_abortion_related_services` varchar(6) DEFAULT NULL,
   `annotation_code` varchar(1) DEFAULT NULL,
   `annotation_description` varchar(38) DEFAULT NULL,
@@ -7034,7 +9794,7 @@ CREATE TABLE `abortion_services_by_delivery_system_and_county` (
 DROP TABLE IF EXISTS `abortion_services_expenditures_by_age_group`;
 CREATE TABLE `abortion_services_expenditures_by_age_group` (
   `calendar_year` varchar(4) DEFAULT NULL,
-  `delivery_system` varchar(15) DEFAULT NULL,
+  `delivery_system_name` varchar(15) DEFAULT NULL,
   `age_group` varchar(12) DEFAULT NULL,
   `total_expenditures` varchar(14) DEFAULT NULL,
   `date_of_data` varchar(9) DEFAULT NULL
@@ -7060,7 +9820,7 @@ CREATE TABLE `abortion_services_expenditures_by_age_group_and_race` (
 DROP TABLE IF EXISTS `abortion_services_expenditures_by_aid_group`;
 CREATE TABLE `abortion_services_expenditures_by_aid_group` (
   `calendar_year` varchar(4) DEFAULT NULL,
-  `delivery_system` varchar(15) DEFAULT NULL,
+  `delivery_system_name` varchar(15) DEFAULT NULL,
   `aid_group` varchar(37) DEFAULT NULL,
   `total_expenditures` varchar(14) DEFAULT NULL,
   `date_of_data` varchar(9) DEFAULT NULL
@@ -7073,7 +9833,7 @@ CREATE TABLE `abortion_services_expenditures_by_aid_group` (
 DROP TABLE IF EXISTS `abortion_services_expenditures_by_county`;
 CREATE TABLE `abortion_services_expenditures_by_county` (
   `calendar_year` varchar(4) DEFAULT NULL,
-  `delivery_system` varchar(15) DEFAULT NULL,
+  `delivery_system_name` varchar(15) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
   `total_expenditures` varchar(14) DEFAULT NULL,
   `date_of_data` varchar(9) DEFAULT NULL
@@ -7136,39 +9896,115 @@ CREATE TABLE `academic_years_2013_14_to_2015_16_school_immunizations__e6575e34` 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `adolescent_births`
+-- Table structure for table `aces_aware_clinician_listing`
 --
 
-DROP TABLE IF EXISTS `adolescent_births`;
-CREATE TABLE `adolescent_births` (
-  `indicator_name` varchar(21) DEFAULT NULL,
-  `age_group` varchar(10) DEFAULT NULL,
-  `geography` varchar(15) DEFAULT NULL,
-  `year` varchar(9) DEFAULT NULL,
-  `category` varchar(39) DEFAULT NULL,
-  `subcategory` varchar(26) DEFAULT NULL,
-  `numerator` varchar(6) DEFAULT NULL,
-  `denominator` varchar(7) DEFAULT NULL,
-  `rate` varchar(5) DEFAULT NULL,
-  `lower_95_pct_confidence_limit` varchar(5) DEFAULT NULL,
-  `upper_95_pct_confidence_limit` varchar(5) DEFAULT NULL
+DROP TABLE IF EXISTS `aces_aware_clinician_listing`;
+CREATE TABLE `aces_aware_clinician_listing` (
+  `x` varchar(17) DEFAULT NULL,
+  `y` varchar(16) DEFAULT NULL,
+  `objectid` varchar(8) DEFAULT NULL,
+  `npi` varchar(10) DEFAULT NULL,
+  `title` varchar(5) DEFAULT NULL,
+  `first_name` varchar(19) DEFAULT NULL,
+  `mdl_init` varchar(8) DEFAULT NULL,
+  `last_name` varchar(21) DEFAULT NULL,
+  `date_time` varchar(22) DEFAULT NULL,
+  `prvdr_type` varchar(41) DEFAULT NULL,
+  `spclty` varchar(36) DEFAULT NULL,
+  `busns_name` varchar(70) DEFAULT NULL,
+  `srvc_adr` varchar(51) DEFAULT NULL,
+  `city` varchar(22) DEFAULT NULL,
+  `state` varchar(5) DEFAULT NULL,
+  `zip` varchar(10) DEFAULT NULL,
+  `busns_phne_num` varchar(14) DEFAULT NULL,
+  `f15` varchar(3) DEFAULT NULL,
+  `f16` varchar(3) DEFAULT NULL,
+  `f17` varchar(3) DEFAULT NULL,
+  `f18` varchar(3) DEFAULT NULL,
+  `f19` varchar(3) DEFAULT NULL,
+  `f20` varchar(3) DEFAULT NULL,
+  `f21` varchar(3) DEFAULT NULL,
+  `f22` varchar(3) DEFAULT NULL,
+  `f23` varchar(3) DEFAULT NULL,
+  `f24` varchar(3) DEFAULT NULL,
+  `f25` varchar(3) DEFAULT NULL,
+  `f26` varchar(3) DEFAULT NULL,
+  `f27` varchar(3) DEFAULT NULL,
+  `f28` varchar(3) DEFAULT NULL,
+  `f29` varchar(3) DEFAULT NULL,
+  `f30` varchar(3) DEFAULT NULL,
+  `f31` varchar(3) DEFAULT NULL,
+  `f32` varchar(3) DEFAULT NULL,
+  `f33` varchar(3) DEFAULT NULL,
+  `f34` varchar(3) DEFAULT NULL,
+  `f35` varchar(3) DEFAULT NULL,
+  `f36` varchar(3) DEFAULT NULL,
+  `f37` varchar(3) DEFAULT NULL,
+  `f38` varchar(3) DEFAULT NULL,
+  `f39` varchar(3) DEFAULT NULL,
+  `f40` varchar(3) DEFAULT NULL,
+  `f41` varchar(3) DEFAULT NULL,
+  `f42` varchar(3) DEFAULT NULL,
+  `f43` varchar(3) DEFAULT NULL,
+  `f44` varchar(3) DEFAULT NULL,
+  `f45` varchar(3) DEFAULT NULL,
+  `f46` varchar(3) DEFAULT NULL,
+  `f47` varchar(3) DEFAULT NULL,
+  `f48` varchar(3) DEFAULT NULL,
+  `f49` varchar(3) DEFAULT NULL,
+  `latitude` varchar(15) DEFAULT NULL,
+  `longitude` varchar(17) DEFAULT NULL,
+  `countyname` varchar(22) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `adolescent_births_partial_data`
+-- Table structure for table `across_time_summ_data_lic_and_cert_facs`
 --
 
-DROP TABLE IF EXISTS `adolescent_births_partial_data`;
-CREATE TABLE `adolescent_births_partial_data` (
-  `year` varchar(9) DEFAULT NULL,
+DROP TABLE IF EXISTS `across_time_summ_data_lic_and_cert_facs`;
+CREATE TABLE `across_time_summ_data_lic_and_cert_facs` (
+  `state_fiscal_year` varchar(20) DEFAULT NULL,
+  `county_name` varchar(15) DEFAULT NULL,
+  `provider_type` varchar(18) DEFAULT NULL,
+  `fac_fdr` varchar(44) DEFAULT NULL,
+  `count` varchar(5) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `adolescent_births_2014_2016`
+--
+
+DROP TABLE IF EXISTS `adolescent_births_2014_2016`;
+CREATE TABLE `adolescent_births_2014_2016` (
+  `year_str` varchar(9) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
   `strata` varchar(9) DEFAULT NULL,
-  `strata_name` varchar(8) DEFAULT NULL,
-  `population` varchar(7) DEFAULT NULL,
-  `births` varchar(5) DEFAULT NULL,
+  `strata_name` varchar(11) DEFAULT NULL,
+  `population` varchar(10) DEFAULT NULL,
+  `births` varchar(6) DEFAULT NULL,
   `abr` varchar(4) DEFAULT NULL,
-  `lower_` varchar(4) DEFAULT NULL,
-  `upper_` varchar(4) DEFAULT NULL
+  `lower_` varchar(6) DEFAULT NULL,
+  `upper_` varchar(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `adolescent_births_detail`
+--
+
+DROP TABLE IF EXISTS `adolescent_births_detail`;
+CREATE TABLE `adolescent_births_detail` (
+  `indicator_name` varchar(21) DEFAULT NULL,
+  `age_group` varchar(10) DEFAULT NULL,
+  `geography` varchar(15) DEFAULT NULL,
+  `year_str` varchar(9) DEFAULT NULL,
+  `category` varchar(39) DEFAULT NULL,
+  `subcategory` varchar(26) DEFAULT NULL,
+  `numerator` varchar(9) DEFAULT NULL,
+  `denominator` varchar(11) DEFAULT NULL,
+  `rate` varchar(5) DEFAULT NULL,
+  `lower_95pct_confidence_limit` varchar(26) DEFAULT NULL,
+  `upper_95pct_confidence_limit` varchar(26) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -7311,6 +10147,26 @@ CREATE TABLE `adults_with_diabetes_per_100` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `aevs_carrier_codes_for_other_health_coverage`
+--
+
+DROP TABLE IF EXISTS `aevs_carrier_codes_for_other_health_coverage`;
+CREATE TABLE `aevs_carrier_codes_for_other_health_coverage` (
+  `carrier_code` varchar(4) DEFAULT NULL,
+  `last_change_date` varchar(8) DEFAULT NULL,
+  `status_code` varchar(1) DEFAULT NULL,
+  `ohc_code` varchar(1) DEFAULT NULL,
+  `carrier_name_1` varchar(30) DEFAULT NULL,
+  `carrier_name_2` varchar(30) DEFAULT NULL,
+  `carrier_addr_2` varchar(50) DEFAULT NULL,
+  `carrier_city` varchar(20) DEFAULT NULL,
+  `carrier_state` varchar(2) DEFAULT NULL,
+  `carrier_zip_code` varchar(9) DEFAULT NULL,
+  `carrier_phone` varchar(14) DEFAULT NULL,
+  `plan_type` varchar(3) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `age_26_49_ae_population_by_county`
 --
 
@@ -7383,6 +10239,29 @@ CREATE TABLE `age_and_gender_of_applicants_for_insurance_affordabilit_0e2cae43` 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `age_distribution_of_covid_19_flu_and`
+--
+
+DROP TABLE IF EXISTS `age_distribution_of_covid_19_flu_and`;
+CREATE TABLE `age_distribution_of_covid_19_flu_and` (
+  `season` varchar(9) DEFAULT NULL,
+  `agegrp` varchar(11) DEFAULT NULL,
+  `respiratory_virus` varchar(17) DEFAULT NULL,
+  `count` varchar(5) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `aggregated_sars_cov_2_rna_wastewater_concentrations`
+--
+
+DROP TABLE IF EXISTS `aggregated_sars_cov_2_rna_wastewater_concentrations`;
+CREATE TABLE `aggregated_sars_cov_2_rna_wastewater_concentrations` (
+  `season` varchar(9) DEFAULT NULL,
+  `weekending` varchar(10) DEFAULT NULL,
+  `sars_conc` varchar(16) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `ahrq_postoperative_sepsis_rates_2019_2022`
 --
 
@@ -7408,13 +10287,13 @@ DROP TABLE IF EXISTS `alw_assisted_living_facilities`;
 CREATE TABLE `alw_assisted_living_facilities` (
   `x` varchar(14) DEFAULT NULL,
   `y` varchar(16) DEFAULT NULL,
-  `objectid` varchar(4) DEFAULT NULL,
+  `objectid` varchar(8) DEFAULT NULL,
   `number` varchar(15) DEFAULT NULL,
   `legal_name` varchar(51) DEFAULT NULL,
   `business_name` varchar(78) DEFAULT NULL,
-  `capacity_per_peu` varchar(3) DEFAULT NULL,
+  `capacity_per_peu` varchar(16) DEFAULT NULL,
   `address` varchar(25) DEFAULT NULL,
-  `address_2` varchar(3) DEFAULT NULL,
+  `address_2` varchar(9) DEFAULT NULL,
   `city` varchar(20) DEFAULT NULL,
   `county` varchar(14) DEFAULT NULL,
   `zip_code` varchar(10) DEFAULT NULL,
@@ -7432,7 +10311,7 @@ DROP TABLE IF EXISTS `alw_care_coordination_agencies`;
 CREATE TABLE `alw_care_coordination_agencies` (
   `x` varchar(14) DEFAULT NULL,
   `y` varchar(16) DEFAULT NULL,
-  `objectid` varchar(2) DEFAULT NULL,
+  `objectid` varchar(8) DEFAULT NULL,
   `county` varchar(14) DEFAULT NULL,
   `number` varchar(10) DEFAULT NULL,
   `legal_name` varchar(47) DEFAULT NULL,
@@ -7440,10 +10319,10 @@ CREATE TABLE `alw_care_coordination_agencies` (
   `address` varchar(24) DEFAULT NULL,
   `address_2` varchar(13) DEFAULT NULL,
   `city` varchar(20) DEFAULT NULL,
-  `zip_code` varchar(5) DEFAULT NULL,
+  `zip_code` varchar(8) DEFAULT NULL,
   `phone_number` varchar(14) DEFAULT NULL,
   `fax_number` varchar(15) DEFAULT NULL,
-  `first_name` varchar(8) DEFAULT NULL,
+  `first_name` varchar(10) DEFAULT NULL,
   `last_name` varchar(10) DEFAULT NULL,
   `email_address` varchar(39) DEFAULT NULL,
   `website` varchar(26) DEFAULT NULL,
@@ -7460,7 +10339,7 @@ DROP TABLE IF EXISTS `alw_public_subsidized_housing`;
 CREATE TABLE `alw_public_subsidized_housing` (
   `x` varchar(14) DEFAULT NULL,
   `y` varchar(16) DEFAULT NULL,
-  `objectid` varchar(1) DEFAULT NULL,
+  `objectid` varchar(8) DEFAULT NULL,
   `name` varchar(65) DEFAULT NULL,
   `address` varchar(25) DEFAULT NULL,
   `address_2` varchar(9) DEFAULT NULL,
@@ -7614,18 +10493,36 @@ CREATE TABLE `apps_for_insurance_affordability_pgms_with_help` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `asthma_deaths_by_county`
+-- Table structure for table `archived_respiratory_virus_dashboard_metrics_hospitalizations`
 --
 
-DROP TABLE IF EXISTS `asthma_deaths_by_county`;
-CREATE TABLE `asthma_deaths_by_county` (
-  `county` varchar(31) DEFAULT NULL,
-  `years` varchar(31) DEFAULT NULL,
-  `strata` varchar(31) DEFAULT NULL,
-  `age_group` varchar(31) DEFAULT NULL,
-  `number_of_deaths` int DEFAULT NULL,
-  `age_adjusted_mortality_rate` decimal(4,2) DEFAULT NULL,
-  `comment` varchar(255) DEFAULT NULL
+DROP TABLE IF EXISTS `archived_respiratory_virus_dashboard_metrics_hospitalizations`;
+CREATE TABLE `archived_respiratory_virus_dashboard_metrics_hospitalizations` (
+  `date` varchar(10) DEFAULT NULL,
+  `area` varchar(10) DEFAULT NULL,
+  `area_type` varchar(9) DEFAULT NULL,
+  `patient_vol_covid` varchar(17) DEFAULT NULL,
+  `patient_vol_covid_icu` varchar(21) DEFAULT NULL,
+  `admits_covid` varchar(12) DEFAULT NULL,
+  `icu_available_beds` varchar(18) DEFAULT NULL,
+  `patient_vol_influenza` varchar(21) DEFAULT NULL,
+  `patient_vol_influenza_icu` varchar(25) DEFAULT NULL,
+  `admits_influenza` varchar(16) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `asthma_deaths_by_county_2014_present`
+--
+
+DROP TABLE IF EXISTS `asthma_deaths_by_county_2014_present`;
+CREATE TABLE `asthma_deaths_by_county_2014_present` (
+  `county` varchar(15) DEFAULT NULL,
+  `years` varchar(9) DEFAULT NULL,
+  `strata` varchar(16) DEFAULT NULL,
+  `age_group` varchar(10) DEFAULT NULL,
+  `number_of_deaths` varchar(5) DEFAULT NULL,
+  `age_adjusted_mortality_rate` varchar(4) DEFAULT NULL,
+  `comment` varchar(78) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -7647,6 +10544,50 @@ CREATE TABLE `asthma_ed_visit_rates` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `asthma_ed_visit_rates_by_county_2015_present`
+--
+
+DROP TABLE IF EXISTS `asthma_ed_visit_rates_by_county_2015_present`;
+CREATE TABLE `asthma_ed_visit_rates_by_county_2015_present` (
+  `county` varchar(15) DEFAULT NULL,
+  `year` varchar(4) DEFAULT NULL,
+  `strata` varchar(16) DEFAULT NULL,
+  `strata_name` varchar(11) DEFAULT NULL,
+  `age_group` varchar(11) DEFAULT NULL,
+  `number_of_ed_visits` varchar(7) DEFAULT NULL,
+  `age_adjusted_ed_visit_rate` varchar(5) DEFAULT NULL,
+  `comment` varchar(78) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `asthma_ed_visit_rates_by_zip_code_2013_present`
+--
+
+DROP TABLE IF EXISTS `asthma_ed_visit_rates_by_zip_code_2013_present`;
+CREATE TABLE `asthma_ed_visit_rates_by_zip_code_2013_present` (
+  `year` varchar(4) DEFAULT NULL,
+  `zip_code` varchar(5) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `age_group` varchar(8) DEFAULT NULL,
+  `number_of_asthma_ed_visits` varchar(4) DEFAULT NULL,
+  `age_adjusted_rate_of_asthma_ed_v` varchar(5) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `asthma_ed_visit_rates_by_zip_code_and_age_groups_2013_present`
+--
+
+DROP TABLE IF EXISTS `asthma_ed_visit_rates_by_zip_code_and_age_groups_2013_present`;
+CREATE TABLE `asthma_ed_visit_rates_by_zip_code_and_age_groups_2013_present` (
+  `year` varchar(4) DEFAULT NULL,
+  `zip_code` varchar(5) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `age_group` varchar(5) DEFAULT NULL,
+  `number_of_asthma_ed_visits` varchar(3) DEFAULT NULL,
+  `age_adjusted_rate_of_asthma_ed_v` varchar(5) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `asthma_hospitalization_rates_by_county`
 --
 
@@ -7663,66 +10604,6 @@ CREATE TABLE `asthma_hospitalization_rates_by_county` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `asthma_visits_by_county`
---
-
-DROP TABLE IF EXISTS `asthma_visits_by_county`;
-CREATE TABLE `asthma_visits_by_county` (
-  `county` varchar(15) DEFAULT NULL,
-  `year` int DEFAULT NULL,
-  `strata` varchar(16) DEFAULT NULL,
-  `strata_name` varchar(11) DEFAULT NULL,
-  `age_group` varchar(11) DEFAULT NULL,
-  `number_of_ed_visits` int DEFAULT NULL,
-  `age_adjusted_ed_visit_rate` decimal(6,1) DEFAULT NULL,
-  `comment` varchar(78) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `asthma_visits_by_zip`
---
-
-DROP TABLE IF EXISTS `asthma_visits_by_zip`;
-CREATE TABLE `asthma_visits_by_zip` (
-  `year` int DEFAULT NULL,
-  `zip_code` varchar(5) DEFAULT NULL,
-  `county` varchar(15) DEFAULT NULL,
-  `age_group` varchar(8) DEFAULT NULL,
-  `number_of_asthma_ed_visits` int DEFAULT NULL,
-  `age_adjusted_rate_of_asthma_ed_v` decimal(6,1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `asthma_visits_by_zip_and_age`
---
-
-DROP TABLE IF EXISTS `asthma_visits_by_zip_and_age`;
-CREATE TABLE `asthma_visits_by_zip_and_age` (
-  `year` int DEFAULT NULL,
-  `zip_code` varchar(5) DEFAULT NULL,
-  `county` varchar(15) DEFAULT NULL,
-  `age_group` varchar(5) DEFAULT NULL,
-  `number_of_asthma_ed_visits` int DEFAULT NULL,
-  `age_adjusted_rate_of_asthma_ed_v` decimal(6,1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `authorized_wic_vendors`
---
-
-DROP TABLE IF EXISTS `authorized_wic_vendors`;
-CREATE TABLE `authorized_wic_vendors` (
-  `vendor` varchar(127) DEFAULT NULL,
-  `address1` varchar(127) DEFAULT NULL,
-  `address2` varchar(127) DEFAULT NULL,
-  `city` varchar(31) DEFAULT NULL,
-  `zip` varchar(10) DEFAULT NULL,
-  `county` varchar(31) DEFAULT NULL,
-  `latitude` decimal(12,8) DEFAULT NULL,
-  `longitude` decimal(12,8) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
 -- Table structure for table `average_reimbursement_per_family_pact_client`
 --
 
@@ -7730,20 +10611,6 @@ DROP TABLE IF EXISTS `average_reimbursement_per_family_pact_client`;
 CREATE TABLE `average_reimbursement_per_family_pact_client` (
   `fiscal_year_fy` varchar(4) DEFAULT NULL,
   `average_reimbursement_per_client` varchar(5) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `baby_names`
---
-
-DROP TABLE IF EXISTS `baby_names`;
-CREATE TABLE `baby_names` (
-  `year` int DEFAULT NULL,
-  `sex` varchar(6) DEFAULT NULL,
-  `rank_` varchar(2) DEFAULT NULL,
-  `name` varchar(11) DEFAULT NULL,
-  `count` varchar(4) DEFAULT NULL,
-  `data_revision_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -7842,7 +10709,7 @@ DROP TABLE IF EXISTS `births_by_cy_payer_delvry_sys_and_select_birth_chars`;
 CREATE TABLE `births_by_cy_payer_delvry_sys_and_select_birth_chars` (
   `calendar_year` varchar(4) DEFAULT NULL,
   `payer` varchar(12) DEFAULT NULL,
-  `delivery_system` varchar(17) DEFAULT NULL,
+  `delivery_system_name` varchar(17) DEFAULT NULL,
   `grouper` varchar(27) DEFAULT NULL,
   `birth_characteristic` varchar(34) DEFAULT NULL,
   `number_of_births` varchar(6) DEFAULT NULL
@@ -7924,35 +10791,35 @@ CREATE TABLE `births_by_cy_payer_very_preterm_status_and_select_birth_chars` (
 
 DROP TABLE IF EXISTS `births_by_month_by_county_1960_2023_final`;
 CREATE TABLE `births_by_month_by_county_1960_2023_final` (
-  `year` varchar(4) DEFAULT NULL,
-  `month` varchar(2) DEFAULT NULL,
+  `year_str` varchar(4) DEFAULT NULL,
+  `month` varchar(5) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
-  `geography_type` varchar(10) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
   `strata` varchar(16) DEFAULT NULL,
   `strata_name` varchar(25) DEFAULT NULL,
   `count` varchar(5) DEFAULT NULL,
-  `annotation_code` varchar(1) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
   `annotation_desc` varchar(38) DEFAULT NULL,
-  `data_revision_date` varchar(10) DEFAULT NULL
+  `data_revision_date` varchar(18) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `births_by_month_by_county_2023_2024_provisional`
+-- Table structure for table `births_by_month_by_county_2024_provisional`
 --
 
-DROP TABLE IF EXISTS `births_by_month_by_county_2023_2024_provisional`;
-CREATE TABLE `births_by_month_by_county_2023_2024_provisional` (
-  `year` varchar(4) DEFAULT NULL,
-  `month` varchar(2) DEFAULT NULL,
+DROP TABLE IF EXISTS `births_by_month_by_county_2024_provisional`;
+CREATE TABLE `births_by_month_by_county_2024_provisional` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `month` varchar(5) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
-  `geography_type` varchar(10) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
   `strata` varchar(16) DEFAULT NULL,
   `strata_name` varchar(25) DEFAULT NULL,
-  `count` varchar(4) DEFAULT NULL,
-  `annotation_code` varchar(1) DEFAULT NULL,
+  `count` varchar(5) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
   `annotation_desc` varchar(38) DEFAULT NULL,
-  `data_extract_date` varchar(10) DEFAULT NULL,
-  `data_revision_date` varchar(10) DEFAULT NULL
+  `data_extract_date` varchar(17) DEFAULT NULL,
+  `data_revision_date` varchar(18) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -7961,15 +10828,15 @@ CREATE TABLE `births_by_month_by_county_2023_2024_provisional` (
 
 DROP TABLE IF EXISTS `births_by_year_by_county_1960_2023_final`;
 CREATE TABLE `births_by_year_by_county_1960_2023_final` (
-  `year` varchar(4) DEFAULT NULL,
+  `year_str` varchar(4) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
-  `geography_type` varchar(10) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
   `strata` varchar(36) DEFAULT NULL,
   `strata_name` varchar(29) DEFAULT NULL,
   `count` varchar(6) DEFAULT NULL,
-  `annotation_code` varchar(1) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
   `annotation_desc` varchar(38) DEFAULT NULL,
-  `data_revision_date` varchar(10) DEFAULT NULL
+  `data_revision_date` varchar(18) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -8008,6 +10875,1076 @@ CREATE TABLE `births_by_zip_by_year` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `blueprint_data_chart_01_05_21`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_01_05_21`;
+CREATE TABLE `blueprint_data_chart_01_05_21` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_12_20_20_to_12_26_20` varchar(49) DEFAULT NULL,
+  `final_tier_assignment_on_01_05_21` varchar(33) DEFAULT NULL,
+  `previous_tier_assignment_12_28_20_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `school_reopening_status_as_of_01_04_21` varchar(38) DEFAULT NULL,
+  `tier_for_week_12_20_20_to_12_26_20_01_04_21_assessment` varchar(55) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate_gt_state_avg_plus` varchar(108) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(123) DEFAULT NULL,
+  `population` varchar(11) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_01_12_21`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_01_12_21`;
+CREATE TABLE `blueprint_data_chart_01_12_21` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_12_27_20_to_01_02_21` varchar(49) DEFAULT NULL,
+  `final_tier_assignment_for_01_12_21` varchar(34) DEFAULT NULL,
+  `previous_tier_assignment_01_04_21_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `tier_for_week_12_27_20_to_01_02_21_01_11_21_assessment` varchar(55) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate_gt_state_avg_plus` varchar(108) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(123) DEFAULT NULL,
+  `population` varchar(11) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_01_19_21`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_01_19_21`;
+CREATE TABLE `blueprint_data_chart_01_19_21` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_01_03_21_to_01_09_21` varchar(49) DEFAULT NULL,
+  `final_tier_assignment_on_01_19_21` varchar(33) DEFAULT NULL,
+  `previous_tier_assignment_01_11_21_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `tier_for_week_01_03_21_to_01_09_21_01_18_21_assessment` varchar(55) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate_gt_state_avg_plus` varchar(108) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(123) DEFAULT NULL,
+  `population` varchar(11) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_01_26_21`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_01_26_21`;
+CREATE TABLE `blueprint_data_chart_01_26_21` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_01_10_21_to_01_16_21` varchar(49) DEFAULT NULL,
+  `final_tier_assignment_01_25_21_assessment` varchar(42) DEFAULT NULL,
+  `previous_tier_assignment_01_18_21_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `tier_for_week_01_10_21_to_01_16_21_01_25_21_assessment` varchar(55) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate_gt_state_avg_plus` varchar(108) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(123) DEFAULT NULL,
+  `population` varchar(11) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_02_02_21`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_02_02_21`;
+CREATE TABLE `blueprint_data_chart_02_02_21` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_01_17_21_to_01_23_21` varchar(49) DEFAULT NULL,
+  `final_tier_assignment_for_02_02_21` varchar(34) DEFAULT NULL,
+  `previous_tier_assignment_01_25_21_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `tier_for_week_01_17_21_to_01_23_21_02_01_21_assessment` varchar(55) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate_gt_state_avg_plus` varchar(108) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(123) DEFAULT NULL,
+  `population` varchar(11) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_02_09_21`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_02_09_21`;
+CREATE TABLE `blueprint_data_chart_02_09_21` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_01_24_21_to_01_30_21` varchar(49) DEFAULT NULL,
+  `final_tier_assignment_for_02_09_21` varchar(34) DEFAULT NULL,
+  `previous_tier_assignment_02_01_21_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `county_tier_assignment_based_on_meeting_accelerated_health_equi` varchar(74) DEFAULT NULL,
+  `number_of_weeks_in_current_tier` varchar(31) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_less_restricti` varchar(70) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_more_restricti` varchar(70) DEFAULT NULL,
+  `tier_for_week_01_24_21_to_01_30_21_02_08_21_assessment` varchar(55) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate` varchar(45) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(123) DEFAULT NULL,
+  `population` varchar(11) DEFAULT NULL,
+  `county_exceeds_minimum_number_of_weekly_cases_based_on_populati` varchar(82) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL,
+  `he_quartile_test_positivitypct_within_threshold_for_less_restri` varchar(73) DEFAULT NULL,
+  `number_of_consecutive_weeks_of_health_equity_metric_towards_mov` varchar(93) DEFAULT NULL,
+  `eligible_for_accelerated_health_equity_criteria_to_move_to_less` varchar(80) DEFAULT NULL,
+  `number_of_consecutive_weeks_towards_movement_to_less_restrictiv` varchar(110) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_02_16_21`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_02_16_21`;
+CREATE TABLE `blueprint_data_chart_02_16_21` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_01_31_21_to_02_06_21` varchar(49) DEFAULT NULL,
+  `final_tier_assignment_for_02_16_21` varchar(34) DEFAULT NULL,
+  `previous_tier_assignment_02_08_21_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `county_tier_assignment_based_on_meeting_accelerated_health_equi` varchar(74) DEFAULT NULL,
+  `number_of_weeks_in_current_tier` varchar(31) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_less_restricti` varchar(70) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_more_restricti` varchar(70) DEFAULT NULL,
+  `tier_for_week_01_31_21_to_02_06_21_02_15_21_assessment` varchar(55) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate` varchar(45) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(123) DEFAULT NULL,
+  `population` varchar(10) DEFAULT NULL,
+  `county_exceeds_minimum_number_of_weekly_cases_based_on_populati` varchar(82) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL,
+  `he_quartile_test_positivitypct_within_threshold_for_less_restri` varchar(73) DEFAULT NULL,
+  `number_of_consecutive_weeks_of_health_equity_metric_towards_mov` varchar(93) DEFAULT NULL,
+  `eligible_for_accelerated_health_equity_criteria_to_move_to_less` varchar(80) DEFAULT NULL,
+  `number_of_consecutive_weeks_towards_movement_to_less_restrictiv` varchar(110) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_03_02_21`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_03_02_21`;
+CREATE TABLE `blueprint_data_chart_03_02_21` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_02_14_21_to_02_20_21` varchar(49) DEFAULT NULL,
+  `final_tier_assignment_for_03_02_21` varchar(34) DEFAULT NULL,
+  `previous_tier_assignment_02_22_21_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `county_tier_assignment_based_on_meeting_accelerated_health_equi` varchar(74) DEFAULT NULL,
+  `number_of_weeks_in_current_tier` varchar(31) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_less_restricti` varchar(70) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_more_restricti` varchar(70) DEFAULT NULL,
+  `tier_for_week_02_14_21_to_02_20_21_03_01_21_assessment` varchar(55) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate` varchar(45) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(123) DEFAULT NULL,
+  `population` varchar(11) DEFAULT NULL,
+  `county_exceeds_minimum_number_of_weekly_cases_based_on_populati` varchar(82) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL,
+  `he_quartile_test_positivitypct_within_threshold_for_less_restri` varchar(73) DEFAULT NULL,
+  `number_of_consecutive_weeks_of_health_equity_metric_towards_mov` varchar(93) DEFAULT NULL,
+  `eligible_for_accelerated_health_equity_criteria_to_move_to_less` varchar(80) DEFAULT NULL,
+  `number_of_consecutive_weeks_towards_movement_to_less_restrictiv` varchar(110) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_03_09_21`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_03_09_21`;
+CREATE TABLE `blueprint_data_chart_03_09_21` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_02_21_21_to_02_27_21` varchar(49) DEFAULT NULL,
+  `final_tier_assignment_for_03_09_21` varchar(34) DEFAULT NULL,
+  `previous_tier_assignment_03_01_21_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `county_tier_assignment_based_on_meeting_accelerated_health_equi` varchar(74) DEFAULT NULL,
+  `number_of_weeks_in_current_tier` varchar(31) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_less_restricti` varchar(70) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_more_restricti` varchar(70) DEFAULT NULL,
+  `tier_for_week_02_21_21_to_02_27_21_03_08_21_assessment` varchar(55) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate` varchar(45) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(123) DEFAULT NULL,
+  `population` varchar(11) DEFAULT NULL,
+  `county_exceeds_minimum_number_of_weekly_cases_based_on_populati` varchar(82) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL,
+  `he_quartile_test_positivitypct_within_threshold_for_less_restri` varchar(91) DEFAULT NULL,
+  `number_of_consecutive_weeks_of_health_equity_metric_towards_mov` varchar(111) DEFAULT NULL,
+  `eligible_for_accelerated_health_equity_criteria_to_move_to_less` varchar(129) DEFAULT NULL,
+  `number_of_consecutive_weeks_towards_movement_to_less_restrictiv` varchar(110) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_03_16_21`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_03_16_21`;
+CREATE TABLE `blueprint_data_chart_03_16_21` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_02_28_21_to_03_06_21` varchar(49) DEFAULT NULL,
+  `final_tier_assignment_for_03_16_21` varchar(34) DEFAULT NULL,
+  `previous_tier_assignment_03_08_21_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `county_tier_assignment_based_on_meeting_accelerated_health_equi` varchar(74) DEFAULT NULL,
+  `number_of_weeks_in_current_tier` varchar(31) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_less_restricti` varchar(70) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_more_restricti` varchar(70) DEFAULT NULL,
+  `tier_for_week_02_28_21_to_03_06_21_03_15_21_assessment` varchar(55) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate` varchar(45) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(123) DEFAULT NULL,
+  `population` varchar(11) DEFAULT NULL,
+  `county_exceeds_minimum_number_of_weekly_cases_based_on_populati` varchar(82) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL,
+  `he_quartile_test_positivitypct_within_threshold_for_less_restri` varchar(91) DEFAULT NULL,
+  `number_of_consecutive_weeks_of_health_equity_metric_towards_mov` varchar(111) DEFAULT NULL,
+  `eligible_for_accelerated_health_equity_criteria_to_move_to_less` varchar(129) DEFAULT NULL,
+  `number_of_consecutive_weeks_towards_movement_to_less_restrictiv` varchar(110) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_03_23_21`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_03_23_21`;
+CREATE TABLE `blueprint_data_chart_03_23_21` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_03_07_21_to_03_13_21` varchar(49) DEFAULT NULL,
+  `final_tier_assignment_for_03_23_21` varchar(34) DEFAULT NULL,
+  `previous_tier_assignment_03_15_21_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `county_tier_assignment_based_on_meeting_accelerated_health_equi` varchar(74) DEFAULT NULL,
+  `number_of_weeks_in_current_tier` varchar(31) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_less_restricti` varchar(70) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_more_restricti` varchar(70) DEFAULT NULL,
+  `tier_for_week_03_07_21_to_03_13_21_03_22_21_assessment` varchar(55) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate` varchar(45) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(124) DEFAULT NULL,
+  `population` varchar(11) DEFAULT NULL,
+  `county_exceeds_minimum_number_of_weekly_cases_based_on_populati` varchar(82) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL,
+  `he_quartile_test_positivitypct_within_threshold_for_less_restri` varchar(91) DEFAULT NULL,
+  `number_of_consecutive_weeks_of_health_equity_metric_towards_mov` varchar(111) DEFAULT NULL,
+  `eligible_for_accelerated_health_equity_criteria_to_move_to_less` varchar(129) DEFAULT NULL,
+  `number_of_consecutive_weeks_towards_movement_to_less_restrictiv` varchar(110) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_03_30_21`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_03_30_21`;
+CREATE TABLE `blueprint_data_chart_03_30_21` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_03_14_21_to_03_20_21` varchar(49) DEFAULT NULL,
+  `final_tier_assignment_for_03_30_21` varchar(34) DEFAULT NULL,
+  `previous_tier_assignment_03_22_21_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `county_tier_assignment_based_on_meeting_accelerated_health_equi` varchar(74) DEFAULT NULL,
+  `number_of_weeks_in_current_tier` varchar(31) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_less_restricti` varchar(70) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_more_restricti` varchar(70) DEFAULT NULL,
+  `tier_for_week_03_14_21_to_03_20_21_03_29_21_assessment` varchar(55) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate` varchar(45) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(124) DEFAULT NULL,
+  `population` varchar(11) DEFAULT NULL,
+  `county_exceeds_minimum_number_of_weekly_cases_based_on_populati` varchar(82) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL,
+  `he_quartile_test_positivitypct_within_threshold_for_less_restri` varchar(91) DEFAULT NULL,
+  `number_of_consecutive_weeks_of_health_equity_metric_towards_mov` varchar(111) DEFAULT NULL,
+  `eligible_for_accelerated_health_equity_criteria_to_move_to_less` varchar(129) DEFAULT NULL,
+  `number_of_consecutive_weeks_towards_movement_to_less_restrictiv` varchar(110) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_04_06_21`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_04_06_21`;
+CREATE TABLE `blueprint_data_chart_04_06_21` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_03_21_21_to_03_27_21` varchar(49) DEFAULT NULL,
+  `final_tier_assignment_for_04_06_21` varchar(34) DEFAULT NULL,
+  `previous_tier_assignment_03_29_21_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `county_tier_assignment_based_on_meeting_accelerated_health_equi` varchar(74) DEFAULT NULL,
+  `number_of_weeks_in_current_tier` varchar(31) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_less_restricti` varchar(70) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_more_restricti` varchar(70) DEFAULT NULL,
+  `tier_for_week_03_21_21_to_03_27_21_04_05_21_assessment` varchar(55) DEFAULT NULL,
+  `small_countytier_for_week_03_21_21_to_03_27_21_04_05_21_assessm` varchar(100) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate` varchar(45) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(124) DEFAULT NULL,
+  `population` varchar(11) DEFAULT NULL,
+  `county_exceeds_minimum_number_of_weekly_cases_based_on_populati` varchar(82) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL,
+  `he_quartile_test_positivitypct_within_threshold_for_less_restri` varchar(91) DEFAULT NULL,
+  `number_of_consecutive_weeks_of_health_equity_metric_towards_mov` varchar(111) DEFAULT NULL,
+  `eligible_for_accelerated_health_equity_criteria_to_move_to_less` varchar(129) DEFAULT NULL,
+  `number_of_consecutive_weeks_towards_movement_to_less_restrictiv` varchar(110) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_04_13_21`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_04_13_21`;
+CREATE TABLE `blueprint_data_chart_04_13_21` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_03_28_21_to_04_03_21` varchar(49) DEFAULT NULL,
+  `final_tier_assignment_for_04_13_21` varchar(34) DEFAULT NULL,
+  `previous_tier_assignment_04_05_21_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `county_tier_assignment_based_on_meeting_accelerated_health_equi` varchar(74) DEFAULT NULL,
+  `number_of_weeks_in_current_tier` varchar(31) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_less_restricti` varchar(70) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_more_restricti` varchar(70) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate` varchar(45) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(124) DEFAULT NULL,
+  `population` varchar(11) DEFAULT NULL,
+  `total_new_cases_7_day_7_day_lag` varchar(33) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL,
+  `he_quartile_test_positivitypct_within_threshold_for_less_restri` varchar(91) DEFAULT NULL,
+  `number_of_consecutive_weeks_of_health_equity_metric_towards_mov` varchar(111) DEFAULT NULL,
+  `eligible_for_accelerated_health_equity_criteria_to_move_to_less` varchar(129) DEFAULT NULL,
+  `number_of_consecutive_weeks_towards_movement_to_less_restrictiv` varchar(110) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_04_20_21`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_04_20_21`;
+CREATE TABLE `blueprint_data_chart_04_20_21` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_04_04_21_to_04_10_21` varchar(49) DEFAULT NULL,
+  `final_tier_assignment_for_04_20_21` varchar(34) DEFAULT NULL,
+  `previous_tier_assignment_04_12_21_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `county_tier_assignment_based_on_meeting_accelerated_health_equi` varchar(74) DEFAULT NULL,
+  `number_of_weeks_in_current_tier` varchar(31) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_less_restricti` varchar(70) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_more_restricti` varchar(70) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate` varchar(45) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(124) DEFAULT NULL,
+  `population` varchar(11) DEFAULT NULL,
+  `total_new_cases_7_day_7_day_lag` varchar(33) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL,
+  `he_quartile_test_positivitypct_within_threshold_for_less_restri` varchar(91) DEFAULT NULL,
+  `number_of_consecutive_weeks_of_health_equity_metric_towards_mov` varchar(111) DEFAULT NULL,
+  `eligible_for_accelerated_health_equity_criteria_to_move_to_less` varchar(129) DEFAULT NULL,
+  `number_of_consecutive_weeks_towards_movement_to_less_restrictiv` varchar(110) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_04_27_21`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_04_27_21`;
+CREATE TABLE `blueprint_data_chart_04_27_21` (
+  `county` varchar(17) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_04_11_21_to_04_17_21` varchar(49) DEFAULT NULL,
+  `final_tier_assignment_for_04_27_21` varchar(34) DEFAULT NULL,
+  `previous_tier_assignment_04_19_21_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `county_tier_assignment_based_on_meeting_accelerated_health_equi` varchar(74) DEFAULT NULL,
+  `number_of_weeks_in_current_tier` varchar(31) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_less_restricti` varchar(70) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_more_restricti` varchar(70) DEFAULT NULL,
+  `tier_for_week_04_11_21_to_04_17_21_04_26_21_assessment` varchar(55) DEFAULT NULL,
+  `small_countytier_for_week_04_11_21_to_04_17_21_04_26_21_assessm` varchar(100) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate` varchar(45) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(124) DEFAULT NULL,
+  `population` varchar(11) DEFAULT NULL,
+  `total_new_cases_7_day_7_day_lag` varchar(33) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL,
+  `he_quartile_test_positivitypct_within_threshold_for_less_restri` varchar(91) DEFAULT NULL,
+  `number_of_consecutive_weeks_of_health_equity_metric_towards_mov` varchar(111) DEFAULT NULL,
+  `eligible_for_accelerated_health_equity_criteria_to_move_to_less` varchar(129) DEFAULT NULL,
+  `number_of_consecutive_weeks_towards_movement_to_less_restrictiv` varchar(110) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_05_04_21`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_05_04_21`;
+CREATE TABLE `blueprint_data_chart_05_04_21` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_04_18_21_to_04_24_21` varchar(49) DEFAULT NULL,
+  `final_tier_assignment_for_05_04_21` varchar(34) DEFAULT NULL,
+  `previous_tier_assignment_04_26_21_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `county_tier_assignment_based_on_meeting_accelerated_health_equi` varchar(74) DEFAULT NULL,
+  `number_of_weeks_in_current_tier` varchar(31) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_less_restricti` varchar(70) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_more_restricti` varchar(70) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate` varchar(45) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(124) DEFAULT NULL,
+  `population` varchar(10) DEFAULT NULL,
+  `total_new_cases_7_day_7_day_lag` varchar(33) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL,
+  `he_quartile_test_positivitypct_within_threshold_for_less_restri` varchar(91) DEFAULT NULL,
+  `number_of_consecutive_weeks_of_health_equity_metric_towards_mov` varchar(111) DEFAULT NULL,
+  `eligible_for_accelerated_health_equity_criteria_to_move_to_less` varchar(129) DEFAULT NULL,
+  `number_of_consecutive_weeks_towards_movement_to_less_restrictiv` varchar(110) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_05_11_21`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_05_11_21`;
+CREATE TABLE `blueprint_data_chart_05_11_21` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_04_25_21_to_05_01_21` varchar(49) DEFAULT NULL,
+  `final_tier_assignment_ofr_05_11_21` varchar(34) DEFAULT NULL,
+  `previous_tier_assignment_05_03_21_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `county_tier_assignment_based_on_meeting_accelerated_health_equi` varchar(74) DEFAULT NULL,
+  `number_of_weeks_in_current_tier` varchar(31) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_less_restricti` varchar(70) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_more_restricti` varchar(70) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate` varchar(45) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(124) DEFAULT NULL,
+  `population` varchar(11) DEFAULT NULL,
+  `total_new_cases_7_day_7_day_lag` varchar(33) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL,
+  `he_quartile_test_positivitypct_within_threshold_for_less_restri` varchar(91) DEFAULT NULL,
+  `number_of_consecutive_weeks_of_health_equity_metric_towards_mov` varchar(111) DEFAULT NULL,
+  `eligible_for_accelerated_health_equity_criteria_to_move_to_less` varchar(129) DEFAULT NULL,
+  `number_of_consecutive_weeks_towards_movement_to_less_restrictiv` varchar(110) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_05_18_21`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_05_18_21`;
+CREATE TABLE `blueprint_data_chart_05_18_21` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_05_02_21_to_05_08_21` varchar(49) DEFAULT NULL,
+  `updated_tier_assignment_05_17_21_assessment` varchar(44) DEFAULT NULL,
+  `previous_tier_assignment_05_10_21_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `county_tier_assignment_based_on_meeting_accelerated_health_equi` varchar(74) DEFAULT NULL,
+  `number_of_weeks_in_current_tier` varchar(31) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_less_restricti` varchar(70) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_more_restricti` varchar(70) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate` varchar(45) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(124) DEFAULT NULL,
+  `population` varchar(10) DEFAULT NULL,
+  `total_new_cases_7_day_7_day_lag` varchar(33) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL,
+  `he_quartile_test_positivitypct_within_threshold_for_less_restri` varchar(91) DEFAULT NULL,
+  `number_of_consecutive_weeks_of_health_equity_metric_towards_mov` varchar(111) DEFAULT NULL,
+  `eligible_for_accelerated_health_equity_criteria_to_move_to_less` varchar(129) DEFAULT NULL,
+  `number_of_consecutive_weeks_towards_movement_to_less_restrictiv` varchar(110) DEFAULT NULL,
+  `notes_about_countys_tier_status_for_05_17_21_assessment` varchar(80) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_05_25_21`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_05_25_21`;
+CREATE TABLE `blueprint_data_chart_05_25_21` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_05_09_21_to_05_15_21` varchar(49) DEFAULT NULL,
+  `final_tier_assignment_05_25_21` varchar(30) DEFAULT NULL,
+  `previous_tier_assignment_05_17_21_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `county_tier_assignment_based_on_meeting_accelerated_health_equi` varchar(74) DEFAULT NULL,
+  `number_of_weeks_in_current_tier` varchar(31) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_less_restricti` varchar(70) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_more_restricti` varchar(70) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate` varchar(45) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(124) DEFAULT NULL,
+  `population` varchar(11) DEFAULT NULL,
+  `total_new_cases_7_day_7_day_lag` varchar(33) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL,
+  `he_quartile_test_positivitypct_within_threshold_for_less_restri` varchar(91) DEFAULT NULL,
+  `number_of_consecutive_weeks_of_health_equity_metric_towards_mov` varchar(111) DEFAULT NULL,
+  `eligible_for_accelerated_health_equity_criteria_to_move_to_less` varchar(129) DEFAULT NULL,
+  `number_of_consecutive_weeks_towards_movement_to_less_restrictiv` varchar(110) DEFAULT NULL,
+  `notes_about_countys_tier_status_for_05_24_21_assessment` varchar(80) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_06_01_21`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_06_01_21`;
+CREATE TABLE `blueprint_data_chart_06_01_21` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_05_16_21_to_05_22_21` varchar(49) DEFAULT NULL,
+  `final_tier_assignment_for_06_01_21` varchar(34) DEFAULT NULL,
+  `previous_tier_assignment_05_24_21_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `county_tier_assignment_based_on_meeting_accelerated_health_equi` varchar(74) DEFAULT NULL,
+  `number_of_weeks_in_current_tier` varchar(31) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_less_restricti` varchar(70) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_more_restricti` varchar(70) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate` varchar(45) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(124) DEFAULT NULL,
+  `population` varchar(11) DEFAULT NULL,
+  `total_new_cases_7_day_7_day_lag` varchar(33) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL,
+  `he_quartile_test_positivitypct_within_threshold_for_less_restri` varchar(91) DEFAULT NULL,
+  `number_of_consecutive_weeks_of_health_equity_metric_towards_mov` varchar(111) DEFAULT NULL,
+  `eligible_for_accelerated_health_equity_criteria_to_move_to_less` varchar(129) DEFAULT NULL,
+  `number_of_consecutive_weeks_towards_movement_to_less_restrictiv` varchar(110) DEFAULT NULL,
+  `notes_about_countys_tier_status_for_05_31_21_assessment` varchar(80) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_06_08_21`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_06_08_21`;
+CREATE TABLE `blueprint_data_chart_06_08_21` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_05_23_21_to_05_29_21` varchar(49) DEFAULT NULL,
+  `final_tier_assignment_for_06_08_21` varchar(34) DEFAULT NULL,
+  `previous_tier_assignment_05_31_21_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `county_tier_assignment_based_on_meeting_accelerated_health_equi` varchar(74) DEFAULT NULL,
+  `number_of_weeks_in_current_tier` varchar(31) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_less_restricti` varchar(70) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_more_restricti` varchar(70) DEFAULT NULL,
+  `tier_for_week_05_23_21_to_05_29_21_06_07_21_assessment` varchar(55) DEFAULT NULL,
+  `small_countytier_for_week_05_23_21_to_05_29_21_06_07_21_assessm` varchar(100) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate` varchar(45) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(124) DEFAULT NULL,
+  `population` varchar(11) DEFAULT NULL,
+  `total_new_cases_7_day_7_day_lag` varchar(33) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL,
+  `he_quartile_test_positivitypct_within_threshold_for_less_restri` varchar(91) DEFAULT NULL,
+  `number_of_consecutive_weeks_of_health_equity_metric_towards_mov` varchar(111) DEFAULT NULL,
+  `eligible_for_accelerated_health_equity_criteria_to_move_to_less` varchar(129) DEFAULT NULL,
+  `number_of_consecutive_weeks_towards_movement_to_less_restrictiv` varchar(110) DEFAULT NULL,
+  `notes_about_countys_tier_status_for_06_07_21_assessment` varchar(59) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_10_13_2020`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_10_13_2020`;
+CREATE TABLE `blueprint_data_chart_10_13_2020` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `updated_tier_assignment_10_12_20_assessment` varchar(44) DEFAULT NULL,
+  `previous_tier_assignment_10_5_20_assessment` varchar(44) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `school_reopening_status_as_of_10_12_20` varchar(38) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_less_restricti` varchar(70) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_more_restricti` varchar(70) DEFAULT NULL,
+  `tier_for_week_9_27_20_to_10_3_20_10_12_20_assessment` varchar(53) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag_` varchar(48) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(80) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate_gt_state_avg_plus` varchar(108) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(123) DEFAULT NULL,
+  `population` varchar(11) DEFAULT NULL,
+  `county_exceeds_minimum_number_of_weekly_cases_based_on_populati` varchar(82) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL,
+  `he_quartile_test_positivitypct_within_threshold_for_less_restri` varchar(76) DEFAULT NULL,
+  `number_of_consecutive_weeks_of_health_equity_metric_towards_mov` varchar(93) DEFAULT NULL,
+  `eligible_for_accelerated_health_equity_criteria_to_move_to_less` varchar(80) DEFAULT NULL,
+  `number_of_consecutive_weeks_towards_movement_to_less_restrictiv` varchar(110) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_10_21_20`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_10_21_20`;
+CREATE TABLE `blueprint_data_chart_10_21_20` (
+  `county` varchar(16) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_10_4_20_to_10_10_20` varchar(48) DEFAULT NULL,
+  `updated_tier_assignment_10_19_20_assessment` varchar(44) DEFAULT NULL,
+  `previous_tier_assignment_10_12_20_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `county_tier_assignment_based_on_meeting_accelerated_health_equi` varchar(74) DEFAULT NULL,
+  `school_reopening_status_as_of_10_19_20` varchar(38) DEFAULT NULL,
+  `number_of_weeks_in_current_tier` varchar(31) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_less_restricti` varchar(70) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_more_restricti` varchar(70) DEFAULT NULL,
+  `tier_for_week_10_4_20_to_10_10_20_10_19_20_assessment` varchar(54) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate_gt_state_avg_plus` varchar(108) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(123) DEFAULT NULL,
+  `population` varchar(11) DEFAULT NULL,
+  `county_exceeds_minimum_number_of_weekly_cases_based_on_populati` varchar(82) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL,
+  `he_quartile_test_positivitypct_within_threshold_for_less_restri` varchar(73) DEFAULT NULL,
+  `number_of_consecutive_weeks_of_health_equity_metric_towards_mov` varchar(93) DEFAULT NULL,
+  `eligible_for_accelerated_health_equity_criteria_to_move_to_less` varchar(80) DEFAULT NULL,
+  `number_of_consecutive_weeks_towards_movement_to_less_restrictiv` varchar(110) DEFAULT NULL,
+  `notes_about_countys_tier_status_for_10_19_20_assessment` varchar(94) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_10_27_20`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_10_27_20`;
+CREATE TABLE `blueprint_data_chart_10_27_20` (
+  `county` varchar(16) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_10_11_20_to_10_17_20` varchar(49) DEFAULT NULL,
+  `updated_tier_assignment_10_26_20_assessment` varchar(44) DEFAULT NULL,
+  `previous_tier_assignment_10_19_20_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `county_tier_assignment_based_on_meeting_accelerated_health_equi` varchar(74) DEFAULT NULL,
+  `school_reopening_status_as_of_10_26_20` varchar(38) DEFAULT NULL,
+  `number_of_weeks_in_current_tier` varchar(31) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_less_restricti` varchar(70) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_more_restricti` varchar(70) DEFAULT NULL,
+  `tier_for_week_10_11_20_to_10_17_20_10_26_20_assessment` varchar(55) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate_gt_state_avg_plus` varchar(108) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(123) DEFAULT NULL,
+  `population` varchar(10) DEFAULT NULL,
+  `county_exceeds_minimum_number_of_weekly_cases_based_on_populati` varchar(82) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL,
+  `he_quartile_test_positivitypct_within_threshold_for_less_restri` varchar(73) DEFAULT NULL,
+  `number_of_consecutive_weeks_of_health_equity_metric_towards_mov` varchar(93) DEFAULT NULL,
+  `eligible_for_accelerated_health_equity_criteria_to_move_to_less` varchar(80) DEFAULT NULL,
+  `number_of_consecutive_weeks_towards_movement_to_less_restrictiv` varchar(110) DEFAULT NULL,
+  `notes_about_countys_tier_status_for_10_26_20_assessment` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_10_6_2020`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_10_6_2020`;
+CREATE TABLE `blueprint_data_chart_10_6_2020` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `updated_tier_assignment_10_5_20_assessment` varchar(43) DEFAULT NULL,
+  `previous_tier_assignment_9_28_20_assessment` varchar(44) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `school_opening` varchar(14) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_less_restricti` varchar(70) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_more_restricti` varchar(70) DEFAULT NULL,
+  `tier_for_week_9_20_20_to_9_26_20_assessment_assessment` varchar(57) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `adjusted_case_rate_used_for_tier_assignment_7_day_avg_7_day_lag` varchar(66) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prison7_day_avg_7_day_lag` varchar(66) DEFAULT NULL,
+  `linear_case_rate_adjustment_factor_applied_to_case_rate` varchar(55) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(122) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_7_day_avg_7_day_lag` varchar(53) DEFAULT NULL,
+  `population` varchar(10) DEFAULT NULL,
+  `total_new_cases_additional_small_county_criteria_applied_to_mov` varchar(227) DEFAULT NULL,
+  `test_positivity_excl_prisons_in_lowest_healthy_places_index_qua` varchar(101) DEFAULT NULL,
+  `meets_health_equity_requirement_lowest_hpi_quartile_census_trac` varchar(164) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_health_equity_requirement` varchar(61) DEFAULT NULL,
+  `meets_accelerated_health_equity_criteria` varchar(40) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_accelerated_health_equity_c` varchar(70) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_11_04_20`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_11_04_20`;
+CREATE TABLE `blueprint_data_chart_11_04_20` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_10_18_20_to_10_24_20` varchar(49) DEFAULT NULL,
+  `updated_tier_assignment_11_02_20_assessment` varchar(44) DEFAULT NULL,
+  `previous_tier_assignment_10_26_20_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `county_tier_assignment_based_on_meeting_accelerated_health_equi` varchar(74) DEFAULT NULL,
+  `school_reopening_status_as_of_11_02_20` varchar(38) DEFAULT NULL,
+  `number_of_weeks_in_current_tier` varchar(31) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_less_restricti` varchar(70) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_more_restricti` varchar(70) DEFAULT NULL,
+  `tier_for_week_10_18_20_to_10_24_20_11_02_20_assessment` varchar(55) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate_gt_state_avg_plus` varchar(108) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(123) DEFAULT NULL,
+  `population` varchar(12) DEFAULT NULL,
+  `county_exceeds_minimum_number_of_weekly_cases_based_on_populati` varchar(82) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL,
+  `he_quartile_test_positivitypct_within_threshold_for_less_restri` varchar(73) DEFAULT NULL,
+  `number_of_consecutive_weeks_of_health_equity_metric_towards_mov` varchar(93) DEFAULT NULL,
+  `eligible_for_accelerated_health_equity_criteria_to_move_to_less` varchar(80) DEFAULT NULL,
+  `number_of_consecutive_weeks_towards_movement_to_less_restrictiv` varchar(110) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_11_10_20`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_11_10_20`;
+CREATE TABLE `blueprint_data_chart_11_10_20` (
+  `county` varchar(17) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_10_25_20_to_10_31_20` varchar(49) DEFAULT NULL,
+  `updated_tier_assignment_11_09_20_assessment` varchar(44) DEFAULT NULL,
+  `previous_tier_assignment_11_02_20_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `county_tier_assignment_based_on_meeting_accelerated_health_equi` varchar(74) DEFAULT NULL,
+  `school_reopening_status_as_of_11_09_20` varchar(38) DEFAULT NULL,
+  `number_of_weeks_in_current_tier` varchar(31) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_less_restricti` varchar(70) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_criteria_for_more_restricti` varchar(70) DEFAULT NULL,
+  `tier_for_week_10_25_20_to_10_31_20_11_09_20_assessment` varchar(55) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate_gt_state_avg_plus` varchar(108) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(123) DEFAULT NULL,
+  `population` varchar(12) DEFAULT NULL,
+  `county_exceeds_minimum_number_of_weekly_cases_based_on_populati` varchar(82) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL,
+  `he_quartile_test_positivitypct_within_threshold_for_less_restri` varchar(73) DEFAULT NULL,
+  `number_of_consecutive_weeks_of_health_equity_metric_towards_mov` varchar(93) DEFAULT NULL,
+  `eligible_for_accelerated_health_equity_criteria_to_move_to_less` varchar(80) DEFAULT NULL,
+  `number_of_consecutive_weeks_towards_movement_to_less_restrictiv` varchar(110) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_11_16_20`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_11_16_20`;
+CREATE TABLE `blueprint_data_chart_11_16_20` (
+  `location` varchar(16) DEFAULT NULL,
+  `tier_assignment_on_11_10_20` varchar(27) DEFAULT NULL,
+  `tier_assessment` varchar(15) DEFAULT NULL,
+  `final_tier_for_11_16` varchar(20) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_4_day_lag` varchar(58) DEFAULT NULL,
+  `adjusted_case_rate` varchar(18) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate_gt_state_avg_plus` varchar(110) DEFAULT NULL,
+  `county_wide_test_positivity_4_day_lag` varchar(39) DEFAULT NULL,
+  `cases_exl_prison_11_4_to_11_10` varchar(32) DEFAULT NULL,
+  `pop_size` varchar(8) DEFAULT NULL,
+  `school_reopening_status` varchar(23) DEFAULT NULL,
+  `notes` varchar(47) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_11_24_20`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_11_24_20`;
+CREATE TABLE `blueprint_data_chart_11_24_20` (
+  `county` varchar(15) DEFAULT NULL,
+  `tier_assignment_on_11_16` varchar(24) DEFAULT NULL,
+  `final_tier_for_11_24` varchar(20) DEFAULT NULL,
+  `test_positivity_tier` varchar(20) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_4_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_or_case_number_tier` varchar(29) DEFAULT NULL,
+  `case_rate_used_for_large_counties_tier_7_day_avg_4_day_lag` varchar(61) DEFAULT NULL,
+  `total_new_cases_used_for_small_counties_tier_7_day_total_4_day_` varchar(69) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisoners_7_day_avg_4_day` varchar(70) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate_gt_state_avg_plus` varchar(108) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(123) DEFAULT NULL,
+  `population` varchar(10) DEFAULT NULL,
+  `schools_reopening_status` varchar(25) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_11_28_2020`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_11_28_2020`;
+CREATE TABLE `blueprint_data_chart_11_28_2020` (
+  `county` varchar(15) DEFAULT NULL,
+  `tier_assignment_on_11_24` varchar(24) DEFAULT NULL,
+  `final_tier_assignment_for_11_28` varchar(31) DEFAULT NULL,
+  `test_positivity_tier` varchar(20) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_4_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_or_case_number_tier_for_tier` varchar(38) DEFAULT NULL,
+  `case_rate_used_for_large_counties_tier_7_day_avg_4_day_lag` varchar(61) DEFAULT NULL,
+  `total_new_cases_used_for_small_counties_tier_7_day_total_4_day_` varchar(69) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_4_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate_gt_state_avg_plus` varchar(108) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(123) DEFAULT NULL,
+  `population` varchar(12) DEFAULT NULL,
+  `schools_reopening_status` varchar(25) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_12_01_20`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_12_01_20`;
+CREATE TABLE `blueprint_data_chart_12_01_20` (
+  `county` varchar(15) DEFAULT NULL,
+  `tier_assignment_on_11_28` varchar(25) DEFAULT NULL,
+  `final_tier_assignment_on_12_01` varchar(31) DEFAULT NULL,
+  `test_positivity_tier` varchar(20) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_4_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_or_case_number_tier` varchar(30) DEFAULT NULL,
+  `case_rate_used_for_large_counties_tier_7_day_avg_4_day_lag` varchar(61) DEFAULT NULL,
+  `total_new_cases_used_for_small_counties_tier_7_day_total_4_day_` varchar(69) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_4_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate_gt_state_avg_plus` varchar(108) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(123) DEFAULT NULL,
+  `population` varchar(12) DEFAULT NULL,
+  `schools_reopening_status` varchar(25) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_12_15_20`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_12_15_20`;
+CREATE TABLE `blueprint_data_chart_12_15_20` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_11_29_20_to_12_05_20` varchar(49) DEFAULT NULL,
+  `final_tier_assignment_on_12_15_20` varchar(33) DEFAULT NULL,
+  `previous_tier_assignment_12_07_20_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `school_reopening_status` varchar(23) DEFAULT NULL,
+  `tier_for_week_11_29_20_to_12_05_20_12_14_20_assessment` varchar(55) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate_gt_state_avg_plus` varchar(108) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(123) DEFAULT NULL,
+  `population` varchar(11) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_12_22_20`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_12_22_20`;
+CREATE TABLE `blueprint_data_chart_12_22_20` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_12_06_20_to_12_12_20` varchar(49) DEFAULT NULL,
+  `final_tier_assignment_on_12_22_20` varchar(33) DEFAULT NULL,
+  `previous_tier_assignment_12_14_20_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `school_reopening_status_as_of_12_21_20` varchar(38) DEFAULT NULL,
+  `tier_for_week_12_06_20_to_12_12_20_12_21_20_assessment` varchar(55) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate_gt_state_avg_plus` varchar(108) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(123) DEFAULT NULL,
+  `population` varchar(11) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_12_29_20`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_12_29_20`;
+CREATE TABLE `blueprint_data_chart_12_29_20` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_12_13_20_to_12_19_20` varchar(49) DEFAULT NULL,
+  `final_tier_assignment_on_12_29_20` varchar(33) DEFAULT NULL,
+  `previous_tier_assignment_12_21_20_assessment` varchar(45) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `school_reopening_status_as_of_12_28_20` varchar(38) DEFAULT NULL,
+  `tier_for_week_12_13_20_to_12_19_20_12_28_20_assessment` varchar(55) DEFAULT NULL,
+  `test_positivity_excl_prisons_7_day_7_day_lag` varchar(47) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(79) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prisons_7_day_avg_7_day_l` varchar(68) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate_gt_state_avg_plus` varchar(108) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(123) DEFAULT NULL,
+  `population` varchar(11) DEFAULT NULL,
+  `health_equity_quartile_test_positivity_excl_prison_cases_7_day_` varchar(75) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_8_31_2020`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_8_31_2020`;
+CREATE TABLE `blueprint_data_chart_8_31_2020` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assignment` varchar(23) DEFAULT NULL,
+  `number_of_consecutive_weeks_meeting_next_tiers_criteria2_eq_adv` varchar(67) DEFAULT NULL,
+  `health_equity_measure_met` varchar(26) DEFAULT NULL,
+  `case_rate_week_ending_august_11` varchar(31) DEFAULT NULL,
+  `adj_case_rate_week_ending_august_11` varchar(35) DEFAULT NULL,
+  `case_rate_week_ending_august_18` varchar(31) DEFAULT NULL,
+  `adj_case_rate_week_ending_august_18` varchar(35) DEFAULT NULL,
+  `testing_positivity_week_ending_august_11` varchar(40) DEFAULT NULL,
+  `testing_positivity_week_ending_august_18` varchar(40) DEFAULT NULL,
+  `test_rate_week_ending_august_11` varchar(31) DEFAULT NULL,
+  `test_rate_week_ending_august_18` varchar(31) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_9_15_2020`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_9_15_2020`;
+CREATE TABLE `blueprint_data_chart_9_15_2020` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `tier_assignment_9_15` varchar(20) DEFAULT NULL,
+  `number_of_weeks_in_current_tier` varchar(31) DEFAULT NULL,
+  `number_of_weeks_meeting_criteria_for_less_restrictive_tier` varchar(58) DEFAULT NULL,
+  `number_of_weeks_meeting_criteria_for_more_restrictive_tier` varchar(58) DEFAULT NULL,
+  `previous_overall_tier_assessment_on_9_8` varchar(39) DEFAULT NULL,
+  `9_14_assessment_metrics_for_08_30_20_to_09_05_20` varchar(49) DEFAULT NULL,
+  `testing_positivity_excl_prisons_7_day_avg_7_day_lag` varchar(53) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(78) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prison_7_day_avg_7_day_lag` varchar(66) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate_gt_state_avg_plus` varchar(108) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(122) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_7_day_avg_7_day_lag` varchar(53) DEFAULT NULL,
+  `population` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_9_29_2020`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_9_29_2020`;
+CREATE TABLE `blueprint_data_chart_9_29_2020` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assessment` varchar(23) DEFAULT NULL,
+  `ending_date_of_week_of_data_starting_at_09_13_2020` varchar(51) DEFAULT NULL,
+  `updated_overall_tier_status_09_28_2020_assessment` varchar(50) DEFAULT NULL,
+  `previous_overall_tier_status_09_21_2020_assessment` varchar(51) DEFAULT NULL,
+  `first_date_in_current_tier` varchar(26) DEFAULT NULL,
+  `school_reopening_status_as_of_09_28_2020` varchar(40) DEFAULT NULL,
+  `number_of_weeks_in_current_tier` varchar(31) DEFAULT NULL,
+  `number_of_weeks_meeting_criteria_for_less_restrictive_tier` varchar(58) DEFAULT NULL,
+  `number_of_weeks_meeting_criteria_for_more_restrictive_tier` varchar(58) DEFAULT NULL,
+  `tier_for_week_09_13_2020_to_09_19_2020_09_28_2020_assessment` varchar(61) DEFAULT NULL,
+  `testing_positivity_excl_prisons_7_day_avg_7_day_lag` varchar(53) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(78) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prison_7_day_avg_7_day_lag` varchar(66) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate_gt_state_avg_plus` varchar(108) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_with_replaced_approved_county_da` varchar(122) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_7_day_avg_7_day_lag` varchar(53) DEFAULT NULL,
+  `population` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `blueprint_data_chart_9_8_2020`
+--
+
+DROP TABLE IF EXISTS `blueprint_data_chart_9_8_2020`;
+CREATE TABLE `blueprint_data_chart_9_8_2020` (
+  `county` varchar(15) DEFAULT NULL,
+  `date_of_tier_assignment` varchar(23) DEFAULT NULL,
+  `updated_overall_tier_status_data_pulled_09_07_2020` varchar(51) DEFAULT NULL,
+  `number_of_weeks_meeting_criteria_for_higher_tier` varchar(48) DEFAULT NULL,
+  `number_of_weeks_meeting_criteria_for_lower_tier` varchar(47) DEFAULT NULL,
+  `previous_tier_status_08_31_2020_assessment` varchar(43) DEFAULT NULL,
+  `tier_for_week_ending_08_29_2020_using_full_linear_adjustment` varchar(60) DEFAULT NULL,
+  `testing_positivity_excl_prisons_7_day_avg_7_day_lag` varchar(53) DEFAULT NULL,
+  `case_rate_used_for_tier_adjusted_using_linear_adjustment_7_day_` varchar(78) DEFAULT NULL,
+  `adj_case_rate_for_tier_assign_using_lin_adj_per_100_000_excl_pr` varchar(91) DEFAULT NULL,
+  `unadjusted_case_rate_per_100_000_excl_prison_7_day_avg_7_day_lag` varchar(66) DEFAULT NULL,
+  `linear_adjustment_factor_applied_to_case_rate_gt_state_avg_plus` varchar(108) DEFAULT NULL,
+  `tests_per_100_000_excl_prisons_7_day_avg_7_day_lag_state_avg_eq` varchar(68) DEFAULT NULL,
+  `population` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `brain_injury_ind_living_center_locations`
 --
 
@@ -8034,20 +11971,46 @@ CREATE TABLE `brain_injury_ind_living_center_locations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `brfss_data_adult_asthma_prevalence_1995_to_2011`
+--
+
+DROP TABLE IF EXISTS `brfss_data_adult_asthma_prevalence_1995_to_2011`;
+CREATE TABLE `brfss_data_adult_asthma_prevalence_1995_to_2011` (
+  `year` varchar(4) DEFAULT NULL,
+  `percent` varchar(4) DEFAULT NULL,
+  `95pct_ci_lower_limit` varchar(4) DEFAULT NULL,
+  `95pct_ci_upper_limit` varchar(4) DEFAULT NULL,
+  `measure` varchar(26) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `brfss_data_adult_asthma_prevalence_2012_to_present`
+--
+
+DROP TABLE IF EXISTS `brfss_data_adult_asthma_prevalence_2012_to_present`;
+CREATE TABLE `brfss_data_adult_asthma_prevalence_2012_to_present` (
+  `year` varchar(4) DEFAULT NULL,
+  `percent` varchar(4) DEFAULT NULL,
+  `95pct_ci_lower_limit` varchar(4) DEFAULT NULL,
+  `95pct_ci_upper_limit` varchar(4) DEFAULT NULL,
+  `measure` varchar(26) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `bridge_period_2019_20_cohs_model_rates`
 --
 
 DROP TABLE IF EXISTS `bridge_period_2019_20_cohs_model_rates`;
 CREATE TABLE `bridge_period_2019_20_cohs_model_rates` (
-  `rating_period` varchar(10) DEFAULT NULL,
+  `rating_period` varchar(14) DEFAULT NULL,
   `fiscal_year_bp` varchar(14) DEFAULT NULL,
-  `model` varchar(4) DEFAULT NULL,
+  `model` varchar(5) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
   `health_plan` varchar(30) DEFAULT NULL,
   `category_of_aid` varchar(32) DEFAULT NULL,
-  `lower_bound` varchar(8) DEFAULT NULL,
+  `lower_bound` varchar(11) DEFAULT NULL,
   `midpoint` varchar(8) DEFAULT NULL,
-  `upper_bound` varchar(8) DEFAULT NULL
+  `upper_bound` varchar(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -8142,7 +12105,7 @@ DROP TABLE IF EXISTS `by_delivery_system_and_plan_certified_eligibles`;
 CREATE TABLE `by_delivery_system_and_plan_certified_eligibles` (
   `month_of_eligibility` varchar(7) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
-  `health_delivery_system` varchar(15) DEFAULT NULL,
+  `health_delivery_system_name` varchar(15) DEFAULT NULL,
   `health_plan` varchar(57) DEFAULT NULL,
   `total_eligibles` varchar(10) DEFAULT NULL,
   `annotation_code` varchar(3) DEFAULT NULL,
@@ -8218,24 +12181,6 @@ CREATE TABLE `by_race_ethnicity_and_age_group_certified_eligibles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `cal_cat`
---
-
-DROP TABLE IF EXISTS `cal_cat`;
-CREATE TABLE `cal_cat` (
-  `source` varchar(63) DEFAULT NULL,
-  `disease` varchar(63) DEFAULT NULL,
-  `location_level` varchar(63) DEFAULT NULL,
-  `location` varchar(255) DEFAULT NULL,
-  `target_date` date DEFAULT NULL,
-  `target` varchar(63) DEFAULT NULL,
-  `model` varchar(63) DEFAULT NULL,
-  `value_num` decimal(7,2) DEFAULT NULL,
-  `quantile` varchar(63) DEFAULT NULL,
-  `archivedt` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
 -- Table structure for table `calcat_forecast`
 --
 
@@ -8244,7 +12189,7 @@ CREATE TABLE `calcat_forecast` (
   `disease` varchar(9) DEFAULT NULL,
   `location_level` varchar(30) DEFAULT NULL,
   `location` varchar(28) DEFAULT NULL,
-  `target_date` varchar(10) DEFAULT NULL,
+  `target_date` varchar(11) DEFAULT NULL,
   `target` varchar(15) DEFAULT NULL,
   `model` varchar(37) DEFAULT NULL,
   `value` varchar(8) DEFAULT NULL,
@@ -8258,15 +12203,15 @@ CREATE TABLE `calcat_forecast` (
 
 DROP TABLE IF EXISTS `calendar_year_2021_cohs_rates`;
 CREATE TABLE `calendar_year_2021_cohs_rates` (
-  `rating_period` varchar(10) DEFAULT NULL,
-  `calendar_year` varchar(4) DEFAULT NULL,
-  `model` varchar(4) DEFAULT NULL,
+  `rating_period` varchar(14) DEFAULT NULL,
+  `calendar_year` varchar(13) DEFAULT NULL,
+  `model` varchar(5) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
   `health_plan` varchar(30) DEFAULT NULL,
   `category_of_aid` varchar(32) DEFAULT NULL,
-  `lower_bound` varchar(8) DEFAULT NULL,
+  `lower_bound` varchar(11) DEFAULT NULL,
   `midpoint` varchar(8) DEFAULT NULL,
-  `upper_bound` varchar(8) DEFAULT NULL
+  `upper_bound` varchar(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -8292,9 +12237,9 @@ CREATE TABLE `calendar_year_2021_geographic_managed_care` (
 
 DROP TABLE IF EXISTS `calendar_year_2022_cohs_rates`;
 CREATE TABLE `calendar_year_2022_cohs_rates` (
-  `rating_period` varchar(10) DEFAULT NULL,
-  `calendar_year` varchar(4) DEFAULT NULL,
-  `model` varchar(4) DEFAULT NULL,
+  `rating_period` varchar(13) DEFAULT NULL,
+  `calendar_year` varchar(13) DEFAULT NULL,
+  `model` varchar(5) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
   `health_plan` varchar(30) DEFAULT NULL,
   `category_of_aid` varchar(32) DEFAULT NULL,
@@ -8326,15 +12271,15 @@ CREATE TABLE `calendar_year_2022_geographic_managed_care` (
 
 DROP TABLE IF EXISTS `calendar_year_2023_cohs_rates`;
 CREATE TABLE `calendar_year_2023_cohs_rates` (
-  `rating_period` varchar(10) DEFAULT NULL,
-  `calendar_year` varchar(4) DEFAULT NULL,
-  `model` varchar(4) DEFAULT NULL,
+  `rating_period` varchar(16) DEFAULT NULL,
+  `calendar_year` varchar(13) DEFAULT NULL,
+  `model` varchar(5) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
   `health_plan` varchar(38) DEFAULT NULL,
   `category_of_aid` varchar(47) DEFAULT NULL,
-  `lower_bound` varchar(12) DEFAULT NULL,
+  `lower_bound` varchar(13) DEFAULT NULL,
   `midpoint` varchar(12) DEFAULT NULL,
-  `upper_bound` varchar(12) DEFAULT NULL
+  `upper_bound` varchar(13) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -8402,22 +12347,59 @@ CREATE TABLE `calendar_years_2020_to_the_most_recent_reportable_month` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `california_hospital_inpatient_mortality_rates`
+-- Table structure for table `california_hospital_inpatient_mortality_rates_2010_2015`
 --
 
-DROP TABLE IF EXISTS `california_hospital_inpatient_mortality_rates`;
-CREATE TABLE `california_hospital_inpatient_mortality_rates` (
+DROP TABLE IF EXISTS `california_hospital_inpatient_mortality_rates_2010_2015`;
+CREATE TABLE `california_hospital_inpatient_mortality_rates_2010_2015` (
+  `year` varchar(4) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `hospital` varchar(69) DEFAULT NULL,
+  `oshpdid` varchar(9) DEFAULT NULL,
+  `procedure_name_condition_name` varchar(25) DEFAULT NULL,
+  `risk_adjuested_mortality_rate` varchar(5) DEFAULT NULL,
+  `num_of_deaths` varchar(4) DEFAULT NULL,
+  `num_of_cases` varchar(5) DEFAULT NULL,
+  `hospital_ratings` varchar(11) DEFAULT NULL,
+  `longitude` varchar(12) DEFAULT NULL,
+  `latitude` varchar(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `california_hospital_inpatient_mortality_rates_2016_2022`
+--
+
+DROP TABLE IF EXISTS `california_hospital_inpatient_mortality_rates_2016_2022`;
+CREATE TABLE `california_hospital_inpatient_mortality_rates_2016_2022` (
   `year` varchar(4) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
   `hospital` varchar(79) DEFAULT NULL,
   `oshpdid` varchar(9) DEFAULT NULL,
-  `procedure_condition` varchar(26) DEFAULT NULL,
+  `procedure_name_condition_name` varchar(26) DEFAULT NULL,
   `risk_adjuested_mortality_rate` varchar(4) DEFAULT NULL,
   `num_of_deaths` varchar(4) DEFAULT NULL,
   `num_of_cases` varchar(6) DEFAULT NULL,
   `hospital_ratings` varchar(11) DEFAULT NULL,
   `longitude` varchar(12) DEFAULT NULL,
   `latitude` varchar(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `california_medicaid_eligibility_groups_by_medi_cal_aid_code`
+--
+
+DROP TABLE IF EXISTS `california_medicaid_eligibility_groups_by_medi_cal_aid_code`;
+CREATE TABLE `california_medicaid_eligibility_groups_by_medi_cal_aid_code` (
+  `aid_code` varchar(11) DEFAULT NULL,
+  `aid_code_name` varchar(172) DEFAULT NULL,
+  `benefits` varchar(36) DEFAULT NULL,
+  `eligibility_group` varchar(171) DEFAULT NULL,
+  `short_description` varchar(293) DEFAULT NULL,
+  `group_code` varchar(32) DEFAULT NULL,
+  `type` varchar(12) DEFAULT NULL,
+  `federal_category` varchar(17) DEFAULT NULL,
+  `medicaid` varchar(17) DEFAULT NULL,
+  `None` varchar(2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -8428,7 +12410,7 @@ DROP TABLE IF EXISTS `california_statewide_inpatient_mortality_rates`;
 CREATE TABLE `california_statewide_inpatient_mortality_rates` (
   `year` varchar(4) DEFAULT NULL,
   `hospital` varchar(9) DEFAULT NULL,
-  `procedure_condition` varchar(25) DEFAULT NULL,
+  `procedure_name_condition` varchar(25) DEFAULT NULL,
   `risk_adjuested_mortality_rate` varchar(4) DEFAULT NULL,
   `num_of_deaths` varchar(4) DEFAULT NULL,
   `num_of_cases` varchar(5) DEFAULT NULL
@@ -8469,36 +12451,6 @@ CREATE TABLE `calworks_welfare_to_work_enrollments_and_activities` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `carrier_codes`
---
-
-DROP TABLE IF EXISTS `carrier_codes`;
-CREATE TABLE `carrier_codes` (
-  `code` char(1) DEFAULT NULL,
-  `description` varchar(63) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `carriers`
---
-
-DROP TABLE IF EXISTS `carriers`;
-CREATE TABLE `carriers` (
-  `carrier_code` varchar(4) DEFAULT NULL,
-  `last_change_date` varchar(8) DEFAULT NULL,
-  `status_code` varchar(1) DEFAULT NULL,
-  `ohc_code` varchar(1) DEFAULT NULL,
-  `carrier_name_1` varchar(30) DEFAULT NULL,
-  `carrier_name_2` varchar(30) DEFAULT NULL,
-  `carrier_addr_2` varchar(50) DEFAULT NULL,
-  `carrier_city` varchar(20) DEFAULT NULL,
-  `carrier_state` varchar(2) DEFAULT NULL,
-  `carrier_zip_code` varchar(9) DEFAULT NULL,
-  `carrier_phone` varchar(14) DEFAULT NULL,
-  `plan_type` varchar(3) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
 -- Table structure for table `catalog`
 --
 
@@ -8532,17 +12484,6 @@ CREATE TABLE `catalog` (
   `tags` text,
   `dataset_url` varchar(133) DEFAULT NULL,
   `dataset_id` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `catalog_agency`
---
-
-DROP TABLE IF EXISTS `catalog_agency`;
-CREATE TABLE `catalog_agency` (
-  `pk` int NOT NULL,
-  `name` varchar(127) DEFAULT NULL,
-  PRIMARY KEY (`pk`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -8883,50 +12824,6 @@ CREATE TABLE `cdis_in_hospitals_2019` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `cdis_in_hospitals_2020_p1`
---
-
-DROP TABLE IF EXISTS `cdis_in_hospitals_2020_p1`;
-CREATE TABLE `cdis_in_hospitals_2020_p1` (
-  `year` varchar(6) DEFAULT NULL,
-  `state` varchar(10) DEFAULT NULL,
-  `county` varchar(15) DEFAULT NULL,
-  `hai` varchar(40) DEFAULT NULL,
-  `facility_id` varchar(9) DEFAULT NULL,
-  `facility_name` varchar(67) DEFAULT NULL,
-  `hospital_category_riskadjustment` varchar(67) DEFAULT NULL,
-  `facility_type` varchar(67) DEFAULT NULL,
-  `infections_reported` varchar(4) DEFAULT NULL,
-  `infections_predicted` varchar(7) DEFAULT NULL,
-  `patient_days` varchar(7) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `cdis_in_hospitals_2020_p2`
---
-
-DROP TABLE IF EXISTS `cdis_in_hospitals_2020_p2`;
-CREATE TABLE `cdis_in_hospitals_2020_p2` (
-  `year` varchar(6) DEFAULT NULL,
-  `state` varchar(10) DEFAULT NULL,
-  `county` varchar(15) DEFAULT NULL,
-  `hai` varchar(40) DEFAULT NULL,
-  `facility_id` varchar(9) DEFAULT NULL,
-  `facility_name` varchar(67) DEFAULT NULL,
-  `hospital_category_riskadjustment` varchar(67) DEFAULT NULL,
-  `facility_type` varchar(67) DEFAULT NULL,
-  `infections_reported` varchar(4) DEFAULT NULL,
-  `infections_predicted` varchar(7) DEFAULT NULL,
-  `patient_days` varchar(7) DEFAULT NULL,
-  `sir` varchar(5) DEFAULT NULL,
-  `sir_ci_95_lower_limit` varchar(5) DEFAULT NULL,
-  `sir_ci_95_upper_limit` varchar(6) DEFAULT NULL,
-  `comparison` varchar(6) DEFAULT NULL,
-  `months` varchar(1) DEFAULT NULL,
-  `notes` varchar(66) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
 -- Table structure for table `cdis_in_hospitals_2021`
 --
 
@@ -9004,6 +12901,50 @@ CREATE TABLE `cdis_in_hospitals_2023` (
   `met_2020_goal` varchar(3) DEFAULT NULL,
   `sir_2015` varchar(4) DEFAULT NULL,
   `months` varchar(2) DEFAULT NULL,
+  `notes` varchar(66) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `cdis_in_january_through_june_2020_updated_annually`
+--
+
+DROP TABLE IF EXISTS `cdis_in_january_through_june_2020_updated_annually`;
+CREATE TABLE `cdis_in_january_through_june_2020_updated_annually` (
+  `year` varchar(6) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `hai` varchar(40) DEFAULT NULL,
+  `facility_id` varchar(9) DEFAULT NULL,
+  `facility_name` varchar(67) DEFAULT NULL,
+  `hospital_category_riskadjustment` varchar(67) DEFAULT NULL,
+  `facility_type` varchar(67) DEFAULT NULL,
+  `infections_reported` varchar(4) DEFAULT NULL,
+  `infections_predicted` varchar(7) DEFAULT NULL,
+  `patient_days` varchar(7) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `cdis_in_july_through_december_2020_updated_annually`
+--
+
+DROP TABLE IF EXISTS `cdis_in_july_through_december_2020_updated_annually`;
+CREATE TABLE `cdis_in_july_through_december_2020_updated_annually` (
+  `year` varchar(6) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `hai` varchar(40) DEFAULT NULL,
+  `facility_id` varchar(9) DEFAULT NULL,
+  `facility_name` varchar(67) DEFAULT NULL,
+  `hospital_category_riskadjustment` varchar(67) DEFAULT NULL,
+  `facility_type` varchar(67) DEFAULT NULL,
+  `infections_reported` varchar(4) DEFAULT NULL,
+  `infections_predicted` varchar(7) DEFAULT NULL,
+  `patient_days` varchar(7) DEFAULT NULL,
+  `sir` varchar(5) DEFAULT NULL,
+  `sir_ci_95_lower_limit` varchar(5) DEFAULT NULL,
+  `sir_ci_95_upper_limit` varchar(6) DEFAULT NULL,
+  `comparison` varchar(6) DEFAULT NULL,
+  `months` varchar(1) DEFAULT NULL,
   `notes` varchar(66) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -9239,6 +13180,263 @@ CREATE TABLE `chargemasters_sheets` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `chart_0_1_2_3_4`
+--
+
+DROP TABLE IF EXISTS `chart_0_1_2_3_4`;
+CREATE TABLE `chart_0_1_2_3_4` (
+  `objectid` varchar(11) DEFAULT NULL,
+  `measure` varchar(123) DEFAULT NULL,
+  `totals` varchar(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `chart_1_1_x`
+--
+
+DROP TABLE IF EXISTS `chart_1_1_x`;
+CREATE TABLE `chart_1_1_x` (
+  `objectid` varchar(11) DEFAULT NULL,
+  `reporting_quarter` varchar(17) DEFAULT NULL,
+  `total_number_of_unique_members_` varchar(31) DEFAULT NULL,
+  `total_nu_1` varchar(10) DEFAULT NULL,
+  `total_number_of_unique_members1` varchar(31) DEFAULT NULL,
+  `total_nu_3` varchar(10) DEFAULT NULL,
+  `totalnumberofuniquemembersaged2` varchar(31) DEFAULT NULL,
+  `totalnumberofuniquemembersunder` varchar(31) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `chart_1_2`
+--
+
+DROP TABLE IF EXISTS `chart_1_2`;
+CREATE TABLE `chart_1_2` (
+  `objectid` varchar(11) DEFAULT NULL,
+  `quarter` varchar(10) DEFAULT NULL,
+  `cumulative_number_of_unique_mem` varchar(31) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `chart_1_3_x`
+--
+
+DROP TABLE IF EXISTS `chart_1_3_x`;
+CREATE TABLE `chart_1_3_x` (
+  `objectid` varchar(11) DEFAULT NULL,
+  `reporting_quarter` varchar(17) DEFAULT NULL,
+  `adult__individuals_experiencin` varchar(31) DEFAULT NULL,
+  `adult__individuals_at_risk_for` varchar(31) DEFAULT NULL,
+  `adult__individuals_with_seriou` varchar(31) DEFAULT NULL,
+  `adult__individuals_transitioni` varchar(31) DEFAULT NULL,
+  `adult__living_in_the_community` varchar(31) DEFAULT NULL,
+  `adult__nursing_facility_reside` varchar(31) DEFAULT NULL,
+  `adult_birth_equity` varchar(18) DEFAULT NULL,
+  `children_and_youth__individual` varchar(31) DEFAULT NULL,
+  `children_and_youth__individu_1` varchar(31) DEFAULT NULL,
+  `children_and_youth__individu_2` varchar(31) DEFAULT NULL,
+  `children_and_youth__enrolled_i` varchar(31) DEFAULT NULL,
+  `children_and_youth__involved_i` varchar(31) DEFAULT NULL,
+  `children_and_youth__individu_3` varchar(31) DEFAULT NULL,
+  `children_youth_birth_equity` varchar(27) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `chart_1_5`
+--
+
+DROP TABLE IF EXISTS `chart_1_5`;
+CREATE TABLE `chart_1_5` (
+  `objectid` varchar(11) DEFAULT NULL,
+  `county_` varchar(15) DEFAULT NULL,
+  `last_date_in_the_reporting_peri` varchar(31) DEFAULT NULL,
+  `average_mcp_members_in_the_last` varchar(31) DEFAULT NULL,
+  `hhp_wpc_status_` varchar(15) DEFAULT NULL,
+  `number_of_unique_members_enroll` varchar(31) DEFAULT NULL,
+  `percentage_of_mcp_members_who_w` varchar(31) DEFAULT NULL,
+  `avg_mcp_memb_u21_last12_month` varchar(29) DEFAULT NULL,
+  `number_of_members_under_age_21_` varchar(31) DEFAULT NULL,
+  `percentage_of_mcp_members_unde` varchar(31) DEFAULT NULL,
+  `number_of_unique_members_enro_1` varchar(31) DEFAULT NULL,
+  `percentage_of_active_ecm_member` varchar(31) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `chart_1_6`
+--
+
+DROP TABLE IF EXISTS `chart_1_6`;
+CREATE TABLE `chart_1_6` (
+  `objectid` varchar(11) DEFAULT NULL,
+  `mcp_` varchar(39) DEFAULT NULL,
+  `last_date_in_the_reporting_peri` varchar(31) DEFAULT NULL,
+  `average_mcp_members_in_the_last` varchar(31) DEFAULT NULL,
+  `number_of_unique_members_enroll` varchar(31) DEFAULT NULL,
+  `percentage_of_mcp_members_who_w` varchar(31) DEFAULT NULL,
+  `average_mcp_members_under_age_2` varchar(31) DEFAULT NULL,
+  `number_of_members_under_age_21_` varchar(31) DEFAULT NULL,
+  `percentage_of_mcp_members_under` varchar(31) DEFAULT NULL,
+  `number_of_unique_members_enro_1` varchar(31) DEFAULT NULL,
+  `percentage_of_active_ecm_member` varchar(31) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `chart_2_1`
+--
+
+DROP TABLE IF EXISTS `chart_2_1`;
+CREATE TABLE `chart_2_1` (
+  `objectid` varchar(11) DEFAULT NULL,
+  `quarter` varchar(10) DEFAULT NULL,
+  `total_number_of_ecm_provider_co` varchar(31) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `chart_2_2`
+--
+
+DROP TABLE IF EXISTS `chart_2_2`;
+CREATE TABLE `chart_2_2` (
+  `objectid` varchar(11) DEFAULT NULL,
+  `quarter` varchar(10) DEFAULT NULL,
+  `cumulative_number_of_ecm_provid` varchar(31) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `chart_2_3_1`
+--
+
+DROP TABLE IF EXISTS `chart_2_3_1`;
+CREATE TABLE `chart_2_3_1` (
+  `objectid` varchar(11) DEFAULT NULL,
+  `ecm_population_of_focus` varchar(116) DEFAULT NULL,
+  `last_date_in_reporting_period` varchar(29) DEFAULT NULL,
+  `total_number_of_ecm_provider_co` varchar(31) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `chart_2_4`
+--
+
+DROP TABLE IF EXISTS `chart_2_4`;
+CREATE TABLE `chart_2_4` (
+  `objectid` varchar(11) DEFAULT NULL,
+  `provider_type_categories_` varchar(54) DEFAULT NULL,
+  `provider_type_` varchar(58) DEFAULT NULL,
+  `last_date_in_the_reporting_peri` varchar(31) DEFAULT NULL,
+  `total_number_of_ecm_provider_co` varchar(31) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `chart_2_5_1`
+--
+
+DROP TABLE IF EXISTS `chart_2_5_1`;
+CREATE TABLE `chart_2_5_1` (
+  `objectid` varchar(11) DEFAULT NULL,
+  `county_` varchar(15) DEFAULT NULL,
+  `mcp_` varchar(38) DEFAULT NULL,
+  `hhp_wpc_status_` varchar(15) DEFAULT NULL,
+  `average_mcp_members_in_the_last` varchar(31) DEFAULT NULL,
+  `cy_2022_q1_` varchar(12) DEFAULT NULL,
+  `cy_2022_q2_` varchar(11) DEFAULT NULL,
+  `cy_2022_q3_` varchar(11) DEFAULT NULL,
+  `cy_2022_q4_` varchar(11) DEFAULT NULL,
+  `cy_2023_q1_` varchar(11) DEFAULT NULL,
+  `cy_2023_q2_` varchar(11) DEFAULT NULL,
+  `cy_2023_q3_` varchar(11) DEFAULT NULL,
+  `cy_2023_q4_` varchar(11) DEFAULT NULL,
+  `cy_2024_q1` varchar(10) DEFAULT NULL,
+  `cy_2024_q2` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `chart_3_1_x`
+--
+
+DROP TABLE IF EXISTS `chart_3_1_x`;
+CREATE TABLE `chart_3_1_x` (
+  `objectid` varchar(11) DEFAULT NULL,
+  `reporting_quarter` varchar(17) DEFAULT NULL,
+  `total_number_of_unique_members_` varchar(31) DEFAULT NULL,
+  `total_nu_1` varchar(10) DEFAULT NULL,
+  `total_nu_2` varchar(10) DEFAULT NULL,
+  `total_number_of_unique_members1` varchar(31) DEFAULT NULL,
+  `total_nu_3` varchar(10) DEFAULT NULL,
+  `totalnumuniquesu21csnohhporwpc` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `chart_3_2`
+--
+
+DROP TABLE IF EXISTS `chart_3_2`;
+CREATE TABLE `chart_3_2` (
+  `objectid` varchar(11) DEFAULT NULL,
+  `reporting_quarter` varchar(17) DEFAULT NULL,
+  `total_number_of_community_suppo` varchar(31) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `chart_3_5_2`
+--
+
+DROP TABLE IF EXISTS `chart_3_5_2`;
+CREATE TABLE `chart_3_5_2` (
+  `objectid` varchar(11) DEFAULT NULL,
+  `reporting_quarter` varchar(17) DEFAULT NULL,
+  `community_support_service` varchar(67) DEFAULT NULL,
+  `total_number_of_members_who_uti` varchar(31) DEFAULT NULL,
+  `total_num_members_utilizing_cs_` varchar(31) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `chart_3_9_2`
+--
+
+DROP TABLE IF EXISTS `chart_3_9_2`;
+CREATE TABLE `chart_3_9_2` (
+  `objectid` varchar(11) DEFAULT NULL,
+  `county_` varchar(15) DEFAULT NULL,
+  `mcp_` varchar(38) DEFAULT NULL,
+  `county_hhp_wpc_status_` varchar(22) DEFAULT NULL,
+  `number_of_community_support_ser` varchar(31) DEFAULT NULL,
+  `average_mcp_members_in_the_last` varchar(31) DEFAULT NULL,
+  `cy_2022_q1_` varchar(12) DEFAULT NULL,
+  `cy_2022_q2_` varchar(11) DEFAULT NULL,
+  `cy_2022_q3_` varchar(11) DEFAULT NULL,
+  `cy_2022_q4_` varchar(11) DEFAULT NULL,
+  `cy_2023_q1_` varchar(11) DEFAULT NULL,
+  `cy_2023_q2_` varchar(11) DEFAULT NULL,
+  `cy_2023_q3_` varchar(11) DEFAULT NULL,
+  `cy_2023_q4_` varchar(11) DEFAULT NULL,
+  `cy_2024_q1` varchar(10) DEFAULT NULL,
+  `cy_2024_q2` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `chart_4_1`
+--
+
+DROP TABLE IF EXISTS `chart_4_1`;
+CREATE TABLE `chart_4_1` (
+  `objectid` varchar(11) DEFAULT NULL,
+  `quarter` varchar(10) DEFAULT NULL,
+  `total_number_of_provider_contra` varchar(31) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `chart_4_3_1`
+--
+
+DROP TABLE IF EXISTS `chart_4_3_1`;
+CREATE TABLE `chart_4_3_1` (
+  `objectid` varchar(11) DEFAULT NULL,
+  `communitysupportsofferedbyprovi` varchar(67) DEFAULT NULL,
+  `contracttotal` varchar(13) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `chdp_all_assessments_by_funding_source`
 --
 
@@ -9380,6 +13578,38 @@ CREATE TABLE `children_and_youth_time_to_step_down` (
   `median_days` varchar(4) DEFAULT NULL,
   `bene_count` varchar(5) DEFAULT NULL,
   `bene_count_annot` varchar(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `chis_data_current_asthma_prevalence_by_county_2015_present`
+--
+
+DROP TABLE IF EXISTS `chis_data_current_asthma_prevalence_by_county_2015_present`;
+CREATE TABLE `chis_data_current_asthma_prevalence_by_county_2015_present` (
+  `county` varchar(15) DEFAULT NULL,
+  `years` varchar(9) DEFAULT NULL,
+  `strata` varchar(16) DEFAULT NULL,
+  `age_group` varchar(11) DEFAULT NULL,
+  `current_prevalence` varchar(4) DEFAULT NULL,
+  `95pct_confidence_interval` varchar(11) DEFAULT NULL,
+  `counties_grouped` varchar(94) DEFAULT NULL,
+  `comment` varchar(121) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `chis_data_lifetime_asthma_prevalence_by_county_2015_present`
+--
+
+DROP TABLE IF EXISTS `chis_data_lifetime_asthma_prevalence_by_county_2015_present`;
+CREATE TABLE `chis_data_lifetime_asthma_prevalence_by_county_2015_present` (
+  `county` varchar(15) DEFAULT NULL,
+  `years` varchar(9) DEFAULT NULL,
+  `strata` varchar(16) DEFAULT NULL,
+  `age_group` varchar(11) DEFAULT NULL,
+  `lifetime_prevalence` varchar(6) DEFAULT NULL,
+  `95pct_confidence_interval` varchar(11) DEFAULT NULL,
+  `counties_grouped` varchar(94) DEFAULT NULL,
+  `comment` varchar(132) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -9943,7 +14173,7 @@ CREATE TABLE `community_care_licensing_foster_family_agency_locations` (
 
 DROP TABLE IF EXISTS `conditions_prevalence_spending_by_demo`;
 CREATE TABLE `conditions_prevalence_spending_by_demo` (
-  `state_name_name` varchar(10) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
   `subpopulation_type` varchar(16) DEFAULT NULL,
   `subpopulation` varchar(35) DEFAULT NULL,
   `condition_name_name` varchar(58) DEFAULT NULL,
@@ -9962,7 +14192,7 @@ CREATE TABLE `conditions_prevalence_spending_by_demo` (
 
 DROP TABLE IF EXISTS `conditions_prevalence_spending_by_region`;
 CREATE TABLE `conditions_prevalence_spending_by_region` (
-  `state_name_name` varchar(10) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
   `region` varchar(52) DEFAULT NULL,
   `subpopulation_type` varchar(16) DEFAULT NULL,
   `subpopulation` varchar(35) DEFAULT NULL,
@@ -9974,20 +14204,6 @@ CREATE TABLE `conditions_prevalence_spending_by_region` (
   `spending_orig_mcr_ab_pbpy_dollars` varchar(11) DEFAULT NULL,
   `spending_orig_mcr_ab_total_dollars` varchar(11) DEFAULT NULL,
   `median_cooccurring_condition_name_names` varchar(4) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `construction_costs`
---
-
-DROP TABLE IF EXISTS `construction_costs`;
-CREATE TABLE `construction_costs` (
-  `county` varchar(20) DEFAULT NULL,
-  `data_generation_date` date DEFAULT NULL,
-  `oshpd_project_status` varchar(20) DEFAULT NULL,
-  `total_costs_of_oshpd_projects` varchar(18) DEFAULT NULL,
-  `number_of_oshpd_projects` varchar(4) DEFAULT NULL,
-  `collection_of_counties` varchar(28) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -10162,41 +14378,155 @@ CREATE TABLE `county_code_list` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `county_health_status_profiles`
+-- Table structure for table `county_health_status_profiles_2021_tables_1_29`
 --
 
-DROP TABLE IF EXISTS `county_health_status_profiles`;
-CREATE TABLE `county_health_status_profiles` (
-  `publication_year` int DEFAULT NULL,
-  `table_name` varchar(63) DEFAULT NULL,
-  `health_indicator_desc` varchar(255) DEFAULT NULL,
-  `strata` varchar(63) DEFAULT NULL,
-  `strata_name` varchar(63) DEFAULT NULL,
-  `county` varchar(63) DEFAULT NULL,
-  `rank_order` int DEFAULT NULL,
-  `denominator_total` int DEFAULT NULL,
-  `denominator_average` decimal(10,2) DEFAULT NULL,
-  `denominator_label` varchar(63) DEFAULT NULL,
-  `denominator_year_period` int DEFAULT NULL,
-  `numerator_total` int DEFAULT NULL,
-  `numerator_average` decimal(10,2) DEFAULT NULL,
-  `numerator_label` varchar(63) DEFAULT NULL,
-  `numerator_year_period` varchar(63) DEFAULT NULL,
-  `rate_multiplier` int DEFAULT NULL,
-  `rate_percentage` decimal(10,2) DEFAULT NULL,
-  `rate_percentage_label` varchar(63) DEFAULT NULL,
-  `age_adjusted_rate` decimal(10,2) DEFAULT NULL,
-  `age_adjusted_rate_label` varchar(63) DEFAULT NULL,
-  `lower_confidence_limit` decimal(10,2) DEFAULT NULL,
-  `upper_confidence_limit` decimal(10,2) DEFAULT NULL,
-  `healthy_people_decade` int DEFAULT NULL,
-  `healthy_people_objective_number` varchar(63) DEFAULT NULL,
-  `healthy_people_objective_target` int DEFAULT NULL,
-  `healthy_people_objective_met` char(1) DEFAULT NULL,
-  `denominator_annotation_code` varchar(63) DEFAULT NULL,
-  `numerator_annotation_code` varchar(63) DEFAULT NULL,
-  `rates_annotation_code` varchar(63) DEFAULT NULL,
-  `annotation_desc` varchar(255) DEFAULT NULL
+DROP TABLE IF EXISTS `county_health_status_profiles_2021_tables_1_29`;
+CREATE TABLE `county_health_status_profiles_2021_tables_1_29` (
+  `publication_year` varchar(16) DEFAULT NULL,
+  `table_name` varchar(5) DEFAULT NULL,
+  `health_indicator_desc` varchar(82) DEFAULT NULL,
+  `strata` varchar(17) DEFAULT NULL,
+  `strata_name` varchar(24) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `rank_order` varchar(10) DEFAULT NULL,
+  `denominator_total` varchar(17) DEFAULT NULL,
+  `denominator_average` varchar(19) DEFAULT NULL,
+  `denominator_label` varchar(33) DEFAULT NULL,
+  `denominator_year_period` varchar(23) DEFAULT NULL,
+  `numerator_total` varchar(15) DEFAULT NULL,
+  `numerator_average` varchar(17) DEFAULT NULL,
+  `numerator_label` varchar(45) DEFAULT NULL,
+  `numerator_year_period` varchar(21) DEFAULT NULL,
+  `rate_multiplier` varchar(15) DEFAULT NULL,
+  `rate_percentage` varchar(15) DEFAULT NULL,
+  `rate_percentage_label` varchar(46) DEFAULT NULL,
+  `age_adjusted_rate` varchar(17) DEFAULT NULL,
+  `age_adjusted_rate_label` varchar(23) DEFAULT NULL,
+  `lower_confidence_limit` varchar(22) DEFAULT NULL,
+  `upper_confidence_limit` varchar(22) DEFAULT NULL,
+  `healthy_people_decade` varchar(21) DEFAULT NULL,
+  `healthy_people_objective_number` varchar(31) DEFAULT NULL,
+  `healthy_people_objective_target` varchar(31) DEFAULT NULL,
+  `healthy_people_objective_met` varchar(28) DEFAULT NULL,
+  `denominator_annotation_code` varchar(27) DEFAULT NULL,
+  `numerator_annotation_code` varchar(25) DEFAULT NULL,
+  `rates_annotation_code` varchar(21) DEFAULT NULL,
+  `annotation_desc` varchar(118) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `county_health_status_profiles_2022_tables_1_29`
+--
+
+DROP TABLE IF EXISTS `county_health_status_profiles_2022_tables_1_29`;
+CREATE TABLE `county_health_status_profiles_2022_tables_1_29` (
+  `publication_year` varchar(16) DEFAULT NULL,
+  `table_name` varchar(5) DEFAULT NULL,
+  `health_indicator_desc` varchar(82) DEFAULT NULL,
+  `strata` varchar(38) DEFAULT NULL,
+  `strata_name` varchar(38) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `rank_order` varchar(10) DEFAULT NULL,
+  `denominator_total` varchar(17) DEFAULT NULL,
+  `denominator_average` varchar(19) DEFAULT NULL,
+  `denominator_label` varchar(33) DEFAULT NULL,
+  `denominator_year_period` varchar(23) DEFAULT NULL,
+  `numerator_total` varchar(15) DEFAULT NULL,
+  `numerator_average` varchar(17) DEFAULT NULL,
+  `numerator_label` varchar(45) DEFAULT NULL,
+  `numerator_year_period` varchar(21) DEFAULT NULL,
+  `rate_multiplier` varchar(15) DEFAULT NULL,
+  `rate_percentage` varchar(15) DEFAULT NULL,
+  `rate_percentage_label` varchar(46) DEFAULT NULL,
+  `age_adjusted_rate` varchar(17) DEFAULT NULL,
+  `age_adjusted_rate_label` varchar(23) DEFAULT NULL,
+  `lower_confidence_limit` varchar(22) DEFAULT NULL,
+  `upper_confidence_limit` varchar(22) DEFAULT NULL,
+  `healthy_people_decade` varchar(21) DEFAULT NULL,
+  `healthy_people_objective_number` varchar(31) DEFAULT NULL,
+  `healthy_people_objective_target` varchar(31) DEFAULT NULL,
+  `healthy_people_objective_met` varchar(28) DEFAULT NULL,
+  `denominator_annotation_code` varchar(27) DEFAULT NULL,
+  `numerator_annotation_code` varchar(25) DEFAULT NULL,
+  `rates_annotation_code` varchar(21) DEFAULT NULL,
+  `annotation_desc` varchar(118) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `county_health_status_profiles_2023_tables_1_29`
+--
+
+DROP TABLE IF EXISTS `county_health_status_profiles_2023_tables_1_29`;
+CREATE TABLE `county_health_status_profiles_2023_tables_1_29` (
+  `publication_year` varchar(16) DEFAULT NULL,
+  `table_name` varchar(5) DEFAULT NULL,
+  `health_indicator_desc` varchar(85) DEFAULT NULL,
+  `strata` varchar(38) DEFAULT NULL,
+  `strata_name` varchar(38) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `rank_order` varchar(10) DEFAULT NULL,
+  `denominator_total` varchar(17) DEFAULT NULL,
+  `denominator_average` varchar(19) DEFAULT NULL,
+  `denominator_label` varchar(34) DEFAULT NULL,
+  `denominator_year_period` varchar(23) DEFAULT NULL,
+  `numerator_total` varchar(15) DEFAULT NULL,
+  `numerator_average` varchar(17) DEFAULT NULL,
+  `numerator_label` varchar(45) DEFAULT NULL,
+  `numerator_year_period` varchar(21) DEFAULT NULL,
+  `rate_multiplier` varchar(15) DEFAULT NULL,
+  `rate_percentage` varchar(15) DEFAULT NULL,
+  `rate_percentage_label` varchar(46) DEFAULT NULL,
+  `age_adjusted_rate` varchar(17) DEFAULT NULL,
+  `age_adjusted_rate_label` varchar(23) DEFAULT NULL,
+  `lower_confidence_limit` varchar(22) DEFAULT NULL,
+  `upper_confidence_limit` varchar(22) DEFAULT NULL,
+  `healthy_people_decade` varchar(21) DEFAULT NULL,
+  `healthy_people_objective_number` varchar(31) DEFAULT NULL,
+  `healthy_people_objective_target` varchar(31) DEFAULT NULL,
+  `healthy_people_objective_met` varchar(28) DEFAULT NULL,
+  `denominator_annotation_code` varchar(27) DEFAULT NULL,
+  `numerator_annotation_code` varchar(25) DEFAULT NULL,
+  `rates_annotation_code` varchar(21) DEFAULT NULL,
+  `annotation_desc` varchar(149) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `county_health_status_profiles_2024_tables_1_29`
+--
+
+DROP TABLE IF EXISTS `county_health_status_profiles_2024_tables_1_29`;
+CREATE TABLE `county_health_status_profiles_2024_tables_1_29` (
+  `publication_year` varchar(16) DEFAULT NULL,
+  `table_name` varchar(5) DEFAULT NULL,
+  `health_indicator_desc` varchar(85) DEFAULT NULL,
+  `strata` varchar(38) DEFAULT NULL,
+  `strata_name` varchar(38) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `rank_order` varchar(10) DEFAULT NULL,
+  `denominator_total` varchar(17) DEFAULT NULL,
+  `denominator_average` varchar(19) DEFAULT NULL,
+  `denominator_label` varchar(34) DEFAULT NULL,
+  `denominator_year_period` varchar(23) DEFAULT NULL,
+  `numerator_total` varchar(15) DEFAULT NULL,
+  `numerator_average` varchar(17) DEFAULT NULL,
+  `numerator_label` varchar(45) DEFAULT NULL,
+  `numerator_year_period` varchar(21) DEFAULT NULL,
+  `rate_multiplier` varchar(15) DEFAULT NULL,
+  `rate_percentage` varchar(15) DEFAULT NULL,
+  `rate_percentage_label` varchar(46) DEFAULT NULL,
+  `age_adjusted_rate` varchar(17) DEFAULT NULL,
+  `age_adjusted_rate_label` varchar(23) DEFAULT NULL,
+  `lower_confidence_limit` varchar(22) DEFAULT NULL,
+  `upper_confidence_limit` varchar(22) DEFAULT NULL,
+  `healthy_people_decade` varchar(21) DEFAULT NULL,
+  `healthy_people_objective_number` varchar(31) DEFAULT NULL,
+  `healthy_people_objective_target` varchar(31) DEFAULT NULL,
+  `healthy_people_objective_met` varchar(28) DEFAULT NULL,
+  `denominator_annotation_code` varchar(27) DEFAULT NULL,
+  `numerator_annotation_code` varchar(25) DEFAULT NULL,
+  `rates_annotation_code` varchar(21) DEFAULT NULL,
+  `annotation_desc` varchar(149) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -10244,18 +14574,18 @@ DROP TABLE IF EXISTS `covid19_emergency_dental_providers`;
 CREATE TABLE `covid19_emergency_dental_providers` (
   `x` varchar(12) DEFAULT NULL,
   `y` varchar(16) DEFAULT NULL,
-  `objectid` varchar(4) DEFAULT NULL,
+  `objectid` varchar(8) DEFAULT NULL,
   `practice_location_name` varchar(40) DEFAULT NULL,
   `address_1` varchar(24) DEFAULT NULL,
   `address_2` varchar(23) DEFAULT NULL,
   `city` varchar(17) DEFAULT NULL,
-  `state` varchar(2) DEFAULT NULL,
+  `state` varchar(5) DEFAULT NULL,
   `zipcode` varchar(10) DEFAULT NULL,
   `phone` varchar(14) DEFAULT NULL,
   `latitude` varchar(10) DEFAULT NULL,
   `longitude` varchar(12) DEFAULT NULL,
   `emergency` varchar(68) DEFAULT NULL,
-  `availability` varchar(9) DEFAULT NULL,
+  `availability` varchar(12) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -10274,100 +14604,6 @@ CREATE TABLE `covid19_outbreaks_by_month_of_onset` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `covid19_post_vacc_statewide_stats`
---
-
-DROP TABLE IF EXISTS `covid19_post_vacc_statewide_stats`;
-CREATE TABLE `covid19_post_vacc_statewide_stats` (
-  `date` varchar(10) DEFAULT NULL,
-  `area` varchar(10) DEFAULT NULL,
-  `area_type` varchar(5) DEFAULT NULL,
-  `unvaccinated_cases` varchar(5) DEFAULT NULL,
-  `vaccinated_cases` varchar(5) DEFAULT NULL,
-  `unvaccinated_hosp` varchar(4) DEFAULT NULL,
-  `vaccinated_hosp` varchar(3) DEFAULT NULL,
-  `unvaccinated_deaths` varchar(3) DEFAULT NULL,
-  `vaccinated_deaths` varchar(3) DEFAULT NULL,
-  `population_unvaccinated` varchar(8) DEFAULT NULL,
-  `population_vaccinated` varchar(8) DEFAULT NULL,
-  `unvaccinated_cases_per_100k` varchar(16) DEFAULT NULL,
-  `vaccinated_cases_per_100k` varchar(17) DEFAULT NULL,
-  `unvaccinated_hosp_per_100k` varchar(17) DEFAULT NULL,
-  `vaccinated_hosp_per_100k` varchar(18) DEFAULT NULL,
-  `unvaccinated_deaths_per_100k` varchar(18) DEFAULT NULL,
-  `vaccinated_deaths_per_100k` varchar(19) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `covid19_post_vacc_statewide_stats_archived_20211113`
---
-
-DROP TABLE IF EXISTS `covid19_post_vacc_statewide_stats_archived_20211113`;
-CREATE TABLE `covid19_post_vacc_statewide_stats_archived_20211113` (
-  `date` varchar(10) DEFAULT NULL,
-  `area` varchar(10) DEFAULT NULL,
-  `area_type` varchar(5) DEFAULT NULL,
-  `unvaccinated_cases` varchar(5) DEFAULT NULL,
-  `vaccinated_cases` varchar(4) DEFAULT NULL,
-  `unvaccinated_hosp` varchar(3) DEFAULT NULL,
-  `vaccinated_hosp` varchar(3) DEFAULT NULL,
-  `unvaccinated_deaths` varchar(3) DEFAULT NULL,
-  `vaccinated_deaths` varchar(2) DEFAULT NULL,
-  `population_unvaccinated` varchar(8) DEFAULT NULL,
-  `population_vaccinated` varchar(8) DEFAULT NULL,
-  `unvaccinated_cases_per_100k` varchar(11) DEFAULT NULL,
-  `vaccinated_cases_per_100k` varchar(11) DEFAULT NULL,
-  `unvaccinated_hosp_per_100k` varchar(10) DEFAULT NULL,
-  `vaccinated_hosp_per_100k` varchar(10) DEFAULT NULL,
-  `unvaccinated_deaths_per_100k` varchar(10) DEFAULT NULL,
-  `vaccinated_deaths_per_100k` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `covid19_post_vacc_statewide_stats_archived_20220717`
---
-
-DROP TABLE IF EXISTS `covid19_post_vacc_statewide_stats_archived_20220717`;
-CREATE TABLE `covid19_post_vacc_statewide_stats_archived_20220717` (
-  `date` varchar(10) DEFAULT NULL,
-  `area` varchar(10) DEFAULT NULL,
-  `area_type` varchar(5) DEFAULT NULL,
-  `unvaccinated_cases` varchar(5) DEFAULT NULL,
-  `vaccinated_cases` varchar(5) DEFAULT NULL,
-  `boosted_cases` varchar(5) DEFAULT NULL,
-  `unvaccinated_hosp` varchar(4) DEFAULT NULL,
-  `vaccinated_hosp` varchar(3) DEFAULT NULL,
-  `boosted_hosp` varchar(3) DEFAULT NULL,
-  `unvaccinated_deaths` varchar(3) DEFAULT NULL,
-  `vaccinated_deaths` varchar(2) DEFAULT NULL,
-  `boosted_deaths` varchar(2) DEFAULT NULL,
-  `population_unvaccinated` varchar(8) DEFAULT NULL,
-  `population_vaccinated` varchar(8) DEFAULT NULL,
-  `population_boosted` varchar(8) DEFAULT NULL,
-  `unvaccinated_cases_per_100k` varchar(12) DEFAULT NULL,
-  `vaccinated_cases_per_100k` varchar(12) DEFAULT NULL,
-  `boosted_cases_per_100k` varchar(12) DEFAULT NULL,
-  `unvaccinated_hosp_per_100k` varchar(11) DEFAULT NULL,
-  `vaccinated_hosp_per_100k` varchar(10) DEFAULT NULL,
-  `boosted_hosp_per_100k` varchar(10) DEFAULT NULL,
-  `unvaccinated_deaths_per_100k` varchar(10) DEFAULT NULL,
-  `vaccinated_deaths_per_100k` varchar(10) DEFAULT NULL,
-  `boosted_deaths_per_100k` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `covid_19_age_distribution`
---
-
-DROP TABLE IF EXISTS `covid_19_age_distribution`;
-CREATE TABLE `covid_19_age_distribution` (
-  `season` varchar(9) DEFAULT NULL,
-  `agegrp` varchar(11) DEFAULT NULL,
-  `respiratory_virus` varchar(9) DEFAULT NULL,
-  `count` varchar(4) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
 -- Table structure for table `covid_19_case_rate_by_social_det`
 --
 
@@ -10376,12 +14612,12 @@ CREATE TABLE `covid_19_case_rate_by_social_det` (
   `date` varchar(10) DEFAULT NULL,
   `social_det` varchar(17) DEFAULT NULL,
   `social_tier` varchar(13) DEFAULT NULL,
-  `sort` varchar(3) DEFAULT NULL,
-  `cases_7dayavg_7daysago` varchar(18) DEFAULT NULL,
-  `population` varchar(8) DEFAULT NULL,
+  `sort` varchar(4) DEFAULT NULL,
+  `cases_7dayavg_7daysago` varchar(22) DEFAULT NULL,
+  `population` varchar(10) DEFAULT NULL,
   `case_rate_per_100k` varchar(18) DEFAULT NULL,
-  `state_case_rate_per_100k` varchar(16) DEFAULT NULL,
-  `case_rate_per_100k_30_days_ago` varchar(18) DEFAULT NULL,
+  `state_case_rate_per_100k` varchar(24) DEFAULT NULL,
+  `case_rate_per_100k_30_days_ago` varchar(30) DEFAULT NULL,
   `rate_diff_30_days` varchar(19) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -10408,12 +14644,12 @@ CREATE TABLE `covid_19_demographic_data_completeness` (
   `sogi_category` varchar(18) DEFAULT NULL,
   `metric` varchar(6) DEFAULT NULL,
   `missing` varchar(9) DEFAULT NULL,
-  `not_missing` varchar(10) DEFAULT NULL,
+  `not_missing` varchar(11) DEFAULT NULL,
   `total` varchar(10) DEFAULT NULL,
   `percent_complete` varchar(18) DEFAULT NULL,
-  `percent_complete_30_days_prior` varchar(18) DEFAULT NULL,
-  `percent_complete_30_days_diff` varchar(19) DEFAULT NULL,
-  `report_date` varchar(10) DEFAULT NULL
+  `percent_complete_30_days_prior` varchar(30) DEFAULT NULL,
+  `percent_complete_30_days_diff` varchar(29) DEFAULT NULL,
+  `report_date` varchar(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -10424,19 +14660,19 @@ DROP TABLE IF EXISTS `covid_19_demographic_rate_cumulative`;
 CREATE TABLE `covid_19_demographic_rate_cumulative` (
   `date` varchar(10) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
-  `demographic_set` varchar(14) DEFAULT NULL,
+  `demographic_set` varchar(15) DEFAULT NULL,
   `demographic_set_category` varchar(42) DEFAULT NULL,
   `metric` varchar(6) DEFAULT NULL,
-  `metric_value` varchar(8) DEFAULT NULL,
-  `metric_value_per_100k` varchar(16) DEFAULT NULL,
-  `applied_suppression` varchar(10) DEFAULT NULL,
-  `population_percentage` varchar(15) DEFAULT NULL,
-  `metric_total_percentage` varchar(15) DEFAULT NULL,
-  `metric_value_30_days_ago` varchar(8) DEFAULT NULL,
-  `metric_value_per_100k_30_days_ago` varchar(16) DEFAULT NULL,
-  `metric_value_per_100k_delta_from_30_days_ago` varchar(17) DEFAULT NULL,
-  `metric_total_percentage_30_days_ago` varchar(15) DEFAULT NULL,
-  `metric_value_percentage_delta_from_30_days_ago` varchar(16) DEFAULT NULL
+  `metric_value` varchar(12) DEFAULT NULL,
+  `metric_value_per_100k` varchar(21) DEFAULT NULL,
+  `applied_suppression` varchar(19) DEFAULT NULL,
+  `population_percentage` varchar(21) DEFAULT NULL,
+  `metric_total_percentage` varchar(23) DEFAULT NULL,
+  `metric_value_30_days_ago` varchar(24) DEFAULT NULL,
+  `metric_value_per_100k_30_days_ago` varchar(33) DEFAULT NULL,
+  `metric_value_per_100k_delta_from_30_days_ago` varchar(44) DEFAULT NULL,
+  `metric_total_percentage_30_days_ago` varchar(35) DEFAULT NULL,
+  `metric_value_percentage_delta_from_30_days_ago` varchar(46) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -10449,7 +14685,7 @@ CREATE TABLE `covid_19_health_equity_metric_pos_30_day_by_cnt` (
   `date` varchar(10) DEFAULT NULL,
   `metric` varchar(28) DEFAULT NULL,
   `metric_value` varchar(17) DEFAULT NULL,
-  `metric_value_30_days_ago` varchar(17) DEFAULT NULL,
+  `metric_value_30_days_ago` varchar(24) DEFAULT NULL,
   `metric_value_diff` varchar(18) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -10460,12 +14696,12 @@ CREATE TABLE `covid_19_health_equity_metric_pos_30_day_by_cnt` (
 DROP TABLE IF EXISTS `covid_19_nowcasts`;
 CREATE TABLE `covid_19_nowcasts` (
   `disease` varchar(8) DEFAULT NULL,
-  `location_level` varchar(6) DEFAULT NULL,
+  `location_level` varchar(14) DEFAULT NULL,
   `location` varchar(65) DEFAULT NULL,
-  `target_date` varchar(10) DEFAULT NULL,
+  `target_date` varchar(11) DEFAULT NULL,
   `target` varchar(11) DEFAULT NULL,
   `model` varchar(20) DEFAULT NULL,
-  `value` varchar(4) DEFAULT NULL,
+  `value` varchar(5) DEFAULT NULL,
   `quantile` varchar(13) DEFAULT NULL,
   `archivedt` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -10477,11 +14713,93 @@ CREATE TABLE `covid_19_nowcasts` (
 DROP TABLE IF EXISTS `covid_19_patient_data`;
 CREATE TABLE `covid_19_patient_data` (
   `facility` varchar(17) DEFAULT NULL,
-  `positive_for_covid_19_cumulative_num_since_5_16_2020` varchar(4) DEFAULT NULL,
-  `newly_positive_for_covid_19_in_the_last_14_days` varchar(3) DEFAULT NULL,
-  `positive_for_covid_19_while_at_acute_hospitalization` varchar(1) DEFAULT NULL,
-  `death_while_patient_was_positive_for_covid_19_cum` varchar(3) DEFAULT NULL,
-  `total_num_of_tests_administered_cumulative_num` varchar(5) DEFAULT NULL
+  `positive_for_covid_19_cumulative_num_since_5_16_2020` varchar(52) DEFAULT NULL,
+  `newly_positive_for_covid_19_in_the_last_14_days` varchar(48) DEFAULT NULL,
+  `positive_for_covid_19_while_at_acute_hospitalization` varchar(53) DEFAULT NULL,
+  `death_while_patient_was_positive_for_covid_19_cumulative_num_si` varchar(78) DEFAULT NULL,
+  `total_num_of_tests_administered_cumulative_num_since_3_23_2020_` varchar(80) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `covid_19_post_vacc_sw_stats_arch_nov_13_2021`
+--
+
+DROP TABLE IF EXISTS `covid_19_post_vacc_sw_stats_arch_nov_13_2021`;
+CREATE TABLE `covid_19_post_vacc_sw_stats_arch_nov_13_2021` (
+  `date` varchar(10) DEFAULT NULL,
+  `area` varchar(10) DEFAULT NULL,
+  `area_type` varchar(9) DEFAULT NULL,
+  `unvaccinated_cases` varchar(18) DEFAULT NULL,
+  `vaccinated_cases` varchar(16) DEFAULT NULL,
+  `unvaccinated_hosp` varchar(17) DEFAULT NULL,
+  `vaccinated_hosp` varchar(15) DEFAULT NULL,
+  `unvaccinated_deaths` varchar(19) DEFAULT NULL,
+  `vaccinated_deaths` varchar(17) DEFAULT NULL,
+  `population_unvaccinated` varchar(23) DEFAULT NULL,
+  `population_vaccinated` varchar(21) DEFAULT NULL,
+  `unvaccinated_cases_per_100k` varchar(27) DEFAULT NULL,
+  `vaccinated_cases_per_100k` varchar(25) DEFAULT NULL,
+  `unvaccinated_hosp_per_100k` varchar(26) DEFAULT NULL,
+  `vaccinated_hosp_per_100k` varchar(24) DEFAULT NULL,
+  `unvaccinated_deaths_per_100k` varchar(28) DEFAULT NULL,
+  `vaccinated_deaths_per_100k` varchar(26) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `covid_19_post_vaccination_statewide_stats`
+--
+
+DROP TABLE IF EXISTS `covid_19_post_vaccination_statewide_stats`;
+CREATE TABLE `covid_19_post_vaccination_statewide_stats` (
+  `date` varchar(10) DEFAULT NULL,
+  `area` varchar(10) DEFAULT NULL,
+  `area_type` varchar(9) DEFAULT NULL,
+  `unvaccinated_cases` varchar(18) DEFAULT NULL,
+  `vaccinated_cases` varchar(16) DEFAULT NULL,
+  `unvaccinated_hosp` varchar(17) DEFAULT NULL,
+  `vaccinated_hosp` varchar(15) DEFAULT NULL,
+  `unvaccinated_deaths` varchar(19) DEFAULT NULL,
+  `vaccinated_deaths` varchar(17) DEFAULT NULL,
+  `population_unvaccinated` varchar(23) DEFAULT NULL,
+  `population_vaccinated` varchar(21) DEFAULT NULL,
+  `unvaccinated_cases_per_100k` varchar(27) DEFAULT NULL,
+  `vaccinated_cases_per_100k` varchar(25) DEFAULT NULL,
+  `unvaccinated_hosp_per_100k` varchar(26) DEFAULT NULL,
+  `vaccinated_hosp_per_100k` varchar(24) DEFAULT NULL,
+  `unvaccinated_deaths_per_100k` varchar(28) DEFAULT NULL,
+  `vaccinated_deaths_per_100k` varchar(26) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `covid_19_post_vaccination_statewide_stats_archived_july_17_2022`
+--
+
+DROP TABLE IF EXISTS `covid_19_post_vaccination_statewide_stats_archived_july_17_2022`;
+CREATE TABLE `covid_19_post_vaccination_statewide_stats_archived_july_17_2022` (
+  `date` varchar(10) DEFAULT NULL,
+  `area` varchar(10) DEFAULT NULL,
+  `area_type` varchar(9) DEFAULT NULL,
+  `unvaccinated_cases` varchar(18) DEFAULT NULL,
+  `vaccinated_cases` varchar(16) DEFAULT NULL,
+  `boosted_cases` varchar(13) DEFAULT NULL,
+  `unvaccinated_hosp` varchar(17) DEFAULT NULL,
+  `vaccinated_hosp` varchar(15) DEFAULT NULL,
+  `boosted_hosp` varchar(12) DEFAULT NULL,
+  `unvaccinated_deaths` varchar(19) DEFAULT NULL,
+  `vaccinated_deaths` varchar(17) DEFAULT NULL,
+  `boosted_deaths` varchar(14) DEFAULT NULL,
+  `population_unvaccinated` varchar(23) DEFAULT NULL,
+  `population_vaccinated` varchar(21) DEFAULT NULL,
+  `population_boosted` varchar(18) DEFAULT NULL,
+  `unvaccinated_cases_per_100k` varchar(27) DEFAULT NULL,
+  `vaccinated_cases_per_100k` varchar(25) DEFAULT NULL,
+  `boosted_cases_per_100k` varchar(22) DEFAULT NULL,
+  `unvaccinated_hosp_per_100k` varchar(26) DEFAULT NULL,
+  `vaccinated_hosp_per_100k` varchar(24) DEFAULT NULL,
+  `boosted_hosp_per_100k` varchar(21) DEFAULT NULL,
+  `unvaccinated_deaths_per_100k` varchar(28) DEFAULT NULL,
+  `vaccinated_deaths_per_100k` varchar(26) DEFAULT NULL,
+  `boosted_deaths_per_100k` varchar(23) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -10504,11 +14822,11 @@ CREATE TABLE `covid_19_probable_cases` (
 DROP TABLE IF EXISTS `covid_19_race_ethnicity_timeseries`;
 CREATE TABLE `covid_19_race_ethnicity_timeseries` (
   `date` varchar(10) DEFAULT NULL,
-  `location` varchar(2) DEFAULT NULL,
-  `location_level` varchar(5) DEFAULT NULL,
+  `location` varchar(8) DEFAULT NULL,
+  `location_level` varchar(14) DEFAULT NULL,
   `demog` varchar(14) DEFAULT NULL,
   `demog_cat` varchar(42) DEFAULT NULL,
-  `metric_cat` varchar(6) DEFAULT NULL,
+  `metric_cat` varchar(10) DEFAULT NULL,
   `metric` varchar(16) DEFAULT NULL,
   `value` varchar(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -10520,10 +14838,523 @@ CREATE TABLE `covid_19_race_ethnicity_timeseries` (
 DROP TABLE IF EXISTS `covid_19_staff_data`;
 CREATE TABLE `covid_19_staff_data` (
   `facility` varchar(17) DEFAULT NULL,
-  `staff_positive_for_covid_19_confirmed_cum` varchar(4) DEFAULT NULL,
-  `staff_newly_positive_for_covid_19_in_the_last_14_days` varchar(3) DEFAULT NULL,
-  `other_positive_for_covid_19_confirmed_cum` varchar(3) DEFAULT NULL,
-  `other_newly_positive_for_covid_19_in_the_last_14_days` varchar(1) DEFAULT NULL
+  `staff_positive_for_covid_19_confirmed_by_public_health_or_medic` varchar(106) DEFAULT NULL,
+  `staff_newly_positive_for_covid_19_in_the_last_14_days` varchar(55) DEFAULT NULL,
+  `other_positive_for_covid_19_confirmed_by_public_health_or_medic` varchar(106) DEFAULT NULL,
+  `other_newly_positive_for_covid_19_in_the_last_14_days` varchar(55) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `covid_19_state_level_testing_and_baseline_aggregate_data`
+--
+
+DROP TABLE IF EXISTS `covid_19_state_level_testing_and_baseline_aggregate_data`;
+CREATE TABLE `covid_19_state_level_testing_and_baseline_aggregate_data` (
+  `date` varchar(10) DEFAULT NULL,
+  `current_hospitalized_covid_confirmed_patients` varchar(45) DEFAULT NULL,
+  `confirmedcasesincrease` varchar(22) DEFAULT NULL,
+  `new_snf_cases` varchar(13) DEFAULT NULL,
+  `new_snf_deaths` varchar(14) DEFAULT NULL,
+  `facilities_with_positive_test_results` varchar(37) DEFAULT NULL,
+  `facilities_with_no_positive_test_results` varchar(40) DEFAULT NULL,
+  `number_of_residents_positive_facilities` varchar(39) DEFAULT NULL,
+  `number_of_residents_negative_facilities` varchar(39) DEFAULT NULL,
+  `number_of_residents_tested_positive_facilities` varchar(46) DEFAULT NULL,
+  `number_of_residents_tested_negative_facilities` varchar(46) DEFAULT NULL,
+  `number_of_residents_positive` varchar(28) DEFAULT NULL,
+  `number_of_residents_scheduled_test_positive_facilities` varchar(54) DEFAULT NULL,
+  `number_of_residents_scheduled_test_negative_facilities` varchar(54) DEFAULT NULL,
+  `number_of_health_care_workers_positive_facilities` varchar(49) DEFAULT NULL,
+  `number_of_health_care_workers_negative_facilities` varchar(49) DEFAULT NULL,
+  `number_of_health_care_workers_tested_positive_facilities` varchar(56) DEFAULT NULL,
+  `number_of_health_care_workers_tested_negative_facilities` varchar(56) DEFAULT NULL,
+  `number_of_health_care_workers_positive` varchar(38) DEFAULT NULL,
+  `number_of_health_care_workers_scheduled_test_positive_facilities` varchar(64) DEFAULT NULL,
+  `number_of_health_care_workers_scheduled_test_negative_facilities` varchar(64) DEFAULT NULL,
+  `note` varchar(32) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `covid_19_vacc_admin_by_demo_2023_2024_upd_vacc_arch`
+--
+
+DROP TABLE IF EXISTS `covid_19_vacc_admin_by_demo_2023_2024_upd_vacc_arch`;
+CREATE TABLE `covid_19_vacc_admin_by_demo_2023_2024_upd_vacc_arch` (
+  `demographic_category` varchar(20) DEFAULT NULL,
+  `demographic_value` varchar(41) DEFAULT NULL,
+  `administered_date` varchar(17) DEFAULT NULL,
+  `total_doses` varchar(11) DEFAULT NULL,
+  `cumulative_total_doses` varchar(22) DEFAULT NULL,
+  `partially_vaccinated` varchar(20) DEFAULT NULL,
+  `total_partially_vaccinated` varchar(26) DEFAULT NULL,
+  `fully_vaccinated` varchar(16) DEFAULT NULL,
+  `cumulative_fully_vaccinated` varchar(27) DEFAULT NULL,
+  `at_least_one_dose` varchar(17) DEFAULT NULL,
+  `cumulative_at_least_one_dose` varchar(28) DEFAULT NULL,
+  `up_to_date_count` varchar(16) DEFAULT NULL,
+  `cumulative_up_to_date_count` varchar(27) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `covid_19_vacc_admin_by_demo_booster_metric_arch`
+--
+
+DROP TABLE IF EXISTS `covid_19_vacc_admin_by_demo_booster_metric_arch`;
+CREATE TABLE `covid_19_vacc_admin_by_demo_booster_metric_arch` (
+  `demographic_category` varchar(20) DEFAULT NULL,
+  `demographic_value` varchar(41) DEFAULT NULL,
+  `administered_date` varchar(17) DEFAULT NULL,
+  `total_doses` varchar(11) DEFAULT NULL,
+  `cumulative_total_doses` varchar(22) DEFAULT NULL,
+  `pfizer_doses` varchar(12) DEFAULT NULL,
+  `cumulative_pfizer_doses` varchar(23) DEFAULT NULL,
+  `moderna_doses` varchar(13) DEFAULT NULL,
+  `cumulative_moderna_doses` varchar(24) DEFAULT NULL,
+  `jj_doses` varchar(8) DEFAULT NULL,
+  `cumulative_jj_doses` varchar(19) DEFAULT NULL,
+  `partially_vaccinated` varchar(20) DEFAULT NULL,
+  `total_partially_vaccinated` varchar(26) DEFAULT NULL,
+  `fully_vaccinated` varchar(16) DEFAULT NULL,
+  `cumulative_fully_vaccinated` varchar(27) DEFAULT NULL,
+  `at_least_one_dose` varchar(17) DEFAULT NULL,
+  `cumulative_at_least_one_dose` varchar(28) DEFAULT NULL,
+  `booster_recip_count` varchar(19) DEFAULT NULL,
+  `bivalent_booster_recip_count` varchar(28) DEFAULT NULL,
+  `cumulative_booster_recip_count` varchar(30) DEFAULT NULL,
+  `cumulative_bivalent_booster_recip_count` varchar(39) DEFAULT NULL,
+  `booster_eligible_population` varchar(27) DEFAULT NULL,
+  `bivalent_booster_eligible_population` varchar(36) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `covid_19_vacc_admin_by_demo_by_county_2023_2024_upd_vacc_arch`
+--
+
+DROP TABLE IF EXISTS `covid_19_vacc_admin_by_demo_by_county_2023_2024_upd_vacc_arch`;
+CREATE TABLE `covid_19_vacc_admin_by_demo_by_county_2023_2024_upd_vacc_arch` (
+  `county` varchar(15) DEFAULT NULL,
+  `county_type` varchar(22) DEFAULT NULL,
+  `demographic_category` varchar(25) DEFAULT NULL,
+  `demographic_value` varchar(41) DEFAULT NULL,
+  `est_population` varchar(14) DEFAULT NULL,
+  `est_age_12plus_pop` varchar(18) DEFAULT NULL,
+  `est_age_5plus_pop` varchar(17) DEFAULT NULL,
+  `administered_date` varchar(17) DEFAULT NULL,
+  `partially_vaccinated` varchar(20) DEFAULT NULL,
+  `total_partially_vaccinated` varchar(26) DEFAULT NULL,
+  `fully_vaccinated` varchar(16) DEFAULT NULL,
+  `cumulative_fully_vaccinated` varchar(27) DEFAULT NULL,
+  `at_least_one_dose` varchar(17) DEFAULT NULL,
+  `cumulative_at_least_one_dose` varchar(28) DEFAULT NULL,
+  `cumulative_unvax_total_pop` varchar(26) DEFAULT NULL,
+  `cumulative_unvax_12plus_pop` varchar(27) DEFAULT NULL,
+  `cumulative_unvax_5plus_pop` varchar(26) DEFAULT NULL,
+  `suppress_data` varchar(13) DEFAULT NULL,
+  `up_to_date_count` varchar(16) DEFAULT NULL,
+  `cumulative_up_to_date_count` varchar(27) DEFAULT NULL,
+  `administered_year` varchar(17) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `covid_19_vacc_admin_by_demo_by_county_age_16_arch`
+--
+
+DROP TABLE IF EXISTS `covid_19_vacc_admin_by_demo_by_county_age_16_arch`;
+CREATE TABLE `covid_19_vacc_admin_by_demo_by_county_age_16_arch` (
+  `county` varchar(15) DEFAULT NULL,
+  `county_type` varchar(22) DEFAULT NULL,
+  `demographic_category` varchar(20) DEFAULT NULL,
+  `demographic_value` varchar(41) DEFAULT NULL,
+  `est_population` varchar(14) DEFAULT NULL,
+  `est_age_16plus_pop` varchar(18) DEFAULT NULL,
+  `administered_date` varchar(17) DEFAULT NULL,
+  `partially_vaccinated` varchar(20) DEFAULT NULL,
+  `total_partially_vaccinated` varchar(26) DEFAULT NULL,
+  `fully_vaccinated` varchar(16) DEFAULT NULL,
+  `cumulative_fully_vaccinated` varchar(27) DEFAULT NULL,
+  `at_least_one_dose` varchar(17) DEFAULT NULL,
+  `cumulative_at_least_one_dose` varchar(28) DEFAULT NULL,
+  `cumulative_unvax_total_pop` varchar(26) DEFAULT NULL,
+  `cumulative_unvax_16plus_pop` varchar(27) DEFAULT NULL,
+  `suppress_data` varchar(13) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `covid_19_vacc_admin_by_demo_by_county_age_5_arch`
+--
+
+DROP TABLE IF EXISTS `covid_19_vacc_admin_by_demo_by_county_age_5_arch`;
+CREATE TABLE `covid_19_vacc_admin_by_demo_by_county_age_5_arch` (
+  `county` varchar(15) DEFAULT NULL,
+  `county_type` varchar(22) DEFAULT NULL,
+  `demographic_category` varchar(20) DEFAULT NULL,
+  `demographic_value` varchar(41) DEFAULT NULL,
+  `est_population` varchar(14) DEFAULT NULL,
+  `est_age_12plus_pop` varchar(18) DEFAULT NULL,
+  `est_age_5plus_pop` varchar(17) DEFAULT NULL,
+  `administered_date` varchar(17) DEFAULT NULL,
+  `partially_vaccinated` varchar(20) DEFAULT NULL,
+  `total_partially_vaccinated` varchar(26) DEFAULT NULL,
+  `fully_vaccinated` varchar(16) DEFAULT NULL,
+  `cumulative_fully_vaccinated` varchar(27) DEFAULT NULL,
+  `at_least_one_dose` varchar(17) DEFAULT NULL,
+  `cumulative_at_least_one_dose` varchar(28) DEFAULT NULL,
+  `cumulative_unvax_total_pop` varchar(26) DEFAULT NULL,
+  `cumulative_unvax_12plus_pop` varchar(27) DEFAULT NULL,
+  `cumulative_unvax_5plus_pop` varchar(26) DEFAULT NULL,
+  `suppress_data` varchar(13) DEFAULT NULL,
+  `booster_recip_count` varchar(19) DEFAULT NULL,
+  `cumulative_booster_recip_count` varchar(30) DEFAULT NULL,
+  `booster_eligible_population` varchar(27) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `covid_19_vacc_admin_by_demo_by_county_booster_metr_arch`
+--
+
+DROP TABLE IF EXISTS `covid_19_vacc_admin_by_demo_by_county_booster_metr_arch`;
+CREATE TABLE `covid_19_vacc_admin_by_demo_by_county_booster_metr_arch` (
+  `county` varchar(15) DEFAULT NULL,
+  `county_type` varchar(22) DEFAULT NULL,
+  `demographic_category` varchar(25) DEFAULT NULL,
+  `demographic_value` varchar(41) DEFAULT NULL,
+  `est_population` varchar(14) DEFAULT NULL,
+  `est_age_12plus_pop` varchar(18) DEFAULT NULL,
+  `est_age_5plus_pop` varchar(17) DEFAULT NULL,
+  `administered_date` varchar(17) DEFAULT NULL,
+  `partially_vaccinated` varchar(20) DEFAULT NULL,
+  `total_partially_vaccinated` varchar(26) DEFAULT NULL,
+  `fully_vaccinated` varchar(16) DEFAULT NULL,
+  `cumulative_fully_vaccinated` varchar(27) DEFAULT NULL,
+  `at_least_one_dose` varchar(17) DEFAULT NULL,
+  `cumulative_at_least_one_dose` varchar(28) DEFAULT NULL,
+  `cumulative_unvax_total_pop` varchar(26) DEFAULT NULL,
+  `cumulative_unvax_12plus_pop` varchar(27) DEFAULT NULL,
+  `cumulative_unvax_5plus_pop` varchar(26) DEFAULT NULL,
+  `suppress_data` varchar(13) DEFAULT NULL,
+  `booster_recip_count` varchar(19) DEFAULT NULL,
+  `cumulative_booster_recip_count` varchar(30) DEFAULT NULL,
+  `bivalent_booster_recip_count` varchar(28) DEFAULT NULL,
+  `cumulative_bivalent_booster_recip_count` varchar(39) DEFAULT NULL,
+  `booster_eligible_population` varchar(27) DEFAULT NULL,
+  `bivalent_booster_eligible_population` varchar(36) DEFAULT NULL,
+  `administered_year` varchar(17) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `covid_19_vacc_admin_by_hpi_quart_2023_2024_upd_vacc_arch`
+--
+
+DROP TABLE IF EXISTS `covid_19_vacc_admin_by_hpi_quart_2023_2024_upd_vacc_arch`;
+CREATE TABLE `covid_19_vacc_admin_by_hpi_quart_2023_2024_upd_vacc_arch` (
+  `hpiquartile` varchar(11) DEFAULT NULL,
+  `administered_date` varchar(17) DEFAULT NULL,
+  `total_doses` varchar(11) DEFAULT NULL,
+  `cumulative_total_doses` varchar(22) DEFAULT NULL,
+  `partially_vaccinated` varchar(20) DEFAULT NULL,
+  `total_partially_vaccinated` varchar(26) DEFAULT NULL,
+  `pct_age12pop_partially_vaccinated` varchar(33) DEFAULT NULL,
+  `pct_age5pop_partially_vaccinated` varchar(32) DEFAULT NULL,
+  `pct_totpop_partially_vaccinated` varchar(31) DEFAULT NULL,
+  `fully_vaccinated` varchar(16) DEFAULT NULL,
+  `cumulative_fully_vaccinated` varchar(27) DEFAULT NULL,
+  `pct_age12pop_fully_vaccinated` varchar(29) DEFAULT NULL,
+  `pct_age5pop_fully_vaccinated` varchar(28) DEFAULT NULL,
+  `pct_totpop_fully_vaccinated` varchar(27) DEFAULT NULL,
+  `at_least_one_dose` varchar(17) DEFAULT NULL,
+  `cumulative_at_least_one_dose` varchar(28) DEFAULT NULL,
+  `pct_age12pop_at_least_one_dose` varchar(30) DEFAULT NULL,
+  `pct_age5pop_at_least_one_dose` varchar(29) DEFAULT NULL,
+  `pct_totpop_at_least_one_dose` varchar(28) DEFAULT NULL,
+  `age12_population` varchar(16) DEFAULT NULL,
+  `age5_population` varchar(15) DEFAULT NULL,
+  `tot_population` varchar(14) DEFAULT NULL,
+  `up_to_date_count` varchar(16) DEFAULT NULL,
+  `cumulative_up_to_date_count` varchar(27) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `covid_19_vacc_admin_by_hpi_quart_booster_metr_arch`
+--
+
+DROP TABLE IF EXISTS `covid_19_vacc_admin_by_hpi_quart_booster_metr_arch`;
+CREATE TABLE `covid_19_vacc_admin_by_hpi_quart_booster_metr_arch` (
+  `hpiquartile` varchar(11) DEFAULT NULL,
+  `administered_date` varchar(17) DEFAULT NULL,
+  `total_doses` varchar(11) DEFAULT NULL,
+  `cumulative_total_doses` varchar(22) DEFAULT NULL,
+  `pfizer_doses` varchar(12) DEFAULT NULL,
+  `cumulative_pfizer_doses` varchar(23) DEFAULT NULL,
+  `moderna_doses` varchar(13) DEFAULT NULL,
+  `cumulative_moderna_doses` varchar(24) DEFAULT NULL,
+  `jj_doses` varchar(8) DEFAULT NULL,
+  `cumulative_jj_doses` varchar(19) DEFAULT NULL,
+  `partially_vaccinated` varchar(20) DEFAULT NULL,
+  `total_partially_vaccinated` varchar(26) DEFAULT NULL,
+  `pct_age12pop_partially_vaccinated` varchar(33) DEFAULT NULL,
+  `pct_age5pop_partially_vaccinated` varchar(32) DEFAULT NULL,
+  `pct_totpop_partially_vaccinated` varchar(31) DEFAULT NULL,
+  `fully_vaccinated` varchar(16) DEFAULT NULL,
+  `cumulative_fully_vaccinated` varchar(27) DEFAULT NULL,
+  `pct_age12pop_fully_vaccinated` varchar(29) DEFAULT NULL,
+  `pct_age5pop_fully_vaccinated` varchar(28) DEFAULT NULL,
+  `pct_totpop_fully_vaccinated` varchar(27) DEFAULT NULL,
+  `at_least_one_dose` varchar(17) DEFAULT NULL,
+  `cumulative_at_least_one_dose` varchar(28) DEFAULT NULL,
+  `pct_age12pop_at_least_one_dose` varchar(30) DEFAULT NULL,
+  `pct_age5pop_at_least_one_dose` varchar(29) DEFAULT NULL,
+  `pct_totpop_at_least_one_dose` varchar(28) DEFAULT NULL,
+  `age12_population` varchar(16) DEFAULT NULL,
+  `age5_population` varchar(15) DEFAULT NULL,
+  `tot_population` varchar(14) DEFAULT NULL,
+  `booster_recip_count` varchar(19) DEFAULT NULL,
+  `bivalent_booster_recip_count` varchar(28) DEFAULT NULL,
+  `cumulative_booster_recip_count` varchar(30) DEFAULT NULL,
+  `cumulative_bivalent_booster_recip_count` varchar(39) DEFAULT NULL,
+  `booster_eligible_population` varchar(27) DEFAULT NULL,
+  `bivalent_booster_eligible_population` varchar(36) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `covid_19_vaccines_administered_by_demographics`
+--
+
+DROP TABLE IF EXISTS `covid_19_vaccines_administered_by_demographics`;
+CREATE TABLE `covid_19_vaccines_administered_by_demographics` (
+  `demographic_category` varchar(20) DEFAULT NULL,
+  `demographic_value` varchar(41) DEFAULT NULL,
+  `administered_date` varchar(17) DEFAULT NULL,
+  `total_doses` varchar(11) DEFAULT NULL,
+  `cumulative_total_doses` varchar(22) DEFAULT NULL,
+  `partially_vaccinated` varchar(20) DEFAULT NULL,
+  `total_partially_vaccinated` varchar(26) DEFAULT NULL,
+  `fully_vaccinated` varchar(16) DEFAULT NULL,
+  `cumulative_fully_vaccinated` varchar(27) DEFAULT NULL,
+  `at_least_one_dose` varchar(17) DEFAULT NULL,
+  `cumulative_at_least_one_dose` varchar(28) DEFAULT NULL,
+  `up_to_date_count` varchar(16) DEFAULT NULL,
+  `cumulative_up_to_date_count` varchar(27) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `covid_19_vaccines_administered_by_demographics_by_county`
+--
+
+DROP TABLE IF EXISTS `covid_19_vaccines_administered_by_demographics_by_county`;
+CREATE TABLE `covid_19_vaccines_administered_by_demographics_by_county` (
+  `county` varchar(15) DEFAULT NULL,
+  `county_type` varchar(22) DEFAULT NULL,
+  `demographic_category` varchar(25) DEFAULT NULL,
+  `demographic_value` varchar(41) DEFAULT NULL,
+  `est_population` varchar(14) DEFAULT NULL,
+  `est_age_12plus_pop` varchar(18) DEFAULT NULL,
+  `est_age_5plus_pop` varchar(17) DEFAULT NULL,
+  `administered_date` varchar(17) DEFAULT NULL,
+  `partially_vaccinated` varchar(20) DEFAULT NULL,
+  `total_partially_vaccinated` varchar(26) DEFAULT NULL,
+  `fully_vaccinated` varchar(16) DEFAULT NULL,
+  `cumulative_fully_vaccinated` varchar(27) DEFAULT NULL,
+  `at_least_one_dose` varchar(17) DEFAULT NULL,
+  `cumulative_at_least_one_dose` varchar(28) DEFAULT NULL,
+  `cumulative_unvax_total_pop` varchar(26) DEFAULT NULL,
+  `cumulative_unvax_12plus_pop` varchar(27) DEFAULT NULL,
+  `cumulative_unvax_5plus_pop` varchar(26) DEFAULT NULL,
+  `suppress_data` varchar(13) DEFAULT NULL,
+  `up_to_date_count` varchar(16) DEFAULT NULL,
+  `cumulative_up_to_date_count` varchar(27) DEFAULT NULL,
+  `administered_year` varchar(17) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `covid_19_vaccines_administered_by_hpi_quartile`
+--
+
+DROP TABLE IF EXISTS `covid_19_vaccines_administered_by_hpi_quartile`;
+CREATE TABLE `covid_19_vaccines_administered_by_hpi_quartile` (
+  `hpiquartile` varchar(11) DEFAULT NULL,
+  `administered_date` varchar(17) DEFAULT NULL,
+  `total_doses` varchar(11) DEFAULT NULL,
+  `cumulative_total_doses` varchar(22) DEFAULT NULL,
+  `partially_vaccinated` varchar(20) DEFAULT NULL,
+  `total_partially_vaccinated` varchar(26) DEFAULT NULL,
+  `pct_age12pop_partially_vaccinated` varchar(33) DEFAULT NULL,
+  `pct_age5pop_partially_vaccinated` varchar(32) DEFAULT NULL,
+  `pct_totpop_partially_vaccinated` varchar(31) DEFAULT NULL,
+  `fully_vaccinated` varchar(16) DEFAULT NULL,
+  `cumulative_fully_vaccinated` varchar(27) DEFAULT NULL,
+  `pct_age12pop_fully_vaccinated` varchar(29) DEFAULT NULL,
+  `pct_age5pop_fully_vaccinated` varchar(28) DEFAULT NULL,
+  `pct_totpop_fully_vaccinated` varchar(27) DEFAULT NULL,
+  `at_least_one_dose` varchar(17) DEFAULT NULL,
+  `cumulative_at_least_one_dose` varchar(28) DEFAULT NULL,
+  `pct_age12pop_at_least_one_dose` varchar(30) DEFAULT NULL,
+  `pct_age5pop_at_least_one_dose` varchar(29) DEFAULT NULL,
+  `pct_totpop_at_least_one_dose` varchar(28) DEFAULT NULL,
+  `age12_population` varchar(16) DEFAULT NULL,
+  `age5_population` varchar(15) DEFAULT NULL,
+  `tot_population` varchar(14) DEFAULT NULL,
+  `up_to_date_count` varchar(16) DEFAULT NULL,
+  `cumulative_up_to_date_count` varchar(27) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `covid_19_vaccines_administered_by_vem_quartile`
+--
+
+DROP TABLE IF EXISTS `covid_19_vaccines_administered_by_vem_quartile`;
+CREATE TABLE `covid_19_vaccines_administered_by_vem_quartile` (
+  `vemquartile` varchar(11) DEFAULT NULL,
+  `administered_date` varchar(17) DEFAULT NULL,
+  `total_doses` varchar(11) DEFAULT NULL,
+  `cumulative_total_doses` varchar(22) DEFAULT NULL,
+  `partially_vaccinated` varchar(20) DEFAULT NULL,
+  `total_partially_vaccinated` varchar(26) DEFAULT NULL,
+  `pct_age12pop_partially_vaccinated` varchar(33) DEFAULT NULL,
+  `pct_age5pop_partially_vaccinated` varchar(32) DEFAULT NULL,
+  `pct_totpop_partially_vaccinated` varchar(31) DEFAULT NULL,
+  `fully_vaccinated` varchar(16) DEFAULT NULL,
+  `cumulative_fully_vaccinated` varchar(27) DEFAULT NULL,
+  `pct_age12pop_fully_vaccinated` varchar(29) DEFAULT NULL,
+  `pct_age5pop_fully_vaccinated` varchar(28) DEFAULT NULL,
+  `pct_totpop_fully_vaccinated` varchar(27) DEFAULT NULL,
+  `at_least_one_dose` varchar(17) DEFAULT NULL,
+  `cumulative_at_least_one_dose` varchar(28) DEFAULT NULL,
+  `pct_age12pop_at_least_one_dose` varchar(30) DEFAULT NULL,
+  `pct_age5pop_at_least_one_dose` varchar(29) DEFAULT NULL,
+  `pct_totpop_at_least_one_dose` varchar(28) DEFAULT NULL,
+  `age12_population` varchar(16) DEFAULT NULL,
+  `age5_population` varchar(15) DEFAULT NULL,
+  `tot_population` varchar(14) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `covid_19_vaccines_administered_by_vem_quartile_age_16_archived`
+--
+
+DROP TABLE IF EXISTS `covid_19_vaccines_administered_by_vem_quartile_age_16_archived`;
+CREATE TABLE `covid_19_vaccines_administered_by_vem_quartile_age_16_archived` (
+  `vemquartile` varchar(11) DEFAULT NULL,
+  `administered_date` varchar(17) DEFAULT NULL,
+  `total_doses` varchar(11) DEFAULT NULL,
+  `cumulative_total_doses` varchar(22) DEFAULT NULL,
+  `pfizer_doses` varchar(12) DEFAULT NULL,
+  `cumulative_pfizer_doses` varchar(23) DEFAULT NULL,
+  `moderna_doses` varchar(13) DEFAULT NULL,
+  `cumulative_moderna_doses` varchar(24) DEFAULT NULL,
+  `jj_doses` varchar(8) DEFAULT NULL,
+  `cumulative_jj_doses` varchar(19) DEFAULT NULL,
+  `partially_vaccinated` varchar(20) DEFAULT NULL,
+  `total_partially_vaccinated` varchar(26) DEFAULT NULL,
+  `pct_age16pop_partially_vaccinated` varchar(33) DEFAULT NULL,
+  `fully_vaccinated` varchar(16) DEFAULT NULL,
+  `cumulative_fully_vaccinated` varchar(27) DEFAULT NULL,
+  `pct_age16pop_fully_vaccinated` varchar(29) DEFAULT NULL,
+  `at_least_one_dose` varchar(17) DEFAULT NULL,
+  `cumulative_at_least_one_dose` varchar(28) DEFAULT NULL,
+  `pct_age16pop_at_least_one_dose` varchar(30) DEFAULT NULL,
+  `age16_population` varchar(16) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `covid_19_vaccines_administered_by_vem_quartile_age_5_archived`
+--
+
+DROP TABLE IF EXISTS `covid_19_vaccines_administered_by_vem_quartile_age_5_archived`;
+CREATE TABLE `covid_19_vaccines_administered_by_vem_quartile_age_5_archived` (
+  `vemquartile` varchar(11) DEFAULT NULL,
+  `administered_date` varchar(17) DEFAULT NULL,
+  `total_doses` varchar(11) DEFAULT NULL,
+  `cumulative_total_doses` varchar(22) DEFAULT NULL,
+  `pfizer_doses` varchar(12) DEFAULT NULL,
+  `cumulative_pfizer_doses` varchar(23) DEFAULT NULL,
+  `moderna_doses` varchar(13) DEFAULT NULL,
+  `cumulative_moderna_doses` varchar(24) DEFAULT NULL,
+  `jj_doses` varchar(8) DEFAULT NULL,
+  `cumulative_jj_doses` varchar(19) DEFAULT NULL,
+  `partially_vaccinated` varchar(20) DEFAULT NULL,
+  `total_partially_vaccinated` varchar(26) DEFAULT NULL,
+  `pct_age12pop_partially_vaccinated` varchar(33) DEFAULT NULL,
+  `pct_age5pop_partially_vaccinated` varchar(32) DEFAULT NULL,
+  `fully_vaccinated` varchar(16) DEFAULT NULL,
+  `cumulative_fully_vaccinated` varchar(27) DEFAULT NULL,
+  `pct_age12pop_fully_vaccinated` varchar(29) DEFAULT NULL,
+  `pct_age5pop_fully_vaccinated` varchar(28) DEFAULT NULL,
+  `at_least_one_dose` varchar(17) DEFAULT NULL,
+  `cumulative_at_least_one_dose` varchar(28) DEFAULT NULL,
+  `pct_age12pop_at_least_one_dose` varchar(30) DEFAULT NULL,
+  `pct_age5pop_at_least_one_dose` varchar(29) DEFAULT NULL,
+  `age12_population` varchar(16) DEFAULT NULL,
+  `age5_population` varchar(15) DEFAULT NULL,
+  `booster_recip_count` varchar(19) DEFAULT NULL,
+  `cumulative_booster_recip_count` varchar(30) DEFAULT NULL,
+  `booster_eligible_population` varchar(27) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `covid_19_vaccines_shipped_delivered_on_hand_archived`
+--
+
+DROP TABLE IF EXISTS `covid_19_vaccines_shipped_delivered_on_hand_archived`;
+CREATE TABLE `covid_19_vaccines_shipped_delivered_on_hand_archived` (
+  `date` varchar(10) DEFAULT NULL,
+  `doses_shipped` varchar(13) DEFAULT NULL,
+  `cumulative_doses_shipped` varchar(24) DEFAULT NULL,
+  `doses_delivered` varchar(15) DEFAULT NULL,
+  `cumulative_doses_delivered` varchar(26) DEFAULT NULL,
+  `cdc_pharmacy_doses_delivered` varchar(28) DEFAULT NULL,
+  `cumulative_cdc_pharmacy_doses_delivered` varchar(39) DEFAULT NULL,
+  `doses_on_hand` varchar(13) DEFAULT NULL,
+  `pfizer_doses_shipped` varchar(20) DEFAULT NULL,
+  `cumulative_pfizer_doses_shipped` varchar(31) DEFAULT NULL,
+  `pfizer_doses_delivered` varchar(22) DEFAULT NULL,
+  `cumulative_pfizer_doses_delivered` varchar(33) DEFAULT NULL,
+  `pfizer_doses_on_hand` varchar(20) DEFAULT NULL,
+  `moderna_doses_shipped` varchar(21) DEFAULT NULL,
+  `cumulative_moderna_doses_shipped` varchar(32) DEFAULT NULL,
+  `moderna_doses_delivered` varchar(23) DEFAULT NULL,
+  `cumulative_moderna_doses_delivered` varchar(34) DEFAULT NULL,
+  `moderna_doses_on_hand` varchar(21) DEFAULT NULL,
+  `jj_doses_shipped` varchar(16) DEFAULT NULL,
+  `cumulative_jj_doses_shipped` varchar(27) DEFAULT NULL,
+  `jj_doses_delivered` varchar(18) DEFAULT NULL,
+  `cumulative_jj_doses_delivered` varchar(29) DEFAULT NULL,
+  `jj_doses_on_hand` varchar(16) DEFAULT NULL,
+  `pfizer_pediatric_doses_shipped` varchar(30) DEFAULT NULL,
+  `cumulative_pfizer_pediatric_doses_shipped` varchar(41) DEFAULT NULL,
+  `pfizer_pediatric_doses_delivered` varchar(32) DEFAULT NULL,
+  `cumulative_pfizer_pediatric_doses_delivered` varchar(43) DEFAULT NULL,
+  `pfizer_pediatric_doses_on_hand` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `covid_19_vaccines_shipped_delivered_on_hand_archived0`
+--
+
+DROP TABLE IF EXISTS `covid_19_vaccines_shipped_delivered_on_hand_archived0`;
+CREATE TABLE `covid_19_vaccines_shipped_delivered_on_hand_archived0` (
+  `date` varchar(10) DEFAULT NULL,
+  `doses_shipped` varchar(13) DEFAULT NULL,
+  `cumulative_doses_shipped` varchar(24) DEFAULT NULL,
+  `doses_delivered` varchar(15) DEFAULT NULL,
+  `cumulative_doses_delivered` varchar(26) DEFAULT NULL,
+  `cdc_pharmacy_doses_delivered` varchar(28) DEFAULT NULL,
+  `cumulative_cdc_pharmacy_doses_delivered` varchar(39) DEFAULT NULL,
+  `doses_on_hand` varchar(13) DEFAULT NULL,
+  `pfizer_doses_shipped` varchar(20) DEFAULT NULL,
+  `cumulative_pfizer_doses_shipped` varchar(31) DEFAULT NULL,
+  `pfizer_doses_delivered` varchar(22) DEFAULT NULL,
+  `cumulative_pfizer_doses_delivered` varchar(33) DEFAULT NULL,
+  `pfizer_doses_on_hand` varchar(20) DEFAULT NULL,
+  `moderna_doses_shipped` varchar(21) DEFAULT NULL,
+  `cumulative_moderna_doses_shipped` varchar(32) DEFAULT NULL,
+  `moderna_doses_delivered` varchar(23) DEFAULT NULL,
+  `cumulative_moderna_doses_delivered` varchar(34) DEFAULT NULL,
+  `moderna_doses_on_hand` varchar(21) DEFAULT NULL,
+  `jj_doses_shipped` varchar(16) DEFAULT NULL,
+  `cumulative_jj_doses_shipped` varchar(27) DEFAULT NULL,
+  `jj_doses_delivered` varchar(18) DEFAULT NULL,
+  `cumulative_jj_doses_delivered` varchar(29) DEFAULT NULL,
+  `jj_doses_on_hand` varchar(16) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -10535,33 +15366,33 @@ CREATE TABLE `covid_19_vaccines_shipped_delivered_on_hand_by_county_zip` (
   `date` varchar(10) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
   `zip` varchar(5) DEFAULT NULL,
-  `doses_shipped` varchar(6) DEFAULT NULL,
-  `cumulative_doses_shipped` varchar(9) DEFAULT NULL,
-  `doses_delivered` varchar(6) DEFAULT NULL,
-  `cumulative_doses_delivered` varchar(9) DEFAULT NULL,
-  `cdc_pharmacy_doses_delivered` varchar(5) DEFAULT NULL,
-  `cumulative_cdc_pharmacy_doses_delivered` varchar(8) DEFAULT NULL,
-  `doses_on_hand` varchar(1) DEFAULT NULL,
-  `pfizer_doses_shipped` varchar(6) DEFAULT NULL,
-  `cumulative_pfizer_doses_shipped` varchar(9) DEFAULT NULL,
-  `pfizer_doses_delivered` varchar(6) DEFAULT NULL,
-  `cumulative_pfizer_doses_delivered` varchar(9) DEFAULT NULL,
-  `pfizer_doses_on_hand` varchar(1) DEFAULT NULL,
-  `moderna_doses_shipped` varchar(5) DEFAULT NULL,
-  `cumulative_moderna_doses_shipped` varchar(9) DEFAULT NULL,
-  `moderna_doses_delivered` varchar(5) DEFAULT NULL,
-  `cumulative_moderna_doses_delivered` varchar(9) DEFAULT NULL,
-  `moderna_doses_on_hand` varchar(1) DEFAULT NULL,
-  `jj_doses_shipped` varchar(5) DEFAULT NULL,
-  `cumulative_jj_doses_shipped` varchar(8) DEFAULT NULL,
-  `jj_doses_delivered` varchar(5) DEFAULT NULL,
-  `cumulative_jj_doses_delivered` varchar(8) DEFAULT NULL,
-  `jj_doses_on_hand` varchar(1) DEFAULT NULL,
-  `pfizer_pediatric_doses_shipped` varchar(1) DEFAULT NULL,
-  `cumulative_pfizer_pediatric_doses_shipped` varchar(3) DEFAULT NULL,
-  `pfizer_pediatric_doses_delivered` varchar(1) DEFAULT NULL,
-  `cumulative_pfizer_pediatric_doses_delivered` varchar(3) DEFAULT NULL,
-  `pfizer_pediatric_doses_on_hand` varchar(1) DEFAULT NULL
+  `doses_shipped` varchar(13) DEFAULT NULL,
+  `cumulative_doses_shipped` varchar(24) DEFAULT NULL,
+  `doses_delivered` varchar(15) DEFAULT NULL,
+  `cumulative_doses_delivered` varchar(26) DEFAULT NULL,
+  `cdc_pharmacy_doses_delivered` varchar(28) DEFAULT NULL,
+  `cumulative_cdc_pharmacy_doses_delivered` varchar(39) DEFAULT NULL,
+  `doses_on_hand` varchar(13) DEFAULT NULL,
+  `pfizer_doses_shipped` varchar(20) DEFAULT NULL,
+  `cumulative_pfizer_doses_shipped` varchar(31) DEFAULT NULL,
+  `pfizer_doses_delivered` varchar(22) DEFAULT NULL,
+  `cumulative_pfizer_doses_delivered` varchar(33) DEFAULT NULL,
+  `pfizer_doses_on_hand` varchar(20) DEFAULT NULL,
+  `moderna_doses_shipped` varchar(21) DEFAULT NULL,
+  `cumulative_moderna_doses_shipped` varchar(32) DEFAULT NULL,
+  `moderna_doses_delivered` varchar(23) DEFAULT NULL,
+  `cumulative_moderna_doses_delivered` varchar(34) DEFAULT NULL,
+  `moderna_doses_on_hand` varchar(21) DEFAULT NULL,
+  `jj_doses_shipped` varchar(16) DEFAULT NULL,
+  `cumulative_jj_doses_shipped` varchar(27) DEFAULT NULL,
+  `jj_doses_delivered` varchar(18) DEFAULT NULL,
+  `cumulative_jj_doses_delivered` varchar(29) DEFAULT NULL,
+  `jj_doses_on_hand` varchar(16) DEFAULT NULL,
+  `pfizer_pediatric_doses_shipped` varchar(30) DEFAULT NULL,
+  `cumulative_pfizer_pediatric_doses_shipped` varchar(41) DEFAULT NULL,
+  `pfizer_pediatric_doses_delivered` varchar(32) DEFAULT NULL,
+  `cumulative_pfizer_pediatric_doses_delivered` varchar(43) DEFAULT NULL,
+  `pfizer_pediatric_doses_on_hand` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -10578,489 +15409,6 @@ CREATE TABLE `covid_19_variant_data` (
   `percentage` varchar(5) DEFAULT NULL,
   `specimens_7d_avg` varchar(16) DEFAULT NULL,
   `percentage_7d_avg` varchar(15) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `covid_vacc_admin_by_demo`
---
-
-DROP TABLE IF EXISTS `covid_vacc_admin_by_demo`;
-CREATE TABLE `covid_vacc_admin_by_demo` (
-  `demographic_category` varchar(14) DEFAULT NULL,
-  `demographic_value` varchar(41) DEFAULT NULL,
-  `administered_date` varchar(10) DEFAULT NULL,
-  `total_doses` varchar(6) DEFAULT NULL,
-  `cumulative_total_doses` varchar(8) DEFAULT NULL,
-  `partially_vaccinated` varchar(6) DEFAULT NULL,
-  `total_partially_vaccinated` varchar(7) DEFAULT NULL,
-  `fully_vaccinated` varchar(6) DEFAULT NULL,
-  `cumulative_fully_vaccinated` varchar(8) DEFAULT NULL,
-  `at_least_one_dose` varchar(6) DEFAULT NULL,
-  `cumulative_at_least_one_dose` varchar(8) DEFAULT NULL,
-  `up_to_date_count` varchar(5) DEFAULT NULL,
-  `cumulative_up_to_date_count` varchar(7) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `covid_vacc_admin_by_demo_booster_archived`
---
-
-DROP TABLE IF EXISTS `covid_vacc_admin_by_demo_booster_archived`;
-CREATE TABLE `covid_vacc_admin_by_demo_booster_archived` (
-  `demographic_category` varchar(14) DEFAULT NULL,
-  `demographic_value` varchar(41) DEFAULT NULL,
-  `administered_date` varchar(10) DEFAULT NULL,
-  `total_doses` varchar(6) DEFAULT NULL,
-  `cumulative_total_doses` varchar(8) DEFAULT NULL,
-  `pfizer_doses` varchar(6) DEFAULT NULL,
-  `cumulative_pfizer_doses` varchar(8) DEFAULT NULL,
-  `moderna_doses` varchar(6) DEFAULT NULL,
-  `cumulative_moderna_doses` varchar(8) DEFAULT NULL,
-  `jj_doses` varchar(5) DEFAULT NULL,
-  `cumulative_jj_doses` varchar(7) DEFAULT NULL,
-  `partially_vaccinated` varchar(6) DEFAULT NULL,
-  `total_partially_vaccinated` varchar(7) DEFAULT NULL,
-  `fully_vaccinated` varchar(6) DEFAULT NULL,
-  `cumulative_fully_vaccinated` varchar(8) DEFAULT NULL,
-  `at_least_one_dose` varchar(6) DEFAULT NULL,
-  `cumulative_at_least_one_dose` varchar(8) DEFAULT NULL,
-  `booster_recip_count` varchar(5) DEFAULT NULL,
-  `bivalent_booster_recip_count` varchar(5) DEFAULT NULL,
-  `cumulative_booster_recip_count` varchar(7) DEFAULT NULL,
-  `cumulative_bivalent_booster_recip_count` varchar(7) DEFAULT NULL,
-  `booster_eligible_population` varchar(8) DEFAULT NULL,
-  `bivalent_booster_eligible_population` varchar(8) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `covid_vacc_admin_by_demo_by_county`
---
-
-DROP TABLE IF EXISTS `covid_vacc_admin_by_demo_by_county`;
-CREATE TABLE `covid_vacc_admin_by_demo_by_county` (
-  `county` varchar(15) DEFAULT NULL,
-  `county_type` varchar(22) DEFAULT NULL,
-  `demographic_category` varchar(25) DEFAULT NULL,
-  `demographic_value` varchar(41) DEFAULT NULL,
-  `est_population` varchar(10) DEFAULT NULL,
-  `est_age_12plus_pop` varchar(10) DEFAULT NULL,
-  `est_age_5plus_pop` varchar(10) DEFAULT NULL,
-  `administered_date` varchar(10) DEFAULT NULL,
-  `partially_vaccinated` varchar(8) DEFAULT NULL,
-  `total_partially_vaccinated` varchar(9) DEFAULT NULL,
-  `fully_vaccinated` varchar(8) DEFAULT NULL,
-  `cumulative_fully_vaccinated` varchar(10) DEFAULT NULL,
-  `at_least_one_dose` varchar(8) DEFAULT NULL,
-  `cumulative_at_least_one_dose` varchar(10) DEFAULT NULL,
-  `cumulative_unvax_total_pop` varchar(10) DEFAULT NULL,
-  `cumulative_unvax_12plus_pop` varchar(10) DEFAULT NULL,
-  `cumulative_unvax_5plus_pop` varchar(10) DEFAULT NULL,
-  `suppress_data` varchar(5) DEFAULT NULL,
-  `up_to_date_count` varchar(5) DEFAULT NULL,
-  `cumulative_up_to_date_count` varchar(7) DEFAULT NULL,
-  `administered_year` varchar(4) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `covid_vacc_admin_by_demo_by_county_age_16`
---
-
-DROP TABLE IF EXISTS `covid_vacc_admin_by_demo_by_county_age_16`;
-CREATE TABLE `covid_vacc_admin_by_demo_by_county_age_16` (
-  `county` varchar(15) DEFAULT NULL,
-  `county_type` varchar(22) DEFAULT NULL,
-  `demographic_category` varchar(14) DEFAULT NULL,
-  `demographic_value` varchar(41) DEFAULT NULL,
-  `est_population` varchar(10) DEFAULT NULL,
-  `est_age_16plus_pop` varchar(10) DEFAULT NULL,
-  `administered_date` varchar(10) DEFAULT NULL,
-  `partially_vaccinated` varchar(8) DEFAULT NULL,
-  `total_partially_vaccinated` varchar(9) DEFAULT NULL,
-  `fully_vaccinated` varchar(8) DEFAULT NULL,
-  `cumulative_fully_vaccinated` varchar(9) DEFAULT NULL,
-  `at_least_one_dose` varchar(8) DEFAULT NULL,
-  `cumulative_at_least_one_dose` varchar(9) DEFAULT NULL,
-  `cumulative_unvax_total_pop` varchar(10) DEFAULT NULL,
-  `cumulative_unvax_16plus_pop` varchar(10) DEFAULT NULL,
-  `suppress_data` varchar(5) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `covid_vacc_admin_by_demo_by_county_age_5`
---
-
-DROP TABLE IF EXISTS `covid_vacc_admin_by_demo_by_county_age_5`;
-CREATE TABLE `covid_vacc_admin_by_demo_by_county_age_5` (
-  `county` varchar(15) DEFAULT NULL,
-  `county_type` varchar(22) DEFAULT NULL,
-  `demographic_category` varchar(14) DEFAULT NULL,
-  `demographic_value` varchar(41) DEFAULT NULL,
-  `est_population` varchar(10) DEFAULT NULL,
-  `est_age_12plus_pop` varchar(10) DEFAULT NULL,
-  `est_age_5plus_pop` varchar(10) DEFAULT NULL,
-  `administered_date` varchar(10) DEFAULT NULL,
-  `partially_vaccinated` varchar(8) DEFAULT NULL,
-  `total_partially_vaccinated` varchar(9) DEFAULT NULL,
-  `fully_vaccinated` varchar(8) DEFAULT NULL,
-  `cumulative_fully_vaccinated` varchar(10) DEFAULT NULL,
-  `at_least_one_dose` varchar(8) DEFAULT NULL,
-  `cumulative_at_least_one_dose` varchar(10) DEFAULT NULL,
-  `cumulative_unvax_total_pop` varchar(10) DEFAULT NULL,
-  `cumulative_unvax_12plus_pop` varchar(10) DEFAULT NULL,
-  `cumulative_unvax_5plus_pop` varchar(10) DEFAULT NULL,
-  `suppress_data` varchar(5) DEFAULT NULL,
-  `booster_recip_count` varchar(6) DEFAULT NULL,
-  `cumulative_booster_recip_count` varchar(7) DEFAULT NULL,
-  `booster_eligible_population` varchar(8) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `covid_vacc_admin_by_demo_by_county_booster_archived`
---
-
-DROP TABLE IF EXISTS `covid_vacc_admin_by_demo_by_county_booster_archived`;
-CREATE TABLE `covid_vacc_admin_by_demo_by_county_booster_archived` (
-  `county` varchar(15) DEFAULT NULL,
-  `county_type` varchar(22) DEFAULT NULL,
-  `demographic_category` varchar(25) DEFAULT NULL,
-  `demographic_value` varchar(41) DEFAULT NULL,
-  `est_population` varchar(10) DEFAULT NULL,
-  `est_age_12plus_pop` varchar(10) DEFAULT NULL,
-  `est_age_5plus_pop` varchar(10) DEFAULT NULL,
-  `administered_date` varchar(10) DEFAULT NULL,
-  `partially_vaccinated` varchar(8) DEFAULT NULL,
-  `total_partially_vaccinated` varchar(9) DEFAULT NULL,
-  `fully_vaccinated` varchar(8) DEFAULT NULL,
-  `cumulative_fully_vaccinated` varchar(10) DEFAULT NULL,
-  `at_least_one_dose` varchar(8) DEFAULT NULL,
-  `cumulative_at_least_one_dose` varchar(10) DEFAULT NULL,
-  `cumulative_unvax_total_pop` varchar(10) DEFAULT NULL,
-  `cumulative_unvax_12plus_pop` varchar(10) DEFAULT NULL,
-  `cumulative_unvax_5plus_pop` varchar(10) DEFAULT NULL,
-  `suppress_data` varchar(5) DEFAULT NULL,
-  `booster_recip_count` varchar(5) DEFAULT NULL,
-  `cumulative_booster_recip_count` varchar(7) DEFAULT NULL,
-  `bivalent_booster_recip_count` varchar(5) DEFAULT NULL,
-  `cumulative_bivalent_booster_recip_count` varchar(7) DEFAULT NULL,
-  `booster_eligible_population` varchar(8) DEFAULT NULL,
-  `bivalent_booster_eligible_population` varchar(8) DEFAULT NULL,
-  `administered_year` varchar(4) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `covid_vacc_admin_by_demo_by_county_updated_vacc_archived`
---
-
-DROP TABLE IF EXISTS `covid_vacc_admin_by_demo_by_county_updated_vacc_archived`;
-CREATE TABLE `covid_vacc_admin_by_demo_by_county_updated_vacc_archived` (
-  `county` varchar(15) DEFAULT NULL,
-  `county_type` varchar(22) DEFAULT NULL,
-  `demographic_category` varchar(25) DEFAULT NULL,
-  `demographic_value` varchar(41) DEFAULT NULL,
-  `est_population` varchar(10) DEFAULT NULL,
-  `est_age_12plus_pop` varchar(10) DEFAULT NULL,
-  `est_age_5plus_pop` varchar(10) DEFAULT NULL,
-  `administered_date` varchar(10) DEFAULT NULL,
-  `partially_vaccinated` varchar(8) DEFAULT NULL,
-  `total_partially_vaccinated` varchar(9) DEFAULT NULL,
-  `fully_vaccinated` varchar(8) DEFAULT NULL,
-  `cumulative_fully_vaccinated` varchar(10) DEFAULT NULL,
-  `at_least_one_dose` varchar(8) DEFAULT NULL,
-  `cumulative_at_least_one_dose` varchar(10) DEFAULT NULL,
-  `cumulative_unvax_total_pop` varchar(10) DEFAULT NULL,
-  `cumulative_unvax_12plus_pop` varchar(10) DEFAULT NULL,
-  `cumulative_unvax_5plus_pop` varchar(10) DEFAULT NULL,
-  `suppress_data` varchar(5) DEFAULT NULL,
-  `up_to_date_count` varchar(5) DEFAULT NULL,
-  `cumulative_up_to_date_count` varchar(7) DEFAULT NULL,
-  `administered_year` varchar(4) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `covid_vacc_admin_by_demo_updated_vacc_archived`
---
-
-DROP TABLE IF EXISTS `covid_vacc_admin_by_demo_updated_vacc_archived`;
-CREATE TABLE `covid_vacc_admin_by_demo_updated_vacc_archived` (
-  `demographic_category` varchar(14) DEFAULT NULL,
-  `demographic_value` varchar(41) DEFAULT NULL,
-  `administered_date` varchar(10) DEFAULT NULL,
-  `total_doses` varchar(6) DEFAULT NULL,
-  `cumulative_total_doses` varchar(8) DEFAULT NULL,
-  `partially_vaccinated` varchar(6) DEFAULT NULL,
-  `total_partially_vaccinated` varchar(7) DEFAULT NULL,
-  `fully_vaccinated` varchar(6) DEFAULT NULL,
-  `cumulative_fully_vaccinated` varchar(8) DEFAULT NULL,
-  `at_least_one_dose` varchar(6) DEFAULT NULL,
-  `cumulative_at_least_one_dose` varchar(8) DEFAULT NULL,
-  `up_to_date_count` varchar(5) DEFAULT NULL,
-  `cumulative_up_to_date_count` varchar(7) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `covid_vacc_admin_by_hpi_quart_booster_archived`
---
-
-DROP TABLE IF EXISTS `covid_vacc_admin_by_hpi_quart_booster_archived`;
-CREATE TABLE `covid_vacc_admin_by_hpi_quart_booster_archived` (
-  `hpiquartile` varchar(1) DEFAULT NULL,
-  `administered_date` varchar(10) DEFAULT NULL,
-  `total_doses` varchar(6) DEFAULT NULL,
-  `cumulative_total_doses` varchar(8) DEFAULT NULL,
-  `pfizer_doses` varchar(6) DEFAULT NULL,
-  `cumulative_pfizer_doses` varchar(8) DEFAULT NULL,
-  `moderna_doses` varchar(5) DEFAULT NULL,
-  `cumulative_moderna_doses` varchar(7) DEFAULT NULL,
-  `jj_doses` varchar(5) DEFAULT NULL,
-  `cumulative_jj_doses` varchar(6) DEFAULT NULL,
-  `partially_vaccinated` varchar(5) DEFAULT NULL,
-  `total_partially_vaccinated` varchar(7) DEFAULT NULL,
-  `pct_age12pop_partially_vaccinated` varchar(0) DEFAULT NULL,
-  `pct_age5pop_partially_vaccinated` varchar(0) DEFAULT NULL,
-  `pct_totpop_partially_vaccinated` varchar(8) DEFAULT NULL,
-  `fully_vaccinated` varchar(5) DEFAULT NULL,
-  `cumulative_fully_vaccinated` varchar(7) DEFAULT NULL,
-  `pct_age12pop_fully_vaccinated` varchar(0) DEFAULT NULL,
-  `pct_age5pop_fully_vaccinated` varchar(0) DEFAULT NULL,
-  `pct_totpop_fully_vaccinated` varchar(8) DEFAULT NULL,
-  `at_least_one_dose` varchar(6) DEFAULT NULL,
-  `cumulative_at_least_one_dose` varchar(7) DEFAULT NULL,
-  `pct_age12pop_at_least_one_dose` varchar(0) DEFAULT NULL,
-  `pct_age5pop_at_least_one_dose` varchar(0) DEFAULT NULL,
-  `pct_totpop_at_least_one_dose` varchar(8) DEFAULT NULL,
-  `age12_population` varchar(0) DEFAULT NULL,
-  `age5_population` varchar(0) DEFAULT NULL,
-  `tot_population` varchar(8) DEFAULT NULL,
-  `booster_recip_count` varchar(5) DEFAULT NULL,
-  `bivalent_booster_recip_count` varchar(5) DEFAULT NULL,
-  `cumulative_booster_recip_count` varchar(7) DEFAULT NULL,
-  `cumulative_bivalent_booster_recip_count` varchar(7) DEFAULT NULL,
-  `booster_eligible_population` varchar(7) DEFAULT NULL,
-  `bivalent_booster_eligible_population` varchar(7) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `covid_vacc_admin_by_hpi_quart_updated_vacc_archived`
---
-
-DROP TABLE IF EXISTS `covid_vacc_admin_by_hpi_quart_updated_vacc_archived`;
-CREATE TABLE `covid_vacc_admin_by_hpi_quart_updated_vacc_archived` (
-  `hpiquartile` varchar(1) DEFAULT NULL,
-  `administered_date` varchar(10) DEFAULT NULL,
-  `total_doses` varchar(6) DEFAULT NULL,
-  `cumulative_total_doses` varchar(8) DEFAULT NULL,
-  `partially_vaccinated` varchar(5) DEFAULT NULL,
-  `total_partially_vaccinated` varchar(7) DEFAULT NULL,
-  `pct_age12pop_partially_vaccinated` varchar(0) DEFAULT NULL,
-  `pct_age5pop_partially_vaccinated` varchar(0) DEFAULT NULL,
-  `pct_totpop_partially_vaccinated` varchar(8) DEFAULT NULL,
-  `fully_vaccinated` varchar(5) DEFAULT NULL,
-  `cumulative_fully_vaccinated` varchar(7) DEFAULT NULL,
-  `pct_age12pop_fully_vaccinated` varchar(0) DEFAULT NULL,
-  `pct_age5pop_fully_vaccinated` varchar(0) DEFAULT NULL,
-  `pct_totpop_fully_vaccinated` varchar(8) DEFAULT NULL,
-  `at_least_one_dose` varchar(6) DEFAULT NULL,
-  `cumulative_at_least_one_dose` varchar(7) DEFAULT NULL,
-  `pct_age12pop_at_least_one_dose` varchar(0) DEFAULT NULL,
-  `pct_age5pop_at_least_one_dose` varchar(0) DEFAULT NULL,
-  `pct_totpop_at_least_one_dose` varchar(8) DEFAULT NULL,
-  `age12_population` varchar(0) DEFAULT NULL,
-  `age5_population` varchar(0) DEFAULT NULL,
-  `tot_population` varchar(8) DEFAULT NULL,
-  `up_to_date_count` varchar(5) DEFAULT NULL,
-  `cumulative_up_to_date_count` varchar(7) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `covid_vacc_admin_by_hpi_quartile`
---
-
-DROP TABLE IF EXISTS `covid_vacc_admin_by_hpi_quartile`;
-CREATE TABLE `covid_vacc_admin_by_hpi_quartile` (
-  `hpiquartile` varchar(1) DEFAULT NULL,
-  `administered_date` varchar(10) DEFAULT NULL,
-  `total_doses` varchar(6) DEFAULT NULL,
-  `cumulative_total_doses` varchar(8) DEFAULT NULL,
-  `partially_vaccinated` varchar(5) DEFAULT NULL,
-  `total_partially_vaccinated` varchar(7) DEFAULT NULL,
-  `pct_age12pop_partially_vaccinated` varchar(0) DEFAULT NULL,
-  `pct_age5pop_partially_vaccinated` varchar(0) DEFAULT NULL,
-  `pct_totpop_partially_vaccinated` varchar(8) DEFAULT NULL,
-  `fully_vaccinated` varchar(5) DEFAULT NULL,
-  `cumulative_fully_vaccinated` varchar(7) DEFAULT NULL,
-  `pct_age12pop_fully_vaccinated` varchar(0) DEFAULT NULL,
-  `pct_age5pop_fully_vaccinated` varchar(0) DEFAULT NULL,
-  `pct_totpop_fully_vaccinated` varchar(8) DEFAULT NULL,
-  `at_least_one_dose` varchar(6) DEFAULT NULL,
-  `cumulative_at_least_one_dose` varchar(7) DEFAULT NULL,
-  `pct_age12pop_at_least_one_dose` varchar(0) DEFAULT NULL,
-  `pct_age5pop_at_least_one_dose` varchar(0) DEFAULT NULL,
-  `pct_totpop_at_least_one_dose` varchar(8) DEFAULT NULL,
-  `age12_population` varchar(0) DEFAULT NULL,
-  `age5_population` varchar(0) DEFAULT NULL,
-  `tot_population` varchar(8) DEFAULT NULL,
-  `up_to_date_count` varchar(5) DEFAULT NULL,
-  `cumulative_up_to_date_count` varchar(7) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `covid_vacc_admin_by_vem_quart`
---
-
-DROP TABLE IF EXISTS `covid_vacc_admin_by_vem_quart`;
-CREATE TABLE `covid_vacc_admin_by_vem_quart` (
-  `vemquartile` varchar(1) DEFAULT NULL,
-  `administered_date` varchar(10) DEFAULT NULL,
-  `total_doses` varchar(6) DEFAULT NULL,
-  `cumulative_total_doses` varchar(8) DEFAULT NULL,
-  `partially_vaccinated` varchar(5) DEFAULT NULL,
-  `total_partially_vaccinated` varchar(7) DEFAULT NULL,
-  `pct_age12pop_partially_vaccinated` varchar(8) DEFAULT NULL,
-  `pct_age5pop_partially_vaccinated` varchar(8) DEFAULT NULL,
-  `pct_totpop_partially_vaccinated` varchar(8) DEFAULT NULL,
-  `fully_vaccinated` varchar(5) DEFAULT NULL,
-  `cumulative_fully_vaccinated` varchar(7) DEFAULT NULL,
-  `pct_age12pop_fully_vaccinated` varchar(8) DEFAULT NULL,
-  `pct_age5pop_fully_vaccinated` varchar(8) DEFAULT NULL,
-  `pct_totpop_fully_vaccinated` varchar(8) DEFAULT NULL,
-  `at_least_one_dose` varchar(5) DEFAULT NULL,
-  `cumulative_at_least_one_dose` varchar(7) DEFAULT NULL,
-  `pct_age12pop_at_least_one_dose` varchar(8) DEFAULT NULL,
-  `pct_age5pop_at_least_one_dose` varchar(8) DEFAULT NULL,
-  `pct_totpop_at_least_one_dose` varchar(8) DEFAULT NULL,
-  `age12_population` varchar(7) DEFAULT NULL,
-  `age5_population` varchar(7) DEFAULT NULL,
-  `tot_population` varchar(8) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `covid_vacc_admin_by_vem_quart_age_16`
---
-
-DROP TABLE IF EXISTS `covid_vacc_admin_by_vem_quart_age_16`;
-CREATE TABLE `covid_vacc_admin_by_vem_quart_age_16` (
-  `vemquartile` varchar(1) DEFAULT NULL,
-  `administered_date` varchar(10) DEFAULT NULL,
-  `total_doses` varchar(6) DEFAULT NULL,
-  `cumulative_total_doses` varchar(8) DEFAULT NULL,
-  `pfizer_doses` varchar(6) DEFAULT NULL,
-  `cumulative_pfizer_doses` varchar(7) DEFAULT NULL,
-  `moderna_doses` varchar(5) DEFAULT NULL,
-  `cumulative_moderna_doses` varchar(7) DEFAULT NULL,
-  `jj_doses` varchar(5) DEFAULT NULL,
-  `cumulative_jj_doses` varchar(6) DEFAULT NULL,
-  `partially_vaccinated` varchar(5) DEFAULT NULL,
-  `total_partially_vaccinated` varchar(7) DEFAULT NULL,
-  `pct_age16pop_partially_vaccinated` varchar(8) DEFAULT NULL,
-  `fully_vaccinated` varchar(5) DEFAULT NULL,
-  `cumulative_fully_vaccinated` varchar(7) DEFAULT NULL,
-  `pct_age16pop_fully_vaccinated` varchar(8) DEFAULT NULL,
-  `at_least_one_dose` varchar(5) DEFAULT NULL,
-  `cumulative_at_least_one_dose` varchar(7) DEFAULT NULL,
-  `pct_age16pop_at_least_one_dose` varchar(8) DEFAULT NULL,
-  `age16_population` varchar(7) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `covid_vacc_admin_by_vem_quart_age_5`
---
-
-DROP TABLE IF EXISTS `covid_vacc_admin_by_vem_quart_age_5`;
-CREATE TABLE `covid_vacc_admin_by_vem_quart_age_5` (
-  `vemquartile` varchar(1) DEFAULT NULL,
-  `administered_date` varchar(10) DEFAULT NULL,
-  `total_doses` varchar(6) DEFAULT NULL,
-  `cumulative_total_doses` varchar(8) DEFAULT NULL,
-  `pfizer_doses` varchar(6) DEFAULT NULL,
-  `cumulative_pfizer_doses` varchar(8) DEFAULT NULL,
-  `moderna_doses` varchar(5) DEFAULT NULL,
-  `cumulative_moderna_doses` varchar(7) DEFAULT NULL,
-  `jj_doses` varchar(5) DEFAULT NULL,
-  `cumulative_jj_doses` varchar(6) DEFAULT NULL,
-  `partially_vaccinated` varchar(5) DEFAULT NULL,
-  `total_partially_vaccinated` varchar(7) DEFAULT NULL,
-  `pct_age12pop_partially_vaccinated` varchar(8) DEFAULT NULL,
-  `pct_age5pop_partially_vaccinated` varchar(8) DEFAULT NULL,
-  `fully_vaccinated` varchar(5) DEFAULT NULL,
-  `cumulative_fully_vaccinated` varchar(7) DEFAULT NULL,
-  `pct_age12pop_fully_vaccinated` varchar(8) DEFAULT NULL,
-  `pct_age5pop_fully_vaccinated` varchar(8) DEFAULT NULL,
-  `at_least_one_dose` varchar(5) DEFAULT NULL,
-  `cumulative_at_least_one_dose` varchar(7) DEFAULT NULL,
-  `pct_age12pop_at_least_one_dose` varchar(8) DEFAULT NULL,
-  `pct_age5pop_at_least_one_dose` varchar(8) DEFAULT NULL,
-  `age12_population` varchar(7) DEFAULT NULL,
-  `age5_population` varchar(7) DEFAULT NULL,
-  `booster_recip_count` varchar(5) DEFAULT NULL,
-  `cumulative_booster_recip_count` varchar(7) DEFAULT NULL,
-  `booster_eligible_population` varchar(7) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `covid_vacc_shipped_on_hand_archived`
---
-
-DROP TABLE IF EXISTS `covid_vacc_shipped_on_hand_archived`;
-CREATE TABLE `covid_vacc_shipped_on_hand_archived` (
-  `date` varchar(10) DEFAULT NULL,
-  `doses_shipped` varchar(7) DEFAULT NULL,
-  `cumulative_doses_shipped` varchar(9) DEFAULT NULL,
-  `doses_delivered` varchar(7) DEFAULT NULL,
-  `cumulative_doses_delivered` varchar(11) DEFAULT NULL,
-  `cdc_pharmacy_doses_delivered` varchar(6) DEFAULT NULL,
-  `cumulative_cdc_pharmacy_doses_delivered` varchar(10) DEFAULT NULL,
-  `doses_on_hand` varchar(1) DEFAULT NULL,
-  `pfizer_doses_shipped` varchar(6) DEFAULT NULL,
-  `cumulative_pfizer_doses_shipped` varchar(8) DEFAULT NULL,
-  `pfizer_doses_delivered` varchar(7) DEFAULT NULL,
-  `cumulative_pfizer_doses_delivered` varchar(10) DEFAULT NULL,
-  `pfizer_doses_on_hand` varchar(1) DEFAULT NULL,
-  `moderna_doses_shipped` varchar(6) DEFAULT NULL,
-  `cumulative_moderna_doses_shipped` varchar(8) DEFAULT NULL,
-  `moderna_doses_delivered` varchar(6) DEFAULT NULL,
-  `cumulative_moderna_doses_delivered` varchar(10) DEFAULT NULL,
-  `moderna_doses_on_hand` varchar(1) DEFAULT NULL,
-  `jj_doses_shipped` varchar(6) DEFAULT NULL,
-  `cumulative_jj_doses_shipped` varchar(7) DEFAULT NULL,
-  `jj_doses_delivered` varchar(6) DEFAULT NULL,
-  `cumulative_jj_doses_delivered` varchar(9) DEFAULT NULL,
-  `jj_doses_on_hand` varchar(1) DEFAULT NULL,
-  `pfizer_pediatric_doses_shipped` varchar(1) DEFAULT NULL,
-  `cumulative_pfizer_pediatric_doses_shipped` varchar(1) DEFAULT NULL,
-  `pfizer_pediatric_doses_delivered` varchar(1) DEFAULT NULL,
-  `cumulative_pfizer_pediatric_doses_delivered` varchar(3) DEFAULT NULL,
-  `pfizer_pediatric_doses_on_hand` varchar(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `covid_vacc_shipped_on_hand_archived0`
---
-
-DROP TABLE IF EXISTS `covid_vacc_shipped_on_hand_archived0`;
-CREATE TABLE `covid_vacc_shipped_on_hand_archived0` (
-  `date` varchar(10) DEFAULT NULL,
-  `doses_shipped` varchar(7) DEFAULT NULL,
-  `cumulative_doses_shipped` varchar(8) DEFAULT NULL,
-  `doses_delivered` varchar(7) DEFAULT NULL,
-  `cumulative_doses_delivered` varchar(10) DEFAULT NULL,
-  `cdc_pharmacy_doses_delivered` varchar(6) DEFAULT NULL,
-  `cumulative_cdc_pharmacy_doses_delivered` varchar(10) DEFAULT NULL,
-  `doses_on_hand` varchar(7) DEFAULT NULL,
-  `pfizer_doses_shipped` varchar(6) DEFAULT NULL,
-  `cumulative_pfizer_doses_shipped` varchar(8) DEFAULT NULL,
-  `pfizer_doses_delivered` varchar(7) DEFAULT NULL,
-  `cumulative_pfizer_doses_delivered` varchar(10) DEFAULT NULL,
-  `pfizer_doses_on_hand` varchar(7) DEFAULT NULL,
-  `moderna_doses_shipped` varchar(6) DEFAULT NULL,
-  `cumulative_moderna_doses_shipped` varchar(8) DEFAULT NULL,
-  `moderna_doses_delivered` varchar(6) DEFAULT NULL,
-  `cumulative_moderna_doses_delivered` varchar(10) DEFAULT NULL,
-  `moderna_doses_on_hand` varchar(7) DEFAULT NULL,
-  `jj_doses_shipped` varchar(6) DEFAULT NULL,
-  `cumulative_jj_doses_shipped` varchar(7) DEFAULT NULL,
-  `jj_doses_delivered` varchar(6) DEFAULT NULL,
-  `cumulative_jj_doses_delivered` varchar(9) DEFAULT NULL,
-  `jj_doses_on_hand` varchar(7) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -11341,9 +15689,9 @@ CREATE TABLE `cy_2023_two_plan_model_rates` (
 
 DROP TABLE IF EXISTS `data_for_map_of_counties_and_num_of_comm_supports_available`;
 CREATE TABLE `data_for_map_of_counties_and_num_of_comm_supports_available` (
-  `objectid` varchar(2) DEFAULT NULL,
+  `objectid` varchar(11) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
-  `totalservicesoffered` varchar(2) DEFAULT NULL
+  `totalservicesoffered` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -11383,9 +15731,9 @@ CREATE TABLE `data_high_school_tobacco_use_prevalence` (
 
 DROP TABLE IF EXISTS `data_table_for_map_of_ecm_counties`;
 CREATE TABLE `data_table_for_map_of_ecm_counties` (
-  `objectid` varchar(2) DEFAULT NULL,
-  `statefp` varchar(2) DEFAULT NULL,
-  `countyfp` varchar(3) DEFAULT NULL,
+  `objectid` varchar(11) DEFAULT NULL,
+  `statefp` varchar(7) DEFAULT NULL,
+  `countyfp` varchar(8) DEFAULT NULL,
   `countyns` varchar(8) DEFAULT NULL,
   `geoid` varchar(5) DEFAULT NULL,
   `name` varchar(15) DEFAULT NULL,
@@ -11461,44 +15809,21 @@ CREATE TABLE `dds_regionalcenters` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `death_profiles_by_county`
---
-
-DROP TABLE IF EXISTS `death_profiles_by_county`;
-CREATE TABLE `death_profiles_by_county` (
-  `year` int DEFAULT NULL,
-  `month` int DEFAULT NULL,
-  `county` varchar(31) DEFAULT NULL,
-  `geography_type` varchar(31) DEFAULT NULL,
-  `strata` varchar(31) DEFAULT NULL,
-  `strata_name` varchar(63) DEFAULT NULL,
-  `cause` varchar(31) DEFAULT NULL,
-  `cause_desc` varchar(63) DEFAULT NULL,
-  `icd_revision` varchar(31) DEFAULT NULL,
-  `count` int DEFAULT NULL,
-  `annotation_code` varchar(31) DEFAULT NULL,
-  `annotation_desc` varchar(63) DEFAULT NULL,
-  `data_extract_date` varchar(31) DEFAULT NULL,
-  `data_revision_date` varchar(31) DEFAULT NULL,
-  `by_factor` varchar(31) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
 -- Table structure for table `deaths_by_month_statewide_final_1970_1978`
 --
 
 DROP TABLE IF EXISTS `deaths_by_month_statewide_final_1970_1978`;
 CREATE TABLE `deaths_by_month_statewide_final_1970_1978` (
-  `year` varchar(4) DEFAULT NULL,
-  `month` varchar(2) DEFAULT NULL,
-  `geography_type` varchar(10) DEFAULT NULL,
+  `year_str` varchar(4) DEFAULT NULL,
+  `month` varchar(5) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
   `strata` varchar(16) DEFAULT NULL,
   `strata_name` varchar(17) DEFAULT NULL,
-  `cause` varchar(3) DEFAULT NULL,
+  `cause` varchar(5) DEFAULT NULL,
   `cause_desc` varchar(18) DEFAULT NULL,
   `count` varchar(5) DEFAULT NULL,
-  `annotation_code` varchar(0) DEFAULT NULL,
-  `annotation_desc` varchar(0) DEFAULT NULL
+  `annotation_code` varchar(15) DEFAULT NULL,
+  `annotation_desc` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -11507,15 +15832,15 @@ CREATE TABLE `deaths_by_month_statewide_final_1970_1978` (
 
 DROP TABLE IF EXISTS `deaths_by_month_statewide_final_1979_1998`;
 CREATE TABLE `deaths_by_month_statewide_final_1979_1998` (
-  `year` varchar(4) DEFAULT NULL,
-  `month` varchar(2) DEFAULT NULL,
-  `geography_type` varchar(10) DEFAULT NULL,
+  `year_str` varchar(4) DEFAULT NULL,
+  `month` varchar(5) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
   `strata` varchar(16) DEFAULT NULL,
   `strata_name` varchar(17) DEFAULT NULL,
-  `cause` varchar(3) DEFAULT NULL,
+  `cause` varchar(5) DEFAULT NULL,
   `cause_desc` varchar(53) DEFAULT NULL,
   `count` varchar(5) DEFAULT NULL,
-  `annotation_code` varchar(1) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
   `annotation_desc` varchar(38) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -11525,57 +15850,57 @@ CREATE TABLE `deaths_by_month_statewide_final_1979_1998` (
 
 DROP TABLE IF EXISTS `deaths_by_month_statewide_final_1999_2013`;
 CREATE TABLE `deaths_by_month_statewide_final_1999_2013` (
-  `year` varchar(4) DEFAULT NULL,
-  `month` varchar(2) DEFAULT NULL,
-  `geography_type` varchar(10) DEFAULT NULL,
+  `year_str` varchar(4) DEFAULT NULL,
+  `month` varchar(5) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
   `strata` varchar(16) DEFAULT NULL,
   `strata_name` varchar(30) DEFAULT NULL,
-  `cause` varchar(3) DEFAULT NULL,
+  `cause` varchar(5) DEFAULT NULL,
   `cause_desc` varchar(53) DEFAULT NULL,
   `count` varchar(5) DEFAULT NULL,
-  `annotation_code` varchar(1) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
   `annotation_desc` varchar(38) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `deaths_by_month_statewide_final_2014_2022`
+-- Table structure for table `deaths_by_month_statewide_final_2014_2023`
 --
 
-DROP TABLE IF EXISTS `deaths_by_month_statewide_final_2014_2022`;
-CREATE TABLE `deaths_by_month_statewide_final_2014_2022` (
-  `year` varchar(4) DEFAULT NULL,
-  `month` varchar(2) DEFAULT NULL,
-  `geography_type` varchar(10) DEFAULT NULL,
+DROP TABLE IF EXISTS `deaths_by_month_statewide_final_2014_2023`;
+CREATE TABLE `deaths_by_month_statewide_final_2014_2023` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `month` varchar(5) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
   `strata` varchar(16) DEFAULT NULL,
   `strata_name` varchar(36) DEFAULT NULL,
-  `cause` varchar(3) DEFAULT NULL,
+  `cause` varchar(5) DEFAULT NULL,
   `cause_desc` varchar(53) DEFAULT NULL,
-  `icd_revision` varchar(6) DEFAULT NULL,
+  `icd_revision` varchar(12) DEFAULT NULL,
   `count` varchar(5) DEFAULT NULL,
-  `annotation_code` varchar(1) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
   `annotation_desc` varchar(38) DEFAULT NULL,
-  `data_revision_date` varchar(10) DEFAULT NULL
+  `data_revision_date` varchar(18) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `deaths_by_month_statewide_provisional_2023_2024`
+-- Table structure for table `deaths_by_month_statewide_provisional_2024`
 --
 
-DROP TABLE IF EXISTS `deaths_by_month_statewide_provisional_2023_2024`;
-CREATE TABLE `deaths_by_month_statewide_provisional_2023_2024` (
-  `year` varchar(4) DEFAULT NULL,
-  `month` varchar(2) DEFAULT NULL,
-  `geography_type` varchar(10) DEFAULT NULL,
+DROP TABLE IF EXISTS `deaths_by_month_statewide_provisional_2024`;
+CREATE TABLE `deaths_by_month_statewide_provisional_2024` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `month` varchar(5) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
   `strata` varchar(16) DEFAULT NULL,
   `strata_name` varchar(36) DEFAULT NULL,
-  `cause` varchar(3) DEFAULT NULL,
+  `cause` varchar(5) DEFAULT NULL,
   `cause_desc` varchar(53) DEFAULT NULL,
-  `icd_revision` varchar(6) DEFAULT NULL,
+  `icd_revision` varchar(12) DEFAULT NULL,
   `count` varchar(5) DEFAULT NULL,
-  `annotation_code` varchar(1) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
   `annotation_desc` varchar(38) DEFAULT NULL,
-  `data_extract_date` varchar(10) DEFAULT NULL,
-  `data_revision_date` varchar(10) DEFAULT NULL
+  `data_extract_date` varchar(17) DEFAULT NULL,
+  `data_revision_date` varchar(18) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -11584,15 +15909,15 @@ CREATE TABLE `deaths_by_month_statewide_provisional_2023_2024` (
 
 DROP TABLE IF EXISTS `deaths_by_year_statewide_final_1970_1978`;
 CREATE TABLE `deaths_by_year_statewide_final_1970_1978` (
-  `year` varchar(4) DEFAULT NULL,
-  `geography_type` varchar(10) DEFAULT NULL,
+  `year_str` varchar(4) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
   `strata` varchar(16) DEFAULT NULL,
   `strata_name` varchar(17) DEFAULT NULL,
-  `cause` varchar(3) DEFAULT NULL,
+  `cause` varchar(5) DEFAULT NULL,
   `cause_desc` varchar(18) DEFAULT NULL,
   `count` varchar(6) DEFAULT NULL,
-  `annotation_code` varchar(0) DEFAULT NULL,
-  `annotation_desc` varchar(0) DEFAULT NULL
+  `annotation_code` varchar(15) DEFAULT NULL,
+  `annotation_desc` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -11601,15 +15926,15 @@ CREATE TABLE `deaths_by_year_statewide_final_1970_1978` (
 
 DROP TABLE IF EXISTS `deaths_by_year_statewide_final_1979_1998`;
 CREATE TABLE `deaths_by_year_statewide_final_1979_1998` (
-  `year` varchar(4) DEFAULT NULL,
-  `geography_type` varchar(10) DEFAULT NULL,
+  `year_str` varchar(4) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
   `strata` varchar(16) DEFAULT NULL,
   `strata_name` varchar(17) DEFAULT NULL,
-  `cause` varchar(3) DEFAULT NULL,
+  `cause` varchar(5) DEFAULT NULL,
   `cause_desc` varchar(53) DEFAULT NULL,
   `count` varchar(6) DEFAULT NULL,
-  `annotation_code` varchar(0) DEFAULT NULL,
-  `annotation_desc` varchar(0) DEFAULT NULL
+  `annotation_code` varchar(15) DEFAULT NULL,
+  `annotation_desc` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -11618,75 +15943,34 @@ CREATE TABLE `deaths_by_year_statewide_final_1979_1998` (
 
 DROP TABLE IF EXISTS `deaths_by_year_statewide_final_1999_2013`;
 CREATE TABLE `deaths_by_year_statewide_final_1999_2013` (
-  `year` varchar(4) DEFAULT NULL,
-  `geography_type` varchar(10) DEFAULT NULL,
+  `year_str` varchar(4) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
   `strata` varchar(23) DEFAULT NULL,
   `strata_name` varchar(39) DEFAULT NULL,
-  `cause` varchar(3) DEFAULT NULL,
+  `cause` varchar(5) DEFAULT NULL,
   `cause_desc` varchar(53) DEFAULT NULL,
   `count` varchar(6) DEFAULT NULL,
-  `annotation_code` varchar(1) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
   `annotation_desc` varchar(38) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `deaths_by_year_statewide_final_2014_2022`
+-- Table structure for table `deaths_by_year_statewide_final_2014_2023`
 --
 
-DROP TABLE IF EXISTS `deaths_by_year_statewide_final_2014_2022`;
-CREATE TABLE `deaths_by_year_statewide_final_2014_2022` (
-  `year` varchar(4) DEFAULT NULL,
-  `geography_type` varchar(10) DEFAULT NULL,
+DROP TABLE IF EXISTS `deaths_by_year_statewide_final_2014_2023`;
+CREATE TABLE `deaths_by_year_statewide_final_2014_2023` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
   `strata` varchar(23) DEFAULT NULL,
-  `strata_name` varchar(49) DEFAULT NULL,
-  `cause` varchar(3) DEFAULT NULL,
+  `strata_name` varchar(38) DEFAULT NULL,
+  `cause` varchar(5) DEFAULT NULL,
   `cause_desc` varchar(53) DEFAULT NULL,
-  `icd_revision` varchar(6) DEFAULT NULL,
+  `icd_revision` varchar(12) DEFAULT NULL,
   `count` varchar(6) DEFAULT NULL,
-  `annotation_code` varchar(1) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
   `annotation_desc` varchar(38) DEFAULT NULL,
-  `data_revision_date` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `deaths_by_zip`
---
-
-DROP TABLE IF EXISTS `deaths_by_zip`;
-CREATE TABLE `deaths_by_zip` (
-  `year` varchar(4) DEFAULT NULL,
-  `zip_code` varchar(5) DEFAULT NULL,
-  `geography_type` varchar(9) DEFAULT NULL,
-  `strata` varchar(16) DEFAULT NULL,
-  `strata_name` varchar(17) DEFAULT NULL,
-  `cause` varchar(3) DEFAULT NULL,
-  `cause_desc` varchar(53) DEFAULT NULL,
-  `icd_revision` varchar(6) DEFAULT NULL,
-  `count` varchar(4) DEFAULT NULL,
-  `annotation_code` varchar(1) DEFAULT NULL,
-  `annotation_desc` varchar(38) DEFAULT NULL,
-  `data_revision_date` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `deaths_statewide`
---
-
-DROP TABLE IF EXISTS `deaths_statewide`;
-CREATE TABLE `deaths_statewide` (
-  `year` varchar(4) DEFAULT NULL,
-  `month` varchar(10) DEFAULT NULL,
-  `geography_type` varchar(23) DEFAULT NULL,
-  `strata` varchar(49) DEFAULT NULL,
-  `strata_name` varchar(36) DEFAULT NULL,
-  `cause` varchar(53) DEFAULT NULL,
-  `cause_desc` varchar(53) DEFAULT NULL,
-  `count` varchar(6) DEFAULT NULL,
-  `annotation_code` varchar(38) DEFAULT NULL,
-  `annotation_desc` varchar(38) DEFAULT NULL,
-  `icd_revision` varchar(38) DEFAULT NULL,
-  `data_revision_date` varchar(10) DEFAULT NULL,
-  `data_extract_date` varchar(10) DEFAULT NULL
+  `data_revision_date` varchar(18) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -11772,28 +16056,28 @@ CREATE TABLE `dental_utilization_2013_2022` (
 
 DROP TABLE IF EXISTS `dental_utilization_by_provider_cy2018`;
 CREATE TABLE `dental_utilization_by_provider_cy2018` (
-  `rendering_npi` varchar(10) DEFAULT NULL,
+  `rendering_npi` varchar(13) DEFAULT NULL,
   `provider_legal_name` varchar(56) DEFAULT NULL,
-  `calendar_year` varchar(4) DEFAULT NULL,
-  `delivery_system` varchar(3) DEFAULT NULL,
+  `calendar_year` varchar(13) DEFAULT NULL,
+  `delivery_system` varchar(15) DEFAULT NULL,
   `provider_type` varchar(13) DEFAULT NULL,
-  `age_group` varchar(8) DEFAULT NULL,
-  `adv_user_cnt` varchar(5) DEFAULT NULL,
-  `adv_user_annotation_code` varchar(1) DEFAULT NULL,
-  `adv_svc_cnt` varchar(6) DEFAULT NULL,
-  `adv_svc_annotation_code` varchar(1) DEFAULT NULL,
-  `prev_user_cnt` varchar(5) DEFAULT NULL,
-  `prev_user_annotation_code` varchar(1) DEFAULT NULL,
-  `prev_svc_cnt` varchar(5) DEFAULT NULL,
-  `prev_svc_annotation_code` varchar(1) DEFAULT NULL,
-  `txmt_user_cnt` varchar(5) DEFAULT NULL,
-  `txmt_user_annotation_code` varchar(1) DEFAULT NULL,
-  `txmt_svc_cnt` varchar(6) DEFAULT NULL,
-  `txmt_svc_annotation_code` varchar(1) DEFAULT NULL,
-  `exam_user_cnt` varchar(5) DEFAULT NULL,
-  `exam_user_annotation_code` varchar(1) DEFAULT NULL,
-  `exam_svc_cnt` varchar(5) DEFAULT NULL,
-  `exam_svc_annotation_code` varchar(1) DEFAULT NULL
+  `age_group` varchar(9) DEFAULT NULL,
+  `adv_user_cnt` varchar(12) DEFAULT NULL,
+  `adv_user_annotation_code` varchar(24) DEFAULT NULL,
+  `adv_svc_cnt` varchar(11) DEFAULT NULL,
+  `adv_svc_annotation_code` varchar(24) DEFAULT NULL,
+  `prev_user_cnt` varchar(13) DEFAULT NULL,
+  `prev_user_annotation_code` varchar(25) DEFAULT NULL,
+  `prev_svc_cnt` varchar(12) DEFAULT NULL,
+  `prev_svc_annotation_code` varchar(24) DEFAULT NULL,
+  `txmt_user_cnt` varchar(13) DEFAULT NULL,
+  `txmt_user_annotation_code` varchar(25) DEFAULT NULL,
+  `txmt_svc_cnt` varchar(12) DEFAULT NULL,
+  `txmt_svc_annotation_code` varchar(24) DEFAULT NULL,
+  `exam_user_cnt` varchar(13) DEFAULT NULL,
+  `exam_user_annotation_code` varchar(25) DEFAULT NULL,
+  `exam_svc_cnt` varchar(12) DEFAULT NULL,
+  `exam_svc_annotation_code` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -11802,28 +16086,28 @@ CREATE TABLE `dental_utilization_by_provider_cy2018` (
 
 DROP TABLE IF EXISTS `dental_utilization_by_provider_cy2019`;
 CREATE TABLE `dental_utilization_by_provider_cy2019` (
-  `rendering_npi` varchar(10) DEFAULT NULL,
+  `rendering_npi` varchar(13) DEFAULT NULL,
   `provider_legal_name` varchar(56) DEFAULT NULL,
-  `calendar_year` varchar(4) DEFAULT NULL,
-  `delivery_system` varchar(3) DEFAULT NULL,
+  `calendar_year` varchar(13) DEFAULT NULL,
+  `delivery_system` varchar(15) DEFAULT NULL,
   `provider_type` varchar(13) DEFAULT NULL,
-  `age_group` varchar(8) DEFAULT NULL,
-  `adv_user_cnt` varchar(5) DEFAULT NULL,
-  `adv_user_annotation_code` varchar(1) DEFAULT NULL,
-  `adv_svc_cnt` varchar(6) DEFAULT NULL,
-  `adv_svc_annotation_code` varchar(1) DEFAULT NULL,
-  `prev_user_cnt` varchar(5) DEFAULT NULL,
-  `prev_user_annotation_code` varchar(1) DEFAULT NULL,
-  `prev_svc_cnt` varchar(6) DEFAULT NULL,
-  `prev_svc_annotation_code` varchar(1) DEFAULT NULL,
-  `txmt_user_cnt` varchar(5) DEFAULT NULL,
-  `txmt_user_annotation_code` varchar(1) DEFAULT NULL,
-  `txmt_svc_cnt` varchar(6) DEFAULT NULL,
-  `txmt_svc_annotation_code` varchar(1) DEFAULT NULL,
-  `exam_user_cnt` varchar(5) DEFAULT NULL,
-  `exam_user_annotation_code` varchar(1) DEFAULT NULL,
-  `exam_svc_cnt` varchar(6) DEFAULT NULL,
-  `exam_svc_annotation_code` varchar(1) DEFAULT NULL
+  `age_group` varchar(9) DEFAULT NULL,
+  `adv_user_cnt` varchar(12) DEFAULT NULL,
+  `adv_user_annotation_code` varchar(24) DEFAULT NULL,
+  `adv_svc_cnt` varchar(11) DEFAULT NULL,
+  `adv_svc_annotation_code` varchar(24) DEFAULT NULL,
+  `prev_user_cnt` varchar(13) DEFAULT NULL,
+  `prev_user_annotation_code` varchar(25) DEFAULT NULL,
+  `prev_svc_cnt` varchar(12) DEFAULT NULL,
+  `prev_svc_annotation_code` varchar(24) DEFAULT NULL,
+  `txmt_user_cnt` varchar(13) DEFAULT NULL,
+  `txmt_user_annotation_code` varchar(25) DEFAULT NULL,
+  `txmt_svc_cnt` varchar(12) DEFAULT NULL,
+  `txmt_svc_annotation_code` varchar(24) DEFAULT NULL,
+  `exam_user_cnt` varchar(13) DEFAULT NULL,
+  `exam_user_annotation_code` varchar(25) DEFAULT NULL,
+  `exam_svc_cnt` varchar(12) DEFAULT NULL,
+  `exam_svc_annotation_code` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -11832,28 +16116,28 @@ CREATE TABLE `dental_utilization_by_provider_cy2019` (
 
 DROP TABLE IF EXISTS `dental_utilization_by_provider_cy2020`;
 CREATE TABLE `dental_utilization_by_provider_cy2020` (
-  `rendering_npi` varchar(10) DEFAULT NULL,
+  `rendering_npi` varchar(13) DEFAULT NULL,
   `provider_legal_name` varchar(56) DEFAULT NULL,
-  `calendar_year` varchar(4) DEFAULT NULL,
-  `delivery_system` varchar(3) DEFAULT NULL,
+  `calendar_year` varchar(13) DEFAULT NULL,
+  `delivery_system` varchar(15) DEFAULT NULL,
   `provider_type` varchar(13) DEFAULT NULL,
-  `age_group` varchar(8) DEFAULT NULL,
-  `adv_user_cnt` varchar(6) DEFAULT NULL,
-  `adv_user_annotation_code` varchar(1) DEFAULT NULL,
-  `adv_svc_cnt` varchar(7) DEFAULT NULL,
-  `adv_svc_annotation_code` varchar(1) DEFAULT NULL,
-  `prev_user_cnt` varchar(6) DEFAULT NULL,
-  `prev_user_annotation_code` varchar(1) DEFAULT NULL,
-  `prev_svc_cnt` varchar(6) DEFAULT NULL,
-  `prev_svc_annotation_code` varchar(1) DEFAULT NULL,
-  `txmt_user_cnt` varchar(6) DEFAULT NULL,
-  `txmt_user_annotation_code` varchar(1) DEFAULT NULL,
-  `txmt_svc_cnt` varchar(7) DEFAULT NULL,
-  `txmt_svc_annotation_code` varchar(1) DEFAULT NULL,
-  `exam_user_cnt` varchar(6) DEFAULT NULL,
-  `exam_user_annotation_code` varchar(1) DEFAULT NULL,
-  `exam_svc_cnt` varchar(7) DEFAULT NULL,
-  `exam_svc_annotation_code` varchar(1) DEFAULT NULL
+  `age_group` varchar(9) DEFAULT NULL,
+  `adv_user_cnt` varchar(12) DEFAULT NULL,
+  `adv_user_annotation_code` varchar(24) DEFAULT NULL,
+  `adv_svc_cnt` varchar(11) DEFAULT NULL,
+  `adv_svc_annotation_code` varchar(24) DEFAULT NULL,
+  `prev_user_cnt` varchar(13) DEFAULT NULL,
+  `prev_user_annotation_code` varchar(25) DEFAULT NULL,
+  `prev_svc_cnt` varchar(12) DEFAULT NULL,
+  `prev_svc_annotation_code` varchar(24) DEFAULT NULL,
+  `txmt_user_cnt` varchar(13) DEFAULT NULL,
+  `txmt_user_annotation_code` varchar(25) DEFAULT NULL,
+  `txmt_svc_cnt` varchar(12) DEFAULT NULL,
+  `txmt_svc_annotation_code` varchar(24) DEFAULT NULL,
+  `exam_user_cnt` varchar(13) DEFAULT NULL,
+  `exam_user_annotation_code` varchar(25) DEFAULT NULL,
+  `exam_svc_cnt` varchar(12) DEFAULT NULL,
+  `exam_svc_annotation_code` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -11862,28 +16146,28 @@ CREATE TABLE `dental_utilization_by_provider_cy2020` (
 
 DROP TABLE IF EXISTS `dental_utilization_by_provider_cy2021`;
 CREATE TABLE `dental_utilization_by_provider_cy2021` (
-  `rendering_npi` varchar(10) DEFAULT NULL,
+  `rendering_npi` varchar(13) DEFAULT NULL,
   `provider_legal_name` varchar(56) DEFAULT NULL,
-  `calendar_year` varchar(4) DEFAULT NULL,
-  `delivery_system` varchar(3) DEFAULT NULL,
+  `calendar_year` varchar(13) DEFAULT NULL,
+  `delivery_system` varchar(15) DEFAULT NULL,
   `provider_type` varchar(13) DEFAULT NULL,
-  `age_group` varchar(8) DEFAULT NULL,
-  `adv_user_cnt` varchar(6) DEFAULT NULL,
-  `adv_user_annotation_code` varchar(1) DEFAULT NULL,
-  `adv_svc_cnt` varchar(7) DEFAULT NULL,
-  `adv_svc_annotation_code` varchar(1) DEFAULT NULL,
-  `prev_user_cnt` varchar(6) DEFAULT NULL,
-  `prev_user_annotation_code` varchar(1) DEFAULT NULL,
-  `prev_svc_cnt` varchar(6) DEFAULT NULL,
-  `prev_svc_annotation_code` varchar(1) DEFAULT NULL,
-  `txmt_user_cnt` varchar(5) DEFAULT NULL,
-  `txmt_user_annotation_code` varchar(1) DEFAULT NULL,
-  `txmt_svc_cnt` varchar(6) DEFAULT NULL,
-  `txmt_svc_annotation_code` varchar(1) DEFAULT NULL,
-  `exam_user_cnt` varchar(6) DEFAULT NULL,
-  `exam_user_annotation_code` varchar(1) DEFAULT NULL,
-  `exam_svc_cnt` varchar(6) DEFAULT NULL,
-  `exam_svc_annotation_code` varchar(1) DEFAULT NULL
+  `age_group` varchar(9) DEFAULT NULL,
+  `adv_user_cnt` varchar(12) DEFAULT NULL,
+  `adv_user_annotation_code` varchar(24) DEFAULT NULL,
+  `adv_svc_cnt` varchar(11) DEFAULT NULL,
+  `adv_svc_annotation_code` varchar(24) DEFAULT NULL,
+  `prev_user_cnt` varchar(13) DEFAULT NULL,
+  `prev_user_annotation_code` varchar(25) DEFAULT NULL,
+  `prev_svc_cnt` varchar(12) DEFAULT NULL,
+  `prev_svc_annotation_code` varchar(24) DEFAULT NULL,
+  `txmt_user_cnt` varchar(13) DEFAULT NULL,
+  `txmt_user_annotation_code` varchar(25) DEFAULT NULL,
+  `txmt_svc_cnt` varchar(12) DEFAULT NULL,
+  `txmt_svc_annotation_code` varchar(24) DEFAULT NULL,
+  `exam_user_cnt` varchar(13) DEFAULT NULL,
+  `exam_user_annotation_code` varchar(25) DEFAULT NULL,
+  `exam_svc_cnt` varchar(12) DEFAULT NULL,
+  `exam_svc_annotation_code` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -11892,28 +16176,28 @@ CREATE TABLE `dental_utilization_by_provider_cy2021` (
 
 DROP TABLE IF EXISTS `dental_utilization_by_provider_cy2022`;
 CREATE TABLE `dental_utilization_by_provider_cy2022` (
-  `rendering_npi` varchar(10) DEFAULT NULL,
+  `rendering_npi` varchar(13) DEFAULT NULL,
   `provider_legal_name` varchar(62) DEFAULT NULL,
-  `calendar_year` varchar(4) DEFAULT NULL,
-  `delivery_system` varchar(4) DEFAULT NULL,
+  `calendar_year` varchar(13) DEFAULT NULL,
+  `delivery_system` varchar(15) DEFAULT NULL,
   `provider_type` varchar(13) DEFAULT NULL,
-  `age_group` varchar(8) DEFAULT NULL,
-  `adv_user_cnt` varchar(5) DEFAULT NULL,
-  `adv_user_annotation_code` varchar(1) DEFAULT NULL,
-  `adv_svc_cnt` varchar(6) DEFAULT NULL,
-  `adv_svc_annotation_code` varchar(1) DEFAULT NULL,
-  `prev_user_cnt` varchar(5) DEFAULT NULL,
-  `prev_user_annotation_code` varchar(1) DEFAULT NULL,
-  `prev_svc_cnt` varchar(5) DEFAULT NULL,
-  `prev_svc_annotation_code` varchar(1) DEFAULT NULL,
-  `txmt_user_cnt` varchar(4) DEFAULT NULL,
-  `txmt_user_annotation_code` varchar(1) DEFAULT NULL,
-  `txmt_svc_cnt` varchar(5) DEFAULT NULL,
-  `txmt_svc_annotation_code` varchar(1) DEFAULT NULL,
-  `exam_user_cnt` varchar(5) DEFAULT NULL,
-  `exam_user_annotation_code` varchar(1) DEFAULT NULL,
-  `exam_svc_cnt` varchar(5) DEFAULT NULL,
-  `exam_svc_annotation_code` varchar(1) DEFAULT NULL
+  `age_group` varchar(9) DEFAULT NULL,
+  `adv_user_cnt` varchar(12) DEFAULT NULL,
+  `adv_user_annotation_code` varchar(24) DEFAULT NULL,
+  `adv_svc_cnt` varchar(11) DEFAULT NULL,
+  `adv_svc_annotation_code` varchar(24) DEFAULT NULL,
+  `prev_user_cnt` varchar(13) DEFAULT NULL,
+  `prev_user_annotation_code` varchar(25) DEFAULT NULL,
+  `prev_svc_cnt` varchar(12) DEFAULT NULL,
+  `prev_svc_annotation_code` varchar(24) DEFAULT NULL,
+  `txmt_user_cnt` varchar(13) DEFAULT NULL,
+  `txmt_user_annotation_code` varchar(25) DEFAULT NULL,
+  `txmt_svc_cnt` varchar(12) DEFAULT NULL,
+  `txmt_svc_annotation_code` varchar(24) DEFAULT NULL,
+  `exam_user_cnt` varchar(13) DEFAULT NULL,
+  `exam_user_annotation_code` varchar(25) DEFAULT NULL,
+  `exam_svc_cnt` varchar(12) DEFAULT NULL,
+  `exam_svc_annotation_code` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -12080,19 +16364,19 @@ CREATE TABLE `dept_state_hospitals_violence_total_patient_days` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `dhcs_county_code_references`
+-- Table structure for table `dhcs_county_code_reference_table`
 --
 
-DROP TABLE IF EXISTS `dhcs_county_code_references`;
-CREATE TABLE `dhcs_county_code_references` (
-  `objectid` int DEFAULT NULL,
-  `dhcs_county_code` int DEFAULT NULL,
-  `county_name` varchar(31) DEFAULT NULL,
-  `county_region_code` char(1) DEFAULT NULL,
-  `county_region_description` varchar(31) DEFAULT NULL,
-  `fips_county_code` int DEFAULT NULL,
-  `fips_state_county_code` int DEFAULT NULL,
-  `north_south_indicator` char(1) DEFAULT NULL
+DROP TABLE IF EXISTS `dhcs_county_code_reference_table`;
+CREATE TABLE `dhcs_county_code_reference_table` (
+  `objectid` varchar(11) DEFAULT NULL,
+  `dhcs_county_code` varchar(16) DEFAULT NULL,
+  `county_name` varchar(15) DEFAULT NULL,
+  `county_region_code` varchar(18) DEFAULT NULL,
+  `county_region_description` varchar(25) DEFAULT NULL,
+  `fips_county_code` varchar(16) DEFAULT NULL,
+  `fips_state_county_code` varchar(22) DEFAULT NULL,
+  `north_south_indicator` varchar(21) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -12222,40 +16506,6 @@ CREATE TABLE `dual_eligibility_in_the_california_medicare_population_by_county` 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `educational_attainment`
---
-
-DROP TABLE IF EXISTS `educational_attainment`;
-CREATE TABLE `educational_attainment` (
-  `ind_id` int DEFAULT NULL,
-  `ind_definition` varchar(127) DEFAULT NULL,
-  `reportyear` int DEFAULT NULL,
-  `race_eth_code` int DEFAULT NULL,
-  `race_eth_name` varchar(31) DEFAULT NULL,
-  `geotype` char(2) DEFAULT NULL,
-  `geotypevalue` varchar(15) DEFAULT NULL,
-  `geoname` varchar(127) DEFAULT NULL,
-  `county_name` varchar(127) DEFAULT NULL,
-  `county_fips` varchar(5) DEFAULT NULL,
-  `region_name` varchar(127) DEFAULT NULL,
-  `region_code` char(2) DEFAULT NULL,
-  `strata_one_code` int DEFAULT NULL,
-  `strata_one_name` varchar(127) DEFAULT NULL,
-  `strata_two_code` varchar(31) DEFAULT NULL,
-  `strata_two_name` varchar(31) DEFAULT NULL,
-  `numerator` bigint DEFAULT NULL,
-  `denominator` bigint DEFAULT NULL,
-  `estimate` decimal(6,2) DEFAULT NULL,
-  `LL_95CI` varchar(31) DEFAULT NULL,
-  `UL_95CI` varchar(31) DEFAULT NULL,
-  `SE` varchar(31) DEFAULT NULL,
-  `RSE` varchar(31) DEFAULT NULL,
-  `CA_decile` varchar(31) DEFAULT NULL,
-  `CA_RR` decimal(30,27) DEFAULT NULL,
-  `version` varchar(31) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
 -- Table structure for table `ehr_incentive_program_payments_hospitals`
 --
 
@@ -12263,25 +16513,25 @@ DROP TABLE IF EXISTS `ehr_incentive_program_payments_hospitals`;
 CREATE TABLE `ehr_incentive_program_payments_hospitals` (
   `x` varchar(14) DEFAULT NULL,
   `y` varchar(16) DEFAULT NULL,
-  `objectid` varchar(3) DEFAULT NULL,
+  `objectid` varchar(8) DEFAULT NULL,
   `provider_name` varchar(65) DEFAULT NULL,
   `npi` varchar(10) DEFAULT NULL,
   `ccn` varchar(5) DEFAULT NULL,
   `business_street_address` varchar(63) DEFAULT NULL,
   `business_city` varchar(16) DEFAULT NULL,
   `business_county` varchar(15) DEFAULT NULL,
-  `business_zip_code` varchar(5) DEFAULT NULL,
-  `business_state_territory` varchar(10) DEFAULT NULL,
-  `payment_year_number` varchar(1) DEFAULT NULL,
+  `business_zip_code` varchar(17) DEFAULT NULL,
+  `business_state_territory` varchar(24) DEFAULT NULL,
+  `payment_year_number` varchar(19) DEFAULT NULL,
   `program_type` varchar(17) DEFAULT NULL,
-  `medicaid_ep_hospital_type` varchar(20) DEFAULT NULL,
-  `total_payments` varchar(11) DEFAULT NULL,
-  `last_payment_criteria` varchar(3) DEFAULT NULL,
-  `recent_disbursement_amount` varchar(11) DEFAULT NULL,
+  `medicaid_ep_hospital_type` varchar(25) DEFAULT NULL,
+  `total_payments` varchar(14) DEFAULT NULL,
+  `last_payment_criteria` varchar(21) DEFAULT NULL,
+  `recent_disbursement_amount` varchar(26) DEFAULT NULL,
   `latitude` varchar(16) DEFAULT NULL,
   `longitude` varchar(17) DEFAULT NULL,
-  `last_program_year` varchar(4) DEFAULT NULL,
-  `last_payment_year` varchar(4) DEFAULT NULL
+  `last_program_year` varchar(17) DEFAULT NULL,
+  `last_payment_year` varchar(17) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -12292,7 +16542,7 @@ DROP TABLE IF EXISTS `ehr_incentive_program_payments_providers`;
 CREATE TABLE `ehr_incentive_program_payments_providers` (
   `x` varchar(17) DEFAULT NULL,
   `y` varchar(16) DEFAULT NULL,
-  `objectid` varchar(5) DEFAULT NULL,
+  `objectid` varchar(8) DEFAULT NULL,
   `provider_n` varchar(37) DEFAULT NULL,
   `npi` varchar(10) DEFAULT NULL,
   `medicaid_e` varchar(58) DEFAULT NULL,
@@ -12300,16 +16550,16 @@ CREATE TABLE `ehr_incentive_program_payments_providers` (
   `business_s` varchar(97) DEFAULT NULL,
   `business_c` varchar(22) DEFAULT NULL,
   `business_1` varchar(15) DEFAULT NULL,
-  `business_z` varchar(5) DEFAULT NULL,
+  `business_z` varchar(10) DEFAULT NULL,
   `business_2` varchar(10) DEFAULT NULL,
-  `program_ye` varchar(4) DEFAULT NULL,
-  `payment_ye` varchar(4) DEFAULT NULL,
-  `payment_1` varchar(1) DEFAULT NULL,
-  `payment_cr` varchar(3) DEFAULT NULL,
+  `program_ye` varchar(10) DEFAULT NULL,
+  `payment_ye` varchar(10) DEFAULT NULL,
+  `payment_1` varchar(10) DEFAULT NULL,
+  `payment_cr` varchar(10) DEFAULT NULL,
   `payee_name` varchar(52) DEFAULT NULL,
   `payee_npi` varchar(10) DEFAULT NULL,
-  `total_paym` varchar(8) DEFAULT NULL,
-  `total_rece` varchar(8) DEFAULT NULL,
+  `total_paym` varchar(10) DEFAULT NULL,
+  `total_rece` varchar(10) DEFAULT NULL,
   `latitude` varchar(13) DEFAULT NULL,
   `longitude` varchar(14) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -12349,7 +16599,7 @@ DROP TABLE IF EXISTS `eligible_individuals_enrolled_in_medi_cal_managed_care__81
 CREATE TABLE `eligible_individuals_enrolled_in_medi_cal_managed_care__8160266e` (
   `year` varchar(4) DEFAULT NULL,
   `reporting_period` varchar(7) DEFAULT NULL,
-  `county_organized_health_system_cohs_health_plan` varchar(38) DEFAULT NULL,
+  `county_organized_health_system_name_cohs_health_plan` varchar(38) DEFAULT NULL,
   `number_of_eligible_individuals` varchar(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -12379,7 +16629,7 @@ CREATE TABLE `eligible_individuals_selecting_covered_california` (
   `reporting_period` varchar(7) DEFAULT NULL,
   `age_group` varchar(8) DEFAULT NULL,
   `gender` varchar(6) DEFAULT NULL,
-  `number_of_eligible_individuals_who_plan_selected` varchar(6) DEFAULT NULL
+  `number_of_eligible_individuals_who_plan_selected` varchar(8) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -12458,19 +16708,38 @@ CREATE TABLE `enforcement_actions_trend` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `enrollment_data`
+-- Table structure for table `enrolled_medi_cal_fee_for_service_ffs_providers`
 --
 
-DROP TABLE IF EXISTS `enrollment_data`;
-CREATE TABLE `enrollment_data` (
-  `eligibility_date` date DEFAULT NULL,
-  `sex` char(1) DEFAULT NULL,
-  `county` varchar(31) DEFAULT NULL,
-  `region` varchar(31) DEFAULT NULL,
-  `age_group` varchar(15) DEFAULT NULL,
-  `ethnic_group` varchar(31) DEFAULT NULL,
-  `language` varchar(31) DEFAULT NULL,
-  `enrolled` int DEFAULT NULL
+DROP TABLE IF EXISTS `enrolled_medi_cal_fee_for_service_ffs_providers`;
+CREATE TABLE `enrolled_medi_cal_fee_for_service_ffs_providers` (
+  `provider_source` varchar(34) DEFAULT NULL,
+  `provider_number` varchar(15) DEFAULT NULL,
+  `npi` varchar(10) DEFAULT NULL,
+  `owner_number` varchar(12) DEFAULT NULL,
+  `service_location_number` varchar(23) DEFAULT NULL,
+  `legal_name` varchar(50) DEFAULT NULL,
+  `enroll_status_eff_dt` varchar(20) DEFAULT NULL,
+  `provider_taxonomy` varchar(23) DEFAULT NULL,
+  `nemt_nmt_provider_type` varchar(24) DEFAULT NULL,
+  `anc_provider_type` varchar(36) DEFAULT NULL,
+  `fi_provider_type_cd` varchar(19) DEFAULT NULL,
+  `fi_provider_type` varchar(85) DEFAULT NULL,
+  `provider_license` varchar(16) DEFAULT NULL,
+  `fi_provider_specialty_cd` varchar(24) DEFAULT NULL,
+  `fi_provider_specialty` varchar(51) DEFAULT NULL,
+  `out_of_state_indicator` varchar(22) DEFAULT NULL,
+  `in_out_state` varchar(56) DEFAULT NULL,
+  `address_attention` varchar(43) DEFAULT NULL,
+  `address` varchar(24) DEFAULT NULL,
+  `address2` varchar(24) DEFAULT NULL,
+  `city` varchar(17) DEFAULT NULL,
+  `state` varchar(5) DEFAULT NULL,
+  `zip` varchar(5) DEFAULT NULL,
+  `zip_4` varchar(5) DEFAULT NULL,
+  `dhcs_county_cd` varchar(14) DEFAULT NULL,
+  `fips_county_cd` varchar(14) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -12496,35 +16765,151 @@ CREATE TABLE `ethnicity_of_individuals_selecting_covered_california_q_1c27be73` 
   `year` varchar(4) DEFAULT NULL,
   `reporting_period` varchar(7) DEFAULT NULL,
   `ethnicity` varchar(43) DEFAULT NULL,
-  `number_of_eligible_individuals_who_plan_selected` varchar(7) DEFAULT NULL
+  `number_of_eligible_individuals_who_plan_selected` varchar(9) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `facility_list`
+-- Table structure for table `facility_profile_attributes`
 --
 
-DROP TABLE IF EXISTS `facility_list`;
-CREATE TABLE `facility_list` (
-  `x` decimal(16,8) DEFAULT NULL,
-  `y` decimal(16,8) DEFAULT NULL,
-  `id` int DEFAULT NULL,
-  `facilitynbr` int DEFAULT NULL,
-  `facilitystatus` varchar(1) DEFAULT NULL,
+DROP TABLE IF EXISTS `facility_profile_attributes`;
+CREATE TABLE `facility_profile_attributes` (
+  `facility_desc` varchar(79) DEFAULT NULL,
+  `site_address1` varchar(42) DEFAULT NULL,
+  `site_address2` varchar(50) DEFAULT NULL,
+  `site_city` varchar(23) DEFAULT NULL,
+  `site_zip` varchar(10) DEFAULT NULL,
+  `site_x_coordinate` varchar(17) DEFAULT NULL,
+  `site_y_coordinate` varchar(17) DEFAULT NULL,
+  `oshpd_id` varchar(9) DEFAULT NULL,
+  `license_type_desc` varchar(26) DEFAULT NULL,
+  `license_category_desc` varchar(33) DEFAULT NULL,
+  `license_number` varchar(14) DEFAULT NULL,
+  `facility_level_desc` varchar(22) DEFAULT NULL,
+  `er_service_level_desc` varchar(21) DEFAULT NULL,
+  `licensed_beds` varchar(13) DEFAULT NULL,
+  `facility_status_desc` varchar(20) DEFAULT NULL,
+  `financial_facility_count` varchar(24) DEFAULT NULL,
+  `consolidated_facility_desc_pipe` varchar(158) DEFAULT NULL,
+  `consolidated_facility_desc_comma` varchar(160) DEFAULT NULL,
+  `period_begin_date` varchar(17) DEFAULT NULL,
+  `period_end_date` varchar(15) DEFAULT NULL,
+  `net_pat_rev_medicare_traditional_ip` varchar(35) DEFAULT NULL,
+  `net_pat_rev_medicare_managed_ip` varchar(31) DEFAULT NULL,
+  `net_pat_rev_medi_cal_traditional_ip` varchar(35) DEFAULT NULL,
+  `net_pat_rev_medi_cal_managed_ip` varchar(31) DEFAULT NULL,
+  `net_pat_rev_county_indigent_traditional_ip` varchar(42) DEFAULT NULL,
+  `net_pat_rev_county_indigent_managed_ip` varchar(38) DEFAULT NULL,
+  `net_pat_rev_third_party_traditional_ip` varchar(38) DEFAULT NULL,
+  `net_pat_rev_third_party_managed_ip` varchar(34) DEFAULT NULL,
+  `net_pat_rev_other_indigent_ip` varchar(29) DEFAULT NULL,
+  `net_pat_rev_other_payer_ip` varchar(26) DEFAULT NULL,
+  `net_pat_rev_total_ip` varchar(20) DEFAULT NULL,
+  `net_pat_rev_medicare_traditional_op` varchar(35) DEFAULT NULL,
+  `net_pat_rev_medicare_managed_op` varchar(31) DEFAULT NULL,
+  `net_pat_rev_medi_cal_traditional_op` varchar(35) DEFAULT NULL,
+  `net_pat_rev_medi_cal_managed_op` varchar(31) DEFAULT NULL,
+  `net_pat_rev_county_indigent_traditional_op` varchar(42) DEFAULT NULL,
+  `net_pat_rev_county_indigent_managed_op` varchar(38) DEFAULT NULL,
+  `net_pat_rev_third_party_traditional_op` varchar(38) DEFAULT NULL,
+  `net_pat_rev_third_party_managed_op` varchar(34) DEFAULT NULL,
+  `net_pat_rev_other_indigent_op` varchar(29) DEFAULT NULL,
+  `net_pat_rev_other_payer_op` varchar(26) DEFAULT NULL,
+  `net_pat_rev_total_op` varchar(20) DEFAULT NULL,
+  `payer_mix_medicare_traditional_ip` varchar(33) DEFAULT NULL,
+  `payer_mix_medicare_traditional_ip_state` varchar(39) DEFAULT NULL,
+  `payer_mix_medicare_managed_ip` varchar(29) DEFAULT NULL,
+  `payer_mix_medicare_managed_ip_state` varchar(35) DEFAULT NULL,
+  `payer_mix_medi_cal_traditional_ip` varchar(33) DEFAULT NULL,
+  `payer_mix_medi_cal_traditional_ip_state` varchar(39) DEFAULT NULL,
+  `payer_mix_medi_cal_managed_ip` varchar(29) DEFAULT NULL,
+  `payer_mix_medi_cal_managed_ip_state` varchar(35) DEFAULT NULL,
+  `payer_mix_county_indigent_traditional_ip` varchar(40) DEFAULT NULL,
+  `payer_mix_county_indigent_traditional_ip_state` varchar(46) DEFAULT NULL,
+  `payer_mix_county_indigent_managed_ip` varchar(36) DEFAULT NULL,
+  `payer_mix_county_indigent_managed_ip_state` varchar(42) DEFAULT NULL,
+  `payer_mix_third_party_traditional_ip` varchar(36) DEFAULT NULL,
+  `payer_mix_third_party_traditional_ip_state` varchar(42) DEFAULT NULL,
+  `payer_mix_third_party_managed_ip` varchar(32) DEFAULT NULL,
+  `payer_mix_third_party_managed_ip_state` varchar(38) DEFAULT NULL,
+  `payer_mix_other_indigent_ip` varchar(27) DEFAULT NULL,
+  `payer_mix_other_indigent_ip_state` varchar(33) DEFAULT NULL,
+  `payer_mix_other_payer_ip` varchar(24) DEFAULT NULL,
+  `payer_mix_other_payer_ip_state` varchar(30) DEFAULT NULL,
+  `payer_mix_medicare_traditional_op` varchar(33) DEFAULT NULL,
+  `payer_mix_medicare_traditional_op_state` varchar(39) DEFAULT NULL,
+  `payer_mix_medicare_managed_op` varchar(29) DEFAULT NULL,
+  `payer_mix_medicare_managed_op_state` varchar(35) DEFAULT NULL,
+  `payer_mix_medi_cal_traditional_op` varchar(33) DEFAULT NULL,
+  `payer_mix_medi_cal_traditional_op_state` varchar(39) DEFAULT NULL,
+  `payer_mix_medi_cal_managed_op` varchar(29) DEFAULT NULL,
+  `payer_mix_medi_cal_managed_op_state` varchar(35) DEFAULT NULL,
+  `payer_mix_county_indigent_traditional_op` varchar(40) DEFAULT NULL,
+  `payer_mix_county_indigent_traditional_op_state` varchar(46) DEFAULT NULL,
+  `payer_mix_county_indigent_managed_op` varchar(36) DEFAULT NULL,
+  `payer_mix_county_indigent_managed_op_state` varchar(42) DEFAULT NULL,
+  `payer_mix_third_party_traditional_op` varchar(36) DEFAULT NULL,
+  `payer_mix_third_party_traditional_op_state` varchar(42) DEFAULT NULL,
+  `payer_mix_third_party_managed_op` varchar(32) DEFAULT NULL,
+  `payer_mix_third_party_managed_op_state` varchar(38) DEFAULT NULL,
+  `payer_mix_other_indigent_op` varchar(27) DEFAULT NULL,
+  `payer_mix_other_indigent_op_state` varchar(33) DEFAULT NULL,
+  `payer_mix_other_payer_op` varchar(24) DEFAULT NULL,
+  `payer_mix_other_payer_op_state` varchar(30) DEFAULT NULL,
+  `avg_stay_medicare_traditional` varchar(29) DEFAULT NULL,
+  `avg_stay_medicare_managed` varchar(25) DEFAULT NULL,
+  `avg_stay_medi_cal_traditional` varchar(29) DEFAULT NULL,
+  `avg_stay_medi_cal_managed` varchar(25) DEFAULT NULL,
+  `avg_stay_county_indigent_traditional` varchar(36) DEFAULT NULL,
+  `avg_stay_county_indigent_managed` varchar(32) DEFAULT NULL,
+  `avg_stay_third_party_traditional` varchar(32) DEFAULT NULL,
+  `avg_stay_third_party_managed` varchar(28) DEFAULT NULL,
+  `avg_stay_other_indigent_total` varchar(29) DEFAULT NULL,
+  `avg_stay_other_payer_total` varchar(26) DEFAULT NULL,
+  `avg_stay_total` varchar(14) DEFAULT NULL,
+  `active_projects` varchar(15) DEFAULT NULL,
+  `active_project_costs` varchar(20) DEFAULT NULL,
+  `active_projects_state` varchar(21) DEFAULT NULL,
+  `active_project_costs_state` varchar(26) DEFAULT NULL,
+  `spc_1` varchar(5) DEFAULT NULL,
+  `spc_2` varchar(5) DEFAULT NULL,
+  `spc_3` varchar(5) DEFAULT NULL,
+  `spc_4` varchar(5) DEFAULT NULL,
+  `spc_5` varchar(5) DEFAULT NULL,
+  `spc_1_state` varchar(11) DEFAULT NULL,
+  `spc_2_state` varchar(11) DEFAULT NULL,
+  `spc_3_state` varchar(11) DEFAULT NULL,
+  `spc_4_state` varchar(11) DEFAULT NULL,
+  `spc_5_state` varchar(11) DEFAULT NULL,
+  `sysdate` varchar(7) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `facilitylist`
+--
+
+DROP TABLE IF EXISTS `facilitylist`;
+CREATE TABLE `facilitylist` (
+  `x` varchar(17) DEFAULT NULL,
+  `y` varchar(16) DEFAULT NULL,
+  `id` varchar(4) DEFAULT NULL,
+  `facilitynbr` varchar(11) DEFAULT NULL,
+  `facilitystatus` varchar(14) DEFAULT NULL,
   `facilityname` varchar(87) DEFAULT NULL,
   `licensetype` varchar(41) DEFAULT NULL,
-  `streetnbr` varchar(5) DEFAULT NULL,
+  `streetnbr` varchar(9) DEFAULT NULL,
   `streetname` varchar(30) DEFAULT NULL,
   `city` varchar(20) DEFAULT NULL,
-  `state` varchar(2) DEFAULT NULL,
+  `state` varchar(5) DEFAULT NULL,
   `zip` varchar(10) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
-  `oblicensenbr` varchar(7) DEFAULT NULL,
+  `oblicensenbr` varchar(12) DEFAULT NULL,
   `obbusinessname` varchar(87) DEFAULT NULL,
   `obfname` varchar(9) DEFAULT NULL,
   `oblname` varchar(9) DEFAULT NULL,
   `obtitle` varchar(46) DEFAULT NULL,
   `obaddress` varchar(38) DEFAULT NULL,
-  `obaddress2` varchar(9) DEFAULT NULL,
+  `obaddress2` varchar(10) DEFAULT NULL,
   `obcity` varchar(20) DEFAULT NULL,
   `obstate` varchar(9) DEFAULT NULL,
   `obzip` varchar(9) DEFAULT NULL,
@@ -12533,157 +16918,41 @@ CREATE TABLE `facility_list` (
   `obfax` varchar(10) DEFAULT NULL,
   `date_opened` varchar(22) DEFAULT NULL,
   `date_closed` varchar(22) DEFAULT NULL,
-  `latitude` decimal(12,8) DEFAULT NULL,
-  `longitude` decimal(12,8) DEFAULT NULL,
+  `latitude` varchar(11) DEFAULT NULL,
+  `longitude` varchar(12) DEFAULT NULL,
   `addr1` varchar(63) DEFAULT NULL,
   `addr2` varchar(61) DEFAULT NULL,
-  `f28` varchar(0) DEFAULT NULL,
-  `bing` varchar(0) DEFAULT NULL,
-  `type_` varchar(0) DEFAULT NULL,
-  `ffstationnetwork` varchar(5) DEFAULT NULL,
-  `ffstationnbr` varchar(5) DEFAULT NULL,
-  `stationnetwork` varchar(8) DEFAULT NULL,
+  `f28` varchar(3) DEFAULT NULL,
+  `bing` varchar(4) DEFAULT NULL,
+  `type_` varchar(5) DEFAULT NULL,
+  `ffstationnetwork` varchar(16) DEFAULT NULL,
+  `ffstationnbr` varchar(12) DEFAULT NULL,
+  `stationnetwork` varchar(14) DEFAULT NULL,
   `stationnbr` varchar(19) DEFAULT NULL,
   `geographic_region` varchar(24) DEFAULT NULL,
   `aco` varchar(13) DEFAULT NULL,
   `aco_name` varchar(19) DEFAULT NULL,
-  `aco_phonenbr` varchar(10) DEFAULT NULL,
+  `aco_phonenbr` varchar(12) DEFAULT NULL,
   `dse` varchar(9) DEFAULT NULL,
   `dse_name` varchar(16) DEFAULT NULL,
-  `dse_phonenbr` varchar(10) DEFAULT NULL,
+  `dse_phonenbr` varchar(12) DEFAULT NULL,
   `field_flso` varchar(15) DEFAULT NULL,
   `flso_name` varchar(21) DEFAULT NULL,
-  `flso_phonenbr` varchar(10) DEFAULT NULL,
-  `senatedistrict` int DEFAULT NULL,
-  `assemblydistrict` int DEFAULT NULL,
-  `congressionaldistrict` int DEFAULT NULL,
-  `alirts_facility_id` int DEFAULT NULL,
+  `flso_phonenbr` varchar(13) DEFAULT NULL,
+  `senatedistrict` varchar(14) DEFAULT NULL,
+  `assemblydistrict` varchar(16) DEFAULT NULL,
+  `congressionaldistrict` varchar(21) DEFAULT NULL,
+  `alirts_facility_id` varchar(18) DEFAULT NULL,
   `rco` varchar(9) DEFAULT NULL,
   `rco_name` varchar(15) DEFAULT NULL,
-  `rco_phonenbr` varchar(10) DEFAULT NULL,
+  `rco_phonenbr` varchar(12) DEFAULT NULL,
   `pt1` varchar(6) DEFAULT NULL,
   `pt1fullname` varchar(13) DEFAULT NULL,
   `pt2` varchar(6) DEFAULT NULL,
   `pt2fullname` varchar(14) DEFAULT NULL,
   `responsible_region` varchar(24) DEFAULT NULL,
-  `proposedbldgs` varchar(1) DEFAULT NULL,
-  `objectid` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `facility_profiles`
---
-
-DROP TABLE IF EXISTS `facility_profiles`;
-CREATE TABLE `facility_profiles` (
-  `facility_desc` varchar(255) DEFAULT NULL,
-  `site_address1` varchar(63) DEFAULT NULL,
-  `site_address2` varchar(63) DEFAULT NULL,
-  `site_city` varchar(63) DEFAULT NULL,
-  `site_zip` varchar(63) DEFAULT NULL,
-  `site_x_coordinate` decimal(10,2) DEFAULT NULL,
-  `site_y_coordinate` decimal(10,2) DEFAULT NULL,
-  `oshpd_id` char(9) DEFAULT NULL,
-  `license_type_desc` varchar(63) DEFAULT NULL,
-  `license_category_desc` varchar(63) DEFAULT NULL,
-  `license_number` char(9) DEFAULT NULL,
-  `facility_level_desc` varchar(63) DEFAULT NULL,
-  `er_service_level_desc` varchar(63) DEFAULT NULL,
-  `licensed_beds` varchar(63) DEFAULT NULL,
-  `facility_status_desc` varchar(63) DEFAULT NULL,
-  `financial_facility_count` int DEFAULT NULL,
-  `consolidated_facility_desc_pipe` varchar(255) DEFAULT NULL,
-  `consolidated_facility_desc_comma` varchar(255) DEFAULT NULL,
-  `period_begin_date` varchar(63) DEFAULT NULL,
-  `period_end_date` varchar(63) DEFAULT NULL,
-  `net_pat_rev_medicare_traditional_ip` bigint DEFAULT NULL,
-  `net_pat_rev_medicare_managed_ip` bigint DEFAULT NULL,
-  `net_pat_rev_medi_cal_traditional_ip` bigint DEFAULT NULL,
-  `net_pat_rev_medi_cal_managed_ip` bigint DEFAULT NULL,
-  `net_pat_rev_county_indigent_traditional_ip` bigint DEFAULT NULL,
-  `net_pat_rev_county_indigent_managed_ip` bigint DEFAULT NULL,
-  `net_pat_rev_third_party_traditional_ip` bigint DEFAULT NULL,
-  `net_pat_rev_third_party_managed_ip` bigint DEFAULT NULL,
-  `net_pat_rev_other_indigent_ip` bigint DEFAULT NULL,
-  `net_pat_rev_other_payer_ip` bigint DEFAULT NULL,
-  `net_pat_rev_total_ip` bigint DEFAULT NULL,
-  `net_pat_rev_medicare_traditional_op` bigint DEFAULT NULL,
-  `net_pat_rev_medicare_managed_op` bigint DEFAULT NULL,
-  `net_pat_rev_medi_cal_traditional_op` bigint DEFAULT NULL,
-  `net_pat_rev_medi_cal_managed_op` bigint DEFAULT NULL,
-  `net_pat_rev_county_indigent_traditional_op` bigint DEFAULT NULL,
-  `net_pat_rev_county_indigent_managed_op` bigint DEFAULT NULL,
-  `net_pat_rev_third_party_traditional_op` bigint DEFAULT NULL,
-  `net_pat_rev_third_party_managed_op` bigint DEFAULT NULL,
-  `net_pat_rev_other_indigent_op` bigint DEFAULT NULL,
-  `net_pat_rev_other_payer_op` bigint DEFAULT NULL,
-  `net_pat_rev_total_op` bigint DEFAULT NULL,
-  `payer_mix_medicare_traditional_ip` decimal(14,12) DEFAULT NULL,
-  `payer_mix_medicare_traditional_ip_state` decimal(6,4) DEFAULT NULL,
-  `payer_mix_medicare_managed_ip` decimal(14,12) DEFAULT NULL,
-  `payer_mix_medicare_managed_ip_state` decimal(6,4) DEFAULT NULL,
-  `payer_mix_medi_cal_traditional_ip` decimal(14,12) DEFAULT NULL,
-  `payer_mix_medi_cal_traditional_ip_state` decimal(6,4) DEFAULT NULL,
-  `payer_mix_medi_cal_managed_ip` decimal(14,12) DEFAULT NULL,
-  `payer_mix_medi_cal_managed_ip_state` decimal(6,4) DEFAULT NULL,
-  `payer_mix_county_indigent_traditional_ip` decimal(14,12) DEFAULT NULL,
-  `payer_mix_county_indigent_traditional_ip_state` decimal(6,4) DEFAULT NULL,
-  `payer_mix_county_indigent_managed_ip` decimal(14,12) DEFAULT NULL,
-  `payer_mix_county_indigent_managed_ip_state` decimal(6,4) DEFAULT NULL,
-  `payer_mix_third_party_traditional_ip` decimal(14,12) DEFAULT NULL,
-  `payer_mix_third_party_traditional_ip_state` decimal(6,4) DEFAULT NULL,
-  `payer_mix_third_party_managed_ip` decimal(14,12) DEFAULT NULL,
-  `payer_mix_third_party_managed_ip_state` decimal(6,4) DEFAULT NULL,
-  `payer_mix_other_indigent_ip` decimal(14,12) DEFAULT NULL,
-  `payer_mix_other_indigent_ip_state` decimal(6,4) DEFAULT NULL,
-  `payer_mix_other_payer_ip` decimal(14,12) DEFAULT NULL,
-  `payer_mix_other_payer_ip_state` decimal(6,4) DEFAULT NULL,
-  `payer_mix_medicare_traditional_op` decimal(14,12) DEFAULT NULL,
-  `payer_mix_medicare_traditional_op_state` decimal(6,4) DEFAULT NULL,
-  `payer_mix_medicare_managed_op` decimal(14,12) DEFAULT NULL,
-  `payer_mix_medicare_managed_op_state` decimal(6,4) DEFAULT NULL,
-  `payer_mix_medi_cal_traditional_op` decimal(14,12) DEFAULT NULL,
-  `payer_mix_medi_cal_traditional_op_state` decimal(6,4) DEFAULT NULL,
-  `payer_mix_medi_cal_managed_op` decimal(14,12) DEFAULT NULL,
-  `payer_mix_medi_cal_managed_op_state` decimal(6,4) DEFAULT NULL,
-  `payer_mix_county_indigent_traditional_op` decimal(14,12) DEFAULT NULL,
-  `payer_mix_county_indigent_traditional_op_state` decimal(6,4) DEFAULT NULL,
-  `payer_mix_county_indigent_managed_op` decimal(14,12) DEFAULT NULL,
-  `payer_mix_county_indigent_managed_op_state` decimal(6,4) DEFAULT NULL,
-  `payer_mix_third_party_traditional_op` decimal(14,12) DEFAULT NULL,
-  `payer_mix_third_party_traditional_op_state` decimal(6,4) DEFAULT NULL,
-  `payer_mix_third_party_managed_op` decimal(14,12) DEFAULT NULL,
-  `payer_mix_third_party_managed_op_state` decimal(6,4) DEFAULT NULL,
-  `payer_mix_other_indigent_op` decimal(14,12) DEFAULT NULL,
-  `payer_mix_other_indigent_op_state` decimal(6,4) DEFAULT NULL,
-  `payer_mix_other_payer_op` decimal(14,12) DEFAULT NULL,
-  `payer_mix_other_payer_op_state` decimal(6,4) DEFAULT NULL,
-  `avg_stay_medicare_traditional` decimal(10,4) DEFAULT NULL,
-  `avg_stay_medicare_managed` decimal(10,4) DEFAULT NULL,
-  `avg_stay_medi_cal_traditional` decimal(10,4) DEFAULT NULL,
-  `avg_stay_medi_cal_managed` decimal(10,4) DEFAULT NULL,
-  `avg_stay_county_indigent_traditional` decimal(10,4) DEFAULT NULL,
-  `avg_stay_county_indigent_managed` decimal(10,4) DEFAULT NULL,
-  `avg_stay_third_party_traditional` decimal(10,4) DEFAULT NULL,
-  `avg_stay_third_party_managed` decimal(10,4) DEFAULT NULL,
-  `avg_stay_other_indigent_total` decimal(10,4) DEFAULT NULL,
-  `avg_stay_other_payer_total` decimal(10,4) DEFAULT NULL,
-  `avg_stay_total` decimal(10,4) DEFAULT NULL,
-  `active_projects` int DEFAULT NULL,
-  `active_project_costs` bigint DEFAULT NULL,
-  `active_projects_state` int DEFAULT NULL,
-  `active_project_costs_state` bigint DEFAULT NULL,
-  `spc_1` int DEFAULT NULL,
-  `spc_2` int DEFAULT NULL,
-  `spc_3` int DEFAULT NULL,
-  `spc_4` int DEFAULT NULL,
-  `spc_5` int DEFAULT NULL,
-  `spc_1_state` int DEFAULT NULL,
-  `spc_2_state` int DEFAULT NULL,
-  `spc_3_state` int DEFAULT NULL,
-  `spc_4_state` int DEFAULT NULL,
-  `spc_5_state` int DEFAULT NULL,
-  `sysdate` varchar(63) DEFAULT NULL
+  `proposedbldgs` varchar(13) DEFAULT NULL,
+  `objectid` varchar(8) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -12940,20 +17209,65 @@ CREATE TABLE `family_pact_female_clients_by_method_tier_and_race_ethnicity` (
 
 DROP TABLE IF EXISTS `family_pact_providers_clients_and_reimbursement_by_coun_1a4f1c78`;
 CREATE TABLE `family_pact_providers_clients_and_reimbursement_by_coun_1a4f1c78` (
-  `fiscal_year` varchar(7) DEFAULT NULL,
+  `fiscal_year` varchar(14) DEFAULT NULL,
   `provider_county` varchar(15) DEFAULT NULL,
-  `enrolled_private_sector_providers` varchar(5) DEFAULT NULL,
-  `enrolled_public_sector_providers` varchar(5) DEFAULT NULL,
-  `total` varchar(5) DEFAULT NULL,
-  `percentage` varchar(7) DEFAULT NULL,
-  `participating_pharmacies` varchar(5) DEFAULT NULL,
-  `clients_served` varchar(10) DEFAULT NULL,
-  `percentage_of_clients_served` varchar(10) DEFAULT NULL,
-  `reimbursement_amount` varchar(16) DEFAULT NULL,
-  `reimbursement_percentage` varchar(7) DEFAULT NULL,
-  `average_reimbursement_per_client` varchar(10) DEFAULT NULL,
-  `annotation_code` varchar(1) DEFAULT NULL,
+  `enrolled_private_sector_providers` varchar(33) DEFAULT NULL,
+  `enrolled_public_sector_providers` varchar(32) DEFAULT NULL,
+  `total` varchar(6) DEFAULT NULL,
+  `percentage` varchar(10) DEFAULT NULL,
+  `participating_pharmacies` varchar(24) DEFAULT NULL,
+  `clients_served` varchar(14) DEFAULT NULL,
+  `percentage_of_clients_served` varchar(28) DEFAULT NULL,
+  `reimbursement_amount` varchar(22) DEFAULT NULL,
+  `reimbursement_percentage` varchar(24) DEFAULT NULL,
+  `average_reimbursement_per_client` varchar(32) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
   `annotation_description` varchar(33) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `family_pact_providers_clients_and_reimbursement_by_coun_6bf79db7`
+--
+
+DROP TABLE IF EXISTS `family_pact_providers_clients_and_reimbursement_by_coun_6bf79db7`;
+CREATE TABLE `family_pact_providers_clients_and_reimbursement_by_coun_6bf79db7` (
+  `fiscal_year` varchar(11) DEFAULT NULL,
+  `provider_county` varchar(15) DEFAULT NULL,
+  `enrolled_private_sector_providers` varchar(33) DEFAULT NULL,
+  `enrolled_public_sector_providers` varchar(32) DEFAULT NULL,
+  `total` varchar(5) DEFAULT NULL,
+  `percentage` varchar(10) DEFAULT NULL,
+  `participating_pharmacies` varchar(24) DEFAULT NULL,
+  `clients_served` varchar(14) DEFAULT NULL,
+  `percentage_of_clients_served` varchar(28) DEFAULT NULL,
+  `reimbursement_amount` varchar(20) DEFAULT NULL,
+  `reimbursement_percentage` varchar(24) DEFAULT NULL,
+  `average_reimbursement_per_client_served` varchar(39) DEFAULT NULL,
+  `projected_population_of_reproductive_age` varchar(40) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
+  `annotation_description` varchar(22) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `family_pact_providers_clients_and_reimbursement_by_coun_a1973584`
+--
+
+DROP TABLE IF EXISTS `family_pact_providers_clients_and_reimbursement_by_coun_a1973584`;
+CREATE TABLE `family_pact_providers_clients_and_reimbursement_by_coun_a1973584` (
+  `fiscal_year` varchar(11) DEFAULT NULL,
+  `provider_county` varchar(15) DEFAULT NULL,
+  `enrolled_private_sector_providers` varchar(33) DEFAULT NULL,
+  `enrolled_public_sector_providers` varchar(32) DEFAULT NULL,
+  `total` varchar(6) DEFAULT NULL,
+  `percentage` varchar(10) DEFAULT NULL,
+  `participating_pharmacies` varchar(24) DEFAULT NULL,
+  `clients_served` varchar(14) DEFAULT NULL,
+  `percentage_of_clients_served` varchar(28) DEFAULT NULL,
+  `reimbursement_amount` varchar(22) DEFAULT NULL,
+  `reimbursement_percentage` varchar(24) DEFAULT NULL,
+  `average_reimbursement_per_client` varchar(32) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
+  `annotation_description` varchar(22) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -12962,20 +17276,46 @@ CREATE TABLE `family_pact_providers_clients_and_reimbursement_by_coun_1a4f1c78` 
 
 DROP TABLE IF EXISTS `family_pact_providers_clients_and_reimbursement_by_coun_b4638429`;
 CREATE TABLE `family_pact_providers_clients_and_reimbursement_by_coun_b4638429` (
-  `fiscal_year` varchar(7) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `provider_county` varchar(15) DEFAULT NULL,
-  `enrolled_private_sector_providers` varchar(4) DEFAULT NULL,
-  `enrolled_public_sector_providers` varchar(3) DEFAULT NULL,
-  `total` varchar(4) DEFAULT NULL,
-  `percentage` varchar(7) DEFAULT NULL,
-  `participating_pharmacies` varchar(4) DEFAULT NULL,
-  `clients_served` varchar(7) DEFAULT NULL,
-  `percentage_of_clients_served` varchar(7) DEFAULT NULL,
-  `reimbursement_amount` varchar(13) DEFAULT NULL,
-  `reimbursement_percentage` varchar(7) DEFAULT NULL,
-  `average_reimbursement_per_client_served` varchar(5) DEFAULT NULL,
-  `annotation_code` varchar(0) DEFAULT NULL,
-  `annotation_description` varchar(0) DEFAULT NULL
+  `enrolled_private_sector_providers` varchar(33) DEFAULT NULL,
+  `enrolled_public_sector_providers` varchar(32) DEFAULT NULL,
+  `total` varchar(5) DEFAULT NULL,
+  `percentage` varchar(10) DEFAULT NULL,
+  `participating_pharmacies` varchar(24) DEFAULT NULL,
+  `clients_served` varchar(14) DEFAULT NULL,
+  `percentage_of_clients_served` varchar(28) DEFAULT NULL,
+  `reimbursement_amount` varchar(20) DEFAULT NULL,
+  `reimbursement_percentage` varchar(24) DEFAULT NULL,
+  `average_reimbursement_per_client_served` varchar(39) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
+  `annotation_description` varchar(22) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `family_pact_providers_clients_and_reimbursement_by_coun_b6ce06bd`
+--
+
+DROP TABLE IF EXISTS `family_pact_providers_clients_and_reimbursement_by_coun_b6ce06bd`;
+CREATE TABLE `family_pact_providers_clients_and_reimbursement_by_coun_b6ce06bd` (
+  `fiscal_year` varchar(11) DEFAULT NULL,
+  `provider_county` varchar(15) DEFAULT NULL,
+  `enrolled_private_sector_providers` varchar(33) DEFAULT NULL,
+  `enrolled_public_sector_providers` varchar(32) DEFAULT NULL,
+  `total` varchar(5) DEFAULT NULL,
+  `percentage` varchar(10) DEFAULT NULL,
+  `number_change_from_previous_year` varchar(32) DEFAULT NULL,
+  `number_change_over_5_years` varchar(26) DEFAULT NULL,
+  `participating_pharmacies` varchar(24) DEFAULT NULL,
+  `clients_served` varchar(14) DEFAULT NULL,
+  `percentage_of_clients_served` varchar(28) DEFAULT NULL,
+  `pct_change_from_previous_year` varchar(27) DEFAULT NULL,
+  `pct_change_over_5_years` varchar(21) DEFAULT NULL,
+  `reimbursement_amount` varchar(20) DEFAULT NULL,
+  `reimbursement_percentage` varchar(24) DEFAULT NULL,
+  `average_reimbursement_per_client_served` varchar(39) DEFAULT NULL,
+  `projected` varchar(42) DEFAULT NULL,
+  `None` varchar(2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -12984,31 +17324,31 @@ CREATE TABLE `family_pact_providers_clients_and_reimbursement_by_coun_b4638429` 
 
 DROP TABLE IF EXISTS `family_pact_providers_profile_cy_2019`;
 CREATE TABLE `family_pact_providers_profile_cy_2019` (
-  `provider_number` varchar(10) DEFAULT NULL,
-  `npi_provider_number` varchar(10) DEFAULT NULL,
-  `owner_number` varchar(1) DEFAULT NULL,
-  `service_location_number` varchar(2) DEFAULT NULL,
+  `provider_number` varchar(15) DEFAULT NULL,
+  `npi_provider_number` varchar(19) DEFAULT NULL,
+  `owner_number` varchar(12) DEFAULT NULL,
+  `service_location_number` varchar(23) DEFAULT NULL,
   `provider_business_legal_name` varchar(28) DEFAULT NULL,
-  `enrollment_status_effective_date` varchar(9) DEFAULT NULL,
+  `enrollment_status_effective_date` varchar(32) DEFAULT NULL,
   `provider_type_code` varchar(37) DEFAULT NULL,
   `provider_type_code_desc` varchar(43) DEFAULT NULL,
-  `provider_license_number` varchar(9) DEFAULT NULL,
-  `provider_specialty_code` varchar(2) DEFAULT NULL,
+  `provider_license_number` varchar(23) DEFAULT NULL,
+  `provider_specialty_code` varchar(23) DEFAULT NULL,
   `provider_specialty_code_desc` varchar(55) DEFAULT NULL,
-  `out_of_state_ind` varchar(1) DEFAULT NULL,
-  `out_of_state_ind_desc` varchar(17) DEFAULT NULL,
-  `provider_address_county_code` varchar(2) DEFAULT NULL,
-  `provider_address_county_code_description` varchar(15) DEFAULT NULL,
+  `out_of_state_ind` varchar(16) DEFAULT NULL,
+  `out_of_state_ind_desc` varchar(21) DEFAULT NULL,
+  `provider_address_county_code` varchar(28) DEFAULT NULL,
+  `provider_address_county_code_description` varchar(40) DEFAULT NULL,
   `attention_line` varchar(24) DEFAULT NULL,
   `provider_address_line1` varchar(24) DEFAULT NULL,
   `provider_address_line2` varchar(24) DEFAULT NULL,
-  `provider_address_city` varchar(17) DEFAULT NULL,
-  `provider_address_state` varchar(2) DEFAULT NULL,
-  `provider_address_zip` varchar(5) DEFAULT NULL,
-  `provider_address_latitude` varchar(9) DEFAULT NULL,
-  `provider_address_longitude` varchar(11) DEFAULT NULL,
+  `provider_address_city` varchar(21) DEFAULT NULL,
+  `provider_address_state` varchar(22) DEFAULT NULL,
+  `provider_address_zip` varchar(20) DEFAULT NULL,
+  `provider_address_latitude` varchar(25) DEFAULT NULL,
+  `provider_address_longitude` varchar(26) DEFAULT NULL,
   `mssa_id` varchar(8) DEFAULT NULL,
-  `tract_id` varchar(7) DEFAULT NULL
+  `tract_id` varchar(8) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -13017,31 +17357,31 @@ CREATE TABLE `family_pact_providers_profile_cy_2019` (
 
 DROP TABLE IF EXISTS `family_pact_providers_profile_cy_2021_2022`;
 CREATE TABLE `family_pact_providers_profile_cy_2021_2022` (
-  `provider_number` varchar(10) DEFAULT NULL,
-  `npi_provider_number` varchar(10) DEFAULT NULL,
-  `owner_number` varchar(1) DEFAULT NULL,
-  `service_location_number` varchar(2) DEFAULT NULL,
+  `provider_number` varchar(18) DEFAULT NULL,
+  `npi_provider_number` varchar(19) DEFAULT NULL,
+  `owner_number` varchar(12) DEFAULT NULL,
+  `service_location_number` varchar(23) DEFAULT NULL,
   `provider_business_legal_name` varchar(28) DEFAULT NULL,
-  `enrollment_status_effective_date` varchar(9) DEFAULT NULL,
-  `provider_type_code` varchar(3) DEFAULT NULL,
+  `enrollment_status_effective_date` varchar(32) DEFAULT NULL,
+  `provider_type_code` varchar(18) DEFAULT NULL,
   `provider_type_code_desc` varchar(54) DEFAULT NULL,
-  `provider_license_number` varchar(9) DEFAULT NULL,
-  `provider_specialty_code` varchar(2) DEFAULT NULL,
+  `provider_license_number` varchar(23) DEFAULT NULL,
+  `provider_specialty_code` varchar(23) DEFAULT NULL,
   `provider_specialty_code_desc` varchar(42) DEFAULT NULL,
-  `out_of_state_ind` varchar(1) DEFAULT NULL,
-  `out_of_state_ind_desc` varchar(17) DEFAULT NULL,
-  `provider_address_county_code` varchar(2) DEFAULT NULL,
-  `provider_address_county_desc` varchar(15) DEFAULT NULL,
+  `out_of_state_ind` varchar(16) DEFAULT NULL,
+  `out_of_state_ind_desc` varchar(21) DEFAULT NULL,
+  `provider_address_county_code` varchar(28) DEFAULT NULL,
+  `provider_address_county_desc` varchar(28) DEFAULT NULL,
   `attention_line` varchar(24) DEFAULT NULL,
   `provider_address_line1` varchar(24) DEFAULT NULL,
   `provider_address_line2` varchar(24) DEFAULT NULL,
-  `provider_address_city` varchar(17) DEFAULT NULL,
-  `provider_address_state` varchar(2) DEFAULT NULL,
-  `provider_address_zip` varchar(9) DEFAULT NULL,
-  `provider_address_latitude` varchar(9) DEFAULT NULL,
-  `provider_address_longitude` varchar(11) DEFAULT NULL,
+  `provider_address_city` varchar(21) DEFAULT NULL,
+  `provider_address_state` varchar(22) DEFAULT NULL,
+  `provider_address_zip` varchar(20) DEFAULT NULL,
+  `provider_address_latitude` varchar(25) DEFAULT NULL,
+  `provider_address_longitude` varchar(26) DEFAULT NULL,
   `mssa_id` varchar(8) DEFAULT NULL,
-  `tract_id` varchar(7) DEFAULT NULL
+  `tract_id` varchar(8) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -13050,32 +17390,32 @@ CREATE TABLE `family_pact_providers_profile_cy_2021_2022` (
 
 DROP TABLE IF EXISTS `family_pact_providers_profile_cys_2020_2021`;
 CREATE TABLE `family_pact_providers_profile_cys_2020_2021` (
-  `provider_number` varchar(10) DEFAULT NULL,
-  `npi_provider_number` varchar(10) DEFAULT NULL,
-  `owner_number` varchar(1) DEFAULT NULL,
-  `service_location_number` varchar(2) DEFAULT NULL,
+  `provider_number` varchar(15) DEFAULT NULL,
+  `npi_provider_number` varchar(19) DEFAULT NULL,
+  `owner_number` varchar(12) DEFAULT NULL,
+  `service_location_number` varchar(23) DEFAULT NULL,
   `provider_business_legal_name` varchar(28) DEFAULT NULL,
-  `enrollment_status_effective_date` varchar(9) DEFAULT NULL,
-  `provider_type_code` varchar(3) DEFAULT NULL,
+  `enrollment_status_effective_date` varchar(32) DEFAULT NULL,
+  `provider_type_code` varchar(18) DEFAULT NULL,
   `provider_type_code_desc` varchar(54) DEFAULT NULL,
-  `provider_license_number` varchar(9) DEFAULT NULL,
-  `provider_specialty_code` varchar(2) DEFAULT NULL,
+  `provider_license_number` varchar(23) DEFAULT NULL,
+  `provider_specialty_code` varchar(23) DEFAULT NULL,
   `provider_specialty_code_desc` varchar(51) DEFAULT NULL,
-  `out_of_state_ind` varchar(1) DEFAULT NULL,
-  `out_of_state_ind_desc` varchar(17) DEFAULT NULL,
-  `provider_address_county_code` varchar(2) DEFAULT NULL,
-  `provider_address_county_desc` varchar(15) DEFAULT NULL,
+  `out_of_state_ind` varchar(16) DEFAULT NULL,
+  `out_of_state_ind_desc` varchar(21) DEFAULT NULL,
+  `provider_address_county_code` varchar(28) DEFAULT NULL,
+  `provider_address_county_desc` varchar(28) DEFAULT NULL,
   `attention_line` varchar(24) DEFAULT NULL,
   `provider_address_line1` varchar(24) DEFAULT NULL,
   `provider_address_line2` varchar(24) DEFAULT NULL,
-  `provider_address_city` varchar(17) DEFAULT NULL,
-  `provider_address_state` varchar(2) DEFAULT NULL,
-  `provider_address_zip` varchar(10) DEFAULT NULL,
-  `provider_phone_number` varchar(14) DEFAULT NULL,
-  `provider_address_latitude` varchar(9) DEFAULT NULL,
-  `provider_address_longitude` varchar(11) DEFAULT NULL,
+  `provider_address_city` varchar(21) DEFAULT NULL,
+  `provider_address_state` varchar(22) DEFAULT NULL,
+  `provider_address_zip` varchar(20) DEFAULT NULL,
+  `provider_phone_number` varchar(21) DEFAULT NULL,
+  `provider_address_latitude` varchar(25) DEFAULT NULL,
+  `provider_address_longitude` varchar(26) DEFAULT NULL,
   `mssa_id` varchar(8) DEFAULT NULL,
-  `tract_id` varchar(7) DEFAULT NULL
+  `tract_id` varchar(8) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -13103,13 +17443,15 @@ CREATE TABLE `family_pact_sexually_transmitted_infection_test_volume__1e3420c9` 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `family_pact_total_provider_reimbursement`
+-- Table structure for table `family_planning_methods_by_effectiveness_for_female_clients`
 --
 
-DROP TABLE IF EXISTS `family_pact_total_provider_reimbursement`;
-CREATE TABLE `family_pact_total_provider_reimbursement` (
-  `fiscal_year` int DEFAULT NULL,
-  `amount` decimal(16,2) DEFAULT NULL
+DROP TABLE IF EXISTS `family_planning_methods_by_effectiveness_for_female_clients`;
+CREATE TABLE `family_planning_methods_by_effectiveness_for_female_clients` (
+  `fiscal_year` varchar(14) DEFAULT NULL,
+  `method_dispensed_by_tier` varchar(46) DEFAULT NULL,
+  `total_tier_methods_dispensed_despite_the_title_this_is_clients_` varchar(74) DEFAULT NULL,
+  `percentage_dispensed` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -13129,8 +17471,8 @@ CREATE TABLE `female_family_pact_clients_by_age` (
 
 DROP TABLE IF EXISTS `ffs_provider_specialty_reference_table`;
 CREATE TABLE `ffs_provider_specialty_reference_table` (
-  `objectid` varchar(2) DEFAULT NULL,
-  `provider_specialty_code` varchar(2) DEFAULT NULL,
+  `objectid` varchar(11) DEFAULT NULL,
+  `provider_specialty_code` varchar(23) DEFAULT NULL,
   `description` varchar(76) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -13140,9 +17482,29 @@ CREATE TABLE `ffs_provider_specialty_reference_table` (
 
 DROP TABLE IF EXISTS `ffs_provider_type_reference_table`;
 CREATE TABLE `ffs_provider_type_reference_table` (
-  `objectid` varchar(2) DEFAULT NULL,
-  `provider_type_code` varchar(3) DEFAULT NULL,
+  `objectid` varchar(11) DEFAULT NULL,
+  `provider_type_code` varchar(18) DEFAULT NULL,
   `description` varchar(85) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `fi_provider_specialty_code_reference`
+--
+
+DROP TABLE IF EXISTS `fi_provider_specialty_code_reference`;
+CREATE TABLE `fi_provider_specialty_code_reference` (
+  `provider_spec_cd` varchar(16) DEFAULT NULL,
+  `provider_spec_desc` varchar(77) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `fi_provider_type_code_reference`
+--
+
+DROP TABLE IF EXISTS `fi_provider_type_code_reference`;
+CREATE TABLE `fi_provider_type_code_reference` (
+  `provider_type_cd` varchar(16) DEFAULT NULL,
+  `provider_type_desc` varchar(85) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -13458,20 +17820,6 @@ CREATE TABLE `geography_crosswalk` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `hafd_columns`
---
-
-DROP TABLE IF EXISTS `hafd_columns`;
-CREATE TABLE `hafd_columns` (
-  `year` int DEFAULT NULL,
-  `label` varchar(3) DEFAULT NULL,
-  `name` varchar(63) DEFAULT NULL,
-  `full_name` varchar(1027) DEFAULT NULL,
-  `more_full_name` varchar(1027) DEFAULT NULL,
-  `table_name` varchar(31) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
 -- Table structure for table `hcp_flu_vacc_by_county_2016_2017`
 --
 
@@ -13597,87 +17945,6 @@ CREATE TABLE `hcp_flu_vacc_by_hosp_county_2018_2019` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `healthcare_facilities`
---
-
-DROP TABLE IF EXISTS `healthcare_facilities`;
-CREATE TABLE `healthcare_facilities` (
-  `licensed_certified` varchar(35) DEFAULT NULL,
-  `flag` varchar(16) DEFAULT NULL,
-  `t18_19` varchar(13) DEFAULT NULL,
-  `facid` varchar(9) DEFAULT NULL,
-  `fac_status_type_code` varchar(4) DEFAULT NULL,
-  `aspen_facid` varchar(16) DEFAULT NULL,
-  `ccn` varchar(10) DEFAULT NULL,
-  `terminat_sw` varchar(1) DEFAULT NULL,
-  `participation_date` varchar(10) DEFAULT NULL,
-  `approval_date` varchar(10) DEFAULT NULL,
-  `npi` varchar(10) DEFAULT NULL,
-  `can_be_deemed_fac_type` varchar(1) DEFAULT NULL,
-  `can_be_certified_fac_type` varchar(1) DEFAULT NULL,
-  `deemed` varchar(1) DEFAULT NULL,
-  `ao_cd` varchar(2) DEFAULT NULL,
-  `dmg_efctv_dt` varchar(18) DEFAULT NULL,
-  `ao_trmntn_dt` varchar(18) DEFAULT NULL,
-  `ao_name` varchar(6) DEFAULT NULL,
-  `facname` varchar(100) DEFAULT NULL,
-  `fac_type_code` varchar(10) DEFAULT NULL,
-  `fac_fdr` varchar(44) DEFAULT NULL,
-  `ltc` varchar(7) DEFAULT NULL,
-  `capacity` varchar(4) DEFAULT NULL,
-  `address` varchar(67) DEFAULT NULL,
-  `city` varchar(21) DEFAULT NULL,
-  `zip` varchar(5) DEFAULT NULL,
-  `zip9` varchar(4) DEFAULT NULL,
-  `facadmin` varchar(37) DEFAULT NULL,
-  `contact_email` varchar(48) DEFAULT NULL,
-  `contact_fax` varchar(14) DEFAULT NULL,
-  `contact_phone_number` varchar(14) DEFAULT NULL,
-  `county_code` varchar(3) DEFAULT NULL,
-  `county_name` varchar(15) DEFAULT NULL,
-  `district_number` varchar(2) DEFAULT NULL,
-  `district_name` varchar(24) DEFAULT NULL,
-  `isfacmain` varchar(1) DEFAULT NULL,
-  `parent_facid` varchar(9) DEFAULT NULL,
-  `fac_fac_relationship_type_code` varchar(22) DEFAULT NULL,
-  `start_date` varchar(9) DEFAULT NULL,
-  `license_number` varchar(9) DEFAULT NULL,
-  `business_name` varchar(74) DEFAULT NULL,
-  `license_status_description` varchar(25) DEFAULT NULL,
-  `initial_license_date` varchar(10) DEFAULT NULL,
-  `license_effective_date` varchar(10) DEFAULT NULL,
-  `license_expiration_date` varchar(10) DEFAULT NULL,
-  `entity_type_description` varchar(25) DEFAULT NULL,
-  `latitude` varchar(11) DEFAULT NULL,
-  `longitude` varchar(12) DEFAULT NULL,
-  `location` varchar(27) DEFAULT NULL,
-  `hcai_id` varchar(9) DEFAULT NULL,
-  `cclho_code` varchar(2) DEFAULT NULL,
-  `cclho_name` varchar(15) DEFAULT NULL,
-  `fips_county_code` varchar(5) DEFAULT NULL,
-  `birthing_facility_flag` varchar(3) DEFAULT NULL,
-  `trauma_ped_ctr` varchar(12) DEFAULT NULL,
-  `trauma_ctr` varchar(9) DEFAULT NULL,
-  `type_of_care` varchar(26) DEFAULT NULL,
-  `critical_access_hospital` varchar(1) DEFAULT NULL,
-  `data_date` varchar(10) DEFAULT NULL,
-  `dmg_efctv_date` varchar(0) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `healthcare_facilities_across_time`
---
-
-DROP TABLE IF EXISTS `healthcare_facilities_across_time`;
-CREATE TABLE `healthcare_facilities_across_time` (
-  `state_fiscal_year` varchar(10) DEFAULT NULL,
-  `county_name` varchar(15) DEFAULT NULL,
-  `provider_type` varchar(18) DEFAULT NULL,
-  `fac_fdr` varchar(44) DEFAULT NULL,
-  `count` varchar(5) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
 -- Table structure for table `healthcare_payments_data_hpd_fee_for_service_drug_costs_b088f6d6`
 --
 
@@ -13703,7 +17970,7 @@ CREATE TABLE `healthcare_payments_data_hpd_fee_for_service_drug_costs_b088f6d6` 
 DROP TABLE IF EXISTS `healthy_places_index_hpi_diagnosis_group_by_setting_and_efd436e1`;
 CREATE TABLE `healthy_places_index_hpi_diagnosis_group_by_setting_and_efd436e1` (
   `year` varchar(4) DEFAULT NULL,
-  `hpi_percentile_ranking` varchar(29) DEFAULT NULL,
+  `hpi_percentile_rank_nameing` varchar(29) DEFAULT NULL,
   `encounter_setting` varchar(9) DEFAULT NULL,
   `category` varchar(20) DEFAULT NULL,
   `category_description` varchar(29) DEFAULT NULL,
@@ -13713,291 +17980,50 @@ CREATE TABLE `healthy_places_index_hpi_diagnosis_group_by_setting_and_efd436e1` 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `hhs_program_annual_counts`
+-- Table structure for table `homeless_hosp_encs_age_race_sex_exp_payer_sw`
 --
 
-DROP TABLE IF EXISTS `hhs_program_annual_counts`;
-CREATE TABLE `hhs_program_annual_counts` (
-  `fileyear` varchar(63) DEFAULT NULL,
-  `program` varchar(63) DEFAULT NULL,
-  `level` varchar(63) DEFAULT NULL,
-  `level_num` varchar(63) DEFAULT NULL,
-  `person` int DEFAULT NULL,
-  `cases` int DEFAULT NULL,
-  `medical` int DEFAULT NULL,
-  `aca` int DEFAULT NULL,
-  `fpact` int DEFAULT NULL,
-  `calfresh` int DEFAULT NULL,
-  `calworks` int DEFAULT NULL,
-  `ihhs` int DEFAULT NULL,
-  `child_welfare` int DEFAULT NULL,
-  `foster_care` int DEFAULT NULL,
-  `dds` int DEFAULT NULL,
-  `wic` int DEFAULT NULL,
-  `black` int DEFAULT NULL,
-  `white` int DEFAULT NULL,
-  `hispanic` int DEFAULT NULL,
-  `asian_pi` int DEFAULT NULL,
-  `native_american` int DEFAULT NULL,
-  `other_missing` int DEFAULT NULL,
-  `female` int DEFAULT NULL,
-  `male` int DEFAULT NULL,
-  `unknown_gender` int DEFAULT NULL,
-  `age1_missing` int DEFAULT NULL,
-  `age_17_and_under` int DEFAULT NULL,
-  `age_18_and_over` int DEFAULT NULL,
-  `age_18_to_64` int DEFAULT NULL,
-  `age_65_and_over` int DEFAULT NULL,
-  `age_18_to_59` int DEFAULT NULL,
-  `age_60_and_over` int DEFAULT NULL,
-  `1_program` int DEFAULT NULL,
-  `2_program` int DEFAULT NULL,
-  `3_program` int DEFAULT NULL,
-  `4_program` int DEFAULT NULL,
-  `5_plus_program` int DEFAULT NULL,
-  `1_dept` int DEFAULT NULL,
-  `2_dept` int DEFAULT NULL,
-  `3_dept` int DEFAULT NULL,
-  `4_dept` int DEFAULT NULL,
-  `fc_age_missing` int DEFAULT NULL,
-  `age_0` int DEFAULT NULL,
-  `age_1_to_2` int DEFAULT NULL,
-  `age_3_to_5` int DEFAULT NULL,
-  `age_6_to_10` int DEFAULT NULL,
-  `age_11_to_15` int DEFAULT NULL,
-  `age_16_to_17` int DEFAULT NULL,
-  `age_18_to_20` int DEFAULT NULL,
-  `wic_age_adult_missing` int DEFAULT NULL,
-  `age_less_than_19` int DEFAULT NULL,
-  `age_20_to_24` int DEFAULT NULL,
-  `age_25_to_29` int DEFAULT NULL,
-  `age_30_to_34` int DEFAULT NULL,
-  `age_35_and_over` int DEFAULT NULL,
-  `wic_age_child_missing` int DEFAULT NULL,
-  `wic_age_0` int DEFAULT NULL,
-  `wic_age_1` int DEFAULT NULL,
-  `wic_age_2` int DEFAULT NULL,
-  `wic_age_3` int DEFAULT NULL,
-  `wic_age_4` int DEFAULT NULL,
-  `wic_age_5_to_19` int DEFAULT NULL,
-  `wic_20_and_over` int DEFAULT NULL,
-  KEY `fileyear` (`fileyear`,`program`,`level`,`level_num`)
+DROP TABLE IF EXISTS `homeless_hosp_encs_age_race_sex_exp_payer_sw`;
+CREATE TABLE `homeless_hosp_encs_age_race_sex_exp_payer_sw` (
+  `encountertype` varchar(13) DEFAULT NULL,
+  `demographic` varchar(11) DEFAULT NULL,
+  `demographicvalue` varchar(29) DEFAULT NULL,
+  `year_str` varchar(4) DEFAULT NULL,
+  `homeless` varchar(9) DEFAULT NULL,
+  `all_str` varchar(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `hhs_program_annual_masks`
+-- Table structure for table `hosp_who_did_not_rpt_surg_procs_jan_1_jun_30_2020_upd_ann`
 --
 
-DROP TABLE IF EXISTS `hhs_program_annual_masks`;
-CREATE TABLE `hhs_program_annual_masks` (
-  `fileyear` varchar(63) DEFAULT NULL,
-  `program` varchar(63) DEFAULT NULL,
-  `level` varchar(63) DEFAULT NULL,
-  `level_num` varchar(63) DEFAULT NULL,
-  `person` varchar(63) DEFAULT NULL,
-  `cases` varchar(63) DEFAULT NULL,
-  `medical` varchar(63) DEFAULT NULL,
-  `aca` varchar(63) DEFAULT NULL,
-  `fpact` varchar(63) DEFAULT NULL,
-  `calfresh` varchar(63) DEFAULT NULL,
-  `calworks` varchar(63) DEFAULT NULL,
-  `ihhs` varchar(63) DEFAULT NULL,
-  `child_welfare` varchar(63) DEFAULT NULL,
-  `foster_care` varchar(63) DEFAULT NULL,
-  `dds` varchar(63) DEFAULT NULL,
-  `wic` varchar(63) DEFAULT NULL,
-  `black` varchar(63) DEFAULT NULL,
-  `white` varchar(63) DEFAULT NULL,
-  `hispanic` varchar(63) DEFAULT NULL,
-  `asian_pi` varchar(63) DEFAULT NULL,
-  `native_american` varchar(63) DEFAULT NULL,
-  `other_missing` varchar(63) DEFAULT NULL,
-  `female` varchar(63) DEFAULT NULL,
-  `male` varchar(63) DEFAULT NULL,
-  `unknown_gender` varchar(63) DEFAULT NULL,
-  `age1_missing` varchar(63) DEFAULT NULL,
-  `age_17_and_under` varchar(63) DEFAULT NULL,
-  `age_18_and_over` varchar(63) DEFAULT NULL,
-  `age_18_to_64` varchar(63) DEFAULT NULL,
-  `age_65_and_over` varchar(63) DEFAULT NULL,
-  `age_18_to_59` varchar(63) DEFAULT NULL,
-  `age_60_and_over` varchar(63) DEFAULT NULL,
-  `1_program` varchar(63) DEFAULT NULL,
-  `2_program` varchar(63) DEFAULT NULL,
-  `3_program` varchar(63) DEFAULT NULL,
-  `4_program` varchar(63) DEFAULT NULL,
-  `5_plus_program` varchar(63) DEFAULT NULL,
-  `1_dept` varchar(63) DEFAULT NULL,
-  `2_dept` varchar(63) DEFAULT NULL,
-  `3_dept` varchar(63) DEFAULT NULL,
-  `4_dept` varchar(63) DEFAULT NULL,
-  `fc_age_missing` varchar(63) DEFAULT NULL,
-  `age_0` varchar(63) DEFAULT NULL,
-  `age_1_to_2` varchar(63) DEFAULT NULL,
-  `age_3_to_5` varchar(63) DEFAULT NULL,
-  `age_6_to_10` varchar(63) DEFAULT NULL,
-  `age_11_to_15` varchar(63) DEFAULT NULL,
-  `age_16_to_17` varchar(63) DEFAULT NULL,
-  `age_18_to_20` varchar(63) DEFAULT NULL,
-  `wic_age_adult_missing` varchar(63) DEFAULT NULL,
-  `age_less_than_19` varchar(63) DEFAULT NULL,
-  `age_20_to_24` varchar(63) DEFAULT NULL,
-  `age_25_to_29` varchar(63) DEFAULT NULL,
-  `age_30_to_34` varchar(63) DEFAULT NULL,
-  `age_35_and_over` varchar(63) DEFAULT NULL,
-  `wic_age_child_missing` varchar(63) DEFAULT NULL,
-  `wic_age_0` varchar(63) DEFAULT NULL,
-  `wic_age_1` varchar(63) DEFAULT NULL,
-  `wic_age_2` varchar(63) DEFAULT NULL,
-  `wic_age_3` varchar(63) DEFAULT NULL,
-  `wic_age_4` varchar(63) DEFAULT NULL,
-  `wic_age_5_to_19` varchar(63) DEFAULT NULL,
-  `wic_20_and_over` varchar(63) DEFAULT NULL,
-  KEY `fileyear` (`fileyear`,`program`,`level`,`level_num`)
+DROP TABLE IF EXISTS `hosp_who_did_not_rpt_surg_procs_jan_1_jun_30_2020_upd_ann`;
+CREATE TABLE `hosp_who_did_not_rpt_surg_procs_jan_1_jun_30_2020_upd_ann` (
+  `year_str` varchar(6) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `county` varchar(14) DEFAULT NULL,
+  `hai` varchar(30) DEFAULT NULL,
+  `facility_id` varchar(11) DEFAULT NULL,
+  `facility_name` varchar(55) DEFAULT NULL,
+  `facility_type` varchar(28) DEFAULT NULL,
+  `notes` varchar(90) DEFAULT NULL,
+  `None` varchar(8) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `hhs_program_july_counts`
+-- Table structure for table `hosp_who_did_not_rpt_surg_procs_jul_1_dec_31_2020_upd_ann`
 --
 
-DROP TABLE IF EXISTS `hhs_program_july_counts`;
-CREATE TABLE `hhs_program_july_counts` (
-  `fileyear` varchar(63) DEFAULT NULL,
-  `program` varchar(63) DEFAULT NULL,
-  `level` varchar(63) DEFAULT NULL,
-  `level_num` varchar(63) DEFAULT NULL,
-  `person` int DEFAULT NULL,
-  `cases` int DEFAULT NULL,
-  `medical` int DEFAULT NULL,
-  `aca` int DEFAULT NULL,
-  `fpact` int DEFAULT NULL,
-  `calfresh` int DEFAULT NULL,
-  `calworks` int DEFAULT NULL,
-  `ihhs` int DEFAULT NULL,
-  `child_welfare` int DEFAULT NULL,
-  `foster_care` int DEFAULT NULL,
-  `dds` int DEFAULT NULL,
-  `wic` int DEFAULT NULL,
-  `black` int DEFAULT NULL,
-  `white` int DEFAULT NULL,
-  `hispanic` int DEFAULT NULL,
-  `asian_pi` int DEFAULT NULL,
-  `native_american` int DEFAULT NULL,
-  `other_missing` int DEFAULT NULL,
-  `female` int DEFAULT NULL,
-  `male` int DEFAULT NULL,
-  `unknown_gender` int DEFAULT NULL,
-  `age1_missing` int DEFAULT NULL,
-  `age_17_and_under` int DEFAULT NULL,
-  `age_18_and_over` int DEFAULT NULL,
-  `age_18_to_64` int DEFAULT NULL,
-  `age_65_and_over` int DEFAULT NULL,
-  `age_18_to_59` int DEFAULT NULL,
-  `age_60_and_over` int DEFAULT NULL,
-  `1_program` int DEFAULT NULL,
-  `2_program` int DEFAULT NULL,
-  `3_program` int DEFAULT NULL,
-  `4_program` int DEFAULT NULL,
-  `5_plus_program` int DEFAULT NULL,
-  `1_dept` int DEFAULT NULL,
-  `2_dept` int DEFAULT NULL,
-  `3_dept` int DEFAULT NULL,
-  `4_dept` int DEFAULT NULL,
-  `fc_age_missing` int DEFAULT NULL,
-  `age_0` int DEFAULT NULL,
-  `age_1_to_2` int DEFAULT NULL,
-  `age_3_to_5` int DEFAULT NULL,
-  `age_6_to_10` int DEFAULT NULL,
-  `age_11_to_15` int DEFAULT NULL,
-  `age_16_to_17` int DEFAULT NULL,
-  `age_18_to_20` int DEFAULT NULL,
-  `wic_age_adult_missing` int DEFAULT NULL,
-  `age_less_than_19` int DEFAULT NULL,
-  `age_20_to_24` int DEFAULT NULL,
-  `age_25_to_29` int DEFAULT NULL,
-  `age_30_to_34` int DEFAULT NULL,
-  `age_35_and_over` int DEFAULT NULL,
-  `wic_age_child_missing` int DEFAULT NULL,
-  `wic_age_0` int DEFAULT NULL,
-  `wic_age_1` int DEFAULT NULL,
-  `wic_age_2` int DEFAULT NULL,
-  `wic_age_3` int DEFAULT NULL,
-  `wic_age_4` int DEFAULT NULL,
-  `wic_age_5_to_19` int DEFAULT NULL,
-  `wic_20_and_over` int DEFAULT NULL,
-  KEY `fileyear` (`fileyear`,`program`,`level`,`level_num`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `hhs_program_july_masks`
---
-
-DROP TABLE IF EXISTS `hhs_program_july_masks`;
-CREATE TABLE `hhs_program_july_masks` (
-  `fileyear` varchar(63) DEFAULT NULL,
-  `program` varchar(63) DEFAULT NULL,
-  `level` varchar(63) DEFAULT NULL,
-  `level_num` varchar(63) DEFAULT NULL,
-  `person` varchar(63) DEFAULT NULL,
-  `cases` varchar(63) DEFAULT NULL,
-  `medical` varchar(63) DEFAULT NULL,
-  `aca` varchar(63) DEFAULT NULL,
-  `fpact` varchar(63) DEFAULT NULL,
-  `calfresh` varchar(63) DEFAULT NULL,
-  `calworks` varchar(63) DEFAULT NULL,
-  `ihhs` varchar(63) DEFAULT NULL,
-  `child_welfare` varchar(63) DEFAULT NULL,
-  `foster_care` varchar(63) DEFAULT NULL,
-  `dds` varchar(63) DEFAULT NULL,
-  `wic` varchar(63) DEFAULT NULL,
-  `black` varchar(63) DEFAULT NULL,
-  `white` varchar(63) DEFAULT NULL,
-  `hispanic` varchar(63) DEFAULT NULL,
-  `asian_pi` varchar(63) DEFAULT NULL,
-  `native_american` varchar(63) DEFAULT NULL,
-  `other_missing` varchar(63) DEFAULT NULL,
-  `female` varchar(63) DEFAULT NULL,
-  `male` varchar(63) DEFAULT NULL,
-  `unknown_gender` varchar(63) DEFAULT NULL,
-  `age1_missing` varchar(63) DEFAULT NULL,
-  `age_17_and_under` varchar(63) DEFAULT NULL,
-  `age_18_and_over` varchar(63) DEFAULT NULL,
-  `age_18_to_64` varchar(63) DEFAULT NULL,
-  `age_65_and_over` varchar(63) DEFAULT NULL,
-  `age_18_to_59` varchar(63) DEFAULT NULL,
-  `age_60_and_over` varchar(63) DEFAULT NULL,
-  `1_program` varchar(63) DEFAULT NULL,
-  `2_program` varchar(63) DEFAULT NULL,
-  `3_program` varchar(63) DEFAULT NULL,
-  `4_program` varchar(63) DEFAULT NULL,
-  `5_plus_program` varchar(63) DEFAULT NULL,
-  `1_dept` varchar(63) DEFAULT NULL,
-  `2_dept` varchar(63) DEFAULT NULL,
-  `3_dept` varchar(63) DEFAULT NULL,
-  `4_dept` varchar(63) DEFAULT NULL,
-  `fc_age_missing` varchar(63) DEFAULT NULL,
-  `age_0` varchar(63) DEFAULT NULL,
-  `age_1_to_2` varchar(63) DEFAULT NULL,
-  `age_3_to_5` varchar(63) DEFAULT NULL,
-  `age_6_to_10` varchar(63) DEFAULT NULL,
-  `age_11_to_15` varchar(63) DEFAULT NULL,
-  `age_16_to_17` varchar(63) DEFAULT NULL,
-  `age_18_to_20` varchar(63) DEFAULT NULL,
-  `wic_age_adult_missing` varchar(63) DEFAULT NULL,
-  `age_less_than_19` varchar(63) DEFAULT NULL,
-  `age_20_to_24` varchar(63) DEFAULT NULL,
-  `age_25_to_29` varchar(63) DEFAULT NULL,
-  `age_30_to_34` varchar(63) DEFAULT NULL,
-  `age_35_and_over` varchar(63) DEFAULT NULL,
-  `wic_age_child_missing` varchar(63) DEFAULT NULL,
-  `wic_age_0` varchar(63) DEFAULT NULL,
-  `wic_age_1` varchar(63) DEFAULT NULL,
-  `wic_age_2` varchar(63) DEFAULT NULL,
-  `wic_age_3` varchar(63) DEFAULT NULL,
-  `wic_age_4` varchar(63) DEFAULT NULL,
-  `wic_age_5_to_19` varchar(63) DEFAULT NULL,
-  `wic_20_and_over` varchar(63) DEFAULT NULL,
-  KEY `fileyear` (`fileyear`,`program`,`level`,`level_num`)
+DROP TABLE IF EXISTS `hosp_who_did_not_rpt_surg_procs_jul_1_dec_31_2020_upd_ann`;
+CREATE TABLE `hosp_who_did_not_rpt_surg_procs_jul_1_dec_31_2020_upd_ann` (
+  `year_str` varchar(6) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `county` varchar(14) DEFAULT NULL,
+  `hai` varchar(30) DEFAULT NULL,
+  `facility_id` varchar(11) DEFAULT NULL,
+  `facility_name` varchar(55) DEFAULT NULL,
+  `facility_type` varchar(28) DEFAULT NULL,
+  `notes` varchar(91) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -14058,6 +18084,32 @@ CREATE TABLE `hospital_annual_utilization_data_machine_readable_format` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `hospital_building_data`
+--
+
+DROP TABLE IF EXISTS `hospital_building_data`;
+CREATE TABLE `hospital_building_data` (
+  `county_code` varchar(20) DEFAULT NULL,
+  `perm_id` varchar(7) DEFAULT NULL,
+  `facility_name` varchar(85) DEFAULT NULL,
+  `city` varchar(19) DEFAULT NULL,
+  `building_nbr` varchar(12) DEFAULT NULL,
+  `building_name` varchar(87) DEFAULT NULL,
+  `building_status` varchar(40) DEFAULT NULL,
+  `spc_rating_` varchar(12) DEFAULT NULL,
+  `building_url` varchar(144) DEFAULT NULL,
+  `height_ft` varchar(11) DEFAULT NULL,
+  `stories` varchar(7) DEFAULT NULL,
+  `building_code` varchar(35) DEFAULT NULL,
+  `building_code_year` varchar(18) DEFAULT NULL,
+  `year_completed` varchar(14) DEFAULT NULL,
+  `ab_1882_notice` varchar(118) DEFAULT NULL,
+  `latitude` varchar(10) DEFAULT NULL,
+  `longitude` varchar(12) DEFAULT NULL,
+  `count` varchar(5) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `hospital_buildings`
 --
 
@@ -14102,26 +18154,20 @@ CREATE TABLE `hospital_char_list_for_border_providers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `hospital_characteristics`
+-- Table structure for table `hospital_chars_list_for_ca_provs_in_st_fisc_yr_2019_20`
 --
 
-DROP TABLE IF EXISTS `hospital_characteristics`;
-CREATE TABLE `hospital_characteristics` (
-  `oshpd_id` char(9) DEFAULT NULL,
-  `oshpd_provider_name` varchar(255) DEFAULT NULL,
-  `designated_nicu_as_defined_by_dhcs` varchar(15) DEFAULT NULL,
-  `dph` varchar(15) DEFAULT NULL,
-  `ndph` varchar(15) DEFAULT NULL,
-  `oshpd_rural_hospital` varchar(15) DEFAULT NULL,
-  `dhcs_designated_remote_rural` varchar(15) DEFAULT NULL,
-  `sfy_2019_20_cost_to_charge_ratio_pct` decimal(8,6) DEFAULT NULL,
-  `ffy_2019_wage_index_value` decimal(8,6) DEFAULT NULL,
-  `ffy_2019_wage_index_value_adjusted` decimal(8,6) DEFAULT NULL,
-  `sfy_2019_20_unadjusted_statewide_base_rate` int DEFAULT NULL,
-  `sfy_2019_20_wage_adjusted_statewide_base_rate` int DEFAULT NULL,
-  `sfy_2019_20_rehab_rate` int DEFAULT NULL,
-  `sfy_2019_20_admin_2_190_rate` decimal(7,2) DEFAULT NULL,
-  `sfy_2019_20_admin_2_199_rate` decimal(7,2) DEFAULT NULL
+DROP TABLE IF EXISTS `hospital_chars_list_for_ca_provs_in_st_fisc_yr_2019_20`;
+CREATE TABLE `hospital_chars_list_for_ca_provs_in_st_fisc_yr_2019_20` (
+  `oshpd_id` varchar(9) DEFAULT NULL,
+  `oshpd_provider_name` varchar(79) DEFAULT NULL,
+  `designated_nicu_as_defined_by_dhcs` varchar(34) DEFAULT NULL,
+  `dph` varchar(3) DEFAULT NULL,
+  `ndph` varchar(4) DEFAULT NULL,
+  `oshpd_rural_hospital` varchar(20) DEFAULT NULL,
+  `dhcs_designated_remote_rural` varchar(28) DEFAULT NULL,
+  `sfy` varchar(35) DEFAULT NULL,
+  `None` varchar(7) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -14142,11 +18188,11 @@ CREATE TABLE `hospital_ed_disp_by_county` (
 
 DROP TABLE IF EXISTS `hospital_ed_encounters_by_facility`;
 CREATE TABLE `hospital_ed_encounters_by_facility` (
-  `year` varchar(4) DEFAULT NULL,
+  `year_str` varchar(4) DEFAULT NULL,
   `oshpd_id` varchar(9) DEFAULT NULL,
   `facility_name` varchar(79) DEFAULT NULL,
   `county_name` varchar(15) DEFAULT NULL,
-  `er_service_level_desc` varchar(13) DEFAULT NULL,
+  `er_service_level_desc` varchar(21) DEFAULT NULL,
   `type` varchar(8) DEFAULT NULL,
   `count` varchar(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -14206,45 +18252,6 @@ CREATE TABLE `hospital_encounters_for_behavioral_health` (
   `count` varchar(7) DEFAULT NULL,
   `total` varchar(8) DEFAULT NULL,
   `percent` varchar(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `hospital_encounters_for_homeless_by_expected_payer`
---
-
-DROP TABLE IF EXISTS `hospital_encounters_for_homeless_by_expected_payer`;
-CREATE TABLE `hospital_encounters_for_homeless_by_expected_payer` (
-  `encountertype` varchar(2) DEFAULT NULL,
-  `demographic` varchar(9) DEFAULT NULL,
-  `demographicvalue` varchar(29) DEFAULT NULL,
-  `year` varchar(4) DEFAULT NULL,
-  `homeless` varchar(9) DEFAULT NULL,
-  `all_values` varchar(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `hospital_encounters_for_homeless_by_facility`
---
-
-DROP TABLE IF EXISTS `hospital_encounters_for_homeless_by_facility`;
-CREATE TABLE `hospital_encounters_for_homeless_by_facility` (
-  `encountertype` varchar(26) DEFAULT NULL,
-  `hospitalcounty` varchar(15) DEFAULT NULL,
-  `oshpd_id` varchar(6) DEFAULT NULL,
-  `facilityname` varchar(79) DEFAULT NULL,
-  `system_name` varchar(33) DEFAULT NULL,
-  `ownership` varchar(10) DEFAULT NULL,
-  `urban_rural` varchar(14) DEFAULT NULL,
-  `teaching` varchar(12) DEFAULT NULL,
-  `licensedbedsize` varchar(7) DEFAULT NULL,
-  `primarycareshortagearea` varchar(3) DEFAULT NULL,
-  `mentalhealthshortagearea` varchar(3) DEFAULT NULL,
-  `homelessindicator` varchar(12) DEFAULT NULL,
-  `demographic` varchar(5) DEFAULT NULL,
-  `demographicvalue` varchar(29) DEFAULT NULL,
-  `encounters` varchar(6) DEFAULT NULL,
-  `totalencounters` varchar(6) DEFAULT NULL,
-  `percent` varchar(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -14411,18 +18418,18 @@ CREATE TABLE `hospital_performance_ratings_01` (
   `county` varchar(12) DEFAULT NULL,
   `oshpdid` varchar(9) DEFAULT NULL,
   `performance_measure` varchar(33) DEFAULT NULL,
-  `risk_adjusted_rate` varchar(9) DEFAULT NULL,
+  `risk_adjusted_rate` varchar(18) DEFAULT NULL,
   `longitude` varchar(10) DEFAULT NULL,
   `latitude` varchar(8) DEFAULT NULL,
-  `type_of_report` varchar(3) DEFAULT NULL,
-  `hospital_ratings` varchar(11) DEFAULT NULL,
-  `num_of_cases` varchar(5) DEFAULT NULL,
-  `num_of_adverse_events` varchar(3) DEFAULT NULL,
+  `type_of_report` varchar(14) DEFAULT NULL,
+  `hospital_ratings` varchar(16) DEFAULT NULL,
+  `num_of_cases` varchar(10) DEFAULT NULL,
+  `num_of_adverse_events` varchar(19) DEFAULT NULL,
   `year` varchar(4) DEFAULT NULL,
-  `cnt_worse` varchar(1) DEFAULT NULL,
-  `cnt_better` varchar(1) DEFAULT NULL,
+  `cnt_worse` varchar(9) DEFAULT NULL,
+  `cnt_better` varchar(10) DEFAULT NULL,
   `rating` varchar(27) DEFAULT NULL,
-  `procedure_condition` varchar(9) DEFAULT NULL,
+  `procedure_name_name_condition_name_name` varchar(19) DEFAULT NULL,
   `performance_measure2` varchar(38) DEFAULT NULL,
   `hospital` varchar(85) DEFAULT NULL,
   `system_name_name` varchar(33) DEFAULT NULL
@@ -14439,12 +18446,12 @@ CREATE TABLE `hospital_performance_ratings_02` (
   `hospital` varchar(85) DEFAULT NULL,
   `oshpdid` varchar(9) DEFAULT NULL,
   `system_name_name` varchar(33) DEFAULT NULL,
-  `type_of_report` varchar(12) DEFAULT NULL,
+  `type_of_report` varchar(14) DEFAULT NULL,
   `performance_measure` varchar(27) DEFAULT NULL,
-  `num_of_adverse_events` varchar(3) DEFAULT NULL,
-  `num_of_cases` varchar(4) DEFAULT NULL,
-  `risk_adjusted_rate` varchar(9) DEFAULT NULL,
-  `hospital_ratings` varchar(11) DEFAULT NULL,
+  `num_of_adverse_events` varchar(19) DEFAULT NULL,
+  `num_of_cases` varchar(10) DEFAULT NULL,
+  `risk_adjusted_rate` varchar(18) DEFAULT NULL,
+  `hospital_ratings` varchar(16) DEFAULT NULL,
   `latitude` varchar(11) DEFAULT NULL,
   `longitude` varchar(12) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -14475,18 +18482,18 @@ DROP TABLE IF EXISTS `hospital_ratings_for_aortic_valve_replacement_procedures`;
 CREATE TABLE `hospital_ratings_for_aortic_valve_replacement_procedures` (
   `year` varchar(4) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
-  `hospital_system` varchar(33) DEFAULT NULL,
+  `hospital_system_name` varchar(33) DEFAULT NULL,
   `hospital` varchar(85) DEFAULT NULL,
   `hospital_id` varchar(9) DEFAULT NULL,
   `performance_measure` varchar(33) DEFAULT NULL,
   `total_statewide_tavr_cases` varchar(5) DEFAULT NULL,
   `statewide_adverse_events` varchar(3) DEFAULT NULL,
-  `statewide_observed_adverse_event_rate` varchar(4) DEFAULT NULL,
+  `statewide_observed_adverse_event_rate_pct` varchar(4) DEFAULT NULL,
   `total_hospital_tavr_cases` varchar(3) DEFAULT NULL,
   `hospital_adverse_events` varchar(2) DEFAULT NULL,
-  `hospital_observed_adverse_event_rate` varchar(4) DEFAULT NULL,
-  `hospital_expected_adverse_event_rate` varchar(4) DEFAULT NULL,
-  `hospital_risk_adjusted_adverse_event_rate` varchar(4) DEFAULT NULL,
+  `hospital_observed_adverse_event_rate_pct` varchar(4) DEFAULT NULL,
+  `hospital_expected_adverse_event_rate_pct` varchar(4) DEFAULT NULL,
+  `hospital_risk_adjusted_adverse_event_rate_pct_raaer` varchar(4) DEFAULT NULL,
   `hospital_lower_95pct_ci_for_raaer` varchar(4) DEFAULT NULL,
   `hospital_upper_95pct_ci_for_raaer` varchar(5) DEFAULT NULL,
   `performance_rating` varchar(7) DEFAULT NULL,
@@ -14541,6 +18548,119 @@ CREATE TABLE `hospitalization_counts_and_rates_of_selected_adverse_ho_f567d310` 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `hospitals_who_did_not_report_surg_proc_jan_1_dec_31_2021`
+--
+
+DROP TABLE IF EXISTS `hospitals_who_did_not_report_surg_proc_jan_1_dec_31_2021`;
+CREATE TABLE `hospitals_who_did_not_report_surg_proc_jan_1_dec_31_2021` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `county` varchar(14) DEFAULT NULL,
+  `hai` varchar(30) DEFAULT NULL,
+  `facility_id` varchar(11) DEFAULT NULL,
+  `facility_name` varchar(55) DEFAULT NULL,
+  `facility_type` varchar(28) DEFAULT NULL,
+  `number_months_expected` varchar(22) DEFAULT NULL,
+  `notes` varchar(76) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `hospitals_who_did_not_report_surg_procs_jan_1_dec_31_2023`
+--
+
+DROP TABLE IF EXISTS `hospitals_who_did_not_report_surg_procs_jan_1_dec_31_2023`;
+CREATE TABLE `hospitals_who_did_not_report_surg_procs_jan_1_dec_31_2023` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `county` varchar(14) DEFAULT NULL,
+  `hai` varchar(30) DEFAULT NULL,
+  `facility_id` varchar(11) DEFAULT NULL,
+  `facility_name` varchar(55) DEFAULT NULL,
+  `facility_type` varchar(28) DEFAULT NULL,
+  `number_months_expected` varchar(22) DEFAULT NULL,
+  `notes` varchar(76) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `hospitals_who_did_not_report_surgical_procedures_2016`
+--
+
+DROP TABLE IF EXISTS `hospitals_who_did_not_report_surgical_procedures_2016`;
+CREATE TABLE `hospitals_who_did_not_report_surgical_procedures_2016` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `hai` varchar(63) DEFAULT NULL,
+  `county` varchar(14) DEFAULT NULL,
+  `facility_id` varchar(11) DEFAULT NULL,
+  `facility_name` varchar(48) DEFAULT NULL,
+  `notes` varchar(77) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `hospitals_who_did_not_report_surgical_procedures_2017`
+--
+
+DROP TABLE IF EXISTS `hospitals_who_did_not_report_surgical_procedures_2017`;
+CREATE TABLE `hospitals_who_did_not_report_surgical_procedures_2017` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `hai` varchar(63) DEFAULT NULL,
+  `county` varchar(14) DEFAULT NULL,
+  `facility_id` varchar(11) DEFAULT NULL,
+  `facility_name` varchar(53) DEFAULT NULL,
+  `notes` varchar(76) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `hospitals_who_did_not_report_surgical_procedures_2018`
+--
+
+DROP TABLE IF EXISTS `hospitals_who_did_not_report_surgical_procedures_2018`;
+CREATE TABLE `hospitals_who_did_not_report_surgical_procedures_2018` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `hai` varchar(63) DEFAULT NULL,
+  `county` varchar(14) DEFAULT NULL,
+  `facility_id` varchar(11) DEFAULT NULL,
+  `facility_name` varchar(53) DEFAULT NULL,
+  `notes` varchar(76) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `hospitals_who_did_not_report_surgical_procedures_2019`
+--
+
+DROP TABLE IF EXISTS `hospitals_who_did_not_report_surgical_procedures_2019`;
+CREATE TABLE `hospitals_who_did_not_report_surgical_procedures_2019` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `county` varchar(14) DEFAULT NULL,
+  `hai` varchar(29) DEFAULT NULL,
+  `facility_id` varchar(11) DEFAULT NULL,
+  `facility_name` varchar(55) DEFAULT NULL,
+  `facility_type` varchar(28) DEFAULT NULL,
+  `number_months_expected` varchar(22) DEFAULT NULL,
+  `notes` varchar(76) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `hospitals_who_did_not_report_surgical_procedures_2022`
+--
+
+DROP TABLE IF EXISTS `hospitals_who_did_not_report_surgical_procedures_2022`;
+CREATE TABLE `hospitals_who_did_not_report_surgical_procedures_2022` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `county` varchar(14) DEFAULT NULL,
+  `hai` varchar(30) DEFAULT NULL,
+  `facility_id` varchar(11) DEFAULT NULL,
+  `facility_name` varchar(55) DEFAULT NULL,
+  `facility_type` varchar(28) DEFAULT NULL,
+  `number_months_expected` varchar(22) DEFAULT NULL,
+  `notes` varchar(76) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `hpd_measures_data_2018_2021`
 --
 
@@ -14572,6 +18692,51 @@ CREATE TABLE `hpd_measures_measure_descriptions` (
   `measure_description` varchar(240) DEFAULT NULL,
   `numerator_definition` varchar(177) DEFAULT NULL,
   `denominator_definition` varchar(73) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `hpd_snapshot_data_enrollment_2018_2021`
+--
+
+DROP TABLE IF EXISTS `hpd_snapshot_data_enrollment_2018_2021`;
+CREATE TABLE `hpd_snapshot_data_enrollment_2018_2021` (
+  `product_type` varchar(22) DEFAULT NULL,
+  `reporting_year` varchar(14) DEFAULT NULL,
+  `claim_type` varchar(10) DEFAULT NULL,
+  `payer_type` varchar(10) DEFAULT NULL,
+  `record_type` varchar(11) DEFAULT NULL,
+  `metric_id` varchar(9) DEFAULT NULL,
+  `metric_name` varchar(18) DEFAULT NULL,
+  `count` varchar(9) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `hpd_snapshot_data_medical_2018_2021`
+--
+
+DROP TABLE IF EXISTS `hpd_snapshot_data_medical_2018_2021`;
+CREATE TABLE `hpd_snapshot_data_medical_2018_2021` (
+  `procedure_code` varchar(14) DEFAULT NULL,
+  `procedure_code_type` varchar(19) DEFAULT NULL,
+  `procedure_category` varchar(51) DEFAULT NULL,
+  `reporting_year` varchar(14) DEFAULT NULL,
+  `type_of_service` varchar(31) DEFAULT NULL,
+  `payer_type` varchar(10) DEFAULT NULL,
+  `record_count` varchar(12) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `hpd_snapshot_data_pharmacy_2018_2021`
+--
+
+DROP TABLE IF EXISTS `hpd_snapshot_data_pharmacy_2018_2021`;
+CREATE TABLE `hpd_snapshot_data_pharmacy_2018_2021` (
+  `drug_name` varchar(50) DEFAULT NULL,
+  `reporting_year` varchar(14) DEFAULT NULL,
+  `drug_class` varchar(47) DEFAULT NULL,
+  `brand_generic` varchar(13) DEFAULT NULL,
+  `payer_type` varchar(10) DEFAULT NULL,
+  `prescription_count` varchar(18) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -14616,6 +18781,29 @@ CREATE TABLE `immunizations_in_child_care_2016_17_to_2019_20_academic_years` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `immunizations_in_first_grade_2021_2022_academic_school_year`
+--
+
+DROP TABLE IF EXISTS `immunizations_in_first_grade_2021_2022_academic_school_year`;
+CREATE TABLE `immunizations_in_first_grade_2021_2022_academic_school_year` (
+  `school_year` varchar(14) DEFAULT NULL,
+  `school_code` varchar(11) DEFAULT NULL,
+  `school_name` varchar(89) DEFAULT NULL,
+  `city` varchar(25) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `public_private` varchar(14) DEFAULT NULL,
+  `public_school_district` varchar(61) DEFAULT NULL,
+  `enrollment` varchar(10) DEFAULT NULL,
+  `reported` varchar(8) DEFAULT NULL,
+  `category` varchar(11) DEFAULT NULL,
+  `count` varchar(5) DEFAULT NULL,
+  `percent` varchar(7) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
+  `annotation_count_desc` varchar(136) DEFAULT NULL,
+  `annotation_percent_desc` varchar(73) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `in_hospital_mortality_trends_by_diagnosis_type`
 --
 
@@ -14624,10 +18812,10 @@ CREATE TABLE `in_hospital_mortality_trends_by_diagnosis_type` (
   `category` varchar(44) DEFAULT NULL,
   `setting` varchar(20) DEFAULT NULL,
   `diagnosis` varchar(32) DEFAULT NULL,
-  `year` varchar(4) DEFAULT NULL,
-  `month` varchar(2) DEFAULT NULL,
+  `year_str` varchar(4) DEFAULT NULL,
+  `month` varchar(5) DEFAULT NULL,
   `date` varchar(6) DEFAULT NULL,
-  `count` varchar(4) DEFAULT NULL
+  `count` varchar(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -14651,10 +18839,10 @@ CREATE TABLE `in_hospital_mortality_trends_by_secondary_diagnosis` (
   `category` varchar(44) DEFAULT NULL,
   `setting` varchar(20) DEFAULT NULL,
   `diagnosis` varchar(32) DEFAULT NULL,
-  `year` varchar(4) DEFAULT NULL,
-  `month` varchar(2) DEFAULT NULL,
+  `year_str` varchar(4) DEFAULT NULL,
+  `month` varchar(5) DEFAULT NULL,
   `date` varchar(7) DEFAULT NULL,
-  `count` varchar(4) DEFAULT NULL
+  `count` varchar(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -14687,24 +18875,24 @@ DROP TABLE IF EXISTS `individuals_under_age_21_enrolled_in_medi_cal_by_delivery_
 CREATE TABLE `individuals_under_age_21_enrolled_in_medi_cal_by_delivery_system` (
   `reporting_period` varchar(7) DEFAULT NULL,
   `age` varchar(2) DEFAULT NULL,
-  `delivery_system` varchar(15) DEFAULT NULL,
+  `delivery_system_name` varchar(15) DEFAULT NULL,
   `number_of_eligible_individuals` varchar(7) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `infant_mortality_per_1000_births`
+-- Table structure for table `infant_mortality_deaths_per_1000_live_births_lghc_indicator_01_`
 --
 
-DROP TABLE IF EXISTS `infant_mortality_per_1000_births`;
-CREATE TABLE `infant_mortality_per_1000_births` (
-  `lghc_indicator_name` varchar(63) DEFAULT NULL,
-  `geography` varchar(63) DEFAULT NULL,
-  `year` varchar(31) DEFAULT NULL,
-  `strata` varchar(63) DEFAULT NULL,
-  `strata_name` varchar(63) DEFAULT NULL,
-  `rate` varchar(15) DEFAULT NULL,
-  `lower_95_ci` varchar(15) DEFAULT NULL,
-  `upper_95_ci` varchar(15) DEFAULT NULL
+DROP TABLE IF EXISTS `infant_mortality_deaths_per_1000_live_births_lghc_indicator_01_`;
+CREATE TABLE `infant_mortality_deaths_per_1000_live_births_lghc_indicator_01_` (
+  `lghc_indicator_name` varchar(46) DEFAULT NULL,
+  `geography` varchar(15) DEFAULT NULL,
+  `year` varchar(9) DEFAULT NULL,
+  `strata` varchar(16) DEFAULT NULL,
+  `strata_name` varchar(21) DEFAULT NULL,
+  `rate` varchar(4) DEFAULT NULL,
+  `lower_95pct_ci` varchar(12) DEFAULT NULL,
+  `upper_95pct_ci` varchar(12) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -14747,64 +18935,6 @@ CREATE TABLE `inhospitalbirthsby_agegroup` (
   `patcnty` varchar(15) DEFAULT NULL,
   `agegrp` varchar(51) DEFAULT NULL,
   `count` varchar(6) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `inpatient_death_causes`
---
-
-DROP TABLE IF EXISTS `inpatient_death_causes`;
-CREATE TABLE `inpatient_death_causes` (
-  `icdcm_code` varchar(31) NOT NULL,
-  `diagnosis_description` varchar(1027) DEFAULT NULL,
-  PRIMARY KEY (`icdcm_code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `inpatient_deaths`
---
-
-DROP TABLE IF EXISTS `inpatient_deaths`;
-CREATE TABLE `inpatient_deaths` (
-  `icdcm_code` varchar(31) DEFAULT NULL,
-  `total` int DEFAULT NULL,
-  `year` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `inpatient_diagnoses`
---
-
-DROP TABLE IF EXISTS `inpatient_diagnoses`;
-CREATE TABLE `inpatient_diagnoses` (
-  `icdcm_code` varchar(31) DEFAULT NULL,
-  `diagnosis_description` varchar(1027) DEFAULT NULL,
-  `total` int DEFAULT NULL,
-  `year` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `inpatient_diagnosis`
---
-
-DROP TABLE IF EXISTS `inpatient_diagnosis`;
-CREATE TABLE `inpatient_diagnosis` (
-  `icdcm_code` varchar(31) DEFAULT NULL,
-  `diagnosis_description` varchar(1027) DEFAULT NULL,
-  `total` int DEFAULT NULL,
-  `year` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `inpatient_procedures`
---
-
-DROP TABLE IF EXISTS `inpatient_procedures`;
-CREATE TABLE `inpatient_procedures` (
-  `icdpcs_code` varchar(31) DEFAULT NULL,
-  `procedure_description` varchar(1027) DEFAULT NULL,
-  `total` int DEFAULT NULL,
-  `year` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -14938,25 +19068,25 @@ CREATE TABLE `licensed_and_certified_healthcare_facilities` (
   `flag` varchar(16) DEFAULT NULL,
   `t18_19` varchar(13) DEFAULT NULL,
   `facid` varchar(9) DEFAULT NULL,
-  `fac_status_type_code` varchar(4) DEFAULT NULL,
+  `fac_status_type_code` varchar(20) DEFAULT NULL,
   `aspen_facid` varchar(16) DEFAULT NULL,
   `ccn` varchar(10) DEFAULT NULL,
-  `terminat_sw` varchar(1) DEFAULT NULL,
+  `terminat_sw` varchar(11) DEFAULT NULL,
   `participation_date` varchar(22) DEFAULT NULL,
   `approval_date` varchar(22) DEFAULT NULL,
   `npi` varchar(10) DEFAULT NULL,
-  `can_be_deemed_fac_type` varchar(1) DEFAULT NULL,
-  `can_be_certified_fac_type` varchar(1) DEFAULT NULL,
-  `deemed` varchar(1) DEFAULT NULL,
-  `ao_cd` varchar(2) DEFAULT NULL,
+  `can_be_deemed_fac_type` varchar(22) DEFAULT NULL,
+  `can_be_certified_fac_type` varchar(25) DEFAULT NULL,
+  `deemed` varchar(6) DEFAULT NULL,
+  `ao_cd` varchar(5) DEFAULT NULL,
   `dmg_efctv_dt` varchar(18) DEFAULT NULL,
   `ao_trmntn_dt` varchar(18) DEFAULT NULL,
-  `ao_name` varchar(6) DEFAULT NULL,
+  `ao_name` varchar(7) DEFAULT NULL,
   `facname` varchar(100) DEFAULT NULL,
-  `fac_type_code` varchar(10) DEFAULT NULL,
+  `fac_type_code` varchar(13) DEFAULT NULL,
   `fac_fdr` varchar(44) DEFAULT NULL,
   `ltc` varchar(7) DEFAULT NULL,
-  `capacity` varchar(4) DEFAULT NULL,
+  `capacity` varchar(8) DEFAULT NULL,
   `address` varchar(67) DEFAULT NULL,
   `city` varchar(21) DEFAULT NULL,
   `zip` varchar(5) DEFAULT NULL,
@@ -14964,36 +19094,36 @@ CREATE TABLE `licensed_and_certified_healthcare_facilities` (
   `facadmin` varchar(37) DEFAULT NULL,
   `contact_email` varchar(48) DEFAULT NULL,
   `contact_fax` varchar(14) DEFAULT NULL,
-  `contact_phone_number` varchar(14) DEFAULT NULL,
-  `county_code` varchar(3) DEFAULT NULL,
+  `contact_phone_number` varchar(20) DEFAULT NULL,
+  `county_code` varchar(11) DEFAULT NULL,
   `county_name` varchar(15) DEFAULT NULL,
-  `district_number` varchar(2) DEFAULT NULL,
+  `district_number` varchar(15) DEFAULT NULL,
   `district_name` varchar(24) DEFAULT NULL,
-  `isfacmain` varchar(1) DEFAULT NULL,
-  `parent_facid` varchar(9) DEFAULT NULL,
-  `fac_fac_relationship_type_code` varchar(22) DEFAULT NULL,
-  `start_date` varchar(9) DEFAULT NULL,
-  `license_number` varchar(9) DEFAULT NULL,
+  `isfacmain` varchar(9) DEFAULT NULL,
+  `parent_facid` varchar(12) DEFAULT NULL,
+  `fac_fac_relationship_type_code` varchar(30) DEFAULT NULL,
+  `start_date` varchar(10) DEFAULT NULL,
+  `license_number` varchar(14) DEFAULT NULL,
   `business_name` varchar(74) DEFAULT NULL,
-  `license_status_description` varchar(25) DEFAULT NULL,
+  `license_status_description` varchar(26) DEFAULT NULL,
   `initial_license_date` varchar(22) DEFAULT NULL,
   `license_effective_date` varchar(22) DEFAULT NULL,
-  `license_expiration_date` varchar(22) DEFAULT NULL,
+  `license_expiration_date` varchar(23) DEFAULT NULL,
   `entity_type_description` varchar(25) DEFAULT NULL,
   `latitude` varchar(11) DEFAULT NULL,
   `longitude` varchar(12) DEFAULT NULL,
   `location` varchar(27) DEFAULT NULL,
-  `oshpd_id` varchar(0) DEFAULT NULL,
-  `cclho_code` varchar(2) DEFAULT NULL,
+  `oshpd_id` varchar(8) DEFAULT NULL,
+  `cclho_code` varchar(10) DEFAULT NULL,
   `cclho_name` varchar(15) DEFAULT NULL,
-  `fips_county_code` varchar(5) DEFAULT NULL,
-  `birthing_facility_flag` varchar(3) DEFAULT NULL,
-  `trauma_ped_ctr` varchar(12) DEFAULT NULL,
-  `trauma_ctr` varchar(9) DEFAULT NULL,
+  `fips_county_code` varchar(16) DEFAULT NULL,
+  `birthing_facility_flag` varchar(22) DEFAULT NULL,
+  `trauma_ped_ctr` varchar(14) DEFAULT NULL,
+  `trauma_ctr` varchar(10) DEFAULT NULL,
   `type_of_care` varchar(26) DEFAULT NULL,
-  `critical_access_hospital` varchar(1) DEFAULT NULL,
+  `critical_access_hospital` varchar(24) DEFAULT NULL,
   `data_date` varchar(22) DEFAULT NULL,
-  `objectid` varchar(5) DEFAULT NULL
+  `objectid` varchar(8) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -15008,6 +19138,73 @@ CREATE TABLE `licensed_and_certified_healthcare_facility_bed_types_and_counts` (
   `bed_capacity_type` varchar(43) DEFAULT NULL,
   `bed_capacity` varchar(4) DEFAULT NULL,
   `county_name` varchar(15) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `licensed_and_certified_healthcare_facility_locations`
+--
+
+DROP TABLE IF EXISTS `licensed_and_certified_healthcare_facility_locations`;
+CREATE TABLE `licensed_and_certified_healthcare_facility_locations` (
+  `licensed_certified` varchar(35) DEFAULT NULL,
+  `flag` varchar(16) DEFAULT NULL,
+  `t18_19` varchar(13) DEFAULT NULL,
+  `facid` varchar(9) DEFAULT NULL,
+  `fac_status_type_code` varchar(20) DEFAULT NULL,
+  `aspen_facid` varchar(16) DEFAULT NULL,
+  `ccn` varchar(10) DEFAULT NULL,
+  `terminat_sw` varchar(11) DEFAULT NULL,
+  `participation_date` varchar(18) DEFAULT NULL,
+  `approval_date` varchar(13) DEFAULT NULL,
+  `npi` varchar(10) DEFAULT NULL,
+  `can_be_deemed_fac_type` varchar(22) DEFAULT NULL,
+  `can_be_certified_fac_type` varchar(25) DEFAULT NULL,
+  `deemed` varchar(6) DEFAULT NULL,
+  `ao_cd` varchar(5) DEFAULT NULL,
+  `dmg_efctv_dt` varchar(12) DEFAULT NULL,
+  `ao_trmntn_dt` varchar(12) DEFAULT NULL,
+  `ao_name` varchar(7) DEFAULT NULL,
+  `facname` varchar(100) DEFAULT NULL,
+  `fac_type_code` varchar(13) DEFAULT NULL,
+  `fac_fdr` varchar(44) DEFAULT NULL,
+  `ltc` varchar(7) DEFAULT NULL,
+  `capacity` varchar(8) DEFAULT NULL,
+  `address` varchar(67) DEFAULT NULL,
+  `city` varchar(21) DEFAULT NULL,
+  `zip` varchar(5) DEFAULT NULL,
+  `zip9` varchar(4) DEFAULT NULL,
+  `facadmin` varchar(37) DEFAULT NULL,
+  `contact_email` varchar(48) DEFAULT NULL,
+  `contact_fax` varchar(14) DEFAULT NULL,
+  `contact_phone_number` varchar(20) DEFAULT NULL,
+  `county_code` varchar(11) DEFAULT NULL,
+  `county_name` varchar(15) DEFAULT NULL,
+  `district_number` varchar(15) DEFAULT NULL,
+  `district_name` varchar(24) DEFAULT NULL,
+  `isfacmain` varchar(9) DEFAULT NULL,
+  `parent_facid` varchar(12) DEFAULT NULL,
+  `fac_fac_relationship_type_code` varchar(30) DEFAULT NULL,
+  `start_date` varchar(10) DEFAULT NULL,
+  `license_number` varchar(14) DEFAULT NULL,
+  `business_name` varchar(74) DEFAULT NULL,
+  `license_status_description` varchar(26) DEFAULT NULL,
+  `initial_license_date` varchar(20) DEFAULT NULL,
+  `license_effective_date` varchar(22) DEFAULT NULL,
+  `license_expiration_date` varchar(23) DEFAULT NULL,
+  `entity_type_description` varchar(25) DEFAULT NULL,
+  `latitude` varchar(12) DEFAULT NULL,
+  `longitude` varchar(12) DEFAULT NULL,
+  `location` varchar(27) DEFAULT NULL,
+  `hcai_id` varchar(9) DEFAULT NULL,
+  `cclho_code` varchar(10) DEFAULT NULL,
+  `cclho_name` varchar(15) DEFAULT NULL,
+  `fips_county_code` varchar(16) DEFAULT NULL,
+  `birthing_facility_flag` varchar(22) DEFAULT NULL,
+  `trauma_ped_ctr` varchar(14) DEFAULT NULL,
+  `trauma_ctr` varchar(10) DEFAULT NULL,
+  `type_of_care` varchar(26) DEFAULT NULL,
+  `critical_access_hospital` varchar(24) DEFAULT NULL,
+  `data_date` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -15062,111 +19259,502 @@ DROP TABLE IF EXISTS `licensed_driving_under_the_influence_provider_directory`;
 CREATE TABLE `licensed_driving_under_the_influence_provider_directory` (
   `x` varchar(14) DEFAULT NULL,
   `y` varchar(16) DEFAULT NULL,
-  `objectid` varchar(3) DEFAULT NULL,
+  `objectid` varchar(8) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
-  `dui_license_number` varchar(10) DEFAULT NULL,
+  `dui_license_number` varchar(18) DEFAULT NULL,
   `facility_name` varchar(89) DEFAULT NULL,
-  `facility_address` varchar(49) DEFAULT NULL,
+  `facility_address` varchar(50) DEFAULT NULL,
   `facility_city` varchar(19) DEFAULT NULL,
-  `facility_zip` varchar(5) DEFAULT NULL,
-  `fop` varchar(1) DEFAULT NULL,
-  `f18_mo` varchar(1) DEFAULT NULL,
-  `f30_mo` varchar(1) DEFAULT NULL,
+  `facility_zip` varchar(12) DEFAULT NULL,
+  `fop` varchar(3) DEFAULT NULL,
+  `f18_mo` varchar(6) DEFAULT NULL,
+  `f30_mo` varchar(6) DEFAULT NULL,
   `phone_number` varchar(14) DEFAULT NULL,
   `fax_number` varchar(14) DEFAULT NULL,
   `e_mail_website` varchar(39) DEFAULT NULL,
-  `latitude` varchar(16) DEFAULT NULL,
+  `latitude` varchar(15) DEFAULT NULL,
   `longitude` varchar(17) DEFAULT NULL,
   `countyname` varchar(22) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `licensed_facilities`
+-- Table structure for table `licensed_facility_listing_01`
 --
 
-DROP TABLE IF EXISTS `licensed_facilities`;
-CREATE TABLE `licensed_facilities` (
-  `period` char(8) DEFAULT NULL,
+DROP TABLE IF EXISTS `licensed_facility_listing_01`;
+CREATE TABLE `licensed_facility_listing_01` (
+  `oshpd_id` varchar(9) DEFAULT NULL,
+  `facility_name` varchar(79) DEFAULT NULL,
+  `license_num` varchar(11) DEFAULT NULL,
+  `facility_level_desc` varchar(22) DEFAULT NULL,
+  `dba_address1` varchar(42) DEFAULT NULL,
+  `dba_city` varchar(23) DEFAULT NULL,
+  `dba_zip_code` varchar(12) DEFAULT NULL,
+  `county_code` varchar(11) DEFAULT NULL,
+  `county_name` varchar(15) DEFAULT NULL,
+  `er_service_level_desc` varchar(25) DEFAULT NULL,
+  `total_number_beds` varchar(17) DEFAULT NULL,
+  `facility_status_desc` varchar(20) DEFAULT NULL,
+  `facility_status_date` varchar(20) DEFAULT NULL,
+  `license_type_desc` varchar(26) DEFAULT NULL,
+  `license_category_desc` varchar(33) DEFAULT NULL,
+  `latitude` varchar(11) DEFAULT NULL,
+  `longitude` varchar(13) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `licensed_facility_listing_02`
+--
+
+DROP TABLE IF EXISTS `licensed_facility_listing_02`;
+CREATE TABLE `licensed_facility_listing_02` (
+  `oshpd_id` varchar(9) DEFAULT NULL,
+  `facility_name` varchar(79) DEFAULT NULL,
+  `license_num` varchar(11) DEFAULT NULL,
+  `facility_level_desc` varchar(22) DEFAULT NULL,
+  `dba_address1` varchar(37) DEFAULT NULL,
+  `dba_city` varchar(21) DEFAULT NULL,
+  `dba_zip_code` varchar(12) DEFAULT NULL,
+  `county_code` varchar(11) DEFAULT NULL,
+  `county_name` varchar(15) DEFAULT NULL,
+  `er_service_level_desc` varchar(25) DEFAULT NULL,
+  `total_number_beds` varchar(17) DEFAULT NULL,
+  `facility_status_desc` varchar(20) DEFAULT NULL,
+  `facility_status_date` varchar(20) DEFAULT NULL,
+  `license_type_desc` varchar(26) DEFAULT NULL,
+  `license_category_desc` varchar(33) DEFAULT NULL,
+  `longitude` varchar(13) DEFAULT NULL,
+  `latitude` varchar(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `licensed_facility_listing_03`
+--
+
+DROP TABLE IF EXISTS `licensed_facility_listing_03`;
+CREATE TABLE `licensed_facility_listing_03` (
+  `oshpd_id` varchar(9) DEFAULT NULL,
+  `facility_name` varchar(79) DEFAULT NULL,
+  `license_num` varchar(11) DEFAULT NULL,
+  `facility_level_desc` varchar(22) DEFAULT NULL,
+  `dba_address1` varchar(37) DEFAULT NULL,
+  `dba_city` varchar(23) DEFAULT NULL,
+  `dba_zip_code` varchar(12) DEFAULT NULL,
+  `county_code` varchar(11) DEFAULT NULL,
+  `county_name` varchar(15) DEFAULT NULL,
+  `er_service_level_desc` varchar(25) DEFAULT NULL,
+  `total_number_beds` varchar(17) DEFAULT NULL,
+  `facility_status_desc` varchar(20) DEFAULT NULL,
+  `facility_status_date` varchar(20) DEFAULT NULL,
+  `license_type_desc` varchar(26) DEFAULT NULL,
+  `license_category_desc` varchar(33) DEFAULT NULL,
+  `latitude` varchar(11) DEFAULT NULL,
+  `longitude` varchar(12) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `licensed_facility_listing_04`
+--
+
+DROP TABLE IF EXISTS `licensed_facility_listing_04`;
+CREATE TABLE `licensed_facility_listing_04` (
+  `oshpd_id` varchar(9) DEFAULT NULL,
+  `facility_name` varchar(79) DEFAULT NULL,
+  `license_num` varchar(11) DEFAULT NULL,
+  `facility_level_desc` varchar(22) DEFAULT NULL,
+  `dba_address1` varchar(37) DEFAULT NULL,
+  `dba_city` varchar(23) DEFAULT NULL,
+  `dba_zip_code` varchar(12) DEFAULT NULL,
+  `county_code` varchar(11) DEFAULT NULL,
+  `county_name` varchar(15) DEFAULT NULL,
+  `er_service_level_desc` varchar(25) DEFAULT NULL,
+  `total_number_beds` varchar(17) DEFAULT NULL,
+  `facility_status_desc` varchar(20) DEFAULT NULL,
+  `facility_status_date` varchar(20) DEFAULT NULL,
+  `license_type_desc` varchar(26) DEFAULT NULL,
+  `license_category_desc` varchar(33) DEFAULT NULL,
+  `latitude` varchar(11) DEFAULT NULL,
+  `longitude` varchar(13) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `licensed_facility_listing_05`
+--
+
+DROP TABLE IF EXISTS `licensed_facility_listing_05`;
+CREATE TABLE `licensed_facility_listing_05` (
+  `oshpd_id` varchar(9) DEFAULT NULL,
+  `facility_name` varchar(79) DEFAULT NULL,
+  `license_num` varchar(11) DEFAULT NULL,
+  `facility_level_desc` varchar(22) DEFAULT NULL,
+  `dba_address1` varchar(37) DEFAULT NULL,
+  `dba_city` varchar(23) DEFAULT NULL,
+  `dba_zip_code` varchar(12) DEFAULT NULL,
+  `county_code` varchar(11) DEFAULT NULL,
+  `county_name` varchar(15) DEFAULT NULL,
+  `er_service_level_desc` varchar(25) DEFAULT NULL,
+  `total_number_beds` varchar(17) DEFAULT NULL,
+  `facility_status_desc` varchar(20) DEFAULT NULL,
+  `facility_status_date` varchar(20) DEFAULT NULL,
+  `license_type_desc` varchar(26) DEFAULT NULL,
+  `license_category_desc` varchar(33) DEFAULT NULL,
+  `latitude` varchar(11) DEFAULT NULL,
+  `longitude` varchar(13) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `licensed_facility_listing_06`
+--
+
+DROP TABLE IF EXISTS `licensed_facility_listing_06`;
+CREATE TABLE `licensed_facility_listing_06` (
+  `oshpd_id` varchar(9) DEFAULT NULL,
+  `facility_name` varchar(79) DEFAULT NULL,
+  `license_num` varchar(11) DEFAULT NULL,
+  `facility_level_desc` varchar(22) DEFAULT NULL,
+  `dba_address1` varchar(33) DEFAULT NULL,
+  `dba_city` varchar(21) DEFAULT NULL,
+  `dba_zip_code` varchar(12) DEFAULT NULL,
+  `county_code` varchar(11) DEFAULT NULL,
+  `county_name` varchar(15) DEFAULT NULL,
+  `er_service_level_desc` varchar(25) DEFAULT NULL,
+  `total_number_beds` varchar(17) DEFAULT NULL,
+  `facility_status_desc` varchar(20) DEFAULT NULL,
+  `facility_status_date` varchar(20) DEFAULT NULL,
+  `license_type_desc` varchar(26) DEFAULT NULL,
+  `license_category_desc` varchar(33) DEFAULT NULL,
+  `latitude` varchar(11) DEFAULT NULL,
+  `longitude` varchar(13) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `licensed_facility_listing_07`
+--
+
+DROP TABLE IF EXISTS `licensed_facility_listing_07`;
+CREATE TABLE `licensed_facility_listing_07` (
+  `oshpd_id` varchar(9) DEFAULT NULL,
+  `facility_name` varchar(79) DEFAULT NULL,
+  `license_num` varchar(11) DEFAULT NULL,
+  `facility_level_desc` varchar(22) DEFAULT NULL,
+  `dba_address1` varchar(33) DEFAULT NULL,
+  `dba_city` varchar(21) DEFAULT NULL,
+  `dba_zip_code` varchar(12) DEFAULT NULL,
+  `county_code` varchar(11) DEFAULT NULL,
+  `county_name` varchar(15) DEFAULT NULL,
+  `er_service_level_desc` varchar(25) DEFAULT NULL,
+  `total_number_beds` varchar(17) DEFAULT NULL,
+  `facility_status_desc` varchar(20) DEFAULT NULL,
+  `facility_status_date` varchar(20) DEFAULT NULL,
+  `license_type_desc` varchar(26) DEFAULT NULL,
+  `license_category_desc` varchar(33) DEFAULT NULL,
+  `latitude` varchar(11) DEFAULT NULL,
+  `longitude` varchar(13) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `licensed_facility_listing_08`
+--
+
+DROP TABLE IF EXISTS `licensed_facility_listing_08`;
+CREATE TABLE `licensed_facility_listing_08` (
+  `oshpd_id` varchar(9) DEFAULT NULL,
+  `facility_name` varchar(79) DEFAULT NULL,
+  `license_num` varchar(11) DEFAULT NULL,
+  `facility_level_desc` varchar(22) DEFAULT NULL,
+  `dba_address1` varchar(33) DEFAULT NULL,
+  `dba_city` varchar(22) DEFAULT NULL,
+  `dba_zip_code` varchar(12) DEFAULT NULL,
+  `county_code` varchar(11) DEFAULT NULL,
+  `county_name` varchar(15) DEFAULT NULL,
+  `er_service_level_desc` varchar(25) DEFAULT NULL,
+  `total_number_beds` varchar(17) DEFAULT NULL,
+  `facility_status_desc` varchar(20) DEFAULT NULL,
+  `facility_status_date` varchar(20) DEFAULT NULL,
+  `license_type_desc` varchar(26) DEFAULT NULL,
+  `license_category_desc` varchar(33) DEFAULT NULL,
+  `latitude` varchar(11) DEFAULT NULL,
+  `longitude` varchar(13) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `licensed_facility_listing_09`
+--
+
+DROP TABLE IF EXISTS `licensed_facility_listing_09`;
+CREATE TABLE `licensed_facility_listing_09` (
+  `oshpd_id` varchar(9) DEFAULT NULL,
+  `facility_name` varchar(79) DEFAULT NULL,
+  `license_num` varchar(11) DEFAULT NULL,
+  `facility_level_desc` varchar(22) DEFAULT NULL,
+  `dba_address1` varchar(31) DEFAULT NULL,
+  `dba_city` varchar(23) DEFAULT NULL,
+  `dba_zip_code` varchar(12) DEFAULT NULL,
+  `county_code` varchar(11) DEFAULT NULL,
+  `county_name` varchar(15) DEFAULT NULL,
+  `er_service_level_desc` varchar(25) DEFAULT NULL,
+  `total_number_beds` varchar(17) DEFAULT NULL,
+  `facility_status_desc` varchar(20) DEFAULT NULL,
+  `facility_status_date` varchar(20) DEFAULT NULL,
+  `license_type_desc` varchar(26) DEFAULT NULL,
+  `license_category_desc` varchar(33) DEFAULT NULL,
+  `latitude` varchar(11) DEFAULT NULL,
+  `longitude` varchar(13) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `licensed_facility_listing_10`
+--
+
+DROP TABLE IF EXISTS `licensed_facility_listing_10`;
+CREATE TABLE `licensed_facility_listing_10` (
+  `oshpd_id` varchar(9) DEFAULT NULL,
+  `facility_name` varchar(79) DEFAULT NULL,
+  `license_num` varchar(11) DEFAULT NULL,
+  `facility_level_desc` varchar(22) DEFAULT NULL,
+  `dba_address1` varchar(42) DEFAULT NULL,
+  `dba_city` varchar(23) DEFAULT NULL,
+  `dba_zip_code` varchar(12) DEFAULT NULL,
+  `county_code` varchar(11) DEFAULT NULL,
+  `county_name` varchar(15) DEFAULT NULL,
+  `er_service_level_desc` varchar(25) DEFAULT NULL,
+  `total_number_beds` varchar(17) DEFAULT NULL,
+  `facility_status_desc` varchar(20) DEFAULT NULL,
+  `facility_status_date` varchar(20) DEFAULT NULL,
+  `license_type_desc` varchar(26) DEFAULT NULL,
+  `license_category_desc` varchar(33) DEFAULT NULL,
+  `latitude` varchar(11) DEFAULT NULL,
+  `longitude` varchar(13) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `licensed_facility_listing_11`
+--
+
+DROP TABLE IF EXISTS `licensed_facility_listing_11`;
+CREATE TABLE `licensed_facility_listing_11` (
+  `oshpd_id` varchar(9) DEFAULT NULL,
+  `facility_name` varchar(79) DEFAULT NULL,
+  `license_num` varchar(11) DEFAULT NULL,
+  `facility_level_desc` varchar(22) DEFAULT NULL,
+  `dba_address1` varchar(37) DEFAULT NULL,
+  `dba_city` varchar(21) DEFAULT NULL,
+  `dba_zip_code` varchar(12) DEFAULT NULL,
+  `county_code` varchar(11) DEFAULT NULL,
+  `county_name` varchar(15) DEFAULT NULL,
+  `er_service_level_desc` varchar(25) DEFAULT NULL,
+  `total_number_beds` varchar(17) DEFAULT NULL,
+  `facility_status_desc` varchar(20) DEFAULT NULL,
+  `facility_status_date` varchar(20) DEFAULT NULL,
+  `license_type_desc` varchar(26) DEFAULT NULL,
+  `license_category_desc` varchar(33) DEFAULT NULL,
+  `latitude` varchar(11) DEFAULT NULL,
+  `longitude` varchar(13) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `licensed_facility_listing_12`
+--
+
+DROP TABLE IF EXISTS `licensed_facility_listing_12`;
+CREATE TABLE `licensed_facility_listing_12` (
+  `oshpd_id` varchar(9) DEFAULT NULL,
+  `facility_name` varchar(79) DEFAULT NULL,
+  `license_num` varchar(11) DEFAULT NULL,
+  `facility_level_desc` varchar(22) DEFAULT NULL,
+  `dba_address1` varchar(37) DEFAULT NULL,
+  `dba_city` varchar(23) DEFAULT NULL,
+  `dba_zip_code` varchar(12) DEFAULT NULL,
+  `county_code` varchar(11) DEFAULT NULL,
+  `county_name` varchar(15) DEFAULT NULL,
+  `er_service_level_desc` varchar(25) DEFAULT NULL,
+  `total_number_beds` varchar(17) DEFAULT NULL,
+  `facility_status_desc` varchar(20) DEFAULT NULL,
+  `facility_status_date` varchar(20) DEFAULT NULL,
+  `license_type_desc` varchar(26) DEFAULT NULL,
+  `license_category_desc` varchar(33) DEFAULT NULL,
+  `latitude` varchar(11) DEFAULT NULL,
+  `longitude` varchar(13) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `licensed_facility_listing_13`
+--
+
+DROP TABLE IF EXISTS `licensed_facility_listing_13`;
+CREATE TABLE `licensed_facility_listing_13` (
+  `oshpd_id` varchar(9) DEFAULT NULL,
+  `facility_name` varchar(79) DEFAULT NULL,
+  `license_num` varchar(11) DEFAULT NULL,
+  `facility_level_desc` varchar(22) DEFAULT NULL,
+  `dba_address1` varchar(37) DEFAULT NULL,
+  `dba_city` varchar(23) DEFAULT NULL,
+  `dba_zip_code` varchar(12) DEFAULT NULL,
+  `county_code` varchar(11) DEFAULT NULL,
+  `county_name` varchar(15) DEFAULT NULL,
+  `er_service_level_desc` varchar(25) DEFAULT NULL,
+  `total_number_beds` varchar(17) DEFAULT NULL,
+  `facility_status_desc` varchar(20) DEFAULT NULL,
+  `facility_status_date` varchar(20) DEFAULT NULL,
+  `license_type_desc` varchar(26) DEFAULT NULL,
+  `license_category_desc` varchar(33) DEFAULT NULL,
+  `latitude` varchar(11) DEFAULT NULL,
+  `longitude` varchar(13) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `licensed_facility_listing_14`
+--
+
+DROP TABLE IF EXISTS `licensed_facility_listing_14`;
+CREATE TABLE `licensed_facility_listing_14` (
+  `oshpd_id` varchar(9) DEFAULT NULL,
+  `facility_name` varchar(79) DEFAULT NULL,
+  `license_num` varchar(11) DEFAULT NULL,
+  `facility_level_desc` varchar(22) DEFAULT NULL,
+  `dba_address1` varchar(33) DEFAULT NULL,
+  `dba_city` varchar(21) DEFAULT NULL,
+  `dba_zip_code` varchar(12) DEFAULT NULL,
+  `county_code` varchar(11) DEFAULT NULL,
+  `county_name` varchar(15) DEFAULT NULL,
+  `er_service_level_desc` varchar(25) DEFAULT NULL,
+  `total_number_beds` varchar(17) DEFAULT NULL,
+  `facility_status_desc` varchar(20) DEFAULT NULL,
+  `facility_status_date` varchar(20) DEFAULT NULL,
+  `license_type_desc` varchar(26) DEFAULT NULL,
+  `license_category_desc` varchar(33) DEFAULT NULL,
+  `latitude` varchar(11) DEFAULT NULL,
+  `longitude` varchar(13) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `licensed_facility_listing_15`
+--
+
+DROP TABLE IF EXISTS `licensed_facility_listing_15`;
+CREATE TABLE `licensed_facility_listing_15` (
+  `oshpd_id` varchar(9) DEFAULT NULL,
+  `facility_name` varchar(79) DEFAULT NULL,
+  `license_num` varchar(11) DEFAULT NULL,
+  `facility_level_desc` varchar(22) DEFAULT NULL,
+  `dba_address1` varchar(33) DEFAULT NULL,
+  `dba_city` varchar(21) DEFAULT NULL,
+  `dba_zip_code` varchar(12) DEFAULT NULL,
+  `county_code` varchar(11) DEFAULT NULL,
+  `county_name` varchar(15) DEFAULT NULL,
+  `er_service_level_desc` varchar(25) DEFAULT NULL,
+  `total_number_beds` varchar(17) DEFAULT NULL,
+  `facility_status_desc` varchar(20) DEFAULT NULL,
+  `facility_status_date` varchar(20) DEFAULT NULL,
+  `license_type_desc` varchar(26) DEFAULT NULL,
+  `license_category_desc` varchar(33) DEFAULT NULL,
+  `latitude` varchar(11) DEFAULT NULL,
+  `longitude` varchar(13) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `licensed_facility_listing_16`
+--
+
+DROP TABLE IF EXISTS `licensed_facility_listing_16`;
+CREATE TABLE `licensed_facility_listing_16` (
+  `oshpd_id` varchar(9) DEFAULT NULL,
+  `facility_name` varchar(79) DEFAULT NULL,
+  `license_num` varchar(11) DEFAULT NULL,
+  `facility_level_desc` varchar(22) DEFAULT NULL,
+  `dba_address1` varchar(33) DEFAULT NULL,
+  `dba_city` varchar(21) DEFAULT NULL,
+  `dba_zip_code` varchar(12) DEFAULT NULL,
+  `county_code` varchar(11) DEFAULT NULL,
+  `county_name` varchar(15) DEFAULT NULL,
+  `er_service_level_desc` varchar(25) DEFAULT NULL,
+  `total_number_beds` varchar(17) DEFAULT NULL,
+  `facility_status_desc` varchar(20) DEFAULT NULL,
+  `facility_status_date` varchar(20) DEFAULT NULL,
+  `license_type_desc` varchar(26) DEFAULT NULL,
+  `license_category_desc` varchar(33) DEFAULT NULL,
+  `latitude` varchar(11) DEFAULT NULL,
+  `longitude` varchar(13) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `licensed_facility_listing_17`
+--
+
+DROP TABLE IF EXISTS `licensed_facility_listing_17`;
+CREATE TABLE `licensed_facility_listing_17` (
+  `oshpd_id` varchar(9) DEFAULT NULL,
+  `facility_name` varchar(79) DEFAULT NULL,
+  `license_num` varchar(11) DEFAULT NULL,
+  `facility_level_desc` varchar(22) DEFAULT NULL,
+  `dba_address1` varchar(33) DEFAULT NULL,
+  `dba_city` varchar(22) DEFAULT NULL,
+  `dba_zip_code` varchar(12) DEFAULT NULL,
+  `county_code` varchar(11) DEFAULT NULL,
+  `county_name` varchar(15) DEFAULT NULL,
+  `er_service_level_desc` varchar(25) DEFAULT NULL,
+  `total_number_beds` varchar(17) DEFAULT NULL,
+  `facility_status_desc` varchar(20) DEFAULT NULL,
+  `facility_status_date` varchar(20) DEFAULT NULL,
+  `license_type_desc` varchar(26) DEFAULT NULL,
+  `license_category_desc` varchar(33) DEFAULT NULL,
+  `latitude` varchar(11) DEFAULT NULL,
+  `longitude` varchar(13) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `licensed_facility_listing_18`
+--
+
+DROP TABLE IF EXISTS `licensed_facility_listing_18`;
+CREATE TABLE `licensed_facility_listing_18` (
+  `oshpd_id` varchar(9) DEFAULT NULL,
+  `facility_name` varchar(79) DEFAULT NULL,
+  `license_num` varchar(11) DEFAULT NULL,
+  `facility_level_desc` varchar(22) DEFAULT NULL,
+  `dba_address1` varchar(37) DEFAULT NULL,
+  `dba_city` varchar(23) DEFAULT NULL,
+  `dba_zip_code` varchar(12) DEFAULT NULL,
+  `county_code` varchar(11) DEFAULT NULL,
+  `county_name` varchar(15) DEFAULT NULL,
+  `er_service_level_desc` varchar(25) DEFAULT NULL,
+  `total_number_beds` varchar(17) DEFAULT NULL,
+  `facility_status_desc` varchar(20) DEFAULT NULL,
+  `facility_status_date` varchar(20) DEFAULT NULL,
+  `license_type_desc` varchar(26) DEFAULT NULL,
+  `license_category_desc` varchar(33) DEFAULT NULL,
+  `latitude` varchar(11) DEFAULT NULL,
+  `longitude` varchar(13) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `licensed_healthcare_facility_listing`
+--
+
+DROP TABLE IF EXISTS `licensed_healthcare_facility_listing`;
+CREATE TABLE `licensed_healthcare_facility_listing` (
+  `period` varchar(10) DEFAULT NULL,
   `oshpd_id` char(9) DEFAULT NULL,
   `facility_name` varchar(127) DEFAULT NULL,
   `license_num` varchar(63) DEFAULT NULL,
   `facility_level_desc` varchar(63) DEFAULT NULL,
   `dba_address1` varchar(63) DEFAULT NULL,
   `dba_city` varchar(63) DEFAULT NULL,
-  `dba_zip_code` varchar(10) DEFAULT NULL,
-  `county_code` varchar(2) DEFAULT NULL,
+  `dba_zip_code` varchar(20) DEFAULT NULL,
+  `county_code` varchar(20) DEFAULT NULL,
   `county_name` varchar(63) DEFAULT NULL,
   `er_service_level_desc` varchar(63) DEFAULT NULL,
   `total_number_beds` int DEFAULT NULL,
   `facility_status_desc` varchar(63) DEFAULT NULL,
-  `facility_status_date` varchar(63) DEFAULT NULL,
+  `facility_status_date` date DEFAULT NULL,
   `license_type_desc` varchar(63) DEFAULT NULL,
   `license_category_desc` varchar(63) DEFAULT NULL,
   `latitude` decimal(12,8) DEFAULT NULL,
-  `longitude` decimal(12,8) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `licensed_facility_aspen_oshpd_crosswalk`
---
-
-DROP TABLE IF EXISTS `licensed_facility_aspen_oshpd_crosswalk`;
-CREATE TABLE `licensed_facility_aspen_oshpd_crosswalk` (
-  `license_certified` varchar(63) DEFAULT NULL,
-  `elms_facid` char(10) DEFAULT NULL,
-  `license_number` char(10) DEFAULT NULL,
-  `license_status_description` varchar(63) DEFAULT NULL,
-  `oshpd_id` varchar(31) DEFAULT NULL,
-  `aspen_facid` varchar(31) DEFAULT NULL,
-  `ccn` varchar(10) DEFAULT NULL,
-  `npi` char(10) DEFAULT NULL,
-  `aspen_status` varchar(63) DEFAULT NULL,
-  `facname` varchar(255) DEFAULT NULL,
-  `fac_type_description` varchar(127) DEFAULT NULL,
-  `fac_fdr` varchar(63) DEFAULT NULL,
-  `fac_fac_relationship` varchar(63) DEFAULT NULL,
-  `elms_parent_facid` char(9) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `licensed_facility_elms_aspen_crosswalk`
---
-
-DROP TABLE IF EXISTS `licensed_facility_elms_aspen_crosswalk`;
-CREATE TABLE `licensed_facility_elms_aspen_crosswalk` (
-  `xwalk_note` varchar(63) DEFAULT NULL,
-  `age` varchar(7) DEFAULT NULL,
-  `elms_facid` char(10) DEFAULT NULL,
-  `license_number` char(10) DEFAULT NULL,
-  `license_status_description` varchar(63) DEFAULT NULL,
-  `aspen_id` varchar(31) DEFAULT NULL,
-  `ccn` varchar(10) DEFAULT NULL,
-  `npi` char(10) DEFAULT NULL,
-  `aspen_status` varchar(63) DEFAULT NULL,
-  `facname` varchar(255) DEFAULT NULL,
-  `fac_type_description` varchar(127) DEFAULT NULL,
-  `fac_fdr` varchar(63) DEFAULT NULL,
-  `fac_fac_relationship` varchar(63) DEFAULT NULL,
-  `elms_parent_facid` char(9) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `licensed_facility_elms_oshpd_crosswalk`
---
-
-DROP TABLE IF EXISTS `licensed_facility_elms_oshpd_crosswalk`;
-CREATE TABLE `licensed_facility_elms_oshpd_crosswalk` (
-  `xwalk_note` varchar(63) DEFAULT NULL,
-  `age` varchar(7) DEFAULT NULL,
-  `elms_facid` char(10) DEFAULT NULL,
-  `license_number` char(10) DEFAULT NULL,
-  `license_status_description` varchar(63) DEFAULT NULL,
-  `oshpd_id` char(9) DEFAULT NULL,
-  `facname` varchar(255) DEFAULT NULL,
-  `fac_type_description` varchar(127) DEFAULT NULL,
-  `fac_fdr` varchar(63) DEFAULT NULL,
-  `fac_fac_relationship` varchar(63) DEFAULT NULL,
-  `elms_parent_facid` char(9) DEFAULT NULL
+  `longitude` decimal(12,8) DEFAULT NULL,
+  KEY `period` (`period`),
+  KEY `oshpd_id` (`oshpd_id`),
+  KEY `facility_name` (`facility_name`),
+  KEY `facility_status_date` (`facility_status_date`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -15177,18 +19765,18 @@ DROP TABLE IF EXISTS `licensed_narcotic_treatment_programs`;
 CREATE TABLE `licensed_narcotic_treatment_programs` (
   `x` varchar(14) DEFAULT NULL,
   `y` varchar(16) DEFAULT NULL,
-  `objectid` varchar(3) DEFAULT NULL,
-  `county` varchar(2) DEFAULT NULL,
+  `objectid` varchar(8) DEFAULT NULL,
+  `county` varchar(6) DEFAULT NULL,
   `licensee` varchar(65) DEFAULT NULL,
   `license_` varchar(9) DEFAULT NULL,
   `dba` varchar(45) DEFAULT NULL,
-  `otp_ca10` varchar(6) DEFAULT NULL,
+  `otp_ca10` varchar(8) DEFAULT NULL,
   `address` varchar(71) DEFAULT NULL,
   `city` varchar(16) DEFAULT NULL,
-  `state` varchar(2) DEFAULT NULL,
-  `program_zip` varchar(5) DEFAULT NULL,
+  `state` varchar(5) DEFAULT NULL,
+  `program_zip` varchar(11) DEFAULT NULL,
   `phone_number` varchar(14) DEFAULT NULL,
-  `total_slots` varchar(4) DEFAULT NULL,
+  `total_slots` varchar(11) DEFAULT NULL,
   `operating_hours` varchar(37) DEFAULT NULL,
   `dispensing_hours` varchar(73) DEFAULT NULL,
   `weekend_hours` varchar(56) DEFAULT NULL,
@@ -15221,25 +19809,6 @@ CREATE TABLE `licensing_and_certification_district_offices_california` (
   `latitude` varchar(11) DEFAULT NULL,
   `longitude` varchar(11) DEFAULT NULL,
   `location` varchar(24) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `live_birth_profiles_by_county`
---
-
-DROP TABLE IF EXISTS `live_birth_profiles_by_county`;
-CREATE TABLE `live_birth_profiles_by_county` (
-  `year` int DEFAULT NULL,
-  `month` int DEFAULT NULL,
-  `county` varchar(31) DEFAULT NULL,
-  `geography_type` varchar(31) DEFAULT NULL,
-  `strata` varchar(63) DEFAULT NULL,
-  `strata_name` varchar(63) DEFAULT NULL,
-  `count` int DEFAULT NULL,
-  `annotation_code` varchar(31) DEFAULT NULL,
-  `annotation_desc` varchar(63) DEFAULT NULL,
-  `data_extract_date` varchar(31) DEFAULT NULL,
-  `data_revision_date` varchar(31) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -15365,6 +19934,22 @@ CREATE TABLE `low_very_low_birthweight_by_race_ethnicity` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `ltc_citation_narratives_2012_2017_data_file`
+--
+
+DROP TABLE IF EXISTS `ltc_citation_narratives_2012_2017_data_file`;
+CREATE TABLE `ltc_citation_narratives_2012_2017_data_file` (
+  `facid` varchar(9) DEFAULT NULL,
+  `facility_name` varchar(75) DEFAULT NULL,
+  `penalty_number` varchar(14) DEFAULT NULL,
+  `class_assessed_initial` varchar(22) DEFAULT NULL,
+  `penalty_issue_date` varchar(18) DEFAULT NULL,
+  `eventid` varchar(7) DEFAULT NULL,
+  `narrative_length` varchar(16) DEFAULT NULL,
+  `narrative` text
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `major_diagnostic_categories_summary`
 --
 
@@ -15483,6 +20068,16 @@ CREATE TABLE `managed_care_pref_mon_dashboard_sex` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `maternal_health_lghc_indicator_51`
+--
+
+DROP TABLE IF EXISTS `maternal_health_lghc_indicator_51`;
+CREATE TABLE `maternal_health_lghc_indicator_51` (
+  `women_ages_18_to_44_years_who_received_a_routine_check_up_withi` varchar(92) DEFAULT NULL,
+  `None` varchar(7) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `mcna_population_points_with_t_d_standards`
 --
 
@@ -15490,95 +20085,95 @@ DROP TABLE IF EXISTS `mcna_population_points_with_t_d_standards`;
 CREATE TABLE `mcna_population_points_with_t_d_standards` (
   `x` varchar(17) DEFAULT NULL,
   `y` varchar(18) DEFAULT NULL,
-  `objectid` varchar(5) DEFAULT NULL,
+  `objectid` varchar(8) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
-  `zip_code` varchar(5) DEFAULT NULL,
+  `zip_code` varchar(8) DEFAULT NULL,
   `county_zip` varchar(21) DEFAULT NULL,
   `latitude` varchar(11) DEFAULT NULL,
   `longitude` varchar(12) DEFAULT NULL,
-  `census_tract` varchar(5) DEFAULT NULL,
-  `census_block_group` varchar(1) DEFAULT NULL,
+  `census_tract` varchar(12) DEFAULT NULL,
+  `census_block_group` varchar(18) DEFAULT NULL,
   `all_plan` varchar(47) DEFAULT NULL,
-  `county_size_type` varchar(6) DEFAULT NULL,
-  `people_sq_mi` varchar(9) DEFAULT NULL,
-  `tt_hospitals` varchar(2) DEFAULT NULL,
-  `dt_hospitals` varchar(2) DEFAULT NULL,
-  `tt_adult_pcp` varchar(2) DEFAULT NULL,
-  `dt_adult_pcp` varchar(2) DEFAULT NULL,
-  `tt_pediatric_pcp` varchar(2) DEFAULT NULL,
-  `dt_pediatric_pcp` varchar(2) DEFAULT NULL,
-  `tt_ob_gyn_primary` varchar(2) DEFAULT NULL,
-  `dt_ob_gyn_primary` varchar(2) DEFAULT NULL,
-  `tt_ob_gyn_specialty` varchar(2) DEFAULT NULL,
-  `dt_ob_gyn_specialty` varchar(2) DEFAULT NULL,
-  `tt_adult_cardiology_interventi` varchar(2) DEFAULT NULL,
-  `dt_adult_cardiology_interventi` varchar(2) DEFAULT NULL,
-  `tt_adult_dermatology` varchar(2) DEFAULT NULL,
-  `dt_adult_dermatology` varchar(2) DEFAULT NULL,
-  `tt_adult_endocrinology` varchar(2) DEFAULT NULL,
-  `dt_adult_endocrinology` varchar(2) DEFAULT NULL,
-  `tt_adult_ent_otolaryngology` varchar(2) DEFAULT NULL,
-  `dt_adult_ent_otolaryngology` varchar(2) DEFAULT NULL,
-  `tt_adult_gastroenterology` varchar(2) DEFAULT NULL,
-  `dt_adult_gastroenterology` varchar(2) DEFAULT NULL,
-  `tt_adult_general_surgery` varchar(2) DEFAULT NULL,
-  `dt_adult_general_surgery` varchar(2) DEFAULT NULL,
-  `tt_adult_hematology` varchar(2) DEFAULT NULL,
-  `dt_adult_hematology` varchar(2) DEFAULT NULL,
-  `tt_adult_hiv_aids_infectious_d` varchar(2) DEFAULT NULL,
-  `dt_adult_hiv_aids_infectious_d` varchar(2) DEFAULT NULL,
-  `tt_adult_mental_health_outpati` varchar(2) DEFAULT NULL,
-  `dt_adult_mental_health_outpati` varchar(2) DEFAULT NULL,
-  `tt_adult_nephrology` varchar(2) DEFAULT NULL,
-  `dt_adult_nephrology` varchar(2) DEFAULT NULL,
-  `tt_adult_neurology` varchar(2) DEFAULT NULL,
-  `dt_adult_neurology` varchar(2) DEFAULT NULL,
-  `tt_adult_oncology` varchar(2) DEFAULT NULL,
-  `dt_adult_oncology` varchar(2) DEFAULT NULL,
-  `tt_adult_ophthalmology` varchar(2) DEFAULT NULL,
-  `dt_adult_ophthalmology` varchar(2) DEFAULT NULL,
-  `tt_adult_orthopedic_surgery` varchar(2) DEFAULT NULL,
-  `dt_adult_orthopedic_surgery` varchar(2) DEFAULT NULL,
-  `tt_adult_physical_medicine_and` varchar(2) DEFAULT NULL,
-  `dt_adult_physical_medicine_and` varchar(2) DEFAULT NULL,
-  `tt_adult_psychiatry` varchar(2) DEFAULT NULL,
-  `dt_adult_psychiatry` varchar(2) DEFAULT NULL,
-  `tt_adult_pulmonology` varchar(2) DEFAULT NULL,
-  `dt_adult_pulmonology` varchar(2) DEFAULT NULL,
-  `tt_pediatric_cardiology_interv` varchar(2) DEFAULT NULL,
-  `dt_pediatric_cardiology_interv` varchar(2) DEFAULT NULL,
-  `tt_pediatric_dermatology` varchar(2) DEFAULT NULL,
-  `dt_pediatric_dermatology` varchar(2) DEFAULT NULL,
-  `tt_pediatric_endocrinology` varchar(2) DEFAULT NULL,
-  `dt_pediatric_endocrinology` varchar(2) DEFAULT NULL,
-  `tt_pediatric_ent_otolaryngolog` varchar(2) DEFAULT NULL,
-  `dt_pediatric_ent_otolaryngolog` varchar(2) DEFAULT NULL,
-  `tt_pediatric_gastroenterology` varchar(2) DEFAULT NULL,
-  `dt_pediatric_gastroenterology` varchar(2) DEFAULT NULL,
-  `tt_pediatric_general_surgery` varchar(2) DEFAULT NULL,
-  `dt_pediatric_general_surgery` varchar(2) DEFAULT NULL,
-  `tt_pediatric_hematology` varchar(2) DEFAULT NULL,
-  `dt_pediatric_hematology` varchar(2) DEFAULT NULL,
-  `tt_pediatric_hiv_aids_infectio` varchar(2) DEFAULT NULL,
-  `dt_pediatric_hiv_aids_infectio` varchar(2) DEFAULT NULL,
-  `tt_pediatric_mental_health_out` varchar(2) DEFAULT NULL,
-  `dt_pediatric_mental_health_out` varchar(2) DEFAULT NULL,
-  `tt_pediatric_nephrology` varchar(2) DEFAULT NULL,
-  `dt_pediatric_nephrology` varchar(2) DEFAULT NULL,
-  `tt_pediatric_neurology` varchar(2) DEFAULT NULL,
-  `dt_pediatric_neurology` varchar(2) DEFAULT NULL,
-  `tt_pediatric_ophthalmology` varchar(2) DEFAULT NULL,
-  `dt_pediatric_ophthalmology` varchar(2) DEFAULT NULL,
-  `tt_pediatric_orthopedic_surger` varchar(2) DEFAULT NULL,
-  `dt_pediatric_orthopedic_surger` varchar(2) DEFAULT NULL,
-  `tt_pediatric_physical_medicine` varchar(2) DEFAULT NULL,
-  `dt_pediatric_physical_medicine` varchar(2) DEFAULT NULL,
-  `tt_pediatric_psychiatry` varchar(2) DEFAULT NULL,
-  `dt_pediatric_psychiatry` varchar(2) DEFAULT NULL,
-  `tt_pediatric_pulmonology` varchar(2) DEFAULT NULL,
-  `dt_pediatric_pulmonology` varchar(2) DEFAULT NULL,
-  `tt_pediatric_oncology` varchar(2) DEFAULT NULL,
-  `dt_pediatric_oncology` varchar(0) DEFAULT NULL,
+  `county_size_type` varchar(16) DEFAULT NULL,
+  `people_sq_mi` varchar(12) DEFAULT NULL,
+  `tt_hospitals` varchar(13) DEFAULT NULL,
+  `dt_hospitals` varchar(13) DEFAULT NULL,
+  `tt_adult_pcp` varchar(13) DEFAULT NULL,
+  `dt_adult_pcp` varchar(13) DEFAULT NULL,
+  `tt_pediatric_pcp` varchar(17) DEFAULT NULL,
+  `dt_pediatric_pcp` varchar(17) DEFAULT NULL,
+  `tt_ob_gyn_primary` varchar(18) DEFAULT NULL,
+  `dt_ob_gyn_primary` varchar(18) DEFAULT NULL,
+  `tt_ob_gyn_specialty` varchar(20) DEFAULT NULL,
+  `dt_ob_gyn_specialty` varchar(20) DEFAULT NULL,
+  `tt_adult_cardiology_interventi` varchar(31) DEFAULT NULL,
+  `dt_adult_cardiology_interventi` varchar(31) DEFAULT NULL,
+  `tt_adult_dermatology` varchar(21) DEFAULT NULL,
+  `dt_adult_dermatology` varchar(21) DEFAULT NULL,
+  `tt_adult_endocrinology` varchar(23) DEFAULT NULL,
+  `dt_adult_endocrinology` varchar(23) DEFAULT NULL,
+  `tt_adult_ent_otolaryngology` varchar(28) DEFAULT NULL,
+  `dt_adult_ent_otolaryngology` varchar(28) DEFAULT NULL,
+  `tt_adult_gastroenterology` varchar(26) DEFAULT NULL,
+  `dt_adult_gastroenterology` varchar(26) DEFAULT NULL,
+  `tt_adult_general_surgery` varchar(25) DEFAULT NULL,
+  `dt_adult_general_surgery` varchar(25) DEFAULT NULL,
+  `tt_adult_hematology` varchar(20) DEFAULT NULL,
+  `dt_adult_hematology` varchar(20) DEFAULT NULL,
+  `tt_adult_hiv_aids_infectious_d` varchar(31) DEFAULT NULL,
+  `dt_adult_hiv_aids_infectious_d` varchar(31) DEFAULT NULL,
+  `tt_adult_mental_health_outpati` varchar(31) DEFAULT NULL,
+  `dt_adult_mental_health_outpati` varchar(31) DEFAULT NULL,
+  `tt_adult_nephrology` varchar(20) DEFAULT NULL,
+  `dt_adult_nephrology` varchar(20) DEFAULT NULL,
+  `tt_adult_neurology` varchar(19) DEFAULT NULL,
+  `dt_adult_neurology` varchar(19) DEFAULT NULL,
+  `tt_adult_oncology` varchar(18) DEFAULT NULL,
+  `dt_adult_oncology` varchar(18) DEFAULT NULL,
+  `tt_adult_ophthalmology` varchar(23) DEFAULT NULL,
+  `dt_adult_ophthalmology` varchar(23) DEFAULT NULL,
+  `tt_adult_orthopedic_surgery` varchar(28) DEFAULT NULL,
+  `dt_adult_orthopedic_surgery` varchar(28) DEFAULT NULL,
+  `tt_adult_physical_medicine_and` varchar(31) DEFAULT NULL,
+  `dt_adult_physical_medicine_and` varchar(31) DEFAULT NULL,
+  `tt_adult_psychiatry` varchar(20) DEFAULT NULL,
+  `dt_adult_psychiatry` varchar(20) DEFAULT NULL,
+  `tt_adult_pulmonology` varchar(21) DEFAULT NULL,
+  `dt_adult_pulmonology` varchar(21) DEFAULT NULL,
+  `tt_pediatric_cardiology_interv` varchar(31) DEFAULT NULL,
+  `dt_pediatric_cardiology_interv` varchar(31) DEFAULT NULL,
+  `tt_pediatric_dermatology` varchar(25) DEFAULT NULL,
+  `dt_pediatric_dermatology` varchar(25) DEFAULT NULL,
+  `tt_pediatric_endocrinology` varchar(27) DEFAULT NULL,
+  `dt_pediatric_endocrinology` varchar(27) DEFAULT NULL,
+  `tt_pediatric_ent_otolaryngolog` varchar(31) DEFAULT NULL,
+  `dt_pediatric_ent_otolaryngolog` varchar(31) DEFAULT NULL,
+  `tt_pediatric_gastroenterology` varchar(30) DEFAULT NULL,
+  `dt_pediatric_gastroenterology` varchar(30) DEFAULT NULL,
+  `tt_pediatric_general_surgery` varchar(29) DEFAULT NULL,
+  `dt_pediatric_general_surgery` varchar(29) DEFAULT NULL,
+  `tt_pediatric_hematology` varchar(24) DEFAULT NULL,
+  `dt_pediatric_hematology` varchar(24) DEFAULT NULL,
+  `tt_pediatric_hiv_aids_infectio` varchar(31) DEFAULT NULL,
+  `dt_pediatric_hiv_aids_infectio` varchar(31) DEFAULT NULL,
+  `tt_pediatric_mental_health_out` varchar(31) DEFAULT NULL,
+  `dt_pediatric_mental_health_out` varchar(31) DEFAULT NULL,
+  `tt_pediatric_nephrology` varchar(24) DEFAULT NULL,
+  `dt_pediatric_nephrology` varchar(24) DEFAULT NULL,
+  `tt_pediatric_neurology` varchar(23) DEFAULT NULL,
+  `dt_pediatric_neurology` varchar(23) DEFAULT NULL,
+  `tt_pediatric_ophthalmology` varchar(27) DEFAULT NULL,
+  `dt_pediatric_ophthalmology` varchar(27) DEFAULT NULL,
+  `tt_pediatric_orthopedic_surger` varchar(31) DEFAULT NULL,
+  `dt_pediatric_orthopedic_surger` varchar(31) DEFAULT NULL,
+  `tt_pediatric_physical_medicine` varchar(31) DEFAULT NULL,
+  `dt_pediatric_physical_medicine` varchar(31) DEFAULT NULL,
+  `tt_pediatric_psychiatry` varchar(24) DEFAULT NULL,
+  `dt_pediatric_psychiatry` varchar(24) DEFAULT NULL,
+  `tt_pediatric_pulmonology` varchar(25) DEFAULT NULL,
+  `dt_pediatric_pulmonology` varchar(25) DEFAULT NULL,
+  `tt_pediatric_oncology` varchar(21) DEFAULT NULL,
+  `dt_pediatric_oncology` varchar(21) DEFAULT NULL,
   `loc_code_gcode` varchar(24) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -15588,89 +20183,89 @@ CREATE TABLE `mcna_population_points_with_t_d_standards` (
 
 DROP TABLE IF EXISTS `mcna_t_d_standards_by_county`;
 CREATE TABLE `mcna_t_d_standards_by_county` (
-  `objectid` varchar(2) DEFAULT NULL,
-  `state_fips` varchar(2) DEFAULT NULL,
-  `county_fips` varchar(3) DEFAULT NULL,
-  `county_cd` varchar(2) DEFAULT NULL,
+  `objectid` varchar(11) DEFAULT NULL,
+  `state_fips` varchar(10) DEFAULT NULL,
+  `county_fips` varchar(11) DEFAULT NULL,
+  `county_cd` varchar(9) DEFAULT NULL,
   `county_name` varchar(15) DEFAULT NULL,
-  `county_size_type` varchar(6) DEFAULT NULL,
-  `people_per_sq_mile` varchar(9) DEFAULT NULL,
-  `time_threshold_hospitals` varchar(2) DEFAULT NULL,
-  `distance_threshold_hospitals` varchar(2) DEFAULT NULL,
-  `time_threshold_adult_pcp` varchar(2) DEFAULT NULL,
-  `distance_threshold_adult_pcp` varchar(2) DEFAULT NULL,
-  `time_threshold_pediatric_pcp` varchar(2) DEFAULT NULL,
-  `distance_threshold_pediatric_pc` varchar(2) DEFAULT NULL,
-  `time_threshold_ob_gyn_primary` varchar(2) DEFAULT NULL,
-  `distance_threshold_ob_gyn_prima` varchar(2) DEFAULT NULL,
-  `time_threshold_ob_gyn_specialty` varchar(2) DEFAULT NULL,
-  `distance_threshold_ob_gyn_speci` varchar(2) DEFAULT NULL,
-  `time_threshold_adult_cardiology` varchar(2) DEFAULT NULL,
-  `distance_threshold_adult_cardio` varchar(2) DEFAULT NULL,
-  `time_threshold_adult_dermatolog` varchar(2) DEFAULT NULL,
-  `distance_threshold_adult_dermat` varchar(2) DEFAULT NULL,
-  `time_threshold_adult_endocrinol` varchar(2) DEFAULT NULL,
-  `distance_threshold_adult_endocr` varchar(2) DEFAULT NULL,
-  `time_threshold_adult_ent_otolar` varchar(2) DEFAULT NULL,
-  `distance_threshold_adult_ent_ot` varchar(2) DEFAULT NULL,
-  `time_threshold_adult_gastroente` varchar(2) DEFAULT NULL,
-  `distance_threshold_adult_gastro` varchar(2) DEFAULT NULL,
-  `time_threshold_adult_general_su` varchar(2) DEFAULT NULL,
-  `distance_threshold_adult_genera` varchar(2) DEFAULT NULL,
-  `time_threshold_adult_hematology` varchar(2) DEFAULT NULL,
-  `distance_threshold_adult_hemato` varchar(2) DEFAULT NULL,
-  `time_threshold_adult_hiv_aids_i` varchar(2) DEFAULT NULL,
-  `distance_threshold_adult_hiv_ai` varchar(2) DEFAULT NULL,
-  `time_threshold_adult_mental_hea` varchar(2) DEFAULT NULL,
-  `distance_threshold_adult_mental` varchar(2) DEFAULT NULL,
-  `time_threshold_adult_nephrology` varchar(2) DEFAULT NULL,
-  `distance_threshold_adult_nephro` varchar(2) DEFAULT NULL,
-  `time_threshold_adult_neurology` varchar(2) DEFAULT NULL,
-  `distance_threshold_adult_neurol` varchar(2) DEFAULT NULL,
-  `time_threshold_adult_oncology` varchar(2) DEFAULT NULL,
-  `distance_threshold_adult_oncolo` varchar(2) DEFAULT NULL,
-  `time_threshold_adult_ophthalmol` varchar(2) DEFAULT NULL,
-  `distance_threshold_adult_ophtha` varchar(2) DEFAULT NULL,
-  `time_threshold_adult_orthopedic` varchar(2) DEFAULT NULL,
-  `distance_threshold_adult_orthop` varchar(2) DEFAULT NULL,
-  `time_threshold_adult_physical_m` varchar(2) DEFAULT NULL,
-  `distance_threshold_adult_physic` varchar(2) DEFAULT NULL,
-  `time_threshold_adult_psychiatry` varchar(2) DEFAULT NULL,
-  `distance_threshold_adult_psychi` varchar(2) DEFAULT NULL,
-  `time_threshold_adult_pulmonolog` varchar(2) DEFAULT NULL,
-  `distance_threshold_adult_pulmon` varchar(2) DEFAULT NULL,
-  `time_threshold_pediatric_cardio` varchar(2) DEFAULT NULL,
-  `distance_threshold_pediatric_ca` varchar(2) DEFAULT NULL,
-  `time_threshold_pediatric_dermat` varchar(2) DEFAULT NULL,
-  `distance_threshold_pediatric_de` varchar(2) DEFAULT NULL,
-  `time_threshold_pediatric_endocr` varchar(2) DEFAULT NULL,
-  `distance_threshold_pediatric_en` varchar(2) DEFAULT NULL,
-  `time_threshold_pediatric_ent_ot` varchar(2) DEFAULT NULL,
-  `distance_threshold_pediatric_1` varchar(2) DEFAULT NULL,
-  `time_threshold_pediatric_gastro` varchar(2) DEFAULT NULL,
-  `distance_threshold_pediatric_ga` varchar(2) DEFAULT NULL,
-  `time_threshold_pediatric_genera` varchar(2) DEFAULT NULL,
-  `distance_threshold_pediatric_ge` varchar(2) DEFAULT NULL,
-  `time_threshold_pediatric_hemato` varchar(2) DEFAULT NULL,
-  `distance_threshold_pediatric_he` varchar(2) DEFAULT NULL,
-  `time_threshold_pediatric_hiv_ai` varchar(2) DEFAULT NULL,
-  `distance_threshold_pediatric_hi` varchar(2) DEFAULT NULL,
-  `time_threshold_pediatric_mental` varchar(2) DEFAULT NULL,
-  `distance_threshold_pediatric_me` varchar(2) DEFAULT NULL,
-  `time_threshold_pediatric_nephro` varchar(2) DEFAULT NULL,
-  `distance_threshold_pediatric_ne` varchar(2) DEFAULT NULL,
-  `time_threshold_pediatric_neurol` varchar(2) DEFAULT NULL,
-  `distance_threshold_pediatric_2` varchar(2) DEFAULT NULL,
-  `time_threshold_pediatric_ophtha` varchar(2) DEFAULT NULL,
-  `distance_threshold_pediatric_op` varchar(2) DEFAULT NULL,
-  `time_threshold_pediatric_orthop` varchar(2) DEFAULT NULL,
-  `distance_threshold_pediatric_or` varchar(2) DEFAULT NULL,
-  `time_threshold_pediatric_physic` varchar(2) DEFAULT NULL,
-  `distance_threshold_pediatric_ph` varchar(2) DEFAULT NULL,
-  `time_threshold_pediatric_psychi` varchar(2) DEFAULT NULL,
-  `distance_threshold_pediatric_ps` varchar(2) DEFAULT NULL,
-  `time_threshold_pediatric_pulmon` varchar(2) DEFAULT NULL,
-  `distance_threshold_pediatric_pu` varchar(2) DEFAULT NULL
+  `county_size_type` varchar(16) DEFAULT NULL,
+  `people_per_sq_mile` varchar(18) DEFAULT NULL,
+  `time_threshold_hospitals` varchar(24) DEFAULT NULL,
+  `distance_threshold_hospitals` varchar(28) DEFAULT NULL,
+  `time_threshold_adult_pcp` varchar(24) DEFAULT NULL,
+  `distance_threshold_adult_pcp` varchar(28) DEFAULT NULL,
+  `time_threshold_pediatric_pcp` varchar(28) DEFAULT NULL,
+  `distance_threshold_pediatric_pc` varchar(31) DEFAULT NULL,
+  `time_threshold_ob_gyn_primary` varchar(29) DEFAULT NULL,
+  `distance_threshold_ob_gyn_prima` varchar(31) DEFAULT NULL,
+  `time_threshold_ob_gyn_specialty` varchar(31) DEFAULT NULL,
+  `distance_threshold_ob_gyn_speci` varchar(31) DEFAULT NULL,
+  `time_threshold_adult_cardiology` varchar(31) DEFAULT NULL,
+  `distance_threshold_adult_cardio` varchar(31) DEFAULT NULL,
+  `time_threshold_adult_dermatolog` varchar(31) DEFAULT NULL,
+  `distance_threshold_adult_dermat` varchar(31) DEFAULT NULL,
+  `time_threshold_adult_endocrinol` varchar(31) DEFAULT NULL,
+  `distance_threshold_adult_endocr` varchar(31) DEFAULT NULL,
+  `time_threshold_adult_ent_otolar` varchar(31) DEFAULT NULL,
+  `distance_threshold_adult_ent_ot` varchar(31) DEFAULT NULL,
+  `time_threshold_adult_gastroente` varchar(31) DEFAULT NULL,
+  `distance_threshold_adult_gastro` varchar(31) DEFAULT NULL,
+  `time_threshold_adult_general_su` varchar(31) DEFAULT NULL,
+  `distance_threshold_adult_genera` varchar(31) DEFAULT NULL,
+  `time_threshold_adult_hematology` varchar(31) DEFAULT NULL,
+  `distance_threshold_adult_hemato` varchar(31) DEFAULT NULL,
+  `time_threshold_adult_hiv_aids_i` varchar(31) DEFAULT NULL,
+  `distance_threshold_adult_hiv_ai` varchar(31) DEFAULT NULL,
+  `time_threshold_adult_mental_hea` varchar(31) DEFAULT NULL,
+  `distance_threshold_adult_mental` varchar(31) DEFAULT NULL,
+  `time_threshold_adult_nephrology` varchar(31) DEFAULT NULL,
+  `distance_threshold_adult_nephro` varchar(31) DEFAULT NULL,
+  `time_threshold_adult_neurology` varchar(30) DEFAULT NULL,
+  `distance_threshold_adult_neurol` varchar(31) DEFAULT NULL,
+  `time_threshold_adult_oncology` varchar(29) DEFAULT NULL,
+  `distance_threshold_adult_oncolo` varchar(31) DEFAULT NULL,
+  `time_threshold_adult_ophthalmol` varchar(31) DEFAULT NULL,
+  `distance_threshold_adult_ophtha` varchar(31) DEFAULT NULL,
+  `time_threshold_adult_orthopedic` varchar(31) DEFAULT NULL,
+  `distance_threshold_adult_orthop` varchar(31) DEFAULT NULL,
+  `time_threshold_adult_physical_m` varchar(31) DEFAULT NULL,
+  `distance_threshold_adult_physic` varchar(31) DEFAULT NULL,
+  `time_threshold_adult_psychiatry` varchar(31) DEFAULT NULL,
+  `distance_threshold_adult_psychi` varchar(31) DEFAULT NULL,
+  `time_threshold_adult_pulmonolog` varchar(31) DEFAULT NULL,
+  `distance_threshold_adult_pulmon` varchar(31) DEFAULT NULL,
+  `time_threshold_pediatric_cardio` varchar(31) DEFAULT NULL,
+  `distance_threshold_pediatric_ca` varchar(31) DEFAULT NULL,
+  `time_threshold_pediatric_dermat` varchar(31) DEFAULT NULL,
+  `distance_threshold_pediatric_de` varchar(31) DEFAULT NULL,
+  `time_threshold_pediatric_endocr` varchar(31) DEFAULT NULL,
+  `distance_threshold_pediatric_en` varchar(31) DEFAULT NULL,
+  `time_threshold_pediatric_ent_ot` varchar(31) DEFAULT NULL,
+  `distance_threshold_pediatric_1` varchar(31) DEFAULT NULL,
+  `time_threshold_pediatric_gastro` varchar(31) DEFAULT NULL,
+  `distance_threshold_pediatric_ga` varchar(31) DEFAULT NULL,
+  `time_threshold_pediatric_genera` varchar(31) DEFAULT NULL,
+  `distance_threshold_pediatric_ge` varchar(31) DEFAULT NULL,
+  `time_threshold_pediatric_hemato` varchar(31) DEFAULT NULL,
+  `distance_threshold_pediatric_he` varchar(31) DEFAULT NULL,
+  `time_threshold_pediatric_hiv_ai` varchar(31) DEFAULT NULL,
+  `distance_threshold_pediatric_hi` varchar(31) DEFAULT NULL,
+  `time_threshold_pediatric_mental` varchar(31) DEFAULT NULL,
+  `distance_threshold_pediatric_me` varchar(31) DEFAULT NULL,
+  `time_threshold_pediatric_nephro` varchar(31) DEFAULT NULL,
+  `distance_threshold_pediatric_ne` varchar(31) DEFAULT NULL,
+  `time_threshold_pediatric_neurol` varchar(31) DEFAULT NULL,
+  `distance_threshold_pediatric_2` varchar(31) DEFAULT NULL,
+  `time_threshold_pediatric_ophtha` varchar(31) DEFAULT NULL,
+  `distance_threshold_pediatric_op` varchar(31) DEFAULT NULL,
+  `time_threshold_pediatric_orthop` varchar(31) DEFAULT NULL,
+  `distance_threshold_pediatric_or` varchar(31) DEFAULT NULL,
+  `time_threshold_pediatric_physic` varchar(31) DEFAULT NULL,
+  `distance_threshold_pediatric_ph` varchar(31) DEFAULT NULL,
+  `time_threshold_pediatric_psychi` varchar(31) DEFAULT NULL,
+  `distance_threshold_pediatric_ps` varchar(31) DEFAULT NULL,
+  `time_threshold_pediatric_pulmon` varchar(31) DEFAULT NULL,
+  `distance_threshold_pediatric_pu` varchar(31) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -15743,26 +20338,26 @@ CREATE TABLE `medi_cal_dental_fee_for_service_ffs_monthly_provider_en_f25db601` 
 
 DROP TABLE IF EXISTS `medi_cal_dental_fee_for_service_provider_listing`;
 CREATE TABLE `medi_cal_dental_fee_for_service_provider_listing` (
-  `objectid` varchar(5) DEFAULT NULL,
-  `provider_npi` varchar(10) DEFAULT NULL,
-  `billing_provider_number` varchar(10) DEFAULT NULL,
-  `service_location_number` varchar(2) DEFAULT NULL,
+  `objectid` varchar(11) DEFAULT NULL,
+  `provider_npi` varchar(12) DEFAULT NULL,
+  `billing_provider_number` varchar(23) DEFAULT NULL,
+  `service_location_number` varchar(23) DEFAULT NULL,
   `provider_legal_name` varchar(28) DEFAULT NULL,
-  `enrollment_status_effective_date` varchar(22) DEFAULT NULL,
-  `provider_type_code` varchar(2) DEFAULT NULL,
+  `enrollment_status_effective_date` varchar(32) DEFAULT NULL,
+  `provider_type_code` varchar(18) DEFAULT NULL,
   `provider_type_code_desc` varchar(43) DEFAULT NULL,
-  `provider_specialty_code` varchar(2) DEFAULT NULL,
+  `provider_specialty_code` varchar(23) DEFAULT NULL,
   `provider_specialty_code_desc` varchar(77) DEFAULT NULL,
-  `provider_language_code` varchar(1) DEFAULT NULL,
-  `provider_language_code_desc` varchar(10) DEFAULT NULL,
-  `billing_provider_address_attention_line` varchar(28) DEFAULT NULL,
-  `billing_provider_address_1` varchar(24) DEFAULT NULL,
-  `billing_provider_address_2` varchar(24) DEFAULT NULL,
-  `billing_provider_city` varchar(17) DEFAULT NULL,
-  `billing_provider_state` varchar(2) DEFAULT NULL,
-  `billing_provider_zip` varchar(5) DEFAULT NULL,
-  `provider_county_code` varchar(2) DEFAULT NULL,
-  `provider_county_desc` varchar(15) DEFAULT NULL,
+  `provider_language_code` varchar(22) DEFAULT NULL,
+  `provider_language_code_desc` varchar(27) DEFAULT NULL,
+  `billing_provider_address_attention_line` varchar(39) DEFAULT NULL,
+  `billing_provider_address_1` varchar(26) DEFAULT NULL,
+  `billing_provider_address_2` varchar(26) DEFAULT NULL,
+  `billing_provider_city` varchar(21) DEFAULT NULL,
+  `billing_provider_state` varchar(22) DEFAULT NULL,
+  `billing_provider_zip` varchar(20) DEFAULT NULL,
+  `provider_county_code` varchar(20) DEFAULT NULL,
+  `provider_county_desc` varchar(20) DEFAULT NULL,
   `latitude` varchar(16) DEFAULT NULL,
   `longitude` varchar(17) DEFAULT NULL,
   `x` varchar(17) DEFAULT NULL,
@@ -15782,6 +20377,63 @@ CREATE TABLE `medi_cal_enrollment_by_eligibility_group` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `medi_cal_enrollment_dashboard_data`
+--
+
+DROP TABLE IF EXISTS `medi_cal_enrollment_dashboard_data`;
+CREATE TABLE `medi_cal_enrollment_dashboard_data` (
+  `eligibility_date` varchar(16) DEFAULT NULL,
+  `sex` varchar(3) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `region` varchar(22) DEFAULT NULL,
+  `age_group` varchar(10) DEFAULT NULL,
+  `ethnic_group` varchar(12) DEFAULT NULL,
+  `language` varchar(17) DEFAULT NULL,
+  `num_enrolled` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `medi_cal_ffs_provider_listing`
+--
+
+DROP TABLE IF EXISTS `medi_cal_ffs_provider_listing`;
+CREATE TABLE `medi_cal_ffs_provider_listing` (
+  `objectid` varchar(11) DEFAULT NULL,
+  `provider_source` varchar(34) DEFAULT NULL,
+  `provider_number` varchar(15) DEFAULT NULL,
+  `npi` varchar(10) DEFAULT NULL,
+  `owner_number` varchar(12) DEFAULT NULL,
+  `service_location_number` varchar(23) DEFAULT NULL,
+  `legal_name` varchar(50) DEFAULT NULL,
+  `enroll_status_eff_dt` varchar(22) DEFAULT NULL,
+  `provider_taxonomy` varchar(23) DEFAULT NULL,
+  `nemt_nmt_provider_type` varchar(24) DEFAULT NULL,
+  `anc_provider_type` varchar(36) DEFAULT NULL,
+  `fi_provider_type_cd` varchar(19) DEFAULT NULL,
+  `fi_provider_type` varchar(85) DEFAULT NULL,
+  `provider_license` varchar(16) DEFAULT NULL,
+  `fi_provider_specialty_cd` varchar(24) DEFAULT NULL,
+  `fi_provider_specialty` varchar(51) DEFAULT NULL,
+  `out_of_state_indicator` varchar(22) DEFAULT NULL,
+  `in_out_state` varchar(56) DEFAULT NULL,
+  `address_attention` varchar(43) DEFAULT NULL,
+  `address` varchar(24) DEFAULT NULL,
+  `address2` varchar(24) DEFAULT NULL,
+  `city` varchar(17) DEFAULT NULL,
+  `state` varchar(5) DEFAULT NULL,
+  `zip` varchar(5) DEFAULT NULL,
+  `zip_4` varchar(5) DEFAULT NULL,
+  `dhcs_county_cd` varchar(14) DEFAULT NULL,
+  `fips_county_cd` varchar(14) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `latitude` varchar(15) DEFAULT NULL,
+  `longitude` varchar(17) DEFAULT NULL,
+  `county_name` varchar(40) DEFAULT NULL,
+  `x` varchar(17) DEFAULT NULL,
+  `y` varchar(16) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `medi_cal_fpact_provider_listing`
 --
 
@@ -15789,29 +20441,29 @@ DROP TABLE IF EXISTS `medi_cal_fpact_provider_listing`;
 CREATE TABLE `medi_cal_fpact_provider_listing` (
   `x` varchar(17) DEFAULT NULL,
   `y` varchar(16) DEFAULT NULL,
-  `objectid` varchar(4) DEFAULT NULL,
+  `objectid` varchar(8) DEFAULT NULL,
   `rec_id` varchar(36) DEFAULT NULL,
-  `provider_source` varchar(5) DEFAULT NULL,
+  `provider_source` varchar(15) DEFAULT NULL,
   `provider_number` varchar(15) DEFAULT NULL,
-  `owner_number` varchar(1) DEFAULT NULL,
-  `service_location_number` varchar(2) DEFAULT NULL,
+  `owner_number` varchar(12) DEFAULT NULL,
+  `service_location_number` varchar(23) DEFAULT NULL,
   `provider_name` varchar(35) DEFAULT NULL,
   `business_name` varchar(35) DEFAULT NULL,
-  `enroll_stat_effective_dt` varchar(13) DEFAULT NULL,
-  `fi_category_of_service_cd` varchar(3) DEFAULT NULL,
+  `enroll_stat_effective_dt` varchar(24) DEFAULT NULL,
+  `fi_category_of_service_cd` varchar(25) DEFAULT NULL,
   `fi_category_of_service` varchar(44) DEFAULT NULL,
-  `enroll_stat_cd` varchar(1) DEFAULT NULL,
-  `fi_provider_type_cd` varchar(3) DEFAULT NULL,
+  `enroll_stat_cd` varchar(14) DEFAULT NULL,
+  `fi_provider_type_cd` varchar(19) DEFAULT NULL,
   `fi_provider_type` varchar(54) DEFAULT NULL,
   `address_attention` varchar(24) DEFAULT NULL,
   `address` varchar(24) DEFAULT NULL,
   `address2` varchar(24) DEFAULT NULL,
   `city` varchar(20) DEFAULT NULL,
-  `state` varchar(2) DEFAULT NULL,
+  `state` varchar(5) DEFAULT NULL,
   `zip` varchar(5) DEFAULT NULL,
-  `zip_4` varchar(4) DEFAULT NULL,
-  `dhcs_county_cd` varchar(2) DEFAULT NULL,
-  `fips_county_cd` varchar(5) DEFAULT NULL,
+  `zip_4` varchar(5) DEFAULT NULL,
+  `dhcs_county_cd` varchar(14) DEFAULT NULL,
+  `fips_county_cd` varchar(14) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
   `phone_number` varchar(14) DEFAULT NULL,
   `latitude` varchar(16) DEFAULT NULL,
@@ -16022,73 +20674,6 @@ CREATE TABLE `medi_cal_managed_care_enrollment_report` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `medicaid_eligibility_by_aid_code`
---
-
-DROP TABLE IF EXISTS `medicaid_eligibility_by_aid_code`;
-CREATE TABLE `medicaid_eligibility_by_aid_code` (
-  `aid_code` varchar(2) DEFAULT NULL,
-  `aid_code_name` varchar(172) DEFAULT NULL,
-  `benefits` varchar(36) DEFAULT NULL,
-  `eligibility_group` varchar(171) DEFAULT NULL,
-  `short_description` varchar(293) DEFAULT NULL,
-  `group_code` varchar(32) DEFAULT NULL,
-  `type_name` varchar(12) DEFAULT NULL,
-  `federal_category` varchar(17) DEFAULT NULL,
-  `medicaid_or_chip` varchar(8) DEFAULT NULL,
-  `social_security_act_citation` varchar(96) DEFAULT NULL,
-  `code_of_federal_regulations_citation` varchar(32) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `medicaid_eligibility_by_aid_code_change_log`
---
-
-DROP TABLE IF EXISTS `medicaid_eligibility_by_aid_code_change_log`;
-CREATE TABLE `medicaid_eligibility_by_aid_code_change_log` (
-  `date` varchar(10) DEFAULT NULL,
-  `tmsis_change_description` varchar(931) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `medicaid_ffs_providers`
---
-
-DROP TABLE IF EXISTS `medicaid_ffs_providers`;
-CREATE TABLE `medicaid_ffs_providers` (
-  `objectid` varchar(6) DEFAULT NULL,
-  `provider_source` varchar(34) DEFAULT NULL,
-  `provider_number` varchar(10) DEFAULT NULL,
-  `npi` varchar(10) DEFAULT NULL,
-  `owner_number` int DEFAULT NULL,
-  `service_location_number` int DEFAULT NULL,
-  `legal_name` varchar(50) DEFAULT NULL,
-  `enroll_status_eff_dt` date DEFAULT NULL,
-  `provider_taxonomy` varchar(23) DEFAULT NULL,
-  `anc_provider_type` varchar(36) DEFAULT NULL,
-  `fi_provider_type_cd` varchar(3) DEFAULT NULL,
-  `fi_provider_type` varchar(85) DEFAULT NULL,
-  `provider_license` varchar(14) DEFAULT NULL,
-  `fi_provider_specialty_cd` varchar(3) DEFAULT NULL,
-  `fi_provider_specialty` varchar(51) DEFAULT NULL,
-  `out_of_state_indicator` int DEFAULT NULL,
-  `in_out_state` varchar(56) DEFAULT NULL,
-  `address_attention` varchar(43) DEFAULT NULL,
-  `address` varchar(24) DEFAULT NULL,
-  `address2` varchar(24) DEFAULT NULL,
-  `city` varchar(17) DEFAULT NULL,
-  `state` varchar(3) DEFAULT NULL,
-  `zip` varchar(5) DEFAULT NULL,
-  `zip_4` varchar(4) DEFAULT NULL,
-  `dhcs_county_cd` varchar(2) DEFAULT NULL,
-  `fips_county_cd` varchar(5) DEFAULT NULL,
-  `county` varchar(15) DEFAULT NULL,
-  `latitude` decimal(12,8) DEFAULT NULL,
-  `longitude` decimal(12,8) DEFAULT NULL,
-  `countyname` varchar(46) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
 -- Table structure for table `medical_managed_care_provider_listing`
 --
 
@@ -16096,11 +20681,11 @@ DROP TABLE IF EXISTS `medical_managed_care_provider_listing`;
 CREATE TABLE `medical_managed_care_provider_listing` (
   `x` varchar(17) DEFAULT NULL,
   `y` varchar(16) DEFAULT NULL,
-  `objectid` varchar(7) DEFAULT NULL,
+  `objectid` varchar(8) DEFAULT NULL,
   `managedcareplan` varchar(44) DEFAULT NULL,
   `subnetwork` varchar(53) DEFAULT NULL,
-  `plancode` varchar(3) DEFAULT NULL,
-  `recordtype` varchar(8) DEFAULT NULL,
+  `plancode` varchar(8) DEFAULT NULL,
+  `recordtype` varchar(10) DEFAULT NULL,
   `npi` varchar(10) DEFAULT NULL,
   `facilityname` varchar(60) DEFAULT NULL,
   `lastname` varchar(33) DEFAULT NULL,
@@ -16109,21 +20694,21 @@ CREATE TABLE `medical_managed_care_provider_listing` (
   `mcnaprovidergroup` varchar(34) DEFAULT NULL,
   `mcnaprovidertype` varchar(36) DEFAULT NULL,
   `facilitytype` varchar(49) DEFAULT NULL,
-  `licensuretype` varchar(3) DEFAULT NULL,
-  `primarycare` varchar(1) DEFAULT NULL,
-  `specialist` varchar(1) DEFAULT NULL,
-  `seeschildren` varchar(3) DEFAULT NULL,
-  `telehealth` varchar(3) DEFAULT NULL,
+  `licensuretype` varchar(13) DEFAULT NULL,
+  `primarycare` varchar(11) DEFAULT NULL,
+  `specialist` varchar(10) DEFAULT NULL,
+  `seeschildren` varchar(12) DEFAULT NULL,
+  `telehealth` varchar(10) DEFAULT NULL,
   `bhindicator` varchar(16) DEFAULT NULL,
   `address` varchar(48) DEFAULT NULL,
   `address2` varchar(55) DEFAULT NULL,
   `city` varchar(22) DEFAULT NULL,
-  `state` varchar(3) DEFAULT NULL,
+  `state` varchar(5) DEFAULT NULL,
   `zip` varchar(5) DEFAULT NULL,
   `zip_4` varchar(5) DEFAULT NULL,
   `longitude` varchar(17) DEFAULT NULL,
   `latitude` varchar(16) DEFAULT NULL,
-  `dhcscountycode` varchar(2) DEFAULT NULL,
+  `dhcscountycode` varchar(14) DEFAULT NULL,
   `fipscd` varchar(10) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -16134,10 +20719,10 @@ CREATE TABLE `medical_managed_care_provider_listing` (
 
 DROP TABLE IF EXISTS `medical_service_study_area_data_dictionary`;
 CREATE TABLE `medical_service_study_area_data_dictionary` (
-  `field_name` varchar(11) DEFAULT NULL,
-  `data_type` varchar(6) DEFAULT NULL,
+  `field_name` varchar(13) DEFAULT NULL,
+  `data_type` varchar(9) DEFAULT NULL,
   `description` varchar(127) DEFAULT NULL,
-  `fid` varchar(2) DEFAULT NULL
+  `fid` varchar(3) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -16146,11 +20731,11 @@ CREATE TABLE `medical_service_study_area_data_dictionary` (
 
 DROP TABLE IF EXISTS `medical_service_study_areas`;
 CREATE TABLE `medical_service_study_areas` (
-  `fid` varchar(4) DEFAULT NULL,
-  `statefp` varchar(2) DEFAULT NULL,
-  `countyfp` varchar(3) DEFAULT NULL,
+  `fid` varchar(6) DEFAULT NULL,
+  `statefp` varchar(7) DEFAULT NULL,
+  `countyfp` varchar(8) DEFAULT NULL,
   `countynm` varchar(15) DEFAULT NULL,
-  `tractce` varchar(6) DEFAULT NULL,
+  `tractce` varchar(7) DEFAULT NULL,
   `geoid` varchar(11) DEFAULT NULL,
   `aland` varchar(11) DEFAULT NULL,
   `awater` varchar(10) DEFAULT NULL,
@@ -16159,8 +20744,8 @@ CREATE TABLE `medical_service_study_areas` (
   `intptlon` varchar(12) DEFAULT NULL,
   `mssaid` varchar(8) DEFAULT NULL,
   `mssanm` varchar(153) DEFAULT NULL,
-  `definition` varchar(8) DEFAULT NULL,
-  `totalpovpo` varchar(5) DEFAULT NULL,
+  `definition` varchar(10) DEFAULT NULL,
+  `totalpovpo` varchar(10) DEFAULT NULL,
   `shape_area` varchar(16) DEFAULT NULL,
   `shape_length` varchar(16) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -16200,14 +20785,14 @@ CREATE TABLE `medicare_advantage_enrollment_among_californias_medicar_c71574c8` 
 DROP TABLE IF EXISTS `medication_assisted_treatment_in_medi_cal_for_opioid_us_12eabaab`;
 CREATE TABLE `medication_assisted_treatment_in_medi_cal_for_opioid_us_12eabaab` (
   `county` varchar(18) DEFAULT NULL,
-  `year` varchar(4) DEFAULT NULL,
-  `quarter` varchar(2) DEFAULT NULL,
-  `medication_assisted_treatment` varchar(17) DEFAULT NULL,
-  `beneficiaries` varchar(5) DEFAULT NULL,
-  `status` varchar(1) DEFAULT NULL,
-  `annotation` varchar(1) DEFAULT NULL,
+  `year_str` varchar(4) DEFAULT NULL,
+  `quarter` varchar(7) DEFAULT NULL,
+  `medication_assisted_treatment` varchar(29) DEFAULT NULL,
+  `beneficiaries` varchar(13) DEFAULT NULL,
+  `status` varchar(6) DEFAULT NULL,
+  `annotation` varchar(10) DEFAULT NULL,
   `annotation_description` varchar(33) DEFAULT NULL,
-  `date_of_data` varchar(9) DEFAULT NULL
+  `date_of_data` varchar(12) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -16217,13 +20802,13 @@ CREATE TABLE `medication_assisted_treatment_in_medi_cal_for_opioid_us_12eabaab` 
 DROP TABLE IF EXISTS `medication_assisted_treatment_in_medi_cal_for_opioid_us_9c83665c`;
 CREATE TABLE `medication_assisted_treatment_in_medi_cal_for_opioid_us_9c83665c` (
   `county` varchar(18) DEFAULT NULL,
-  `year` varchar(4) DEFAULT NULL,
-  `medication_assisted_treatment` varchar(17) DEFAULT NULL,
-  `beneficiaries` varchar(5) DEFAULT NULL,
-  `status` varchar(1) DEFAULT NULL,
-  `annotation` varchar(1) DEFAULT NULL,
+  `year_str` varchar(4) DEFAULT NULL,
+  `medication_assisted_treatment` varchar(29) DEFAULT NULL,
+  `beneficiaries` varchar(13) DEFAULT NULL,
+  `status` varchar(6) DEFAULT NULL,
+  `annotation` varchar(10) DEFAULT NULL,
   `annotation_description` varchar(33) DEFAULT NULL,
-  `date_of_data` varchar(9) DEFAULT NULL
+  `date_of_data` varchar(12) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -16243,40 +20828,6 @@ CREATE TABLE `mental_health_residential_programs` (
   `city` varchar(19) DEFAULT NULL,
   `zip_code` varchar(5) DEFAULT NULL,
   `certificate_number` varchar(15) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `modified_retail_food_env`
---
-
-DROP TABLE IF EXISTS `modified_retail_food_env`;
-CREATE TABLE `modified_retail_food_env` (
-  `ind_id` varchar(63) DEFAULT NULL,
-  `ind_definition` varchar(63) DEFAULT NULL,
-  `reportyear` varchar(63) DEFAULT NULL,
-  `race_eth_code` varchar(63) DEFAULT NULL,
-  `race_eth_name` varchar(63) DEFAULT NULL,
-  `geotype` varchar(63) DEFAULT NULL,
-  `geotypevalue` varchar(63) DEFAULT NULL,
-  `geoname` varchar(63) DEFAULT NULL,
-  `county_name` varchar(63) DEFAULT NULL,
-  `county_fips` varchar(63) DEFAULT NULL,
-  `region_name` varchar(63) DEFAULT NULL,
-  `region_code` varchar(63) DEFAULT NULL,
-  `strata_one_code` varchar(63) DEFAULT NULL,
-  `strata_one_name` varchar(63) DEFAULT NULL,
-  `strata_two_code` int DEFAULT NULL,
-  `strata_two_name` varchar(63) DEFAULT NULL,
-  `numerator` int DEFAULT NULL,
-  `denominator` int DEFAULT NULL,
-  `estimate` float DEFAULT NULL,
-  `ll_95ci` float DEFAULT NULL,
-  `ul_95ci` float DEFAULT NULL,
-  `se` float DEFAULT NULL,
-  `rse` float DEFAULT NULL,
-  `ca_decile` int DEFAULT NULL,
-  `ca_rr` float DEFAULT NULL,
-  `version` varchar(63) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -16320,7 +20871,7 @@ DROP TABLE IF EXISTS `month_of_elig_delvry_sys_and_health_plan_by_county_medi_ca
 CREATE TABLE `month_of_elig_delvry_sys_and_health_plan_by_county_medi_cal_elig` (
   `month_of_eligibility` varchar(7) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
-  `health_delivery_system` varchar(15) DEFAULT NULL,
+  `health_delivery_system_name` varchar(15) DEFAULT NULL,
   `health_plan` varchar(57) DEFAULT NULL,
   `total_eligibles` varchar(10) DEFAULT NULL,
   `annotation_code` varchar(1) DEFAULT NULL,
@@ -16412,6 +20963,18 @@ CREATE TABLE `mortality_following_hip_fracture_repair_in_california_hospitals` (
   `risk_adjusted_mortality_rate` varchar(5) DEFAULT NULL,
   `hospital_ratings` varchar(11) DEFAULT NULL,
   `location` varchar(27) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `mr20151641hospitaldatafinutil`
+--
+
+DROP TABLE IF EXISTS `mr20151641hospitaldatafinutil`;
+CREATE TABLE `mr20151641hospitaldatafinutil` (
+  `oshpd_id` varchar(9) DEFAULT NULL,
+  `rpe` varchar(10) DEFAULT NULL,
+  `pagecolumnline` varchar(14) DEFAULT NULL,
+  `values_str` varchar(67) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -16942,6 +21505,20 @@ CREATE TABLE `newly_medicare_eligible_age_and_gender` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `notice_of_inaction_noi_report`
+--
+
+DROP TABLE IF EXISTS `notice_of_inaction_noi_report`;
+CREATE TABLE `notice_of_inaction_noi_report` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `calendar_month` varchar(14) DEFAULT NULL,
+  `total_medi_cal_covered_ca_applications_received_` varchar(51) DEFAULT NULL,
+  `total_medi_cal_applications_pending_45_days_` varchar(44) DEFAULT NULL,
+  `_pct_total_medi_cal_applications_pending_45_days_` varchar(47) DEFAULT NULL,
+  `total_noi_sent_` varchar(15) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `number_and_percentage_of_sexually_transmitted_infection_118d8291`
 --
 
@@ -17108,20 +21685,65 @@ CREATE TABLE `older_americans_act_title_iiic_2_nutrition_services_hom_f517466d` 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `open_data_publishing`
+-- Table structure for table `open_data_publishing_plan_2016_17`
 --
 
-DROP TABLE IF EXISTS `open_data_publishing`;
-CREATE TABLE `open_data_publishing` (
-  `publishing_quarter` varchar(7) DEFAULT NULL,
-  `publishing_year` varchar(4) DEFAULT NULL,
-  `dataset_name` varchar(201) DEFAULT NULL,
-  `dataset_description` varchar(1706) DEFAULT NULL,
-  `dataset_category` varchar(37) DEFAULT NULL,
+DROP TABLE IF EXISTS `open_data_publishing_plan_2016_17`;
+CREATE TABLE `open_data_publishing_plan_2016_17` (
+  `publishing_quarter` varchar(18) DEFAULT NULL,
+  `dataset_name` varchar(132) DEFAULT NULL,
+  `dataset_description` varchar(1704) DEFAULT NULL,
   `publishing_department` varchar(59) DEFAULT NULL,
-  `published_date` varchar(22) DEFAULT NULL,
+  `dataset_category` varchar(23) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `open_data_publishing_plan_2017_18`
+--
+
+DROP TABLE IF EXISTS `open_data_publishing_plan_2017_18`;
+CREATE TABLE `open_data_publishing_plan_2017_18` (
+  `publishing_quarter` varchar(18) DEFAULT NULL,
+  `publishing_year` varchar(15) DEFAULT NULL,
+  `dataset_name` varchar(142) DEFAULT NULL,
+  `dataset_description` varchar(1706) DEFAULT NULL,
+  `publishing_department` varchar(59) DEFAULT NULL,
+  `dataset_category` varchar(23) DEFAULT NULL,
   `status` varchar(9) DEFAULT NULL,
+  `published_date` varchar(22) DEFAULT NULL,
   `notes` varchar(90) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `open_data_publishing_plan_2018_19`
+--
+
+DROP TABLE IF EXISTS `open_data_publishing_plan_2018_19`;
+CREATE TABLE `open_data_publishing_plan_2018_19` (
+  `publishing_quarter` varchar(18) DEFAULT NULL,
+  `publishing_year` varchar(15) DEFAULT NULL,
+  `dataset_name` varchar(201) DEFAULT NULL,
+  `dataset_description` varchar(1542) DEFAULT NULL,
+  `publishing_department` varchar(59) DEFAULT NULL,
+  `dataset_category` varchar(37) DEFAULT NULL,
+  `status` varchar(7) DEFAULT NULL,
+  `published_date` varchar(14) DEFAULT NULL,
+  `notes` varchar(5) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `open_data_publishing_plan_2019_20`
+--
+
+DROP TABLE IF EXISTS `open_data_publishing_plan_2019_20`;
+CREATE TABLE `open_data_publishing_plan_2019_20` (
+  `dataset_name` varchar(114) DEFAULT NULL,
+  `description` varchar(548) DEFAULT NULL,
+  `publishing_department` varchar(59) DEFAULT NULL,
+  `target_publishing_quarter` varchar(25) DEFAULT NULL,
+  `target_publishing_year` varchar(22) DEFAULT NULL,
+  `dataset_category` varchar(23) DEFAULT NULL,
+  `None` varchar(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -17320,9 +21942,9 @@ CREATE TABLE `pace_rates_calendar_year_2024` (
 
 DROP TABLE IF EXISTS `patient_demographics_age`;
 CREATE TABLE `patient_demographics_age` (
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `grouping_name` varchar(9) DEFAULT NULL,
-  `patient_counts` varchar(4) DEFAULT NULL
+  `patient_counts` varchar(14) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -17331,9 +21953,9 @@ CREATE TABLE `patient_demographics_age` (
 
 DROP TABLE IF EXISTS `patient_demographics_citizenship_status`;
 CREATE TABLE `patient_demographics_citizenship_status` (
-  `fiscal_year` varchar(4) DEFAULT NULL,
-  `citizenship_status` varchar(7) DEFAULT NULL,
-  `patient_counts` varchar(4) DEFAULT NULL
+  `fiscal_year` varchar(11) DEFAULT NULL,
+  `citizenship_status` varchar(18) DEFAULT NULL,
+  `patient_counts` varchar(14) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -17342,9 +21964,9 @@ CREATE TABLE `patient_demographics_citizenship_status` (
 
 DROP TABLE IF EXISTS `patient_demographics_counts_by_hospital`;
 CREATE TABLE `patient_demographics_counts_by_hospital` (
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `hospital` varchar(18) DEFAULT NULL,
-  `patient_counts` varchar(4) DEFAULT NULL
+  `patient_counts` varchar(14) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -17353,9 +21975,9 @@ CREATE TABLE `patient_demographics_counts_by_hospital` (
 
 DROP TABLE IF EXISTS `patient_demographics_education`;
 CREATE TABLE `patient_demographics_education` (
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `education` varchar(21) DEFAULT NULL,
-  `patient_counts` varchar(4) DEFAULT NULL
+  `patient_counts` varchar(14) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -17364,9 +21986,9 @@ CREATE TABLE `patient_demographics_education` (
 
 DROP TABLE IF EXISTS `patient_demographics_ethnicity`;
 CREATE TABLE `patient_demographics_ethnicity` (
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `ethnicity` varchar(13) DEFAULT NULL,
-  `patient_counts` varchar(4) DEFAULT NULL
+  `patient_counts` varchar(14) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -17375,9 +21997,9 @@ CREATE TABLE `patient_demographics_ethnicity` (
 
 DROP TABLE IF EXISTS `patient_demographics_language_at_home`;
 CREATE TABLE `patient_demographics_language_at_home` (
-  `fiscal_year` varchar(4) DEFAULT NULL,
-  `language_spoken_at_home` varchar(13) DEFAULT NULL,
-  `patient_counts` varchar(4) DEFAULT NULL
+  `fiscal_year` varchar(11) DEFAULT NULL,
+  `language_spoken_at_home` varchar(23) DEFAULT NULL,
+  `patient_counts` varchar(14) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -17386,9 +22008,9 @@ CREATE TABLE `patient_demographics_language_at_home` (
 
 DROP TABLE IF EXISTS `patient_demographics_level_of_care`;
 CREATE TABLE `patient_demographics_level_of_care` (
-  `fiscal_year` varchar(4) DEFAULT NULL,
-  `level_of_care` varchar(11) DEFAULT NULL,
-  `count_of_caseid` varchar(4) DEFAULT NULL
+  `fiscal_year` varchar(11) DEFAULT NULL,
+  `level_of_care` varchar(13) DEFAULT NULL,
+  `count_of_caseid` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -17397,9 +22019,9 @@ CREATE TABLE `patient_demographics_level_of_care` (
 
 DROP TABLE IF EXISTS `patient_demographics_marital_status`;
 CREATE TABLE `patient_demographics_marital_status` (
-  `fiscal_year` varchar(4) DEFAULT NULL,
+  `fiscal_year` varchar(11) DEFAULT NULL,
   `marital_status` varchar(18) DEFAULT NULL,
-  `patient_counts` varchar(4) DEFAULT NULL
+  `patient_counts` varchar(14) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -17408,9 +22030,9 @@ CREATE TABLE `patient_demographics_marital_status` (
 
 DROP TABLE IF EXISTS `patient_demographics_region`;
 CREATE TABLE `patient_demographics_region` (
-  `years` varchar(4) DEFAULT NULL,
+  `years` varchar(5) DEFAULT NULL,
   `region` varchar(21) DEFAULT NULL,
-  `patient_counts` varchar(4) DEFAULT NULL
+  `patient_counts` varchar(14) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -17419,9 +22041,9 @@ CREATE TABLE `patient_demographics_region` (
 
 DROP TABLE IF EXISTS `patient_demographics_sex`;
 CREATE TABLE `patient_demographics_sex` (
-  `fiscal_year` varchar(4) DEFAULT NULL,
-  `sex` varchar(1) DEFAULT NULL,
-  `patient_counts` varchar(4) DEFAULT NULL
+  `fiscal_year` varchar(11) DEFAULT NULL,
+  `sex` varchar(3) DEFAULT NULL,
+  `patient_counts` varchar(14) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -17438,114 +22060,6 @@ CREATE TABLE `patients_leaving_california_hospitals_against_medical_advice` (
   `all_discharges` varchar(7) DEFAULT NULL,
   `ama_discharges` varchar(5) DEFAULT NULL,
   `ama_discharges_more_than_once` varchar(5) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `payments_snapshot_enrollment`
---
-
-DROP TABLE IF EXISTS `payments_snapshot_enrollment`;
-CREATE TABLE `payments_snapshot_enrollment` (
-  `product_type` varchar(63) DEFAULT NULL,
-  `reporting_year` int DEFAULT NULL,
-  `claim_type` varchar(63) DEFAULT NULL,
-  `payer_type` varchar(63) DEFAULT NULL,
-  `record_type` varchar(63) DEFAULT NULL,
-  `metric_id` int DEFAULT NULL,
-  `metric_name` varchar(63) DEFAULT NULL,
-  `count` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `payments_snapshot_medical`
---
-
-DROP TABLE IF EXISTS `payments_snapshot_medical`;
-CREATE TABLE `payments_snapshot_medical` (
-  `procedure_code` char(5) DEFAULT NULL,
-  `procedure_code_type` varchar(31) DEFAULT NULL,
-  `procedure_category` varchar(127) DEFAULT NULL,
-  `reporting_year` int DEFAULT NULL,
-  `type_of_setting` varchar(63) DEFAULT NULL,
-  `payer_type` varchar(63) DEFAULT NULL,
-  `record_count` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `payments_snapshot_pharmaceutical`
---
-
-DROP TABLE IF EXISTS `payments_snapshot_pharmaceutical`;
-CREATE TABLE `payments_snapshot_pharmaceutical` (
-  `national_drug_code` char(11) DEFAULT NULL,
-  `drug_name` varchar(63) DEFAULT NULL,
-  `reporting_year` int DEFAULT NULL,
-  `drug_class` varchar(63) DEFAULT NULL,
-  `brand_generic` varchar(63) DEFAULT NULL,
-  `payer_type` varchar(63) DEFAULT NULL,
-  `prescription_count` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `pccu_facilities`
---
-
-DROP TABLE IF EXISTS `pccu_facilities`;
-CREATE TABLE `pccu_facilities` (
-  `pk` int NOT NULL,
-  `sheetname` varchar(63) DEFAULT NULL,
-  `file_pk` int DEFAULT NULL,
-  `fac_acquire_equip_over_500k` char(1) DEFAULT NULL,
-  `fac_address_one` varchar(127) DEFAULT NULL,
-  `fac_address_two` varchar(63) DEFAULT NULL,
-  `fac_admin_name` varchar(127) DEFAULT NULL,
-  `fac_city` varchar(63) DEFAULT NULL,
-  `fac_name` varchar(127) DEFAULT NULL,
-  `fac_no` int DEFAULT NULL,
-  `fac_operated_this_yr` char(1) DEFAULT NULL,
-  `fac_oper_curryr` varchar(11) DEFAULT NULL,
-  `fac_op_per_begin_dt` varchar(19) DEFAULT NULL,
-  `fac_op_per_end_dt` varchar(19) DEFAULT NULL,
-  `fac_par_corp_bus_addr` varchar(127) DEFAULT NULL,
-  `fac_par_corp_city` varchar(63) DEFAULT NULL,
-  `fac_par_corp_name` varchar(127) DEFAULT NULL,
-  `fac_par_corp_state` varchar(31) DEFAULT NULL,
-  `fac_par_corp_zip` varchar(15) DEFAULT NULL,
-  `fac_phone` varchar(31) DEFAULT NULL,
-  `fac_str_addr` varchar(127) DEFAULT NULL,
-  `fac_zip` varchar(15) DEFAULT NULL,
-  `fac_zipcode` varchar(15) DEFAULT NULL,
-  `pcc_health_serv_medical` char(1) DEFAULT NULL,
-  `pcc_health_serv_dental` char(1) DEFAULT NULL,
-  `pcc_health_serv_vision` char(1) DEFAULT NULL,
-  `pcc_health_serv_mental_health` char(1) DEFAULT NULL,
-  `pcc_health_serv_substance_abuse` char(1) DEFAULT NULL,
-  `pcc_health_serv_domestic_violence` char(1) DEFAULT NULL,
-  `pcc_health_serv_basic_lab` char(1) DEFAULT NULL,
-  `pcc_health_serv_radiological_services` char(1) DEFAULT NULL,
-  `pcc_health_serv_urgent_care` char(1) DEFAULT NULL,
-  `pcc_health_serv_pharmacy` char(1) DEFAULT NULL,
-  `pcc_health_serv_womens_health` char(1) DEFAULT NULL,
-  `parent_address_one` varchar(127) DEFAULT NULL,
-  `parent_address_two` varchar(63) DEFAULT NULL,
-  `parent_city` varchar(127) DEFAULT NULL,
-  `parent_name` varchar(127) DEFAULT NULL,
-  `parent_state` varchar(15) DEFAULT NULL,
-  `parent_zipcode` varchar(15) DEFAULT NULL,
-  PRIMARY KEY (`pk`),
-  UNIQUE KEY `file_pk` (`file_pk`,`fac_no`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `pccu_files`
---
-
-DROP TABLE IF EXISTS `pccu_files`;
-CREATE TABLE `pccu_files` (
-  `pk` int NOT NULL,
-  `name` varchar(127) DEFAULT NULL,
-  `tag` varchar(15) DEFAULT NULL,
-  PRIMARY KEY (`pk`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -17572,12 +22086,12 @@ CREATE TABLE `pediatric_quality_indicators` (
   `county` varchar(15) DEFAULT NULL,
   `hospital` varchar(79) DEFAULT NULL,
   `oshpdid` varchar(9) DEFAULT NULL,
-  `ind_ind_condition` varchar(24) DEFAULT NULL,
+  `condition_name` varchar(24) DEFAULT NULL,
   `rate` varchar(4) DEFAULT NULL,
   `num_events` varchar(3) DEFAULT NULL,
   `num_cases` varchar(6) DEFAULT NULL,
   `hospital_rating` varchar(11) DEFAULT NULL,
-  `longitude` varchar(12) DEFAULT NULL,
+  `longitude` varchar(13) DEFAULT NULL,
   `latitude` varchar(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -17596,14 +22110,36 @@ CREATE TABLE `percent_of_all_family_pact_clients_served_with_sexually_b6c058fc` 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `percentage_of_covid_19_deaths`
+-- Table structure for table `percentage_of_deaths_attributed_to_covid_19_in`
 --
 
-DROP TABLE IF EXISTS `percentage_of_covid_19_deaths`;
-CREATE TABLE `percentage_of_covid_19_deaths` (
+DROP TABLE IF EXISTS `percentage_of_deaths_attributed_to_covid_19_in`;
+CREATE TABLE `percentage_of_deaths_attributed_to_covid_19_in` (
   `season` varchar(9) DEFAULT NULL,
   `weekending` varchar(10) DEFAULT NULL,
   `percovcodeddeaths` varchar(17) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `percentage_of_deaths_attributed_to_influenza`
+--
+
+DROP TABLE IF EXISTS `percentage_of_deaths_attributed_to_influenza`;
+CREATE TABLE `percentage_of_deaths_attributed_to_influenza` (
+  `season` varchar(9) DEFAULT NULL,
+  `weekending` varchar(10) DEFAULT NULL,
+  `perflucodeddeaths` varchar(18) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `percentage_of_deaths_attributed_to_rsv_in`
+--
+
+DROP TABLE IF EXISTS `percentage_of_deaths_attributed_to_rsv_in`;
+CREATE TABLE `percentage_of_deaths_attributed_to_rsv_in` (
+  `season` varchar(9) DEFAULT NULL,
+  `weekending` varchar(10) DEFAULT NULL,
+  `perrsvcodeddeaths` varchar(19) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -17621,33 +22157,22 @@ CREATE TABLE `percentage_of_fpact_clients_tested_for_selected_stis_by_sex` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `percentage_of_influenza_detect_at_clinical`
+-- Table structure for table `percentage_of_influenza_detections_at_clinical`
 --
 
-DROP TABLE IF EXISTS `percentage_of_influenza_detect_at_clinical`;
-CREATE TABLE `percentage_of_influenza_detect_at_clinical` (
+DROP TABLE IF EXISTS `percentage_of_influenza_detections_at_clinical`;
+CREATE TABLE `percentage_of_influenza_detections_at_clinical` (
   `season` varchar(9) DEFAULT NULL,
   `weekending` varchar(10) DEFAULT NULL,
   `perflu` varchar(18) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `percentage_of_infouenza_deaths`
+-- Table structure for table `percentage_of_other_respiratory_pathogen`
 --
 
-DROP TABLE IF EXISTS `percentage_of_infouenza_deaths`;
-CREATE TABLE `percentage_of_infouenza_deaths` (
-  `season` varchar(9) DEFAULT NULL,
-  `weekending` varchar(10) DEFAULT NULL,
-  `perflucodeddeaths` varchar(18) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `percentage_of_other_respitory`
---
-
-DROP TABLE IF EXISTS `percentage_of_other_respitory`;
-CREATE TABLE `percentage_of_other_respitory` (
+DROP TABLE IF EXISTS `percentage_of_other_respiratory_pathogen`;
+CREATE TABLE `percentage_of_other_respiratory_pathogen` (
   `virus` varchar(11) DEFAULT NULL,
   `weekending` varchar(10) DEFAULT NULL,
   `percent` varchar(17) DEFAULT NULL
@@ -17676,47 +22201,36 @@ CREATE TABLE `percentage_of_physically_fit_students_lghc_indicator_8` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `percentage_of_rsv_deaths`
+-- Table structure for table `percentage_of_rsv_admissions_at_kaiser`
 --
 
-DROP TABLE IF EXISTS `percentage_of_rsv_deaths`;
-CREATE TABLE `percentage_of_rsv_deaths` (
-  `season` varchar(9) DEFAULT NULL,
-  `weekending` varchar(10) DEFAULT NULL,
-  `perrsvcodeddeaths` varchar(19) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `percentage_of_sars_detect_from_test`
---
-
-DROP TABLE IF EXISTS `percentage_of_sars_detect_from_test`;
-CREATE TABLE `percentage_of_sars_detect_from_test` (
-  `season` varchar(9) DEFAULT NULL,
-  `weekending` varchar(10) DEFAULT NULL,
-  `percovsars` varchar(16) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `percentage_rsv_admissions_kaiser`
---
-
-DROP TABLE IF EXISTS `percentage_rsv_admissions_kaiser`;
-CREATE TABLE `percentage_rsv_admissions_kaiser` (
+DROP TABLE IF EXISTS `percentage_of_rsv_admissions_at_kaiser`;
+CREATE TABLE `percentage_of_rsv_admissions_at_kaiser` (
   `season` varchar(9) DEFAULT NULL,
   `weekending` varchar(10) DEFAULT NULL,
   `rsvper_tot` varchar(18) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `percentage_rsv_detect_clinical`
+-- Table structure for table `percentage_of_rsv_detections_at_clinical`
 --
 
-DROP TABLE IF EXISTS `percentage_rsv_detect_clinical`;
-CREATE TABLE `percentage_rsv_detect_clinical` (
+DROP TABLE IF EXISTS `percentage_of_rsv_detections_at_clinical`;
+CREATE TABLE `percentage_of_rsv_detections_at_clinical` (
   `season` varchar(9) DEFAULT NULL,
   `weekending` varchar(10) DEFAULT NULL,
   `perrsv` varchar(18) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `percentage_of_sars_cov_2_detections_from_test`
+--
+
+DROP TABLE IF EXISTS `percentage_of_sars_cov_2_detections_from_test`;
+CREATE TABLE `percentage_of_sars_cov_2_detections_from_test` (
+  `season` varchar(9) DEFAULT NULL,
+  `weekending` varchar(10) DEFAULT NULL,
+  `percovsars` varchar(16) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -18017,26 +22531,26 @@ CREATE TABLE `preterm_and_very_preterm_births_by_race_ethnicity` (
 
 DROP TABLE IF EXISTS `primary_care_shortage_area_pcsa`;
 CREATE TABLE `primary_care_shortage_area_pcsa` (
-  `fid` varchar(3) DEFAULT NULL,
-  `objectid` varchar(3) DEFAULT NULL,
-  `unit_count` varchar(2) DEFAULT NULL,
-  `cnty_fips` varchar(3) DEFAULT NULL,
+  `fid` varchar(6) DEFAULT NULL,
+  `objectid` varchar(8) DEFAULT NULL,
+  `unit_count` varchar(10) DEFAULT NULL,
+  `cnty_fips` varchar(9) DEFAULT NULL,
   `mssa_id` varchar(8) DEFAULT NULL,
-  `definition` varchar(8) DEFAULT NULL,
+  `definition` varchar(10) DEFAULT NULL,
   `area_sqmi` varchar(13) DEFAULT NULL,
   `mssa_count` varchar(15) DEFAULT NULL,
   `mssa_name` varchar(153) DEFAULT NULL,
-  `total_popu` varchar(6) DEFAULT NULL,
-  `est_physic` varchar(5) DEFAULT NULL,
-  `est_fnppa` varchar(5) DEFAULT NULL,
-  `est_provid` varchar(6) DEFAULT NULL,
-  `provider_r` varchar(7) DEFAULT NULL,
-  `score_prov` varchar(1) DEFAULT NULL,
-  `pop_100fpl` varchar(5) DEFAULT NULL,
-  `pct_100fpl` varchar(5) DEFAULT NULL,
-  `score_pove` varchar(1) DEFAULT NULL,
-  `score_tota` varchar(2) DEFAULT NULL,
-  `pcsa` varchar(3) DEFAULT NULL,
+  `total_popu` varchar(10) DEFAULT NULL,
+  `est_physic` varchar(10) DEFAULT NULL,
+  `est_fnppa` varchar(9) DEFAULT NULL,
+  `est_provid` varchar(10) DEFAULT NULL,
+  `provider_r` varchar(10) DEFAULT NULL,
+  `score_prov` varchar(10) DEFAULT NULL,
+  `pop_100fpl` varchar(10) DEFAULT NULL,
+  `pct_100fpl` varchar(10) DEFAULT NULL,
+  `score_pove` varchar(10) DEFAULT NULL,
+  `score_tota` varchar(10) DEFAULT NULL,
+  `pcsa` varchar(4) DEFAULT NULL,
   `effective` varchar(22) DEFAULT NULL,
   `shape_area` varchar(16) DEFAULT NULL,
   `shape_length` varchar(16) DEFAULT NULL
@@ -18074,18 +22588,18 @@ CREATE TABLE `primary_care_shortage_areas_pcsa` (
   `mssa_county` varchar(15) DEFAULT NULL,
   `mssa_id` varchar(8) DEFAULT NULL,
   `mssa_name` varchar(153) DEFAULT NULL,
-  `total_population` varchar(6) DEFAULT NULL,
-  `est_physicians` varchar(5) DEFAULT NULL,
-  `est_fnppa` varchar(5) DEFAULT NULL,
-  `est_providers` varchar(6) DEFAULT NULL,
-  `provider_ratio` varchar(7) DEFAULT NULL,
-  `score_provider_ratio` varchar(1) DEFAULT NULL,
-  `pop_100fpl` varchar(5) DEFAULT NULL,
-  `pct_100fpl` varchar(5) DEFAULT NULL,
-  `score_poverty` varchar(1) DEFAULT NULL,
-  `score_total` varchar(2) DEFAULT NULL,
-  `pcsa` varchar(3) DEFAULT NULL,
-  `effective_date` varchar(9) DEFAULT NULL
+  `total_population` varchar(16) DEFAULT NULL,
+  `est_physicians` varchar(14) DEFAULT NULL,
+  `est_fnppa` varchar(9) DEFAULT NULL,
+  `est_providers` varchar(13) DEFAULT NULL,
+  `provider_ratio` varchar(14) DEFAULT NULL,
+  `score_provider_ratio` varchar(20) DEFAULT NULL,
+  `pop_100fpl` varchar(10) DEFAULT NULL,
+  `pct_100fpl` varchar(10) DEFAULT NULL,
+  `score_poverty` varchar(13) DEFAULT NULL,
+  `score_total` varchar(11) DEFAULT NULL,
+  `pcsa` varchar(4) DEFAULT NULL,
+  `effective_date` varchar(14) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -18121,7 +22635,7 @@ CREATE TABLE `primary_spoken_language_of_individuals_selecting_covere_7673f48d` 
   `year` varchar(4) DEFAULT NULL,
   `quarter_reporting` varchar(7) DEFAULT NULL,
   `primary_spoken_langauge` varchar(12) DEFAULT NULL,
-  `number_of_eligible_individuals_who_plan_selected` varchar(7) DEFAULT NULL
+  `number_of_eligible_individuals_who_plan_selected` varchar(9) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -18145,7 +22659,7 @@ CREATE TABLE `primary_written_language_of_individuals_selecting_cover_4baa33c9` 
   `year` varchar(4) DEFAULT NULL,
   `quarter_reporting` varchar(7) DEFAULT NULL,
   `primary_written_langauge` varchar(29) DEFAULT NULL,
-  `number_of_eligible_individuals_who_plan_selected` varchar(7) DEFAULT NULL
+  `number_of_eligible_individuals_who_plan_selected` varchar(9) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -18215,6 +22729,19 @@ CREATE TABLE `proportion_of_high_school_students_who_smoked_cigarette_145d810b` 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `provider_suspended_and_ineligible_list_s_i_list`
+--
+
+DROP TABLE IF EXISTS `provider_suspended_and_ineligible_list_s_i_list`;
+CREATE TABLE `provider_suspended_and_ineligible_list_s_i_list` (
+  `last_name` varchar(52) DEFAULT NULL,
+  `first_name` varchar(15) DEFAULT NULL,
+  `middle_name` varchar(23) DEFAULT NULL,
+  `a_k_a_also_known_as` varchar(316) DEFAULT NULL,
+  `None` varchar(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `providers_delivering_family_planning_access_care_and_tr_3acefc17`
 --
 
@@ -18233,50 +22760,6 @@ CREATE TABLE `providers_delivering_family_planning_access_care_and_tr_3acefc17` 
   `percentage_change_previous_fy_labs` varchar(7) DEFAULT NULL,
   `total_number_providers` varchar(5) DEFAULT NULL,
   `percentage_change_previous_fy_total_providers` varchar(6) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `providers_suspended_ineligible`
---
-
-DROP TABLE IF EXISTS `providers_suspended_ineligible`;
-CREATE TABLE `providers_suspended_ineligible` (
-  `last_name` varchar(127) DEFAULT NULL,
-  `first_name` varchar(63) DEFAULT NULL,
-  `middle_name` varchar(63) DEFAULT NULL,
-  `doing_business_as` varchar(511) DEFAULT NULL,
-  `address` varchar(511) DEFAULT NULL,
-  `provider_type` varchar(255) DEFAULT NULL,
-  `license_number` varchar(63) DEFAULT NULL,
-  `provider_number` varchar(1027) DEFAULT NULL,
-  `date_of_suspension` varchar(10) DEFAULT NULL,
-  `active_period` varchar(63) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `providers_suspended_ineligible_us`
---
-
-DROP TABLE IF EXISTS `providers_suspended_ineligible_us`;
-CREATE TABLE `providers_suspended_ineligible_us` (
-  `lastname` varchar(63) DEFAULT NULL,
-  `firstname` varchar(31) DEFAULT NULL,
-  `midname` varchar(31) DEFAULT NULL,
-  `busname` varchar(31) DEFAULT NULL,
-  `general` varchar(31) DEFAULT NULL,
-  `specialty` varchar(31) DEFAULT NULL,
-  `upin` varchar(31) DEFAULT NULL,
-  `npi` varchar(31) DEFAULT NULL,
-  `dob` varchar(31) DEFAULT NULL,
-  `address` varchar(31) DEFAULT NULL,
-  `city` varchar(31) DEFAULT NULL,
-  `state` varchar(31) DEFAULT NULL,
-  `zip` varchar(31) DEFAULT NULL,
-  `excltype` varchar(31) DEFAULT NULL,
-  `excldate` varchar(31) DEFAULT NULL,
-  `reindate` varchar(31) DEFAULT NULL,
-  `waiverdate` varchar(31) DEFAULT NULL,
-  `wvrstate` varchar(31) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -18464,6 +22947,74 @@ CREATE TABLE `public_health_laboratory_influenza_respiratory_virus_su_e8a51f2c` 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `public_hospital_redesign_and_incentives_in_medi_cal_pri_a93ac809`
+--
+
+DROP TABLE IF EXISTS `public_hospital_redesign_and_incentives_in_medi_cal_pri_a93ac809`;
+CREATE TABLE `public_hospital_redesign_and_incentives_in_medi_cal_pri_a93ac809` (
+  `dph_` varchar(9) DEFAULT NULL,
+  `None` varchar(14) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `public_hospital_redesign_and_incentives_in_medi_cal_pri_b389fb68`
+--
+
+DROP TABLE IF EXISTS `public_hospital_redesign_and_incentives_in_medi_cal_pri_b389fb68`;
+CREATE TABLE `public_hospital_redesign_and_incentives_in_medi_cal_pri_b389fb68` (
+  `year_dph_` varchar(4) DEFAULT NULL,
+  `None` varchar(15) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `public_hospital_redesign_and_incentives_in_medi_cal_pri_cc3a2adb`
+--
+
+DROP TABLE IF EXISTS `public_hospital_redesign_and_incentives_in_medi_cal_pri_cc3a2adb`;
+CREATE TABLE `public_hospital_redesign_and_incentives_in_medi_cal_pri_cc3a2adb` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `dph_dmph` varchar(8) DEFAULT NULL,
+  `hospital` varchar(70) DEFAULT NULL,
+  `number` varchar(8) DEFAULT NULL,
+  `metric` varchar(334) DEFAULT NULL,
+  `numerator` varchar(9) DEFAULT NULL,
+  `numerator_annotation_code` varchar(25) DEFAULT NULL,
+  `denominator` varchar(18) DEFAULT NULL,
+  `denominator_annotation_code` varchar(27) DEFAULT NULL,
+  `achievement_value` varchar(17) DEFAULT NULL,
+  `achievement_rate` varchar(19) DEFAULT NULL,
+  `achievement_rate_annotation_code` varchar(32) DEFAULT NULL,
+  `baseline_rate` varchar(13) DEFAULT NULL,
+  `baseline_rate_annotation_code` varchar(29) DEFAULT NULL,
+  `target_rate` varchar(11) DEFAULT NULL,
+  `allocation` varchar(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `public_hospital_redesign_and_incentives_in_medi_cal_pri_ccbe6603`
+--
+
+DROP TABLE IF EXISTS `public_hospital_redesign_and_incentives_in_medi_cal_pri_ccbe6603`;
+CREATE TABLE `public_hospital_redesign_and_incentives_in_medi_cal_pri_ccbe6603` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `type` varchar(4) DEFAULT NULL,
+  `hospital` varchar(70) DEFAULT NULL,
+  `metric_number` varchar(13) DEFAULT NULL,
+  `metric_name` varchar(334) DEFAULT NULL,
+  `numerator` varchar(9) DEFAULT NULL,
+  `numerator_annotation_code` varchar(25) DEFAULT NULL,
+  `denominator` varchar(16) DEFAULT NULL,
+  `denominator_annotation_code` varchar(27) DEFAULT NULL,
+  `achievement_value` varchar(26) DEFAULT NULL,
+  `achievement_rate` varchar(16) DEFAULT NULL,
+  `achievement_rate_annotation_code` varchar(32) DEFAULT NULL,
+  `baseline_rate` varchar(13) DEFAULT NULL,
+  `baseline_rate_annotation_code` varchar(29) DEFAULT NULL,
+  `target_rate` varchar(11) DEFAULT NULL,
+  `allocation` varchar(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `public_hospital_redesign_and_incentives_in_medi_cal_pri_fbaa592b`
 --
 
@@ -18474,16 +23025,16 @@ CREATE TABLE `public_hospital_redesign_and_incentives_in_medi_cal_pri_fbaa592b` 
   `hospital` varchar(70) DEFAULT NULL,
   `number` varchar(8) DEFAULT NULL,
   `metric` varchar(378) DEFAULT NULL,
-  `numerator` varchar(6) DEFAULT NULL,
-  `numerator_annotation_code` varchar(1) DEFAULT NULL,
+  `numerator` varchar(9) DEFAULT NULL,
+  `numerator_annotation_code` varchar(25) DEFAULT NULL,
   `denominator` varchar(12) DEFAULT NULL,
-  `denominator_annotation_code` varchar(1) DEFAULT NULL,
-  `achievement_value` varchar(1) DEFAULT NULL,
+  `denominator_annotation_code` varchar(27) DEFAULT NULL,
+  `achievement_value` varchar(17) DEFAULT NULL,
   `achievement_rate` varchar(17) DEFAULT NULL,
-  `achievement_rate_annotation_code` varchar(1) DEFAULT NULL,
-  `baseline_rate` varchar(3) DEFAULT NULL,
-  `baseline_rate_annotation_code` varchar(1) DEFAULT NULL,
-  `target_rate` varchar(3) DEFAULT NULL,
+  `achievement_rate_annotation_code` varchar(32) DEFAULT NULL,
+  `baseline_rate` varchar(13) DEFAULT NULL,
+  `baseline_rate_annotation_code` varchar(29) DEFAULT NULL,
+  `target_rate` varchar(11) DEFAULT NULL,
   `allocation` varchar(14) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -18835,7 +23386,7 @@ CREATE TABLE `race_of_individuals_selecting_covered_california_qualif_fb667bc0` 
   `year` varchar(4) DEFAULT NULL,
   `quarter_reporting` varchar(7) DEFAULT NULL,
   `race` varchar(36) DEFAULT NULL,
-  `number_of_eligible_individuals` varchar(6) DEFAULT NULL
+  `number_of_eligible_individuals` varchar(8) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -18963,6 +23514,290 @@ CREATE TABLE `readmissions_for_coronary_artery_bypass_graft_cabg_complications` 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `record_reconciliation_2015_2021_annual_data_file`
+--
+
+DROP TABLE IF EXISTS `record_reconciliation_2015_2021_annual_data_file`;
+CREATE TABLE `record_reconciliation_2015_2021_annual_data_file` (
+  `fileyear` varchar(11) DEFAULT NULL,
+  `program` varchar(11) DEFAULT NULL,
+  `level` varchar(14) DEFAULT NULL,
+  `number` varchar(20) DEFAULT NULL,
+  `person` varchar(8) DEFAULT NULL,
+  `cases` varchar(7) DEFAULT NULL,
+  `medi_cal` varchar(8) DEFAULT NULL,
+  `aca` varchar(7) DEFAULT NULL,
+  `fpact` varchar(6) DEFAULT NULL,
+  `calfresh` varchar(8) DEFAULT NULL,
+  `calworks` varchar(8) DEFAULT NULL,
+  `ihss` varchar(6) DEFAULT NULL,
+  `child_welfare` varchar(13) DEFAULT NULL,
+  `foster_care` varchar(11) DEFAULT NULL,
+  `dds` varchar(6) DEFAULT NULL,
+  `wic` varchar(7) DEFAULT NULL,
+  `black` varchar(7) DEFAULT NULL,
+  `white` varchar(7) DEFAULT NULL,
+  `hispanic` varchar(8) DEFAULT NULL,
+  `asian_pi` varchar(8) DEFAULT NULL,
+  `native_american` varchar(15) DEFAULT NULL,
+  `other_missing` varchar(13) DEFAULT NULL,
+  `female` varchar(7) DEFAULT NULL,
+  `male` varchar(7) DEFAULT NULL,
+  `unknown_other_gender` varchar(20) DEFAULT NULL,
+  `age1_missing` varchar(12) DEFAULT NULL,
+  `17_and_under` varchar(12) DEFAULT NULL,
+  `18_and_over` varchar(11) DEFAULT NULL,
+  `18_64` varchar(7) DEFAULT NULL,
+  `65_and_over` varchar(11) DEFAULT NULL,
+  `18_to_59` varchar(8) DEFAULT NULL,
+  `60_and_over` varchar(11) DEFAULT NULL,
+  `1_program` varchar(9) DEFAULT NULL,
+  `2_programs` varchar(10) DEFAULT NULL,
+  `3_programs` varchar(10) DEFAULT NULL,
+  `4_programs` varchar(10) DEFAULT NULL,
+  `5_plus_programs` varchar(11) DEFAULT NULL,
+  `1_department` varchar(12) DEFAULT NULL,
+  `2_departments` varchar(13) DEFAULT NULL,
+  `3_departments` varchar(13) DEFAULT NULL,
+  `4_departments` varchar(13) DEFAULT NULL,
+  `fc_age_missing` varchar(14) DEFAULT NULL,
+  `age_0` varchar(5) DEFAULT NULL,
+  `1_to_2` varchar(6) DEFAULT NULL,
+  `3_to_5` varchar(6) DEFAULT NULL,
+  `6_to_10` varchar(7) DEFAULT NULL,
+  `11_to_15` varchar(8) DEFAULT NULL,
+  `16_to_17` varchar(8) DEFAULT NULL,
+  `18_to_20` varchar(8) DEFAULT NULL,
+  `wic_age_adult_missing` varchar(21) DEFAULT NULL,
+  `less_than_19` varchar(12) DEFAULT NULL,
+  `20_to_24` varchar(8) DEFAULT NULL,
+  `25_to_29` varchar(8) DEFAULT NULL,
+  `30_to_34` varchar(8) DEFAULT NULL,
+  `35_and_over` varchar(11) DEFAULT NULL,
+  `wic_age_child_missing` varchar(21) DEFAULT NULL,
+  `wic_age_0` varchar(9) DEFAULT NULL,
+  `wic_age_1` varchar(9) DEFAULT NULL,
+  `wic_age_2` varchar(9) DEFAULT NULL,
+  `wic_age_3` varchar(9) DEFAULT NULL,
+  `wic_age_4` varchar(9) DEFAULT NULL,
+  `wic_age_5_to_19` varchar(15) DEFAULT NULL,
+  `wic_age_20_and_over` varchar(19) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `record_reconciliation_2015_2021_annual_masking_key`
+--
+
+DROP TABLE IF EXISTS `record_reconciliation_2015_2021_annual_masking_key`;
+CREATE TABLE `record_reconciliation_2015_2021_annual_masking_key` (
+  `fileyear` varchar(11) DEFAULT NULL,
+  `program` varchar(11) DEFAULT NULL,
+  `level` varchar(14) DEFAULT NULL,
+  `number` varchar(20) DEFAULT NULL,
+  `person` varchar(6) DEFAULT NULL,
+  `cases` varchar(5) DEFAULT NULL,
+  `medi_cal` varchar(8) DEFAULT NULL,
+  `aca` varchar(3) DEFAULT NULL,
+  `fpact` varchar(5) DEFAULT NULL,
+  `calfresh` varchar(8) DEFAULT NULL,
+  `calworks` varchar(8) DEFAULT NULL,
+  `ihss` varchar(4) DEFAULT NULL,
+  `child_welfare` varchar(13) DEFAULT NULL,
+  `foster_care` varchar(11) DEFAULT NULL,
+  `dds` varchar(3) DEFAULT NULL,
+  `wic` varchar(3) DEFAULT NULL,
+  `black` varchar(5) DEFAULT NULL,
+  `white` varchar(5) DEFAULT NULL,
+  `hispanic` varchar(8) DEFAULT NULL,
+  `asian_pi` varchar(8) DEFAULT NULL,
+  `native_american` varchar(15) DEFAULT NULL,
+  `other_missing` varchar(13) DEFAULT NULL,
+  `female` varchar(6) DEFAULT NULL,
+  `male` varchar(4) DEFAULT NULL,
+  `unknown_other_gender` varchar(20) DEFAULT NULL,
+  `age1_missing` varchar(12) DEFAULT NULL,
+  `17_and_under` varchar(12) DEFAULT NULL,
+  `18_and_over` varchar(11) DEFAULT NULL,
+  `18_64` varchar(5) DEFAULT NULL,
+  `65_and_over` varchar(11) DEFAULT NULL,
+  `18_to_59` varchar(8) DEFAULT NULL,
+  `60_and_over` varchar(11) DEFAULT NULL,
+  `1_program` varchar(9) DEFAULT NULL,
+  `2_programs` varchar(10) DEFAULT NULL,
+  `3_programs` varchar(10) DEFAULT NULL,
+  `4_programs` varchar(10) DEFAULT NULL,
+  `5_plus_programs` varchar(11) DEFAULT NULL,
+  `1_department` varchar(12) DEFAULT NULL,
+  `2_departments` varchar(13) DEFAULT NULL,
+  `3_departments` varchar(13) DEFAULT NULL,
+  `4_departments` varchar(13) DEFAULT NULL,
+  `fc_age_missing` varchar(14) DEFAULT NULL,
+  `age_0` varchar(5) DEFAULT NULL,
+  `1_to_2` varchar(6) DEFAULT NULL,
+  `3_to_5` varchar(6) DEFAULT NULL,
+  `6_to_10` varchar(7) DEFAULT NULL,
+  `11_to_15` varchar(8) DEFAULT NULL,
+  `16_to_17` varchar(8) DEFAULT NULL,
+  `18_to_20` varchar(8) DEFAULT NULL,
+  `wic_age_adult_missing` varchar(21) DEFAULT NULL,
+  `less_than_19` varchar(12) DEFAULT NULL,
+  `20_to_24` varchar(8) DEFAULT NULL,
+  `25_to_29` varchar(8) DEFAULT NULL,
+  `30_to_34` varchar(8) DEFAULT NULL,
+  `35_and_over` varchar(11) DEFAULT NULL,
+  `wic_age_child_missing` varchar(21) DEFAULT NULL,
+  `wic_age_0` varchar(9) DEFAULT NULL,
+  `wic_age_1` varchar(9) DEFAULT NULL,
+  `wic_age_2` varchar(9) DEFAULT NULL,
+  `wic_age_3` varchar(9) DEFAULT NULL,
+  `wic_age_4` varchar(9) DEFAULT NULL,
+  `wic_age_5_to_19` varchar(15) DEFAULT NULL,
+  `wic_age_20_and_over` varchar(19) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `record_reconciliation_2015_2021_july_data_file`
+--
+
+DROP TABLE IF EXISTS `record_reconciliation_2015_2021_july_data_file`;
+CREATE TABLE `record_reconciliation_2015_2021_july_data_file` (
+  `fileyear` varchar(11) DEFAULT NULL,
+  `program` varchar(11) DEFAULT NULL,
+  `level` varchar(14) DEFAULT NULL,
+  `number` varchar(20) DEFAULT NULL,
+  `person` varchar(8) DEFAULT NULL,
+  `cases` varchar(7) DEFAULT NULL,
+  `medi_cal` varchar(8) DEFAULT NULL,
+  `aca` varchar(7) DEFAULT NULL,
+  `fpact` varchar(6) DEFAULT NULL,
+  `calfresh` varchar(8) DEFAULT NULL,
+  `calworks` varchar(8) DEFAULT NULL,
+  `ihss` varchar(6) DEFAULT NULL,
+  `child_welfare` varchar(13) DEFAULT NULL,
+  `foster_care` varchar(11) DEFAULT NULL,
+  `dds` varchar(6) DEFAULT NULL,
+  `wic` varchar(7) DEFAULT NULL,
+  `black` varchar(7) DEFAULT NULL,
+  `white` varchar(7) DEFAULT NULL,
+  `hispanic` varchar(8) DEFAULT NULL,
+  `asian_pi` varchar(8) DEFAULT NULL,
+  `native_american` varchar(15) DEFAULT NULL,
+  `other_missing` varchar(13) DEFAULT NULL,
+  `female` varchar(7) DEFAULT NULL,
+  `male` varchar(7) DEFAULT NULL,
+  `unknown_other_gender` varchar(20) DEFAULT NULL,
+  `age1_missing` varchar(12) DEFAULT NULL,
+  `17_and_under` varchar(12) DEFAULT NULL,
+  `18_and_over` varchar(11) DEFAULT NULL,
+  `18_64` varchar(7) DEFAULT NULL,
+  `65_and_over` varchar(11) DEFAULT NULL,
+  `18_to_59` varchar(8) DEFAULT NULL,
+  `60_and_over` varchar(11) DEFAULT NULL,
+  `1_program` varchar(9) DEFAULT NULL,
+  `2_programs` varchar(10) DEFAULT NULL,
+  `3_programs` varchar(10) DEFAULT NULL,
+  `4_programs` varchar(10) DEFAULT NULL,
+  `5_plus_programs` varchar(11) DEFAULT NULL,
+  `1_department` varchar(12) DEFAULT NULL,
+  `2_departments` varchar(13) DEFAULT NULL,
+  `3_departments` varchar(13) DEFAULT NULL,
+  `4_departments` varchar(13) DEFAULT NULL,
+  `fc_age_missing` varchar(14) DEFAULT NULL,
+  `age_0` varchar(5) DEFAULT NULL,
+  `1_to_2` varchar(6) DEFAULT NULL,
+  `3_to_5` varchar(6) DEFAULT NULL,
+  `6_to_10` varchar(7) DEFAULT NULL,
+  `11_to_15` varchar(8) DEFAULT NULL,
+  `16_to_17` varchar(8) DEFAULT NULL,
+  `18_to_20` varchar(8) DEFAULT NULL,
+  `wic_age_adult_missing` varchar(21) DEFAULT NULL,
+  `less_than_19` varchar(12) DEFAULT NULL,
+  `20_to_24` varchar(8) DEFAULT NULL,
+  `25_to_29` varchar(8) DEFAULT NULL,
+  `30_to_34` varchar(8) DEFAULT NULL,
+  `35_and_over` varchar(11) DEFAULT NULL,
+  `wic_age_child_missing` varchar(21) DEFAULT NULL,
+  `wic_age_0` varchar(9) DEFAULT NULL,
+  `wic_age_1` varchar(9) DEFAULT NULL,
+  `wic_age_2` varchar(9) DEFAULT NULL,
+  `wic_age_3` varchar(9) DEFAULT NULL,
+  `wic_age_4` varchar(9) DEFAULT NULL,
+  `wic_age_5_to_19` varchar(15) DEFAULT NULL,
+  `wic_age_20_and_over` varchar(19) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `record_reconciliation_2015_2021_july_masking_key`
+--
+
+DROP TABLE IF EXISTS `record_reconciliation_2015_2021_july_masking_key`;
+CREATE TABLE `record_reconciliation_2015_2021_july_masking_key` (
+  `fileyear` varchar(11) DEFAULT NULL,
+  `program` varchar(11) DEFAULT NULL,
+  `level` varchar(14) DEFAULT NULL,
+  `number` varchar(20) DEFAULT NULL,
+  `person` varchar(6) DEFAULT NULL,
+  `cases` varchar(5) DEFAULT NULL,
+  `medi_cal` varchar(8) DEFAULT NULL,
+  `aca` varchar(3) DEFAULT NULL,
+  `fpact` varchar(5) DEFAULT NULL,
+  `calfresh` varchar(8) DEFAULT NULL,
+  `calworks` varchar(8) DEFAULT NULL,
+  `ihss` varchar(4) DEFAULT NULL,
+  `child_welfare` varchar(13) DEFAULT NULL,
+  `foster_care` varchar(11) DEFAULT NULL,
+  `dds` varchar(3) DEFAULT NULL,
+  `wic` varchar(3) DEFAULT NULL,
+  `black` varchar(5) DEFAULT NULL,
+  `white` varchar(5) DEFAULT NULL,
+  `hispanic` varchar(8) DEFAULT NULL,
+  `asian_pi` varchar(8) DEFAULT NULL,
+  `native_american` varchar(15) DEFAULT NULL,
+  `other_missing` varchar(13) DEFAULT NULL,
+  `female` varchar(6) DEFAULT NULL,
+  `male` varchar(4) DEFAULT NULL,
+  `unknown_other_gender` varchar(20) DEFAULT NULL,
+  `age1_missing` varchar(12) DEFAULT NULL,
+  `17_and_under` varchar(12) DEFAULT NULL,
+  `18_and_over` varchar(11) DEFAULT NULL,
+  `18_64` varchar(5) DEFAULT NULL,
+  `65_and_over` varchar(11) DEFAULT NULL,
+  `18_to_59` varchar(8) DEFAULT NULL,
+  `60_and_over` varchar(11) DEFAULT NULL,
+  `1_program` varchar(9) DEFAULT NULL,
+  `2_programs` varchar(10) DEFAULT NULL,
+  `3_programs` varchar(10) DEFAULT NULL,
+  `4_programs` varchar(10) DEFAULT NULL,
+  `5_plus_programs` varchar(11) DEFAULT NULL,
+  `1_department` varchar(12) DEFAULT NULL,
+  `2_departments` varchar(13) DEFAULT NULL,
+  `3_departments` varchar(13) DEFAULT NULL,
+  `4_departments` varchar(13) DEFAULT NULL,
+  `fc_age_missing` varchar(14) DEFAULT NULL,
+  `age_0` varchar(5) DEFAULT NULL,
+  `1_to_2` varchar(6) DEFAULT NULL,
+  `3_to_5` varchar(6) DEFAULT NULL,
+  `6_to_10` varchar(7) DEFAULT NULL,
+  `11_to_15` varchar(8) DEFAULT NULL,
+  `16_to_17` varchar(8) DEFAULT NULL,
+  `18_to_20` varchar(8) DEFAULT NULL,
+  `wic_age_adult_missing` varchar(21) DEFAULT NULL,
+  `less_than_19` varchar(12) DEFAULT NULL,
+  `20_to_24` varchar(8) DEFAULT NULL,
+  `25_to_29` varchar(8) DEFAULT NULL,
+  `30_to_34` varchar(8) DEFAULT NULL,
+  `35_and_over` varchar(11) DEFAULT NULL,
+  `wic_age_child_missing` varchar(21) DEFAULT NULL,
+  `wic_age_0` varchar(9) DEFAULT NULL,
+  `wic_age_1` varchar(9) DEFAULT NULL,
+  `wic_age_2` varchar(9) DEFAULT NULL,
+  `wic_age_3` varchar(9) DEFAULT NULL,
+  `wic_age_4` varchar(9) DEFAULT NULL,
+  `wic_age_5_to_19` varchar(15) DEFAULT NULL,
+  `wic_age_20_and_over` varchar(19) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `reference_medi_cal_aid_codes_and_aid_code_groups`
 --
 
@@ -19026,46 +23861,32 @@ CREATE TABLE `registered_nurse_shortage_areas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `research_projects_approved`
+-- Table structure for table `respiratory_virus_dashboard_metrics_deaths`
 --
 
-DROP TABLE IF EXISTS `research_projects_approved`;
-CREATE TABLE `research_projects_approved` (
-  `protocol_id` varchar(59) DEFAULT NULL,
-  `pi_last_name` varchar(18) DEFAULT NULL,
-  `pi_first_name` varchar(14) DEFAULT NULL,
-  `application_type` varchar(35) DEFAULT NULL,
-  `pi_organization` varchar(75) DEFAULT NULL,
-  `data_source` text,
-  `project_title` varchar(776) DEFAULT NULL,
-  `completed` date DEFAULT NULL,
-  `initial_approval` date DEFAULT NULL,
-  `latest_approval` date DEFAULT NULL,
-  `project_type` varchar(96) DEFAULT NULL,
-  `pi_name` varchar(70) DEFAULT NULL,
-  `defined` varchar(10) DEFAULT NULL,
-  `name` varchar(70) DEFAULT NULL,
-  `id` varchar(3) DEFAULT NULL,
-  `project_site` varchar(59) DEFAULT NULL,
-  `type_of_activity` varchar(16) DEFAULT NULL,
-  `pi` varchar(65) DEFAULT NULL,
-  `institution` varchar(66) DEFAULT NULL,
-  `title` varchar(776) DEFAULT NULL,
-  `affiliation_and_data_source` text
+DROP TABLE IF EXISTS `respiratory_virus_dashboard_metrics_deaths`;
+CREATE TABLE `respiratory_virus_dashboard_metrics_deaths` (
+  `date` varchar(10) DEFAULT NULL,
+  `area` varchar(10) DEFAULT NULL,
+  `area_type` varchar(9) DEFAULT NULL,
+  `deaths_dc_dod_covid` varchar(19) DEFAULT NULL,
+  `deaths_dc_dod_influenza` varchar(23) DEFAULT NULL,
+  `deaths_dc_dod_all_disease` varchar(25) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `respiratory_virus_dashboard`
+-- Table structure for table `respiratory_virus_dashboard_metrics_testing`
 --
 
-DROP TABLE IF EXISTS `respiratory_virus_dashboard`;
-CREATE TABLE `respiratory_virus_dashboard` (
-  `data_date` char(10) DEFAULT NULL,
-  `area` varchar(63) DEFAULT NULL,
-  `area_type` varchar(63) DEFAULT NULL,
-  `deaths_dc_dod_covid` int DEFAULT NULL,
-  `deaths_dc_dod_influenza` int DEFAULT NULL,
-  `deaths_dc_dod_all_disease` int DEFAULT NULL
+DROP TABLE IF EXISTS `respiratory_virus_dashboard_metrics_testing`;
+CREATE TABLE `respiratory_virus_dashboard_metrics_testing` (
+  `date` varchar(10) DEFAULT NULL,
+  `date_type` varchar(11) DEFAULT NULL,
+  `area` varchar(10) DEFAULT NULL,
+  `area_type` varchar(9) DEFAULT NULL,
+  `total_tests` varchar(11) DEFAULT NULL,
+  `positive_tests` varchar(14) DEFAULT NULL,
+  `test_type` varchar(9) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -19098,17 +23919,6 @@ CREATE TABLE `retail_availability_of_electronic_smoking_devices_by_county` (
   `percentage` varchar(4) DEFAULT NULL,
   `lower95ci` varchar(4) DEFAULT NULL,
   `upper95ci` varchar(4) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `sars_wastewater_aggregated`
---
-
-DROP TABLE IF EXISTS `sars_wastewater_aggregated`;
-CREATE TABLE `sars_wastewater_aggregated` (
-  `season` varchar(9) DEFAULT NULL,
-  `weekending` varchar(10) DEFAULT NULL,
-  `sars_conc` varchar(16) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -19269,26 +24079,72 @@ CREATE TABLE `scan_rates_cy_2024` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `school_immunizations`
+-- Table structure for table `screening_disorders_by_california_region`
 --
 
-DROP TABLE IF EXISTS `school_immunizations`;
-CREATE TABLE `school_immunizations` (
-  `school_year` char(9) DEFAULT NULL,
-  `school_code` varchar(7) DEFAULT NULL,
-  `school_name` varchar(255) DEFAULT NULL,
-  `city` varchar(31) DEFAULT NULL,
-  `county` varchar(31) DEFAULT NULL,
-  `is_public` char(1) DEFAULT NULL,
-  `public_school_district` varchar(63) DEFAULT NULL,
-  `enrollment` int DEFAULT NULL,
-  `reported` char(1) DEFAULT NULL,
-  `category` varchar(31) DEFAULT NULL,
-  `count` int DEFAULT NULL,
-  `percent` int DEFAULT NULL,
-  `annotation_code` int DEFAULT NULL,
-  `annotation_count_desc` varchar(63) DEFAULT NULL,
-  `annotation_percent_desc` varchar(63) DEFAULT NULL
+DROP TABLE IF EXISTS `screening_disorders_by_california_region`;
+CREATE TABLE `screening_disorders_by_california_region` (
+  `california_region` varchar(36) DEFAULT NULL,
+  `disease_type` varchar(90) DEFAULT NULL,
+  `case_count` varchar(10) DEFAULT NULL,
+  `number_screened` varchar(15) DEFAULT NULL,
+  `percent_of_all_disorders_in_region` varchar(34) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `screening_disorders_by_race_ethnicity`
+--
+
+DROP TABLE IF EXISTS `screening_disorders_by_race_ethnicity`;
+CREATE TABLE `screening_disorders_by_race_ethnicity` (
+  `race_ethnicity` varchar(63) DEFAULT NULL,
+  `disorder_type` varchar(90) DEFAULT NULL,
+  `disorder_count` varchar(14) DEFAULT NULL,
+  `screened_count` varchar(14) DEFAULT NULL,
+  `rate_per_100_000` varchar(16) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `screening_disorders_statewide`
+--
+
+DROP TABLE IF EXISTS `screening_disorders_statewide`;
+CREATE TABLE `screening_disorders_statewide` (
+  `disorder_type` varchar(92) DEFAULT NULL,
+  `disorder_count` varchar(14) DEFAULT NULL,
+  `percent` varchar(7) DEFAULT NULL,
+  `newborns_screened` varchar(17) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `seismic_compliance_data_by_county_for_general_acute_car_fc764c34`
+--
+
+DROP TABLE IF EXISTS `seismic_compliance_data_by_county_for_general_acute_car_fc764c34`;
+CREATE TABLE `seismic_compliance_data_by_county_for_general_acute_car_fc764c34` (
+  `county` varchar(20) DEFAULT NULL,
+  `number_of_facilities_in_county` varchar(30) DEFAULT NULL,
+  `number_of_hospital_buildings_in_county` varchar(38) DEFAULT NULL,
+  `number_of_spc_1_hospital_buildings_in_county` varchar(44) DEFAULT NULL,
+  `number_of_spc_2_hospital_buildings_in_county` varchar(44) DEFAULT NULL,
+  `number_of_spc_3_4_5_hospital_buildings_in_county` varchar(48) DEFAULT NULL,
+  `number_of_facilities_in_county_having_at_least_one_spc_1_buildi` varchar(65) DEFAULT NULL,
+  `number_of_facilities_in_county_meeting_2020_reqmts` varchar(51) DEFAULT NULL,
+  `number_of_facilities_in_county_meeting_2030_reqmts` varchar(51) DEFAULT NULL,
+  `pct_facilities_in_county_having_at_least_one_spc_1_building` varchar(57) DEFAULT NULL,
+  `pct_facilities_in_county_meeting_2020_reqmts` varchar(43) DEFAULT NULL,
+  `pct_facilities_in_county_meeting_2030_reqmts` varchar(43) DEFAULT NULL,
+  `None` varchar(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `seismic_deadline_extensions_granted_for_california_hospitals`
+--
+
+DROP TABLE IF EXISTS `seismic_deadline_extensions_granted_for_california_hospitals`;
+CREATE TABLE `seismic_deadline_extensions_granted_for_california_hospitals` (
+  `county_code_perm_id_facility_name_building_nbr_building_name_bu` varchar(20) DEFAULT NULL,
+  `None` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -19375,7 +24231,7 @@ CREATE TABLE `sewershed_cases` (
   `label_name` varchar(43) DEFAULT NULL,
   `area_type` varchar(9) DEFAULT NULL,
   `cases` varchar(6) DEFAULT NULL,
-  `cumulative_cases` varchar(0) DEFAULT NULL
+  `cumulative_cases` varchar(16) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -19386,7 +24242,7 @@ DROP TABLE IF EXISTS `singleton_births_by_cy_payer_delvry_sys_and_select_birth_c
 CREATE TABLE `singleton_births_by_cy_payer_delvry_sys_and_select_birth_chars` (
   `calendar_year` varchar(4) DEFAULT NULL,
   `payer` varchar(12) DEFAULT NULL,
-  `delivery_system` varchar(17) DEFAULT NULL,
+  `delivery_system_name` varchar(17) DEFAULT NULL,
   `grouper` varchar(27) DEFAULT NULL,
   `birth_characteristic` varchar(33) DEFAULT NULL,
   `number_of_births` varchar(6) DEFAULT NULL
@@ -19399,1967 +24255,601 @@ CREATE TABLE `singleton_births_by_cy_payer_delvry_sys_and_select_birth_chars` (
 DROP TABLE IF EXISTS `skilled_nursing_facilities_covid_19`;
 CREATE TABLE `skilled_nursing_facilities_covid_19` (
   `county` varchar(15) DEFAULT NULL,
-  `facility_id` varchar(9) DEFAULT NULL,
+  `facility_id` varchar(11) DEFAULT NULL,
   `facility_name` varchar(75) DEFAULT NULL,
   `as_of_date` varchar(10) DEFAULT NULL,
-  `total_resident_cases` varchar(5) DEFAULT NULL,
-  `new_resident_cases` varchar(4) DEFAULT NULL,
-  `total_resident_deaths` varchar(5) DEFAULT NULL,
-  `total_health_care_worker_cases` varchar(6) DEFAULT NULL,
-  `new_health_care_worker_cases` varchar(4) DEFAULT NULL,
-  `total_health_care_workers_deaths` varchar(3) DEFAULT NULL,
+  `total_resident_cases` varchar(20) DEFAULT NULL,
+  `new_resident_cases` varchar(18) DEFAULT NULL,
+  `total_resident_deaths` varchar(21) DEFAULT NULL,
+  `total_health_care_worker_cases` varchar(30) DEFAULT NULL,
+  `new_health_care_worker_cases` varchar(28) DEFAULT NULL,
+  `total_health_care_workers_deaths` varchar(32) DEFAULT NULL,
   `note` varchar(12) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `specialty_care_clinic`
+-- Table structure for table `ssi_in_adult_patients_2016`
 --
 
-DROP TABLE IF EXISTS `specialty_care_clinic`;
-CREATE TABLE `specialty_care_clinic` (
-  `oshpd_id` varchar(255) DEFAULT NULL,
-  `facility_name` varchar(255) DEFAULT NULL,
-  `facility_address_one` varchar(255) DEFAULT NULL,
-  `facility_address_two` varchar(31) DEFAULT NULL,
-  `facility_city` varchar(31) DEFAULT NULL,
-  `facility_zipcode` varchar(31) DEFAULT NULL,
-  `facility_phone` varchar(31) DEFAULT NULL,
-  `facility_admin_name` varchar(255) DEFAULT NULL,
-  `facility_oper_curryr` varchar(31) DEFAULT NULL,
-  `beg_date` varchar(31) DEFAULT NULL,
-  `end_date` varchar(255) DEFAULT NULL,
-  `facility_parent_name` varchar(255) DEFAULT NULL,
-  `facility_parent_address_one` varchar(255) DEFAULT NULL,
-  `facility_parent_address_two` varchar(255) DEFAULT NULL,
-  `facility_parent_city` varchar(31) DEFAULT NULL,
-  `facility_parent_state` varchar(31) DEFAULT NULL,
-  `facility_parent_zipcode` varchar(31) DEFAULT NULL,
-  `facility_report_prep_name` varchar(31) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `specialty_care_clinic_2012`
---
-
-DROP TABLE IF EXISTS `specialty_care_clinic_2012`;
-CREATE TABLE `specialty_care_clinic_2012` (
-  `oshpd_id` char(9) DEFAULT NULL,
-  `fac_name` varchar(31) DEFAULT NULL,
-  `fac_address_one` varchar(255) DEFAULT NULL,
-  `fac_address_two` varchar(255) DEFAULT NULL,
-  `fac_city` varchar(31) DEFAULT NULL,
-  `fac_zipcode` varchar(31) DEFAULT NULL,
-  `fac_phone` varchar(31) DEFAULT NULL,
-  `fac_admin_name` varchar(31) DEFAULT NULL,
-  `fac_oper_curryr` varchar(31) DEFAULT NULL,
-  `beg_date` datetime DEFAULT NULL,
-  `end_date` datetime DEFAULT NULL,
-  `parent_name` varchar(255) DEFAULT NULL,
-  `parent_address_one` varchar(255) DEFAULT NULL,
-  `parent_address_two` varchar(255) DEFAULT NULL,
-  `parent_city` varchar(31) DEFAULT NULL,
-  `parent_state` varchar(31) DEFAULT NULL,
-  `parent_zipcode` varchar(31) DEFAULT NULL,
-  `report_prep_name` varchar(31) DEFAULT NULL,
-  `lic_status` varchar(31) DEFAULT NULL,
-  `lic_status_date` datetime DEFAULT NULL,
-  `lic_orig_date` datetime DEFAULT NULL,
-  `report_status` varchar(31) DEFAULT NULL,
-  `mcal_provider_no` varchar(31) DEFAULT NULL,
-  `mcare_provider_no` varchar(31) DEFAULT NULL,
-  `aclaims_no` varchar(31) DEFAULT NULL,
-  `assembly_dist` int DEFAULT NULL,
-  `senate_dist` int DEFAULT NULL,
-  `congress_dist` int DEFAULT NULL,
-  `cens_tract` varchar(10) DEFAULT NULL,
-  `med_svc_study_area` varchar(31) DEFAULT NULL,
-  `laco_svc_plan_area` varchar(31) DEFAULT NULL,
-  `health_svc_area` varchar(31) DEFAULT NULL,
-  `county` varchar(31) DEFAULT NULL,
-  `license_no` char(9) DEFAULT NULL,
-  `longitude` decimal(20,20) DEFAULT NULL,
-  `latitude` decimal(20,20) DEFAULT NULL,
-  `type_lic` varchar(31) DEFAULT NULL,
-  `type_cntrl` varchar(31) DEFAULT NULL,
-  `patients_undupl` int DEFAULT NULL,
-  `encounters_totl` int DEFAULT NULL,
-  `op_rm_cy` int DEFAULT NULL,
-  `surg_totl` int DEFAULT NULL,
-  `encounters_psy_gen_med` int DEFAULT NULL,
-  `encounters_psy_subst_abuse` int DEFAULT NULL,
-  `encounters_psy_mental_hlth_couns` int DEFAULT NULL,
-  `encounters_psy_all_othr` varchar(31) DEFAULT NULL,
-  `encounters_psy_totl` varchar(31) DEFAULT NULL,
-  `no_dialysis_stations` int DEFAULT NULL,
-  `app_in_home_training_capd_ccpd` int DEFAULT NULL,
-  `gro_rev_totl` int DEFAULT NULL,
-  `write_off_charity_totl` int DEFAULT NULL,
-  `write_off_contr_adjust_totl` int DEFAULT NULL,
-  `write_off_bad_debts_totl` int DEFAULT NULL,
-  `write_off_othr_adjust_totl` int DEFAULT NULL,
-  `write_off_adjusts` int DEFAULT NULL,
-  `net_patient_rev_totl` int DEFAULT NULL,
-  `rev_othr_oper_grants_publ_totl` int DEFAULT NULL,
-  `rev_othr_oper_grants_pvt_totl` int DEFAULT NULL,
-  `rev_othr_oper_donations_totl` int DEFAULT NULL,
-  `rev_other_oper_othr_totl` int DEFAULT NULL,
-  `rev_other_oper_totl` int DEFAULT NULL,
-  `rev_oper_totl` int DEFAULT NULL,
-  `exp_oper_sal_wages` int DEFAULT NULL,
-  `exp_oper_contr_prof` int DEFAULT NULL,
-  `exp_oper_sup` int DEFAULT NULL,
-  `exp_oper_rent_deprc` int DEFAULT NULL,
-  `exp_oper_util` int DEFAULT NULL,
-  `exp_oper_liab_prof_ins` int DEFAULT NULL,
-  `exp_oper_othr_ins` int DEFAULT NULL,
-  `exp_oper_all_othr` int DEFAULT NULL,
-  `exp_oper_totl` int DEFAULT NULL,
-  `net_frm_oper` int DEFAULT NULL,
-  `equip_acq_over_500k` varchar(31) DEFAULT NULL,
-  `equip_01_descrip` varchar(31) DEFAULT NULL,
-  `equip_01_value` int DEFAULT NULL,
-  `equip_01_acqui_dt` datetime DEFAULT NULL,
-  `equip_01_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_02_descrip` varchar(31) DEFAULT NULL,
-  `equip_02_value` int DEFAULT NULL,
-  `equip_02_acqui_dt` datetime DEFAULT NULL,
-  `equip_02_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_03_descrip` varchar(31) DEFAULT NULL,
-  `equip_03_value` int DEFAULT NULL,
-  `equip_03_acqui_dt` datetime DEFAULT NULL,
-  `equip_03_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_04_descrip` varchar(31) DEFAULT NULL,
-  `equip_04_value` int DEFAULT NULL,
-  `equip_04_acqui_dt` datetime DEFAULT NULL,
-  `equip_04_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_05_descrip` varchar(31) DEFAULT NULL,
-  `equip_05_value` int DEFAULT NULL,
-  `equip_05_acqui_dt` datetime DEFAULT NULL,
-  `equip_05_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_06_descrip` varchar(31) DEFAULT NULL,
-  `equip_06_value` int DEFAULT NULL,
-  `equip_06_acqui_dt` datetime DEFAULT NULL,
-  `equip_06_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_07_descrip` varchar(31) DEFAULT NULL,
-  `equip_07_value` int DEFAULT NULL,
-  `equip_07_acqui_dt` datetime DEFAULT NULL,
-  `equip_07_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_08_descrip` varchar(31) DEFAULT NULL,
-  `equip_08_value` int DEFAULT NULL,
-  `equip_08_acqui_dt` datetime DEFAULT NULL,
-  `equip_08_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_09_descrip` varchar(31) DEFAULT NULL,
-  `equip_09_value` int DEFAULT NULL,
-  `equip_09_acqui_dt` datetime DEFAULT NULL,
-  `equip_09_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_10_descrip` varchar(31) DEFAULT NULL,
-  `equip_10_value` int DEFAULT NULL,
-  `equip_10_acqui_dt` datetime DEFAULT NULL,
-  `equip_10_acqui_means` varchar(31) DEFAULT NULL,
-  `cap_exp_over_1mil` varchar(31) DEFAULT NULL,
-  `proj_01_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_01_projtd_cap_exp` int DEFAULT NULL,
-  `proj_01_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `proj_02_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_02_projtd_cap_exp` int DEFAULT NULL,
-  `proj_02_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `proj_03_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_03_projtd_cap_exp` int DEFAULT NULL,
-  `proj_03_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `proj_04_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_04_projtd_cap_exp` int DEFAULT NULL,
-  `proj_04_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `proj_05_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_05_projtd_cap_exp` int DEFAULT NULL,
-  `proj_05_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `non_response` char(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `specialty_care_clinic_2013`
---
-
-DROP TABLE IF EXISTS `specialty_care_clinic_2013`;
-CREATE TABLE `specialty_care_clinic_2013` (
-  `oshpd_id` varchar(31) DEFAULT NULL,
-  `fac_name` varchar(255) DEFAULT NULL,
-  `fac_address_one` varchar(255) DEFAULT NULL,
-  `fac_address_two` varchar(31) DEFAULT NULL,
-  `fac_city` varchar(31) DEFAULT NULL,
-  `fac_zipcode` varchar(31) DEFAULT NULL,
-  `fac_phone` varchar(31) DEFAULT NULL,
-  `fac_admin_name` varchar(255) DEFAULT NULL,
-  `fac_oper_curryr` varchar(31) DEFAULT NULL,
-  `beg_date` varchar(31) DEFAULT NULL,
-  `end_date` varchar(31) DEFAULT NULL,
-  `parent_name` varchar(255) DEFAULT NULL,
-  `parent_address_one` varchar(255) DEFAULT NULL,
-  `parent_address_two` varchar(255) DEFAULT NULL,
-  `parent_city` varchar(31) DEFAULT NULL,
-  `parent_state` varchar(31) DEFAULT NULL,
-  `parent_zipcode` varchar(31) DEFAULT NULL,
-  `report_prep_name` varchar(31) DEFAULT NULL,
-  `lic_status` varchar(31) DEFAULT NULL,
-  `lic_status_date` varchar(31) DEFAULT NULL,
-  `lic_orig_date` varchar(31) DEFAULT NULL,
-  `report_status` varchar(31) DEFAULT NULL,
-  `mcal_provider_no` varchar(31) DEFAULT NULL,
-  `mcare_provider_no` varchar(31) DEFAULT NULL,
-  `aclaims_no` varchar(31) DEFAULT NULL,
-  `assembly_dist` varchar(31) DEFAULT NULL,
-  `senate_dist` varchar(31) DEFAULT NULL,
-  `congress_dist` varchar(31) DEFAULT NULL,
-  `cens_tract` varchar(31) DEFAULT NULL,
-  `med_svc_study_area` varchar(31) DEFAULT NULL,
-  `laco_svc_plan_area` varchar(31) DEFAULT NULL,
-  `health_svc_area` varchar(31) DEFAULT NULL,
-  `county` varchar(31) DEFAULT NULL,
-  `license_no` varchar(31) DEFAULT NULL,
-  `longitude` varchar(31) DEFAULT NULL,
-  `latitude` varchar(31) DEFAULT NULL,
-  `type_lic` varchar(31) DEFAULT NULL,
-  `type_cntrl` varchar(255) DEFAULT NULL,
-  `patients_undupl` varchar(31) DEFAULT NULL,
-  `encounters_totl` varchar(31) DEFAULT NULL,
-  `op_rm_cy` varchar(31) DEFAULT NULL,
-  `surg_totl` varchar(31) DEFAULT NULL,
-  `encounters_psy_gen_med` varchar(31) DEFAULT NULL,
-  `encounters_psy_subst_abuse` varchar(31) DEFAULT NULL,
-  `encounters_psy_mental_hlth_couns` varchar(31) DEFAULT NULL,
-  `encounters_psy_all_othr` varchar(31) DEFAULT NULL,
-  `encounters_psy_totl` varchar(31) DEFAULT NULL,
-  `no_dialysis_stations` varchar(31) DEFAULT NULL,
-  `app_in_home_training_capd_ccpd` varchar(31) DEFAULT NULL,
-  `gro_rev_totl` varchar(31) DEFAULT NULL,
-  `write_off_charity_totl` varchar(31) DEFAULT NULL,
-  `write_off_contr_adjust_totl` varchar(31) DEFAULT NULL,
-  `write_off_bad_debts_totl` varchar(31) DEFAULT NULL,
-  `write_off_othr_adjust_totl` varchar(31) DEFAULT NULL,
-  `write_off_adjusts` varchar(31) DEFAULT NULL,
-  `net_patient_rev_totl` varchar(31) DEFAULT NULL,
-  `rev_othr_oper_grants_publ_totl` varchar(31) DEFAULT NULL,
-  `rev_othr_oper_grants_pvt_totl` varchar(31) DEFAULT NULL,
-  `rev_othr_oper_donations_totl` varchar(31) DEFAULT NULL,
-  `rev_other_oper_othr_totl` varchar(31) DEFAULT NULL,
-  `rev_other_oper_totl` varchar(31) DEFAULT NULL,
-  `rev_oper_totl` varchar(31) DEFAULT NULL,
-  `exp_oper_sal_wages` varchar(31) DEFAULT NULL,
-  `exp_oper_contr_prof` varchar(31) DEFAULT NULL,
-  `exp_oper_sup` varchar(31) DEFAULT NULL,
-  `exp_oper_rent_deprc` varchar(31) DEFAULT NULL,
-  `exp_oper_util` varchar(31) DEFAULT NULL,
-  `exp_oper_liab_prof_ins` varchar(31) DEFAULT NULL,
-  `exp_oper_othr_ins` varchar(31) DEFAULT NULL,
-  `exp_oper_all_othr` varchar(31) DEFAULT NULL,
-  `exp_oper_totl` varchar(31) DEFAULT NULL,
-  `net_frm_oper` varchar(31) DEFAULT NULL,
-  `equip_acq_over_500k` varchar(31) DEFAULT NULL,
-  `equip_01_descrip` varchar(31) DEFAULT NULL,
-  `equip_01_value` varchar(31) DEFAULT NULL,
-  `equip_01_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_01_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_02_descrip` varchar(31) DEFAULT NULL,
-  `equip_02_value` varchar(31) DEFAULT NULL,
-  `equip_02_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_02_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_03_descrip` varchar(31) DEFAULT NULL,
-  `equip_03_value` varchar(31) DEFAULT NULL,
-  `equip_03_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_03_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_04_descrip` varchar(31) DEFAULT NULL,
-  `equip_04_value` varchar(31) DEFAULT NULL,
-  `equip_04_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_04_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_05_descrip` varchar(31) DEFAULT NULL,
-  `equip_05_value` varchar(31) DEFAULT NULL,
-  `equip_05_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_05_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_06_descrip` varchar(31) DEFAULT NULL,
-  `equip_06_value` varchar(31) DEFAULT NULL,
-  `equip_06_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_06_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_07_descrip` varchar(31) DEFAULT NULL,
-  `equip_07_value` varchar(31) DEFAULT NULL,
-  `equip_07_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_07_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_08_descrip` varchar(31) DEFAULT NULL,
-  `equip_08_value` varchar(31) DEFAULT NULL,
-  `equip_08_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_08_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_09_descrip` varchar(31) DEFAULT NULL,
-  `equip_09_value` varchar(31) DEFAULT NULL,
-  `equip_09_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_09_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_10_descrip` varchar(31) DEFAULT NULL,
-  `equip_10_value` varchar(31) DEFAULT NULL,
-  `equip_10_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_10_acqui_means` varchar(31) DEFAULT NULL,
-  `cap_exp_over_1mil` varchar(31) DEFAULT NULL,
-  `proj_01_descrip_cap_exp` varchar(255) DEFAULT NULL,
-  `proj_01_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_01_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `proj_02_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_02_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_02_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `proj_03_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_03_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_03_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `proj_04_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_04_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_04_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `proj_05_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_05_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_05_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `non_response` char(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `specialty_care_clinic_2014`
---
-
-DROP TABLE IF EXISTS `specialty_care_clinic_2014`;
-CREATE TABLE `specialty_care_clinic_2014` (
-  `oshpd_id` varchar(31) DEFAULT NULL,
-  `fac_name` varchar(255) DEFAULT NULL,
-  `fac_address_one` varchar(255) DEFAULT NULL,
-  `fac_address_two` varchar(31) DEFAULT NULL,
-  `fac_city` varchar(31) DEFAULT NULL,
-  `fac_zipcode` varchar(31) DEFAULT NULL,
-  `fac_phone` varchar(31) DEFAULT NULL,
-  `fac_admin_name` varchar(255) DEFAULT NULL,
-  `fac_oper_curryr` varchar(31) DEFAULT NULL,
-  `beg_date` varchar(31) DEFAULT NULL,
-  `end_date` varchar(31) DEFAULT NULL,
-  `parent_name` varchar(255) DEFAULT NULL,
-  `parent_address_one` varchar(255) DEFAULT NULL,
-  `parent_address_two` varchar(255) DEFAULT NULL,
-  `parent_city` varchar(31) DEFAULT NULL,
-  `parent_state` varchar(31) DEFAULT NULL,
-  `parent_zipcode` varchar(31) DEFAULT NULL,
-  `report_prep_name` varchar(31) DEFAULT NULL,
-  `lic_status` varchar(31) DEFAULT NULL,
-  `lic_status_date` varchar(31) DEFAULT NULL,
-  `lic_orig_date` varchar(31) DEFAULT NULL,
-  `report_status` varchar(31) DEFAULT NULL,
-  `mcal_provider_no` varchar(31) DEFAULT NULL,
-  `mcare_provider_no` varchar(31) DEFAULT NULL,
-  `aclaims_no` varchar(31) DEFAULT NULL,
-  `assembly_dist` varchar(31) DEFAULT NULL,
-  `senate_dist` varchar(31) DEFAULT NULL,
-  `congress_dist` varchar(31) DEFAULT NULL,
-  `cens_tract` varchar(31) DEFAULT NULL,
-  `med_svc_study_area` varchar(31) DEFAULT NULL,
-  `laco_svc_plan_area` varchar(31) DEFAULT NULL,
-  `health_svc_area` varchar(31) DEFAULT NULL,
-  `county` varchar(31) DEFAULT NULL,
-  `license_no` varchar(31) DEFAULT NULL,
-  `longitude` varchar(31) DEFAULT NULL,
-  `latitude` varchar(31) DEFAULT NULL,
-  `type_lic` varchar(31) DEFAULT NULL,
-  `type_cntrl` varchar(255) DEFAULT NULL,
-  `patients_undupl` varchar(31) DEFAULT NULL,
-  `encounters_totl` varchar(31) DEFAULT NULL,
-  `op_rm_cy` varchar(31) DEFAULT NULL,
-  `surg_totl` varchar(31) DEFAULT NULL,
-  `encounters_psy_gen_med` varchar(31) DEFAULT NULL,
-  `encounters_psy_subst_abuse` varchar(31) DEFAULT NULL,
-  `encounters_psy_mental_hlth_couns` varchar(31) DEFAULT NULL,
-  `encounters_psy_all_othr` varchar(31) DEFAULT NULL,
-  `encounters_psy_totl` varchar(31) DEFAULT NULL,
-  `no_dialysis_stations` varchar(31) DEFAULT NULL,
-  `app_in_home_training_capd_ccpd` varchar(31) DEFAULT NULL,
-  `gro_rev_totl` varchar(31) DEFAULT NULL,
-  `write_off_charity_totl` varchar(31) DEFAULT NULL,
-  `write_off_contr_adjust_totl` varchar(31) DEFAULT NULL,
-  `write_off_bad_debts_totl` varchar(31) DEFAULT NULL,
-  `write_off_othr_adjust_totl` varchar(31) DEFAULT NULL,
-  `write_off_adjusts` varchar(31) DEFAULT NULL,
-  `net_patient_rev_totl` varchar(31) DEFAULT NULL,
-  `rev_othr_oper_grants_publ_totl` varchar(31) DEFAULT NULL,
-  `rev_othr_oper_grants_pvt_totl` varchar(31) DEFAULT NULL,
-  `rev_othr_oper_donations_totl` varchar(31) DEFAULT NULL,
-  `rev_other_oper_othr_totl` varchar(31) DEFAULT NULL,
-  `rev_other_oper_totl` varchar(31) DEFAULT NULL,
-  `rev_oper_totl` varchar(31) DEFAULT NULL,
-  `exp_oper_sal_wages` varchar(31) DEFAULT NULL,
-  `exp_oper_contr_prof` varchar(31) DEFAULT NULL,
-  `exp_oper_sup` varchar(31) DEFAULT NULL,
-  `exp_oper_rent_deprc` varchar(31) DEFAULT NULL,
-  `exp_oper_util` varchar(31) DEFAULT NULL,
-  `exp_oper_liab_prof_ins` varchar(31) DEFAULT NULL,
-  `exp_oper_othr_ins` varchar(31) DEFAULT NULL,
-  `exp_oper_all_othr` varchar(31) DEFAULT NULL,
-  `exp_oper_totl` varchar(31) DEFAULT NULL,
-  `net_frm_oper` varchar(31) DEFAULT NULL,
-  `equip_acq_over_500k` varchar(31) DEFAULT NULL,
-  `equip_01_descrip` varchar(31) DEFAULT NULL,
-  `equip_01_value` varchar(31) DEFAULT NULL,
-  `equip_01_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_01_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_02_descrip` varchar(31) DEFAULT NULL,
-  `equip_02_value` varchar(31) DEFAULT NULL,
-  `equip_02_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_02_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_03_descrip` varchar(31) DEFAULT NULL,
-  `equip_03_value` varchar(31) DEFAULT NULL,
-  `equip_03_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_03_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_04_descrip` varchar(31) DEFAULT NULL,
-  `equip_04_value` varchar(31) DEFAULT NULL,
-  `equip_04_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_04_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_05_descrip` varchar(31) DEFAULT NULL,
-  `equip_05_value` varchar(31) DEFAULT NULL,
-  `equip_05_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_05_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_06_descrip` varchar(31) DEFAULT NULL,
-  `equip_06_value` varchar(31) DEFAULT NULL,
-  `equip_06_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_06_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_07_descrip` varchar(31) DEFAULT NULL,
-  `equip_07_value` varchar(31) DEFAULT NULL,
-  `equip_07_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_07_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_08_descrip` varchar(31) DEFAULT NULL,
-  `equip_08_value` varchar(31) DEFAULT NULL,
-  `equip_08_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_08_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_09_descrip` varchar(31) DEFAULT NULL,
-  `equip_09_value` varchar(31) DEFAULT NULL,
-  `equip_09_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_09_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_10_descrip` varchar(31) DEFAULT NULL,
-  `equip_10_value` varchar(31) DEFAULT NULL,
-  `equip_10_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_10_acqui_means` varchar(31) DEFAULT NULL,
-  `cap_exp_over_1mil` varchar(31) DEFAULT NULL,
-  `proj_01_descrip_cap_exp` varchar(255) DEFAULT NULL,
-  `proj_01_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_01_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `proj_02_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_02_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_02_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `proj_03_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_03_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_03_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `proj_04_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_04_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_04_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `proj_05_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_05_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_05_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `non_response` char(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `specialty_care_clinic_2015`
---
-
-DROP TABLE IF EXISTS `specialty_care_clinic_2015`;
-CREATE TABLE `specialty_care_clinic_2015` (
-  `oshpd_id` varchar(31) DEFAULT NULL,
-  `fac_name` varchar(255) DEFAULT NULL,
-  `fac_address_one` varchar(255) DEFAULT NULL,
-  `fac_address_two` varchar(31) DEFAULT NULL,
-  `fac_city` varchar(31) DEFAULT NULL,
-  `fac_zipcode` varchar(31) DEFAULT NULL,
-  `fac_phone` varchar(31) DEFAULT NULL,
-  `fac_admin_name` varchar(255) DEFAULT NULL,
-  `fac_oper_curryr` varchar(31) DEFAULT NULL,
-  `beg_date` varchar(31) DEFAULT NULL,
-  `end_date` varchar(31) DEFAULT NULL,
-  `parent_name` varchar(255) DEFAULT NULL,
-  `parent_address_one` varchar(255) DEFAULT NULL,
-  `parent_address_two` varchar(255) DEFAULT NULL,
-  `parent_city` varchar(31) DEFAULT NULL,
-  `parent_state` varchar(31) DEFAULT NULL,
-  `parent_zipcode` varchar(31) DEFAULT NULL,
-  `report_prep_name` varchar(31) DEFAULT NULL,
-  `lic_status` varchar(31) DEFAULT NULL,
-  `lic_status_date` varchar(31) DEFAULT NULL,
-  `lic_orig_date` varchar(31) DEFAULT NULL,
-  `report_status` varchar(31) DEFAULT NULL,
-  `mcal_provider_no` varchar(31) DEFAULT NULL,
-  `mcare_provider_no` varchar(31) DEFAULT NULL,
-  `aclaims_no` varchar(31) DEFAULT NULL,
-  `assembly_dist` varchar(31) DEFAULT NULL,
-  `senate_dist` varchar(31) DEFAULT NULL,
-  `congress_dist` varchar(31) DEFAULT NULL,
-  `cens_tract` varchar(31) DEFAULT NULL,
-  `med_svc_study_area` varchar(31) DEFAULT NULL,
-  `laco_svc_plan_area` varchar(31) DEFAULT NULL,
-  `health_svc_area` varchar(31) DEFAULT NULL,
-  `county` varchar(31) DEFAULT NULL,
-  `license_no` varchar(31) DEFAULT NULL,
-  `longitude` varchar(31) DEFAULT NULL,
-  `latitude` varchar(31) DEFAULT NULL,
-  `type_lic` varchar(31) DEFAULT NULL,
-  `type_cntrl` varchar(255) DEFAULT NULL,
-  `patients_undupl` varchar(31) DEFAULT NULL,
-  `encounters_totl` varchar(31) DEFAULT NULL,
-  `op_rm_cy` varchar(31) DEFAULT NULL,
-  `surg_totl` varchar(31) DEFAULT NULL,
-  `encounters_psy_gen_med` varchar(31) DEFAULT NULL,
-  `encounters_psy_subst_abuse` varchar(31) DEFAULT NULL,
-  `encounters_psy_mental_hlth_couns` varchar(31) DEFAULT NULL,
-  `encounters_psy_all_othr` varchar(31) DEFAULT NULL,
-  `encounters_psy_totl` varchar(31) DEFAULT NULL,
-  `no_dialysis_stations` varchar(31) DEFAULT NULL,
-  `app_in_home_training_capd_ccpd` varchar(31) DEFAULT NULL,
-  `gro_rev_totl` varchar(31) DEFAULT NULL,
-  `write_off_charity_totl` varchar(31) DEFAULT NULL,
-  `write_off_contr_adjust_totl` varchar(31) DEFAULT NULL,
-  `write_off_bad_debts_totl` varchar(31) DEFAULT NULL,
-  `write_off_othr_adjust_totl` varchar(31) DEFAULT NULL,
-  `write_off_adjusts` varchar(31) DEFAULT NULL,
-  `net_patient_rev_totl` varchar(31) DEFAULT NULL,
-  `rev_othr_oper_grants_publ_totl` varchar(31) DEFAULT NULL,
-  `rev_othr_oper_grants_pvt_totl` varchar(31) DEFAULT NULL,
-  `rev_othr_oper_donations_totl` varchar(31) DEFAULT NULL,
-  `rev_other_oper_othr_totl` varchar(31) DEFAULT NULL,
-  `rev_other_oper_totl` varchar(31) DEFAULT NULL,
-  `rev_oper_totl` varchar(31) DEFAULT NULL,
-  `exp_oper_sal_wages` varchar(31) DEFAULT NULL,
-  `exp_oper_contr_prof` varchar(31) DEFAULT NULL,
-  `exp_oper_sup` varchar(31) DEFAULT NULL,
-  `exp_oper_rent_deprc` varchar(31) DEFAULT NULL,
-  `exp_oper_util` varchar(31) DEFAULT NULL,
-  `exp_oper_liab_prof_ins` varchar(31) DEFAULT NULL,
-  `exp_oper_othr_ins` varchar(31) DEFAULT NULL,
-  `exp_oper_all_othr` varchar(31) DEFAULT NULL,
-  `exp_oper_totl` varchar(31) DEFAULT NULL,
-  `net_frm_oper` varchar(31) DEFAULT NULL,
-  `equip_acq_over_500k` varchar(31) DEFAULT NULL,
-  `equip_01_descrip` varchar(31) DEFAULT NULL,
-  `equip_01_value` varchar(31) DEFAULT NULL,
-  `equip_01_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_01_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_02_descrip` varchar(31) DEFAULT NULL,
-  `equip_02_value` varchar(31) DEFAULT NULL,
-  `equip_02_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_02_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_03_descrip` varchar(31) DEFAULT NULL,
-  `equip_03_value` varchar(31) DEFAULT NULL,
-  `equip_03_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_03_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_04_descrip` varchar(31) DEFAULT NULL,
-  `equip_04_value` varchar(31) DEFAULT NULL,
-  `equip_04_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_04_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_05_descrip` varchar(31) DEFAULT NULL,
-  `equip_05_value` varchar(31) DEFAULT NULL,
-  `equip_05_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_05_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_06_descrip` varchar(31) DEFAULT NULL,
-  `equip_06_value` varchar(31) DEFAULT NULL,
-  `equip_06_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_06_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_07_descrip` varchar(31) DEFAULT NULL,
-  `equip_07_value` varchar(31) DEFAULT NULL,
-  `equip_07_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_07_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_08_descrip` varchar(31) DEFAULT NULL,
-  `equip_08_value` varchar(31) DEFAULT NULL,
-  `equip_08_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_08_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_09_descrip` varchar(31) DEFAULT NULL,
-  `equip_09_value` varchar(31) DEFAULT NULL,
-  `equip_09_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_09_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_10_descrip` varchar(31) DEFAULT NULL,
-  `equip_10_value` varchar(31) DEFAULT NULL,
-  `equip_10_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_10_acqui_means` varchar(31) DEFAULT NULL,
-  `cap_exp_over_1mil` varchar(31) DEFAULT NULL,
-  `proj_01_descrip_cap_exp` varchar(255) DEFAULT NULL,
-  `proj_01_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_01_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `proj_02_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_02_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_02_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `proj_03_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_03_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_03_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `proj_04_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_04_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_04_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `proj_05_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_05_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_05_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `non_response` char(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `specialty_care_clinic_2016`
---
-
-DROP TABLE IF EXISTS `specialty_care_clinic_2016`;
-CREATE TABLE `specialty_care_clinic_2016` (
-  `oshpd_id` varchar(31) DEFAULT NULL,
-  `fac_name` varchar(255) DEFAULT NULL,
-  `fac_address_one` varchar(255) DEFAULT NULL,
-  `fac_address_two` varchar(31) DEFAULT NULL,
-  `fac_city` varchar(31) DEFAULT NULL,
-  `fac_zipcode` varchar(31) DEFAULT NULL,
-  `fac_phone` varchar(31) DEFAULT NULL,
-  `fac_admin_name` varchar(255) DEFAULT NULL,
-  `fac_oper_curryr` varchar(31) DEFAULT NULL,
-  `beg_date` varchar(31) DEFAULT NULL,
-  `end_date` varchar(31) DEFAULT NULL,
-  `parent_name` varchar(255) DEFAULT NULL,
-  `parent_address_one` varchar(255) DEFAULT NULL,
-  `parent_address_two` varchar(255) DEFAULT NULL,
-  `parent_city` varchar(31) DEFAULT NULL,
-  `parent_state` varchar(31) DEFAULT NULL,
-  `parent_zipcode` varchar(31) DEFAULT NULL,
-  `report_prep_name` varchar(31) DEFAULT NULL,
-  `lic_status` varchar(31) DEFAULT NULL,
-  `lic_status_date` varchar(31) DEFAULT NULL,
-  `lic_orig_date` varchar(31) DEFAULT NULL,
-  `report_status` varchar(31) DEFAULT NULL,
-  `mcal_provider_no` varchar(31) DEFAULT NULL,
-  `mcare_provider_no` varchar(31) DEFAULT NULL,
-  `aclaims_no` varchar(31) DEFAULT NULL,
-  `assembly_dist` varchar(31) DEFAULT NULL,
-  `senate_dist` varchar(31) DEFAULT NULL,
-  `congress_dist` varchar(31) DEFAULT NULL,
-  `cens_tract` varchar(31) DEFAULT NULL,
-  `med_svc_study_area` varchar(31) DEFAULT NULL,
-  `laco_svc_plan_area` varchar(31) DEFAULT NULL,
-  `health_svc_area` varchar(31) DEFAULT NULL,
-  `county` varchar(31) DEFAULT NULL,
-  `license_no` varchar(31) DEFAULT NULL,
-  `longitude` varchar(31) DEFAULT NULL,
-  `latitude` varchar(31) DEFAULT NULL,
-  `type_lic` varchar(31) DEFAULT NULL,
-  `type_cntrl` varchar(255) DEFAULT NULL,
-  `patients_undupl` varchar(31) DEFAULT NULL,
-  `encounters_totl` varchar(31) DEFAULT NULL,
-  `op_rm_cy` varchar(31) DEFAULT NULL,
-  `surg_totl` varchar(31) DEFAULT NULL,
-  `encounters_psy_gen_med` varchar(31) DEFAULT NULL,
-  `encounters_psy_subst_abuse` varchar(31) DEFAULT NULL,
-  `encounters_psy_mental_hlth_couns` varchar(31) DEFAULT NULL,
-  `encounters_psy_all_othr` varchar(31) DEFAULT NULL,
-  `encounters_psy_totl` varchar(31) DEFAULT NULL,
-  `no_dialysis_stations` varchar(31) DEFAULT NULL,
-  `app_in_home_training_capd_ccpd` varchar(31) DEFAULT NULL,
-  `gro_rev_totl` varchar(31) DEFAULT NULL,
-  `write_off_charity_totl` varchar(31) DEFAULT NULL,
-  `write_off_contr_adjust_totl` varchar(31) DEFAULT NULL,
-  `write_off_bad_debts_totl` varchar(31) DEFAULT NULL,
-  `write_off_othr_adjust_totl` varchar(31) DEFAULT NULL,
-  `write_off_adjusts` varchar(31) DEFAULT NULL,
-  `net_patient_rev_totl` varchar(31) DEFAULT NULL,
-  `rev_othr_oper_grants_publ_totl` varchar(31) DEFAULT NULL,
-  `rev_othr_oper_grants_pvt_totl` varchar(31) DEFAULT NULL,
-  `rev_othr_oper_donations_totl` varchar(31) DEFAULT NULL,
-  `rev_other_oper_othr_totl` varchar(31) DEFAULT NULL,
-  `rev_other_oper_totl` varchar(31) DEFAULT NULL,
-  `rev_oper_totl` varchar(31) DEFAULT NULL,
-  `exp_oper_sal_wages` varchar(31) DEFAULT NULL,
-  `exp_oper_contr_prof` varchar(31) DEFAULT NULL,
-  `exp_oper_sup` varchar(31) DEFAULT NULL,
-  `exp_oper_rent_deprc` varchar(31) DEFAULT NULL,
-  `exp_oper_util` varchar(31) DEFAULT NULL,
-  `exp_oper_liab_prof_ins` varchar(31) DEFAULT NULL,
-  `exp_oper_othr_ins` varchar(31) DEFAULT NULL,
-  `exp_oper_all_othr` varchar(31) DEFAULT NULL,
-  `exp_oper_totl` varchar(31) DEFAULT NULL,
-  `net_frm_oper` varchar(31) DEFAULT NULL,
-  `equip_acq_over_500k` varchar(31) DEFAULT NULL,
-  `equip_01_descrip` varchar(31) DEFAULT NULL,
-  `equip_01_value` varchar(31) DEFAULT NULL,
-  `equip_01_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_01_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_02_descrip` varchar(31) DEFAULT NULL,
-  `equip_02_value` varchar(31) DEFAULT NULL,
-  `equip_02_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_02_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_03_descrip` varchar(31) DEFAULT NULL,
-  `equip_03_value` varchar(31) DEFAULT NULL,
-  `equip_03_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_03_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_04_descrip` varchar(31) DEFAULT NULL,
-  `equip_04_value` varchar(31) DEFAULT NULL,
-  `equip_04_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_04_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_05_descrip` varchar(31) DEFAULT NULL,
-  `equip_05_value` varchar(31) DEFAULT NULL,
-  `equip_05_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_05_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_06_descrip` varchar(31) DEFAULT NULL,
-  `equip_06_value` varchar(31) DEFAULT NULL,
-  `equip_06_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_06_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_07_descrip` varchar(31) DEFAULT NULL,
-  `equip_07_value` varchar(31) DEFAULT NULL,
-  `equip_07_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_07_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_08_descrip` varchar(31) DEFAULT NULL,
-  `equip_08_value` varchar(31) DEFAULT NULL,
-  `equip_08_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_08_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_09_descrip` varchar(31) DEFAULT NULL,
-  `equip_09_value` varchar(31) DEFAULT NULL,
-  `equip_09_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_09_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_10_descrip` varchar(31) DEFAULT NULL,
-  `equip_10_value` varchar(31) DEFAULT NULL,
-  `equip_10_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_10_acqui_means` varchar(31) DEFAULT NULL,
-  `cap_exp_over_1mil` varchar(31) DEFAULT NULL,
-  `proj_01_descrip_cap_exp` varchar(255) DEFAULT NULL,
-  `proj_01_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_01_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `proj_02_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_02_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_02_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `proj_03_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_03_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_03_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `proj_04_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_04_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_04_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `proj_05_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_05_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_05_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `non_response` char(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `specialty_care_clinic_2017`
---
-
-DROP TABLE IF EXISTS `specialty_care_clinic_2017`;
-CREATE TABLE `specialty_care_clinic_2017` (
-  `oshpd_id` varchar(31) DEFAULT NULL,
-  `fac_name` varchar(255) DEFAULT NULL,
-  `fac_address_one` varchar(255) DEFAULT NULL,
-  `fac_address_two` varchar(31) DEFAULT NULL,
-  `fac_city` varchar(31) DEFAULT NULL,
-  `fac_zipcode` varchar(31) DEFAULT NULL,
-  `fac_phone` varchar(31) DEFAULT NULL,
-  `fac_admin_name` varchar(255) DEFAULT NULL,
-  `fac_oper_curryr` varchar(31) DEFAULT NULL,
-  `beg_date` varchar(31) DEFAULT NULL,
-  `end_date` varchar(31) DEFAULT NULL,
-  `parent_name` varchar(255) DEFAULT NULL,
-  `parent_address_one` varchar(255) DEFAULT NULL,
-  `parent_address_two` varchar(255) DEFAULT NULL,
-  `parent_city` varchar(31) DEFAULT NULL,
-  `parent_state` varchar(31) DEFAULT NULL,
-  `parent_zipcode` varchar(31) DEFAULT NULL,
-  `report_prep_name` varchar(31) DEFAULT NULL,
-  `lic_status` varchar(31) DEFAULT NULL,
-  `lic_status_date` varchar(31) DEFAULT NULL,
-  `lic_orig_date` varchar(31) DEFAULT NULL,
-  `report_status` varchar(31) DEFAULT NULL,
-  `mcal_provider_no` varchar(31) DEFAULT NULL,
-  `mcare_provider_no` varchar(31) DEFAULT NULL,
-  `aclaims_no` varchar(31) DEFAULT NULL,
-  `assembly_dist` varchar(31) DEFAULT NULL,
-  `senate_dist` varchar(31) DEFAULT NULL,
-  `congress_dist` varchar(31) DEFAULT NULL,
-  `cens_tract` varchar(31) DEFAULT NULL,
-  `med_svc_study_area` varchar(31) DEFAULT NULL,
-  `laco_svc_plan_area` varchar(31) DEFAULT NULL,
-  `health_svc_area` varchar(31) DEFAULT NULL,
-  `county` varchar(31) DEFAULT NULL,
-  `license_no` varchar(31) DEFAULT NULL,
-  `longitude` varchar(31) DEFAULT NULL,
-  `latitude` varchar(31) DEFAULT NULL,
-  `type_lic` varchar(31) DEFAULT NULL,
-  `type_cntrl` varchar(255) DEFAULT NULL,
-  `patients_undupl` varchar(31) DEFAULT NULL,
-  `encounters_totl` varchar(31) DEFAULT NULL,
-  `op_rm_cy` varchar(31) DEFAULT NULL,
-  `surg_totl` varchar(31) DEFAULT NULL,
-  `encounters_psy_gen_med` varchar(31) DEFAULT NULL,
-  `encounters_psy_subst_abuse` varchar(31) DEFAULT NULL,
-  `encounters_psy_mental_hlth_couns` varchar(31) DEFAULT NULL,
-  `encounters_psy_all_othr` varchar(31) DEFAULT NULL,
-  `encounters_psy_totl` varchar(31) DEFAULT NULL,
-  `no_dialysis_stations` varchar(31) DEFAULT NULL,
-  `app_in_home_training_capd_ccpd` varchar(31) DEFAULT NULL,
-  `gro_rev_totl` varchar(31) DEFAULT NULL,
-  `write_off_charity_totl` varchar(31) DEFAULT NULL,
-  `write_off_contr_adjust_totl` varchar(31) DEFAULT NULL,
-  `write_off_bad_debts_totl` varchar(31) DEFAULT NULL,
-  `write_off_othr_adjust_totl` varchar(31) DEFAULT NULL,
-  `write_off_adjusts` varchar(31) DEFAULT NULL,
-  `net_patient_rev_totl` varchar(31) DEFAULT NULL,
-  `rev_othr_oper_grants_publ_totl` varchar(31) DEFAULT NULL,
-  `rev_othr_oper_grants_pvt_totl` varchar(31) DEFAULT NULL,
-  `rev_othr_oper_donations_totl` varchar(31) DEFAULT NULL,
-  `rev_other_oper_othr_totl` varchar(31) DEFAULT NULL,
-  `rev_other_oper_totl` varchar(31) DEFAULT NULL,
-  `rev_oper_totl` varchar(31) DEFAULT NULL,
-  `exp_oper_sal_wages` varchar(31) DEFAULT NULL,
-  `exp_oper_contr_prof` varchar(31) DEFAULT NULL,
-  `exp_oper_sup` varchar(31) DEFAULT NULL,
-  `exp_oper_rent_deprc` varchar(31) DEFAULT NULL,
-  `exp_oper_util` varchar(31) DEFAULT NULL,
-  `exp_oper_liab_prof_ins` varchar(31) DEFAULT NULL,
-  `exp_oper_othr_ins` varchar(31) DEFAULT NULL,
-  `exp_oper_all_othr` varchar(31) DEFAULT NULL,
-  `exp_oper_totl` varchar(31) DEFAULT NULL,
-  `net_frm_oper` varchar(31) DEFAULT NULL,
-  `equip_acq_over_500k` varchar(31) DEFAULT NULL,
-  `equip_01_descrip` varchar(31) DEFAULT NULL,
-  `equip_01_value` varchar(31) DEFAULT NULL,
-  `equip_01_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_01_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_02_descrip` varchar(31) DEFAULT NULL,
-  `equip_02_value` varchar(31) DEFAULT NULL,
-  `equip_02_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_02_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_03_descrip` varchar(31) DEFAULT NULL,
-  `equip_03_value` varchar(31) DEFAULT NULL,
-  `equip_03_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_03_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_04_descrip` varchar(31) DEFAULT NULL,
-  `equip_04_value` varchar(31) DEFAULT NULL,
-  `equip_04_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_04_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_05_descrip` varchar(31) DEFAULT NULL,
-  `equip_05_value` varchar(31) DEFAULT NULL,
-  `equip_05_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_05_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_06_descrip` varchar(31) DEFAULT NULL,
-  `equip_06_value` varchar(31) DEFAULT NULL,
-  `equip_06_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_06_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_07_descrip` varchar(31) DEFAULT NULL,
-  `equip_07_value` varchar(31) DEFAULT NULL,
-  `equip_07_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_07_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_08_descrip` varchar(31) DEFAULT NULL,
-  `equip_08_value` varchar(31) DEFAULT NULL,
-  `equip_08_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_08_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_09_descrip` varchar(31) DEFAULT NULL,
-  `equip_09_value` varchar(31) DEFAULT NULL,
-  `equip_09_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_09_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_10_descrip` varchar(31) DEFAULT NULL,
-  `equip_10_value` varchar(31) DEFAULT NULL,
-  `equip_10_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_10_acqui_means` varchar(31) DEFAULT NULL,
-  `cap_exp_over_1mil` varchar(31) DEFAULT NULL,
-  `proj_01_descrip_cap_exp` varchar(255) DEFAULT NULL,
-  `proj_01_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_01_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `proj_02_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_02_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_02_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `proj_03_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_03_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_03_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `proj_04_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_04_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_04_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `proj_05_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_05_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_05_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `non_response` char(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `specialty_care_clinic_2018`
---
-
-DROP TABLE IF EXISTS `specialty_care_clinic_2018`;
-CREATE TABLE `specialty_care_clinic_2018` (
-  `description` varchar(31) DEFAULT NULL,
-  `fac_no` varchar(31) DEFAULT NULL,
-  `fac_name` varchar(255) DEFAULT NULL,
-  `fac_str_addr` varchar(255) DEFAULT NULL,
-  `fac_city` varchar(31) DEFAULT NULL,
-  `fac_zip` varchar(31) DEFAULT NULL,
-  `fac_phone` varchar(31) DEFAULT NULL,
-  `fac_admin_name` varchar(255) DEFAULT NULL,
-  `fac_operated_this_yr` varchar(31) DEFAULT NULL,
-  `fac_op_per_begin_dt` varchar(31) DEFAULT NULL,
-  `fac_op_per_end_dt` varchar(31) DEFAULT NULL,
-  `fac_par_corp_name` varchar(255) DEFAULT NULL,
-  `fac_par_corp_bus_addr` varchar(255) DEFAULT NULL,
-  `fac_par_corp_city` varchar(31) DEFAULT NULL,
-  `fac_par_corp_state` varchar(31) DEFAULT NULL,
-  `fac_par_corp_zip` varchar(31) DEFAULT NULL,
-  `rept_prep_name` varchar(31) DEFAULT NULL,
-  `submitted_dt` varchar(31) DEFAULT NULL,
-  `rev_rept_prep_name` varchar(31) DEFAULT NULL,
-  `revised_dt` varchar(31) DEFAULT NULL,
-  `corrected_dt` varchar(31) DEFAULT NULL,
-  `license_no` varchar(31) DEFAULT NULL,
-  `license_eff_date` varchar(31) DEFAULT NULL,
-  `license_exp_date` varchar(31) DEFAULT NULL,
-  `license_status` varchar(31) DEFAULT NULL,
-  `facility_level` varchar(31) DEFAULT NULL,
-  `longitude` varchar(31) DEFAULT NULL,
-  `latitude` varchar(31) DEFAULT NULL,
-  `assembly_dist` varchar(31) DEFAULT NULL,
-  `senate_dist` varchar(31) DEFAULT NULL,
-  `congress_dist` varchar(255) DEFAULT NULL,
-  `cens_tract` varchar(31) DEFAULT NULL,
-  `med_svc_study_area` varchar(31) DEFAULT NULL,
-  `la_county_svc_plan_area` varchar(31) DEFAULT NULL,
-  `health_svc_area` varchar(31) DEFAULT NULL,
-  `county` varchar(31) DEFAULT NULL,
-  `lic_cat` varchar(31) DEFAULT NULL,
-  `licee_toc` varchar(255) DEFAULT NULL,
-  `tot_unduplicated_patients` varchar(31) DEFAULT NULL,
-  `surg_oper_rms_on_dec_31_cnt` varchar(31) DEFAULT NULL,
-  `tot_surg_opers_during_calendar_yr` varchar(31) DEFAULT NULL,
-  `gen_med_encounters` varchar(31) DEFAULT NULL,
-  `substance_abuse_encounters` varchar(31) DEFAULT NULL,
-  `mental_health_counseling_encounters` varchar(31) DEFAULT NULL,
-  `all_other_encounters` varchar(31) DEFAULT NULL,
-  `tot_psychology_encounters` varchar(31) DEFAULT NULL,
-  `no_dialysis_stations` varchar(31) DEFAULT NULL,
-  `app_in_home_training_capd_ccpd` varchar(31) DEFAULT NULL,
-  `tot_encounters` varchar(31) DEFAULT NULL,
-  `gross_pat_revenue_tot` varchar(31) DEFAULT NULL,
-  `write_off_charity_tot` varchar(31) DEFAULT NULL,
-  `write_off_contractional_adjustments_tot` varchar(31) DEFAULT NULL,
-  `write_off_bad_debts_tot` varchar(31) DEFAULT NULL,
-  `write_off_other_adjustment_tot` varchar(31) DEFAULT NULL,
-  `write_off_adjustments` varchar(31) DEFAULT NULL,
-  `net_pat_revenue_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_grants_public_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_grants_private_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_donations_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_other_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_tot` varchar(31) DEFAULT NULL,
-  `oper_revenue_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_salaries_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_contract_services_professional_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_supplies_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_rent_depreciation_mortgage_interest_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_utilities_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_professional_liab_insurance_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_other_insurance_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_other_expenses_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_tot` varchar(31) DEFAULT NULL,
-  `net_oper_tot` varchar(31) DEFAULT NULL,
-  `fac_acquire_equipment_over_500k` varchar(31) DEFAULT NULL,
-  `deequip_01` varchar(31) DEFAULT NULL,
-  `deequip_02` varchar(31) DEFAULT NULL,
-  `deequip_03` varchar(31) DEFAULT NULL,
-  `deequip_04` varchar(31) DEFAULT NULL,
-  `deequip_05` varchar(31) DEFAULT NULL,
-  `deequip_06` varchar(31) DEFAULT NULL,
-  `deequip_07` varchar(31) DEFAULT NULL,
-  `deequip_08` varchar(31) DEFAULT NULL,
-  `deequip_09` varchar(31) DEFAULT NULL,
-  `deequip_10` varchar(31) DEFAULT NULL,
-  `proj_over_1m` varchar(31) DEFAULT NULL,
-  `deproj_01` varchar(255) DEFAULT NULL,
-  `deproj_02` varchar(31) DEFAULT NULL,
-  `deproj_03` varchar(31) DEFAULT NULL,
-  `deproj_04` varchar(31) DEFAULT NULL,
-  `deproj_05` varchar(31) DEFAULT NULL,
-  `equip_val_01` varchar(31) DEFAULT NULL,
-  `equip_val_02` varchar(31) DEFAULT NULL,
-  `equip_val_03` varchar(31) DEFAULT NULL,
-  `equip_val_04` varchar(31) DEFAULT NULL,
-  `equip_val_05` varchar(31) DEFAULT NULL,
-  `equip_val_06` varchar(31) DEFAULT NULL,
-  `equip_val_07` varchar(31) DEFAULT NULL,
-  `equip_val_08` varchar(31) DEFAULT NULL,
-  `equip_val_09` varchar(31) DEFAULT NULL,
-  `equip_val_10` varchar(31) DEFAULT NULL,
-  `proj_expenditures_01` varchar(31) DEFAULT NULL,
-  `proj_expenditures_02` varchar(31) DEFAULT NULL,
-  `proj_expenditures_03` varchar(31) DEFAULT NULL,
-  `proj_expenditures_04` varchar(31) DEFAULT NULL,
-  `proj_expenditures_05` varchar(31) DEFAULT NULL,
-  `dt_acquire_01` varchar(31) DEFAULT NULL,
-  `dt_acquire_02` varchar(31) DEFAULT NULL,
-  `dt_acquire_03` varchar(31) DEFAULT NULL,
-  `dt_acquire_04` varchar(31) DEFAULT NULL,
-  `dt_acquire_05` varchar(31) DEFAULT NULL,
-  `dt_acquire_06` varchar(31) DEFAULT NULL,
-  `dt_acquire_07` varchar(31) DEFAULT NULL,
-  `dt_acquire_08` varchar(31) DEFAULT NULL,
-  `dt_acquire_09` varchar(31) DEFAULT NULL,
-  `dt_acquire_10` varchar(31) DEFAULT NULL,
-  `oshpd_proj_no_01` varchar(31) DEFAULT NULL,
-  `oshpd_proj_no_02` varchar(31) DEFAULT NULL,
-  `oshpd_proj_no_03` varchar(31) DEFAULT NULL,
-  `oshpd_proj_no_04` varchar(31) DEFAULT NULL,
-  `oshpd_proj_no_05` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_01` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_02` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_03` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_04` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_05` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_06` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_07` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_08` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_09` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_10` varchar(31) DEFAULT NULL,
-  `non_response` char(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `specialty_care_clinic_2019`
---
-
-DROP TABLE IF EXISTS `specialty_care_clinic_2019`;
-CREATE TABLE `specialty_care_clinic_2019` (
-  `description` varchar(31) DEFAULT NULL,
-  `fac_no` varchar(255) DEFAULT NULL,
-  `fac_name` varchar(255) DEFAULT NULL,
-  `fac_str_addr` varchar(255) DEFAULT NULL,
-  `fac_city` varchar(31) DEFAULT NULL,
-  `fac_zip` varchar(31) DEFAULT NULL,
-  `fac_phone` varchar(31) DEFAULT NULL,
-  `fac_admin_name` varchar(255) DEFAULT NULL,
-  `fac_operated_this_yr` varchar(31) DEFAULT NULL,
-  `fac_op_per_begin_dt` varchar(31) DEFAULT NULL,
-  `fac_op_per_end_dt` varchar(255) DEFAULT NULL,
-  `fac_par_corp_name` varchar(255) DEFAULT NULL,
-  `fac_par_corp_bus_addr` varchar(255) DEFAULT NULL,
-  `fac_par_corp_city` varchar(31) DEFAULT NULL,
-  `fac_par_corp_state` varchar(31) DEFAULT NULL,
-  `fac_par_corp_zip` varchar(31) DEFAULT NULL,
-  `rept_prep_name` varchar(31) DEFAULT NULL,
-  `submitted_dt` varchar(31) DEFAULT NULL,
-  `rev_rept_prep_name` varchar(31) DEFAULT NULL,
-  `revised_dt` varchar(31) DEFAULT NULL,
-  `corrected_dt` varchar(31) DEFAULT NULL,
-  `license_no` varchar(31) DEFAULT NULL,
-  `license_eff_date` varchar(31) DEFAULT NULL,
-  `license_exp_date` varchar(31) DEFAULT NULL,
-  `license_status` varchar(31) DEFAULT NULL,
-  `facility_level` varchar(31) DEFAULT NULL,
-  `longitude` varchar(31) DEFAULT NULL,
-  `latitude` varchar(31) DEFAULT NULL,
-  `assembly_dist` varchar(31) DEFAULT NULL,
-  `senate_dist` varchar(255) DEFAULT NULL,
-  `congress_dist` varchar(255) DEFAULT NULL,
-  `cens_tract` varchar(31) DEFAULT NULL,
-  `med_svc_study_area` varchar(31) DEFAULT NULL,
-  `la_county_svc_plan_area` varchar(31) DEFAULT NULL,
-  `health_svc_area` varchar(31) DEFAULT NULL,
-  `county` varchar(31) DEFAULT NULL,
-  `lic_cat` varchar(255) DEFAULT NULL,
-  `licee_toc` varchar(255) DEFAULT NULL,
-  `tot_unduplicated_patients` varchar(31) DEFAULT NULL,
-  `surg_oper_rms_on_dec_31_cnt` varchar(31) DEFAULT NULL,
-  `tot_surg_opers_during_calendar_yr` varchar(31) DEFAULT NULL,
-  `gen_med_encounters` varchar(31) DEFAULT NULL,
-  `substance_abuse_encounters` varchar(31) DEFAULT NULL,
-  `mental_health_counseling_encounters` varchar(31) DEFAULT NULL,
-  `all_other_encounters` varchar(31) DEFAULT NULL,
-  `tot_psychology_encounters` varchar(31) DEFAULT NULL,
-  `no_dialysis_stations` varchar(31) DEFAULT NULL,
-  `app_in_home_training_capd_ccpd` varchar(31) DEFAULT NULL,
-  `tot_encounters` varchar(31) DEFAULT NULL,
-  `gross_pat_revenue_tot` varchar(31) DEFAULT NULL,
-  `write_off_charity_tot` varchar(31) DEFAULT NULL,
-  `write_off_contractional_adjustments_tot` varchar(31) DEFAULT NULL,
-  `write_off_bad_debts_tot` varchar(31) DEFAULT NULL,
-  `write_off_other_adjustment_tot` varchar(31) DEFAULT NULL,
-  `write_off_adjustments` varchar(31) DEFAULT NULL,
-  `net_pat_revenue_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_grants_public_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_grants_private_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_donations_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_other_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_tot` varchar(31) DEFAULT NULL,
-  `oper_revenue_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_salaries_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_contract_services_professional_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_supplies_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_rent_depreciation_mortgage_interest_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_utilities_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_professional_liab_insurance_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_other_insurance_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_other_expenses_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_tot` varchar(31) DEFAULT NULL,
-  `net_oper_tot` varchar(31) DEFAULT NULL,
-  `fac_acquire_equipment_over_500k` varchar(31) DEFAULT NULL,
-  `deequip_01` varchar(31) DEFAULT NULL,
-  `deequip_02` varchar(31) DEFAULT NULL,
-  `deequip_03` varchar(31) DEFAULT NULL,
-  `deequip_04` varchar(31) DEFAULT NULL,
-  `deequip_05` varchar(31) DEFAULT NULL,
-  `deequip_06` varchar(31) DEFAULT NULL,
-  `deequip_07` varchar(31) DEFAULT NULL,
-  `deequip_08` varchar(31) DEFAULT NULL,
-  `deequip_09` varchar(31) DEFAULT NULL,
-  `deequip_10` varchar(31) DEFAULT NULL,
-  `proj_over_1m` varchar(255) DEFAULT NULL,
-  `deproj_01` varchar(255) DEFAULT NULL,
-  `deproj_02` varchar(31) DEFAULT NULL,
-  `deproj_03` varchar(31) DEFAULT NULL,
-  `deproj_04` varchar(31) DEFAULT NULL,
-  `deproj_05` varchar(31) DEFAULT NULL,
-  `equip_val_01` varchar(31) DEFAULT NULL,
-  `equip_val_02` varchar(31) DEFAULT NULL,
-  `equip_val_03` varchar(31) DEFAULT NULL,
-  `equip_val_04` varchar(31) DEFAULT NULL,
-  `equip_val_05` varchar(31) DEFAULT NULL,
-  `equip_val_06` varchar(31) DEFAULT NULL,
-  `equip_val_07` varchar(31) DEFAULT NULL,
-  `equip_val_08` varchar(31) DEFAULT NULL,
-  `equip_val_09` varchar(31) DEFAULT NULL,
-  `equip_val_10` varchar(31) DEFAULT NULL,
-  `proj_expenditures_01` varchar(31) DEFAULT NULL,
-  `proj_expenditures_02` varchar(31) DEFAULT NULL,
-  `proj_expenditures_03` varchar(31) DEFAULT NULL,
-  `proj_expenditures_04` varchar(31) DEFAULT NULL,
-  `proj_expenditures_05` varchar(31) DEFAULT NULL,
-  `dt_acquire_01` varchar(31) DEFAULT NULL,
-  `dt_acquire_02` varchar(31) DEFAULT NULL,
-  `dt_acquire_03` varchar(31) DEFAULT NULL,
-  `dt_acquire_04` varchar(31) DEFAULT NULL,
-  `dt_acquire_05` varchar(31) DEFAULT NULL,
-  `dt_acquire_06` varchar(31) DEFAULT NULL,
-  `dt_acquire_07` varchar(31) DEFAULT NULL,
-  `dt_acquire_08` varchar(31) DEFAULT NULL,
-  `dt_acquire_09` varchar(31) DEFAULT NULL,
-  `dt_acquire_10` varchar(31) DEFAULT NULL,
-  `oshpd_proj_no_01` varchar(31) DEFAULT NULL,
-  `oshpd_proj_no_02` varchar(31) DEFAULT NULL,
-  `oshpd_proj_no_03` varchar(31) DEFAULT NULL,
-  `oshpd_proj_no_04` varchar(31) DEFAULT NULL,
-  `oshpd_proj_no_05` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_01` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_02` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_03` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_04` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_05` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_06` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_07` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_08` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_09` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_10` varchar(31) DEFAULT NULL,
-  `non_response` char(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `specialty_care_clinic_2020`
---
-
-DROP TABLE IF EXISTS `specialty_care_clinic_2020`;
-CREATE TABLE `specialty_care_clinic_2020` (
-  `description` varchar(31) DEFAULT NULL,
-  `fac_no` varchar(255) DEFAULT NULL,
-  `fac_name` varchar(255) DEFAULT NULL,
-  `fac_str_addr` varchar(255) DEFAULT NULL,
-  `fac_city` varchar(31) DEFAULT NULL,
-  `fac_zip` varchar(31) DEFAULT NULL,
-  `fac_phone` varchar(31) DEFAULT NULL,
-  `fac_admin_name` varchar(255) DEFAULT NULL,
-  `fac_operated_this_yr` varchar(31) DEFAULT NULL,
-  `fac_op_per_begin_dt` varchar(31) DEFAULT NULL,
-  `fac_op_per_end_dt` varchar(255) DEFAULT NULL,
-  `fac_par_corp_name` varchar(255) DEFAULT NULL,
-  `fac_par_corp_bus_addr` varchar(255) DEFAULT NULL,
-  `fac_par_corp_city` varchar(31) DEFAULT NULL,
-  `fac_par_corp_state` varchar(31) DEFAULT NULL,
-  `fac_par_corp_zip` varchar(31) DEFAULT NULL,
-  `rept_prep_name` varchar(31) DEFAULT NULL,
-  `submitted_dt` varchar(31) DEFAULT NULL,
-  `rev_rept_prep_name` varchar(31) DEFAULT NULL,
-  `revised_dt` varchar(31) DEFAULT NULL,
-  `corrected_dt` varchar(31) DEFAULT NULL,
-  `license_no` varchar(31) DEFAULT NULL,
-  `license_eff_date` varchar(31) DEFAULT NULL,
-  `license_exp_date` varchar(31) DEFAULT NULL,
-  `license_status` varchar(31) DEFAULT NULL,
-  `facility_level` varchar(31) DEFAULT NULL,
-  `longitude` varchar(31) DEFAULT NULL,
-  `latitude` varchar(31) DEFAULT NULL,
-  `assembly_dist` varchar(31) DEFAULT NULL,
-  `senate_dist` varchar(255) DEFAULT NULL,
-  `congress_dist` varchar(255) DEFAULT NULL,
-  `cens_tract` varchar(31) DEFAULT NULL,
-  `med_svc_study_area` varchar(31) DEFAULT NULL,
-  `la_county_svc_plan_area` varchar(31) DEFAULT NULL,
-  `health_svc_area` varchar(31) DEFAULT NULL,
-  `county` varchar(31) DEFAULT NULL,
-  `lic_cat` varchar(255) DEFAULT NULL,
-  `licee_toc` varchar(255) DEFAULT NULL,
-  `tot_unduplicated_patients` varchar(31) DEFAULT NULL,
-  `surg_oper_rms_on_dec_31_cnt` varchar(31) DEFAULT NULL,
-  `tot_surg_opers_during_calendar_yr` varchar(31) DEFAULT NULL,
-  `gen_med_encounters` varchar(31) DEFAULT NULL,
-  `substance_abuse_encounters` varchar(31) DEFAULT NULL,
-  `mental_health_counseling_encounters` varchar(31) DEFAULT NULL,
-  `all_other_encounters` varchar(31) DEFAULT NULL,
-  `tot_psychology_encounters` varchar(31) DEFAULT NULL,
-  `no_dialysis_stations` varchar(31) DEFAULT NULL,
-  `app_in_home_training_capd_ccpd` varchar(31) DEFAULT NULL,
-  `tot_encounters` varchar(31) DEFAULT NULL,
-  `gross_pat_revenue_tot` varchar(31) DEFAULT NULL,
-  `write_off_charity_tot` varchar(31) DEFAULT NULL,
-  `write_off_contractional_adjustments_tot` varchar(31) DEFAULT NULL,
-  `write_off_bad_debts_tot` varchar(31) DEFAULT NULL,
-  `write_off_other_adjustment_tot` varchar(31) DEFAULT NULL,
-  `write_off_adjustments` varchar(31) DEFAULT NULL,
-  `net_pat_revenue_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_grants_public_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_grants_private_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_donations_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_other_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_tot` varchar(31) DEFAULT NULL,
-  `oper_revenue_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_salaries_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_contract_services_professional_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_supplies_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_rent_depreciation_mortgage_interest_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_utilities_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_professional_liab_insurance_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_other_insurance_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_other_expenses_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_tot` varchar(31) DEFAULT NULL,
-  `net_oper_tot` varchar(31) DEFAULT NULL,
-  `fac_acquire_equipment_over_500k` varchar(31) DEFAULT NULL,
-  `deequip_01` varchar(31) DEFAULT NULL,
-  `deequip_02` varchar(31) DEFAULT NULL,
-  `deequip_03` varchar(31) DEFAULT NULL,
-  `deequip_04` varchar(31) DEFAULT NULL,
-  `deequip_05` varchar(31) DEFAULT NULL,
-  `deequip_06` varchar(31) DEFAULT NULL,
-  `deequip_07` varchar(31) DEFAULT NULL,
-  `deequip_08` varchar(31) DEFAULT NULL,
-  `deequip_09` varchar(31) DEFAULT NULL,
-  `deequip_10` varchar(31) DEFAULT NULL,
-  `proj_over_1m` varchar(255) DEFAULT NULL,
-  `deproj_01` varchar(255) DEFAULT NULL,
-  `deproj_02` varchar(31) DEFAULT NULL,
-  `deproj_03` varchar(31) DEFAULT NULL,
-  `deproj_04` varchar(31) DEFAULT NULL,
-  `deproj_05` varchar(31) DEFAULT NULL,
-  `equip_val_01` varchar(31) DEFAULT NULL,
-  `equip_val_02` varchar(31) DEFAULT NULL,
-  `equip_val_03` varchar(31) DEFAULT NULL,
-  `equip_val_04` varchar(31) DEFAULT NULL,
-  `equip_val_05` varchar(31) DEFAULT NULL,
-  `equip_val_06` varchar(31) DEFAULT NULL,
-  `equip_val_07` varchar(31) DEFAULT NULL,
-  `equip_val_08` varchar(31) DEFAULT NULL,
-  `equip_val_09` varchar(31) DEFAULT NULL,
-  `equip_val_10` varchar(31) DEFAULT NULL,
-  `proj_expenditures_01` varchar(31) DEFAULT NULL,
-  `proj_expenditures_02` varchar(31) DEFAULT NULL,
-  `proj_expenditures_03` varchar(31) DEFAULT NULL,
-  `proj_expenditures_04` varchar(31) DEFAULT NULL,
-  `proj_expenditures_05` varchar(31) DEFAULT NULL,
-  `dt_acquire_01` varchar(31) DEFAULT NULL,
-  `dt_acquire_02` varchar(31) DEFAULT NULL,
-  `dt_acquire_03` varchar(31) DEFAULT NULL,
-  `dt_acquire_04` varchar(31) DEFAULT NULL,
-  `dt_acquire_05` varchar(31) DEFAULT NULL,
-  `dt_acquire_06` varchar(31) DEFAULT NULL,
-  `dt_acquire_07` varchar(31) DEFAULT NULL,
-  `dt_acquire_08` varchar(31) DEFAULT NULL,
-  `dt_acquire_09` varchar(31) DEFAULT NULL,
-  `dt_acquire_10` varchar(31) DEFAULT NULL,
-  `oshpd_proj_no_01` varchar(31) DEFAULT NULL,
-  `oshpd_proj_no_02` varchar(31) DEFAULT NULL,
-  `oshpd_proj_no_03` varchar(31) DEFAULT NULL,
-  `oshpd_proj_no_04` varchar(31) DEFAULT NULL,
-  `oshpd_proj_no_05` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_01` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_02` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_03` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_04` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_05` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_06` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_07` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_08` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_09` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_10` varchar(31) DEFAULT NULL,
-  `non_response` char(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `specialty_care_clinic_2021`
---
-
-DROP TABLE IF EXISTS `specialty_care_clinic_2021`;
-CREATE TABLE `specialty_care_clinic_2021` (
-  `description` varchar(31) DEFAULT NULL,
-  `fac_no` varchar(255) DEFAULT NULL,
-  `fac_name` varchar(255) DEFAULT NULL,
-  `fac_str_addr` varchar(255) DEFAULT NULL,
-  `fac_city` varchar(31) DEFAULT NULL,
-  `fac_zip` varchar(31) DEFAULT NULL,
-  `fac_phone` varchar(31) DEFAULT NULL,
-  `fac_admin_name` varchar(255) DEFAULT NULL,
-  `fac_operated_this_yr` varchar(31) DEFAULT NULL,
-  `fac_op_per_begin_dt` varchar(31) DEFAULT NULL,
-  `fac_op_per_end_dt` varchar(255) DEFAULT NULL,
-  `fac_par_corp_name` varchar(255) DEFAULT NULL,
-  `fac_par_corp_bus_addr` varchar(255) DEFAULT NULL,
-  `fac_par_corp_city` varchar(31) DEFAULT NULL,
-  `fac_par_corp_state` varchar(31) DEFAULT NULL,
-  `fac_par_corp_zip` varchar(31) DEFAULT NULL,
-  `rept_prep_name` varchar(31) DEFAULT NULL,
-  `submitted_dt` varchar(31) DEFAULT NULL,
-  `rev_rept_prep_name` varchar(31) DEFAULT NULL,
-  `revised_dt` varchar(31) DEFAULT NULL,
-  `corrected_dt` varchar(31) DEFAULT NULL,
-  `license_no` varchar(31) DEFAULT NULL,
-  `license_eff_date` varchar(31) DEFAULT NULL,
-  `license_exp_date` varchar(31) DEFAULT NULL,
-  `license_status` varchar(31) DEFAULT NULL,
-  `facility_level` varchar(31) DEFAULT NULL,
-  `longitude` varchar(31) DEFAULT NULL,
-  `latitude` varchar(31) DEFAULT NULL,
-  `assembly_dist` varchar(31) DEFAULT NULL,
-  `senate_dist` varchar(255) DEFAULT NULL,
-  `congress_dist` varchar(255) DEFAULT NULL,
-  `cens_tract` varchar(31) DEFAULT NULL,
-  `med_svc_study_area` varchar(31) DEFAULT NULL,
-  `la_county_svc_plan_area` varchar(31) DEFAULT NULL,
-  `health_svc_area` varchar(31) DEFAULT NULL,
-  `county` varchar(31) DEFAULT NULL,
-  `lic_cat` varchar(255) DEFAULT NULL,
-  `licee_toc` varchar(255) DEFAULT NULL,
-  `tot_unduplicated_patients` varchar(31) DEFAULT NULL,
-  `surg_oper_rms_on_dec_31_cnt` varchar(31) DEFAULT NULL,
-  `tot_surg_opers_during_calendar_yr` varchar(31) DEFAULT NULL,
-  `gen_med_encounters` varchar(31) DEFAULT NULL,
-  `substance_abuse_encounters` varchar(31) DEFAULT NULL,
-  `mental_health_counseling_encounters` varchar(31) DEFAULT NULL,
-  `all_other_encounters` varchar(31) DEFAULT NULL,
-  `tot_psychology_encounters` varchar(31) DEFAULT NULL,
-  `no_dialysis_stations` varchar(31) DEFAULT NULL,
-  `app_in_home_training_capd_ccpd` varchar(31) DEFAULT NULL,
-  `tot_encounters` varchar(31) DEFAULT NULL,
-  `gross_pat_revenue_tot` varchar(31) DEFAULT NULL,
-  `write_off_charity_tot` varchar(31) DEFAULT NULL,
-  `write_off_contractional_adjustments_tot` varchar(31) DEFAULT NULL,
-  `write_off_bad_debts_tot` varchar(31) DEFAULT NULL,
-  `write_off_other_adjustment_tot` varchar(31) DEFAULT NULL,
-  `write_off_adjustments` varchar(31) DEFAULT NULL,
-  `net_pat_revenue_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_grants_public_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_grants_private_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_donations_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_other_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_tot` varchar(31) DEFAULT NULL,
-  `oper_revenue_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_salaries_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_contract_services_professional_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_supplies_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_rent_depreciation_mortgage_interest_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_utilities_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_professional_liab_insurance_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_other_insurance_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_other_expenses_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_tot` varchar(31) DEFAULT NULL,
-  `net_oper_tot` varchar(31) DEFAULT NULL,
-  `fac_acquire_equipment_over_500k` varchar(31) DEFAULT NULL,
-  `deequip_01` varchar(31) DEFAULT NULL,
-  `deequip_02` varchar(31) DEFAULT NULL,
-  `deequip_03` varchar(31) DEFAULT NULL,
-  `deequip_04` varchar(31) DEFAULT NULL,
-  `deequip_05` varchar(31) DEFAULT NULL,
-  `deequip_06` varchar(31) DEFAULT NULL,
-  `deequip_07` varchar(31) DEFAULT NULL,
-  `deequip_08` varchar(31) DEFAULT NULL,
-  `deequip_09` varchar(31) DEFAULT NULL,
-  `deequip_10` varchar(31) DEFAULT NULL,
-  `proj_over_1m` varchar(255) DEFAULT NULL,
-  `deproj_01` varchar(255) DEFAULT NULL,
-  `deproj_02` varchar(31) DEFAULT NULL,
-  `deproj_03` varchar(31) DEFAULT NULL,
-  `deproj_04` varchar(31) DEFAULT NULL,
-  `deproj_05` varchar(31) DEFAULT NULL,
-  `equip_val_01` varchar(31) DEFAULT NULL,
-  `equip_val_02` varchar(31) DEFAULT NULL,
-  `equip_val_03` varchar(31) DEFAULT NULL,
-  `equip_val_04` varchar(31) DEFAULT NULL,
-  `equip_val_05` varchar(31) DEFAULT NULL,
-  `equip_val_06` varchar(31) DEFAULT NULL,
-  `equip_val_07` varchar(31) DEFAULT NULL,
-  `equip_val_08` varchar(31) DEFAULT NULL,
-  `equip_val_09` varchar(31) DEFAULT NULL,
-  `equip_val_10` varchar(31) DEFAULT NULL,
-  `proj_expenditures_01` varchar(31) DEFAULT NULL,
-  `proj_expenditures_02` varchar(31) DEFAULT NULL,
-  `proj_expenditures_03` varchar(31) DEFAULT NULL,
-  `proj_expenditures_04` varchar(31) DEFAULT NULL,
-  `proj_expenditures_05` varchar(31) DEFAULT NULL,
-  `dt_acquire_01` varchar(31) DEFAULT NULL,
-  `dt_acquire_02` varchar(31) DEFAULT NULL,
-  `dt_acquire_03` varchar(31) DEFAULT NULL,
-  `dt_acquire_04` varchar(31) DEFAULT NULL,
-  `dt_acquire_05` varchar(31) DEFAULT NULL,
-  `dt_acquire_06` varchar(31) DEFAULT NULL,
-  `dt_acquire_07` varchar(31) DEFAULT NULL,
-  `dt_acquire_08` varchar(31) DEFAULT NULL,
-  `dt_acquire_09` varchar(31) DEFAULT NULL,
-  `dt_acquire_10` varchar(31) DEFAULT NULL,
-  `hcai_proj_no_01` varchar(31) DEFAULT NULL,
-  `hcai_proj_no_02` varchar(31) DEFAULT NULL,
-  `hcai_proj_no_03` varchar(31) DEFAULT NULL,
-  `hcai_proj_no_04` varchar(31) DEFAULT NULL,
-  `hcai_proj_no_05` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_01` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_02` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_03` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_04` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_05` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_06` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_07` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_08` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_09` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_10` varchar(31) DEFAULT NULL,
-  `non_response` char(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `specialty_care_clinic_2022`
---
-
-DROP TABLE IF EXISTS `specialty_care_clinic_2022`;
-CREATE TABLE `specialty_care_clinic_2022` (
-  `description` varchar(31) DEFAULT NULL,
-  `fac_no` varchar(255) DEFAULT NULL,
-  `fac_name` varchar(255) DEFAULT NULL,
-  `fac_str_addr` varchar(255) DEFAULT NULL,
-  `fac_city` varchar(31) DEFAULT NULL,
-  `fac_zip` varchar(31) DEFAULT NULL,
-  `fac_phone` varchar(31) DEFAULT NULL,
-  `fac_admin_name` varchar(255) DEFAULT NULL,
-  `fac_operated_this_yr` varchar(31) DEFAULT NULL,
-  `fac_op_per_begin_dt` varchar(31) DEFAULT NULL,
-  `fac_op_per_end_dt` varchar(255) DEFAULT NULL,
-  `fac_par_corp_name` varchar(255) DEFAULT NULL,
-  `fac_par_corp_bus_addr` varchar(255) DEFAULT NULL,
-  `fac_par_corp_city` varchar(31) DEFAULT NULL,
-  `fac_par_corp_state` varchar(31) DEFAULT NULL,
-  `fac_par_corp_zip` varchar(31) DEFAULT NULL,
-  `rept_prep_name` varchar(31) DEFAULT NULL,
-  `submitted_dt` varchar(31) DEFAULT NULL,
-  `rev_rept_prep_name` varchar(31) DEFAULT NULL,
-  `revised_dt` varchar(31) DEFAULT NULL,
-  `corrected_dt` varchar(31) DEFAULT NULL,
-  `license_no` varchar(31) DEFAULT NULL,
-  `license_eff_date` varchar(31) DEFAULT NULL,
-  `license_exp_date` varchar(31) DEFAULT NULL,
-  `license_status` varchar(31) DEFAULT NULL,
-  `facility_level` varchar(31) DEFAULT NULL,
-  `longitude` varchar(31) DEFAULT NULL,
-  `latitude` varchar(31) DEFAULT NULL,
-  `assembly_dist` varchar(31) DEFAULT NULL,
-  `senate_dist` varchar(255) DEFAULT NULL,
-  `congress_dist` varchar(255) DEFAULT NULL,
-  `census_key` varchar(31) DEFAULT NULL,
-  `med_svc_study_area` varchar(31) DEFAULT NULL,
-  `la_county_svc_plan_area` varchar(31) DEFAULT NULL,
-  `health_svc_area` varchar(31) DEFAULT NULL,
-  `county` varchar(31) DEFAULT NULL,
-  `lic_cat` varchar(255) DEFAULT NULL,
-  `licee_toc` varchar(255) DEFAULT NULL,
-  `tot_unduplicated_patients` varchar(31) DEFAULT NULL,
-  `surg_oper_rms_on_dec_31_cnt` varchar(31) DEFAULT NULL,
-  `tot_surg_opers_during_calendar_yr` varchar(31) DEFAULT NULL,
-  `gen_med_encounters` varchar(31) DEFAULT NULL,
-  `substance_abuse_encounters` varchar(31) DEFAULT NULL,
-  `mental_health_counseling_encounters` varchar(31) DEFAULT NULL,
-  `all_other_encounters` varchar(31) DEFAULT NULL,
-  `tot_psychology_encounters` varchar(31) DEFAULT NULL,
-  `no_dialysis_stations` varchar(31) DEFAULT NULL,
-  `app_in_home_training_capd_ccpd` varchar(31) DEFAULT NULL,
-  `tot_encounters` varchar(31) DEFAULT NULL,
-  `gross_pat_revenue_tot` varchar(31) DEFAULT NULL,
-  `write_off_charity_tot` varchar(31) DEFAULT NULL,
-  `write_off_contractional_adjustments_tot` varchar(31) DEFAULT NULL,
-  `write_off_bad_debts_tot` varchar(31) DEFAULT NULL,
-  `write_off_other_adjustment_tot` varchar(31) DEFAULT NULL,
-  `write_off_adjustments` varchar(31) DEFAULT NULL,
-  `net_pat_revenue_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_grants_public_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_grants_private_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_donations_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_other_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_tot` varchar(31) DEFAULT NULL,
-  `oper_revenue_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_salaries_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_contract_services_professional_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_supplies_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_rent_depreciation_mortgage_interest_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_utilities_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_professional_liab_insurance_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_other_insurance_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_other_expenses_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_tot` varchar(31) DEFAULT NULL,
-  `net_oper_tot` varchar(31) DEFAULT NULL,
-  `fac_acquire_equipment_over_500k` varchar(31) DEFAULT NULL,
-  `deequip_01` varchar(31) DEFAULT NULL,
-  `deequip_02` varchar(31) DEFAULT NULL,
-  `deequip_03` varchar(31) DEFAULT NULL,
-  `deequip_04` varchar(31) DEFAULT NULL,
-  `deequip_05` varchar(31) DEFAULT NULL,
-  `deequip_06` varchar(31) DEFAULT NULL,
-  `deequip_07` varchar(31) DEFAULT NULL,
-  `deequip_08` varchar(31) DEFAULT NULL,
-  `deequip_09` varchar(31) DEFAULT NULL,
-  `deequip_10` varchar(31) DEFAULT NULL,
-  `proj_over_1m` varchar(255) DEFAULT NULL,
-  `deproj_01` varchar(255) DEFAULT NULL,
-  `deproj_02` varchar(31) DEFAULT NULL,
-  `deproj_03` varchar(31) DEFAULT NULL,
-  `deproj_04` varchar(31) DEFAULT NULL,
-  `deproj_05` varchar(31) DEFAULT NULL,
-  `equip_val_01` varchar(31) DEFAULT NULL,
-  `equip_val_02` varchar(31) DEFAULT NULL,
-  `equip_val_03` varchar(31) DEFAULT NULL,
-  `equip_val_04` varchar(31) DEFAULT NULL,
-  `equip_val_05` varchar(31) DEFAULT NULL,
-  `equip_val_06` varchar(31) DEFAULT NULL,
-  `equip_val_07` varchar(31) DEFAULT NULL,
-  `equip_val_08` varchar(31) DEFAULT NULL,
-  `equip_val_09` varchar(31) DEFAULT NULL,
-  `equip_val_10` varchar(31) DEFAULT NULL,
-  `proj_expenditures_01` varchar(31) DEFAULT NULL,
-  `proj_expenditures_02` varchar(31) DEFAULT NULL,
-  `proj_expenditures_03` varchar(31) DEFAULT NULL,
-  `proj_expenditures_04` varchar(31) DEFAULT NULL,
-  `proj_expenditures_05` varchar(31) DEFAULT NULL,
-  `dt_acquire_01` varchar(31) DEFAULT NULL,
-  `dt_acquire_02` varchar(31) DEFAULT NULL,
-  `dt_acquire_03` varchar(31) DEFAULT NULL,
-  `dt_acquire_04` varchar(31) DEFAULT NULL,
-  `dt_acquire_05` varchar(31) DEFAULT NULL,
-  `dt_acquire_06` varchar(31) DEFAULT NULL,
-  `dt_acquire_07` varchar(31) DEFAULT NULL,
-  `dt_acquire_08` varchar(31) DEFAULT NULL,
-  `dt_acquire_09` varchar(31) DEFAULT NULL,
-  `dt_acquire_10` varchar(31) DEFAULT NULL,
-  `hcai_proj_no_01` varchar(31) DEFAULT NULL,
-  `hcai_proj_no_02` varchar(31) DEFAULT NULL,
-  `hcai_proj_no_03` varchar(31) DEFAULT NULL,
-  `hcai_proj_no_04` varchar(31) DEFAULT NULL,
-  `hcai_proj_no_05` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_01` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_02` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_03` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_04` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_05` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_06` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_07` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_08` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_09` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_10` varchar(31) DEFAULT NULL,
-  `non_response` char(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `specialty_care_clinic_2023`
---
-
-DROP TABLE IF EXISTS `specialty_care_clinic_2023`;
-CREATE TABLE `specialty_care_clinic_2023` (
-  `description` varchar(31) DEFAULT NULL,
-  `fac_no` varchar(255) DEFAULT NULL,
-  `fac_name` varchar(255) DEFAULT NULL,
-  `fac_str_addr` varchar(255) DEFAULT NULL,
-  `fac_city` varchar(31) DEFAULT NULL,
-  `fac_zip` varchar(31) DEFAULT NULL,
-  `fac_phone` varchar(31) DEFAULT NULL,
-  `fac_admin_name` varchar(255) DEFAULT NULL,
-  `fac_operated_this_yr` varchar(31) DEFAULT NULL,
-  `fac_op_per_begin_dt` varchar(31) DEFAULT NULL,
-  `fac_op_per_end_dt` varchar(255) DEFAULT NULL,
-  `fac_par_corp_name` varchar(255) DEFAULT NULL,
-  `fac_par_corp_bus_addr` varchar(255) DEFAULT NULL,
-  `fac_par_corp_city` varchar(31) DEFAULT NULL,
-  `fac_par_corp_state` varchar(31) DEFAULT NULL,
-  `fac_par_corp_zip` varchar(31) DEFAULT NULL,
-  `rept_prep_name` varchar(31) DEFAULT NULL,
-  `submitted_dt` varchar(31) DEFAULT NULL,
-  `rev_rept_prep_name` varchar(31) DEFAULT NULL,
-  `revised_dt` varchar(31) DEFAULT NULL,
-  `corrected_dt` varchar(31) DEFAULT NULL,
-  `license_no` varchar(31) DEFAULT NULL,
-  `license_eff_date` varchar(31) DEFAULT NULL,
-  `license_exp_date` varchar(31) DEFAULT NULL,
-  `license_status` varchar(31) DEFAULT NULL,
-  `facility_level` varchar(31) DEFAULT NULL,
-  `longitude` varchar(31) DEFAULT NULL,
-  `latitude` varchar(31) DEFAULT NULL,
-  `assembly_dist` varchar(31) DEFAULT NULL,
-  `senate_dist` varchar(255) DEFAULT NULL,
-  `congress_dist` varchar(255) DEFAULT NULL,
-  `census_key` varchar(31) DEFAULT NULL,
-  `med_svc_study_area` varchar(31) DEFAULT NULL,
-  `la_county_svc_plan_area` varchar(31) DEFAULT NULL,
-  `health_svc_area` varchar(31) DEFAULT NULL,
-  `county` varchar(31) DEFAULT NULL,
-  `lic_cat` varchar(255) DEFAULT NULL,
-  `licee_toc` varchar(255) DEFAULT NULL,
-  `tot_unduplicated_patients` varchar(31) DEFAULT NULL,
-  `surg_oper_rms_on_dec_31_cnt` varchar(31) DEFAULT NULL,
-  `tot_surg_opers_during_calendar_yr` varchar(31) DEFAULT NULL,
-  `gen_med_encounters` varchar(31) DEFAULT NULL,
-  `substance_abuse_encounters` varchar(31) DEFAULT NULL,
-  `mental_health_counseling_encounters` varchar(31) DEFAULT NULL,
-  `all_other_encounters` varchar(31) DEFAULT NULL,
-  `tot_psychology_encounters` varchar(31) DEFAULT NULL,
-  `no_dialysis_stations` varchar(31) DEFAULT NULL,
-  `app_in_home_training_capd_ccpd` varchar(31) DEFAULT NULL,
-  `tot_encounters` varchar(31) DEFAULT NULL,
-  `gross_pat_revenue_tot` varchar(31) DEFAULT NULL,
-  `write_off_charity_tot` varchar(31) DEFAULT NULL,
-  `write_off_contractional_adjustments_tot` varchar(31) DEFAULT NULL,
-  `write_off_bad_debts_tot` varchar(31) DEFAULT NULL,
-  `write_off_other_adjustment_tot` varchar(31) DEFAULT NULL,
-  `write_off_adjustments` varchar(31) DEFAULT NULL,
-  `net_pat_revenue_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_grants_public_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_grants_private_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_donations_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_other_tot` varchar(31) DEFAULT NULL,
-  `other_oper_revenue_tot` varchar(31) DEFAULT NULL,
-  `oper_revenue_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_salaries_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_contract_services_professional_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_supplies_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_rent_depreciation_mortgage_interest_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_utilities_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_professional_liab_insurance_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_other_insurance_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_other_expenses_tot` varchar(31) DEFAULT NULL,
-  `oper_expenses_tot` varchar(31) DEFAULT NULL,
-  `net_oper_tot` varchar(31) DEFAULT NULL,
-  `fac_acquire_equipment_over_500k` varchar(255) DEFAULT NULL,
-  `deequip_01` varchar(31) DEFAULT NULL,
-  `deequip_02` varchar(31) DEFAULT NULL,
-  `deequip_03` varchar(31) DEFAULT NULL,
-  `deequip_04` varchar(31) DEFAULT NULL,
-  `deequip_05` varchar(31) DEFAULT NULL,
-  `deequip_06` varchar(31) DEFAULT NULL,
-  `deequip_07` varchar(31) DEFAULT NULL,
-  `deequip_08` varchar(31) DEFAULT NULL,
-  `deequip_09` varchar(31) DEFAULT NULL,
-  `deequip_10` varchar(31) DEFAULT NULL,
-  `proj_over_1m` varchar(255) DEFAULT NULL,
-  `deproj_01` varchar(255) DEFAULT NULL,
-  `deproj_02` varchar(31) DEFAULT NULL,
-  `deproj_03` varchar(31) DEFAULT NULL,
-  `deproj_04` varchar(31) DEFAULT NULL,
-  `deproj_05` varchar(31) DEFAULT NULL,
-  `equip_val_01` varchar(31) DEFAULT NULL,
-  `equip_val_02` varchar(31) DEFAULT NULL,
-  `equip_val_03` varchar(31) DEFAULT NULL,
-  `equip_val_04` varchar(31) DEFAULT NULL,
-  `equip_val_05` varchar(31) DEFAULT NULL,
-  `equip_val_06` varchar(31) DEFAULT NULL,
-  `equip_val_07` varchar(31) DEFAULT NULL,
-  `equip_val_08` varchar(31) DEFAULT NULL,
-  `equip_val_09` varchar(31) DEFAULT NULL,
-  `equip_val_10` varchar(31) DEFAULT NULL,
-  `proj_expenditures_01` varchar(31) DEFAULT NULL,
-  `proj_expenditures_02` varchar(31) DEFAULT NULL,
-  `proj_expenditures_03` varchar(31) DEFAULT NULL,
-  `proj_expenditures_04` varchar(31) DEFAULT NULL,
-  `proj_expenditures_05` varchar(31) DEFAULT NULL,
-  `dt_acquire_01` varchar(31) DEFAULT NULL,
-  `dt_acquire_02` varchar(31) DEFAULT NULL,
-  `dt_acquire_03` varchar(31) DEFAULT NULL,
-  `dt_acquire_04` varchar(31) DEFAULT NULL,
-  `dt_acquire_05` varchar(31) DEFAULT NULL,
-  `dt_acquire_06` varchar(31) DEFAULT NULL,
-  `dt_acquire_07` varchar(31) DEFAULT NULL,
-  `dt_acquire_08` varchar(31) DEFAULT NULL,
-  `dt_acquire_09` varchar(31) DEFAULT NULL,
-  `dt_acquire_10` varchar(31) DEFAULT NULL,
-  `hcai_proj_no_01` varchar(31) DEFAULT NULL,
-  `hcai_proj_no_02` varchar(31) DEFAULT NULL,
-  `hcai_proj_no_03` varchar(31) DEFAULT NULL,
-  `hcai_proj_no_04` varchar(31) DEFAULT NULL,
-  `hcai_proj_no_05` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_01` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_02` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_03` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_04` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_05` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_06` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_07` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_08` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_09` varchar(31) DEFAULT NULL,
-  `means_for_acquisition_10` varchar(31) DEFAULT NULL,
-  `non_response` char(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `specialty_care_clinics`
---
-
-DROP TABLE IF EXISTS `specialty_care_clinics`;
-CREATE TABLE `specialty_care_clinics` (
-  `oshpd_id` varchar(31) DEFAULT NULL,
-  `fac_name` varchar(255) DEFAULT NULL,
-  `fac_address_one` varchar(255) DEFAULT NULL,
-  `fac_address_two` varchar(31) DEFAULT NULL,
-  `fac_city` varchar(31) DEFAULT NULL,
-  `fac_zipcode` varchar(31) DEFAULT NULL,
-  `fac_phone` varchar(31) DEFAULT NULL,
-  `fac_admin_name` varchar(255) DEFAULT NULL,
-  `fac_oper_curryr` varchar(31) DEFAULT NULL,
-  `beg_date` varchar(31) DEFAULT NULL,
-  `end_date` varchar(31) DEFAULT NULL,
-  `parent_name` varchar(255) DEFAULT NULL,
-  `parent_address_one` varchar(255) DEFAULT NULL,
-  `parent_address_two` varchar(255) DEFAULT NULL,
-  `parent_city` varchar(31) DEFAULT NULL,
-  `parent_state` varchar(31) DEFAULT NULL,
-  `parent_zipcode` varchar(31) DEFAULT NULL,
-  `report_prep_name` varchar(31) DEFAULT NULL,
-  `lic_status` varchar(31) DEFAULT NULL,
-  `lic_status_date` varchar(31) DEFAULT NULL,
-  `lic_orig_date` varchar(31) DEFAULT NULL,
-  `report_status` varchar(31) DEFAULT NULL,
-  `mcal_provider_no` varchar(31) DEFAULT NULL,
-  `mcare_provider_no` varchar(31) DEFAULT NULL,
-  `aclaims_no` varchar(31) DEFAULT NULL,
-  `assembly_dist` varchar(31) DEFAULT NULL,
-  `senate_dist` varchar(31) DEFAULT NULL,
-  `congress_dist` varchar(31) DEFAULT NULL,
-  `cens_tract` varchar(31) DEFAULT NULL,
-  `med_svc_study_area` varchar(31) DEFAULT NULL,
-  `laco_svc_plan_area` varchar(31) DEFAULT NULL,
-  `health_svc_area` varchar(31) DEFAULT NULL,
-  `county` varchar(31) DEFAULT NULL,
-  `license_no` varchar(31) DEFAULT NULL,
-  `longitude` varchar(31) DEFAULT NULL,
-  `latitude` varchar(31) DEFAULT NULL,
-  `type_lic` varchar(31) DEFAULT NULL,
-  `type_cntrl` varchar(255) DEFAULT NULL,
-  `patients_undupl` varchar(31) DEFAULT NULL,
-  `encounters_totl` varchar(31) DEFAULT NULL,
-  `op_rm_cy` varchar(31) DEFAULT NULL,
-  `surg_totl` varchar(31) DEFAULT NULL,
-  `encounters_psy_gen_med` varchar(31) DEFAULT NULL,
-  `encounters_psy_subst_abuse` varchar(31) DEFAULT NULL,
-  `encounters_psy_mental_hlth_couns` varchar(31) DEFAULT NULL,
-  `encounters_psy_all_othr` varchar(31) DEFAULT NULL,
-  `encounters_psy_totl` varchar(31) DEFAULT NULL,
-  `no_dialysis_stations` varchar(31) DEFAULT NULL,
-  `app_in_home_training_capd_ccpd` varchar(31) DEFAULT NULL,
-  `gro_rev_totl` varchar(31) DEFAULT NULL,
-  `write_off_charity_totl` varchar(31) DEFAULT NULL,
-  `write_off_contr_adjust_totl` varchar(31) DEFAULT NULL,
-  `write_off_bad_debts_totl` varchar(31) DEFAULT NULL,
-  `write_off_othr_adjust_totl` varchar(31) DEFAULT NULL,
-  `write_off_adjusts` varchar(31) DEFAULT NULL,
-  `net_patient_rev_totl` varchar(31) DEFAULT NULL,
-  `rev_othr_oper_grants_publ_totl` varchar(31) DEFAULT NULL,
-  `rev_othr_oper_grants_pvt_totl` varchar(31) DEFAULT NULL,
-  `rev_othr_oper_donations_totl` varchar(31) DEFAULT NULL,
-  `rev_other_oper_othr_totl` varchar(31) DEFAULT NULL,
-  `rev_other_oper_totl` varchar(31) DEFAULT NULL,
-  `rev_oper_totl` varchar(31) DEFAULT NULL,
-  `exp_oper_sal_wages` varchar(31) DEFAULT NULL,
-  `exp_oper_contr_prof` varchar(31) DEFAULT NULL,
-  `exp_oper_sup` varchar(31) DEFAULT NULL,
-  `exp_oper_rent_deprc` varchar(31) DEFAULT NULL,
-  `exp_oper_util` varchar(31) DEFAULT NULL,
-  `exp_oper_liab_prof_ins` varchar(31) DEFAULT NULL,
-  `exp_oper_othr_ins` varchar(31) DEFAULT NULL,
-  `exp_oper_all_othr` varchar(31) DEFAULT NULL,
-  `exp_oper_totl` varchar(31) DEFAULT NULL,
-  `net_frm_oper` varchar(31) DEFAULT NULL,
-  `equip_acq_over_500k` varchar(31) DEFAULT NULL,
-  `equip_01_descrip` varchar(31) DEFAULT NULL,
-  `equip_01_value` varchar(31) DEFAULT NULL,
-  `equip_01_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_01_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_02_descrip` varchar(31) DEFAULT NULL,
-  `equip_02_value` varchar(31) DEFAULT NULL,
-  `equip_02_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_02_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_03_descrip` varchar(31) DEFAULT NULL,
-  `equip_03_value` varchar(31) DEFAULT NULL,
-  `equip_03_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_03_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_04_descrip` varchar(31) DEFAULT NULL,
-  `equip_04_value` varchar(31) DEFAULT NULL,
-  `equip_04_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_04_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_05_descrip` varchar(31) DEFAULT NULL,
-  `equip_05_value` varchar(31) DEFAULT NULL,
-  `equip_05_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_05_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_06_descrip` varchar(31) DEFAULT NULL,
-  `equip_06_value` varchar(31) DEFAULT NULL,
-  `equip_06_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_06_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_07_descrip` varchar(31) DEFAULT NULL,
-  `equip_07_value` varchar(31) DEFAULT NULL,
-  `equip_07_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_07_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_08_descrip` varchar(31) DEFAULT NULL,
-  `equip_08_value` varchar(31) DEFAULT NULL,
-  `equip_08_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_08_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_09_descrip` varchar(31) DEFAULT NULL,
-  `equip_09_value` varchar(31) DEFAULT NULL,
-  `equip_09_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_09_acqui_means` varchar(31) DEFAULT NULL,
-  `equip_10_descrip` varchar(31) DEFAULT NULL,
-  `equip_10_value` varchar(31) DEFAULT NULL,
-  `equip_10_acqui_dt` varchar(31) DEFAULT NULL,
-  `equip_10_acqui_means` varchar(31) DEFAULT NULL,
-  `cap_exp_over_1mil` varchar(31) DEFAULT NULL,
-  `proj_01_descrip_cap_exp` varchar(255) DEFAULT NULL,
-  `proj_01_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_01_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `proj_02_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_02_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_02_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `proj_03_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_03_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_03_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `proj_04_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_04_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_04_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `proj_05_descrip_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_05_projtd_cap_exp` varchar(31) DEFAULT NULL,
-  `proj_05_oshpd_proj_no` varchar(31) DEFAULT NULL,
-  `non_response` char(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `ssi_for_procedures_24`
---
-
-DROP TABLE IF EXISTS `ssi_for_procedures_24`;
-CREATE TABLE `ssi_for_procedures_24` (
-  `year` int DEFAULT NULL,
-  `state` varchar(63) DEFAULT NULL,
+DROP TABLE IF EXISTS `ssi_in_adult_patients_2016`;
+CREATE TABLE `ssi_in_adult_patients_2016` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
   `hai` varchar(63) DEFAULT NULL,
-  `operative_procedure` varchar(255) DEFAULT NULL,
-  `facility_id_1` varchar(63) DEFAULT NULL,
-  `facility_name_1` varchar(255) DEFAULT NULL,
-  `facility_id_2` varchar(63) DEFAULT NULL,
-  `facility_name_2` varchar(255) DEFAULT NULL,
-  `facility_id_3` varchar(63) DEFAULT NULL,
-  `facility_name_3` varchar(255) DEFAULT NULL,
-  `county` varchar(63) DEFAULT NULL,
-  `procedure_count` int DEFAULT NULL,
-  `infection_count` int DEFAULT NULL,
-  `predicted_infection_count` int DEFAULT NULL,
-  `sir` varchar(63) DEFAULT NULL,
-  `comparison` varchar(63) DEFAULT NULL,
-  `sir_ci_95_lower_limit` varchar(63) DEFAULT NULL,
-  `sir_ci_95_upper_limit` varchar(63) DEFAULT NULL,
-  `notes` varchar(1027) DEFAULT NULL
+  `county` varchar(15) DEFAULT NULL,
+  `facility_id` varchar(11) DEFAULT NULL,
+  `facility_name` varchar(67) DEFAULT NULL,
+  `operative_procedure` varchar(74) DEFAULT NULL,
+  `procedure_count` varchar(15) DEFAULT NULL,
+  `predicted_infection_count` varchar(25) DEFAULT NULL,
+  `infection_count` varchar(15) DEFAULT NULL,
+  `sir` varchar(6) DEFAULT NULL,
+  `sir_ci_95_lower_limit` varchar(21) DEFAULT NULL,
+  `sir_ci_95_upper_limit` varchar(21) DEFAULT NULL,
+  `comparison` varchar(10) DEFAULT NULL,
+  `sir_2015` varchar(8) DEFAULT NULL,
+  `notes` varchar(53) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `ssi_for_procedures_5`
+-- Table structure for table `ssi_in_adult_patients_2017`
 --
 
-DROP TABLE IF EXISTS `ssi_for_procedures_5`;
-CREATE TABLE `ssi_for_procedures_5` (
-  `year` int DEFAULT NULL,
-  `state` varchar(63) DEFAULT NULL,
+DROP TABLE IF EXISTS `ssi_in_adult_patients_2017`;
+CREATE TABLE `ssi_in_adult_patients_2017` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
   `hai` varchar(63) DEFAULT NULL,
-  `operative_procedure` varchar(255) DEFAULT NULL,
-  `facility_id_1` varchar(63) DEFAULT NULL,
-  `facility_name_1` varchar(255) DEFAULT NULL,
-  `facility_id_2` varchar(63) DEFAULT NULL,
-  `facility_name_2` varchar(255) DEFAULT NULL,
-  `facility_id_3` varchar(63) DEFAULT NULL,
-  `facility_name_3` varchar(255) DEFAULT NULL,
-  `county` varchar(63) DEFAULT NULL,
-  `procedure_count` int DEFAULT NULL,
-  `infection_count` int DEFAULT NULL,
-  `predicted_infection_count` int DEFAULT NULL,
-  `sir` varchar(63) DEFAULT NULL,
-  `comparison` varchar(63) DEFAULT NULL,
-  `sir_ci_95_lower_limit` varchar(63) DEFAULT NULL,
-  `sir_ci_95_upper_limit` varchar(63) DEFAULT NULL,
-  `notes` varchar(1027) DEFAULT NULL
+  `operative_procedure` varchar(74) DEFAULT NULL,
+  `facility_id` varchar(11) DEFAULT NULL,
+  `facility_name` varchar(85) DEFAULT NULL,
+  `hospital_category_riskadjustment` varchar(32) DEFAULT NULL,
+  `hospital_type` varchar(24) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `procedure_count` varchar(15) DEFAULT NULL,
+  `infection_count` varchar(15) DEFAULT NULL,
+  `predicted_infection_count` varchar(25) DEFAULT NULL,
+  `sir` varchar(5) DEFAULT NULL,
+  `sir_ci_95_lower_limit` varchar(21) DEFAULT NULL,
+  `sir_ci_95_upper_limit` varchar(21) DEFAULT NULL,
+  `comparison` varchar(10) DEFAULT NULL,
+  `sir_2015` varchar(8) DEFAULT NULL,
+  `on_track_toward_2020_goal_0_88_2017` varchar(38) DEFAULT NULL,
+  `notes` varchar(53) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `ssi_for_procedures_did_not_report`
+-- Table structure for table `ssi_in_adult_patients_2018`
 --
 
-DROP TABLE IF EXISTS `ssi_for_procedures_did_not_report`;
-CREATE TABLE `ssi_for_procedures_did_not_report` (
-  `year` int DEFAULT NULL,
-  `state` varchar(13) DEFAULT NULL,
-  `county` varchar(31) DEFAULT NULL,
-  `hai` varchar(255) DEFAULT NULL,
-  `facility_id` varchar(63) DEFAULT NULL,
-  `facility_name` varchar(1027) DEFAULT NULL,
-  `facility_type` varchar(127) DEFAULT NULL,
-  `number_months_expected` int DEFAULT NULL,
-  `notes` varchar(1027) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `ssi_for_procedures_in_patients`
---
-
-DROP TABLE IF EXISTS `ssi_for_procedures_in_patients`;
-CREATE TABLE `ssi_for_procedures_in_patients` (
-  `year` int DEFAULT NULL,
-  `state` varchar(63) DEFAULT NULL,
+DROP TABLE IF EXISTS `ssi_in_adult_patients_2018`;
+CREATE TABLE `ssi_in_adult_patients_2018` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
   `hai` varchar(63) DEFAULT NULL,
-  `facility_id` varchar(63) DEFAULT NULL,
-  `facility_name` varchar(1027) DEFAULT NULL,
-  `facility_type` varchar(63) DEFAULT NULL,
-  `county` varchar(63) DEFAULT NULL,
-  `hospital_category_riskadjustment` varchar(63) DEFAULT NULL,
-  `hospital_type` varchar(63) DEFAULT NULL,
-  `operative_procedure` varchar(1027) DEFAULT NULL,
-  `procedure_count` int DEFAULT NULL,
-  `infections_reported` int DEFAULT NULL,
-  `infections_predicted` int DEFAULT NULL,
-  `predicted_infection_count` int DEFAULT NULL,
-  `infection_count` int DEFAULT NULL,
-  `sir` varchar(63) DEFAULT NULL,
-  `sir_ci_95_lower_limit` varchar(63) DEFAULT NULL,
-  `sir_ci_95_upper_limit` varchar(63) DEFAULT NULL,
-  `comparison` varchar(63) DEFAULT NULL,
-  `on_track_to_goal` varchar(63) DEFAULT NULL,
-  `sir_2015` varchar(63) DEFAULT NULL,
-  `notes` varchar(63) DEFAULT NULL
+  `facility_id` varchar(11) DEFAULT NULL,
+  `facility_name` varchar(66) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `hospital_category_riskadjustment` varchar(32) DEFAULT NULL,
+  `hospital_type` varchar(24) DEFAULT NULL,
+  `operative_procedure` varchar(76) DEFAULT NULL,
+  `procedure_count` varchar(15) DEFAULT NULL,
+  `infections_reported` varchar(19) DEFAULT NULL,
+  `infections_predicted` varchar(20) DEFAULT NULL,
+  `sir` varchar(5) DEFAULT NULL,
+  `sir_ci_95_lower_limit` varchar(21) DEFAULT NULL,
+  `sir_ci_95_upper_limit` varchar(21) DEFAULT NULL,
+  `comparison` varchar(10) DEFAULT NULL,
+  `on_track_toward_2020_goal_0_82_2018` varchar(38) DEFAULT NULL,
+  `sir_2015` varchar(8) DEFAULT NULL,
+  `notes` varchar(53) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `ssi_for_procedures_in_patients_pooled`
+-- Table structure for table `ssi_in_adult_patients_2019`
 --
 
-DROP TABLE IF EXISTS `ssi_for_procedures_in_patients_pooled`;
-CREATE TABLE `ssi_for_procedures_in_patients_pooled` (
-  `year` int DEFAULT NULL,
-  `state` varchar(63) DEFAULT NULL,
+DROP TABLE IF EXISTS `ssi_in_adult_patients_2019`;
+CREATE TABLE `ssi_in_adult_patients_2019` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `hai` varchar(30) DEFAULT NULL,
+  `operative_procedure` varchar(76) DEFAULT NULL,
+  `facility_id` varchar(11) DEFAULT NULL,
+  `facility_name` varchar(66) DEFAULT NULL,
+  `hospital_category_riskadjustment` varchar(32) DEFAULT NULL,
+  `facility_type` varchar(23) DEFAULT NULL,
+  `procedure_count` varchar(15) DEFAULT NULL,
+  `infections_reported` varchar(19) DEFAULT NULL,
+  `infections_predicted` varchar(20) DEFAULT NULL,
+  `sir` varchar(5) DEFAULT NULL,
+  `sir_ci_95_lower_limit` varchar(21) DEFAULT NULL,
+  `sir_ci_95_upper_limit` varchar(21) DEFAULT NULL,
+  `comparison` varchar(10) DEFAULT NULL,
+  `on_track` varchar(8) DEFAULT NULL,
+  `sir_2015` varchar(8) DEFAULT NULL,
+  `notes` varchar(21) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `ssi_in_adult_patients_2021`
+--
+
+DROP TABLE IF EXISTS `ssi_in_adult_patients_2021`;
+CREATE TABLE `ssi_in_adult_patients_2021` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `hai` varchar(30) DEFAULT NULL,
+  `operative_procedure` varchar(76) DEFAULT NULL,
+  `facility_id` varchar(11) DEFAULT NULL,
+  `facility_name` varchar(63) DEFAULT NULL,
+  `hospital_category_riskadjustment` varchar(32) DEFAULT NULL,
+  `facility_type` varchar(23) DEFAULT NULL,
+  `procedure_count` varchar(15) DEFAULT NULL,
+  `infections_reported` varchar(19) DEFAULT NULL,
+  `infections_predicted` varchar(20) DEFAULT NULL,
+  `sir` varchar(5) DEFAULT NULL,
+  `sir_ci_95_lower_limit` varchar(21) DEFAULT NULL,
+  `sir_ci_95_upper_limit` varchar(21) DEFAULT NULL,
+  `comparison` varchar(10) DEFAULT NULL,
+  `met_2020_goal` varchar(13) DEFAULT NULL,
+  `sir_2015` varchar(8) DEFAULT NULL,
+  `notes` varchar(21) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `ssi_in_adult_patients_2022`
+--
+
+DROP TABLE IF EXISTS `ssi_in_adult_patients_2022`;
+CREATE TABLE `ssi_in_adult_patients_2022` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `hai` varchar(30) DEFAULT NULL,
+  `operative_procedure` varchar(76) DEFAULT NULL,
+  `facility_id` varchar(11) DEFAULT NULL,
+  `facility_name` varchar(85) DEFAULT NULL,
+  `hospital_category_riskadjustment` varchar(32) DEFAULT NULL,
+  `facility_type` varchar(23) DEFAULT NULL,
+  `procedure_count` varchar(15) DEFAULT NULL,
+  `infections_reported` varchar(19) DEFAULT NULL,
+  `infections_predicted` varchar(20) DEFAULT NULL,
+  `sir` varchar(5) DEFAULT NULL,
+  `sir_ci_95_lower_limit` varchar(21) DEFAULT NULL,
+  `sir_ci_95_upper_limit` varchar(21) DEFAULT NULL,
+  `comparison` varchar(10) DEFAULT NULL,
+  `met_2020_goal` varchar(13) DEFAULT NULL,
+  `sir_2015` varchar(8) DEFAULT NULL,
+  `notes` varchar(21) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `ssi_in_adult_patients_january_1_december_31_2023`
+--
+
+DROP TABLE IF EXISTS `ssi_in_adult_patients_january_1_december_31_2023`;
+CREATE TABLE `ssi_in_adult_patients_january_1_december_31_2023` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `hai` varchar(30) DEFAULT NULL,
+  `operative_procedure` varchar(76) DEFAULT NULL,
+  `facility_id` varchar(11) DEFAULT NULL,
+  `facility_name` varchar(85) DEFAULT NULL,
+  `hospital_category_riskadjustment` varchar(32) DEFAULT NULL,
+  `facility_type` varchar(23) DEFAULT NULL,
+  `procedure_count` varchar(15) DEFAULT NULL,
+  `infections_reported` varchar(19) DEFAULT NULL,
+  `infections_predicted` varchar(20) DEFAULT NULL,
+  `sir` varchar(5) DEFAULT NULL,
+  `sir_ci_95_lower_limit` varchar(21) DEFAULT NULL,
+  `sir_ci_95_upper_limit` varchar(21) DEFAULT NULL,
+  `comparison` varchar(10) DEFAULT NULL,
+  `met_2020_goal` varchar(13) DEFAULT NULL,
+  `sir_2015` varchar(8) DEFAULT NULL,
+  `notes` varchar(21) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `ssi_in_adult_patients_january_1_june_30_2020_updated_annually`
+--
+
+DROP TABLE IF EXISTS `ssi_in_adult_patients_january_1_june_30_2020_updated_annually`;
+CREATE TABLE `ssi_in_adult_patients_january_1_june_30_2020_updated_annually` (
+  `year_str` varchar(6) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `hai` varchar(30) DEFAULT NULL,
+  `operative_procedure` varchar(76) DEFAULT NULL,
+  `facility_id` varchar(11) DEFAULT NULL,
+  `facility_name` varchar(60) DEFAULT NULL,
+  `hospital_category_riskadjustment` varchar(32) DEFAULT NULL,
+  `facility_type` varchar(23) DEFAULT NULL,
+  `procedure_count` varchar(15) DEFAULT NULL,
+  `infections_reported` varchar(19) DEFAULT NULL,
+  `infections_predicted` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `ssi_in_adult_patients_july_1_december_31_2020_updated_annually`
+--
+
+DROP TABLE IF EXISTS `ssi_in_adult_patients_july_1_december_31_2020_updated_annually`;
+CREATE TABLE `ssi_in_adult_patients_july_1_december_31_2020_updated_annually` (
+  `year_str` varchar(6) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `hai` varchar(30) DEFAULT NULL,
+  `operative_procedure` varchar(76) DEFAULT NULL,
+  `facility_id` varchar(11) DEFAULT NULL,
+  `facility_name` varchar(60) DEFAULT NULL,
+  `hospital_category_riskadjustment` varchar(32) DEFAULT NULL,
+  `facility_type` varchar(23) DEFAULT NULL,
+  `procedure_count` varchar(15) DEFAULT NULL,
+  `infections_reported` varchar(19) DEFAULT NULL,
+  `infections_predicted` varchar(20) DEFAULT NULL,
+  `sir` varchar(5) DEFAULT NULL,
+  `sir_ci_95_lower_limit` varchar(21) DEFAULT NULL,
+  `sir_ci_95_upper_limit` varchar(21) DEFAULT NULL,
+  `comparison` varchar(10) DEFAULT NULL,
+  `notes` varchar(21) DEFAULT NULL,
+  `None` varchar(9) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `ssi_in_ped_pats_jan_1_jun_30_2020_upd_ann`
+--
+
+DROP TABLE IF EXISTS `ssi_in_ped_pats_jan_1_jun_30_2020_upd_ann`;
+CREATE TABLE `ssi_in_ped_pats_jan_1_jun_30_2020_upd_ann` (
+  `year_str` varchar(6) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `hai` varchar(30) DEFAULT NULL,
+  `operative_procedure` varchar(76) DEFAULT NULL,
+  `facility_id` varchar(11) DEFAULT NULL,
+  `facility_name` varchar(60) DEFAULT NULL,
+  `hospital_category_riskadjustment` varchar(32) DEFAULT NULL,
+  `facility_type` varchar(23) DEFAULT NULL,
+  `procedure_count` varchar(15) DEFAULT NULL,
+  `infections_reported` varchar(19) DEFAULT NULL,
+  `infections_predicted` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `ssi_in_ped_pats_jul_1_dec_31_2020_upd_ann`
+--
+
+DROP TABLE IF EXISTS `ssi_in_ped_pats_jul_1_dec_31_2020_upd_ann`;
+CREATE TABLE `ssi_in_ped_pats_jul_1_dec_31_2020_upd_ann` (
+  `year_str` varchar(6) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `hai` varchar(30) DEFAULT NULL,
+  `operative_procedure` varchar(76) DEFAULT NULL,
+  `facility_id` varchar(11) DEFAULT NULL,
+  `facility_name` varchar(60) DEFAULT NULL,
+  `hospital_category_riskadjustment` varchar(32) DEFAULT NULL,
+  `facility_type` varchar(23) DEFAULT NULL,
+  `procedure_count` varchar(15) DEFAULT NULL,
+  `infections_reported` varchar(19) DEFAULT NULL,
+  `infections_predicted` varchar(20) DEFAULT NULL,
+  `sir` varchar(4) DEFAULT NULL,
+  `sir_ci_95_lower_limit` varchar(21) DEFAULT NULL,
+  `sir_ci_95_upper_limit` varchar(21) DEFAULT NULL,
+  `comparison` varchar(10) DEFAULT NULL,
+  `notes` varchar(21) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `ssi_in_pediatric_patients_2016`
+--
+
+DROP TABLE IF EXISTS `ssi_in_pediatric_patients_2016`;
+CREATE TABLE `ssi_in_pediatric_patients_2016` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
   `hai` varchar(63) DEFAULT NULL,
-  `facility_id` varchar(63) DEFAULT NULL,
-  `facility_name` varchar(1027) DEFAULT NULL,
-  `facility_type` varchar(63) DEFAULT NULL,
-  `county` varchar(63) DEFAULT NULL,
-  `hospital_category_riskadjustment` varchar(63) DEFAULT NULL,
-  `hospital_type` varchar(63) DEFAULT NULL,
-  `operative_procedure` varchar(1027) DEFAULT NULL,
-  `procedure_count` int DEFAULT NULL,
-  `infections_reported` int DEFAULT NULL,
-  `infections_predicted` int DEFAULT NULL,
-  `predicted_infection_count` int DEFAULT NULL,
-  `infection_count` int DEFAULT NULL,
-  `sir` varchar(63) DEFAULT NULL,
-  `sir_ci_95_lower_limit` varchar(63) DEFAULT NULL,
-  `sir_ci_95_upper_limit` varchar(63) DEFAULT NULL,
-  `comparison` varchar(63) DEFAULT NULL,
-  `on_track_to_goal` varchar(63) DEFAULT NULL,
-  `sir_2015` varchar(63) DEFAULT NULL,
-  `notes` varchar(63) DEFAULT NULL
+  `county` varchar(15) DEFAULT NULL,
+  `facility_id` varchar(11) DEFAULT NULL,
+  `facility_name` varchar(67) DEFAULT NULL,
+  `operative_procedure` varchar(41) DEFAULT NULL,
+  `procedure_count` varchar(15) DEFAULT NULL,
+  `predicted_infection_count` varchar(25) DEFAULT NULL,
+  `infection_count` varchar(15) DEFAULT NULL,
+  `added0` varchar(6) DEFAULT NULL,
+  `notes` varchar(5) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `ssi_in_pediatric_patients_2017`
+--
+
+DROP TABLE IF EXISTS `ssi_in_pediatric_patients_2017`;
+CREATE TABLE `ssi_in_pediatric_patients_2017` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `hai` varchar(63) DEFAULT NULL,
+  `operative_procedure` varchar(74) DEFAULT NULL,
+  `facility_id` varchar(11) DEFAULT NULL,
+  `facility_name` varchar(85) DEFAULT NULL,
+  `hospital_category_riskadjustment` varchar(32) DEFAULT NULL,
+  `hospital_type` varchar(24) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `procedure_count` varchar(15) DEFAULT NULL,
+  `infection_count` varchar(15) DEFAULT NULL,
+  `predicted_infection_count` varchar(25) DEFAULT NULL,
+  `sir` varchar(4) DEFAULT NULL,
+  `sir_ci_95_lower_limit` varchar(21) DEFAULT NULL,
+  `sir_ci_95_upper_limit` varchar(21) DEFAULT NULL,
+  `comparison` varchar(10) DEFAULT NULL,
+  `on_track_toward_2020_goal_0_88_2017` varchar(38) DEFAULT NULL,
+  `notes` varchar(53) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `ssi_in_pediatric_patients_2018`
+--
+
+DROP TABLE IF EXISTS `ssi_in_pediatric_patients_2018`;
+CREATE TABLE `ssi_in_pediatric_patients_2018` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `hai` varchar(63) DEFAULT NULL,
+  `operative_procedure` varchar(74) DEFAULT NULL,
+  `facility_id` varchar(11) DEFAULT NULL,
+  `facility_name` varchar(66) DEFAULT NULL,
+  `hospital_category_riskadjustment` varchar(32) DEFAULT NULL,
+  `hospital_type` varchar(24) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `procedure_count` varchar(15) DEFAULT NULL,
+  `infections_reported` varchar(19) DEFAULT NULL,
+  `infections_predicted` varchar(20) DEFAULT NULL,
+  `sir` varchar(4) DEFAULT NULL,
+  `sir_ci_95_lower_limit` varchar(21) DEFAULT NULL,
+  `sir_ci_95_upper_limit` varchar(21) DEFAULT NULL,
+  `comparison` varchar(10) DEFAULT NULL,
+  `on_track_to_achieve_2020_goal_0_82_in_2018` varchar(44) DEFAULT NULL,
+  `notes` varchar(53) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `ssi_in_pediatric_patients_2019`
+--
+
+DROP TABLE IF EXISTS `ssi_in_pediatric_patients_2019`;
+CREATE TABLE `ssi_in_pediatric_patients_2019` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `hai` varchar(30) DEFAULT NULL,
+  `operative_procedure` varchar(76) DEFAULT NULL,
+  `facility_id` varchar(11) DEFAULT NULL,
+  `facility_name` varchar(66) DEFAULT NULL,
+  `hospital_category_riskadjustment` varchar(32) DEFAULT NULL,
+  `facility_type` varchar(23) DEFAULT NULL,
+  `procedure_count` varchar(15) DEFAULT NULL,
+  `infections_reported` varchar(19) DEFAULT NULL,
+  `infections_predicted` varchar(20) DEFAULT NULL,
+  `sir` varchar(4) DEFAULT NULL,
+  `sir_ci_95_lower_limit` varchar(21) DEFAULT NULL,
+  `sir_ci_95_upper_limit` varchar(21) DEFAULT NULL,
+  `comparison` varchar(10) DEFAULT NULL,
+  `on_track` varchar(8) DEFAULT NULL,
+  `notes` varchar(21) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `ssi_in_pediatric_patients_2022`
+--
+
+DROP TABLE IF EXISTS `ssi_in_pediatric_patients_2022`;
+CREATE TABLE `ssi_in_pediatric_patients_2022` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `hai` varchar(30) DEFAULT NULL,
+  `operative_procedure` varchar(76) DEFAULT NULL,
+  `facility_id` varchar(11) DEFAULT NULL,
+  `facility_name` varchar(85) DEFAULT NULL,
+  `hospital_category_riskadjustment` varchar(32) DEFAULT NULL,
+  `facility_type` varchar(23) DEFAULT NULL,
+  `procedure_count` varchar(15) DEFAULT NULL,
+  `infections_reported` varchar(19) DEFAULT NULL,
+  `infections_predicted` varchar(20) DEFAULT NULL,
+  `sir` varchar(5) DEFAULT NULL,
+  `sir_ci_95_lower_limit` varchar(21) DEFAULT NULL,
+  `sir_ci_95_upper_limit` varchar(21) DEFAULT NULL,
+  `comparison` varchar(10) DEFAULT NULL,
+  `met_2020_goal` varchar(13) DEFAULT NULL,
+  `notes` varchar(21) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `ssi_in_pediatric_patients_january_1_december_31_2021`
+--
+
+DROP TABLE IF EXISTS `ssi_in_pediatric_patients_january_1_december_31_2021`;
+CREATE TABLE `ssi_in_pediatric_patients_january_1_december_31_2021` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `hai` varchar(30) DEFAULT NULL,
+  `operative_procedure` varchar(76) DEFAULT NULL,
+  `facility_id` varchar(11) DEFAULT NULL,
+  `facility_name` varchar(63) DEFAULT NULL,
+  `hospital_category_riskadjustment` varchar(32) DEFAULT NULL,
+  `facility_type` varchar(23) DEFAULT NULL,
+  `procedure_count` varchar(15) DEFAULT NULL,
+  `infections_reported` varchar(19) DEFAULT NULL,
+  `infections_predicted` varchar(20) DEFAULT NULL,
+  `sir` varchar(4) DEFAULT NULL,
+  `sir_ci_95_lower_limit` varchar(21) DEFAULT NULL,
+  `sir_ci_95_upper_limit` varchar(21) DEFAULT NULL,
+  `comparison` varchar(10) DEFAULT NULL,
+  `met_2020_goal` varchar(13) DEFAULT NULL,
+  `notes` varchar(21) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `ssi_in_pediatric_patients_january_1_december_31_2023`
+--
+
+DROP TABLE IF EXISTS `ssi_in_pediatric_patients_january_1_december_31_2023`;
+CREATE TABLE `ssi_in_pediatric_patients_january_1_december_31_2023` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `hai` varchar(30) DEFAULT NULL,
+  `operative_procedure` varchar(76) DEFAULT NULL,
+  `facility_id` varchar(11) DEFAULT NULL,
+  `facility_name` varchar(85) DEFAULT NULL,
+  `hospital_category_riskadjustment` varchar(32) DEFAULT NULL,
+  `facility_type` varchar(23) DEFAULT NULL,
+  `procedure_count` varchar(15) DEFAULT NULL,
+  `infections_reported` varchar(19) DEFAULT NULL,
+  `infections_predicted` varchar(20) DEFAULT NULL,
+  `sir` varchar(5) DEFAULT NULL,
+  `sir_ci_95_lower_limit` varchar(21) DEFAULT NULL,
+  `sir_ci_95_upper_limit` varchar(21) DEFAULT NULL,
+  `comparison` varchar(10) DEFAULT NULL,
+  `met_2020_goal` varchar(13) DEFAULT NULL,
+  `notes` varchar(21) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `ssis_for_24_operative_procedures_2013`
+--
+
+DROP TABLE IF EXISTS `ssis_for_24_operative_procedures_2013`;
+CREATE TABLE `ssis_for_24_operative_procedures_2013` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `hai` varchar(3) DEFAULT NULL,
+  `operative_procedure` varchar(69) DEFAULT NULL,
+  `facid1` varchar(9) DEFAULT NULL,
+  `facility_name1` varchar(66) DEFAULT NULL,
+  `facid2` varchar(9) DEFAULT NULL,
+  `facility_name2` varchar(63) DEFAULT NULL,
+  `facid3` varchar(9) DEFAULT NULL,
+  `facility_name3` varchar(56) DEFAULT NULL,
+  `county` varchar(22) DEFAULT NULL,
+  `procedure_count` varchar(15) DEFAULT NULL,
+  `infection_count` varchar(15) DEFAULT NULL,
+  `sir` varchar(5) DEFAULT NULL,
+  `comparison` varchar(13) DEFAULT NULL,
+  `sir_95pct_ci_ll` varchar(13) DEFAULT NULL,
+  `sir_95pct_ci_ul` varchar(13) DEFAULT NULL,
+  `notes` varchar(23) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `ssis_for_24_operative_procedures_2014`
+--
+
+DROP TABLE IF EXISTS `ssis_for_24_operative_procedures_2014`;
+CREATE TABLE `ssis_for_24_operative_procedures_2014` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `hai` varchar(63) DEFAULT NULL,
+  `operative_procedure` varchar(69) DEFAULT NULL,
+  `facility_id1` varchar(12) DEFAULT NULL,
+  `facility_name1` varchar(68) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `procedure_count` varchar(15) DEFAULT NULL,
+  `infection_count` varchar(15) DEFAULT NULL,
+  `predicted_infection_count` varchar(25) DEFAULT NULL,
+  `sir` varchar(5) DEFAULT NULL,
+  `comparison` varchar(14) DEFAULT NULL,
+  `sir_ci_95_lower_limit` varchar(21) DEFAULT NULL,
+  `sir_ci_95_upper_limit` varchar(21) DEFAULT NULL,
+  `notes` varchar(53) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `ssis_for_24_operative_procedures_2015`
+--
+
+DROP TABLE IF EXISTS `ssis_for_24_operative_procedures_2015`;
+CREATE TABLE `ssis_for_24_operative_procedures_2015` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `hai` varchar(63) DEFAULT NULL,
+  `operative_procedure` varchar(69) DEFAULT NULL,
+  `facility_id1` varchar(12) DEFAULT NULL,
+  `facility_name1` varchar(67) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `procedure_count` varchar(15) DEFAULT NULL,
+  `infection_count` varchar(15) DEFAULT NULL,
+  `predicted_infection_count` varchar(25) DEFAULT NULL,
+  `sir` varchar(5) DEFAULT NULL,
+  `comparison` varchar(14) DEFAULT NULL,
+  `sir_ci_95_lower_limit` varchar(21) DEFAULT NULL,
+  `sir_ci_95_upper_limit` varchar(21) DEFAULT NULL,
+  `notes` varchar(53) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `ssis_for_5_operative_procedures_2013`
+--
+
+DROP TABLE IF EXISTS `ssis_for_5_operative_procedures_2013`;
+CREATE TABLE `ssis_for_5_operative_procedures_2013` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `hai` varchar(3) DEFAULT NULL,
+  `operative_procedure` varchar(19) DEFAULT NULL,
+  `facid1` varchar(9) DEFAULT NULL,
+  `facility_name1` varchar(66) DEFAULT NULL,
+  `facid2` varchar(9) DEFAULT NULL,
+  `facility_name2` varchar(63) DEFAULT NULL,
+  `facid3` varchar(9) DEFAULT NULL,
+  `facility_name3` varchar(56) DEFAULT NULL,
+  `county` varchar(22) DEFAULT NULL,
+  `procedure_count` varchar(15) DEFAULT NULL,
+  `infection_count` varchar(15) DEFAULT NULL,
+  `notes` varchar(21) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `ssis_for_5_operative_procedures_2014`
+--
+
+DROP TABLE IF EXISTS `ssis_for_5_operative_procedures_2014`;
+CREATE TABLE `ssis_for_5_operative_procedures_2014` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `hai` varchar(63) DEFAULT NULL,
+  `operative_procedure` varchar(19) DEFAULT NULL,
+  `facility_id1` varchar(12) DEFAULT NULL,
+  `facility_name1` varchar(68) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `procedure_count` varchar(15) DEFAULT NULL,
+  `infection_count` varchar(15) DEFAULT NULL,
+  `predicted_infection_count` varchar(25) DEFAULT NULL,
+  `notes` varchar(58) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `ssis_for_5_operative_procedures_2015`
+--
+
+DROP TABLE IF EXISTS `ssis_for_5_operative_procedures_2015`;
+CREATE TABLE `ssis_for_5_operative_procedures_2015` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `hai` varchar(63) DEFAULT NULL,
+  `operative_procedure` varchar(19) DEFAULT NULL,
+  `facility_id1` varchar(12) DEFAULT NULL,
+  `facility_name_1` varchar(67) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `procedure_count` varchar(15) DEFAULT NULL,
+  `infection_count` varchar(15) DEFAULT NULL,
+  `predicted_infection_count` varchar(25) DEFAULT NULL,
+  `notes` varchar(58) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -21369,8 +24859,8 @@ CREATE TABLE `ssi_for_procedures_in_patients_pooled` (
 DROP TABLE IF EXISTS `state_fiscal_year_2015_16_cohs_rates`;
 CREATE TABLE `state_fiscal_year_2015_16_cohs_rates` (
   `rating_period` varchar(13) DEFAULT NULL,
-  `state_fiscal_year` varchar(9) DEFAULT NULL,
-  `model` varchar(4) DEFAULT NULL,
+  `state_fiscal_year` varchar(18) DEFAULT NULL,
+  `model` varchar(5) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
   `health_plan` varchar(27) DEFAULT NULL,
   `category_of_aid` varchar(32) DEFAULT NULL,
@@ -21437,8 +24927,8 @@ CREATE TABLE `state_fiscal_year_2015_16_two_plan_model_rates` (
 DROP TABLE IF EXISTS `state_fiscal_year_2016_17_cohs_rates`;
 CREATE TABLE `state_fiscal_year_2016_17_cohs_rates` (
   `rating_period` varchar(13) DEFAULT NULL,
-  `state_fiscal_year` varchar(9) DEFAULT NULL,
-  `model` varchar(4) DEFAULT NULL,
+  `state_fiscal_year` varchar(18) DEFAULT NULL,
+  `model` varchar(5) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
   `health_plan` varchar(27) DEFAULT NULL,
   `category_of_aid` varchar(32) DEFAULT NULL,
@@ -21504,9 +24994,9 @@ CREATE TABLE `state_fiscal_year_2016_17_two_plan_model_rates` (
 
 DROP TABLE IF EXISTS `state_fiscal_year_2017_18_cohs_rates`;
 CREATE TABLE `state_fiscal_year_2017_18_cohs_rates` (
-  `rating_period` varchar(11) DEFAULT NULL,
-  `state_fiscal_year` varchar(7) DEFAULT NULL,
-  `model` varchar(4) DEFAULT NULL,
+  `rating_period` varchar(13) DEFAULT NULL,
+  `state_fiscal_year` varchar(18) DEFAULT NULL,
+  `model` varchar(5) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
   `health_plan` varchar(27) DEFAULT NULL,
   `category_of_aid` varchar(32) DEFAULT NULL,
@@ -21589,15 +25079,15 @@ CREATE TABLE `state_fiscal_year_2017_18_two_plan_model_rates` (
 
 DROP TABLE IF EXISTS `state_fiscal_year_2018_19_cohs_rates`;
 CREATE TABLE `state_fiscal_year_2018_19_cohs_rates` (
-  `rating_period` varchar(11) DEFAULT NULL,
-  `state_fiscal_year` varchar(7) DEFAULT NULL,
-  `model` varchar(4) DEFAULT NULL,
+  `rating_period` varchar(13) DEFAULT NULL,
+  `state_fiscal_year` varchar(18) DEFAULT NULL,
+  `model` varchar(5) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
   `health_plan` varchar(38) DEFAULT NULL,
   `category_of_aid` varchar(32) DEFAULT NULL,
-  `lower_bound` varchar(11) DEFAULT NULL,
+  `lower_bound` varchar(13) DEFAULT NULL,
   `midpoint` varchar(11) DEFAULT NULL,
-  `upper_bound` varchar(11) DEFAULT NULL
+  `upper_bound` varchar(13) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -21678,17 +25168,17 @@ CREATE TABLE `statewide_covid19_cases_deaths` (
 DROP TABLE IF EXISTS `statewide_covid19_vaccines_admin_by_zipcode_age12`;
 CREATE TABLE `statewide_covid19_vaccines_admin_by_zipcode_age12` (
   `as_of_date` varchar(10) DEFAULT NULL,
-  `zip_code_tabulation_area` varchar(5) DEFAULT NULL,
-  `local_health_jurisdiction` varchar(15) DEFAULT NULL,
+  `zip_code_tabulation_area` varchar(24) DEFAULT NULL,
+  `local_health_jurisdiction` varchar(25) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
-  `vaccine_equity_metric_quartile` varchar(3) DEFAULT NULL,
+  `vaccine_equity_metric_quartile` varchar(30) DEFAULT NULL,
   `vem_source` varchar(26) DEFAULT NULL,
-  `age12_plus_population` varchar(7) DEFAULT NULL,
-  `persons_fully_vaccinated` varchar(7) DEFAULT NULL,
-  `persons_partially_vaccinated` varchar(7) DEFAULT NULL,
-  `percent_of_population_fully_vaccinated` varchar(8) DEFAULT NULL,
-  `percent_of_population_partially_vaccinated` varchar(8) DEFAULT NULL,
-  `percent_of_population_with_1_plus_dose` varchar(8) DEFAULT NULL,
+  `age12_plus_population` varchar(21) DEFAULT NULL,
+  `persons_fully_vaccinated` varchar(24) DEFAULT NULL,
+  `persons_partially_vaccinated` varchar(28) DEFAULT NULL,
+  `percent_of_population_fully_vaccinated` varchar(38) DEFAULT NULL,
+  `percent_of_population_partially_vaccinated` varchar(42) DEFAULT NULL,
+  `percent_of_population_with_1_plus_dose` varchar(38) DEFAULT NULL,
   `redacted` varchar(69) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -21699,19 +25189,19 @@ CREATE TABLE `statewide_covid19_vaccines_admin_by_zipcode_age12` (
 DROP TABLE IF EXISTS `statewide_covid19_vaccines_admin_by_zipcode_age5`;
 CREATE TABLE `statewide_covid19_vaccines_admin_by_zipcode_age5` (
   `as_of_date` varchar(10) DEFAULT NULL,
-  `zip_code_tabulation_area` varchar(5) DEFAULT NULL,
-  `local_health_jurisdiction` varchar(15) DEFAULT NULL,
+  `zip_code_tabulation_area` varchar(24) DEFAULT NULL,
+  `local_health_jurisdiction` varchar(25) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
-  `vaccine_equity_metric_quartile` varchar(3) DEFAULT NULL,
+  `vaccine_equity_metric_quartile` varchar(30) DEFAULT NULL,
   `vem_source` varchar(26) DEFAULT NULL,
-  `age12_plus_population` varchar(7) DEFAULT NULL,
-  `age5_plus_population` varchar(6) DEFAULT NULL,
-  `persons_fully_vaccinated` varchar(7) DEFAULT NULL,
-  `persons_partially_vaccinated` varchar(7) DEFAULT NULL,
-  `percent_of_population_fully_vaccinated` varchar(8) DEFAULT NULL,
-  `percent_of_population_partially_vaccinated` varchar(8) DEFAULT NULL,
-  `percent_of_population_with_1_plus_dose` varchar(8) DEFAULT NULL,
-  `booster_recip_count` varchar(7) DEFAULT NULL,
+  `age12_plus_population` varchar(21) DEFAULT NULL,
+  `age5_plus_population` varchar(20) DEFAULT NULL,
+  `persons_fully_vaccinated` varchar(24) DEFAULT NULL,
+  `persons_partially_vaccinated` varchar(28) DEFAULT NULL,
+  `percent_of_population_fully_vaccinated` varchar(38) DEFAULT NULL,
+  `percent_of_population_partially_vaccinated` varchar(42) DEFAULT NULL,
+  `percent_of_population_with_1_plus_dose` varchar(38) DEFAULT NULL,
+  `booster_recip_count` varchar(19) DEFAULT NULL,
   `redacted` varchar(69) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -21794,26 +25284,47 @@ CREATE TABLE `statewide_covid_19_hospital_county_data` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `statewide_covid_19_vaccines_administered_by_county`
+--
+
+DROP TABLE IF EXISTS `statewide_covid_19_vaccines_administered_by_county`;
+CREATE TABLE `statewide_covid_19_vaccines_administered_by_county` (
+  `county` varchar(26) DEFAULT NULL,
+  `administered_date` varchar(17) DEFAULT NULL,
+  `total_doses` varchar(11) DEFAULT NULL,
+  `cumulative_total_doses` varchar(22) DEFAULT NULL,
+  `partially_vaccinated` varchar(20) DEFAULT NULL,
+  `total_partially_vaccinated` varchar(26) DEFAULT NULL,
+  `fully_vaccinated` varchar(16) DEFAULT NULL,
+  `cumulative_fully_vaccinated` varchar(27) DEFAULT NULL,
+  `at_least_one_dose` varchar(17) DEFAULT NULL,
+  `cumulative_at_least_one_dose` varchar(28) DEFAULT NULL,
+  `california_flag` varchar(17) DEFAULT NULL,
+  `up_to_date_count` varchar(16) DEFAULT NULL,
+  `cumulative_up_to_date_count` varchar(27) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `statewide_covid_19_vaccines_administered_by_zip_code`
 --
 
 DROP TABLE IF EXISTS `statewide_covid_19_vaccines_administered_by_zip_code`;
 CREATE TABLE `statewide_covid_19_vaccines_administered_by_zip_code` (
   `as_of_date` varchar(10) DEFAULT NULL,
-  `zip_code_tabulation_area` varchar(5) DEFAULT NULL,
-  `local_health_jurisdiction` varchar(15) DEFAULT NULL,
+  `zip_code_tabulation_area` varchar(24) DEFAULT NULL,
+  `local_health_jurisdiction` varchar(25) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
-  `vaccine_equity_metric_quartile` varchar(3) DEFAULT NULL,
+  `vaccine_equity_metric_quartile` varchar(30) DEFAULT NULL,
   `vem_source` varchar(26) DEFAULT NULL,
-  `age12_plus_population` varchar(7) DEFAULT NULL,
-  `age5_plus_population` varchar(6) DEFAULT NULL,
-  `tot_population` varchar(8) DEFAULT NULL,
-  `persons_fully_vaccinated` varchar(7) DEFAULT NULL,
-  `persons_partially_vaccinated` varchar(7) DEFAULT NULL,
-  `percent_of_population_fully_vaccinated` varchar(8) DEFAULT NULL,
-  `percent_of_population_partially_vaccinated` varchar(8) DEFAULT NULL,
-  `percent_of_population_with_1_plus_dose` varchar(8) DEFAULT NULL,
-  `up_to_date_count` varchar(5) DEFAULT NULL,
+  `age12_plus_population` varchar(21) DEFAULT NULL,
+  `age5_plus_population` varchar(20) DEFAULT NULL,
+  `tot_population` varchar(14) DEFAULT NULL,
+  `persons_fully_vaccinated` varchar(24) DEFAULT NULL,
+  `persons_partially_vaccinated` varchar(28) DEFAULT NULL,
+  `percent_of_population_fully_vaccinated` varchar(38) DEFAULT NULL,
+  `percent_of_population_partially_vaccinated` varchar(42) DEFAULT NULL,
+  `percent_of_population_with_1_plus_dose` varchar(38) DEFAULT NULL,
+  `up_to_date_count` varchar(16) DEFAULT NULL,
   `redacted` varchar(69) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -21836,15 +25347,15 @@ CREATE TABLE `stds_by_disease_county_year_and_sex` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `sud_facilities`
+-- Table structure for table `sud_recovery_treatment_facilities`
 --
 
-DROP TABLE IF EXISTS `sud_facilities`;
-CREATE TABLE `sud_facilities` (
-  `x` decimal(18,15) DEFAULT NULL,
-  `y` decimal(18,15) DEFAULT NULL,
-  `objectid` varchar(4) DEFAULT NULL,
-  `county_code` varchar(2) DEFAULT NULL,
+DROP TABLE IF EXISTS `sud_recovery_treatment_facilities`;
+CREATE TABLE `sud_recovery_treatment_facilities` (
+  `x` varchar(14) DEFAULT NULL,
+  `y` varchar(16) DEFAULT NULL,
+  `objectid` varchar(8) DEFAULT NULL,
+  `county_code` varchar(11) DEFAULT NULL,
   `record_id` varchar(9) DEFAULT NULL,
   `legal_name` varchar(100) DEFAULT NULL,
   `program_name` varchar(100) DEFAULT NULL,
@@ -21852,19 +25363,19 @@ CREATE TABLE `sud_facilities` (
   `facility_address_2` varchar(133) DEFAULT NULL,
   `additional_facility_locations` varchar(141) DEFAULT NULL,
   `facility_city` varchar(22) DEFAULT NULL,
-  `facility_state` varchar(2) DEFAULT NULL,
-  `facility_zip` varchar(10) DEFAULT NULL,
+  `facility_state` varchar(14) DEFAULT NULL,
+  `facility_zip` varchar(12) DEFAULT NULL,
   `facility_phone` varchar(16) DEFAULT NULL,
   `type_of_application` varchar(22) DEFAULT NULL,
-  `service_type` varchar(9) DEFAULT NULL,
-  `resident_capacity` int DEFAULT NULL,
-  `total_occupancy` int DEFAULT NULL,
-  `expiration_date` date DEFAULT NULL,
+  `service_type` varchar(12) DEFAULT NULL,
+  `resident_capacity` varchar(17) DEFAULT NULL,
+  `total_occupancy` varchar(15) DEFAULT NULL,
+  `expiration_date` varchar(15) DEFAULT NULL,
   `target_population` varchar(25) DEFAULT NULL,
-  `incidental_medical_services` varchar(3) DEFAULT NULL,
-  `adolescent_waiver` varchar(3) DEFAULT NULL,
-  `latitude` decimal(12,8) DEFAULT NULL,
-  `longitude` decimal(12,8) DEFAULT NULL,
+  `incidental_medical_services` varchar(27) DEFAULT NULL,
+  `adolescent_waiver` varchar(17) DEFAULT NULL,
+  `latitude` varchar(15) DEFAULT NULL,
+  `longitude` varchar(17) DEFAULT NULL,
   `countyname` varchar(22) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -21954,6 +25465,58 @@ CREATE TABLE `surgeon_perf_ratings_for_cabg_to_2016` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `sw_covid_19_vacc_admin_by_county_2023_2024_upd_vacc_arch`
+--
+
+DROP TABLE IF EXISTS `sw_covid_19_vacc_admin_by_county_2023_2024_upd_vacc_arch`;
+CREATE TABLE `sw_covid_19_vacc_admin_by_county_2023_2024_upd_vacc_arch` (
+  `county` varchar(26) DEFAULT NULL,
+  `administered_date` varchar(17) DEFAULT NULL,
+  `total_doses` varchar(11) DEFAULT NULL,
+  `cumulative_total_doses` varchar(22) DEFAULT NULL,
+  `partially_vaccinated` varchar(20) DEFAULT NULL,
+  `total_partially_vaccinated` varchar(26) DEFAULT NULL,
+  `fully_vaccinated` varchar(16) DEFAULT NULL,
+  `cumulative_fully_vaccinated` varchar(27) DEFAULT NULL,
+  `at_least_one_dose` varchar(17) DEFAULT NULL,
+  `cumulative_at_least_one_dose` varchar(28) DEFAULT NULL,
+  `california_flag` varchar(17) DEFAULT NULL,
+  `up_to_date_count` varchar(16) DEFAULT NULL,
+  `cumulative_up_to_date_count` varchar(27) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `sw_covid_19_vacc_admin_by_county_booster_metr_arch`
+--
+
+DROP TABLE IF EXISTS `sw_covid_19_vacc_admin_by_county_booster_metr_arch`;
+CREATE TABLE `sw_covid_19_vacc_admin_by_county_booster_metr_arch` (
+  `county` varchar(26) DEFAULT NULL,
+  `administered_date` varchar(17) DEFAULT NULL,
+  `total_doses` varchar(11) DEFAULT NULL,
+  `cumulative_total_doses` varchar(22) DEFAULT NULL,
+  `pfizer_doses` varchar(12) DEFAULT NULL,
+  `cumulative_pfizer_doses` varchar(23) DEFAULT NULL,
+  `moderna_doses` varchar(13) DEFAULT NULL,
+  `cumulative_moderna_doses` varchar(24) DEFAULT NULL,
+  `jj_doses` varchar(8) DEFAULT NULL,
+  `cumulative_jj_doses` varchar(19) DEFAULT NULL,
+  `partially_vaccinated` varchar(20) DEFAULT NULL,
+  `total_partially_vaccinated` varchar(26) DEFAULT NULL,
+  `fully_vaccinated` varchar(16) DEFAULT NULL,
+  `cumulative_fully_vaccinated` varchar(27) DEFAULT NULL,
+  `at_least_one_dose` varchar(17) DEFAULT NULL,
+  `cumulative_at_least_one_dose` varchar(28) DEFAULT NULL,
+  `california_flag` varchar(17) DEFAULT NULL,
+  `booster_recip_count` varchar(19) DEFAULT NULL,
+  `bivalent_booster_recip_count` varchar(28) DEFAULT NULL,
+  `cumulative_booster_recip_count` varchar(30) DEFAULT NULL,
+  `cumulative_bivalent_booster_recip_count` varchar(39) DEFAULT NULL,
+  `booster_eligible_population` varchar(27) DEFAULT NULL,
+  `bivalent_booster_eligible_population` varchar(36) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `tb_by_place_age_sex_race_ethnic`
 --
 
@@ -21968,16 +25531,13 @@ CREATE TABLE `tb_by_place_age_sex_race_ethnic` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `tb_in_local_health_jurisdiction`
+-- Table structure for table `tmsis_chg_log_for_ca_med_elig_grps_by_medical_aid_cd`
 --
 
-DROP TABLE IF EXISTS `tb_in_local_health_jurisdiction`;
-CREATE TABLE `tb_in_local_health_jurisdiction` (
-  `year` varchar(4) DEFAULT NULL,
-  `jurisdiction` varchar(15) DEFAULT NULL,
-  `cases` varchar(4) DEFAULT NULL,
-  `population` varchar(10) DEFAULT NULL,
-  `rate_per_100_000_population` varchar(4) DEFAULT NULL
+DROP TABLE IF EXISTS `tmsis_chg_log_for_ca_med_elig_grps_by_medical_aid_cd`;
+CREATE TABLE `tmsis_chg_log_for_ca_med_elig_grps_by_medical_aid_cd` (
+  `date` varchar(10) DEFAULT NULL,
+  `tmsis_change_description` varchar(931) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -22033,6 +25593,20 @@ CREATE TABLE `tobacco_use_in_adults` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `total_construction_cost_of_healthcare_projects_`
+--
+
+DROP TABLE IF EXISTS `total_construction_cost_of_healthcare_projects_`;
+CREATE TABLE `total_construction_cost_of_healthcare_projects_` (
+  `county` varchar(20) DEFAULT NULL,
+  `data_generation_date` varchar(20) DEFAULT NULL,
+  `oshpd_project_status` varchar(20) DEFAULT NULL,
+  `total_costs_of_oshpd_projects` varchar(29) DEFAULT NULL,
+  `number_of_oshpd_projects` varchar(24) DEFAULT NULL,
+  `collection_of_counties` varchar(28) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `total_covid19_outbreaks_by_industry`
 --
 
@@ -22055,6 +25629,16 @@ CREATE TABLE `total_effectuated_qualified_health_plan_qhp_enrollment__4149ab9a` 
   `year` varchar(4) DEFAULT NULL,
   `reporting_period` varchar(10) DEFAULT NULL,
   `number_of_enrollees` varchar(9) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `total_prov_reimb_for_fps_by_fisc_yrs`
+--
+
+DROP TABLE IF EXISTS `total_prov_reimb_for_fps_by_fisc_yrs`;
+CREATE TABLE `total_prov_reimb_for_fps_by_fisc_yrs` (
+  `fiscal_year_fy` varchar(19) DEFAULT NULL,
+  `total_provider_reimbursement_amount` varchar(35) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -22115,7 +25699,7 @@ CREATE TABLE `utilization_rates_for_selected_medical_procedures_in_ca_a77ed52c` 
   `county` varchar(15) DEFAULT NULL,
   `hospital` varchar(80) DEFAULT NULL,
   `oshpdid` varchar(9) DEFAULT NULL,
-  `procedure_name` varchar(51) DEFAULT NULL,
+  `procedure_name_name` varchar(51) DEFAULT NULL,
   `count` varchar(6) DEFAULT NULL,
   `rate` varchar(4) DEFAULT NULL,
   `longitude` varchar(12) DEFAULT NULL,
@@ -22132,7 +25716,7 @@ CREATE TABLE `utilization_rates_for_selected_medical_procedures_in_ca_e6936965` 
   `county` varchar(15) DEFAULT NULL,
   `hospital` varchar(79) DEFAULT NULL,
   `oshpdid` varchar(9) DEFAULT NULL,
-  `procedure_name` varchar(39) DEFAULT NULL,
+  `procedure_name_name` varchar(39) DEFAULT NULL,
   `count` varchar(6) DEFAULT NULL,
   `rate` varchar(4) DEFAULT NULL,
   `longitute` varchar(12) DEFAULT NULL,
@@ -22150,7 +25734,7 @@ CREATE TABLE `utilization_trends_by_health_category` (
   `category` varchar(44) DEFAULT NULL,
   `system_name` varchar(33) DEFAULT NULL,
   `facility_name` varchar(79) DEFAULT NULL,
-  `count` varchar(4) DEFAULT NULL
+  `count` varchar(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -22174,10 +25758,10 @@ CREATE TABLE `variant_proportion_nowcasts_for_covid_19` (
   `disease` varchar(8) DEFAULT NULL,
   `location_level` varchar(27) DEFAULT NULL,
   `location` varchar(11) DEFAULT NULL,
-  `target_date` varchar(10) DEFAULT NULL,
+  `target_date` varchar(11) DEFAULT NULL,
   `target` varchar(12) DEFAULT NULL,
   `model` varchar(27) DEFAULT NULL,
-  `value` varchar(4) DEFAULT NULL,
+  `value` varchar(5) DEFAULT NULL,
   `quantile` varchar(13) DEFAULT NULL,
   `archivedt` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -22349,57 +25933,129 @@ CREATE TABLE `vocational_rehab_consumers_by_sex_and_county` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `voters_region_county_crosswalk`
+-- Table structure for table `voter_registration_2016_and_2018`
 --
 
-DROP TABLE IF EXISTS `voters_region_county_crosswalk`;
-CREATE TABLE `voters_region_county_crosswalk` (
-  `county_fips` char(5) DEFAULT NULL,
-  `county` varchar(63) DEFAULT NULL,
-  `mpo_region` varchar(63) DEFAULT NULL,
-  `mpo_region_code` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `voters_registrations`
---
-
-DROP TABLE IF EXISTS `voters_registrations`;
-CREATE TABLE `voters_registrations` (
-  `ind_id` int DEFAULT NULL,
-  `ind_definition` varchar(127) DEFAULT NULL,
-  `reportyear` int DEFAULT NULL,
-  `race_eth_code` int DEFAULT NULL,
-  `race_eth_name` varchar(31) DEFAULT NULL,
-  `geotype` varchar(5) DEFAULT NULL,
-  `geotypevalue` varchar(31) DEFAULT NULL,
-  `geoname` varchar(63) DEFAULT NULL,
-  `county_nam` varchar(63) DEFAULT NULL,
-  `county_fips` varchar(31) DEFAULT NULL,
-  `region_name` varchar(63) DEFAULT NULL,
-  `region_code` varchar(15) DEFAULT NULL,
+DROP TABLE IF EXISTS `voter_registration_2016_and_2018`;
+CREATE TABLE `voter_registration_2016_and_2018` (
+  `ind_id` varchar(13) DEFAULT NULL,
+  `ind_definition` varchar(66) DEFAULT NULL,
+  `reportyear` varchar(10) DEFAULT NULL,
+  `race_eth_code` varchar(13) DEFAULT NULL,
+  `race_eth_name` varchar(13) DEFAULT NULL,
+  `geotype` varchar(7) DEFAULT NULL,
+  `geotypevalue` varchar(12) DEFAULT NULL,
+  `geoname` varchar(37) DEFAULT NULL,
+  `county_name` varchar(15) DEFAULT NULL,
+  `county_fips` varchar(11) DEFAULT NULL,
+  `region_name` varchar(26) DEFAULT NULL,
+  `region_code` varchar(11) DEFAULT NULL,
   `strata_one_code` varchar(15) DEFAULT NULL,
-  `strata_one_name` varchar(31) DEFAULT NULL,
+  `strata_one_name` varchar(19) DEFAULT NULL,
   `strata_two_code` varchar(15) DEFAULT NULL,
-  `strata_two_name` varchar(31) DEFAULT NULL,
-  `numerator` varchar(63) DEFAULT NULL,
-  `denominator` varchar(63) DEFAULT NULL,
-  `estimate` varchar(63) DEFAULT NULL,
-  `ll_95ci` varchar(63) DEFAULT NULL,
-  `ul_95ci` varchar(63) DEFAULT NULL,
-  `se` varchar(63) DEFAULT NULL,
-  `rse` varchar(63) DEFAULT NULL,
-  `ca_rr` varchar(63) DEFAULT NULL,
-  `version` varchar(63) DEFAULT NULL,
-  `vap` varchar(63) DEFAULT NULL
+  `strata_two_name` varchar(15) DEFAULT NULL,
+  `numerator` varchar(9) DEFAULT NULL,
+  `denominator` varchar(11) DEFAULT NULL,
+  `estimate` varchar(11) DEFAULT NULL,
+  `ll_95ci` varchar(11) DEFAULT NULL,
+  `ul_95ci` varchar(11) DEFAULT NULL,
+  `se` varchar(11) DEFAULT NULL,
+  `rse` varchar(11) DEFAULT NULL,
+  `ca_rr` varchar(11) DEFAULT NULL,
+  `version` varchar(11) DEFAULT NULL,
+  `vap` varchar(8) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `vre_in_hospitals_2013`
+-- Table structure for table `voter_registration_mpo_region_to_county_crosswalk`
 --
 
-DROP TABLE IF EXISTS `vre_in_hospitals_2013`;
-CREATE TABLE `vre_in_hospitals_2013` (
+DROP TABLE IF EXISTS `voter_registration_mpo_region_to_county_crosswalk`;
+CREATE TABLE `voter_registration_mpo_region_to_county_crosswalk` (
+  `county_fips` varchar(11) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `mpo_region` varchar(26) DEFAULT NULL,
+  `mpo_region_code` varchar(15) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `vre_bsi_in_hospitals_2021`
+--
+
+DROP TABLE IF EXISTS `vre_bsi_in_hospitals_2021`;
+CREATE TABLE `vre_bsi_in_hospitals_2021` (
+  `year` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `hai` varchar(65) DEFAULT NULL,
+  `facility_id` varchar(9) DEFAULT NULL,
+  `facility_name` varchar(79) DEFAULT NULL,
+  `facility_type` varchar(69) DEFAULT NULL,
+  `infections_reported` varchar(3) DEFAULT NULL,
+  `patient_days` varchar(8) DEFAULT NULL,
+  `rate` varchar(4) DEFAULT NULL,
+  `rate_ci_95_lower_limit` varchar(4) DEFAULT NULL,
+  `rate_ci_95_upper_limit` varchar(7) DEFAULT NULL,
+  `comparison` varchar(6) DEFAULT NULL,
+  `months` varchar(2) DEFAULT NULL,
+  `rate_2015` varchar(4) DEFAULT NULL,
+  `notes` varchar(43) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `vre_bsi_in_hospitals_2022`
+--
+
+DROP TABLE IF EXISTS `vre_bsi_in_hospitals_2022`;
+CREATE TABLE `vre_bsi_in_hospitals_2022` (
+  `year` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `hai` varchar(65) DEFAULT NULL,
+  `facility_id` varchar(9) DEFAULT NULL,
+  `facility_name` varchar(85) DEFAULT NULL,
+  `facility_type` varchar(69) DEFAULT NULL,
+  `infections_reported` varchar(3) DEFAULT NULL,
+  `patient_days` varchar(8) DEFAULT NULL,
+  `rate` varchar(4) DEFAULT NULL,
+  `rate_ci_95_lower_limit` varchar(4) DEFAULT NULL,
+  `rate_ci_95_upper_limit` varchar(7) DEFAULT NULL,
+  `comparison` varchar(6) DEFAULT NULL,
+  `months` varchar(2) DEFAULT NULL,
+  `rate_2015` varchar(4) DEFAULT NULL,
+  `notes` varchar(43) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `vre_bsi_in_hospitals_2023`
+--
+
+DROP TABLE IF EXISTS `vre_bsi_in_hospitals_2023`;
+CREATE TABLE `vre_bsi_in_hospitals_2023` (
+  `year` varchar(4) DEFAULT NULL,
+  `state` varchar(10) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `hai` varchar(65) DEFAULT NULL,
+  `facility_id` varchar(9) DEFAULT NULL,
+  `facility_name` varchar(85) DEFAULT NULL,
+  `facility_type` varchar(69) DEFAULT NULL,
+  `infections_reported` varchar(3) DEFAULT NULL,
+  `patient_days` varchar(8) DEFAULT NULL,
+  `rate` varchar(4) DEFAULT NULL,
+  `rate_ci_95_lower_limit` varchar(4) DEFAULT NULL,
+  `rate_ci_95_upper_limit` varchar(7) DEFAULT NULL,
+  `comparison` varchar(6) DEFAULT NULL,
+  `months` varchar(2) DEFAULT NULL,
+  `rate_2015` varchar(4) DEFAULT NULL,
+  `notes` varchar(43) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `vre_in_california_hospitals_2013`
+--
+
+DROP TABLE IF EXISTS `vre_in_california_hospitals_2013`;
+CREATE TABLE `vre_in_california_hospitals_2013` (
   `year` varchar(4) DEFAULT NULL,
   `state` varchar(10) DEFAULT NULL,
   `hai` varchar(64) DEFAULT NULL,
@@ -22422,11 +26078,11 @@ CREATE TABLE `vre_in_hospitals_2013` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `vre_in_hospitals_2014`
+-- Table structure for table `vre_in_california_hospitals_2014`
 --
 
-DROP TABLE IF EXISTS `vre_in_hospitals_2014`;
-CREATE TABLE `vre_in_hospitals_2014` (
+DROP TABLE IF EXISTS `vre_in_california_hospitals_2014`;
+CREATE TABLE `vre_in_california_hospitals_2014` (
   `year` varchar(4) DEFAULT NULL,
   `state` varchar(10) DEFAULT NULL,
   `hai` varchar(64) DEFAULT NULL,
@@ -22445,11 +26101,11 @@ CREATE TABLE `vre_in_hospitals_2014` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `vre_in_hospitals_2015`
+-- Table structure for table `vre_in_california_hospitals_2015`
 --
 
-DROP TABLE IF EXISTS `vre_in_hospitals_2015`;
-CREATE TABLE `vre_in_hospitals_2015` (
+DROP TABLE IF EXISTS `vre_in_california_hospitals_2015`;
+CREATE TABLE `vre_in_california_hospitals_2015` (
   `year` varchar(4) DEFAULT NULL,
   `state` varchar(10) DEFAULT NULL,
   `hai` varchar(64) DEFAULT NULL,
@@ -22468,11 +26124,11 @@ CREATE TABLE `vre_in_hospitals_2015` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `vre_in_hospitals_2016`
+-- Table structure for table `vre_in_california_hospitals_2016`
 --
 
-DROP TABLE IF EXISTS `vre_in_hospitals_2016`;
-CREATE TABLE `vre_in_hospitals_2016` (
+DROP TABLE IF EXISTS `vre_in_california_hospitals_2016`;
+CREATE TABLE `vre_in_california_hospitals_2016` (
   `year` varchar(4) DEFAULT NULL,
   `state` varchar(10) DEFAULT NULL,
   `hai` varchar(66) DEFAULT NULL,
@@ -22493,11 +26149,11 @@ CREATE TABLE `vre_in_hospitals_2016` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `vre_in_hospitals_2017`
+-- Table structure for table `vre_in_california_hospitals_2017`
 --
 
-DROP TABLE IF EXISTS `vre_in_hospitals_2017`;
-CREATE TABLE `vre_in_hospitals_2017` (
+DROP TABLE IF EXISTS `vre_in_california_hospitals_2017`;
+CREATE TABLE `vre_in_california_hospitals_2017` (
   `year` varchar(4) DEFAULT NULL,
   `state` varchar(10) DEFAULT NULL,
   `hai` varchar(66) DEFAULT NULL,
@@ -22518,11 +26174,11 @@ CREATE TABLE `vre_in_hospitals_2017` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `vre_in_hospitals_2018`
+-- Table structure for table `vre_in_california_hospitals_2018`
 --
 
-DROP TABLE IF EXISTS `vre_in_hospitals_2018`;
-CREATE TABLE `vre_in_hospitals_2018` (
+DROP TABLE IF EXISTS `vre_in_california_hospitals_2018`;
+CREATE TABLE `vre_in_california_hospitals_2018` (
   `year` varchar(4) DEFAULT NULL,
   `state` varchar(10) DEFAULT NULL,
   `hai` varchar(66) DEFAULT NULL,
@@ -22542,11 +26198,11 @@ CREATE TABLE `vre_in_hospitals_2018` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `vre_in_hospitals_2019`
+-- Table structure for table `vre_in_california_hospitals_2019`
 --
 
-DROP TABLE IF EXISTS `vre_in_hospitals_2019`;
-CREATE TABLE `vre_in_hospitals_2019` (
+DROP TABLE IF EXISTS `vre_in_california_hospitals_2019`;
+CREATE TABLE `vre_in_california_hospitals_2019` (
   `year` varchar(4) DEFAULT NULL,
   `state` varchar(10) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
@@ -22565,11 +26221,11 @@ CREATE TABLE `vre_in_hospitals_2019` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `vre_in_hospitals_2020_first_half`
+-- Table structure for table `vre_in_hospitals_january_to_june_2020_updated_annually`
 --
 
-DROP TABLE IF EXISTS `vre_in_hospitals_2020_first_half`;
-CREATE TABLE `vre_in_hospitals_2020_first_half` (
+DROP TABLE IF EXISTS `vre_in_hospitals_january_to_june_2020_updated_annually`;
+CREATE TABLE `vre_in_hospitals_january_to_june_2020_updated_annually` (
   `year` varchar(6) DEFAULT NULL,
   `state` varchar(10) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
@@ -22582,11 +26238,11 @@ CREATE TABLE `vre_in_hospitals_2020_first_half` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `vre_in_hospitals_2020_second_half`
+-- Table structure for table `vre_in_hospitals_july_through_december_2020_updated_annually`
 --
 
-DROP TABLE IF EXISTS `vre_in_hospitals_2020_second_half`;
-CREATE TABLE `vre_in_hospitals_2020_second_half` (
+DROP TABLE IF EXISTS `vre_in_hospitals_july_through_december_2020_updated_annually`;
+CREATE TABLE `vre_in_hospitals_july_through_december_2020_updated_annually` (
   `year` varchar(6) DEFAULT NULL,
   `state` varchar(10) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
@@ -22605,176 +26261,104 @@ CREATE TABLE `vre_in_hospitals_2020_second_half` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `vre_in_hospitals_2021`
---
-
-DROP TABLE IF EXISTS `vre_in_hospitals_2021`;
-CREATE TABLE `vre_in_hospitals_2021` (
-  `year` varchar(4) DEFAULT NULL,
-  `state` varchar(10) DEFAULT NULL,
-  `county` varchar(15) DEFAULT NULL,
-  `hai` varchar(65) DEFAULT NULL,
-  `facility_id` varchar(9) DEFAULT NULL,
-  `facility_name` varchar(79) DEFAULT NULL,
-  `facility_type` varchar(69) DEFAULT NULL,
-  `infections_reported` varchar(3) DEFAULT NULL,
-  `patient_days` varchar(8) DEFAULT NULL,
-  `rate` varchar(4) DEFAULT NULL,
-  `rate_ci_95_lower_limit` varchar(4) DEFAULT NULL,
-  `rate_ci_95_upper_limit` varchar(7) DEFAULT NULL,
-  `comparison` varchar(6) DEFAULT NULL,
-  `months` varchar(2) DEFAULT NULL,
-  `rate_2015` varchar(4) DEFAULT NULL,
-  `notes` varchar(43) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `vre_in_hospitals_2022`
---
-
-DROP TABLE IF EXISTS `vre_in_hospitals_2022`;
-CREATE TABLE `vre_in_hospitals_2022` (
-  `year` varchar(4) DEFAULT NULL,
-  `state` varchar(10) DEFAULT NULL,
-  `county` varchar(15) DEFAULT NULL,
-  `hai` varchar(65) DEFAULT NULL,
-  `facility_id` varchar(9) DEFAULT NULL,
-  `facility_name` varchar(85) DEFAULT NULL,
-  `facility_type` varchar(69) DEFAULT NULL,
-  `infections_reported` varchar(3) DEFAULT NULL,
-  `patient_days` varchar(8) DEFAULT NULL,
-  `rate` varchar(4) DEFAULT NULL,
-  `rate_ci_95_lower_limit` varchar(4) DEFAULT NULL,
-  `rate_ci_95_upper_limit` varchar(7) DEFAULT NULL,
-  `comparison` varchar(6) DEFAULT NULL,
-  `months` varchar(2) DEFAULT NULL,
-  `rate_2015` varchar(4) DEFAULT NULL,
-  `notes` varchar(43) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `vre_in_hospitals_2023`
---
-
-DROP TABLE IF EXISTS `vre_in_hospitals_2023`;
-CREATE TABLE `vre_in_hospitals_2023` (
-  `year` varchar(4) DEFAULT NULL,
-  `state` varchar(10) DEFAULT NULL,
-  `county` varchar(15) DEFAULT NULL,
-  `hai` varchar(65) DEFAULT NULL,
-  `facility_id` varchar(9) DEFAULT NULL,
-  `facility_name` varchar(85) DEFAULT NULL,
-  `facility_type` varchar(69) DEFAULT NULL,
-  `infections_reported` varchar(3) DEFAULT NULL,
-  `patient_days` varchar(8) DEFAULT NULL,
-  `rate` varchar(4) DEFAULT NULL,
-  `rate_ci_95_lower_limit` varchar(4) DEFAULT NULL,
-  `rate_ci_95_upper_limit` varchar(7) DEFAULT NULL,
-  `comparison` varchar(6) DEFAULT NULL,
-  `months` varchar(2) DEFAULT NULL,
-  `rate_2015` varchar(4) DEFAULT NULL,
-  `notes` varchar(43) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
 -- Table structure for table `wastewater_surveillance`
 --
 
 DROP TABLE IF EXISTS `wastewater_surveillance`;
 CREATE TABLE `wastewater_surveillance` (
-  `elevation` varchar(6) DEFAULT NULL,
+  `elevation` varchar(9) DEFAULT NULL,
   `epaid` varchar(11) DEFAULT NULL,
   `wwtp_name` varchar(23) DEFAULT NULL,
-  `reporting_jurisdiction` varchar(2) DEFAULT NULL,
+  `reporting_jurisdiction` varchar(22) DEFAULT NULL,
   `county_names` varchar(19) DEFAULT NULL,
   `zipcode` varchar(7) DEFAULT NULL,
-  `capacity_mgd` varchar(5) DEFAULT NULL,
-  `population_served` varchar(9) DEFAULT NULL,
-  `industrial_input` varchar(4) DEFAULT NULL,
-  `stormwater_input` varchar(3) DEFAULT NULL,
-  `influent_equilibrated` varchar(3) DEFAULT NULL,
-  `sewage_travel_time` varchar(4) DEFAULT NULL,
+  `capacity_mgd` varchar(12) DEFAULT NULL,
+  `population_served` varchar(17) DEFAULT NULL,
+  `industrial_input` varchar(16) DEFAULT NULL,
+  `stormwater_input` varchar(16) DEFAULT NULL,
+  `influent_equilibrated` varchar(21) DEFAULT NULL,
+  `sewage_travel_time` varchar(18) DEFAULT NULL,
   `institution_type` varchar(24) DEFAULT NULL,
-  `wwtp_jurisdiction` varchar(2) DEFAULT NULL,
-  `solids_separation` varchar(16) DEFAULT NULL,
-  `pasteurized` varchar(3) DEFAULT NULL,
+  `wwtp_jurisdiction` varchar(17) DEFAULT NULL,
+  `solids_separation` varchar(17) DEFAULT NULL,
+  `pasteurized` varchar(11) DEFAULT NULL,
   `time_zone` varchar(9) DEFAULT NULL,
   `sample_id` varchar(23) DEFAULT NULL,
   `lab_id` varchar(10) DEFAULT NULL,
-  `sample_collect_date` varchar(10) DEFAULT NULL,
-  `sample_collect_time` varchar(8) DEFAULT NULL,
+  `sample_collect_date` varchar(19) DEFAULT NULL,
+  `sample_collect_time` varchar(19) DEFAULT NULL,
   `flow_rate` varchar(16) DEFAULT NULL,
-  `collection_water_temp` varchar(12) DEFAULT NULL,
+  `collection_water_temp` varchar(21) DEFAULT NULL,
   `sample_type` varchar(29) DEFAULT NULL,
   `composite_freq` varchar(18) DEFAULT NULL,
   `sample_matrix` varchar(17) DEFAULT NULL,
-  `sample_location` varchar(8) DEFAULT NULL,
+  `sample_location` varchar(15) DEFAULT NULL,
   `sample_location_specify` varchar(36) DEFAULT NULL,
-  `collection_storage_time` varchar(5) DEFAULT NULL,
-  `collection_storage_temp` varchar(3) DEFAULT NULL,
-  `pretreatment` varchar(3) DEFAULT NULL,
+  `collection_storage_time` varchar(23) DEFAULT NULL,
+  `collection_storage_temp` varchar(23) DEFAULT NULL,
+  `pretreatment` varchar(12) DEFAULT NULL,
   `pretreatment_specify` varchar(328) DEFAULT NULL,
   `concentration_method` varchar(89) DEFAULT NULL,
   `extraction_method` varchar(101) DEFAULT NULL,
-  `pre_conc_storage_time` varchar(4) DEFAULT NULL,
-  `pre_conc_storage_temp` varchar(3) DEFAULT NULL,
-  `pre_ext_storage_time` varchar(4) DEFAULT NULL,
-  `pre_ext_storage_temp` varchar(5) DEFAULT NULL,
-  `tot_conc_vol` varchar(4) DEFAULT NULL,
-  `ext_blank` varchar(3) DEFAULT NULL,
-  `rec_eff_target_name` varchar(12) DEFAULT NULL,
+  `pre_conc_storage_time` varchar(21) DEFAULT NULL,
+  `pre_conc_storage_temp` varchar(21) DEFAULT NULL,
+  `pre_ext_storage_time` varchar(20) DEFAULT NULL,
+  `pre_ext_storage_temp` varchar(20) DEFAULT NULL,
+  `tot_conc_vol` varchar(12) DEFAULT NULL,
+  `ext_blank` varchar(9) DEFAULT NULL,
+  `rec_eff_target_name` varchar(19) DEFAULT NULL,
   `rec_eff_spike_matrix` varchar(30) DEFAULT NULL,
-  `rec_eff_spike_conc` varchar(11) DEFAULT NULL,
-  `inhibition_detect` varchar(10) DEFAULT NULL,
-  `pcr_type` varchar(5) DEFAULT NULL,
+  `rec_eff_spike_conc` varchar(18) DEFAULT NULL,
+  `inhibition_detect` varchar(17) DEFAULT NULL,
+  `pcr_type` varchar(8) DEFAULT NULL,
   `lod_ref` varchar(1561) DEFAULT NULL,
   `hum_frac_target_mic` varchar(24) DEFAULT NULL,
   `hum_frac_target_mic_ref` varchar(388) DEFAULT NULL,
-  `hum_frac_target_chem` varchar(0) DEFAULT NULL,
-  `hum_frac_target_chem_ref` varchar(0) DEFAULT NULL,
-  `other_norm_name` varchar(7) DEFAULT NULL,
+  `hum_frac_target_chem` varchar(20) DEFAULT NULL,
+  `hum_frac_target_chem_ref` varchar(24) DEFAULT NULL,
+  `other_norm_name` varchar(15) DEFAULT NULL,
   `other_norm_ref` varchar(75) DEFAULT NULL,
-  `quant_stan_type` varchar(3) DEFAULT NULL,
+  `quant_stan_type` varchar(15) DEFAULT NULL,
   `stan_ref` varchar(216) DEFAULT NULL,
   `inhibition_method` varchar(196) DEFAULT NULL,
-  `num_no_target_control` varchar(11) DEFAULT NULL,
-  `test_result_date` varchar(10) DEFAULT NULL,
+  `num_no_target_control` varchar(21) DEFAULT NULL,
+  `test_result_date` varchar(16) DEFAULT NULL,
   `ph` varchar(7) DEFAULT NULL,
-  `conductivity` varchar(7) DEFAULT NULL,
+  `conductivity` varchar(12) DEFAULT NULL,
   `tss` varchar(6) DEFAULT NULL,
-  `equiv_sewage_amt` varchar(8) DEFAULT NULL,
+  `equiv_sewage_amt` varchar(16) DEFAULT NULL,
   `lod_sewage` varchar(14) DEFAULT NULL,
-  `ntc_amplify` varchar(3) DEFAULT NULL,
+  `ntc_amplify` varchar(11) DEFAULT NULL,
   `rec_eff_percent` varchar(17) DEFAULT NULL,
-  `inhibition_adjust` varchar(3) DEFAULT NULL,
+  `inhibition_adjust` varchar(17) DEFAULT NULL,
   `hum_frac_mic_conc` varchar(18) DEFAULT NULL,
   `hum_frac_mic_unit` varchar(25) DEFAULT NULL,
-  `hum_frac_chem_conc` varchar(0) DEFAULT NULL,
-  `hum_frac_chem_unit` varchar(0) DEFAULT NULL,
-  `other_norm_conc` varchar(0) DEFAULT NULL,
-  `other_norm_unit` varchar(0) DEFAULT NULL,
-  `quality_flag` varchar(3) DEFAULT NULL,
-  `qc_ignore` varchar(0) DEFAULT NULL,
-  `dashboard_ignore` varchar(0) DEFAULT NULL,
-  `analysis_ignore` varchar(0) DEFAULT NULL,
-  `major_lab_method` varchar(3) DEFAULT NULL,
+  `hum_frac_chem_conc` varchar(18) DEFAULT NULL,
+  `hum_frac_chem_unit` varchar(18) DEFAULT NULL,
+  `other_norm_conc` varchar(15) DEFAULT NULL,
+  `other_norm_unit` varchar(15) DEFAULT NULL,
+  `quality_flag` varchar(12) DEFAULT NULL,
+  `qc_ignore` varchar(9) DEFAULT NULL,
+  `dashboard_ignore` varchar(16) DEFAULT NULL,
+  `analysis_ignore` varchar(15) DEFAULT NULL,
+  `major_lab_method` varchar(16) DEFAULT NULL,
   `major_lab_method_desc` varchar(142) DEFAULT NULL,
   `facility_name` varchar(72) DEFAULT NULL,
   `pcr_target` varchar(14) DEFAULT NULL,
   `pcr_gene_target` varchar(24) DEFAULT NULL,
   `pcr_gene_target_ref` varchar(129) DEFAULT NULL,
   `pcr_target_units` varchar(25) DEFAULT NULL,
-  `pcr_target_avg_conc` varchar(18) DEFAULT NULL,
-  `pcr_target_std_error` varchar(16) DEFAULT NULL,
-  `pcr_target_cl_95_lo` varchar(17) DEFAULT NULL,
-  `pcr_target_cl_95_up` varchar(18) DEFAULT NULL,
-  `pcr_target_below_lod` varchar(3) DEFAULT NULL,
+  `pcr_target_avg_conc` varchar(19) DEFAULT NULL,
+  `pcr_target_std_error` varchar(20) DEFAULT NULL,
+  `pcr_target_cl_95_lo` varchar(19) DEFAULT NULL,
+  `pcr_target_cl_95_up` varchar(19) DEFAULT NULL,
+  `pcr_target_below_lod` varchar(20) DEFAULT NULL,
   `data_source` varchar(39) DEFAULT NULL,
-  `validated_methods` varchar(3) DEFAULT NULL,
+  `validated_methods` varchar(17) DEFAULT NULL,
   `site_id` varchar(18) DEFAULT NULL,
-  `epa_registry_id` varchar(14) DEFAULT NULL,
+  `epa_registry_id` varchar(15) DEFAULT NULL,
   `created_at` varchar(19) DEFAULT NULL,
-  `county_treatmentplant` varchar(15) DEFAULT NULL,
+  `county_treatmentplant` varchar(21) DEFAULT NULL,
   `label_name` varchar(56) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -22784,9 +26368,9 @@ CREATE TABLE `wastewater_surveillance` (
 
 DROP TABLE IF EXISTS `wastewater_surveillance_log`;
 CREATE TABLE `wastewater_surveillance_log` (
-  `date_of_change` date DEFAULT NULL,
-  `details` text,
-  `type` text
+  `date_of_change` varchar(14) DEFAULT NULL,
+  `details` varchar(85) DEFAULT NULL,
+  `type` varchar(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -22807,219 +26391,450 @@ CREATE TABLE `west_nile_virus_cases` (
 
 DROP TABLE IF EXISTS `wic_authorized_vendors`;
 CREATE TABLE `wic_authorized_vendors` (
-  `vendor` varchar(200) DEFAULT NULL,
+  `vendor` varchar(202) DEFAULT NULL,
   `address` varchar(111) DEFAULT NULL,
   `second_address` varchar(60) DEFAULT NULL,
   `city` varchar(60) DEFAULT NULL,
   `zip` varchar(60) DEFAULT NULL,
   `county` varchar(60) DEFAULT NULL,
   `latitude` varchar(60) DEFAULT NULL,
-  `longitude` varchar(23) DEFAULT NULL
+  `longitude` varchar(23) DEFAULT NULL,
+  `None` varchar(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `wic_part_a_redemptions_by_vendor_county`
+-- Table structure for table `wic_ebt_redemption_forward_part_c_by_vendor_w_fam_cts_2021_22`
 --
 
-DROP TABLE IF EXISTS `wic_part_a_redemptions_by_vendor_county`;
-CREATE TABLE `wic_part_a_redemptions_by_vendor_county` (
-  `vendor_county_code` varchar(2) DEFAULT NULL,
+DROP TABLE IF EXISTS `wic_ebt_redemption_forward_part_c_by_vendor_w_fam_cts_2021_22`;
+CREATE TABLE `wic_ebt_redemption_forward_part_c_by_vendor_w_fam_cts_2021_22` (
+  `vendor_county_code` varchar(18) DEFAULT NULL,
   `vendor_county` varchar(15) DEFAULT NULL,
-  `obligation_year_and_month` varchar(6) DEFAULT NULL,
-  `number_of_families_redeemed` varchar(7) DEFAULT NULL,
-  `number_of_food_instruments_redeemed` varchar(8) DEFAULT NULL,
-  `dollar_amount_of_food_instruments` varchar(18) DEFAULT NULL,
-  `average_cost_per_family` varchar(8) DEFAULT NULL,
-  `statewide_infant_formula_rebate` varchar(16) DEFAULT NULL,
-  `total_cost_adjusted` varchar(16) DEFAULT NULL,
-  `average_cost_adjusted` varchar(8) DEFAULT NULL
+  `obligation_year_and_month` varchar(25) DEFAULT NULL,
+  `number_of_families_redeemed` varchar(27) DEFAULT NULL,
+  `number_of_ebt_transactions` varchar(26) DEFAULT NULL,
+  `dollar_amount_of_ebt_transactions` varchar(33) DEFAULT NULL,
+  `average_cost_per_family` varchar(23) DEFAULT NULL,
+  `statewide_infant_formula_rebate` varchar(31) DEFAULT NULL,
+  `total_cost_adjusted` varchar(19) DEFAULT NULL,
+  `average_cost_adjusted` varchar(21) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `wic_part_b_redemptions_by_vendor_county`
+-- Table structure for table `wic_ebt_redemption_forward_part_c_by_vendor_w_fam_cts_2021_23`
 --
 
-DROP TABLE IF EXISTS `wic_part_b_redemptions_by_vendor_county`;
-CREATE TABLE `wic_part_b_redemptions_by_vendor_county` (
-  `vendor_county_code` varchar(2) DEFAULT NULL,
+DROP TABLE IF EXISTS `wic_ebt_redemption_forward_part_c_by_vendor_w_fam_cts_2021_23`;
+CREATE TABLE `wic_ebt_redemption_forward_part_c_by_vendor_w_fam_cts_2021_23` (
+  `vendor_county_code` varchar(18) DEFAULT NULL,
   `vendor_county` varchar(15) DEFAULT NULL,
-  `obligation_year_and_month` varchar(6) DEFAULT NULL,
-  `number_of_families_redeemed` varchar(6) DEFAULT NULL,
-  `number_of_food_instruments_redeemed` varchar(8) DEFAULT NULL,
-  `dollar_amount_of_food_instruments` varchar(16) DEFAULT NULL,
-  `number_of_ebt_transactions` varchar(8) DEFAULT NULL,
-  `dollar_amount_of_ebt_transactions` varchar(16) DEFAULT NULL,
-  `average_cost_per_family` varchar(8) DEFAULT NULL,
-  `statewide_infant_formula_rebate` varchar(16) DEFAULT NULL,
-  `total_cost_adjusted` varchar(16) DEFAULT NULL,
-  `average_cost_adjusted` varchar(8) DEFAULT NULL
+  `obligation_year_and_month` varchar(25) DEFAULT NULL,
+  `number_of_families_redeemed` varchar(27) DEFAULT NULL,
+  `number_of_ebt_transactions` varchar(26) DEFAULT NULL,
+  `dollar_amount_of_ebt_transaction` varchar(32) DEFAULT NULL,
+  `average_cost_per_family` varchar(23) DEFAULT NULL,
+  `statewide_infant_formula_rebate` varchar(31) DEFAULT NULL,
+  `total_cost_adjusted` varchar(19) DEFAULT NULL,
+  `average_cost_adjusted` varchar(21) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `wic_part_c_ebt_redemptions_by_vendor_county`
+-- Table structure for table `wic_redemption_part_a_by_vendor_w_fam_cts_2010_18`
 --
 
-DROP TABLE IF EXISTS `wic_part_c_ebt_redemptions_by_vendor_county`;
-CREATE TABLE `wic_part_c_ebt_redemptions_by_vendor_county` (
-  `vendor_county_code` varchar(2) DEFAULT NULL,
+DROP TABLE IF EXISTS `wic_redemption_part_a_by_vendor_w_fam_cts_2010_18`;
+CREATE TABLE `wic_redemption_part_a_by_vendor_w_fam_cts_2010_18` (
+  `vendor_county_code` varchar(18) DEFAULT NULL,
   `vendor_county` varchar(15) DEFAULT NULL,
-  `obligation_year_and_month` varchar(6) DEFAULT NULL,
-  `number_of_families_redeemed` varchar(6) DEFAULT NULL,
-  `number_of_ebt_transactions` varchar(8) DEFAULT NULL,
-  `dollar_amount_of_ebt_transactions` varchar(16) DEFAULT NULL,
-  `average_cost_per_family` varchar(10) DEFAULT NULL,
-  `statewide_infant_formula_rebate` varchar(16) DEFAULT NULL,
-  `total_cost_adjusted` varchar(16) DEFAULT NULL,
-  `average_cost_adjusted` varchar(8) DEFAULT NULL
+  `obligation_year_and_month` varchar(25) DEFAULT NULL,
+  `number_of_families_redeemed` varchar(27) DEFAULT NULL,
+  `number_of_food_instruments_redeemed` varchar(35) DEFAULT NULL,
+  `dollar_amount_of_food_instruments` varchar(33) DEFAULT NULL,
+  `average_cost_per_family` varchar(23) DEFAULT NULL,
+  `statewide_infant_formula_rebate` varchar(31) DEFAULT NULL,
+  `total_cost_adjusted` varchar(19) DEFAULT NULL,
+  `average_cost_adjusted` varchar(21) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `wic_products`
+-- Table structure for table `wic_redemption_part_b_by_vendor_w_fam_cts_2010_18`
 --
 
-DROP TABLE IF EXISTS `wic_products`;
-CREATE TABLE `wic_products` (
-  `upc` varchar(15) DEFAULT NULL,
-  `category` char(2) DEFAULT NULL,
-  `cat_desc` varchar(127) DEFAULT NULL,
-  `sub_category` char(3) DEFAULT NULL,
-  `sub_cat_desc` varchar(127) DEFAULT NULL,
-  `prod_desc_and_size` varchar(127) DEFAULT NULL,
-  `uom` varchar(5) DEFAULT NULL
+DROP TABLE IF EXISTS `wic_redemption_part_b_by_vendor_w_fam_cts_2010_18`;
+CREATE TABLE `wic_redemption_part_b_by_vendor_w_fam_cts_2010_18` (
+  `vendor_county_code` varchar(18) DEFAULT NULL,
+  `vendor_county` varchar(15) DEFAULT NULL,
+  `obligation_year_and_month` varchar(25) DEFAULT NULL,
+  `number_of_families_redeemed` varchar(27) DEFAULT NULL,
+  `number_of_food_instruments_redeemed` varchar(35) DEFAULT NULL,
+  `dollar_amount_of_food_instruments` varchar(33) DEFAULT NULL,
+  `number_of_ebt_transactions` varchar(26) DEFAULT NULL,
+  `dollar_amount_of_ebt_transactions` varchar(33) DEFAULT NULL,
+  `average_cost_per_family` varchar(23) DEFAULT NULL,
+  `statewide_infant_formula_rebate` varchar(31) DEFAULT NULL,
+  `total_cost_adjusted` varchar(19) DEFAULT NULL,
+  `average_cost_adjusted` varchar(21) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `wic_redemptions_by_participant_category`
+-- Table structure for table `wqip_quarterly_performance_report_2023_1`
 --
 
-DROP TABLE IF EXISTS `wic_redemptions_by_participant_category`;
-CREATE TABLE `wic_redemptions_by_participant_category` (
-  `vendor_location` varchar(20) DEFAULT NULL,
-  `participant_category` varchar(26) DEFAULT NULL,
-  `year_month_str` varchar(7) DEFAULT NULL,
-  `number_of_participants_redeemed` varchar(9) DEFAULT NULL,
-  `number_vouchers_redeemed` varchar(10) DEFAULT NULL,
-  `total_cost_vouchers` varchar(18) DEFAULT NULL,
-  `average_cost` varchar(8) DEFAULT NULL,
-  `statewide_infant_formula_rebate` varchar(12) DEFAULT NULL,
-  `total_cost_vouchers_adjusted` varchar(15) DEFAULT NULL,
-  `average_cost_adjusted` varchar(7) DEFAULT NULL,
-  `state_average_cost_adjusted` varchar(7) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `wqip_quarterly_performance`
---
-
-DROP TABLE IF EXISTS `wqip_quarterly_performance`;
-CREATE TABLE `wqip_quarterly_performance` (
-  `achievement_points_antipsych` varchar(1) DEFAULT NULL,
-  `achievement_points_fall` varchar(1) DEFAULT NULL,
-  `achievement_points_pu` varchar(1) DEFAULT NULL,
-  `acuity_area_score` varchar(11) DEFAULT NULL,
+DROP TABLE IF EXISTS `wqip_quarterly_performance_report_2023_1`;
+CREATE TABLE `wqip_quarterly_performance_report_2023_1` (
+  `facility_name` varchar(61) DEFAULT NULL,
+  `facilityid` varchar(9) DEFAULT NULL,
+  `ccn` varchar(6) DEFAULT NULL,
+  `hcai_id` varchar(9) DEFAULT NULL,
+  `npi` varchar(22) DEFAULT NULL,
+  `cna_rate` varchar(5) DEFAULT NULL,
+  `raw_score_cna` varchar(1) DEFAULT NULL,
+  `cna_days_compliant` varchar(11) DEFAULT NULL,
+  `score_cna` varchar(11) DEFAULT NULL,
+  `lvn_rate` varchar(5) DEFAULT NULL,
+  `raw_score_lvn` varchar(1) DEFAULT NULL,
+  `lvn_days_compliant` varchar(1) DEFAULT NULL,
+  `score_lvn` varchar(1) DEFAULT NULL,
+  `rn_rate` varchar(5) DEFAULT NULL,
+  `raw_score_rn` varchar(1) DEFAULT NULL,
+  `rn_days_compliant` varchar(1) DEFAULT NULL,
+  `score_rn` varchar(1) DEFAULT NULL,
+  `total_nursing_rate` varchar(6) DEFAULT NULL,
+  `raw_score_total_nursing` varchar(1) DEFAULT NULL,
+  `total_nursing_days_compliant` varchar(11) DEFAULT NULL,
+  `score_total_nursing` varchar(11) DEFAULT NULL,
+  `total_weekend_nursing_rate` varchar(6) DEFAULT NULL,
+  `raw_score_weekend` varchar(1) DEFAULT NULL,
+  `total_weekend_days_compliant` varchar(11) DEFAULT NULL,
+  `score_total_weekend_nursing` varchar(11) DEFAULT NULL,
   `acuity_points_earned` varchar(11) DEFAULT NULL,
   `acuity_possible_points` varchar(2) DEFAULT NULL,
-  `antipsych_denom_annotation` varchar(1) DEFAULT NULL,
-  `antipsych_denom_pyr_annotation` varchar(1) DEFAULT NULL,
-  `antipsych_denom_pyr` varchar(3) DEFAULT NULL,
-  `antipsych_denom` varchar(3) DEFAULT NULL,
-  `antipsych_metric_score` varchar(1) DEFAULT NULL,
-  `antipsych_num_annotation` varchar(1) DEFAULT NULL,
-  `antipsych_num_pyr_annotation` varchar(1) DEFAULT NULL,
+  `acuity_area_score` varchar(11) DEFAULT NULL,
+  `staffing_turnover_rate` varchar(5) DEFAULT NULL,
+  `turnover_points_earned` varchar(1) DEFAULT NULL,
+  `turnover_possible_points` varchar(1) DEFAULT NULL,
+  `turnover_area_score` varchar(11) DEFAULT NULL,
   `antipsych_num_pyr` varchar(3) DEFAULT NULL,
-  `antipsych_num` varchar(3) DEFAULT NULL,
-  `antipsych_rate_annotation` varchar(1) DEFAULT NULL,
-  `antipsych_rate_pyr_annotation` varchar(1) DEFAULT NULL,
+  `antipsych_num_pyr_annotation` varchar(1) DEFAULT NULL,
+  `antipsych_denom_pyr` varchar(3) DEFAULT NULL,
+  `antipsych_denom_pyr_annotation` varchar(1) DEFAULT NULL,
   `antipsych_rate_pyr` varchar(7) DEFAULT NULL,
-  `antipsych_rate` varchar(11) DEFAULT NULL,
-  `ccn` varchar(6) DEFAULT NULL,
-  `cna_days_compliant` varchar(11) DEFAULT NULL,
-  `cna_rate` varchar(5) DEFAULT NULL,
-  `facilityid` varchar(9) DEFAULT NULL,
-  `facility_name` varchar(61) DEFAULT NULL,
-  `fall_denom_annotation` varchar(1) DEFAULT NULL,
-  `fall_denom_pyr_annotation` varchar(1) DEFAULT NULL,
-  `fall_denom_pyr` varchar(4) DEFAULT NULL,
-  `fall_denom` varchar(4) DEFAULT NULL,
-  `fall_metric_score` varchar(1) DEFAULT NULL,
-  `fall_num_annotation` varchar(1) DEFAULT NULL,
-  `fall_num_pyr_annotation` varchar(1) DEFAULT NULL,
-  `fall_num_pyr` varchar(2) DEFAULT NULL,
-  `fall_num` varchar(2) DEFAULT NULL,
-  `fall_rate_annotation` varchar(1) DEFAULT NULL,
-  `fall_rate_pyr_annotation` varchar(1) DEFAULT NULL,
-  `fall_rate_pyr` varchar(7) DEFAULT NULL,
-  `fall_rate` varchar(11) DEFAULT NULL,
-  `gap_closure_antipsych_annotation` varchar(1) DEFAULT NULL,
+  `antipsych_rate_pyr_annotation` varchar(1) DEFAULT NULL,
+  `antipsych_num` varchar(3) DEFAULT NULL,
+  `antipsych_num_annotation` varchar(1) DEFAULT NULL,
+  `antipsych_denom` varchar(3) DEFAULT NULL,
+  `antipsych_denom_annotation` varchar(1) DEFAULT NULL,
+  `antipsych_rate` varchar(7) DEFAULT NULL,
+  `antipsych_rate_annotation` varchar(1) DEFAULT NULL,
   `gap_closure_antipsych` varchar(11) DEFAULT NULL,
-  `gap_closure_fall_annotation` varchar(1) DEFAULT NULL,
-  `gap_closure_fall` varchar(11) DEFAULT NULL,
-  `gap_closure_pu_annotation` varchar(1) DEFAULT NULL,
-  `gap_closure_pu` varchar(11) DEFAULT NULL,
-  `hcai_id` varchar(9) DEFAULT NULL,
+  `gap_closure_antipsych_annotation` varchar(1) DEFAULT NULL,
+  `achievement_points_antipsych` varchar(1) DEFAULT NULL,
   `improvement_points_antipsych` varchar(1) DEFAULT NULL,
+  `antipsych_metric_score` varchar(1) DEFAULT NULL,
+  `fall_num_pyr` varchar(2) DEFAULT NULL,
+  `fall_num_pyr_annotation` varchar(1) DEFAULT NULL,
+  `fall_denom_pyr` varchar(4) DEFAULT NULL,
+  `fall_denom_pyr_annotation` varchar(1) DEFAULT NULL,
+  `fall_rate_pyr` varchar(7) DEFAULT NULL,
+  `fall_rate_pyr_annotation` varchar(1) DEFAULT NULL,
+  `fall_num` varchar(2) DEFAULT NULL,
+  `fall_num_annotation` varchar(1) DEFAULT NULL,
+  `fall_denom` varchar(4) DEFAULT NULL,
+  `fall_denom_annotation` varchar(1) DEFAULT NULL,
+  `fall_rate` varchar(7) DEFAULT NULL,
+  `fall_rate_annotation` varchar(1) DEFAULT NULL,
+  `gap_closure_fall` varchar(11) DEFAULT NULL,
+  `gap_closure_fall_annotation` varchar(1) DEFAULT NULL,
+  `achievement_points_fall` varchar(1) DEFAULT NULL,
   `improvement_points_fall` varchar(1) DEFAULT NULL,
+  `fall_metric_score` varchar(1) DEFAULT NULL,
+  `pu_num_pyr` varchar(3) DEFAULT NULL,
+  `pu_num_pyr_annotation` varchar(1) DEFAULT NULL,
+  `pu_denom_pyr` varchar(3) DEFAULT NULL,
+  `pu_denom_pyr_annotation` varchar(1) DEFAULT NULL,
+  `pu_rate_pyr` varchar(7) DEFAULT NULL,
+  `pu_rate_pyr_annotation` varchar(1) DEFAULT NULL,
+  `pu_num` varchar(3) DEFAULT NULL,
+  `pu_num_annotation` varchar(1) DEFAULT NULL,
+  `pu_denom` varchar(3) DEFAULT NULL,
+  `pu_denom_annotation` varchar(1) DEFAULT NULL,
+  `pu_rate` varchar(7) DEFAULT NULL,
+  `pu_rate_annotation` varchar(1) DEFAULT NULL,
+  `gap_closure_pu` varchar(11) DEFAULT NULL,
+  `gap_closure_pu_annotation` varchar(1) DEFAULT NULL,
+  `achievement_points_pu` varchar(1) DEFAULT NULL,
   `improvement_points_pu` varchar(1) DEFAULT NULL,
-  `ltmw_denom_annotation` varchar(1) DEFAULT NULL,
-  `ltmw_denom` varchar(3) DEFAULT NULL,
-  `ltmw_num_annotation` varchar(1) DEFAULT NULL,
-  `ltmw_num` varchar(2) DEFAULT NULL,
-  `ltmw_rate_annotation` varchar(1) DEFAULT NULL,
-  `ltmw_rate` varchar(11) DEFAULT NULL,
-  `lvn_days_compliant` varchar(10) DEFAULT NULL,
-  `lvn_rate` varchar(5) DEFAULT NULL,
-  `mds_area_score` varchar(11) DEFAULT NULL,
-  `mds_data_completeness` varchar(11) DEFAULT NULL,
+  `pu_metric_score` varchar(1) DEFAULT NULL,
   `mds_points_earned` varchar(2) DEFAULT NULL,
   `mds_points_possible` varchar(2) DEFAULT NULL,
-  `medi_cal_share_area_score` varchar(3) DEFAULT NULL,
-  `medi_cal_share_footnote` varchar(140) DEFAULT NULL,
+  `raw_mds_score` varchar(11) DEFAULT NULL,
+  `mds_data_completeness` varchar(11) DEFAULT NULL,
+  `mds_area_score` varchar(11) DEFAULT NULL,
+  `medi_cal_share_rate` varchar(11) DEFAULT NULL,
   `medi_cal_share_points_earned` varchar(1) DEFAULT NULL,
   `medi_cal_share_possible_points` varchar(1) DEFAULT NULL,
+  `medi_cal_share_area_score` varchar(3) DEFAULT NULL,
+  `medi_cal_share_footnote` varchar(140) DEFAULT NULL,
+  `re_completeness_rate` varchar(11) DEFAULT NULL,
+  `re_completeness_points_earned` varchar(2) DEFAULT NULL,
+  `re_completeness_points_possible` varchar(2) DEFAULT NULL,
+  `re_completeness_area_score` varchar(3) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `wqip_quarterly_performance_report_2023_2`
+--
+
+DROP TABLE IF EXISTS `wqip_quarterly_performance_report_2023_2`;
+CREATE TABLE `wqip_quarterly_performance_report_2023_2` (
+  `facility_name` varchar(61) DEFAULT NULL,
+  `facilityid` varchar(9) DEFAULT NULL,
+  `ccn` varchar(6) DEFAULT NULL,
+  `hcai_id` varchar(9) DEFAULT NULL,
+  `npi` varchar(10) DEFAULT NULL,
+  `cna_rate` varchar(5) DEFAULT NULL,
+  `raw_score_cna` varchar(1) DEFAULT NULL,
+  `cna_days_compliant` varchar(11) DEFAULT NULL,
+  `score_cna` varchar(11) DEFAULT NULL,
+  `lvn_rate` varchar(5) DEFAULT NULL,
+  `raw_score_lvn` varchar(1) DEFAULT NULL,
+  `lvn_days_compliant` varchar(10) DEFAULT NULL,
+  `score_lvn` varchar(11) DEFAULT NULL,
+  `rn_rate` varchar(5) DEFAULT NULL,
+  `raw_score_rn` varchar(1) DEFAULT NULL,
+  `rn_days_compliant` varchar(10) DEFAULT NULL,
+  `score_rn` varchar(11) DEFAULT NULL,
+  `total_nursing_rate` varchar(6) DEFAULT NULL,
+  `raw_score_total_nursing` varchar(1) DEFAULT NULL,
+  `total_nursing_days_compliant` varchar(11) DEFAULT NULL,
+  `score_total_nursing` varchar(11) DEFAULT NULL,
+  `total_weekend_nursing_rate` varchar(6) DEFAULT NULL,
+  `raw_score_weekend` varchar(1) DEFAULT NULL,
+  `total_weekend_days_compliant` varchar(11) DEFAULT NULL,
+  `score_total_weekend_nursing` varchar(11) DEFAULT NULL,
+  `acuity_points_earned` varchar(11) DEFAULT NULL,
+  `acuity_possible_points` varchar(2) DEFAULT NULL,
+  `acuity_area_score` varchar(11) DEFAULT NULL,
+  `staffing_turnover_rate` varchar(5) DEFAULT NULL,
+  `turnover_points_earned` varchar(1) DEFAULT NULL,
+  `turnover_possible_points` varchar(1) DEFAULT NULL,
+  `turnover_area_score` varchar(11) DEFAULT NULL,
+  `antipsych_num_pyr` varchar(3) DEFAULT NULL,
+  `antipsych_num_pyr_annotation` varchar(1) DEFAULT NULL,
+  `antipsych_denom_pyr` varchar(3) DEFAULT NULL,
+  `antipsych_denom_pyr_annotation` varchar(1) DEFAULT NULL,
+  `antipsych_rate_pyr` varchar(7) DEFAULT NULL,
+  `antipsych_rate_pyr_annotation` varchar(1) DEFAULT NULL,
+  `antipsych_num` varchar(3) DEFAULT NULL,
+  `antipsych_num_annotation` varchar(1) DEFAULT NULL,
+  `antipsych_denom` varchar(3) DEFAULT NULL,
+  `antipsych_denom_annotation` varchar(1) DEFAULT NULL,
+  `antipsych_rate` varchar(7) DEFAULT NULL,
+  `antipsych_rate_annotation` varchar(1) DEFAULT NULL,
+  `gap_closure_antipsych` varchar(11) DEFAULT NULL,
+  `gap_closure_antipsych_annotation` varchar(1) DEFAULT NULL,
+  `achievement_points_antipsych` varchar(1) DEFAULT NULL,
+  `improvement_points_antipsych` varchar(1) DEFAULT NULL,
+  `antipsych_metric_score` varchar(1) DEFAULT NULL,
+  `fall_num_pyr` varchar(2) DEFAULT NULL,
+  `fall_num_pyr_annotation` varchar(1) DEFAULT NULL,
+  `fall_denom_pyr` varchar(4) DEFAULT NULL,
+  `fall_denom_pyr_annotation` varchar(1) DEFAULT NULL,
+  `fall_rate_pyr` varchar(7) DEFAULT NULL,
+  `fall_rate_pyr_annotation` varchar(1) DEFAULT NULL,
+  `fall_num` varchar(2) DEFAULT NULL,
+  `fall_num_annotation` varchar(1) DEFAULT NULL,
+  `fall_denom` varchar(4) DEFAULT NULL,
+  `fall_denom_annotation` varchar(1) DEFAULT NULL,
+  `fall_rate` varchar(7) DEFAULT NULL,
+  `fall_rate_annotation` varchar(1) DEFAULT NULL,
+  `gap_closure_fall` varchar(11) DEFAULT NULL,
+  `gap_closure_fall_annotation` varchar(1) DEFAULT NULL,
+  `achievement_points_fall` varchar(1) DEFAULT NULL,
+  `improvement_points_fall` varchar(1) DEFAULT NULL,
+  `fall_metric_score` varchar(1) DEFAULT NULL,
+  `pu_num_pyr` varchar(3) DEFAULT NULL,
+  `pu_num_pyr_annotation` varchar(1) DEFAULT NULL,
+  `pu_denom_pyr` varchar(3) DEFAULT NULL,
+  `pu_denom_pyr_annotation` varchar(1) DEFAULT NULL,
+  `pu_rate_pyr` varchar(7) DEFAULT NULL,
+  `pu_rate_pyr_annotation` varchar(1) DEFAULT NULL,
+  `pu_num` varchar(3) DEFAULT NULL,
+  `pu_num_annotation` varchar(1) DEFAULT NULL,
+  `pu_denom` varchar(3) DEFAULT NULL,
+  `pu_denom_annotation` varchar(1) DEFAULT NULL,
+  `pu_rate` varchar(7) DEFAULT NULL,
+  `pu_rate_annotation` varchar(1) DEFAULT NULL,
+  `gap_closure_pu` varchar(11) DEFAULT NULL,
+  `gap_closure_pu_annotation` varchar(1) DEFAULT NULL,
+  `achievement_points_pu` varchar(1) DEFAULT NULL,
+  `improvement_points_pu` varchar(1) DEFAULT NULL,
+  `pu_metric_score` varchar(1) DEFAULT NULL,
+  `mds_points_earned` varchar(2) DEFAULT NULL,
+  `mds_points_possible` varchar(2) DEFAULT NULL,
+  `raw_mds_score` varchar(11) DEFAULT NULL,
+  `mds_data_completeness` varchar(11) DEFAULT NULL,
+  `mds_area_score` varchar(11) DEFAULT NULL,
   `medi_cal_share_rate` varchar(11) DEFAULT NULL,
+  `medi_cal_share_points_earned` varchar(1) DEFAULT NULL,
+  `medi_cal_share_possible_points` varchar(1) DEFAULT NULL,
+  `medi_cal_share_area_score` varchar(3) DEFAULT NULL,
+  `re_completeness_rate` varchar(11) DEFAULT NULL,
+  `re_completeness_points_earned` varchar(2) DEFAULT NULL,
+  `re_completeness_points_possible` varchar(2) DEFAULT NULL,
+  `re_completeness_area_score` varchar(3) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `wqip_quarterly_performance_report_2023_3`
+--
+
+DROP TABLE IF EXISTS `wqip_quarterly_performance_report_2023_3`;
+CREATE TABLE `wqip_quarterly_performance_report_2023_3` (
+  `facility_name` varchar(61) DEFAULT NULL,
+  `facilityid` varchar(9) DEFAULT NULL,
+  `ccn` varchar(6) DEFAULT NULL,
+  `hcai_id` varchar(9) DEFAULT NULL,
   `npi1` varchar(10) DEFAULT NULL,
   `npi2` varchar(10) DEFAULT NULL,
   `npi3` varchar(10) DEFAULT NULL,
-  `npi` varchar(22) DEFAULT NULL,
-  `pu_denom_annotation` varchar(1) DEFAULT NULL,
-  `pu_denom_pyr_annotation` varchar(1) DEFAULT NULL,
-  `pu_denom_pyr` varchar(3) DEFAULT NULL,
-  `pu_denom` varchar(3) DEFAULT NULL,
-  `pu_metric_score` varchar(1) DEFAULT NULL,
-  `pu_num_annotation` varchar(1) DEFAULT NULL,
-  `pu_num_pyr_annotation` varchar(1) DEFAULT NULL,
-  `pu_num_pyr` varchar(3) DEFAULT NULL,
-  `pu_num` varchar(3) DEFAULT NULL,
-  `pu_rate_annotation` varchar(1) DEFAULT NULL,
-  `pu_rate_pyr_annotation` varchar(1) DEFAULT NULL,
-  `pu_rate_pyr` varchar(7) DEFAULT NULL,
-  `pu_rate` varchar(7) DEFAULT NULL,
-  `raw_mds_score` varchar(11) DEFAULT NULL,
+  `cna_rate` varchar(5) DEFAULT NULL,
   `raw_score_cna` varchar(1) DEFAULT NULL,
-  `raw_score_lvn` varchar(1) DEFAULT NULL,
-  `raw_score_rn` varchar(1) DEFAULT NULL,
-  `raw_score_total_nursing` varchar(1) DEFAULT NULL,
-  `raw_score_weekend` varchar(1) DEFAULT NULL,
-  `re_completeness_area_score` varchar(3) DEFAULT NULL,
-  `re_completeness_points_earned` varchar(2) DEFAULT NULL,
-  `re_completeness_points_possible` varchar(2) DEFAULT NULL,
-  `re_completeness_rate` varchar(11) DEFAULT NULL,
-  `rn_days_compliant` varchar(10) DEFAULT NULL,
-  `rn_rate` varchar(5) DEFAULT NULL,
+  `cna_days_compliant` varchar(11) DEFAULT NULL,
   `score_cna` varchar(11) DEFAULT NULL,
+  `lvn_rate` varchar(5) DEFAULT NULL,
+  `raw_score_lvn` varchar(1) DEFAULT NULL,
+  `lvn_days_compliant` varchar(10) DEFAULT NULL,
   `score_lvn` varchar(11) DEFAULT NULL,
+  `rn_rate` varchar(5) DEFAULT NULL,
+  `raw_score_rn` varchar(1) DEFAULT NULL,
+  `rn_days_compliant` varchar(10) DEFAULT NULL,
   `score_rn` varchar(11) DEFAULT NULL,
-  `score_total_nursing` varchar(11) DEFAULT NULL,
-  `score_total_weekend_nursing` varchar(11) DEFAULT NULL,
-  `staffing_turnover_rate` varchar(5) DEFAULT NULL,
-  `total_nursing_days_compliant` varchar(11) DEFAULT NULL,
   `total_nursing_rate` varchar(6) DEFAULT NULL,
-  `total_weekend_days_compliant` varchar(11) DEFAULT NULL,
+  `raw_score_total_nursing` varchar(1) DEFAULT NULL,
+  `total_nursing_days_compliant` varchar(11) DEFAULT NULL,
+  `score_total_nursing` varchar(11) DEFAULT NULL,
   `total_weekend_nursing_rate` varchar(6) DEFAULT NULL,
-  `turnover_area_score` varchar(11) DEFAULT NULL,
+  `raw_score_weekend` varchar(1) DEFAULT NULL,
+  `total_weekend_days_compliant` varchar(11) DEFAULT NULL,
+  `score_total_weekend_nursing` varchar(11) DEFAULT NULL,
+  `acuity_points_earned` varchar(11) DEFAULT NULL,
+  `acuity_possible_points` varchar(2) DEFAULT NULL,
+  `acuity_area_score` varchar(11) DEFAULT NULL,
+  `staffing_turnover_rate` varchar(5) DEFAULT NULL,
   `turnover_points_earned` varchar(1) DEFAULT NULL,
   `turnover_possible_points` varchar(1) DEFAULT NULL,
-  `quarter` char(7) DEFAULT NULL
+  `turnover_area_score` varchar(11) DEFAULT NULL,
+  `antipsych_num_pyr` varchar(3) DEFAULT NULL,
+  `antipsych_num_pyr_annotation` varchar(1) DEFAULT NULL,
+  `antipsych_denom_pyr` varchar(3) DEFAULT NULL,
+  `antipsych_denom_pyr_annotation` varchar(1) DEFAULT NULL,
+  `antipsych_rate_pyr` varchar(7) DEFAULT NULL,
+  `antipsych_rate_pyr_annotation` varchar(1) DEFAULT NULL,
+  `antipsych_num` varchar(3) DEFAULT NULL,
+  `antipsych_num_annotation` varchar(1) DEFAULT NULL,
+  `antipsych_denom` varchar(3) DEFAULT NULL,
+  `antipsych_denom_annotation` varchar(1) DEFAULT NULL,
+  `antipsych_rate` varchar(7) DEFAULT NULL,
+  `antipsych_rate_annotation` varchar(1) DEFAULT NULL,
+  `gap_closure_antipsych` varchar(11) DEFAULT NULL,
+  `gap_closure_antipsych_annotation` varchar(1) DEFAULT NULL,
+  `achievement_points_antipsych` varchar(1) DEFAULT NULL,
+  `improvement_points_antipsych` varchar(1) DEFAULT NULL,
+  `antipsych_metric_score` varchar(1) DEFAULT NULL,
+  `fall_num_pyr` varchar(2) DEFAULT NULL,
+  `fall_num_pyr_annotation` varchar(1) DEFAULT NULL,
+  `fall_denom_pyr` varchar(4) DEFAULT NULL,
+  `fall_denom_pyr_annotation` varchar(1) DEFAULT NULL,
+  `fall_rate_pyr` varchar(7) DEFAULT NULL,
+  `fall_rate_pyr_annotation` varchar(1) DEFAULT NULL,
+  `fall_num` varchar(2) DEFAULT NULL,
+  `fall_num_annotation` varchar(1) DEFAULT NULL,
+  `fall_denom` varchar(4) DEFAULT NULL,
+  `fall_denom_annotation` varchar(1) DEFAULT NULL,
+  `fall_rate` varchar(7) DEFAULT NULL,
+  `fall_rate_annotation` varchar(1) DEFAULT NULL,
+  `gap_closure_fall` varchar(11) DEFAULT NULL,
+  `gap_closure_fall_annotation` varchar(1) DEFAULT NULL,
+  `achievement_points_fall` varchar(1) DEFAULT NULL,
+  `improvement_points_fall` varchar(1) DEFAULT NULL,
+  `fall_metric_score` varchar(1) DEFAULT NULL,
+  `pu_num_pyr` varchar(3) DEFAULT NULL,
+  `pu_num_pyr_annotation` varchar(1) DEFAULT NULL,
+  `pu_denom_pyr` varchar(3) DEFAULT NULL,
+  `pu_denom_pyr_annotation` varchar(1) DEFAULT NULL,
+  `pu_rate_pyr` varchar(7) DEFAULT NULL,
+  `pu_rate_pyr_annotation` varchar(1) DEFAULT NULL,
+  `pu_num` varchar(3) DEFAULT NULL,
+  `pu_num_annotation` varchar(1) DEFAULT NULL,
+  `pu_denom` varchar(3) DEFAULT NULL,
+  `pu_denom_annotation` varchar(1) DEFAULT NULL,
+  `pu_rate` varchar(7) DEFAULT NULL,
+  `pu_rate_annotation` varchar(1) DEFAULT NULL,
+  `gap_closure_pu` varchar(11) DEFAULT NULL,
+  `gap_closure_pu_annotation` varchar(1) DEFAULT NULL,
+  `achievement_points_pu` varchar(1) DEFAULT NULL,
+  `improvement_points_pu` varchar(1) DEFAULT NULL,
+  `pu_metric_score` varchar(1) DEFAULT NULL,
+  `mds_points_earned` varchar(2) DEFAULT NULL,
+  `mds_points_possible` varchar(2) DEFAULT NULL,
+  `raw_mds_score` varchar(11) DEFAULT NULL,
+  `mds_data_completeness` varchar(11) DEFAULT NULL,
+  `mds_area_score` varchar(11) DEFAULT NULL,
+  `medi_cal_share_rate` varchar(11) DEFAULT NULL,
+  `medi_cal_share_points_earned` varchar(1) DEFAULT NULL,
+  `medi_cal_share_possible_points` varchar(1) DEFAULT NULL,
+  `medi_cal_share_area_score` varchar(3) DEFAULT NULL,
+  `re_completeness_rate` varchar(11) DEFAULT NULL,
+  `re_completeness_points_earned` varchar(2) DEFAULT NULL,
+  `re_completeness_points_possible` varchar(2) DEFAULT NULL,
+  `re_completeness_area_score` varchar(3) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `wqip_quarterly_performance_report_2024_1`
+--
+
+DROP TABLE IF EXISTS `wqip_quarterly_performance_report_2024_1`;
+CREATE TABLE `wqip_quarterly_performance_report_2024_1` (
+  `facility_name` varchar(61) DEFAULT NULL,
+  `facilityid` varchar(9) DEFAULT NULL,
+  `ccn` varchar(6) DEFAULT NULL,
+  `hcai_id` varchar(9) DEFAULT NULL,
+  `npi1` varchar(10) DEFAULT NULL,
+  `npi2` varchar(10) DEFAULT NULL,
+  `npi3` varchar(10) DEFAULT NULL,
+  `cna_rate` varchar(5) DEFAULT NULL,
+  `cna_days_compliant` varchar(11) DEFAULT NULL,
+  `lvn_rate` varchar(5) DEFAULT NULL,
+  `lvn_days_compliant` varchar(1) DEFAULT NULL,
+  `rn_rate` varchar(5) DEFAULT NULL,
+  `rn_days_compliant` varchar(1) DEFAULT NULL,
+  `total_nursing_rate` varchar(6) DEFAULT NULL,
+  `total_nursing_days_compliant` varchar(11) DEFAULT NULL,
+  `total_weekend_nursing_rate` varchar(6) DEFAULT NULL,
+  `total_weekend_days_compliant` varchar(11) DEFAULT NULL,
+  `staffing_turnover_rate` varchar(5) DEFAULT NULL,
+  `antipsych_num` varchar(3) DEFAULT NULL,
+  `antipsych_num_annotation` varchar(1) DEFAULT NULL,
+  `antipsych_denom` varchar(3) DEFAULT NULL,
+  `antipsych_denom_annotation` varchar(1) DEFAULT NULL,
+  `antipsych_rate` varchar(11) DEFAULT NULL,
+  `antipsych_rate_annotation` varchar(1) DEFAULT NULL,
+  `fall_num` varchar(2) DEFAULT NULL,
+  `fall_num_annotation` varchar(1) DEFAULT NULL,
+  `fall_denom` varchar(3) DEFAULT NULL,
+  `fall_denom_annotation` varchar(1) DEFAULT NULL,
+  `fall_rate` varchar(11) DEFAULT NULL,
+  `fall_rate_annotation` varchar(1) DEFAULT NULL,
+  `ltmw_num` varchar(2) DEFAULT NULL,
+  `ltmw_num_annotation` varchar(1) DEFAULT NULL,
+  `ltmw_denom` varchar(3) DEFAULT NULL,
+  `ltmw_denom_annotation` varchar(1) DEFAULT NULL,
+  `ltmw_rate` varchar(11) DEFAULT NULL,
+  `ltmw_rate_annotation` varchar(1) DEFAULT NULL,
+  `medi_cal_share_rate` varchar(11) DEFAULT NULL,
+  `re_completeness_rate` varchar(7) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -23033,19 +26848,6 @@ CREATE TABLE `written_language_of_eligible_individuals_under_age_21_e_2a84e378` 
   `number_of_eligible_individuals` varchar(9) DEFAULT NULL,
   `annotation_code` varchar(1) DEFAULT NULL,
   `count_annotation_desc` varchar(38) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `xray_providers`
---
-
-DROP TABLE IF EXISTS `xray_providers`;
-CREATE TABLE `xray_providers` (
-  `license_type` varchar(127) DEFAULT NULL,
-  `first_name` varchar(127) DEFAULT NULL,
-  `last_name` varchar(127) DEFAULT NULL,
-  `city` varchar(31) DEFAULT NULL,
-  `state` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -23076,4 +26878,5 @@ CREATE TABLE `young_ae_19_25_population_by_county` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2024-12-20 23:33:07
+-- Dump completed on 2025-01-08 12:18:15
+
