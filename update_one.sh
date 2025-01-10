@@ -89,7 +89,7 @@ if [ $fetch = "yes" ]; then
             mkdir sources
         fi
 
-        bash ../mv_sources .
+        bash ../mv_sources.sh .
 
         err="no"
 
@@ -190,9 +190,8 @@ else
     bash $HOME/mv_sources.sh .
 
     bash $HOME/update_sources.sh
-
     if [ `pwd` = $HOME'/dataset-catalog' ]; then
-        mysqldump ca_hhs catalog | ssh opencal mysql ca_hhs
+        HOME=/home/ray mysqldump ca_hhs catalog | ssh opencal mysql ca_hhs
     fi
 fi
 
