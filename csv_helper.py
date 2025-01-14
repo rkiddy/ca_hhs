@@ -417,6 +417,8 @@ def read_data(tables, types={}, replaces={}, start_row=None, bucket=1000):
             with open(f, newline='', encoding='latin1') as csvfile:
                 rdr = csv.DictReader(csvfile, fieldnames=cols)
 
+                next(rdr) # do not pull the column name as data...
+
                 for row in rdr:
 
                     if '' in row:
