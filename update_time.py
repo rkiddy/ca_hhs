@@ -11,8 +11,8 @@ import os
 
 cfg = config.cfg()
 
-engine = create_engine(f"mysql+pymysql://{cfg['USR']}:{cfg['PWD']}@{cfg['HOST']}/ca_hhs_meta")
-conn = engine.connect()
+metadb = create_engine(f"mysql+pymysql://{cfg['USR']}:{cfg['PWD']}@{cfg['HOST']}/ca_hhs_meta")
+conn = metadb.connect()
 
 
 def db_exec(eng, this_sql):
@@ -44,5 +44,9 @@ if __name__ == '__main__':
     sql = f"""insert into updates (ds_pk, updated, result)
               values
               ((select pk from datasets where name = '{id}'), {int(time())}, {result})"""
-    db_exec(conn, sql)
+    db_exec(metadb, sql)
+
+    if result == '0':
+        sql = f"update datasets set updated = {int(time())} where name = '{id}'"
+        db_exec(metadb, sql)
 
