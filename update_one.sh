@@ -51,15 +51,14 @@ if [ "$1" = "--only-fetch" ] || [ "$1" = "--fetch-only" ]; then
     process="no"
 fi
 
+id=`pwd | awk 'BEGIN{FS="/"}{print $NF}'`
 
-if [ `pwd` = $HOME'/chargemasters' ]; then
+if [ $id = 'chargemasters' ]; then
     echo ""
     echo "Aborting update to chargemasters as it cannot be automatically updated."
     echo ""
     exit 0
 fi
-
-id=`pwd | awk 'BEGIN{FS="/"}{print $NF}'`
 
 if [ $fetch = "yes" ]; then
 
@@ -190,8 +189,7 @@ else
     bash $HOME/mv_sources.sh .
 
     bash $HOME/update_sources.sh
-    if [ `pwd` = $HOME'/dataset-catalog' ]; then
-        HOME=/home/ray mysqldump ca_hhs catalog | ssh opencal mysql ca_hhs
-    fi
+
+    bash $HOME/share.sh $id
 fi
 
