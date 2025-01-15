@@ -12,6 +12,7 @@ def arguments():
     parser = argparse.ArgumentParser()
     parser.add_argument('--exec', '-x', action='store_true', help="Locate datasets to update.")
     parser.add_argument('--file_filter', help="Update only datasets with files that have this extension.")
+    parser.add_argument('--verbose', '-v', action='store_true')
     return parser.parse_args()
 
 
@@ -53,6 +54,10 @@ if __name__ == '__main__':
                     print("#")
 
             else:
+
+                if args.file_filter:
+                    if 'ext' not in ds[name] or args.file_filter not in ds[name]['ext']:
+                        continue
 
                 print(f"ds: {name} my: {my_update} ca: {ca_update} exts: {exts}")
 
