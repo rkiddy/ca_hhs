@@ -1,0 +1,5 @@
+export uuid1="46ffcbdf-4874-4cc1-92c2-fb715e3ad014"
+export uuid2="7115b4ae-4f70-463c-975f-192bd32fa826"
+export id="ccl-facilities"
+export hash="de5rcjs4"
+export script="none"
