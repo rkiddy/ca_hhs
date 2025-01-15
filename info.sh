@@ -1,7 +1,7 @@
 
 if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
     echo ""
-    echo "Given the id of a dataset, will dump out the datasets table row and the csv_sources data."
+    echo "Given the id of a dataset, will dump out the datasets table row and the sources data."
     echo ""
     exit 0
 fi
@@ -20,7 +20,7 @@ name=`echo "select name from datasets where name = '"$ds"';" | ssh opencal mysql
 
 echo ""
 
-echo "select * from csv_sources where ds_pk = $ds;" | ssh opencal mysql --table ca_hhs_meta
+echo "select * from sources where ds_pk = $ds;" | ssh opencal mysql --table ca_hhs_meta
 
 echo ""
 

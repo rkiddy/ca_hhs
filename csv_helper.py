@@ -11,7 +11,7 @@ import sql_helper
 
 cfg = config.cfg()
 
-engine = create_engine(f"mysql+pymysql://{cfg['LOC_USR']}:{cfg['LOC_PWD']}@localhost/ca_hhs")
+engine = create_engine(f"mysql+pymysql://{cfg['MAIN_USR']}:{cfg['MAIN_PWD']}@{cfg['MAIN_HOST']}/{cfg['MAIN_DB']}")
 conn = engine.connect()
 
 
@@ -198,7 +198,7 @@ def read_data(tables, types={}, replaces={}, start_row=None, bucket=1000):
         cols = None
         prefix = None
 
-        num = 0
+        added = 0
 
         for f in files:
 
@@ -266,12 +266,12 @@ def read_data(tables, types={}, replaces={}, start_row=None, bucket=1000):
                     # print(f"sql: {sql}")
                     # db_exec(conn, sql)
 
-                    num += 1
+                    added += 1
 
             if len(sqls) > 0:
                 db_exec_many(conn, prefix, sqls)
 
-            print(f"table: {table} # {num}")
+            print(f"table: {table} # {added}")
 
 
 if __name__ == '__main__':

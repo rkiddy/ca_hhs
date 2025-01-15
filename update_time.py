@@ -11,7 +11,7 @@ import os
 
 cfg = config.cfg()
 
-metadb = create_engine(f"mysql+pymysql://{cfg['USR']}:{cfg['PWD']}@{cfg['HOST']}/ca_hhs_meta")
+metadb = create_engine(f"mysql+pymysql://{cfg['META_USR']}:{cfg['META_PWD']}@{cfg['META_HOST']}/{cfg['META_DB']}")
 conn = metadb.connect()
 
 

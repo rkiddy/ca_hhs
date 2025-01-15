@@ -78,10 +78,6 @@ if [ $fetch = "yes" ]; then
 
         ( cd .. ; ./.venv/bin/python update_deets.py --id $id )
 
-        ( echo "select c1.file_name, c1.table_name from datasets d1, csv_sources c1";
-          echo " where d1.pk = c1.ds_pk and auto_run = 1 and d1.name = '$id';" ) | \
-            ssh opencal mysql --skip-column-names ca_hhs_meta 2>/dev/null > /tmp/csv_$$.txt
-
         echo "fetching data..."
 
         if [ ! -d sources ]; then
@@ -133,11 +129,15 @@ fi
 
 source ./deets.sh
 
-# Locate any csv source files.
+# Locate any processable source files.
 #
-( echo "select c1.file_name, c1.table_name from datasets d1, csv_sources c1";
-  echo " where d1.pk = c1.ds_pk and auto_run = 1 and d1.name = '$id';" ) | \
+( echo "select s1.file_name, s1.table_name from datasets d1, sources s1";
+  echo " where d1.pk = s1.ds_pk and auto_run = 1 and d1.name = '$id' and s1.file_name like '%%.csv';" ) | \
     ssh opencal mysql --skip-column-names ca_hhs_meta 2>/dev/null > /tmp/csv_$$.txt
+
+( echo "select s1.file_name, s1.sheet_name, s1.table_name from datasets d1, sources s1";
+  echo " where d1.pk = s1.ds_pk and auto_run = 1 and d1.name = '$id' and s1.file_name like '%%.xlsx';" ) | \
+    ssh opencal mysql --skip-column-names ca_hhs_meta 2>/dev/null > /tmp/xlsx_$$.txt
 
 # Identify correct python executable to use.
 #
@@ -176,9 +176,21 @@ else
         echo "import csv files..."
 
         eval $py ../csv_import.py --file /tmp/csv_$$.txt
-        r=$?
+        r1=$?
 
-        eval $upy ../update_time.py --result $r
+        eval $upy ../update_time.py --result $r1
+    fi
+
+    # TODO I am adding update twice if both csv and xlsx. I need to combine the result values. Just add them?
+    #
+    if [ -s /tmp/xlsx_$$.txt ]; then
+
+        echo "import xlsx files..."
+
+        eval $py ../excel_import.py --file /tmp/xlsx_$$.txt
+        r2=$?
+
+        eval $upy ../update_time.py --result $r2
     fi
 
     if [ -f exec_special_after.sh ]; then
@@ -191,5 +203,8 @@ else
     bash $HOME/update_sources.sh
 
     bash $HOME/share.sh $id
+
+    # TODO I really should be reporting the result of all of these here, not previosly.
+
 fi
 

@@ -1,0 +1,6 @@
+
+Tue Jan 14 11:38:41 AM PST 2025
+
+I am going to update the csv_helper so that it skips the first line of the data.
+After I do this, all of the csv data will need to be updated. At some point.
+

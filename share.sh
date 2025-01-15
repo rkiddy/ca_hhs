@@ -17,7 +17,7 @@ fi
 
 if [ "$1" != "" ]; then
 
-    ( echo "select s1.table_name from datasets d1, csv_sources s1 "
+    ( echo "select s1.table_name from datasets d1, sources s1 "
       echo "where d1.pk = s1.ds_pk and d1.name = '"$1"' and share = 1;" ) | \
         ssh opencal mysql --skip-column-names ca_hhs_meta > /tmp/sharable_$$.txt
     if [ ! -s /tmp/sharable_$$.txt ]; then
@@ -29,7 +29,7 @@ if [ "$1" != "" ]; then
 
 else
 
-    echo "select table_name from csv_sources where share = 1;" | \
+    echo "select table_name from sources where share = 1;" | \
         ssh opencal mysql --skip-column-names ca_hhs_meta > /tmp/sharable_$$.txt
 fi
 

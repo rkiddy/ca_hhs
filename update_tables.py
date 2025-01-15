@@ -11,10 +11,10 @@ import config
 
 cfg = config.cfg()
 
-metadb = create_engine(f"mysql+pymysql://{cfg['USR']}:{cfg['PWD']}@{cfg['HOST']}/ca_hhs_meta")
+metadb = create_engine(f"mysql+pymysql://{cfg['META_USR']}:{cfg['METAPWD']}@{cfg['META_HOST']}/"{cfg['META_DB']})
 conn1 = metadb.connect()
 
-maindb = create_engine(f"mysql+pymysql://{cfg['LOC_USR']}:{cfg['LOC_PWD']}@localhost/ca_hhs")
+maindb = create_engine(f"mysql+pymysql://{cfg['MAIN_USR']}:{cfg['MAIN_PWD']}@{cfg['MAIN_HOST']}/{cfg['MAIN_DB']}")
 conn2 = maindb.connect()
 
 
@@ -88,7 +88,7 @@ if __name__ == '__main__':
     for table in [r[0] for r in db_exec(maindb, "show tables")]:
         tables[table] = ['MAIN']
 
-    for row in db_exec(metadb, "select table_name from csv_sources"):
+    for row in db_exec(metadb, "select table_name from sources"):
         table = row['table_name']
         if table not in tables:
             tables[table] = list()
@@ -101,13 +101,13 @@ if __name__ == '__main__':
     for name in names:
         #print(f"table: {name}, {tables[name]}")
         if tables[name] == ['MAIN']:
-            db_exec(metadb, f"insert into csv_sources values (NULL, 0, 0, NULL, '{name}')")
+            db_exec(metadb, f"insert into sources values (NULL, 0, 0, NULL, '{name}')")
         if tables[name] == ['META']:
             print(f"table: {name}")
 
     print("\nExtra Tables in Local Data?\n")
 
-    for row in db_exec(metadb, "select table_name from csv_sources where ds_pk is NULL"):
+    for row in db_exec(metadb, "select table_name from sources where ds_pk is NULL"):
         print(f"table: {row['table_name']}")
     print("")
 

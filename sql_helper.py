@@ -7,7 +7,7 @@ import config
 
 cfg = config.cfg()
 
-engine = create_engine(f"mysql+pymysql://{cfg['USR']}:{cfg['PWD']}@{cfg['HOST']}/{cfg['DB']}")
+engine = create_engine(f"mysql+pymysql://{cfg['MAIN_USR']}:{cfg['MAIN_PWD']}@{cfg['MAIN_HOST']}/{cfg['MAIN_DB']}")
 conn = engine.connect()
 
 
@@ -44,6 +44,10 @@ def db_exec_many(conn, prefix, suffixes):
         except:
             print("EXCEPTION:")
             traceback.print_exc()
+
+
+def db_exec_many_sql(prefix, suffixes):
+    return db_exec_many(engine, prefix, suffixes)
 
 
 def fix(start):

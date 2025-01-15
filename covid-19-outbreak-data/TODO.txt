@@ -1,0 +1,11 @@
+
+File changes name. At beginning of 2025, we went from
+
+covid-19-outbreaks-by-month-of-onset-outbreaks-reported-to-cdph-jan-1-2021-dec-2-2024.csv
+
+to:
+
+covid-19-outbreaks-by-month-of-onset-outbreaks-reported-to-cdph-jan-1-2021-jan-6-2025.csv
+
+A hassle.
+

@@ -1,0 +1,53 @@
+
+This has a dyncamic list of files and, after the files are imported, they
+should be merged into a set of a fewer number of tables. But the differing
+sets of column names are a bother.
+
+Deaths files:
+
+death_profiles_by_month_by_county:
+"Year","Month","County","Geography_Type","Strata","Strata_Name","Cause","Cause_Desc","Count","Annotation_Code","Annotation_Desc"
+
+1970-1978-final-deaths-by-month-by-county.csv
+1979-1988-final-deaths-by-month-by-county.csv
+1989-1998-final-deaths-by-month-by-county.csv
+
+death_profiles_by_year:
+"Year","County","Geography_Type","Strata","Strata_Name","Cause","Cause_Desc","ICD_Revision","Count","Annotation_Code","Annotation_Desc","Data_Revision_Date"
+
+
+1970-1978-final-deaths-by-year-by-county.csv
+1979-1998-final-deaths-by-year-by-county.csv
+1999-2013-final-deaths-by-year-by-county.csv
+2014-2022-final-deaths-by-year-by-county.csv
+2014-2023-final-deaths-by-year-by-county.csv
+
+death_profiles_by_month_by_occurrence:
+"Year","Month","County","Geography_Type","Strata","Strata_Name","Cause","Cause_Desc","ICD_Revision","Count","Annotation_Code","Annotation_Desc","Data_Revision_Date"
+
+1999-2003-final-deaths-by-month-by-occurrence-county.csv
+2004-2008-final-deaths-by-month-by-occurrence-county.csv
+2014-2018-final-deaths-by-month-by-occurrence-county.csv
+2009-2013-final-deaths-by-month-by-occurrence-county.csv
+2019-2022-final-deaths-by-month-by-occurrence-county.csv
+2019-2023-final-deaths-by-month-by-occurrence-county.csv
+
+death_profiles_by_month_by_residence:
+"Year","Month","County","Geography_Type","Strata","Strata_Name","Cause","Cause_Desc","ICD_Revision","Count","Annotation_Code","Annotation_Desc","Data_Revision_Date"
+
+1999-2003-final-deaths-by-month-by-residence-county.csv
+2004-2008-final-deaths-by-month-by-residence-county.csv
+2009-2013-final-deaths-by-month-by-residence-county.csv
+2014-2018-final-deaths-by-month-by-residence-county.csv
+2019-2022-final-deaths-by-month-by-residence-county.csv
+2019-2023-final-deaths-by-month-by-residence-county.csv
+i
+
+death_profiles_provisional_by_month_by_county:
+"Year","Month","County","Geography_Type","Strata","Strata_Name","Cause","Cause_Desc","ICD_Revision","Count","Annotation_Code","Annotation_Desc","Data_Extract_Date","Data_Revision_Date"
+
+2023-2024-provisional-deaths-by-month-by-county.csv
+2024-provisional-deaths-by-month-by-county.csv
+
+
+
