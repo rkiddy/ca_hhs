@@ -11,7 +11,7 @@ import utils
 def arguments():
     parser = argparse.ArgumentParser()
     parser.add_argument('--exec', '-x', action='store_true', help="Locate datasets to update.")
-    parser.add_argument('--file_filter', help="Update only datasets with files that have this extension.")
+    parser.add_argument('--file-filter', help="Update only datasets with files that have this extension.")
     parser.add_argument('--verbose', '-v', action='store_true')
     return parser.parse_args()
 
