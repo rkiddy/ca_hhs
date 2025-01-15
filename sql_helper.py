@@ -24,6 +24,28 @@ def db_exec_sql(sql):
     return db_exec(conn, sql)
 
 
+def db_exec_many(conn, prefix, suffixes):
+    """Execute a large bunch of sql statements but if there is an error,
+       fall back to doing one at a time. This makes large sets of insertions massively faster."""
+
+    done = False
+    try:
+        sql = f"{prefix} {',\n'.join(suffixes)}"
+        db_exec(conn, sql)
+        done = True
+    except:
+        print("EXCEPTION:")
+
+    if not done:
+        try:
+            for suffix in suffixes:
+                sql = f"{prefix} {suffix}"
+                db_exec(conn, sql)
+        except:
+            print("EXCEPTION:")
+            traceback.print_exc()
+
+
 def fix(start):
     """For putting a string into a query or insert SQL statement."""
     if not start:
@@ -77,14 +99,15 @@ known_replacements = {'system': 'system_name',
                       'year': 'year_str',
                       'all': 'all_str'}
 
+
 def fix_col_head(start, replaces={}):
     """Many of the column headers in these files are not compatible with mysql databases."""
-    
+
     col = fix_first_key(start)
-    
+
     for key in replaces:
         col = col.replace(key, replaces[key])
-    
+
     col = col.lower()
 
     for key in known_replacements:
@@ -153,6 +176,7 @@ def uniqify_columns(cols):
                 next_cols[idx] = f"{key}{jdx+1}"
     # print(f"next_cols: {next_cols}")
     return next_cols
+
 
 def fix_col_heads(start, replaces={}):
     # print(f"fix_col_heads: start: {start}")

@@ -16,44 +16,20 @@ conn = engine.connect()
 
 
 def db_exec(eng, this_sql):
-    """Helpful method, could be put into a module or something easier to manage."""
-    # print(f"sql: {sql}")
-    if this_sql.strip().startswith('select'):
-        return [dict(row) for row in eng.execute(this_sql).fetchall()]
-    else:
-        # print(f"sql: {this_sql}")
-        return eng.execute(this_sql)
+    return sql_helper.db_exec(engine, this_sql)
 
 
 def db_exec_sql(sql):
     """Assume the existing connection, because this is what happens anway."""
-    return db_exec(conn, sql)
+    return sql_helper.db_exec(conn, sql)
 
 
 def db_exec_many(conn, prefix, suffixes):
-    """Execute a large bunch of sql statements but if there is an error,
-       fall back to doing one at a time. This makes large sets of insertions massively faster."""
-
-    done = False
-    try:
-        sql = f"{prefix} {',\n'.join(suffixes)}"
-        db_exec(conn, sql)
-        done = True
-    except:
-        print("EXCEPTION:")
-
-    if not done:
-        try:
-            for suffix in suffixes:
-                sql = f"{prefix} {suffix}"
-                db_exec(conn, sql)
-        except:
-            print("EXCEPTION:")
-            traceback.print_exc()
+    return sql_helper.db_exec_many(conn, prefix, suffixes)
 
 
 def db_exec_many_sql(prefix, suffixes):
-    return db_exec_many(conn, prefix, suffixes)
+    return sql_helper.db_exec_many(conn, prefix, suffixes)
 
 
 def fix(start):
