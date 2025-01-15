@@ -9,7 +9,7 @@ fi
 if [ "$1" = "" ]; then
     ds=`pwd | awk 'BEGIN{FS="/"}{print $NF}'`
 else
-    ds = $1
+    ds=$1
 fi
 
 echo "select * from datasets where name = '"$ds"';" | ssh opencal mysql --table ca_hhs_meta
