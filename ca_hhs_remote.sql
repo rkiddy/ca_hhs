@@ -42,121 +42,45 @@ CREATE TABLE `catalog` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `chargemasters_cdm`
+-- Table structure for table `dhcs_county_code_reference_table`
 --
 
-DROP TABLE IF EXISTS `chargemasters_cdm`;
-CREATE TABLE `chargemasters_cdm` (
-  `file_pk` int DEFAULT NULL,
-  `code` varchar(31) DEFAULT NULL,
-  `description` varchar(255) DEFAULT NULL,
-  `charge_str` varchar(63) DEFAULT NULL,
-  `charge` decimal(10,2) DEFAULT NULL
+DROP TABLE IF EXISTS `dhcs_county_code_reference_table`;
+CREATE TABLE `dhcs_county_code_reference_table` (
+  `objectid` varchar(11) DEFAULT NULL,
+  `dhcs_county_code` varchar(16) DEFAULT NULL,
+  `county_name` varchar(15) DEFAULT NULL,
+  `county_region_code` varchar(18) DEFAULT NULL,
+  `county_region_description` varchar(25) DEFAULT NULL,
+  `fips_county_code` varchar(16) DEFAULT NULL,
+  `fips_state_county_code` varchar(22) DEFAULT NULL,
+  `north_south_indicator` varchar(21) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `chargemasters_columns`
+-- Table structure for table `hospital_building_data`
 --
 
-DROP TABLE IF EXISTS `chargemasters_columns`;
-CREATE TABLE `chargemasters_columns` (
-  `file_pk` int DEFAULT NULL,
-  `sheet_name` varchar(127) DEFAULT NULL,
-  `key_str` varchar(5) DEFAULT NULL,
-  `val_str` varchar(1023) DEFAULT NULL,
-  KEY `file_pk` (`file_pk`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `chargemasters_common25`
---
-
-DROP TABLE IF EXISTS `chargemasters_common25`;
-CREATE TABLE `chargemasters_common25` (
-  `file_pk` int DEFAULT NULL,
-  `procedure_desc` varchar(1027) DEFAULT NULL,
-  `cpt_code` varchar(31) DEFAULT NULL,
-  `cpt_code_fixed` varchar(11) DEFAULT NULL,
-  `charge_str` varchar(700) DEFAULT NULL,
-  `charge` decimal(10,2) DEFAULT NULL,
-  KEY `charge_str` (`charge_str`),
-  KEY `charge` (`charge`),
-  KEY `file_pk` (`file_pk`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `chargemasters_dirs`
---
-
-DROP TABLE IF EXISTS `chargemasters_dirs`;
-CREATE TABLE `chargemasters_dirs` (
-  `pk` int NOT NULL,
-  `full_name` varchar(255) DEFAULT NULL,
-  `oshpd_id` char(9) DEFAULT NULL,
-  `year` int DEFAULT NULL,
-  PRIMARY KEY (`pk`),
-  KEY `hcai_id` (`oshpd_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `chargemasters_files`
---
-
-DROP TABLE IF EXISTS `chargemasters_files`;
-CREATE TABLE `chargemasters_files` (
-  `pk` int NOT NULL,
-  `dir_pk` int DEFAULT NULL,
-  `year` int DEFAULT NULL,
-  `full_name` varchar(255) DEFAULT NULL,
-  `oshpd_id` char(9) DEFAULT NULL,
-  `file_type` varchar(15) DEFAULT NULL,
-  `file_ext` varchar(63) DEFAULT NULL,
-  `common25` int DEFAULT NULL,
-  PRIMARY KEY (`pk`),
-  UNIQUE KEY `full_name_2` (`full_name`),
-  KEY `file_ext` (`file_ext`),
-  KEY `full_name` (`full_name`),
-  KEY `dir_pk` (`dir_pk`),
-  KEY `hcai_id` (`oshpd_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `chargemasters_sheets`
---
-
-DROP TABLE IF EXISTS `chargemasters_sheets`;
-CREATE TABLE `chargemasters_sheets` (
-  `file_pk` int DEFAULT NULL,
-  `name` varchar(127) DEFAULT NULL,
-  `sheet_type` varchar(15) DEFAULT NULL,
-  `elements_read` int DEFAULT '0',
-  `errors_found` int DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `hospital_buildings`
---
-
-DROP TABLE IF EXISTS `hospital_buildings`;
-CREATE TABLE `hospital_buildings` (
+DROP TABLE IF EXISTS `hospital_building_data`;
+CREATE TABLE `hospital_building_data` (
   `county_code` varchar(20) DEFAULT NULL,
-  `perm_id` varchar(5) DEFAULT NULL,
+  `perm_id` varchar(7) DEFAULT NULL,
   `facility_name` varchar(85) DEFAULT NULL,
   `city` varchar(19) DEFAULT NULL,
-  `building_nbr` varchar(9) DEFAULT NULL,
+  `building_nbr` varchar(12) DEFAULT NULL,
   `building_name` varchar(87) DEFAULT NULL,
   `building_status` varchar(40) DEFAULT NULL,
-  `spc_rating` varchar(3) DEFAULT NULL,
+  `spc_rating_` varchar(12) DEFAULT NULL,
   `building_url` varchar(144) DEFAULT NULL,
-  `height_ft` varchar(6) DEFAULT NULL,
-  `stories` varchar(2) DEFAULT NULL,
+  `height_ft` varchar(11) DEFAULT NULL,
+  `stories` varchar(7) DEFAULT NULL,
   `building_code` varchar(35) DEFAULT NULL,
-  `building_code_year` varchar(4) DEFAULT NULL,
-  `year_completed` varchar(4) DEFAULT NULL,
+  `building_code_year` varchar(18) DEFAULT NULL,
+  `year_completed` varchar(14) DEFAULT NULL,
   `ab_1882_notice` varchar(118) DEFAULT NULL,
   `latitude` varchar(10) DEFAULT NULL,
   `longitude` varchar(12) DEFAULT NULL,
-  `count` varchar(1) DEFAULT NULL
+  `count` varchar(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -177,7 +101,6 @@ CREATE TABLE `inpatient_death_causes` (
 DROP TABLE IF EXISTS `inpatient_deaths`;
 CREATE TABLE `inpatient_deaths` (
   `icdcm_code` varchar(31) DEFAULT NULL,
-  `diagnosis_description` varchar(1027) DEFAULT NULL,
   `total` int DEFAULT NULL,
   `year` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -237,6 +160,77 @@ CREATE TABLE `licensed_healthcare_facility_listing` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `modified_retail_food_env`
+--
+
+DROP TABLE IF EXISTS `modified_retail_food_env`;
+CREATE TABLE `modified_retail_food_env` (
+  `ind_id` varchar(63) DEFAULT NULL,
+  `ind_definition` varchar(63) DEFAULT NULL,
+  `reportyear` varchar(63) DEFAULT NULL,
+  `race_eth_code` varchar(63) DEFAULT NULL,
+  `race_eth_name` varchar(63) DEFAULT NULL,
+  `geotype` varchar(63) DEFAULT NULL,
+  `geotypevalue` varchar(63) DEFAULT NULL,
+  `geoname` varchar(63) DEFAULT NULL,
+  `county_name` varchar(63) DEFAULT NULL,
+  `county_fips` varchar(63) DEFAULT NULL,
+  `region_name` varchar(63) DEFAULT NULL,
+  `region_code` varchar(63) DEFAULT NULL,
+  `strata_one_code` varchar(63) DEFAULT NULL,
+  `strata_one_name` varchar(63) DEFAULT NULL,
+  `strata_two_code` int DEFAULT NULL,
+  `strata_two_name` varchar(63) DEFAULT NULL,
+  `numerator` int DEFAULT NULL,
+  `denominator` int DEFAULT NULL,
+  `estimate` float DEFAULT NULL,
+  `ll_95ci` float DEFAULT NULL,
+  `ul_95ci` float DEFAULT NULL,
+  `se` float DEFAULT NULL,
+  `rse` float DEFAULT NULL,
+  `ca_decile` int DEFAULT NULL,
+  `ca_rr` float DEFAULT NULL,
+  `version` varchar(63) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `monthly_update_prescription_drugs_introduced`
+--
+
+DROP TABLE IF EXISTS `monthly_update_prescription_drugs_introduced`;
+CREATE TABLE `monthly_update_prescription_drugs_introduced` (
+  `oshpd_id` varchar(9) DEFAULT NULL,
+  `manufacturer_name` varchar(138) DEFAULT NULL,
+  `date_reported` varchar(13) DEFAULT NULL,
+  `ndc_number` varchar(11) DEFAULT NULL,
+  `drug_product_description` varchar(246) DEFAULT NULL,
+  `wac_effective_date` varchar(18) DEFAULT NULL,
+  `wac_increase_amount` varchar(19) DEFAULT NULL,
+  `wac_after_increase` varchar(18) DEFAULT NULL,
+  `patent_expiration_date` varchar(22) DEFAULT NULL,
+  `drug_source_type` varchar(34) DEFAULT NULL,
+  `unit_sales_volume_in_us` varchar(23) DEFAULT NULL,
+  `unit_sales_volume_non_public_indicator` varchar(38) DEFAULT NULL,
+  `gross_sales_us_dollars` varchar(24) DEFAULT NULL,
+  `gross_sales_us_dollars_non_public_indicator` varchar(45) DEFAULT NULL,
+  `cost_increase_factors` varchar(3707) DEFAULT NULL,
+  `cost_increase_factors_non_public_indicator` varchar(42) DEFAULT NULL,
+  `change_improvement_description` varchar(779) DEFAULT NULL,
+  `change_improvement_non_public_indicator` varchar(39) DEFAULT NULL,
+  `acquisition_date` varchar(16) DEFAULT NULL,
+  `company_acquired_from` varchar(39) DEFAULT NULL,
+  `acquisition_price` varchar(17) DEFAULT NULL,
+  `acquisition_price_non_public_indicator` varchar(38) DEFAULT NULL,
+  `acquisition_price_comment` varchar(673) DEFAULT NULL,
+  `wac_at_acquisition` varchar(18) DEFAULT NULL,
+  `wac_year_prior_to_acquisition` varchar(29) DEFAULT NULL,
+  `year_drug_introduced_to_market` varchar(30) DEFAULT NULL,
+  `wac_at_intro_to_market` varchar(22) DEFAULT NULL,
+  `supporting_documents` varchar(76) DEFAULT NULL,
+  `general_comments` varchar(1686) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `wic_products`
 --
 
@@ -252,5 +246,5 @@ CREATE TABLE `wic_products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2025-01-08 12:18:16
+-- Dump completed on 2025-01-17 14:41:15
 
