@@ -101,7 +101,9 @@ if __name__ == '__main__':
     for name in names:
         #print(f"table: {name}, {tables[name]}")
         if tables[name] == ['MAIN']:
-            db_exec(metadb, f"insert into sources values (NULL, 0, 0, NULL, '{name}')")
+            sql = f"""insert into sources (ds_pk, auto_run, share, file_name, table_name)
+                      values (NULL, 0, 0, NULL, '{name}')"""
+            db_exec(metadb, sql)
         if tables[name] == ['META']:
             print(f"table: {name}")
 
