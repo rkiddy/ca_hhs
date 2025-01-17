@@ -158,7 +158,8 @@ def create_tables(tables, types={}, replaces={}, length_pad=0, verbose=False):
         if sheet_name:
             for sheet in wb.sheetnames:
                 if sheet == sheet_name:
-                    wb.active = sheet
+                    wb.active = wb.get_sheet_by_name(sheet)
+
         ws = wb.active
 
         # Find the column tops.
@@ -196,7 +197,7 @@ def create_tables(tables, types={}, replaces={}, length_pad=0, verbose=False):
             else: # not yet finished.
 
                 for jdx in range(len(cols)):
-                    if len(values[jdx]) > cols[list(cols.keys())[jdx]]:
+                    if values[jdx] is not None and len(values[jdx]) > cols[list(cols.keys())[jdx]]:
                         cols[list(cols.keys())[jdx]] = len(values[jdx])
 
                 idx += 1
@@ -239,7 +240,7 @@ def read_data(tables, types={}, replaces={}, start_row=None, bucket=1000, verbos
         if sheet_name:
             for sheet in wb.sheetnames:
                 if sheet == sheet_name:
-                    wb.active = sheet
+                    wb.active = wb.get_sheet_by_name(sheet)
         ws = wb.active
 
         # Find the column tops.
