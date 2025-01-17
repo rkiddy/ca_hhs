@@ -200,7 +200,7 @@ else
 
     bash $HOME/mv_sources.sh .
 
-    bash $HOME/update_sources.sh
+    bash $HOME/update_extensions.sh
 
     bash $HOME/share.sh $id
 
