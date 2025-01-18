@@ -101,7 +101,9 @@ known_replacements = {'system': 'system_name',
                       'table': 'table_name',
                       'grouping': 'grouping_name',
                       'year': 'year_str',
-                      'all': 'all_str'}
+                      'all': 'all_str',
+                      'count': 'count_num',
+                      'group': 'group_str'}
 
 
 def fix_col_head(start, replaces={}):
