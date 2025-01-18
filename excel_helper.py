@@ -7,7 +7,7 @@ from sqlalchemy import create_engine
 
 import config
 import sql_helper
-
+import traceback
 
 def find_column_tops(wbook, sheet_num=None):
 
@@ -150,74 +150,77 @@ def create_tables(tables, types={}, replaces={}, length_pad=0, verbose=False):
         file_name = tables[table]['file']
         sheet_name = tables[table]['sheet']
 
-        if verbose:
-            print(f"file: {file_name}, sheet: {sheet_name}")
+        print(f"file: {file_name}, sheet: {sheet_name}")
+        try:
 
-        wb = load_workbook(file_name)
+            wb = load_workbook(file_name)
 
-        if sheet_name:
-            for sheet in wb.sheetnames:
-                if sheet == sheet_name:
-                    wb.active = wb.get_sheet_by_name(sheet)
+            if sheet_name:
+                for sheet in wb.sheetnames:
+                    if sheet == sheet_name:
+                        wb.active = wb.get_sheet_by_name(sheet)
 
-        ws = wb.active
+            ws = wb.active
 
-        # Find the column tops.
-        #
-        # TODO: Finding column tops may not be as easy as going to location A1.
-        #
-        # Turn the list of columns into a dictionary with column names going to 0.
-        #
-        cols = sql_helper.fix_col_heads(row_values_starting(ws, 'A1'))
-        cols = dict(zip(cols, [0] * len(cols)))
-
-        if verbose:
-            print(f"cols: {cols}")
-
-        done = False
-
-        idx = 2
-
-        # Read through content, row at a time, noting max lengths of string values.
-        #
-        while not done:
-
-            current = f"A{idx}"
-            values = row_values_starting(ws, current, length=len(cols))
+            # Find the column tops.
+            #
+            # TODO: Finding column tops may not be as easy as going to location A1.
+            #
+            # Turn the list of columns into a dictionary with column names going to 0.
+            #
+            cols = sql_helper.fix_col_heads(row_values_starting(ws, 'A1'))
+            cols = dict(zip(cols, [0] * len(cols)))
 
             if verbose:
-                print(f"values: {values}")
+                print(f"cols: {cols}")
 
-            if all_empty(values):
+            done = False
 
-                done = True
+            idx = 2
+
+            # Read through content, row at a time, noting max lengths of string values.
+            #
+            while not done:
+
+                current = f"A{idx}"
+                values = row_values_starting(ws, current, length=len(cols))
+
                 if verbose:
-                    print(f"all_empty() returns True at idx: {idx}")
+                    print(f"values: {values}")
 
-            else: # not yet finished.
+                if all_empty(values):
 
-                for jdx in range(len(cols)):
-                    if values[jdx] is not None and len(values[jdx]) > cols[list(cols.keys())[jdx]]:
-                        cols[list(cols.keys())[jdx]] = len(values[jdx])
+                    done = True
+                    if verbose:
+                        print(f"all_empty() returns True at idx: {idx}")
 
-                idx += 1
+                else: # not yet finished.
 
-        if verbose:
-            print(f"cols: {cols}")
+                    for jdx in range(len(cols)):
+                        if values[jdx] is not None and len(values[jdx]) > cols[list(cols.keys())[jdx]]:
+                            cols[list(cols.keys())[jdx]] = len(values[jdx])
 
-        col_defs = [f"{col_name} varchar({cols[col_name]})" for col_name in cols]
+                    idx += 1
 
-        sql = f"create table {table} ("
-        sql += ', '.join(col_defs)
-        sql += ")"
+            if verbose:
+                print(f"cols: {cols}")
 
-        print(f"\ncreating table {table}...")
+            col_defs = [f"{col_name} varchar({cols[col_name]})" for col_name in cols]
 
-        sql_helper.db_exec_sql(f"drop table if exists {table}")
+            sql = f"create table {table} ("
+            sql += ', '.join(col_defs)
+            sql += ")"
 
-        sql_helper.db_exec_sql(sql)
+            print(f"\ncreating table {table}...")
 
-        wb.close()
+            sql_helper.db_exec_sql(f"drop table if exists {table}")
+
+            sql_helper.db_exec_sql(sql)
+
+            wb.close()
+
+        except:
+            traceback.print_exc()
 
 
 def read_data(tables, types={}, replaces={}, start_row=None, bucket=1000, verbose=False):
@@ -230,75 +233,79 @@ def read_data(tables, types={}, replaces={}, start_row=None, bucket=1000, verbos
 
     for table in tables:
 
-        file_name = tables[table]['file']
-        sheet_name = tables[table]['sheet']
+        try:
 
-        print(f"\nfile: {file_name}, sheet: {sheet_name} -> ", end='')
+            file_name = tables[table]['file']
+            sheet_name = tables[table]['sheet']
 
-        wb = load_workbook(file_name)
+            print(f"\nfile: {file_name}, sheet: {sheet_name} -> ", end='')
 
-        if sheet_name:
-            for sheet in wb.sheetnames:
-                if sheet == sheet_name:
-                    wb.active = wb.get_sheet_by_name(sheet)
-        ws = wb.active
+            wb = load_workbook(file_name)
 
-        # Find the column tops.
-        #
-        cols = sql_helper.fix_col_heads(row_values_starting(ws, 'A1'))
-        cols = dict(zip(cols, [0] * len(cols)))
+            if sheet_name:
+                for sheet in wb.sheetnames:
+                    if sheet == sheet_name:
+                        wb.active = wb.get_sheet_by_name(sheet)
+            ws = wb.active
 
-        prefix = f"insert into {table} ({', '.join(cols)}) values"
+            # Find the column tops.
+            #
+            cols = sql_helper.fix_col_heads(row_values_starting(ws, 'A1'))
+            cols = dict(zip(cols, [0] * len(cols)))
 
-        suffixes = list()
+            prefix = f"insert into {table} ({', '.join(cols)}) values"
 
-        if verbose:
-            print(f"prefix: {s}")
-
-        done = False
-
-        idx = 2
-
-        added = 0
-
-        # Read through content, row at a time.
-        #
-        while not done:
-
-            current = f"A{idx}"
-            values = row_values_starting(ws, current, length=len(cols))
+            suffixes = list()
 
             if verbose:
-                print(f"values: {values}")
+                print(f"prefix: {prefix}")
 
-            if all_empty(values):
+            done = False
 
-                done = True
+            idx = 2
+
+            added = 0
+
+            # Read through content, row at a time.
+            #
+            while not done:
+
+                current = f"A{idx}"
+                values = row_values_starting(ws, current, length=len(cols))
+
                 if verbose:
-                    print(f"all_empty() returns True at idx: {idx}")
+                    print(f"values: {values}")
 
-            else: # not yet finished.
+                if all_empty(values):
 
-                values = [sql_helper.fix(r) for r in values]
+                    done = True
+                    if verbose:
+                        print(f"all_empty() returns True at idx: {idx}")
 
-                suffix = f"({', '.join(values)})"
+                else: # not yet finished.
 
-                suffixes.append(suffix)
+                    values = [sql_helper.fix(r) for r in values]
 
-                if len(suffixes) > bucket:
-                    sql_helper.db_exec_many_sql(prefix, suffixes)
-                    added += len(suffixes)
-                    suffixes = list()
+                    suffix = f"({', '.join(values)})"
 
-                idx += 1
+                    suffixes.append(suffix)
 
-        if len(suffixes) > 0:
-            added += len(suffixes)
-            sql_helper.db_exec_many_sql(prefix, suffixes)
+                    if len(suffixes) > bucket:
+                        sql_helper.db_exec_many_sql(prefix, suffixes)
+                        added += len(suffixes)
+                        suffixes = list()
 
-        print(f"table: {table} # {added}")
+                    idx += 1
 
-        wb.close()
+            if len(suffixes) > 0:
+                added += len(suffixes)
+                sql_helper.db_exec_many_sql(prefix, suffixes)
+
+            print(f"table: {table} # {added}")
+
+            wb.close()
+        except:
+            traceback.print_exc()
 
 
 if __name__ == '__main__':
