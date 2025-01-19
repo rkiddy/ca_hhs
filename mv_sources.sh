@@ -12,7 +12,7 @@ for d in $*; do
         pushd . 1>/dev/null 2>/dev/null
         cd $d
 
-        if [ $? -eq 0 ]; then
+        if [ $? -eq 0 ] && [ -d sources ]; then
             echo $d
             mv -f *.aspx *.csv *.xls* *.accdb *.docx *.html *.pdf *.pptx *.website \
             *.web-link *.chart *.kml *.geojson *.json *-api *.zip *.doc .csv .geojson .kml \
