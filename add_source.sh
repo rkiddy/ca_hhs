@@ -36,10 +36,14 @@ else
     sn="'"$sn"'"
 fi
 
+if [ $fn != "NULL" ]; then
+    fn="'"$fn"'"
+fi
+
 if [ $tn != "NEW" ]; then
     ( echo "insert into sources (ds_pk, auto_run, share, file_name, sheet_name, table_name)"
       echo "values"
-      echo "((select pk from datasets where name = '"$ds"'), 1, 0, '"$fn"', "$sn", '"$tn"');" ) | \
+      echo "((select pk from datasets where name = '"$ds"'), 1, 0, "$fn", "$sn", '"$tn"');" ) | \
         ssh opencal mysql ca_hhs_meta
 fi
 
@@ -48,6 +52,6 @@ if [ "$tn" = "NEW" ]; then
 
     ( echo "insert into sources (ds_pk, auto_run, share, file_name, sheet_name, table_name)"
       echo "values"
-      echo "((select pk from datasets where name = '"$ds"'), 1, 0, '"$fn"', "$sn", '"$next_tn"');" ) | \
+      echo "((select pk from datasets where name = '"$ds"'), 1, 0, "$fn", "$sn", '"$next_tn"');" ) | \
         ssh opencal mysql ca_hhs_meta
 fi
