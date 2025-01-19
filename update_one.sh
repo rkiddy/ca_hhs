@@ -64,12 +64,12 @@ if [ $fetch = "yes" ]; then
 
     if [ -f fetch_special_instead.sh ]; then
         echo "executing fetch_special_instead.sh..."
-        bash fetch_special_instead.sh
+        HOME=/home/ray bash fetch_special_instead.sh
     else
 
         if [ -f fetch_special_before.sh ]; then
             echo "executing fetch_special_before.sh..."
-            bash fetch_special_before.sh
+            HOME=/home/ray bash fetch_special_before.sh
         fi
 
         echo "updating deets..."
@@ -118,7 +118,7 @@ if [ $fetch = "yes" ]; then
 
         if [ -f fetch_special_after.sh ]; then
             echo "executing fetch_special_after.sh..."
-            bash fetch_special_after.sh
+            HOME=/home/ray bash fetch_special_after.sh
         fi
     fi
 fi
@@ -153,12 +153,12 @@ fi
 
 if [ -f exec_special_instead.sh ]; then
     echo "executing exec_special_instead.sh..."
-    bash exec_special_instead.sh
+    HOME=/home/ray bash exec_special_instead.sh
 else
 
     if [ -f exec_special_before.sh ]; then
         echo "executing exec_special_before.sh..."
-        bash exec_special_before.sh
+        HOME=/home/ray bash exec_special_before.sh
     fi
 
     if [ "$script" != "none" ] && [ -f "$script.py" ]; then
@@ -195,7 +195,7 @@ else
 
     if [ -f exec_special_after.sh ]; then
         echo "executing exec_special_after.sh..."
-        bash exec_special_after.sh
+        HOME=/home/ray bash exec_special_after.sh
     fi
 
     bash $HOME/mv_sources.sh .
