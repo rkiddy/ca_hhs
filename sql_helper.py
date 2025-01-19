@@ -131,6 +131,7 @@ def fix_col_head(start, replaces={}):
     col = col.replace('/', '_')
     col = col.replace(',', '_')
     col = col.replace('.', '_')
+    col = col.replace(';', '_')
     col = col.replace('+', '_plus_')
     col = col.replace('#', 'num')
     col = col.replace('%', 'pct')
