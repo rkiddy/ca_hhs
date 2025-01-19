@@ -65,11 +65,21 @@ if [ $fetch = "yes" ]; then
     if [ -f fetch_special_instead.sh ]; then
         echo "executing fetch_special_instead.sh..."
         HOME=/home/ray bash fetch_special_instead.sh
+
+        if [ $? -ne 0 ]; then
+            echo "ERROR from fetch_special_instead.sh"
+            exit 1
+        fi
     else
 
         if [ -f fetch_special_before.sh ]; then
             echo "executing fetch_special_before.sh..."
             HOME=/home/ray bash fetch_special_before.sh
+
+            if [ $? -ne 0 ]; then
+                echo "ERROR from fetch_special_before.sh"
+                exit 1
+            fi
         fi
 
         echo "updating deets..."
@@ -111,7 +121,7 @@ if [ $fetch = "yes" ]; then
             echo ""
             echo "There was some error on downloading."
             echo ""
-            exit
+            exit 1
         fi
 
         unzip -o *.zip
@@ -119,6 +129,11 @@ if [ $fetch = "yes" ]; then
         if [ -f fetch_special_after.sh ]; then
             echo "executing fetch_special_after.sh..."
             HOME=/home/ray bash fetch_special_after.sh
+
+            if [ $? -ne 0 ]; then
+                echo "ERROR from fetch_special_after.sh"
+                exit 1
+            fi
         fi
     fi
 fi
@@ -152,13 +167,22 @@ else
 fi
 
 if [ -f exec_special_instead.sh ]; then
+
     echo "executing exec_special_instead.sh..."
     HOME=/home/ray bash exec_special_instead.sh
+
+    eval $upy ../update_time.py --result $?
+
 else
 
     if [ -f exec_special_before.sh ]; then
         echo "executing exec_special_before.sh..."
         HOME=/home/ray bash exec_special_before.sh
+
+        if [ $? -ne 0 ]; then
+            echo "ERROR from exec_special_before.sh"
+            exit 1
+        fi
     fi
 
     if [ "$script" != "none" ] && [ -f "$script.py" ]; then
@@ -166,9 +190,9 @@ else
         echo "executing $script.py..."
 
         eval $py $script.py
-        r=$?
-
-        eval $upy ../update_time.py --result $r
+        r0=$?
+    else
+        r0=0
     fi
 
     if [ -s /tmp/csv_$$.txt ]; then
@@ -177,8 +201,8 @@ else
 
         eval $py ../csv_import.py --file /tmp/csv_$$.txt
         r1=$?
-
-        eval $upy ../update_time.py --result $r1
+    else
+        r1=0
     fi
 
     # TODO I am adding update twice if both csv and xlsx. I need to combine the result values. Just add them?
@@ -189,22 +213,29 @@ else
 
         eval $py ../excel_import.py --file /tmp/xlsx_$$.txt
         r2=$?
-
-        eval $upy ../update_time.py --result $r2
+    else
+        r2=0
     fi
+
+    # report overall success.
+    eval $upy ../update_time.py --result $(($r0+$r1+$r2))
 
     if [ -f exec_special_after.sh ]; then
         echo "executing exec_special_after.sh..."
         HOME=/home/ray bash exec_special_after.sh
     fi
-
-    bash $HOME/mv_sources.sh .
-
-    bash $HOME/update_extensions.sh
-
-    bash $HOME/share.sh $id
-
-    # TODO I really should be reporting the result of all of these here, not previosly.
-
 fi
+
+bash $HOME/mv_sources.sh .
+
+bash $HOME/update_extensions.sh
+
+bash $HOME/share.sh $id
+
+# TODO I really should be reporting the result of all of these here, not previosly.
+
+# something here can do a 'is everything really ok?' check.
+#
+#bash $HOME/ok.sh
+#rz=$?
 
