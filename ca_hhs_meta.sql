@@ -21754,7 +21754,7 @@ INSERT INTO `datasets` VALUES (19,'alw-assisted-living-facility-finder-app',NULL
 INSERT INTO `datasets` VALUES (20,'alw-care-coordination-agencies',NULL,1737228843,NULL);
 INSERT INTO `datasets` VALUES (21,'alw-care-coordination-facility-finder-app',NULL,NULL,NULL);
 INSERT INTO `datasets` VALUES (22,'alw-public-subsidized-housing',NULL,1737228849,NULL);
-INSERT INTO `datasets` VALUES (23,'ambulatory-surgery-characteristics-by-facility-pivot-profile',NULL,NULL,NULL);
+INSERT INTO `datasets` VALUES (23,'ambulatory-surgery-characteristics-by-facility-pivot-profile',NULL,1737247692,NULL);
 INSERT INTO `datasets` VALUES (24,'ambulatory-surgery-characteristics-by-patient-county-of-residence_',NULL,NULL,NULL);
 INSERT INTO `datasets` VALUES (25,'ambulatory-surgery-diagnosis-procedure-and-external-cause-codes',NULL,1737078095,NULL);
 INSERT INTO `datasets` VALUES (26,'annual-beneficiary-grievance-and-appeal-report-abgar',NULL,NULL,NULL);
@@ -21853,7 +21853,7 @@ INSERT INTO `datasets` VALUES (123,'covid-19-probable-cases',NULL,NULL,NULL);
 INSERT INTO `datasets` VALUES (124,'covid-19-sewershed-restricted-case-data',NULL,1737180772,NULL);
 INSERT INTO `datasets` VALUES (125,'covid-19-staff-data',NULL,1736884616,NULL);
 INSERT INTO `datasets` VALUES (126,'covid-19-time-series-metrics-by-county-and-state',NULL,NULL,NULL);
-INSERT INTO `datasets` VALUES (127,'covid-19-vaccine-progress-dashboard-data-by-zip-code',NULL,1737180884,NULL);
+INSERT INTO `datasets` VALUES (127,'covid-19-vaccine-progress-dashboard-data-by-zip-code',NULL,1737243418,NULL);
 INSERT INTO `datasets` VALUES (128,'covid-19-variant-data',NULL,NULL,NULL);
 INSERT INTO `datasets` VALUES (129,'dataset-catalog',NULL,1737229020,NULL);
 INSERT INTO `datasets` VALUES (130,'data-table-for-map-of-counties-and-number-of-community-supports-available',NULL,1737229002,NULL);
@@ -22178,7 +22178,7 @@ INSERT INTO `datasets` VALUES (450,'tuberculosis-cases-and-rates',NULL,NULL,NULL
 INSERT INTO `datasets` VALUES (451,'unemployment-2004-2013',NULL,NULL,NULL);
 INSERT INTO `datasets` VALUES (452,'utilization-rates-for-selected-medical-procedures-in-california-hospitals',NULL,NULL,NULL);
 INSERT INTO `datasets` VALUES (453,'vaccine-preventable-disease-cases-by-county-and-year',NULL,NULL,NULL);
-INSERT INTO `datasets` VALUES (454,'vaccine-progress-dashboard',NULL,1737182117,NULL);
+INSERT INTO `datasets` VALUES (454,'vaccine-progress-dashboard',NULL,1737242803,NULL);
 INSERT INTO `datasets` VALUES (455,'vancomycin-resistant-enterococci-vre-bloodstream-infections-in-california-hospitals',NULL,NULL,NULL);
 INSERT INTO `datasets` VALUES (456,'violent-crime-rate-california-2006-2010',NULL,NULL,NULL);
 INSERT INTO `datasets` VALUES (457,'vocational-rehabilitation-consumers-served-by-age-group-and-county-sfy-2014-2022',NULL,NULL,NULL);
@@ -22253,9 +22253,6 @@ INSERT INTO `extensions` VALUES (16,'csv',1);
 INSERT INTO `extensions` VALUES (16,'json',1);
 INSERT INTO `extensions` VALUES (16,'pdf',6);
 INSERT INTO `extensions` VALUES (16,'zip',1);
-INSERT INTO `extensions` VALUES (23,'json',1);
-INSERT INTO `extensions` VALUES (23,'xlsx',10);
-INSERT INTO `extensions` VALUES (23,'zip',1);
 INSERT INTO `extensions` VALUES (24,'csv',4);
 INSERT INTO `extensions` VALUES (24,'docx',1);
 INSERT INTO `extensions` VALUES (24,'json',1);
@@ -23613,9 +23610,6 @@ INSERT INTO `extensions` VALUES (118,'zip',1);
 INSERT INTO `extensions` VALUES (124,'csv',1);
 INSERT INTO `extensions` VALUES (124,'json',1);
 INSERT INTO `extensions` VALUES (124,'zip',1);
-INSERT INTO `extensions` VALUES (127,'csv',4);
-INSERT INTO `extensions` VALUES (127,'json',1);
-INSERT INTO `extensions` VALUES (127,'zip',5);
 INSERT INTO `extensions` VALUES (185,'csv',1);
 INSERT INTO `extensions` VALUES (185,'json',1);
 INSERT INTO `extensions` VALUES (185,'zip',3);
@@ -23659,9 +23653,6 @@ INSERT INTO `extensions` VALUES (388,'zip',1);
 INSERT INTO `extensions` VALUES (409,'csv',10);
 INSERT INTO `extensions` VALUES (409,'json',1);
 INSERT INTO `extensions` VALUES (409,'zip',3);
-INSERT INTO `extensions` VALUES (454,'csv',19);
-INSERT INTO `extensions` VALUES (454,'json',1);
-INSERT INTO `extensions` VALUES (454,'zip',3);
 INSERT INTO `extensions` VALUES (473,'csv',1);
 INSERT INTO `extensions` VALUES (473,'json',1);
 INSERT INTO `extensions` VALUES (473,'zip',4);
@@ -23901,6 +23892,15 @@ INSERT INTO `extensions` VALUES (425,'zip',4);
 INSERT INTO `extensions` VALUES (133,'csv',18);
 INSERT INTO `extensions` VALUES (133,'json',1);
 INSERT INTO `extensions` VALUES (133,'zip',1);
+INSERT INTO `extensions` VALUES (454,'csv',19);
+INSERT INTO `extensions` VALUES (454,'json',1);
+INSERT INTO `extensions` VALUES (454,'zip',3);
+INSERT INTO `extensions` VALUES (127,'csv',4);
+INSERT INTO `extensions` VALUES (127,'json',1);
+INSERT INTO `extensions` VALUES (127,'zip',5);
+INSERT INTO `extensions` VALUES (23,'json',1);
+INSERT INTO `extensions` VALUES (23,'xlsx',10);
+INSERT INTO `extensions` VALUES (23,'zip',1);
 UNLOCK TABLES;
 
 --
@@ -25127,10 +25127,29 @@ INSERT INTO `sources` VALUES (244,1,0,'2021-hospital-inpatient-procedure-code-fr
 INSERT INTO `sources` VALUES (244,1,0,'2022-hospital-inpatient-diagnosis-code-frequency.xlsx',NULL,'2022_hospital_inpatient_diagnosis_code_frequency',NULL);
 INSERT INTO `sources` VALUES (244,1,0,'2022-hospital-inpatient-external-cause-of-injury-morbidity-code-frequency.xlsx',NULL,'2022_hospital_inpatient_external_cause_of_injury_morb_code_freq',NULL);
 INSERT INTO `sources` VALUES (244,1,0,'2022-hospital-inpatient-procedure-code-frequency.xlsx',NULL,'2022_hospital_inpatient_procedure_code_frequency',NULL);
-INSERT INTO `sources` VALUES (133,1,0,'2024-provisional-deaths-by-month-by-county.csv',NULL,'2024_provisional_deaths_by_month_by_county',NULL);
+INSERT INTO `sources` VALUES (133,1,0,'2024-provisional-deaths-by-month-by-county.csv',NULL,'death_profiles_provisional_by_month_by_county',NULL);
 INSERT INTO `sources` VALUES (133,1,0,'2014-2023-final-deaths-by-year-by-county.csv',NULL,'2014_2023_final_deaths_by_year_by_county',NULL);
 INSERT INTO `sources` VALUES (133,1,0,'2019-2023-final-deaths-by-month-by-occurrence-county.csv',NULL,'2019_2023_final_deaths_by_month_by_occurrence_county',NULL);
 INSERT INTO `sources` VALUES (133,1,0,'2019-2023-final-deaths-by-month-by-residence-county.csv',NULL,'2019_2023_final_deaths_by_month_by_residence_county',NULL);
+INSERT INTO `sources` VALUES (NULL,0,0,NULL,NULL,'death_profiles_by_month_by_county',NULL);
+INSERT INTO `sources` VALUES (NULL,0,0,NULL,NULL,'death_profiles_by_month_by_occurrence',NULL);
+INSERT INTO `sources` VALUES (NULL,0,0,NULL,NULL,'death_profiles_by_month_by_residence',NULL);
+INSERT INTO `sources` VALUES (NULL,0,0,NULL,NULL,'death_profiles_by_year',NULL);
+INSERT INTO `sources` VALUES (NULL,0,0,NULL,NULL,'death_profiles_provisional_by_month_by_county',NULL);
+INSERT INTO `sources` VALUES (23,1,0,'2014-ambulatory-surgery-characteristics-by-facility-pivot-profile.xlsx','Data','ambulatory_surgery_char_by_faclty_2014',NULL);
+INSERT INTO `sources` VALUES (23,1,0,'2015-ambulatory-surgery-characteristics-by-facility-pivot-profile.xlsx','Data','ambulatory_surgery_char_by_faclty_2015',NULL);
+INSERT INTO `sources` VALUES (23,1,0,'2016-ambulatory-surgery-characteristics-by-facility-pivot-profile.xlsx','Data','ambulatory_surgery_char_by_faclty_2016',NULL);
+INSERT INTO `sources` VALUES (23,1,0,'2017-ambulatory-surgery-characteristics-by-facility-pivot-profile.xlsx','Data','ambulatory_surgery_char_by_faclty_2017',NULL);
+INSERT INTO `sources` VALUES (23,1,0,'2018-ambulatory-surgery-characteristics-by-facility-pivot-profile.xlsx','Data','ambulatory_surgery_char_by_faclty_2018',NULL);
+INSERT INTO `sources` VALUES (23,1,0,'2019-ambulatory-surgery-characteristics-by-facility-pivot-profile.xlsx','Data','ambulatory_surgery_char_by_faclty_2019',NULL);
+INSERT INTO `sources` VALUES (23,1,0,'2020-ambulatory-surgery-characteristics-by-facility-pivot-profile.xlsx','Data','ambulatory_surgery_char_by_faclty_2020',NULL);
+INSERT INTO `sources` VALUES (23,1,0,'2021-ambulatory-surgery-characteristics-by-facility-pivot-profile.xlsx','Data','ambulatory_surgery_char_by_faclty_2021',NULL);
+INSERT INTO `sources` VALUES (23,1,0,'2022-ambulatory-surgery-characteristics-by-facility-pivot-profile.xlsx','Data','ambulatory_surgery_char_by_faclty_2022',NULL);
+INSERT INTO `sources` VALUES (23,1,0,'2023-ambulatory-surgery-characteristics-by-facility-pivot-profile.xlsx','Data','ambulatory_surgery_char_by_faclty_2023',NULL);
+INSERT INTO `sources` VALUES (133,0,0,NULL,NULL,'death_profiles_by_year',NULL);
+INSERT INTO `sources` VALUES (133,0,0,NULL,NULL,'death_profiles_by_month_by_county',NULL);
+INSERT INTO `sources` VALUES (133,0,0,NULL,NULL,'death_profiles_by_month_by_occurence',NULL);
+INSERT INTO `sources` VALUES (133,0,0,NULL,NULL,'death_profiles_by_month_by_residence',NULL);
 UNLOCK TABLES;
 
 --
@@ -29504,8 +29523,11 @@ INSERT INTO `updates` VALUES (133,1737236163,0);
 INSERT INTO `updates` VALUES (133,1737237998,0);
 INSERT INTO `updates` VALUES (133,1737238559,0);
 INSERT INTO `updates` VALUES (133,1737240312,0);
+INSERT INTO `updates` VALUES (454,1737242803,0);
+INSERT INTO `updates` VALUES (127,1737243418,0);
+INSERT INTO `updates` VALUES (23,1737247692,0);
 UNLOCK TABLES;
 
 
--- Dump completed on 2025-01-18 15:23:04
+-- Dump completed on 2025-01-18 17:02:09
 
