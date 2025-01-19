@@ -42,6 +42,111 @@ CREATE TABLE `catalog` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `death_profiles_by_month_by_county`
+--
+
+DROP TABLE IF EXISTS `death_profiles_by_month_by_county`;
+CREATE TABLE `death_profiles_by_month_by_county` (
+  `year` varchar(255) DEFAULT NULL,
+  `month` varchar(255) DEFAULT NULL,
+  `county` varchar(255) DEFAULT NULL,
+  `geography_type` varchar(255) DEFAULT NULL,
+  `strata` varchar(255) DEFAULT NULL,
+  `strata_name` varchar(255) DEFAULT NULL,
+  `cause` varchar(255) DEFAULT NULL,
+  `cause_desc` varchar(255) DEFAULT NULL,
+  `icd_revision` varchar(255) DEFAULT NULL,
+  `count` varchar(255) DEFAULT NULL,
+  `annotation_code` varchar(255) DEFAULT NULL,
+  `annotation_desc` varchar(255) DEFAULT NULL,
+  `data_revision_date` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `death_profiles_by_month_by_occurrence`
+--
+
+DROP TABLE IF EXISTS `death_profiles_by_month_by_occurrence`;
+CREATE TABLE `death_profiles_by_month_by_occurrence` (
+  `year` varchar(255) DEFAULT NULL,
+  `month` varchar(255) DEFAULT NULL,
+  `county` varchar(255) DEFAULT NULL,
+  `geography_type` varchar(255) DEFAULT NULL,
+  `strata` varchar(255) DEFAULT NULL,
+  `strata_name` varchar(255) DEFAULT NULL,
+  `cause` varchar(255) DEFAULT NULL,
+  `cause_desc` varchar(255) DEFAULT NULL,
+  `icd_revision` varchar(255) DEFAULT NULL,
+  `count` varchar(255) DEFAULT NULL,
+  `annotation_code` varchar(255) DEFAULT NULL,
+  `annotation_desc` varchar(255) DEFAULT NULL,
+  `data_revision_date` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `death_profiles_by_month_by_residence`
+--
+
+DROP TABLE IF EXISTS `death_profiles_by_month_by_residence`;
+CREATE TABLE `death_profiles_by_month_by_residence` (
+  `year` varchar(255) DEFAULT NULL,
+  `month` varchar(255) DEFAULT NULL,
+  `county` varchar(255) DEFAULT NULL,
+  `geography_type` varchar(255) DEFAULT NULL,
+  `strata` varchar(255) DEFAULT NULL,
+  `strata_name` varchar(255) DEFAULT NULL,
+  `cause` varchar(255) DEFAULT NULL,
+  `cause_desc` varchar(255) DEFAULT NULL,
+  `icd_revision` varchar(255) DEFAULT NULL,
+  `count` varchar(255) DEFAULT NULL,
+  `annotation_code` varchar(255) DEFAULT NULL,
+  `annotation_desc` varchar(255) DEFAULT NULL,
+  `data_revision_date` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `death_profiles_by_year`
+--
+
+DROP TABLE IF EXISTS `death_profiles_by_year`;
+CREATE TABLE `death_profiles_by_year` (
+  `year` varchar(255) DEFAULT NULL,
+  `county` varchar(255) DEFAULT NULL,
+  `geography_type` varchar(255) DEFAULT NULL,
+  `strata` varchar(255) DEFAULT NULL,
+  `strata_name` varchar(255) DEFAULT NULL,
+  `cause` varchar(255) DEFAULT NULL,
+  `cause_desc` varchar(255) DEFAULT NULL,
+  `icd_revision` varchar(255) DEFAULT NULL,
+  `count` varchar(255) DEFAULT NULL,
+  `annotation_code` varchar(255) DEFAULT NULL,
+  `annotation_desc` varchar(255) DEFAULT NULL,
+  `data_revision_date` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `death_profiles_provisional_by_month_by_county`
+--
+
+DROP TABLE IF EXISTS `death_profiles_provisional_by_month_by_county`;
+CREATE TABLE `death_profiles_provisional_by_month_by_county` (
+  `year_str` varchar(4) DEFAULT NULL,
+  `month` varchar(5) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `geography_type` varchar(14) DEFAULT NULL,
+  `strata` varchar(16) DEFAULT NULL,
+  `strata_name` varchar(36) DEFAULT NULL,
+  `cause` varchar(5) DEFAULT NULL,
+  `cause_desc` varchar(53) DEFAULT NULL,
+  `icd_revision` varchar(12) DEFAULT NULL,
+  `count_num` varchar(5) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
+  `annotation_desc` varchar(38) DEFAULT NULL,
+  `data_extract_date` varchar(17) DEFAULT NULL,
+  `data_revision_date` varchar(18) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `dhcs_county_code_reference_table`
 --
 
@@ -101,6 +206,7 @@ CREATE TABLE `inpatient_death_causes` (
 DROP TABLE IF EXISTS `inpatient_deaths`;
 CREATE TABLE `inpatient_deaths` (
   `icdcm_code` varchar(31) DEFAULT NULL,
+  `diagnosis_description` varchar(1027) DEFAULT NULL,
   `total` int DEFAULT NULL,
   `year` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -246,5 +352,5 @@ CREATE TABLE `wic_products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2025-01-17 14:41:15
+-- Dump completed on 2025-01-18 15:23:04
 

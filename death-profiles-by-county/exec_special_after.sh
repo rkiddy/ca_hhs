@@ -129,9 +129,6 @@ alter table death_profiles_by_month_by_residence add column data_revision_date v
 insert into death_profiles_by_month_by_residence select * from 2014_2018_final_deaths_by_month_by_residence_county;
 insert into death_profiles_by_month_by_residence select * from 2019_2023_final_deaths_by_month_by_residence_county;
 
-drop table if exists death_profiles_provisional_by_month_by_county;
-rename table 2024_provisional_deaths_by_month_by_county to death_profiles_provisional_by_month_by_county;
-
 EOF
 
 echo "sharing death_profiles_by_month_by_county..."
