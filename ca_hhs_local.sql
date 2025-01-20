@@ -31025,6 +31025,30 @@ CREATE TABLE `ischemic_stroke_30_day_mortality_and_30_day_readmission_353fe671` 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `jan_monthly_update_prescription_drugs_intro_to_the_market_excel`
+--
+
+DROP TABLE IF EXISTS `jan_monthly_update_prescription_drugs_intro_to_the_market_excel`;
+CREATE TABLE `jan_monthly_update_prescription_drugs_intro_to_the_market_excel` (
+  `manufacturer_name` varchar(37) DEFAULT NULL,
+  `ndc_number` varchar(11) DEFAULT NULL,
+  `drug_product_description` varchar(254) DEFAULT NULL,
+  `date_introduced_to_market` varchar(10) DEFAULT NULL,
+  `wac_at_introduction` varchar(12) DEFAULT NULL,
+  `marketing_pricing_plan_description` varchar(4996) DEFAULT NULL,
+  `marketing_pricing_plan_non_public_indicator` varchar(1) DEFAULT NULL,
+  `estimated_number_of_patients` varchar(9) DEFAULT NULL,
+  `breakthrough_therapy_indicator` varchar(1) DEFAULT NULL,
+  `priority_review_indicator` varchar(1) DEFAULT NULL,
+  `acquisition_date` varchar(10) DEFAULT NULL,
+  `acquisition_price` varchar(16) DEFAULT NULL,
+  `acquisition_price_non_public_indicator` varchar(1) DEFAULT NULL,
+  `acquisition_price_comment` varchar(974) DEFAULT NULL,
+  `general_comments` varchar(4994) DEFAULT NULL,
+  `supporting_documents` varchar(0) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `january_monthly_update_prescription_drug_wac_inc`
 --
 
@@ -34034,6 +34058,19 @@ CREATE TABLE `outpatient_influenza_like_illness_surveillance_data_by__9bfd4d40` 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `overtime_social_drivers_of_health_sdoh_and_prevent_hosp_rates`
+--
+
+DROP TABLE IF EXISTS `overtime_social_drivers_of_health_sdoh_and_prevent_hosp_rates`;
+CREATE TABLE `overtime_social_drivers_of_health_sdoh_and_prevent_hosp_rates` (
+  `patientcounty` varchar(15) DEFAULT NULL,
+  `year_str` varchar(4) DEFAULT NULL,
+  `raceethnicity` varchar(22) DEFAULT NULL,
+  `languagepayercategory` varchar(16) DEFAULT NULL,
+  `preventablehospitalizationspercent` varchar(23) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `pace_rates_calendar_year_2015`
 --
 
@@ -35776,6 +35813,32 @@ CREATE TABLE `q1_q4_2023_prescription_drug_wac_increases_5_year_history` (
   `history_effective_date` varchar(19) DEFAULT NULL,
   `wac_increase_amount` varchar(8) DEFAULT NULL,
   `wac_amount` varchar(9) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `q1_q4_2023_prescription_drugs_intro_to_market`
+--
+
+DROP TABLE IF EXISTS `q1_q4_2023_prescription_drugs_intro_to_market`;
+CREATE TABLE `q1_q4_2023_prescription_drugs_intro_to_market` (
+  `manufacturer_name` varchar(37) DEFAULT NULL,
+  `ndc_number` varchar(11) DEFAULT NULL,
+  `drug_product_description` varchar(255) DEFAULT NULL,
+  `drug_category` varchar(13) DEFAULT NULL,
+  `drug_category_source` varchar(13) DEFAULT NULL,
+  `date_introduced_to_market` varchar(10) DEFAULT NULL,
+  `wac_at_introduction` varchar(12) DEFAULT NULL,
+  `marketing_pricing_plan_description` varchar(3013) DEFAULT NULL,
+  `marketing_pricing_plan_non_public_indicator` varchar(1) DEFAULT NULL,
+  `estimated_number_of_patients` varchar(9) DEFAULT NULL,
+  `breakthrough_therapy_indicator` varchar(1) DEFAULT NULL,
+  `priority_review_indicator` varchar(1) DEFAULT NULL,
+  `acquisition_date` varchar(10) DEFAULT NULL,
+  `acquisition_price` varchar(15) DEFAULT NULL,
+  `acquisition_price_non_public_indicator` varchar(1) DEFAULT NULL,
+  `acquisition_price_comment` varchar(1548) DEFAULT NULL,
+  `general_comments` varchar(4982) DEFAULT NULL,
+  `supporting_documents` varchar(75) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -39733,5 +39796,4 @@ CREATE TABLE `young_ae_19_25_population_by_county` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2025-01-18 17:02:08
-
+-- Dump completed on 2025-01-19 15:56:43

@@ -352,5 +352,4 @@ CREATE TABLE `wic_products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2025-01-18 17:02:09
-
+-- Dump completed on 2025-01-19 15:56:43
