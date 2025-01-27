@@ -35,6 +35,11 @@ if [ $show_usage = "yes" ]; then
     exit 0
 fi
 
+ds=`pwd | awk 'BEGIN{FS="/"}{print $NF}'`
+
+echo ""
+echo "Dataset: $ds"
+
 # drive this via some variables.
 #
 # fetch - yes, I should fetch. If not, I already have data.
@@ -123,6 +128,8 @@ if [ $fetch = "yes" ]; then
             echo ""
             exit 1
         fi
+
+        /bin/rm -f sources/*
 
         unzip -o *.zip
 
@@ -219,6 +226,12 @@ else
 
     # report overall success.
     eval $upy ../update_time.py --result $(($r0+$r1+$r2))
+
+    if [ $(($r0+$r1+$r2)) -ne 0 ]; then
+        exit 1
+    fi
+
+    eval $upy ../update_sources.py
 
     if [ -f exec_special_after.sh ]; then
         echo "executing exec_special_after.sh..."
