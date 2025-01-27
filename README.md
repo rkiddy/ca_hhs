@@ -1,4 +1,3 @@
-(January 18, 2025)
 
 The system that I am setting up here attempts to do a few things.
 
@@ -17,4 +16,4 @@ whichever of the datasets that I have working. I have been working on the csv fi
 files. There are other Excel file types that my current python code cannot deal with, such as ".xls" files,
 ".xlsm" files, and so on. The issues with these may be small. I just have not bothered with them yet.
 
-More explaining to come.
+See the wiki for more details.
