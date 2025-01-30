@@ -20,7 +20,7 @@ name=`echo "select name from datasets where name = '"$ds"';" | ssh opencal mysql
 
 echo ""
 
-echo "select * from sources where ds_pk = $ds;" | ssh opencal mysql --table ca_hhs_meta
+echo "select * from sources where ds_pk = $ds \G" | ssh opencal mysql ca_hhs_meta
 
 echo ""
 
