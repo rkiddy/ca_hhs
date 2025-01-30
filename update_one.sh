@@ -237,6 +237,10 @@ else
         echo "executing exec_special_after.sh..."
         HOME=/home/ray bash exec_special_after.sh
     fi
+
+    if [ -f exec_special_after.sql ]; then
+        mysql -vvv ca_hhs < exec_special_after.sql
+    fi
 fi
 
 bash $HOME/mv_sources.sh .
