@@ -1,5 +1,5 @@
 export uuid1="8a359148-1b78-4ca0-ac9c-560eacd33a08"
 export uuid2="ef3a5a3b-9359-4e40-8a1a-ca590bd853ba"
 export id="california-hospital-ratings-for-transcatheter-aortic-valve-replacement-tavr-procedures"
-export hash="g7nnhd0m"
+export hash="376f2npx"
 export script="ratings"
