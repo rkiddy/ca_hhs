@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.40, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.41, for Linux (x86_64)
 --
 -- Host: localhost    Database: ca_hhs
 -- ------------------------------------------------------
--- Server version	8.0.40-0ubuntu0.20.04.1
+-- Server version	8.0.41-0ubuntu0.20.04.1
 
 
 --
@@ -352,4 +352,4 @@ CREATE TABLE `wic_products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2025-01-30  8:56:05
+-- Dump completed on 2025-01-31 12:33:01

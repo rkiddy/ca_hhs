@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.40, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.41, for Linux (x86_64)
 --
 -- Host: localhost    Database: ca_hhs
 -- ------------------------------------------------------
--- Server version	8.0.40-0ubuntu0.24.04.1
+-- Server version	8.0.41-0ubuntu0.24.04.1
 
 
 --
@@ -239,239 +239,6 @@ CREATE TABLE `1995_quarter_4_sum_of_four_quarters` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `1996_cy_hospital_annual_selected_file`
---
-
-DROP TABLE IF EXISTS `1996_cy_hospital_annual_selected_file`;
-CREATE TABLE `1996_cy_hospital_annual_selected_file` (
-  `fac_no` varchar(9) DEFAULT NULL,
-  `fac_name` varchar(44) DEFAULT NULL,
-  `beg_date` varchar(8) DEFAULT NULL,
-  `end_date` varchar(8) DEFAULT NULL,
-  `day_per` varchar(3) DEFAULT NULL,
-  `data_ind` varchar(7) DEFAULT NULL,
-  `audit_ind` varchar(0) DEFAULT NULL,
-  `county` varchar(2) DEFAULT NULL,
-  `hsa` varchar(2) DEFAULT NULL,
-  `hfpa` varchar(4) DEFAULT NULL,
-  `type_cntrl` varchar(11) DEFAULT NULL,
-  `type_care` varchar(11) DEFAULT NULL,
-  `type_hosp` varchar(20) DEFAULT NULL,
-  `teach_rurl` varchar(11) DEFAULT NULL,
-  `phone` varchar(13) DEFAULT NULL,
-  `address` varchar(31) DEFAULT NULL,
-  `city` varchar(19) DEFAULT NULL,
-  `zip_code` varchar(10) DEFAULT NULL,
-  `ceo` varchar(29) DEFAULT NULL,
-  `ceo_title` varchar(25) DEFAULT NULL,
-  `rpt_prep` varchar(28) DEFAULT NULL,
-  `owner` varchar(64) DEFAULT NULL,
-  `er_desig` varchar(1) DEFAULT NULL,
-  `mcar_pronum` varchar(8) DEFAULT NULL,
-  `mcal_pronum` varchar(9) DEFAULT NULL,
-  `reg_mcalnum` varchar(9) DEFAULT NULL,
-  `bed_lic` varchar(4) DEFAULT NULL,
-  `bed_avl` varchar(4) DEFAULT NULL,
-  `bed_stf` varchar(4) DEFAULT NULL,
-  `day_mcar` varchar(6) DEFAULT NULL,
-  `day_mcal` varchar(6) DEFAULT NULL,
-  `day_cnty` varchar(6) DEFAULT NULL,
-  `day_thrd` varchar(6) DEFAULT NULL,
-  `day_oth` varchar(6) DEFAULT NULL,
-  `day_tot` varchar(6) DEFAULT NULL,
-  `dis_mcar` varchar(5) DEFAULT NULL,
-  `dis_mcal` varchar(5) DEFAULT NULL,
-  `dis_cnty` varchar(5) DEFAULT NULL,
-  `dis_thrd` varchar(5) DEFAULT NULL,
-  `dis_oth` varchar(4) DEFAULT NULL,
-  `dis_tot` varchar(5) DEFAULT NULL,
-  `bed_acute` varchar(4) DEFAULT NULL,
-  `bed_psych` varchar(3) DEFAULT NULL,
-  `bed_chem` varchar(3) DEFAULT NULL,
-  `bed_rehab` varchar(3) DEFAULT NULL,
-  `bed_ltc` varchar(4) DEFAULT NULL,
-  `bed_resdnt` varchar(2) DEFAULT NULL,
-  `day_acute` varchar(6) DEFAULT NULL,
-  `day_psych` varchar(6) DEFAULT NULL,
-  `day_chem` varchar(5) DEFAULT NULL,
-  `day_rehab` varchar(5) DEFAULT NULL,
-  `day_ltc` varchar(6) DEFAULT NULL,
-  `day_resdnt` varchar(5) DEFAULT NULL,
-  `dis_acute` varchar(5) DEFAULT NULL,
-  `dis_psych` varchar(4) DEFAULT NULL,
-  `dis_chem` varchar(4) DEFAULT NULL,
-  `dis_rehab` varchar(3) DEFAULT NULL,
-  `dis_ltc` varchar(4) DEFAULT NULL,
-  `dis_resdnt` varchar(4) DEFAULT NULL,
-  `occ_lic` varchar(4) DEFAULT NULL,
-  `occ_avl` varchar(5) DEFAULT NULL,
-  `alos_all` varchar(6) DEFAULT NULL,
-  `alos_exltc` varchar(5) DEFAULT NULL,
-  `bas_nursry` varchar(2) DEFAULT NULL,
-  `day_nursry` varchar(5) DEFAULT NULL,
-  `dis_nursry` varchar(4) DEFAULT NULL,
-  `vis_mcar` varchar(6) DEFAULT NULL,
-  `vis_mcal` varchar(6) DEFAULT NULL,
-  `vis_cnty` varchar(6) DEFAULT NULL,
-  `vis_thrd` varchar(6) DEFAULT NULL,
-  `vis_oth` varchar(6) DEFAULT NULL,
-  `vis_tot` varchar(6) DEFAULT NULL,
-  `vis_er` varchar(6) DEFAULT NULL,
-  `vis_clin` varchar(6) DEFAULT NULL,
-  `vis_home` varchar(6) DEFAULT NULL,
-  `vis_ref_op` varchar(6) DEFAULT NULL,
-  `day_hmo` varchar(5) DEFAULT NULL,
-  `day_man_cr` varchar(5) DEFAULT NULL,
-  `vis_hmo` varchar(6) DEFAULT NULL,
-  `vis_man_cr` varchar(5) DEFAULT NULL,
-  `days_pips` varchar(5) DEFAULT NULL,
-  `op_room` varchar(2) DEFAULT NULL,
-  `op_min_ip` varchar(7) DEFAULT NULL,
-  `op_min_op` varchar(7) DEFAULT NULL,
-  `surg_ip` varchar(5) DEFAULT NULL,
-  `surg_op` varchar(5) DEFAULT NULL,
-  `card_cath` varchar(5) DEFAULT NULL,
-  `ct_scans` varchar(5) DEFAULT NULL,
-  `gr_pt_rev` varchar(10) DEFAULT NULL,
-  `ded_fr_rev` varchar(10) DEFAULT NULL,
-  `net_pt_rev` varchar(10) DEFAULT NULL,
-  `oth_op_rev` varchar(8) DEFAULT NULL,
-  `tot_op_exp` varchar(10) DEFAULT NULL,
-  `net_frm_op` varchar(9) DEFAULT NULL,
-  `nonop_rev` varchar(9) DEFAULT NULL,
-  `nonop_exp` varchar(8) DEFAULT NULL,
-  `inc_tax` varchar(8) DEFAULT NULL,
-  `ext_item` varchar(8) DEFAULT NULL,
-  `net_income` varchar(9) DEFAULT NULL,
-  `gr_rev_dly` varchar(10) DEFAULT NULL,
-  `gr_rev_amb` varchar(9) DEFAULT NULL,
-  `gr_rev_anc` varchar(10) DEFAULT NULL,
-  `gr_rev_pip` varchar(8) DEFAULT NULL,
-  `gr_ip_mcar` varchar(9) DEFAULT NULL,
-  `gr_ip_mcal` varchar(9) DEFAULT NULL,
-  `gr_ip_cnty` varchar(9) DEFAULT NULL,
-  `gr_ip_thrd` varchar(9) DEFAULT NULL,
-  `gr_ip_oth` varchar(8) DEFAULT NULL,
-  `gr_ip_tot` varchar(10) DEFAULT NULL,
-  `gr_op_mcar` varchar(8) DEFAULT NULL,
-  `gr_op_mcal` varchar(9) DEFAULT NULL,
-  `gr_op_cnty` varchar(9) DEFAULT NULL,
-  `gr_op_thrd` varchar(9) DEFAULT NULL,
-  `gr_op_oth` varchar(8) DEFAULT NULL,
-  `gr_op_tot` varchar(9) DEFAULT NULL,
-  `c_adj_mcar` varchar(9) DEFAULT NULL,
-  `c_adj_mcal` varchar(9) DEFAULT NULL,
-  `disp_855` varchar(10) DEFAULT NULL,
-  `c_adj_cnty` varchar(9) DEFAULT NULL,
-  `c_adj_hmo` varchar(9) DEFAULT NULL,
-  `cap_rev` varchar(1) DEFAULT NULL,
-  `c_adj_oth` varchar(9) DEFAULT NULL,
-  `bad_debt` varchar(8) DEFAULT NULL,
-  `char_hb` varchar(7) DEFAULT NULL,
-  `char_oth` varchar(8) DEFAULT NULL,
-  `sub_indgnt` varchar(8) DEFAULT NULL,
-  `ded_oth` varchar(8) DEFAULT NULL,
-  `netrv_mcar` varchar(9) DEFAULT NULL,
-  `netrv_mcal` varchar(9) DEFAULT NULL,
-  `netrv_cnty` varchar(8) DEFAULT NULL,
-  `netrv_thrd` varchar(9) DEFAULT NULL,
-  `netrv_oth` varchar(8) DEFAULT NULL,
-  `disp_trnfr` varchar(9) DEFAULT NULL,
-  `inter_tfr` varchar(9) DEFAULT NULL,
-  `contribtns` varchar(8) DEFAULT NULL,
-  `inc_invest` varchar(8) DEFAULT NULL,
-  `dist_rev` varchar(7) DEFAULT NULL,
-  `cnty_appro` varchar(9) DEFAULT NULL,
-  `exp_dly` varchar(9) DEFAULT NULL,
-  `exp_amb` varchar(9) DEFAULT NULL,
-  `exp_anc` varchar(9) DEFAULT NULL,
-  `exp_pip` varchar(8) DEFAULT NULL,
-  `exp_res` varchar(8) DEFAULT NULL,
-  `exp_ed` varchar(8) DEFAULT NULL,
-  `exp_gen` varchar(9) DEFAULT NULL,
-  `exp_fisc` varchar(8) DEFAULT NULL,
-  `exp_adm` varchar(8) DEFAULT NULL,
-  `exp_unassg` varchar(8) DEFAULT NULL,
-  `exp_sal` varchar(9) DEFAULT NULL,
-  `exp_ben` varchar(9) DEFAULT NULL,
-  `exp_phys` varchar(8) DEFAULT NULL,
-  `exp_othpro` varchar(8) DEFAULT NULL,
-  `exp_supp` varchar(8) DEFAULT NULL,
-  `exp_purch` varchar(8) DEFAULT NULL,
-  `exp_depre` varchar(8) DEFAULT NULL,
-  `exp_leases` varchar(8) DEFAULT NULL,
-  `exp_insur` varchar(8) DEFAULT NULL,
-  `exp_intrst` varchar(8) DEFAULT NULL,
-  `exp_oth` varchar(8) DEFAULT NULL,
-  `cur_asst` varchar(9) DEFAULT NULL,
-  `asst_limtd` varchar(9) DEFAULT NULL,
-  `net_ppe` varchar(10) DEFAULT NULL,
-  `const_prog` varchar(9) DEFAULT NULL,
-  `inv_oth` varchar(9) DEFAULT NULL,
-  `intan_asst` varchar(8) DEFAULT NULL,
-  `tot_asst` varchar(10) DEFAULT NULL,
-  `cur_liab` varchar(9) DEFAULT NULL,
-  `def_cred` varchar(9) DEFAULT NULL,
-  `net_ltdebt` varchar(9) DEFAULT NULL,
-  `equity` varchar(10) DEFAULT NULL,
-  `liab_eq` varchar(10) DEFAULT NULL,
-  `cash` varchar(9) DEFAULT NULL,
-  `bldgs` varchar(10) DEFAULT NULL,
-  `equipment` varchar(9) DEFAULT NULL,
-  `tot_ppe` varchar(10) DEFAULT NULL,
-  `acc_depre` varchar(11) DEFAULT NULL,
-  `mort_pay` varchar(8) DEFAULT NULL,
-  `cap_lease` varchar(8) DEFAULT NULL,
-  `bond_pay` varchar(9) DEFAULT NULL,
-  `tot_ltdebt` varchar(9) DEFAULT NULL,
-  `cur_mat` varchar(8) DEFAULT NULL,
-  `inter_rec` varchar(9) DEFAULT NULL,
-  `inter_pay` varchar(9) DEFAULT NULL,
-  `cur_rat` varchar(7) DEFAULT NULL,
-  `days_ar` varchar(7) DEFAULT NULL,
-  `bd_rate` varchar(5) DEFAULT NULL,
-  `ltd_asst` varchar(7) DEFAULT NULL,
-  `net_rtn_eq` varchar(8) DEFAULT NULL,
-  `op_margin` varchar(9) DEFAULT NULL,
-  `age_plant` varchar(5) DEFAULT NULL,
-  `ppe_bed` varchar(7) DEFAULT NULL,
-  `hosp_emp` varchar(4) DEFAULT NULL,
-  `hosp_fte` varchar(4) DEFAULT NULL,
-  `nurs_emp` varchar(11) DEFAULT NULL,
-  `prod_hrs` varchar(8) DEFAULT NULL,
-  `non_prd_hr` varchar(7) DEFAULT NULL,
-  `paid_hrs` varchar(8) DEFAULT NULL,
-  `med_staff` varchar(4) DEFAULT NULL,
-  `stdnt_fte` varchar(4) DEFAULT NULL,
-  `prd_hr_mgt` varchar(7) DEFAULT NULL,
-  `prd_hr_tch` varchar(7) DEFAULT NULL,
-  `prd_hr_rn` varchar(7) DEFAULT NULL,
-  `prd_hr_lvn` varchar(6) DEFAULT NULL,
-  `prd_hr_aid` varchar(7) DEFAULT NULL,
-  `prd_hr_clr` varchar(7) DEFAULT NULL,
-  `prd_hr_env` varchar(7) DEFAULT NULL,
-  `prd_hr_oth` varchar(7) DEFAULT NULL,
-  `cnt_hr_rn` varchar(6) DEFAULT NULL,
-  `cnt_hr_oth` varchar(6) DEFAULT NULL,
-  `prd_hr_dly` varchar(7) DEFAULT NULL,
-  `prd_hr_amb` varchar(7) DEFAULT NULL,
-  `prd_hr_anc` varchar(7) DEFAULT NULL,
-  `prd_hr_ed` varchar(7) DEFAULT NULL,
-  `prd_hr_gen` varchar(7) DEFAULT NULL,
-  `prd_hr_fis` varchar(7) DEFAULT NULL,
-  `prd_hr_adm` varchar(7) DEFAULT NULL,
-  `prd_hr_non` varchar(6) DEFAULT NULL,
-  `pd_hr_dly` varchar(7) DEFAULT NULL,
-  `pd_hr_amb` varchar(7) DEFAULT NULL,
-  `pd_hr_anc` varchar(7) DEFAULT NULL,
-  `pd_hr_ed` varchar(7) DEFAULT NULL,
-  `pd_hr_gen` varchar(7) DEFAULT NULL,
-  `pd_hr_fis` varchar(7) DEFAULT NULL,
-  `pd_hr_adm` varchar(7) DEFAULT NULL,
-  `pd_hr_non` varchar(6) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
 -- Table structure for table `1996_quarter_4_sum_of_four_quarters`
 --
 
@@ -554,239 +321,6 @@ CREATE TABLE `1996_quarter_4_sum_of_four_quarters` (
   `puripday` varchar(11) DEFAULT NULL,
   `puripexp` varchar(11) DEFAULT NULL,
   `puriprev` varchar(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `1997_cy_hospital_annual_selected_file`
---
-
-DROP TABLE IF EXISTS `1997_cy_hospital_annual_selected_file`;
-CREATE TABLE `1997_cy_hospital_annual_selected_file` (
-  `fac_no` varchar(9) DEFAULT NULL,
-  `fac_name` varchar(44) DEFAULT NULL,
-  `beg_date` varchar(8) DEFAULT NULL,
-  `end_date` varchar(8) DEFAULT NULL,
-  `day_per` varchar(3) DEFAULT NULL,
-  `data_ind` varchar(7) DEFAULT NULL,
-  `audit_ind` varchar(16) DEFAULT NULL,
-  `county` varchar(2) DEFAULT NULL,
-  `hsa` varchar(2) DEFAULT NULL,
-  `hfpa` varchar(4) DEFAULT NULL,
-  `type_cntrl` varchar(11) DEFAULT NULL,
-  `type_care` varchar(11) DEFAULT NULL,
-  `type_hosp` varchar(20) DEFAULT NULL,
-  `teach_rurl` varchar(11) DEFAULT NULL,
-  `phone` varchar(13) DEFAULT NULL,
-  `address` varchar(31) DEFAULT NULL,
-  `city` varchar(19) DEFAULT NULL,
-  `zip_code` varchar(10) DEFAULT NULL,
-  `ceo` varchar(29) DEFAULT NULL,
-  `ceo_title` varchar(25) DEFAULT NULL,
-  `rpt_prep` varchar(27) DEFAULT NULL,
-  `owner` varchar(62) DEFAULT NULL,
-  `er_desig` varchar(1) DEFAULT NULL,
-  `mcar_pronum` varchar(7) DEFAULT NULL,
-  `mcal_pronum` varchar(9) DEFAULT NULL,
-  `reg_mcalnum` varchar(9) DEFAULT NULL,
-  `bed_lic` varchar(4) DEFAULT NULL,
-  `bed_avl` varchar(4) DEFAULT NULL,
-  `bed_stf` varchar(4) DEFAULT NULL,
-  `day_mcar` varchar(6) DEFAULT NULL,
-  `day_mcal` varchar(6) DEFAULT NULL,
-  `day_cnty` varchar(6) DEFAULT NULL,
-  `day_thrd` varchar(6) DEFAULT NULL,
-  `day_oth` varchar(6) DEFAULT NULL,
-  `day_tot` varchar(6) DEFAULT NULL,
-  `dis_mcar` varchar(5) DEFAULT NULL,
-  `dis_mcal` varchar(5) DEFAULT NULL,
-  `dis_cnty` varchar(5) DEFAULT NULL,
-  `dis_thrd` varchar(5) DEFAULT NULL,
-  `dis_oth` varchar(4) DEFAULT NULL,
-  `dis_tot` varchar(5) DEFAULT NULL,
-  `bed_acute` varchar(4) DEFAULT NULL,
-  `bed_psych` varchar(3) DEFAULT NULL,
-  `bed_chem` varchar(3) DEFAULT NULL,
-  `bed_rehab` varchar(2) DEFAULT NULL,
-  `bed_ltc` varchar(4) DEFAULT NULL,
-  `bed_resdnt` varchar(3) DEFAULT NULL,
-  `day_acute` varchar(6) DEFAULT NULL,
-  `day_psych` varchar(6) DEFAULT NULL,
-  `day_chem` varchar(5) DEFAULT NULL,
-  `day_rehab` varchar(5) DEFAULT NULL,
-  `day_ltc` varchar(6) DEFAULT NULL,
-  `day_resdnt` varchar(5) DEFAULT NULL,
-  `dis_acute` varchar(5) DEFAULT NULL,
-  `dis_psych` varchar(4) DEFAULT NULL,
-  `dis_chem` varchar(4) DEFAULT NULL,
-  `dis_rehab` varchar(4) DEFAULT NULL,
-  `dis_ltc` varchar(4) DEFAULT NULL,
-  `dis_resdnt` varchar(4) DEFAULT NULL,
-  `occ_lic` varchar(4) DEFAULT NULL,
-  `occ_avl` varchar(5) DEFAULT NULL,
-  `alos_all` varchar(6) DEFAULT NULL,
-  `alos_exltc` varchar(6) DEFAULT NULL,
-  `bas_nursry` varchar(2) DEFAULT NULL,
-  `day_nursry` varchar(5) DEFAULT NULL,
-  `dis_nursry` varchar(4) DEFAULT NULL,
-  `vis_mcar` varchar(6) DEFAULT NULL,
-  `vis_mcal` varchar(6) DEFAULT NULL,
-  `vis_cnty` varchar(6) DEFAULT NULL,
-  `vis_thrd` varchar(6) DEFAULT NULL,
-  `vis_oth` varchar(5) DEFAULT NULL,
-  `vis_tot` varchar(6) DEFAULT NULL,
-  `vis_er` varchar(6) DEFAULT NULL,
-  `vis_clin` varchar(6) DEFAULT NULL,
-  `vis_home` varchar(6) DEFAULT NULL,
-  `vis_ref_op` varchar(6) DEFAULT NULL,
-  `day_hmo` varchar(5) DEFAULT NULL,
-  `day_man_cr` varchar(5) DEFAULT NULL,
-  `vis_hmo` varchar(6) DEFAULT NULL,
-  `vis_man_cr` varchar(6) DEFAULT NULL,
-  `days_pips` varchar(5) DEFAULT NULL,
-  `op_room` varchar(2) DEFAULT NULL,
-  `op_min_ip` varchar(7) DEFAULT NULL,
-  `op_min_op` varchar(7) DEFAULT NULL,
-  `surg_ip` varchar(5) DEFAULT NULL,
-  `surg_op` varchar(5) DEFAULT NULL,
-  `card_cath` varchar(5) DEFAULT NULL,
-  `ct_scans` varchar(5) DEFAULT NULL,
-  `gr_pt_rev` varchar(10) DEFAULT NULL,
-  `ded_fr_rev` varchar(10) DEFAULT NULL,
-  `net_pt_rev` varchar(10) DEFAULT NULL,
-  `oth_op_rev` varchar(8) DEFAULT NULL,
-  `tot_op_exp` varchar(10) DEFAULT NULL,
-  `net_frm_op` varchar(10) DEFAULT NULL,
-  `nonop_rev` varchar(9) DEFAULT NULL,
-  `nonop_exp` varchar(8) DEFAULT NULL,
-  `inc_tax` varchar(8) DEFAULT NULL,
-  `ext_item` varchar(8) DEFAULT NULL,
-  `net_income` varchar(9) DEFAULT NULL,
-  `gr_rev_dly` varchar(10) DEFAULT NULL,
-  `gr_rev_amb` varchar(9) DEFAULT NULL,
-  `gr_rev_anc` varchar(10) DEFAULT NULL,
-  `gr_rev_pip` varchar(8) DEFAULT NULL,
-  `gr_ip_mcar` varchar(9) DEFAULT NULL,
-  `gr_ip_mcal` varchar(9) DEFAULT NULL,
-  `gr_ip_cnty` varchar(9) DEFAULT NULL,
-  `gr_ip_thrd` varchar(9) DEFAULT NULL,
-  `gr_ip_oth` varchar(8) DEFAULT NULL,
-  `gr_ip_tot` varchar(10) DEFAULT NULL,
-  `gr_op_mcar` varchar(9) DEFAULT NULL,
-  `gr_op_mcal` varchar(8) DEFAULT NULL,
-  `gr_op_cnty` varchar(9) DEFAULT NULL,
-  `gr_op_thrd` varchar(9) DEFAULT NULL,
-  `gr_op_oth` varchar(8) DEFAULT NULL,
-  `gr_op_tot` varchar(9) DEFAULT NULL,
-  `c_adj_mcar` varchar(9) DEFAULT NULL,
-  `c_adj_mcal` varchar(9) DEFAULT NULL,
-  `disp_855` varchar(10) DEFAULT NULL,
-  `c_adj_cnty` varchar(9) DEFAULT NULL,
-  `c_adj_hmo` varchar(9) DEFAULT NULL,
-  `cap_rev` varchar(9) DEFAULT NULL,
-  `c_adj_oth` varchar(8) DEFAULT NULL,
-  `bad_debt` varchar(8) DEFAULT NULL,
-  `char_hb` varchar(7) DEFAULT NULL,
-  `char_oth` varchar(8) DEFAULT NULL,
-  `sub_indgnt` varchar(8) DEFAULT NULL,
-  `ded_oth` varchar(9) DEFAULT NULL,
-  `netrv_mcar` varchar(9) DEFAULT NULL,
-  `netrv_mcal` varchar(9) DEFAULT NULL,
-  `netrv_cnty` varchar(8) DEFAULT NULL,
-  `netrv_thrd` varchar(9) DEFAULT NULL,
-  `netrv_oth` varchar(9) DEFAULT NULL,
-  `disp_trnfr` varchar(9) DEFAULT NULL,
-  `inter_tfr` varchar(9) DEFAULT NULL,
-  `contribtns` varchar(8) DEFAULT NULL,
-  `inc_invest` varchar(8) DEFAULT NULL,
-  `dist_rev` varchar(7) DEFAULT NULL,
-  `cnty_appro` varchar(9) DEFAULT NULL,
-  `exp_dly` varchar(9) DEFAULT NULL,
-  `exp_amb` varchar(9) DEFAULT NULL,
-  `exp_anc` varchar(9) DEFAULT NULL,
-  `exp_pip` varchar(8) DEFAULT NULL,
-  `exp_res` varchar(8) DEFAULT NULL,
-  `exp_ed` varchar(8) DEFAULT NULL,
-  `exp_gen` varchar(9) DEFAULT NULL,
-  `exp_fisc` varchar(8) DEFAULT NULL,
-  `exp_adm` varchar(8) DEFAULT NULL,
-  `exp_unassg` varchar(8) DEFAULT NULL,
-  `exp_sal` varchar(9) DEFAULT NULL,
-  `exp_ben` varchar(9) DEFAULT NULL,
-  `exp_phys` varchar(8) DEFAULT NULL,
-  `exp_othpro` varchar(8) DEFAULT NULL,
-  `exp_supp` varchar(9) DEFAULT NULL,
-  `exp_purch` varchar(9) DEFAULT NULL,
-  `exp_depre` varchar(8) DEFAULT NULL,
-  `exp_leases` varchar(8) DEFAULT NULL,
-  `exp_insur` varchar(8) DEFAULT NULL,
-  `exp_intrst` varchar(8) DEFAULT NULL,
-  `exp_oth` varchar(8) DEFAULT NULL,
-  `cur_asst` varchar(9) DEFAULT NULL,
-  `asst_limtd` varchar(9) DEFAULT NULL,
-  `net_ppe` varchar(10) DEFAULT NULL,
-  `const_prog` varchar(9) DEFAULT NULL,
-  `inv_oth` varchar(9) DEFAULT NULL,
-  `intan_asst` varchar(8) DEFAULT NULL,
-  `tot_asst` varchar(10) DEFAULT NULL,
-  `cur_liab` varchar(9) DEFAULT NULL,
-  `def_cred` varchar(9) DEFAULT NULL,
-  `net_ltdebt` varchar(9) DEFAULT NULL,
-  `equity` varchar(10) DEFAULT NULL,
-  `liab_eq` varchar(10) DEFAULT NULL,
-  `cash` varchar(9) DEFAULT NULL,
-  `bldgs` varchar(10) DEFAULT NULL,
-  `equipment` varchar(9) DEFAULT NULL,
-  `tot_ppe` varchar(10) DEFAULT NULL,
-  `acc_depre` varchar(11) DEFAULT NULL,
-  `mort_pay` varchar(8) DEFAULT NULL,
-  `cap_lease` varchar(8) DEFAULT NULL,
-  `bond_pay` varchar(9) DEFAULT NULL,
-  `tot_ltdebt` varchar(9) DEFAULT NULL,
-  `cur_mat` varchar(8) DEFAULT NULL,
-  `inter_rec` varchar(9) DEFAULT NULL,
-  `inter_pay` varchar(9) DEFAULT NULL,
-  `cur_rat` varchar(6) DEFAULT NULL,
-  `days_ar` varchar(7) DEFAULT NULL,
-  `bd_rate` varchar(5) DEFAULT NULL,
-  `ltd_asst` varchar(6) DEFAULT NULL,
-  `net_rtn_eq` varchar(7) DEFAULT NULL,
-  `op_margin` varchar(9) DEFAULT NULL,
-  `age_plant` varchar(7) DEFAULT NULL,
-  `ppe_bed` varchar(7) DEFAULT NULL,
-  `hosp_emp` varchar(4) DEFAULT NULL,
-  `hosp_fte` varchar(4) DEFAULT NULL,
-  `nurs_emp` varchar(11) DEFAULT NULL,
-  `prod_hrs` varchar(8) DEFAULT NULL,
-  `non_prd_hr` varchar(7) DEFAULT NULL,
-  `paid_hrs` varchar(8) DEFAULT NULL,
-  `med_staff` varchar(4) DEFAULT NULL,
-  `stdnt_fte` varchar(3) DEFAULT NULL,
-  `prd_hr_mgt` varchar(7) DEFAULT NULL,
-  `prd_hr_tch` varchar(7) DEFAULT NULL,
-  `prd_hr_rn` varchar(7) DEFAULT NULL,
-  `prd_hr_lvn` varchar(6) DEFAULT NULL,
-  `prd_hr_aid` varchar(6) DEFAULT NULL,
-  `prd_hr_clr` varchar(7) DEFAULT NULL,
-  `prd_hr_env` varchar(7) DEFAULT NULL,
-  `prd_hr_oth` varchar(7) DEFAULT NULL,
-  `cnt_hr_rn` varchar(7) DEFAULT NULL,
-  `cnt_hr_oth` varchar(6) DEFAULT NULL,
-  `prd_hr_dly` varchar(7) DEFAULT NULL,
-  `prd_hr_amb` varchar(7) DEFAULT NULL,
-  `prd_hr_anc` varchar(7) DEFAULT NULL,
-  `prd_hr_ed` varchar(7) DEFAULT NULL,
-  `prd_hr_gen` varchar(7) DEFAULT NULL,
-  `prd_hr_fis` varchar(6) DEFAULT NULL,
-  `prd_hr_adm` varchar(7) DEFAULT NULL,
-  `prd_hr_non` varchar(6) DEFAULT NULL,
-  `pd_hr_dly` varchar(7) DEFAULT NULL,
-  `pd_hr_amb` varchar(7) DEFAULT NULL,
-  `pd_hr_anc` varchar(7) DEFAULT NULL,
-  `pd_hr_ed` varchar(7) DEFAULT NULL,
-  `pd_hr_gen` varchar(7) DEFAULT NULL,
-  `pd_hr_fis` varchar(7) DEFAULT NULL,
-  `pd_hr_adm` varchar(7) DEFAULT NULL,
-  `pd_hr_non` varchar(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -1298,239 +832,6 @@ CREATE TABLE `1997_quarter_4_sum_of_four_quarters` (
   `puripday` varchar(11) DEFAULT NULL,
   `puripexp` varchar(11) DEFAULT NULL,
   `puriprev` varchar(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Table structure for table `1998_cy_hospital_annual_selected_file`
---
-
-DROP TABLE IF EXISTS `1998_cy_hospital_annual_selected_file`;
-CREATE TABLE `1998_cy_hospital_annual_selected_file` (
-  `fac_no` varchar(9) DEFAULT NULL,
-  `fac_name` varchar(44) DEFAULT NULL,
-  `beg_date` varchar(8) DEFAULT NULL,
-  `end_date` varchar(8) DEFAULT NULL,
-  `day_per` varchar(3) DEFAULT NULL,
-  `data_ind` varchar(7) DEFAULT NULL,
-  `audit_ind` varchar(16) DEFAULT NULL,
-  `county` varchar(2) DEFAULT NULL,
-  `hsa` varchar(2) DEFAULT NULL,
-  `hfpa` varchar(4) DEFAULT NULL,
-  `type_cntrl` varchar(11) DEFAULT NULL,
-  `type_care` varchar(11) DEFAULT NULL,
-  `type_hosp` varchar(20) DEFAULT NULL,
-  `teach_rurl` varchar(11) DEFAULT NULL,
-  `phone` varchar(13) DEFAULT NULL,
-  `address` varchar(30) DEFAULT NULL,
-  `city` varchar(19) DEFAULT NULL,
-  `zip_code` varchar(10) DEFAULT NULL,
-  `ceo` varchar(29) DEFAULT NULL,
-  `ceo_title` varchar(25) DEFAULT NULL,
-  `rpt_prep` varchar(28) DEFAULT NULL,
-  `owner` varchar(60) DEFAULT NULL,
-  `er_desig` varchar(1) DEFAULT NULL,
-  `mcar_pronum` varchar(7) DEFAULT NULL,
-  `mcal_pronum` varchar(9) DEFAULT NULL,
-  `reg_mcalnum` varchar(9) DEFAULT NULL,
-  `bed_lic` varchar(4) DEFAULT NULL,
-  `bed_avl` varchar(4) DEFAULT NULL,
-  `bed_stf` varchar(4) DEFAULT NULL,
-  `day_mcar` varchar(6) DEFAULT NULL,
-  `day_mcal` varchar(6) DEFAULT NULL,
-  `day_cnty` varchar(6) DEFAULT NULL,
-  `day_thrd` varchar(6) DEFAULT NULL,
-  `day_oth` varchar(6) DEFAULT NULL,
-  `day_tot` varchar(6) DEFAULT NULL,
-  `dis_mcar` varchar(5) DEFAULT NULL,
-  `dis_mcal` varchar(5) DEFAULT NULL,
-  `dis_cnty` varchar(5) DEFAULT NULL,
-  `dis_thrd` varchar(5) DEFAULT NULL,
-  `dis_oth` varchar(4) DEFAULT NULL,
-  `dis_tot` varchar(5) DEFAULT NULL,
-  `bed_acute` varchar(4) DEFAULT NULL,
-  `bed_psych` varchar(3) DEFAULT NULL,
-  `bed_chem` varchar(3) DEFAULT NULL,
-  `bed_rehab` varchar(2) DEFAULT NULL,
-  `bed_ltc` varchar(4) DEFAULT NULL,
-  `bed_resdnt` varchar(2) DEFAULT NULL,
-  `day_acute` varchar(6) DEFAULT NULL,
-  `day_psych` varchar(6) DEFAULT NULL,
-  `day_chem` varchar(5) DEFAULT NULL,
-  `day_rehab` varchar(5) DEFAULT NULL,
-  `day_ltc` varchar(6) DEFAULT NULL,
-  `day_resdnt` varchar(5) DEFAULT NULL,
-  `dis_acute` varchar(5) DEFAULT NULL,
-  `dis_psych` varchar(4) DEFAULT NULL,
-  `dis_chem` varchar(4) DEFAULT NULL,
-  `dis_rehab` varchar(3) DEFAULT NULL,
-  `dis_ltc` varchar(4) DEFAULT NULL,
-  `dis_resdnt` varchar(3) DEFAULT NULL,
-  `occ_lic` varchar(4) DEFAULT NULL,
-  `occ_avl` varchar(4) DEFAULT NULL,
-  `alos_all` varchar(6) DEFAULT NULL,
-  `alos_exltc` varchar(6) DEFAULT NULL,
-  `bas_nursry` varchar(2) DEFAULT NULL,
-  `day_nursry` varchar(5) DEFAULT NULL,
-  `dis_nursry` varchar(4) DEFAULT NULL,
-  `vis_mcar` varchar(6) DEFAULT NULL,
-  `vis_mcal` varchar(6) DEFAULT NULL,
-  `vis_cnty` varchar(6) DEFAULT NULL,
-  `vis_thrd` varchar(6) DEFAULT NULL,
-  `vis_oth` varchar(5) DEFAULT NULL,
-  `vis_tot` varchar(7) DEFAULT NULL,
-  `vis_er` varchar(6) DEFAULT NULL,
-  `vis_clin` varchar(6) DEFAULT NULL,
-  `vis_home` varchar(6) DEFAULT NULL,
-  `vis_ref_op` varchar(6) DEFAULT NULL,
-  `day_hmo` varchar(5) DEFAULT NULL,
-  `day_man_cr` varchar(5) DEFAULT NULL,
-  `vis_hmo` varchar(6) DEFAULT NULL,
-  `vis_man_cr` varchar(6) DEFAULT NULL,
-  `days_pips` varchar(5) DEFAULT NULL,
-  `op_room` varchar(2) DEFAULT NULL,
-  `op_min_ip` varchar(7) DEFAULT NULL,
-  `op_min_op` varchar(7) DEFAULT NULL,
-  `surg_ip` varchar(5) DEFAULT NULL,
-  `surg_op` varchar(5) DEFAULT NULL,
-  `card_cath` varchar(6) DEFAULT NULL,
-  `ct_scans` varchar(5) DEFAULT NULL,
-  `gr_pt_rev` varchar(10) DEFAULT NULL,
-  `ded_fr_rev` varchar(10) DEFAULT NULL,
-  `net_pt_rev` varchar(10) DEFAULT NULL,
-  `oth_op_rev` varchar(8) DEFAULT NULL,
-  `tot_op_exp` varchar(10) DEFAULT NULL,
-  `net_frm_op` varchar(10) DEFAULT NULL,
-  `nonop_rev` varchar(9) DEFAULT NULL,
-  `nonop_exp` varchar(8) DEFAULT NULL,
-  `inc_tax` varchar(8) DEFAULT NULL,
-  `ext_item` varchar(9) DEFAULT NULL,
-  `net_income` varchar(10) DEFAULT NULL,
-  `gr_rev_dly` varchar(10) DEFAULT NULL,
-  `gr_rev_amb` varchar(9) DEFAULT NULL,
-  `gr_rev_anc` varchar(10) DEFAULT NULL,
-  `gr_rev_pip` varchar(8) DEFAULT NULL,
-  `gr_ip_mcar` varchar(9) DEFAULT NULL,
-  `gr_ip_mcal` varchar(9) DEFAULT NULL,
-  `gr_ip_cnty` varchar(9) DEFAULT NULL,
-  `gr_ip_thrd` varchar(9) DEFAULT NULL,
-  `gr_ip_oth` varchar(8) DEFAULT NULL,
-  `gr_ip_tot` varchar(10) DEFAULT NULL,
-  `gr_op_mcar` varchar(9) DEFAULT NULL,
-  `gr_op_mcal` varchar(8) DEFAULT NULL,
-  `gr_op_cnty` varchar(9) DEFAULT NULL,
-  `gr_op_thrd` varchar(9) DEFAULT NULL,
-  `gr_op_oth` varchar(8) DEFAULT NULL,
-  `gr_op_tot` varchar(9) DEFAULT NULL,
-  `c_adj_mcar` varchar(9) DEFAULT NULL,
-  `c_adj_mcal` varchar(9) DEFAULT NULL,
-  `disp_855` varchar(10) DEFAULT NULL,
-  `c_adj_cnty` varchar(9) DEFAULT NULL,
-  `c_adj_hmo` varchar(9) DEFAULT NULL,
-  `cap_rev` varchar(9) DEFAULT NULL,
-  `c_adj_oth` varchar(9) DEFAULT NULL,
-  `bad_debt` varchar(8) DEFAULT NULL,
-  `char_hb` varchar(7) DEFAULT NULL,
-  `char_oth` varchar(8) DEFAULT NULL,
-  `sub_indgnt` varchar(9) DEFAULT NULL,
-  `ded_oth` varchar(9) DEFAULT NULL,
-  `netrv_mcar` varchar(9) DEFAULT NULL,
-  `netrv_mcal` varchar(9) DEFAULT NULL,
-  `netrv_cnty` varchar(8) DEFAULT NULL,
-  `netrv_thrd` varchar(9) DEFAULT NULL,
-  `netrv_oth` varchar(8) DEFAULT NULL,
-  `disp_trnfr` varchar(9) DEFAULT NULL,
-  `inter_tfr` varchar(9) DEFAULT NULL,
-  `contribtns` varchar(8) DEFAULT NULL,
-  `inc_invest` varchar(8) DEFAULT NULL,
-  `dist_rev` varchar(7) DEFAULT NULL,
-  `cnty_appro` varchar(9) DEFAULT NULL,
-  `exp_dly` varchar(9) DEFAULT NULL,
-  `exp_amb` varchar(9) DEFAULT NULL,
-  `exp_anc` varchar(9) DEFAULT NULL,
-  `exp_pip` varchar(8) DEFAULT NULL,
-  `exp_res` varchar(8) DEFAULT NULL,
-  `exp_ed` varchar(8) DEFAULT NULL,
-  `exp_gen` varchar(9) DEFAULT NULL,
-  `exp_fisc` varchar(8) DEFAULT NULL,
-  `exp_adm` varchar(8) DEFAULT NULL,
-  `exp_unassg` varchar(8) DEFAULT NULL,
-  `exp_sal` varchar(9) DEFAULT NULL,
-  `exp_ben` varchar(9) DEFAULT NULL,
-  `exp_phys` varchar(8) DEFAULT NULL,
-  `exp_othpro` varchar(8) DEFAULT NULL,
-  `exp_supp` varchar(9) DEFAULT NULL,
-  `exp_purch` varchar(9) DEFAULT NULL,
-  `exp_depre` varchar(8) DEFAULT NULL,
-  `exp_leases` varchar(8) DEFAULT NULL,
-  `exp_insur` varchar(8) DEFAULT NULL,
-  `exp_intrst` varchar(8) DEFAULT NULL,
-  `exp_oth` varchar(8) DEFAULT NULL,
-  `cur_asst` varchar(9) DEFAULT NULL,
-  `asst_limtd` varchar(9) DEFAULT NULL,
-  `net_ppe` varchar(10) DEFAULT NULL,
-  `const_prog` varchar(9) DEFAULT NULL,
-  `inv_oth` varchar(9) DEFAULT NULL,
-  `intan_asst` varchar(8) DEFAULT NULL,
-  `tot_asst` varchar(10) DEFAULT NULL,
-  `cur_liab` varchar(9) DEFAULT NULL,
-  `def_cred` varchar(9) DEFAULT NULL,
-  `net_ltdebt` varchar(9) DEFAULT NULL,
-  `equity` varchar(10) DEFAULT NULL,
-  `liab_eq` varchar(10) DEFAULT NULL,
-  `cash` varchar(9) DEFAULT NULL,
-  `bldgs` varchar(10) DEFAULT NULL,
-  `equipment` varchar(9) DEFAULT NULL,
-  `tot_ppe` varchar(10) DEFAULT NULL,
-  `acc_depre` varchar(9) DEFAULT NULL,
-  `mort_pay` varchar(8) DEFAULT NULL,
-  `cap_lease` varchar(8) DEFAULT NULL,
-  `bond_pay` varchar(9) DEFAULT NULL,
-  `tot_ltdebt` varchar(9) DEFAULT NULL,
-  `cur_mat` varchar(7) DEFAULT NULL,
-  `inter_rec` varchar(9) DEFAULT NULL,
-  `inter_pay` varchar(9) DEFAULT NULL,
-  `cur_rat` varchar(6) DEFAULT NULL,
-  `days_ar` varchar(6) DEFAULT NULL,
-  `bd_rate` varchar(5) DEFAULT NULL,
-  `ltd_asst` varchar(6) DEFAULT NULL,
-  `net_rtn_eq` varchar(8) DEFAULT NULL,
-  `op_margin` varchar(8) DEFAULT NULL,
-  `age_plant` varchar(7) DEFAULT NULL,
-  `ppe_bed` varchar(7) DEFAULT NULL,
-  `hosp_emp` varchar(4) DEFAULT NULL,
-  `hosp_fte` varchar(4) DEFAULT NULL,
-  `nurs_emp` varchar(11) DEFAULT NULL,
-  `prod_hrs` varchar(8) DEFAULT NULL,
-  `non_prd_hr` varchar(7) DEFAULT NULL,
-  `paid_hrs` varchar(8) DEFAULT NULL,
-  `med_staff` varchar(4) DEFAULT NULL,
-  `stdnt_fte` varchar(3) DEFAULT NULL,
-  `prd_hr_mgt` varchar(7) DEFAULT NULL,
-  `prd_hr_tch` varchar(7) DEFAULT NULL,
-  `prd_hr_rn` varchar(7) DEFAULT NULL,
-  `prd_hr_lvn` varchar(6) DEFAULT NULL,
-  `prd_hr_aid` varchar(6) DEFAULT NULL,
-  `prd_hr_clr` varchar(7) DEFAULT NULL,
-  `prd_hr_env` varchar(7) DEFAULT NULL,
-  `prd_hr_oth` varchar(7) DEFAULT NULL,
-  `cnt_hr_rn` varchar(6) DEFAULT NULL,
-  `cnt_hr_oth` varchar(6) DEFAULT NULL,
-  `prd_hr_dly` varchar(7) DEFAULT NULL,
-  `prd_hr_amb` varchar(7) DEFAULT NULL,
-  `prd_hr_anc` varchar(7) DEFAULT NULL,
-  `prd_hr_ed` varchar(7) DEFAULT NULL,
-  `prd_hr_gen` varchar(7) DEFAULT NULL,
-  `prd_hr_fis` varchar(6) DEFAULT NULL,
-  `prd_hr_adm` varchar(7) DEFAULT NULL,
-  `prd_hr_non` varchar(6) DEFAULT NULL,
-  `pd_hr_dly` varchar(7) DEFAULT NULL,
-  `pd_hr_amb` varchar(7) DEFAULT NULL,
-  `pd_hr_anc` varchar(7) DEFAULT NULL,
-  `pd_hr_ed` varchar(7) DEFAULT NULL,
-  `pd_hr_gen` varchar(7) DEFAULT NULL,
-  `pd_hr_fis` varchar(7) DEFAULT NULL,
-  `pd_hr_adm` varchar(7) DEFAULT NULL,
-  `pd_hr_non` varchar(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -2741,28 +2042,25 @@ CREATE TABLE `2004_2008_final_deaths_by_month_by_residence_county` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Table structure for table `2004_2010_documentation_for_page_column_line`
---
-
-DROP TABLE IF EXISTS `2004_2010_documentation_for_page_column_line`;
-CREATE TABLE `2004_2010_documentation_for_page_column_line` (
-  `page` varchar(4) DEFAULT NULL,
-  `col` varchar(2) DEFAULT NULL,
-  `line` varchar(3) DEFAULT NULL,
-  `pcl` varchar(13) DEFAULT NULL,
-  `data_file_description` varchar(59) DEFAULT NULL,
-  `full_data_file_description` varchar(137) DEFAULT NULL,
-  `worksheet_1__2` varchar(10) DEFAULT NULL,
-  `2007__10_column` varchar(34) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
 -- Table structure for table `2005_hospital_inpatient_diagnosis_code_frequency`
 --
 
 DROP TABLE IF EXISTS `2005_hospital_inpatient_diagnosis_code_frequency`;
 CREATE TABLE `2005_hospital_inpatient_diagnosis_code_frequency` (
-  `2005_patient_discharge_data__diagnosis_code_frequencies__notes` varchar(0) DEFAULT NULL
+  `icdcmcode` varchar(6) DEFAULT NULL,
+  `diagnosisdesc` varchar(65) DEFAULT NULL,
+  `totaldiag` varchar(7) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2005_hospital_inpatient_procedure_code_frequency`
+--
+
+DROP TABLE IF EXISTS `2005_hospital_inpatient_procedure_code_frequency`;
+CREATE TABLE `2005_hospital_inpatient_procedure_code_frequency` (
+  `icdcmcode` varchar(5) DEFAULT NULL,
+  `proceduredesc` varchar(65) DEFAULT NULL,
+  `totalproc` varchar(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -2771,7 +2069,31 @@ CREATE TABLE `2005_hospital_inpatient_diagnosis_code_frequency` (
 
 DROP TABLE IF EXISTS `2006_hospital_inpatient_diagnosis_code_frequency`;
 CREATE TABLE `2006_hospital_inpatient_diagnosis_code_frequency` (
-  `2006_patient_discharge_data__diagnosis_code_frequencies__notes` varchar(0) DEFAULT NULL
+  `icdcmcode` varchar(6) DEFAULT NULL,
+  `diagnosisdesc` varchar(65) DEFAULT NULL,
+  `totaldiag` varchar(7) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2006_hospital_inpatient_external_cause_of_injury_morb_code_freq`
+--
+
+DROP TABLE IF EXISTS `2006_hospital_inpatient_external_cause_of_injury_morb_code_freq`;
+CREATE TABLE `2006_hospital_inpatient_external_cause_of_injury_morb_code_freq` (
+  `extcausecode` varchar(6) DEFAULT NULL,
+  `extcausedesc` varchar(60) DEFAULT NULL,
+  `totalextcausecodes` varchar(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2006_hospital_inpatient_procedure_code_frequency`
+--
+
+DROP TABLE IF EXISTS `2006_hospital_inpatient_procedure_code_frequency`;
+CREATE TABLE `2006_hospital_inpatient_procedure_code_frequency` (
+  `icdcmcode` varchar(5) DEFAULT NULL,
+  `proceduredesc` varchar(65) DEFAULT NULL,
+  `totalproc` varchar(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -2780,7 +2102,31 @@ CREATE TABLE `2006_hospital_inpatient_diagnosis_code_frequency` (
 
 DROP TABLE IF EXISTS `2007_hospital_inpatient_diagnosis_code_frequency`;
 CREATE TABLE `2007_hospital_inpatient_diagnosis_code_frequency` (
-  `2007_patient_discharge_data__diagnosis_code_frequencies__notes` varchar(0) DEFAULT NULL
+  `icdcmcode` varchar(6) DEFAULT NULL,
+  `diagnosisdesc` varchar(65) DEFAULT NULL,
+  `totaldiag` varchar(7) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2007_hospital_inpatient_external_cause_of_injury_morb_code_freq`
+--
+
+DROP TABLE IF EXISTS `2007_hospital_inpatient_external_cause_of_injury_morb_code_freq`;
+CREATE TABLE `2007_hospital_inpatient_external_cause_of_injury_morb_code_freq` (
+  `extcausecode` varchar(6) DEFAULT NULL,
+  `extcausedesc` varchar(60) DEFAULT NULL,
+  `totalextcausecodes` varchar(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2007_hospital_inpatient_procedure_code_frequency`
+--
+
+DROP TABLE IF EXISTS `2007_hospital_inpatient_procedure_code_frequency`;
+CREATE TABLE `2007_hospital_inpatient_procedure_code_frequency` (
+  `icdcmcode` varchar(5) DEFAULT NULL,
+  `proceduredesc` varchar(65) DEFAULT NULL,
+  `totalproc` varchar(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -2789,7 +2135,285 @@ CREATE TABLE `2007_hospital_inpatient_diagnosis_code_frequency` (
 
 DROP TABLE IF EXISTS `2008_hospital_inpatient_diagnosis_code_frequency`;
 CREATE TABLE `2008_hospital_inpatient_diagnosis_code_frequency` (
-  `2008_patient_discharge_data__diagnosis_code_frequencies__notes` varchar(0) DEFAULT NULL
+  `icdcmcode` varchar(6) DEFAULT NULL,
+  `diagnosisdesc` varchar(65) DEFAULT NULL,
+  `totaldiag` varchar(7) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2008_hospital_inpatient_external_cause_of_injury_morb_code_freq`
+--
+
+DROP TABLE IF EXISTS `2008_hospital_inpatient_external_cause_of_injury_morb_code_freq`;
+CREATE TABLE `2008_hospital_inpatient_external_cause_of_injury_morb_code_freq` (
+  `extcausecode` varchar(6) DEFAULT NULL,
+  `extcausedesc` varchar(60) DEFAULT NULL,
+  `totalextcausecodes` varchar(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2008_hospital_inpatient_procedure_code_frequency`
+--
+
+DROP TABLE IF EXISTS `2008_hospital_inpatient_procedure_code_frequency`;
+CREATE TABLE `2008_hospital_inpatient_procedure_code_frequency` (
+  `icdcmcode` varchar(5) DEFAULT NULL,
+  `proceduredesc` varchar(65) DEFAULT NULL,
+  `totalproc` varchar(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2009_2010_fy_hospital_annual_selected_file_september_2011_ext`
+--
+
+DROP TABLE IF EXISTS `2009_2010_fy_hospital_annual_selected_file_september_2011_ext`;
+CREATE TABLE `2009_2010_fy_hospital_annual_selected_file_september_2011_ext` (
+  `fac_no` varchar(9) DEFAULT NULL,
+  `fac_name` varchar(63) DEFAULT NULL,
+  `beg_date` varchar(19) DEFAULT NULL,
+  `end_date` varchar(19) DEFAULT NULL,
+  `day_per` varchar(3) DEFAULT NULL,
+  `data_ind` varchar(10) DEFAULT NULL,
+  `audit_ind` varchar(21) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `hsa` varchar(2) DEFAULT NULL,
+  `hfpa` varchar(4) DEFAULT NULL,
+  `type_cntrl` varchar(11) DEFAULT NULL,
+  `type_care` varchar(11) DEFAULT NULL,
+  `type_hosp` varchar(20) DEFAULT NULL,
+  `teach_rurl` varchar(11) DEFAULT NULL,
+  `phone` varchar(14) DEFAULT NULL,
+  `address` varchar(30) DEFAULT NULL,
+  `city` varchar(19) DEFAULT NULL,
+  `zip_code` varchar(10) DEFAULT NULL,
+  `ceo` varchar(28) DEFAULT NULL,
+  `ceo_title` varchar(18) DEFAULT NULL,
+  `web_site` varchar(62) DEFAULT NULL,
+  `owner` varchar(57) DEFAULT NULL,
+  `rpt_prep` varchar(28) DEFAULT NULL,
+  `org_name` varchar(57) DEFAULT NULL,
+  `er_desig` varchar(1) DEFAULT NULL,
+  `mcar_pronum` varchar(7) DEFAULT NULL,
+  `mcal_pronum` varchar(9) DEFAULT NULL,
+  `reg_mcalnum` varchar(9) DEFAULT NULL,
+  `bed_lic` varchar(4) DEFAULT NULL,
+  `bed_avl` varchar(4) DEFAULT NULL,
+  `bed_stf` varchar(4) DEFAULT NULL,
+  `day_mcar_tr` varchar(6) DEFAULT NULL,
+  `day_mcar_mc` varchar(5) DEFAULT NULL,
+  `day_mcal_tr` varchar(6) DEFAULT NULL,
+  `day_mcal_mc` varchar(5) DEFAULT NULL,
+  `day_cnty` varchar(5) DEFAULT NULL,
+  `day_thrd_tr` varchar(6) DEFAULT NULL,
+  `day_thrd_mc` varchar(5) DEFAULT NULL,
+  `day_oth_ind` varchar(5) DEFAULT NULL,
+  `day_oth` varchar(6) DEFAULT NULL,
+  `day_tot` varchar(6) DEFAULT NULL,
+  `dis_mcar_tr` varchar(5) DEFAULT NULL,
+  `dis_mcar_mc` varchar(5) DEFAULT NULL,
+  `dis_mcal_tr` varchar(5) DEFAULT NULL,
+  `dis_mcal_mc` varchar(4) DEFAULT NULL,
+  `dis_cnty` varchar(5) DEFAULT NULL,
+  `dis_thrd_tr` varchar(4) DEFAULT NULL,
+  `dis_thrd_mc` varchar(5) DEFAULT NULL,
+  `dis_oth_ind` varchar(4) DEFAULT NULL,
+  `dis_oth` varchar(4) DEFAULT NULL,
+  `dis_tot` varchar(5) DEFAULT NULL,
+  `bed_acute` varchar(3) DEFAULT NULL,
+  `bed_psych` varchar(3) DEFAULT NULL,
+  `bed_chem` varchar(3) DEFAULT NULL,
+  `bed_rehab` varchar(3) DEFAULT NULL,
+  `bed_ltc` varchar(4) DEFAULT NULL,
+  `bed_resdnt` varchar(3) DEFAULT NULL,
+  `day_acute` varchar(6) DEFAULT NULL,
+  `day_psych` varchar(6) DEFAULT NULL,
+  `day_chem` varchar(5) DEFAULT NULL,
+  `day_rehab` varchar(5) DEFAULT NULL,
+  `day_ltc` varchar(6) DEFAULT NULL,
+  `day_resdnt` varchar(5) DEFAULT NULL,
+  `dis_acute` varchar(5) DEFAULT NULL,
+  `dis_psych` varchar(4) DEFAULT NULL,
+  `dis_chem` varchar(4) DEFAULT NULL,
+  `dis_rehab` varchar(4) DEFAULT NULL,
+  `dis_ltc` varchar(4) DEFAULT NULL,
+  `dis_resdnt` varchar(2) DEFAULT NULL,
+  `occ_lic` varchar(5) DEFAULT NULL,
+  `occ_avl` varchar(5) DEFAULT NULL,
+  `alos_all` varchar(6) DEFAULT NULL,
+  `alos_exltc` varchar(6) DEFAULT NULL,
+  `bas_nursry` varchar(3) DEFAULT NULL,
+  `day_nursry` varchar(5) DEFAULT NULL,
+  `dis_nursry` varchar(4) DEFAULT NULL,
+  `vis_mcar_tr` varchar(6) DEFAULT NULL,
+  `vis_mcar_mc` varchar(5) DEFAULT NULL,
+  `vis_mcal_tr` varchar(6) DEFAULT NULL,
+  `vis_mcal_mc` varchar(6) DEFAULT NULL,
+  `vis_cnty` varchar(6) DEFAULT NULL,
+  `vis_thrd_tr` varchar(6) DEFAULT NULL,
+  `vis_thrd_mc` varchar(6) DEFAULT NULL,
+  `vis_oth_ind` varchar(5) DEFAULT NULL,
+  `vis_oth` varchar(6) DEFAULT NULL,
+  `vis_tot` varchar(6) DEFAULT NULL,
+  `vis_er` varchar(6) DEFAULT NULL,
+  `vis_clin` varchar(6) DEFAULT NULL,
+  `vis_home` varchar(6) DEFAULT NULL,
+  `vis_ref_op` varchar(6) DEFAULT NULL,
+  `days_pips` varchar(5) DEFAULT NULL,
+  `op_room` varchar(2) DEFAULT NULL,
+  `op_min_ip` varchar(7) DEFAULT NULL,
+  `op_min_op` varchar(7) DEFAULT NULL,
+  `surg_ip` varchar(5) DEFAULT NULL,
+  `surg_op` varchar(5) DEFAULT NULL,
+  `nat_births` varchar(4) DEFAULT NULL,
+  `c_sections` varchar(4) DEFAULT NULL,
+  `gr_pt_rev` varchar(10) DEFAULT NULL,
+  `ded_fr_rev` varchar(10) DEFAULT NULL,
+  `tot_cap_rev` varchar(9) DEFAULT NULL,
+  `net_pt_rev` varchar(10) DEFAULT NULL,
+  `oth_op_rev` varchar(9) DEFAULT NULL,
+  `tot_op_exp` varchar(10) DEFAULT NULL,
+  `net_frm_op` varchar(10) DEFAULT NULL,
+  `nonop_rev` varchar(10) DEFAULT NULL,
+  `nonop_exp` varchar(9) DEFAULT NULL,
+  `inc_tax` varchar(8) DEFAULT NULL,
+  `ext_item` varchar(7) DEFAULT NULL,
+  `net_income` varchar(10) DEFAULT NULL,
+  `gr_rev_dly` varchar(10) DEFAULT NULL,
+  `gr_rev_amb` varchar(9) DEFAULT NULL,
+  `gr_rev_anc` varchar(10) DEFAULT NULL,
+  `gr_ip_mcar_tr` varchar(10) DEFAULT NULL,
+  `gr_ip_mcar_mc` varchar(9) DEFAULT NULL,
+  `gr_ip_mcal_tr` varchar(10) DEFAULT NULL,
+  `gr_ip_mcal_mc` varchar(9) DEFAULT NULL,
+  `gr_ip_cnty` varchar(9) DEFAULT NULL,
+  `gr_ip_thrd_tr` varchar(9) DEFAULT NULL,
+  `gr_ip_thrd_mc` varchar(10) DEFAULT NULL,
+  `gr_ip_oth_ind` varchar(9) DEFAULT NULL,
+  `gr_ip_oth` varchar(9) DEFAULT NULL,
+  `gr_ip_tot` varchar(10) DEFAULT NULL,
+  `gr_op_mcar_tr` varchar(9) DEFAULT NULL,
+  `gr_op_mcar_mc` varchar(9) DEFAULT NULL,
+  `gr_op_mcal_tr` varchar(9) DEFAULT NULL,
+  `gr_op_mcal_mc` varchar(9) DEFAULT NULL,
+  `gr_op_cnty` varchar(9) DEFAULT NULL,
+  `gr_op_thrd_tr` varchar(9) DEFAULT NULL,
+  `gr_op_thrd_mc` varchar(10) DEFAULT NULL,
+  `gr_op_oth_ind` varchar(8) DEFAULT NULL,
+  `gr_op_oth` varchar(9) DEFAULT NULL,
+  `gr_op_tot` varchar(10) DEFAULT NULL,
+  `c_adj_mcar_tr` varchar(10) DEFAULT NULL,
+  `c_adj_mcar_mc` varchar(9) DEFAULT NULL,
+  `c_adj_mcal_tr` varchar(9) DEFAULT NULL,
+  `c_adj_mcal_mc` varchar(9) DEFAULT NULL,
+  `disp_855` varchar(10) DEFAULT NULL,
+  `c_adj_cnty` varchar(9) DEFAULT NULL,
+  `c_adj_thrd_tr` varchar(9) DEFAULT NULL,
+  `c_adj_thrd_mc` varchar(10) DEFAULT NULL,
+  `bad_debt` varchar(9) DEFAULT NULL,
+  `char_hb` varchar(1) DEFAULT NULL,
+  `char_oth` varchar(9) DEFAULT NULL,
+  `sub_indgnt` varchar(8) DEFAULT NULL,
+  `ded_oth` varchar(9) DEFAULT NULL,
+  `cap_rev_mcar` varchar(9) DEFAULT NULL,
+  `cap_rev_mcal` varchar(8) DEFAULT NULL,
+  `cap_rev_cnty` varchar(7) DEFAULT NULL,
+  `cap_rev_thrd` varchar(9) DEFAULT NULL,
+  `netrv_mcar_tr` varchar(9) DEFAULT NULL,
+  `netrv_mcar_mc` varchar(9) DEFAULT NULL,
+  `netrv_mcal_tr` varchar(9) DEFAULT NULL,
+  `netrv_mcal_mc` varchar(8) DEFAULT NULL,
+  `netrv_cnty` varchar(8) DEFAULT NULL,
+  `netrv_thrd_tr` varchar(9) DEFAULT NULL,
+  `netrv_thrd_mc` varchar(10) DEFAULT NULL,
+  `netrv_oth_ind` varchar(9) DEFAULT NULL,
+  `netrv_oth` varchar(9) DEFAULT NULL,
+  `disp_trnfr` varchar(9) DEFAULT NULL,
+  `inter_tfr` varchar(10) DEFAULT NULL,
+  `contribtns` varchar(8) DEFAULT NULL,
+  `inc_invest` varchar(10) DEFAULT NULL,
+  `dist_rev` varchar(7) DEFAULT NULL,
+  `cnty_appro` varchar(9) DEFAULT NULL,
+  `exp_dly` varchar(9) DEFAULT NULL,
+  `exp_amb` varchar(9) DEFAULT NULL,
+  `exp_anc` varchar(9) DEFAULT NULL,
+  `exp_pip` varchar(8) DEFAULT NULL,
+  `exp_pop` varchar(8) DEFAULT NULL,
+  `exp_res` varchar(9) DEFAULT NULL,
+  `exp_ed` varchar(8) DEFAULT NULL,
+  `exp_gen` varchar(9) DEFAULT NULL,
+  `exp_fisc` varchar(8) DEFAULT NULL,
+  `exp_adm` varchar(9) DEFAULT NULL,
+  `exp_unassg` varchar(9) DEFAULT NULL,
+  `exp_sal` varchar(9) DEFAULT NULL,
+  `exp_ben` varchar(9) DEFAULT NULL,
+  `exp_phys` varchar(9) DEFAULT NULL,
+  `exp_othpro` varchar(8) DEFAULT NULL,
+  `exp_supp` varchar(9) DEFAULT NULL,
+  `exp_purch` varchar(9) DEFAULT NULL,
+  `exp_depre` varchar(8) DEFAULT NULL,
+  `exp_leases` varchar(8) DEFAULT NULL,
+  `exp_insur` varchar(8) DEFAULT NULL,
+  `exp_intrst` varchar(8) DEFAULT NULL,
+  `exp_oth` varchar(9) DEFAULT NULL,
+  `cur_asst` varchar(10) DEFAULT NULL,
+  `asst_limtd` varchar(9) DEFAULT NULL,
+  `net_ppe` varchar(10) DEFAULT NULL,
+  `const_prog` varchar(9) DEFAULT NULL,
+  `inv_oth` varchar(9) DEFAULT NULL,
+  `intan_asst` varchar(8) DEFAULT NULL,
+  `tot_asst` varchar(11) DEFAULT NULL,
+  `curr_liab` varchar(10) DEFAULT NULL,
+  `def_cred` varchar(10) DEFAULT NULL,
+  `net_ltdebt` varchar(10) DEFAULT NULL,
+  `equity` varchar(10) DEFAULT NULL,
+  `liab_eq` varchar(11) DEFAULT NULL,
+  `cash` varchar(9) DEFAULT NULL,
+  `accts_rec` varchar(10) DEFAULT NULL,
+  `allow_uncoll` varchar(11) DEFAULT NULL,
+  `bldgs` varchar(10) DEFAULT NULL,
+  `equipment` varchar(9) DEFAULT NULL,
+  `tot_ppe` varchar(10) DEFAULT NULL,
+  `acc_depre` varchar(10) DEFAULT NULL,
+  `mort_pay` varchar(8) DEFAULT NULL,
+  `cap_lease` varchar(9) DEFAULT NULL,
+  `bond_pay` varchar(10) DEFAULT NULL,
+  `tot_ltdebt` varchar(10) DEFAULT NULL,
+  `cur_mat` varchar(9) DEFAULT NULL,
+  `inter_rec` varchar(10) DEFAULT NULL,
+  `inter_pay` varchar(10) DEFAULT NULL,
+  `hosp_fte` varchar(4) DEFAULT NULL,
+  `nurs_fte` varchar(4) DEFAULT NULL,
+  `prod_hrs` varchar(8) DEFAULT NULL,
+  `non_prd_hr` varchar(7) DEFAULT NULL,
+  `paid_hrs` varchar(8) DEFAULT NULL,
+  `med_staff` varchar(4) DEFAULT NULL,
+  `stdnt_fte` varchar(3) DEFAULT NULL,
+  `prd_hr_mgt` varchar(7) DEFAULT NULL,
+  `prd_hr_tch` varchar(7) DEFAULT NULL,
+  `prd_hr_rn` varchar(7) DEFAULT NULL,
+  `prd_hr_lvn` varchar(6) DEFAULT NULL,
+  `prd_hr_aid` varchar(7) DEFAULT NULL,
+  `prd_hr_clr` varchar(7) DEFAULT NULL,
+  `prd_hr_env` varchar(7) DEFAULT NULL,
+  `prd_hr_oth` varchar(7) DEFAULT NULL,
+  `cnt_hr_rn` varchar(6) DEFAULT NULL,
+  `cnt_hr_oth` varchar(6) DEFAULT NULL,
+  `prd_hr_dly` varchar(7) DEFAULT NULL,
+  `prd_hr_amb` varchar(7) DEFAULT NULL,
+  `prd_hr_anc` varchar(7) DEFAULT NULL,
+  `prd_hr_ed` varchar(7) DEFAULT NULL,
+  `prd_hr_gen` varchar(7) DEFAULT NULL,
+  `prd_hr_fis` varchar(7) DEFAULT NULL,
+  `prd_hr_adm` varchar(7) DEFAULT NULL,
+  `prd_hr_non` varchar(6) DEFAULT NULL,
+  `pd_hr_dly` varchar(7) DEFAULT NULL,
+  `pd_hr_amb` varchar(7) DEFAULT NULL,
+  `pd_hr_anc` varchar(7) DEFAULT NULL,
+  `pd_hr_ed` varchar(7) DEFAULT NULL,
+  `pd_hr_gen` varchar(7) DEFAULT NULL,
+  `pd_hr_fis` varchar(7) DEFAULT NULL,
+  `pd_hr_adm` varchar(7) DEFAULT NULL,
+  `pd_hr_non` varchar(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -2831,12 +2455,544 @@ CREATE TABLE `2009_2013_final_deaths_by_month_by_residence_county` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `2009_cy_hospital_annual_selected_file_september_2011_extract`
+--
+
+DROP TABLE IF EXISTS `2009_cy_hospital_annual_selected_file_september_2011_extract`;
+CREATE TABLE `2009_cy_hospital_annual_selected_file_september_2011_extract` (
+  `fac_no` varchar(9) DEFAULT NULL,
+  `fac_name` varchar(63) DEFAULT NULL,
+  `beg_date` varchar(19) DEFAULT NULL,
+  `end_date` varchar(19) DEFAULT NULL,
+  `day_per` varchar(3) DEFAULT NULL,
+  `data_ind` varchar(10) DEFAULT NULL,
+  `audit_ind` varchar(21) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `hsa` varchar(2) DEFAULT NULL,
+  `hfpa` varchar(4) DEFAULT NULL,
+  `type_cntrl` varchar(11) DEFAULT NULL,
+  `type_care` varchar(11) DEFAULT NULL,
+  `type_hosp` varchar(20) DEFAULT NULL,
+  `teach_rurl` varchar(11) DEFAULT NULL,
+  `phone` varchar(14) DEFAULT NULL,
+  `address` varchar(30) DEFAULT NULL,
+  `city` varchar(19) DEFAULT NULL,
+  `zip_code` varchar(10) DEFAULT NULL,
+  `ceo` varchar(28) DEFAULT NULL,
+  `ceo_title` varchar(18) DEFAULT NULL,
+  `web_site` varchar(41) DEFAULT NULL,
+  `owner` varchar(57) DEFAULT NULL,
+  `rpt_prep` varchar(28) DEFAULT NULL,
+  `org_name` varchar(56) DEFAULT NULL,
+  `er_desig` varchar(1) DEFAULT NULL,
+  `mcar_pronum` varchar(7) DEFAULT NULL,
+  `mcal_pronum` varchar(9) DEFAULT NULL,
+  `reg_mcalnum` varchar(9) DEFAULT NULL,
+  `bed_lic` varchar(4) DEFAULT NULL,
+  `bed_avl` varchar(4) DEFAULT NULL,
+  `bed_stf` varchar(4) DEFAULT NULL,
+  `day_mcar_tr` varchar(6) DEFAULT NULL,
+  `day_mcar_mc` varchar(5) DEFAULT NULL,
+  `day_mcal_tr` varchar(6) DEFAULT NULL,
+  `day_mcal_mc` varchar(5) DEFAULT NULL,
+  `day_cnty` varchar(5) DEFAULT NULL,
+  `day_thrd_tr` varchar(6) DEFAULT NULL,
+  `day_thrd_mc` varchar(5) DEFAULT NULL,
+  `day_oth_ind` varchar(5) DEFAULT NULL,
+  `day_oth` varchar(6) DEFAULT NULL,
+  `day_tot` varchar(6) DEFAULT NULL,
+  `dis_mcar_tr` varchar(5) DEFAULT NULL,
+  `dis_mcar_mc` varchar(5) DEFAULT NULL,
+  `dis_mcal_tr` varchar(5) DEFAULT NULL,
+  `dis_mcal_mc` varchar(4) DEFAULT NULL,
+  `dis_cnty` varchar(5) DEFAULT NULL,
+  `dis_thrd_tr` varchar(4) DEFAULT NULL,
+  `dis_thrd_mc` varchar(5) DEFAULT NULL,
+  `dis_oth_ind` varchar(4) DEFAULT NULL,
+  `dis_oth` varchar(4) DEFAULT NULL,
+  `dis_tot` varchar(5) DEFAULT NULL,
+  `bed_acute` varchar(3) DEFAULT NULL,
+  `bed_psych` varchar(3) DEFAULT NULL,
+  `bed_chem` varchar(3) DEFAULT NULL,
+  `bed_rehab` varchar(3) DEFAULT NULL,
+  `bed_ltc` varchar(4) DEFAULT NULL,
+  `bed_resdnt` varchar(3) DEFAULT NULL,
+  `day_acute` varchar(6) DEFAULT NULL,
+  `day_psych` varchar(6) DEFAULT NULL,
+  `day_chem` varchar(5) DEFAULT NULL,
+  `day_rehab` varchar(5) DEFAULT NULL,
+  `day_ltc` varchar(6) DEFAULT NULL,
+  `day_resdnt` varchar(5) DEFAULT NULL,
+  `dis_acute` varchar(5) DEFAULT NULL,
+  `dis_psych` varchar(4) DEFAULT NULL,
+  `dis_chem` varchar(4) DEFAULT NULL,
+  `dis_rehab` varchar(4) DEFAULT NULL,
+  `dis_ltc` varchar(4) DEFAULT NULL,
+  `dis_resdnt` varchar(2) DEFAULT NULL,
+  `occ_lic` varchar(5) DEFAULT NULL,
+  `occ_avl` varchar(5) DEFAULT NULL,
+  `alos_all` varchar(6) DEFAULT NULL,
+  `alos_exltc` varchar(6) DEFAULT NULL,
+  `bas_nursry` varchar(3) DEFAULT NULL,
+  `day_nursry` varchar(5) DEFAULT NULL,
+  `dis_nursry` varchar(4) DEFAULT NULL,
+  `vis_mcar_tr` varchar(6) DEFAULT NULL,
+  `vis_mcar_mc` varchar(5) DEFAULT NULL,
+  `vis_mcal_tr` varchar(6) DEFAULT NULL,
+  `vis_mcal_mc` varchar(6) DEFAULT NULL,
+  `vis_cnty` varchar(6) DEFAULT NULL,
+  `vis_thrd_tr` varchar(6) DEFAULT NULL,
+  `vis_thrd_mc` varchar(6) DEFAULT NULL,
+  `vis_oth_ind` varchar(5) DEFAULT NULL,
+  `vis_oth` varchar(6) DEFAULT NULL,
+  `vis_tot` varchar(6) DEFAULT NULL,
+  `vis_er` varchar(6) DEFAULT NULL,
+  `vis_clin` varchar(6) DEFAULT NULL,
+  `vis_home` varchar(6) DEFAULT NULL,
+  `vis_ref_op` varchar(6) DEFAULT NULL,
+  `days_pips` varchar(5) DEFAULT NULL,
+  `op_room` varchar(2) DEFAULT NULL,
+  `op_min_ip` varchar(7) DEFAULT NULL,
+  `op_min_op` varchar(7) DEFAULT NULL,
+  `surg_ip` varchar(5) DEFAULT NULL,
+  `surg_op` varchar(5) DEFAULT NULL,
+  `nat_births` varchar(4) DEFAULT NULL,
+  `c_sections` varchar(4) DEFAULT NULL,
+  `gr_pt_rev` varchar(10) DEFAULT NULL,
+  `ded_fr_rev` varchar(10) DEFAULT NULL,
+  `tot_cap_rev` varchar(9) DEFAULT NULL,
+  `net_pt_rev` varchar(10) DEFAULT NULL,
+  `oth_op_rev` varchar(9) DEFAULT NULL,
+  `tot_op_exp` varchar(10) DEFAULT NULL,
+  `net_frm_op` varchar(10) DEFAULT NULL,
+  `nonop_rev` varchar(10) DEFAULT NULL,
+  `nonop_exp` varchar(8) DEFAULT NULL,
+  `inc_tax` varchar(8) DEFAULT NULL,
+  `ext_item` varchar(7) DEFAULT NULL,
+  `net_income` varchar(10) DEFAULT NULL,
+  `gr_rev_dly` varchar(10) DEFAULT NULL,
+  `gr_rev_amb` varchar(9) DEFAULT NULL,
+  `gr_rev_anc` varchar(10) DEFAULT NULL,
+  `gr_ip_mcar_tr` varchar(10) DEFAULT NULL,
+  `gr_ip_mcar_mc` varchar(9) DEFAULT NULL,
+  `gr_ip_mcal_tr` varchar(10) DEFAULT NULL,
+  `gr_ip_mcal_mc` varchar(9) DEFAULT NULL,
+  `gr_ip_cnty` varchar(9) DEFAULT NULL,
+  `gr_ip_thrd_tr` varchar(9) DEFAULT NULL,
+  `gr_ip_thrd_mc` varchar(10) DEFAULT NULL,
+  `gr_ip_oth_ind` varchar(9) DEFAULT NULL,
+  `gr_ip_oth` varchar(9) DEFAULT NULL,
+  `gr_ip_tot` varchar(10) DEFAULT NULL,
+  `gr_op_mcar_tr` varchar(9) DEFAULT NULL,
+  `gr_op_mcar_mc` varchar(9) DEFAULT NULL,
+  `gr_op_mcal_tr` varchar(9) DEFAULT NULL,
+  `gr_op_mcal_mc` varchar(9) DEFAULT NULL,
+  `gr_op_cnty` varchar(9) DEFAULT NULL,
+  `gr_op_thrd_tr` varchar(9) DEFAULT NULL,
+  `gr_op_thrd_mc` varchar(10) DEFAULT NULL,
+  `gr_op_oth_ind` varchar(8) DEFAULT NULL,
+  `gr_op_oth` varchar(8) DEFAULT NULL,
+  `gr_op_tot` varchar(10) DEFAULT NULL,
+  `c_adj_mcar_tr` varchar(10) DEFAULT NULL,
+  `c_adj_mcar_mc` varchar(9) DEFAULT NULL,
+  `c_adj_mcal_tr` varchar(9) DEFAULT NULL,
+  `c_adj_mcal_mc` varchar(9) DEFAULT NULL,
+  `disp_855` varchar(10) DEFAULT NULL,
+  `c_adj_cnty` varchar(9) DEFAULT NULL,
+  `c_adj_thrd_tr` varchar(9) DEFAULT NULL,
+  `c_adj_thrd_mc` varchar(10) DEFAULT NULL,
+  `bad_debt` varchar(9) DEFAULT NULL,
+  `char_hb` varchar(6) DEFAULT NULL,
+  `char_oth` varchar(9) DEFAULT NULL,
+  `sub_indgnt` varchar(8) DEFAULT NULL,
+  `ded_oth` varchar(9) DEFAULT NULL,
+  `cap_rev_mcar` varchar(9) DEFAULT NULL,
+  `cap_rev_mcal` varchar(8) DEFAULT NULL,
+  `cap_rev_cnty` varchar(7) DEFAULT NULL,
+  `cap_rev_thrd` varchar(8) DEFAULT NULL,
+  `netrv_mcar_tr` varchar(9) DEFAULT NULL,
+  `netrv_mcar_mc` varchar(9) DEFAULT NULL,
+  `netrv_mcal_tr` varchar(9) DEFAULT NULL,
+  `netrv_mcal_mc` varchar(8) DEFAULT NULL,
+  `netrv_cnty` varchar(8) DEFAULT NULL,
+  `netrv_thrd_tr` varchar(9) DEFAULT NULL,
+  `netrv_thrd_mc` varchar(10) DEFAULT NULL,
+  `netrv_oth_ind` varchar(8) DEFAULT NULL,
+  `netrv_oth` varchar(9) DEFAULT NULL,
+  `disp_trnfr` varchar(9) DEFAULT NULL,
+  `inter_tfr` varchar(10) DEFAULT NULL,
+  `contribtns` varchar(8) DEFAULT NULL,
+  `inc_invest` varchar(10) DEFAULT NULL,
+  `dist_rev` varchar(7) DEFAULT NULL,
+  `cnty_appro` varchar(9) DEFAULT NULL,
+  `exp_dly` varchar(9) DEFAULT NULL,
+  `exp_amb` varchar(9) DEFAULT NULL,
+  `exp_anc` varchar(9) DEFAULT NULL,
+  `exp_pip` varchar(8) DEFAULT NULL,
+  `exp_pop` varchar(8) DEFAULT NULL,
+  `exp_res` varchar(9) DEFAULT NULL,
+  `exp_ed` varchar(8) DEFAULT NULL,
+  `exp_gen` varchar(9) DEFAULT NULL,
+  `exp_fisc` varchar(8) DEFAULT NULL,
+  `exp_adm` varchar(9) DEFAULT NULL,
+  `exp_unassg` varchar(9) DEFAULT NULL,
+  `exp_sal` varchar(9) DEFAULT NULL,
+  `exp_ben` varchar(9) DEFAULT NULL,
+  `exp_phys` varchar(9) DEFAULT NULL,
+  `exp_othpro` varchar(8) DEFAULT NULL,
+  `exp_supp` varchar(9) DEFAULT NULL,
+  `exp_purch` varchar(9) DEFAULT NULL,
+  `exp_depre` varchar(8) DEFAULT NULL,
+  `exp_leases` varchar(8) DEFAULT NULL,
+  `exp_insur` varchar(8) DEFAULT NULL,
+  `exp_intrst` varchar(8) DEFAULT NULL,
+  `exp_oth` varchar(9) DEFAULT NULL,
+  `cur_asst` varchar(10) DEFAULT NULL,
+  `asst_limtd` varchar(9) DEFAULT NULL,
+  `net_ppe` varchar(10) DEFAULT NULL,
+  `const_prog` varchar(9) DEFAULT NULL,
+  `inv_oth` varchar(9) DEFAULT NULL,
+  `intan_asst` varchar(8) DEFAULT NULL,
+  `tot_asst` varchar(11) DEFAULT NULL,
+  `curr_liab` varchar(10) DEFAULT NULL,
+  `def_cred` varchar(10) DEFAULT NULL,
+  `net_ltdebt` varchar(9) DEFAULT NULL,
+  `equity` varchar(10) DEFAULT NULL,
+  `liab_eq` varchar(11) DEFAULT NULL,
+  `cash` varchar(9) DEFAULT NULL,
+  `accts_rec` varchar(10) DEFAULT NULL,
+  `allow_uncoll` varchar(11) DEFAULT NULL,
+  `bldgs` varchar(10) DEFAULT NULL,
+  `equipment` varchar(9) DEFAULT NULL,
+  `tot_ppe` varchar(10) DEFAULT NULL,
+  `acc_depre` varchar(10) DEFAULT NULL,
+  `mort_pay` varchar(8) DEFAULT NULL,
+  `cap_lease` varchar(9) DEFAULT NULL,
+  `bond_pay` varchar(9) DEFAULT NULL,
+  `tot_ltdebt` varchar(9) DEFAULT NULL,
+  `cur_mat` varchar(9) DEFAULT NULL,
+  `inter_rec` varchar(10) DEFAULT NULL,
+  `inter_pay` varchar(10) DEFAULT NULL,
+  `hosp_fte` varchar(4) DEFAULT NULL,
+  `nurs_fte` varchar(4) DEFAULT NULL,
+  `prod_hrs` varchar(8) DEFAULT NULL,
+  `non_prd_hr` varchar(7) DEFAULT NULL,
+  `paid_hrs` varchar(8) DEFAULT NULL,
+  `med_staff` varchar(4) DEFAULT NULL,
+  `stdnt_fte` varchar(3) DEFAULT NULL,
+  `prd_hr_mgt` varchar(7) DEFAULT NULL,
+  `prd_hr_tch` varchar(7) DEFAULT NULL,
+  `prd_hr_rn` varchar(7) DEFAULT NULL,
+  `prd_hr_lvn` varchar(6) DEFAULT NULL,
+  `prd_hr_aid` varchar(7) DEFAULT NULL,
+  `prd_hr_clr` varchar(7) DEFAULT NULL,
+  `prd_hr_env` varchar(7) DEFAULT NULL,
+  `prd_hr_oth` varchar(7) DEFAULT NULL,
+  `cnt_hr_rn` varchar(6) DEFAULT NULL,
+  `cnt_hr_oth` varchar(6) DEFAULT NULL,
+  `prd_hr_dly` varchar(7) DEFAULT NULL,
+  `prd_hr_amb` varchar(7) DEFAULT NULL,
+  `prd_hr_anc` varchar(7) DEFAULT NULL,
+  `prd_hr_ed` varchar(7) DEFAULT NULL,
+  `prd_hr_gen` varchar(7) DEFAULT NULL,
+  `prd_hr_fis` varchar(7) DEFAULT NULL,
+  `prd_hr_adm` varchar(7) DEFAULT NULL,
+  `prd_hr_non` varchar(6) DEFAULT NULL,
+  `pd_hr_dly` varchar(7) DEFAULT NULL,
+  `pd_hr_amb` varchar(7) DEFAULT NULL,
+  `pd_hr_anc` varchar(7) DEFAULT NULL,
+  `pd_hr_ed` varchar(7) DEFAULT NULL,
+  `pd_hr_gen` varchar(7) DEFAULT NULL,
+  `pd_hr_fis` varchar(7) DEFAULT NULL,
+  `pd_hr_adm` varchar(7) DEFAULT NULL,
+  `pd_hr_non` varchar(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `2009_hospital_inpatient_diagnosis_code_frequency`
 --
 
 DROP TABLE IF EXISTS `2009_hospital_inpatient_diagnosis_code_frequency`;
 CREATE TABLE `2009_hospital_inpatient_diagnosis_code_frequency` (
-  `2009_patient_discharge_data__diagnosis_code_frequencies__notes` varchar(0) DEFAULT NULL
+  `icdcmcode` varchar(6) DEFAULT NULL,
+  `diagnosisdesc` varchar(65) DEFAULT NULL,
+  `totaldiag` varchar(7) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2009_hospital_inpatient_external_cause_of_injury_morb_code_freq`
+--
+
+DROP TABLE IF EXISTS `2009_hospital_inpatient_external_cause_of_injury_morb_code_freq`;
+CREATE TABLE `2009_hospital_inpatient_external_cause_of_injury_morb_code_freq` (
+  `extcausecode` varchar(6) DEFAULT NULL,
+  `extcausedesc` varchar(60) DEFAULT NULL,
+  `totalextcausecodes` varchar(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2009_hospital_inpatient_procedure_code_frequency`
+--
+
+DROP TABLE IF EXISTS `2009_hospital_inpatient_procedure_code_frequency`;
+CREATE TABLE `2009_hospital_inpatient_procedure_code_frequency` (
+  `icdcmcode` varchar(5) DEFAULT NULL,
+  `proceduredesc` varchar(65) DEFAULT NULL,
+  `totalproc` varchar(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2010_2011_fy_hospital_annual_selected_file_september_2012_ext`
+--
+
+DROP TABLE IF EXISTS `2010_2011_fy_hospital_annual_selected_file_september_2012_ext`;
+CREATE TABLE `2010_2011_fy_hospital_annual_selected_file_september_2012_ext` (
+  `fac_no` varchar(9) DEFAULT NULL,
+  `fac_name` varchar(63) DEFAULT NULL,
+  `beg_date` varchar(19) DEFAULT NULL,
+  `end_date` varchar(19) DEFAULT NULL,
+  `day_per` varchar(3) DEFAULT NULL,
+  `data_ind` varchar(10) DEFAULT NULL,
+  `audit_ind` varchar(21) DEFAULT NULL,
+  `county` varchar(15) DEFAULT NULL,
+  `hsa` varchar(2) DEFAULT NULL,
+  `hfpa` varchar(4) DEFAULT NULL,
+  `type_cntrl` varchar(11) DEFAULT NULL,
+  `type_care` varchar(11) DEFAULT NULL,
+  `type_hosp` varchar(20) DEFAULT NULL,
+  `teach_rurl` varchar(11) DEFAULT NULL,
+  `phone` varchar(14) DEFAULT NULL,
+  `address` varchar(30) DEFAULT NULL,
+  `city` varchar(19) DEFAULT NULL,
+  `zip_code` varchar(10) DEFAULT NULL,
+  `ceo` varchar(28) DEFAULT NULL,
+  `ceo_title` varchar(20) DEFAULT NULL,
+  `web_site` varchar(66) DEFAULT NULL,
+  `owner` varchar(57) DEFAULT NULL,
+  `rpt_prep` varchar(28) DEFAULT NULL,
+  `org_name` varchar(59) DEFAULT NULL,
+  `er_desig` varchar(1) DEFAULT NULL,
+  `mcar_pronum` varchar(7) DEFAULT NULL,
+  `mcal_pronum` varchar(9) DEFAULT NULL,
+  `reg_mcalnum` varchar(9) DEFAULT NULL,
+  `bed_lic` varchar(4) DEFAULT NULL,
+  `bed_avl` varchar(4) DEFAULT NULL,
+  `bed_stf` varchar(4) DEFAULT NULL,
+  `day_mcar_tr` varchar(6) DEFAULT NULL,
+  `day_mcar_mc` varchar(5) DEFAULT NULL,
+  `day_mcal_tr` varchar(6) DEFAULT NULL,
+  `day_mcal_mc` varchar(5) DEFAULT NULL,
+  `day_cnty` varchar(5) DEFAULT NULL,
+  `day_thrd_tr` varchar(5) DEFAULT NULL,
+  `day_thrd_mc` varchar(5) DEFAULT NULL,
+  `day_oth_ind` varchar(5) DEFAULT NULL,
+  `day_oth` varchar(6) DEFAULT NULL,
+  `day_tot` varchar(6) DEFAULT NULL,
+  `dis_mcar_tr` varchar(5) DEFAULT NULL,
+  `dis_mcar_mc` varchar(5) DEFAULT NULL,
+  `dis_mcal_tr` varchar(5) DEFAULT NULL,
+  `dis_mcal_mc` varchar(4) DEFAULT NULL,
+  `dis_cnty` varchar(5) DEFAULT NULL,
+  `dis_thrd_tr` varchar(4) DEFAULT NULL,
+  `dis_thrd_mc` varchar(5) DEFAULT NULL,
+  `dis_oth_ind` varchar(4) DEFAULT NULL,
+  `dis_oth` varchar(4) DEFAULT NULL,
+  `dis_tot` varchar(5) DEFAULT NULL,
+  `bed_acute` varchar(3) DEFAULT NULL,
+  `bed_psych` varchar(3) DEFAULT NULL,
+  `bed_chem` varchar(3) DEFAULT NULL,
+  `bed_rehab` varchar(3) DEFAULT NULL,
+  `bed_ltc` varchar(4) DEFAULT NULL,
+  `bed_resdnt` varchar(3) DEFAULT NULL,
+  `day_acute` varchar(6) DEFAULT NULL,
+  `day_psych` varchar(6) DEFAULT NULL,
+  `day_chem` varchar(5) DEFAULT NULL,
+  `day_rehab` varchar(5) DEFAULT NULL,
+  `day_ltc` varchar(6) DEFAULT NULL,
+  `day_resdnt` varchar(5) DEFAULT NULL,
+  `dis_acute` varchar(5) DEFAULT NULL,
+  `dis_psych` varchar(4) DEFAULT NULL,
+  `dis_chem` varchar(4) DEFAULT NULL,
+  `dis_rehab` varchar(4) DEFAULT NULL,
+  `dis_ltc` varchar(4) DEFAULT NULL,
+  `dis_resdnt` varchar(2) DEFAULT NULL,
+  `occ_lic` varchar(5) DEFAULT NULL,
+  `occ_avl` varchar(5) DEFAULT NULL,
+  `alos_all` varchar(6) DEFAULT NULL,
+  `alos_exltc` varchar(5) DEFAULT NULL,
+  `bas_nursry` varchar(2) DEFAULT NULL,
+  `day_nursry` varchar(5) DEFAULT NULL,
+  `dis_nursry` varchar(4) DEFAULT NULL,
+  `vis_mcar_tr` varchar(6) DEFAULT NULL,
+  `vis_mcar_mc` varchar(5) DEFAULT NULL,
+  `vis_mcal_tr` varchar(6) DEFAULT NULL,
+  `vis_mcal_mc` varchar(6) DEFAULT NULL,
+  `vis_cnty` varchar(6) DEFAULT NULL,
+  `vis_thrd_tr` varchar(6) DEFAULT NULL,
+  `vis_thrd_mc` varchar(6) DEFAULT NULL,
+  `vis_oth_ind` varchar(5) DEFAULT NULL,
+  `vis_oth` varchar(6) DEFAULT NULL,
+  `vis_tot` varchar(6) DEFAULT NULL,
+  `vis_er` varchar(6) DEFAULT NULL,
+  `vis_clin` varchar(6) DEFAULT NULL,
+  `vis_home` varchar(6) DEFAULT NULL,
+  `vis_ref_op` varchar(6) DEFAULT NULL,
+  `days_pips` varchar(5) DEFAULT NULL,
+  `op_room` varchar(2) DEFAULT NULL,
+  `op_min_ip` varchar(7) DEFAULT NULL,
+  `op_min_op` varchar(7) DEFAULT NULL,
+  `surg_ip` varchar(5) DEFAULT NULL,
+  `surg_op` varchar(5) DEFAULT NULL,
+  `nat_births` varchar(4) DEFAULT NULL,
+  `c_sections` varchar(4) DEFAULT NULL,
+  `gr_pt_rev` varchar(10) DEFAULT NULL,
+  `ded_fr_rev` varchar(10) DEFAULT NULL,
+  `tot_cap_rev` varchar(9) DEFAULT NULL,
+  `net_pt_rev` varchar(10) DEFAULT NULL,
+  `oth_op_rev` varchar(9) DEFAULT NULL,
+  `tot_op_exp` varchar(10) DEFAULT NULL,
+  `net_frm_op` varchar(10) DEFAULT NULL,
+  `nonop_rev` varchar(9) DEFAULT NULL,
+  `nonop_exp` varchar(9) DEFAULT NULL,
+  `inc_tax` varchar(8) DEFAULT NULL,
+  `ext_item` varchar(8) DEFAULT NULL,
+  `net_income` varchar(9) DEFAULT NULL,
+  `gr_rev_dly` varchar(10) DEFAULT NULL,
+  `gr_rev_amb` varchar(9) DEFAULT NULL,
+  `gr_rev_anc` varchar(10) DEFAULT NULL,
+  `gr_ip_mcar_tr` varchar(10) DEFAULT NULL,
+  `gr_ip_mcar_mc` varchar(9) DEFAULT NULL,
+  `gr_ip_mcal_tr` varchar(10) DEFAULT NULL,
+  `gr_ip_mcal_mc` varchar(9) DEFAULT NULL,
+  `gr_ip_cnty` varchar(9) DEFAULT NULL,
+  `gr_ip_thrd_tr` varchar(9) DEFAULT NULL,
+  `gr_ip_thrd_mc` varchar(10) DEFAULT NULL,
+  `gr_ip_oth_ind` varchar(9) DEFAULT NULL,
+  `gr_ip_oth` varchar(9) DEFAULT NULL,
+  `gr_ip_tot` varchar(10) DEFAULT NULL,
+  `gr_op_mcar_tr` varchar(9) DEFAULT NULL,
+  `gr_op_mcar_mc` varchar(9) DEFAULT NULL,
+  `gr_op_mcal_tr` varchar(9) DEFAULT NULL,
+  `gr_op_mcal_mc` varchar(9) DEFAULT NULL,
+  `gr_op_cnty` varchar(9) DEFAULT NULL,
+  `gr_op_thrd_tr` varchar(9) DEFAULT NULL,
+  `gr_op_thrd_mc` varchar(10) DEFAULT NULL,
+  `gr_op_oth_ind` varchar(8) DEFAULT NULL,
+  `gr_op_oth` varchar(9) DEFAULT NULL,
+  `gr_op_tot` varchar(10) DEFAULT NULL,
+  `c_adj_mcar_tr` varchar(10) DEFAULT NULL,
+  `c_adj_mcar_mc` varchar(9) DEFAULT NULL,
+  `c_adj_mcal_tr` varchar(9) DEFAULT NULL,
+  `c_adj_mcal_mc` varchar(9) DEFAULT NULL,
+  `disp_855` varchar(10) DEFAULT NULL,
+  `c_adj_cnty` varchar(9) DEFAULT NULL,
+  `c_adj_thrd_tr` varchar(9) DEFAULT NULL,
+  `c_adj_thrd_mc` varchar(10) DEFAULT NULL,
+  `bad_debt` varchar(9) DEFAULT NULL,
+  `char_hb` varchar(1) DEFAULT NULL,
+  `char_oth` varchar(9) DEFAULT NULL,
+  `sub_indgnt` varchar(9) DEFAULT NULL,
+  `ded_oth` varchar(9) DEFAULT NULL,
+  `cap_rev_mcar` varchar(8) DEFAULT NULL,
+  `cap_rev_mcal` varchar(8) DEFAULT NULL,
+  `cap_rev_cnty` varchar(7) DEFAULT NULL,
+  `cap_rev_thrd` varchar(9) DEFAULT NULL,
+  `netrv_mcar_tr` varchar(9) DEFAULT NULL,
+  `netrv_mcar_mc` varchar(9) DEFAULT NULL,
+  `netrv_mcal_tr` varchar(9) DEFAULT NULL,
+  `netrv_mcal_mc` varchar(9) DEFAULT NULL,
+  `netrv_cnty` varchar(9) DEFAULT NULL,
+  `netrv_thrd_tr` varchar(9) DEFAULT NULL,
+  `netrv_thrd_mc` varchar(10) DEFAULT NULL,
+  `netrv_oth_ind` varchar(9) DEFAULT NULL,
+  `netrv_oth` varchar(9) DEFAULT NULL,
+  `disp_trnfr` varchar(9) DEFAULT NULL,
+  `inter_tfr` varchar(9) DEFAULT NULL,
+  `contribtns` varchar(8) DEFAULT NULL,
+  `inc_invest` varchar(9) DEFAULT NULL,
+  `dist_rev` varchar(7) DEFAULT NULL,
+  `cnty_appro` varchar(9) DEFAULT NULL,
+  `exp_dly` varchar(9) DEFAULT NULL,
+  `exp_amb` varchar(9) DEFAULT NULL,
+  `exp_anc` varchar(9) DEFAULT NULL,
+  `exp_pip` varchar(8) DEFAULT NULL,
+  `exp_pop` varchar(8) DEFAULT NULL,
+  `exp_res` varchar(9) DEFAULT NULL,
+  `exp_ed` varchar(8) DEFAULT NULL,
+  `exp_gen` varchar(9) DEFAULT NULL,
+  `exp_fisc` varchar(9) DEFAULT NULL,
+  `exp_adm` varchar(9) DEFAULT NULL,
+  `exp_unassg` varchar(9) DEFAULT NULL,
+  `exp_sal` varchar(9) DEFAULT NULL,
+  `exp_ben` varchar(9) DEFAULT NULL,
+  `exp_phys` varchar(9) DEFAULT NULL,
+  `exp_othpro` varchar(8) DEFAULT NULL,
+  `exp_supp` varchar(9) DEFAULT NULL,
+  `exp_purch` varchar(9) DEFAULT NULL,
+  `exp_depre` varchar(9) DEFAULT NULL,
+  `exp_leases` varchar(8) DEFAULT NULL,
+  `exp_insur` varchar(8) DEFAULT NULL,
+  `exp_intrst` varchar(9) DEFAULT NULL,
+  `exp_oth` varchar(9) DEFAULT NULL,
+  `cur_asst` varchar(10) DEFAULT NULL,
+  `asst_limtd` varchar(9) DEFAULT NULL,
+  `net_ppe` varchar(10) DEFAULT NULL,
+  `const_prog` varchar(10) DEFAULT NULL,
+  `inv_oth` varchar(9) DEFAULT NULL,
+  `intan_asst` varchar(8) DEFAULT NULL,
+  `tot_asst` varchar(11) DEFAULT NULL,
+  `curr_liab` varchar(10) DEFAULT NULL,
+  `def_cred` varchar(10) DEFAULT NULL,
+  `net_ltdebt` varchar(10) DEFAULT NULL,
+  `equity` varchar(10) DEFAULT NULL,
+  `liab_eq` varchar(11) DEFAULT NULL,
+  `cash` varchar(9) DEFAULT NULL,
+  `accts_rec` varchar(10) DEFAULT NULL,
+  `allow_uncoll` varchar(11) DEFAULT NULL,
+  `bldgs` varchar(10) DEFAULT NULL,
+  `equipment` varchar(9) DEFAULT NULL,
+  `tot_ppe` varchar(10) DEFAULT NULL,
+  `acc_depre` varchar(10) DEFAULT NULL,
+  `mort_pay` varchar(8) DEFAULT NULL,
+  `cap_lease` varchar(9) DEFAULT NULL,
+  `bond_pay` varchar(10) DEFAULT NULL,
+  `tot_ltdebt` varchar(10) DEFAULT NULL,
+  `cur_mat` varchar(9) DEFAULT NULL,
+  `inter_rec` varchar(10) DEFAULT NULL,
+  `inter_pay` varchar(10) DEFAULT NULL,
+  `hosp_fte` varchar(5) DEFAULT NULL,
+  `nurs_fte` varchar(4) DEFAULT NULL,
+  `prod_hrs` varchar(8) DEFAULT NULL,
+  `non_prd_hr` varchar(7) DEFAULT NULL,
+  `paid_hrs` varchar(8) DEFAULT NULL,
+  `med_staff` varchar(4) DEFAULT NULL,
+  `stdnt_fte` varchar(3) DEFAULT NULL,
+  `prd_hr_mgt` varchar(7) DEFAULT NULL,
+  `prd_hr_tch` varchar(7) DEFAULT NULL,
+  `prd_hr_rn` varchar(7) DEFAULT NULL,
+  `prd_hr_lvn` varchar(6) DEFAULT NULL,
+  `prd_hr_aid` varchar(7) DEFAULT NULL,
+  `prd_hr_clr` varchar(7) DEFAULT NULL,
+  `prd_hr_env` varchar(7) DEFAULT NULL,
+  `prd_hr_oth` varchar(7) DEFAULT NULL,
+  `cnt_hr_rn` varchar(6) DEFAULT NULL,
+  `cnt_hr_oth` varchar(6) DEFAULT NULL,
+  `prd_hr_dly` varchar(7) DEFAULT NULL,
+  `prd_hr_amb` varchar(7) DEFAULT NULL,
+  `prd_hr_anc` varchar(7) DEFAULT NULL,
+  `prd_hr_ed` varchar(7) DEFAULT NULL,
+  `prd_hr_gen` varchar(7) DEFAULT NULL,
+  `prd_hr_fis` varchar(7) DEFAULT NULL,
+  `prd_hr_adm` varchar(7) DEFAULT NULL,
+  `prd_hr_non` varchar(6) DEFAULT NULL,
+  `pd_hr_dly` varchar(7) DEFAULT NULL,
+  `pd_hr_amb` varchar(7) DEFAULT NULL,
+  `pd_hr_anc` varchar(7) DEFAULT NULL,
+  `pd_hr_ed` varchar(7) DEFAULT NULL,
+  `pd_hr_gen` varchar(7) DEFAULT NULL,
+  `pd_hr_fis` varchar(7) DEFAULT NULL,
+  `pd_hr_adm` varchar(7) DEFAULT NULL,
+  `pd_hr_non` varchar(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -2863,7 +3019,31 @@ CREATE TABLE `2010_2018_part_a_wic_redemptions_by_vendor_county_with_family_c` (
 
 DROP TABLE IF EXISTS `2010_hospital_inpatient_diagnosis_code_frequency`;
 CREATE TABLE `2010_hospital_inpatient_diagnosis_code_frequency` (
-  `2010_patient_discharge_data__diagnosis_code_frequencies__notes` varchar(0) DEFAULT NULL
+  `icdcmcode` varchar(6) DEFAULT NULL,
+  `diagnosisdesc` varchar(65) DEFAULT NULL,
+  `totaldiag` varchar(7) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2010_hospital_inpatient_external_cause_of_injury_morb_code_freq`
+--
+
+DROP TABLE IF EXISTS `2010_hospital_inpatient_external_cause_of_injury_morb_code_freq`;
+CREATE TABLE `2010_hospital_inpatient_external_cause_of_injury_morb_code_freq` (
+  `extcausecode` varchar(6) DEFAULT NULL,
+  `extcausedesc` varchar(62) DEFAULT NULL,
+  `totalextcausecodes` varchar(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2010_hospital_inpatient_procedure_code_frequency`
+--
+
+DROP TABLE IF EXISTS `2010_hospital_inpatient_procedure_code_frequency`;
+CREATE TABLE `2010_hospital_inpatient_procedure_code_frequency` (
+  `icdcmcode` varchar(5) DEFAULT NULL,
+  `proceduredesc` varchar(65) DEFAULT NULL,
+  `totalproc` varchar(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -3383,6 +3563,28 @@ CREATE TABLE `2011_hospital_inpatient_diagnosis_code_frequency` (
   `icdcmcode` varchar(6) DEFAULT NULL,
   `diagnosisdesc` varchar(65) DEFAULT NULL,
   `totaldiag` varchar(7) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2011_hospital_inpatient_external_cause_of_injury_morb_code_freq`
+--
+
+DROP TABLE IF EXISTS `2011_hospital_inpatient_external_cause_of_injury_morb_code_freq`;
+CREATE TABLE `2011_hospital_inpatient_external_cause_of_injury_morb_code_freq` (
+  `extcausecode` varchar(6) DEFAULT NULL,
+  `extcausedesc` varchar(61) DEFAULT NULL,
+  `totalextcausecodes` varchar(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2011_hospital_inpatient_procedure_code_frequency`
+--
+
+DROP TABLE IF EXISTS `2011_hospital_inpatient_procedure_code_frequency`;
+CREATE TABLE `2011_hospital_inpatient_procedure_code_frequency` (
+  `icdcmcode` varchar(5) DEFAULT NULL,
+  `proceduredesc` varchar(65) DEFAULT NULL,
+  `totalproc` varchar(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -5988,12 +6190,186 @@ CREATE TABLE `2015_cy_hospital_annual_selected_file_march_2018_extract` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Table structure for table `2015_hosp_inpat_external_cause_of_injury_morb_code_freq_icd_10`
+--
+
+DROP TABLE IF EXISTS `2015_hosp_inpat_external_cause_of_injury_morb_code_freq_icd_10`;
+CREATE TABLE `2015_hosp_inpat_external_cause_of_injury_morb_code_freq_icd_10` (
+  `ecode` varchar(8) DEFAULT NULL,
+  `totalecodes` varchar(14) DEFAULT NULL,
+  `ec0` varchar(14) DEFAULT NULL,
+  `ec1` varchar(14) DEFAULT NULL,
+  `ec2` varchar(14) DEFAULT NULL,
+  `ec3` varchar(14) DEFAULT NULL,
+  `ec4` varchar(14) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2015_hosp_inpat_external_cause_of_injury_morb_code_freq_icd_9`
+--
+
+DROP TABLE IF EXISTS `2015_hosp_inpat_external_cause_of_injury_morb_code_freq_icd_9`;
+CREATE TABLE `2015_hosp_inpat_external_cause_of_injury_morb_code_freq_icd_9` (
+  `2015_patient_discharge_data__e_code_frequencies__notes` varchar(0) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
 -- Table structure for table `2015_hospital_inpatient_diagnosis_code_frequency`
 --
 
 DROP TABLE IF EXISTS `2015_hospital_inpatient_diagnosis_code_frequency`;
 CREATE TABLE `2015_hospital_inpatient_diagnosis_code_frequency` (
   `2015_patient_discharge_data__diagnosis_code_frequencies__notes` varchar(0) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2015_hospital_inpatient_diagnosis_code_frequency_icd_10`
+--
+
+DROP TABLE IF EXISTS `2015_hospital_inpatient_diagnosis_code_frequency_icd_10`;
+CREATE TABLE `2015_hospital_inpatient_diagnosis_code_frequency_icd_10` (
+  `icd10cmcode` varchar(8) DEFAULT NULL,
+  `totaldiag` varchar(15) DEFAULT NULL,
+  `dx0` varchar(15) DEFAULT NULL,
+  `dx1` varchar(15) DEFAULT NULL,
+  `dx2` varchar(15) DEFAULT NULL,
+  `dx3` varchar(15) DEFAULT NULL,
+  `dx4` varchar(15) DEFAULT NULL,
+  `dx5` varchar(15) DEFAULT NULL,
+  `dx6` varchar(15) DEFAULT NULL,
+  `dx7` varchar(15) DEFAULT NULL,
+  `dx8` varchar(15) DEFAULT NULL,
+  `dx9` varchar(15) DEFAULT NULL,
+  `dx10` varchar(15) DEFAULT NULL,
+  `dx11` varchar(15) DEFAULT NULL,
+  `dx12` varchar(15) DEFAULT NULL,
+  `dx13` varchar(15) DEFAULT NULL,
+  `dx14` varchar(15) DEFAULT NULL,
+  `dx15` varchar(15) DEFAULT NULL,
+  `dx16` varchar(15) DEFAULT NULL,
+  `dx17` varchar(15) DEFAULT NULL,
+  `dx18` varchar(15) DEFAULT NULL,
+  `dx19` varchar(15) DEFAULT NULL,
+  `dx20` varchar(15) DEFAULT NULL,
+  `dx21` varchar(15) DEFAULT NULL,
+  `dx22` varchar(15) DEFAULT NULL,
+  `dx23` varchar(15) DEFAULT NULL,
+  `dx24` varchar(17) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2015_hospital_inpatient_diagnosis_code_frequency_icd_9`
+--
+
+DROP TABLE IF EXISTS `2015_hospital_inpatient_diagnosis_code_frequency_icd_9`;
+CREATE TABLE `2015_hospital_inpatient_diagnosis_code_frequency_icd_9` (
+  `icd9cmcode` varchar(6) DEFAULT NULL,
+  `totaldiag` varchar(15) DEFAULT NULL,
+  `dx0` varchar(15) DEFAULT NULL,
+  `dx1` varchar(15) DEFAULT NULL,
+  `dx2` varchar(15) DEFAULT NULL,
+  `dx3` varchar(15) DEFAULT NULL,
+  `dx4` varchar(15) DEFAULT NULL,
+  `dx5` varchar(15) DEFAULT NULL,
+  `dx6` varchar(15) DEFAULT NULL,
+  `dx7` varchar(15) DEFAULT NULL,
+  `dx8` varchar(15) DEFAULT NULL,
+  `dx9` varchar(15) DEFAULT NULL,
+  `dx10` varchar(15) DEFAULT NULL,
+  `dx11` varchar(15) DEFAULT NULL,
+  `dx12` varchar(15) DEFAULT NULL,
+  `dx13` varchar(15) DEFAULT NULL,
+  `dx14` varchar(15) DEFAULT NULL,
+  `dx15` varchar(15) DEFAULT NULL,
+  `dx16` varchar(15) DEFAULT NULL,
+  `dx17` varchar(15) DEFAULT NULL,
+  `dx18` varchar(15) DEFAULT NULL,
+  `dx19` varchar(15) DEFAULT NULL,
+  `dx20` varchar(15) DEFAULT NULL,
+  `dx21` varchar(15) DEFAULT NULL,
+  `dx22` varchar(15) DEFAULT NULL,
+  `dx23` varchar(15) DEFAULT NULL,
+  `dx24` varchar(17) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2015_hospital_inpatient_external_cause_of_injury_morb_code_freq`
+--
+
+DROP TABLE IF EXISTS `2015_hospital_inpatient_external_cause_of_injury_morb_code_freq`;
+CREATE TABLE `2015_hospital_inpatient_external_cause_of_injury_morb_code_freq` (
+  `2015_patient_discharge_data__e_code_frequencies__notes` varchar(0) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2015_hospital_inpatient_procedure_code_frequency`
+--
+
+DROP TABLE IF EXISTS `2015_hospital_inpatient_procedure_code_frequency`;
+CREATE TABLE `2015_hospital_inpatient_procedure_code_frequency` (
+  `2015_patient_discharge_data__procedure_code_frequencies__notes` varchar(0) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2015_hospital_inpatient_procedure_code_frequency_icd_10`
+--
+
+DROP TABLE IF EXISTS `2015_hospital_inpatient_procedure_code_frequency_icd_10`;
+CREATE TABLE `2015_hospital_inpatient_procedure_code_frequency_icd_10` (
+  `procedurecode` varchar(7) DEFAULT NULL,
+  `totalproc` varchar(15) DEFAULT NULL,
+  `pr0` varchar(15) DEFAULT NULL,
+  `pr1` varchar(15) DEFAULT NULL,
+  `pr2` varchar(15) DEFAULT NULL,
+  `pr3` varchar(15) DEFAULT NULL,
+  `pr4` varchar(15) DEFAULT NULL,
+  `pr5` varchar(15) DEFAULT NULL,
+  `pr6` varchar(15) DEFAULT NULL,
+  `pr7` varchar(15) DEFAULT NULL,
+  `pr8` varchar(15) DEFAULT NULL,
+  `pr9` varchar(15) DEFAULT NULL,
+  `pr10` varchar(15) DEFAULT NULL,
+  `pr11` varchar(15) DEFAULT NULL,
+  `pr12` varchar(15) DEFAULT NULL,
+  `pr13` varchar(15) DEFAULT NULL,
+  `pr14` varchar(15) DEFAULT NULL,
+  `pr15` varchar(15) DEFAULT NULL,
+  `pr16` varchar(15) DEFAULT NULL,
+  `pr17` varchar(15) DEFAULT NULL,
+  `pr18` varchar(15) DEFAULT NULL,
+  `pr19` varchar(15) DEFAULT NULL,
+  `pr20` varchar(15) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2015_hospital_inpatient_procedure_code_frequency_icd_9`
+--
+
+DROP TABLE IF EXISTS `2015_hospital_inpatient_procedure_code_frequency_icd_9`;
+CREATE TABLE `2015_hospital_inpatient_procedure_code_frequency_icd_9` (
+  `procedurecode` varchar(6) DEFAULT NULL,
+  `totalproc` varchar(14) DEFAULT NULL,
+  `pr0` varchar(14) DEFAULT NULL,
+  `pr1` varchar(14) DEFAULT NULL,
+  `pr2` varchar(14) DEFAULT NULL,
+  `pr3` varchar(14) DEFAULT NULL,
+  `pr4` varchar(14) DEFAULT NULL,
+  `pr5` varchar(14) DEFAULT NULL,
+  `pr6` varchar(14) DEFAULT NULL,
+  `pr7` varchar(14) DEFAULT NULL,
+  `pr8` varchar(14) DEFAULT NULL,
+  `pr9` varchar(14) DEFAULT NULL,
+  `pr10` varchar(14) DEFAULT NULL,
+  `pr11` varchar(14) DEFAULT NULL,
+  `pr12` varchar(14) DEFAULT NULL,
+  `pr13` varchar(14) DEFAULT NULL,
+  `pr14` varchar(14) DEFAULT NULL,
+  `pr15` varchar(14) DEFAULT NULL,
+  `pr16` varchar(14) DEFAULT NULL,
+  `pr17` varchar(14) DEFAULT NULL,
+  `pr18` varchar(14) DEFAULT NULL,
+  `pr19` varchar(14) DEFAULT NULL,
+  `pr20` varchar(14) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -6843,7 +7219,79 @@ CREATE TABLE `2016_cy_hospital_annual_selected_file_september_2018_extract` (
 
 DROP TABLE IF EXISTS `2016_hospital_inpatient_diagnosis_code_frequency`;
 CREATE TABLE `2016_hospital_inpatient_diagnosis_code_frequency` (
-  `2016_patient_discharge_data__diagnosis_code_frequencies__notes` varchar(0) DEFAULT NULL
+  `icd10cmcode` varchar(8) DEFAULT NULL,
+  `totaldiag` varchar(15) DEFAULT NULL,
+  `dx0` varchar(15) DEFAULT NULL,
+  `dx1` varchar(15) DEFAULT NULL,
+  `dx2` varchar(15) DEFAULT NULL,
+  `dx3` varchar(15) DEFAULT NULL,
+  `dx4` varchar(15) DEFAULT NULL,
+  `dx5` varchar(15) DEFAULT NULL,
+  `dx6` varchar(15) DEFAULT NULL,
+  `dx7` varchar(15) DEFAULT NULL,
+  `dx8` varchar(15) DEFAULT NULL,
+  `dx9` varchar(15) DEFAULT NULL,
+  `dx10` varchar(15) DEFAULT NULL,
+  `dx11` varchar(15) DEFAULT NULL,
+  `dx12` varchar(15) DEFAULT NULL,
+  `dx13` varchar(15) DEFAULT NULL,
+  `dx14` varchar(15) DEFAULT NULL,
+  `dx15` varchar(15) DEFAULT NULL,
+  `dx16` varchar(15) DEFAULT NULL,
+  `dx17` varchar(15) DEFAULT NULL,
+  `dx18` varchar(15) DEFAULT NULL,
+  `dx19` varchar(15) DEFAULT NULL,
+  `dx20` varchar(15) DEFAULT NULL,
+  `dx21` varchar(15) DEFAULT NULL,
+  `dx22` varchar(15) DEFAULT NULL,
+  `dx23` varchar(15) DEFAULT NULL,
+  `dx24` varchar(17) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2016_hospital_inpatient_external_cause_of_injury_morb_code_freq`
+--
+
+DROP TABLE IF EXISTS `2016_hospital_inpatient_external_cause_of_injury_morb_code_freq`;
+CREATE TABLE `2016_hospital_inpatient_external_cause_of_injury_morb_code_freq` (
+  `extcausecode` varchar(8) DEFAULT NULL,
+  `totalextcausecodes` varchar(14) DEFAULT NULL,
+  `ec0` varchar(14) DEFAULT NULL,
+  `ec1` varchar(14) DEFAULT NULL,
+  `ec2` varchar(14) DEFAULT NULL,
+  `ec3` varchar(14) DEFAULT NULL,
+  `ec4` varchar(14) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2016_hospital_inpatient_procedure_code_frequency`
+--
+
+DROP TABLE IF EXISTS `2016_hospital_inpatient_procedure_code_frequency`;
+CREATE TABLE `2016_hospital_inpatient_procedure_code_frequency` (
+  `procedurecode` varchar(7) DEFAULT NULL,
+  `totalproc` varchar(15) DEFAULT NULL,
+  `pr0` varchar(15) DEFAULT NULL,
+  `pr1` varchar(15) DEFAULT NULL,
+  `pr2` varchar(15) DEFAULT NULL,
+  `pr3` varchar(15) DEFAULT NULL,
+  `pr4` varchar(15) DEFAULT NULL,
+  `pr5` varchar(15) DEFAULT NULL,
+  `pr6` varchar(15) DEFAULT NULL,
+  `pr7` varchar(15) DEFAULT NULL,
+  `pr8` varchar(15) DEFAULT NULL,
+  `pr9` varchar(15) DEFAULT NULL,
+  `pr10` varchar(15) DEFAULT NULL,
+  `pr11` varchar(15) DEFAULT NULL,
+  `pr12` varchar(15) DEFAULT NULL,
+  `pr13` varchar(15) DEFAULT NULL,
+  `pr14` varchar(15) DEFAULT NULL,
+  `pr15` varchar(15) DEFAULT NULL,
+  `pr16` varchar(15) DEFAULT NULL,
+  `pr17` varchar(15) DEFAULT NULL,
+  `pr18` varchar(15) DEFAULT NULL,
+  `pr19` varchar(15) DEFAULT NULL,
+  `pr20` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -8065,7 +8513,37 @@ CREATE TABLE `2017_cy_hospital_annual_selected_file_october_2019_extract` (
 
 DROP TABLE IF EXISTS `2017_hospital_inpatient_diagnosis_code_frequency`;
 CREATE TABLE `2017_hospital_inpatient_diagnosis_code_frequency` (
-  `2017_patient_discharge_data__diagnosis_code_frequencies__notes` varchar(0) DEFAULT NULL
+  `icdcmcode` varchar(8) DEFAULT NULL,
+  `diagnosisdesc` varchar(65) DEFAULT NULL,
+  `totaldiag` varchar(15) DEFAULT NULL,
+  `primarydiag` varchar(15) DEFAULT NULL,
+  `seconddiag` varchar(15) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2017_hospital_inpatient_external_cause_of_injury_morb_code_freq`
+--
+
+DROP TABLE IF EXISTS `2017_hospital_inpatient_external_cause_of_injury_morb_code_freq`;
+CREATE TABLE `2017_hospital_inpatient_external_cause_of_injury_morb_code_freq` (
+  `extcausecode` varchar(8) DEFAULT NULL,
+  `extcausedesc` varchar(65) DEFAULT NULL,
+  `totalextcausecodes` varchar(5) DEFAULT NULL,
+  `primaryextcausecodes` varchar(5) DEFAULT NULL,
+  `secondextcausecodes` varchar(5) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2017_hospital_inpatient_procedure_code_frequency`
+--
+
+DROP TABLE IF EXISTS `2017_hospital_inpatient_procedure_code_frequency`;
+CREATE TABLE `2017_hospital_inpatient_procedure_code_frequency` (
+  `procedurecode` varchar(7) DEFAULT NULL,
+  `proceduredesc` varchar(65) DEFAULT NULL,
+  `totalproc` varchar(15) DEFAULT NULL,
+  `primaryproc` varchar(15) DEFAULT NULL,
+  `secondproc` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -9710,7 +10188,37 @@ CREATE TABLE `2018_cy_hospital_annual_selected_file_november_2020_extract` (
 
 DROP TABLE IF EXISTS `2018_hospital_inpatient_diagnosis_code_frequency`;
 CREATE TABLE `2018_hospital_inpatient_diagnosis_code_frequency` (
-  `2018_patient_discharge_data__diagnosis_code_frequencies__notes` varchar(0) DEFAULT NULL
+  `icd10cmcode` varchar(8) DEFAULT NULL,
+  `diagnosisdesc` varchar(65) DEFAULT NULL,
+  `totaldiag` varchar(15) DEFAULT NULL,
+  `primarydiag` varchar(15) DEFAULT NULL,
+  `seconddiag` varchar(15) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2018_hospital_inpatient_external_cause_of_injury_morb_code_freq`
+--
+
+DROP TABLE IF EXISTS `2018_hospital_inpatient_external_cause_of_injury_morb_code_freq`;
+CREATE TABLE `2018_hospital_inpatient_external_cause_of_injury_morb_code_freq` (
+  `extcausecode` varchar(8) DEFAULT NULL,
+  `extcausedesc` varchar(65) DEFAULT NULL,
+  `totalextcausecodes` varchar(5) DEFAULT NULL,
+  `primaryextcausecodes` varchar(5) DEFAULT NULL,
+  `secondextcausecodes` varchar(5) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2018_hospital_inpatient_procedure_code_frequency`
+--
+
+DROP TABLE IF EXISTS `2018_hospital_inpatient_procedure_code_frequency`;
+CREATE TABLE `2018_hospital_inpatient_procedure_code_frequency` (
+  `procedurecode` varchar(7) DEFAULT NULL,
+  `proceduredesc` varchar(65) DEFAULT NULL,
+  `totalproc` varchar(15) DEFAULT NULL,
+  `primaryproc` varchar(15) DEFAULT NULL,
+  `secondproc` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -11465,7 +11973,35 @@ CREATE TABLE `2019_cy_hospital_annual_selected_file_april_2022_extract` (
 
 DROP TABLE IF EXISTS `2019_hospital_inpatient_diagnosis_code_frequency`;
 CREATE TABLE `2019_hospital_inpatient_diagnosis_code_frequency` (
-  `2019_patient_discharge_data__diagnosis_code_frequencies__notes` varchar(0) DEFAULT NULL
+  `icdcmcode` varchar(8) DEFAULT NULL,
+  `diagnosisdesc` varchar(172) DEFAULT NULL,
+  `totaldiag` varchar(6) DEFAULT NULL,
+  `primarydiag` varchar(6) DEFAULT NULL,
+  `seconddiag` varchar(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2019_hospital_inpatient_external_cause_of_injury_morb_code_freq`
+--
+
+DROP TABLE IF EXISTS `2019_hospital_inpatient_external_cause_of_injury_morb_code_freq`;
+CREATE TABLE `2019_hospital_inpatient_external_cause_of_injury_morb_code_freq` (
+  `icdcmcode` varchar(8) DEFAULT NULL,
+  `diagnosisdesc` varchar(122) DEFAULT NULL,
+  `totalecm` varchar(5) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2019_hospital_inpatient_procedure_code_frequency`
+--
+
+DROP TABLE IF EXISTS `2019_hospital_inpatient_procedure_code_frequency`;
+CREATE TABLE `2019_hospital_inpatient_procedure_code_frequency` (
+  `icdpcscode` varchar(7) DEFAULT NULL,
+  `proceduredesc` varchar(60) DEFAULT NULL,
+  `totalproc` varchar(6) DEFAULT NULL,
+  `primaryproc` varchar(6) DEFAULT NULL,
+  `secondproc` varchar(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -12828,7 +13364,29 @@ CREATE TABLE `2020_cy_hospital_annual_selected_file_october_2022_extract` (
 
 DROP TABLE IF EXISTS `2020_hospital_inpatient_diagnosis_code_frequency`;
 CREATE TABLE `2020_hospital_inpatient_diagnosis_code_frequency` (
-  `2020_patient_discharge_data__diagnosis_code_frequencies__notes` varchar(0) DEFAULT NULL
+  `icdcmcode` varchar(8) DEFAULT NULL,
+  `diagnosisdesc` varchar(161) DEFAULT NULL,
+  `totaldiag` varchar(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2020_hospital_inpatient_external_cause_of_injury_morb_code_freq`
+--
+
+DROP TABLE IF EXISTS `2020_hospital_inpatient_external_cause_of_injury_morb_code_freq`;
+CREATE TABLE `2020_hospital_inpatient_external_cause_of_injury_morb_code_freq` (
+  `icdcmcode` varchar(8) DEFAULT NULL,
+  `diagnosisdesc` varchar(119) DEFAULT NULL,
+  `totalecm` varchar(5) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2020_hospital_inpatient_procedure_code_frequency`
+--
+
+DROP TABLE IF EXISTS `2020_hospital_inpatient_procedure_code_frequency`;
+CREATE TABLE `2020_hospital_inpatient_procedure_code_frequency` (
+  `2020_patient_discharge_data__procedure_code_frequencies__notes` varchar(0) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -13673,7 +14231,31 @@ CREATE TABLE `2021_cy_hospital_annual_selected_file_october_2023_extract` (
 
 DROP TABLE IF EXISTS `2021_hospital_inpatient_diagnosis_code_frequency`;
 CREATE TABLE `2021_hospital_inpatient_diagnosis_code_frequency` (
-  `2021_patient_discharge_data__diagnosis_code_frequencies__notes` varchar(0) DEFAULT NULL
+  `icdcmcode` varchar(8) DEFAULT NULL,
+  `diagnosisdesc` varchar(161) DEFAULT NULL,
+  `totaldiag` varchar(7) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2021_hospital_inpatient_external_cause_of_injury_morb_code_freq`
+--
+
+DROP TABLE IF EXISTS `2021_hospital_inpatient_external_cause_of_injury_morb_code_freq`;
+CREATE TABLE `2021_hospital_inpatient_external_cause_of_injury_morb_code_freq` (
+  `icdcmcode` varchar(8) DEFAULT NULL,
+  `diagnosisdesc` varchar(119) DEFAULT NULL,
+  `totalecm` varchar(5) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2021_hospital_inpatient_procedure_code_frequency`
+--
+
+DROP TABLE IF EXISTS `2021_hospital_inpatient_procedure_code_frequency`;
+CREATE TABLE `2021_hospital_inpatient_procedure_code_frequency` (
+  `icdpcscode` varchar(7) DEFAULT NULL,
+  `proceduredesc` varchar(60) DEFAULT NULL,
+  `totalproc` varchar(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -14651,7 +15233,31 @@ CREATE TABLE `2022_cy_hospital_annual_selected_file_october_2024_extract` (
 
 DROP TABLE IF EXISTS `2022_hospital_inpatient_diagnosis_code_frequency`;
 CREATE TABLE `2022_hospital_inpatient_diagnosis_code_frequency` (
-  `2022_patient_discharge_data__diagnosis_code_frequencies__notes` varchar(0) DEFAULT NULL
+  `icdcmcode` varchar(8) DEFAULT NULL,
+  `diagnosisdesc` varchar(155) DEFAULT NULL,
+  `totaldiag` varchar(7) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2022_hospital_inpatient_external_cause_of_injury_morb_code_freq`
+--
+
+DROP TABLE IF EXISTS `2022_hospital_inpatient_external_cause_of_injury_morb_code_freq`;
+CREATE TABLE `2022_hospital_inpatient_external_cause_of_injury_morb_code_freq` (
+  `icdcmcode` varchar(8) DEFAULT NULL,
+  `diagnosisdesc` varchar(122) DEFAULT NULL,
+  `totalecm` varchar(5) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `2022_hospital_inpatient_procedure_code_frequency`
+--
+
+DROP TABLE IF EXISTS `2022_hospital_inpatient_procedure_code_frequency`;
+CREATE TABLE `2022_hospital_inpatient_procedure_code_frequency` (
+  `icdpcscode` varchar(7) DEFAULT NULL,
+  `proceduredesc` varchar(60) DEFAULT NULL,
+  `totalproc` varchar(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -17853,11 +18459,11 @@ CREATE TABLE `aevs_carrier_codes_for_other_health_coverage` (
 
 DROP TABLE IF EXISTS `age_26_49_ae_population_by_county`;
 CREATE TABLE `age_26_49_ae_population_by_county` (
-  `year` varchar(4) DEFAULT NULL,
-  `reporting_period` varchar(7) DEFAULT NULL,
+  `year_str` varchar(7) DEFAULT NULL,
+  `reporting_period` varchar(16) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
-  `number_of_eligible_individuals` varchar(7) DEFAULT NULL,
-  `annotation_code` varchar(1) DEFAULT NULL,
+  `number_of_eligible_individuals` varchar(30) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
   `count_annotation_desc` varchar(33) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -17867,12 +18473,12 @@ CREATE TABLE `age_26_49_ae_population_by_county` (
 
 DROP TABLE IF EXISTS `age_26_49_ae_population_by_ethnicity_and_county`;
 CREATE TABLE `age_26_49_ae_population_by_ethnicity_and_county` (
-  `year` varchar(4) DEFAULT NULL,
-  `reporting_period` varchar(7) DEFAULT NULL,
+  `year_str` varchar(7) DEFAULT NULL,
+  `reporting_period` varchar(16) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
   `ethnicity` varchar(33) DEFAULT NULL,
-  `number_of_eligible_individuals` varchar(7) DEFAULT NULL,
-  `annotation_code` varchar(1) DEFAULT NULL,
+  `number_of_eligible_individuals` varchar(30) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
   `count_annotation_desc` varchar(38) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -17882,12 +18488,12 @@ CREATE TABLE `age_26_49_ae_population_by_ethnicity_and_county` (
 
 DROP TABLE IF EXISTS `age_26_49_ae_population_by_spoken_language_and_county`;
 CREATE TABLE `age_26_49_ae_population_by_spoken_language_and_county` (
-  `year` varchar(4) DEFAULT NULL,
-  `reporting_period` varchar(7) DEFAULT NULL,
+  `year_str` varchar(7) DEFAULT NULL,
+  `reporting_period` varchar(16) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
   `spoken_language` varchar(28) DEFAULT NULL,
-  `number_of_eligible_individuals` varchar(7) DEFAULT NULL,
-  `annotation_code` varchar(1) DEFAULT NULL,
+  `number_of_eligible_individuals` varchar(30) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
   `count_annotation_desc` varchar(38) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -17897,12 +18503,12 @@ CREATE TABLE `age_26_49_ae_population_by_spoken_language_and_county` (
 
 DROP TABLE IF EXISTS `age_26_49_ae_population_by_written_language_and_cnty`;
 CREATE TABLE `age_26_49_ae_population_by_written_language_and_cnty` (
-  `year` varchar(4) DEFAULT NULL,
-  `reporting_period` varchar(7) DEFAULT NULL,
+  `year_str` varchar(7) DEFAULT NULL,
+  `reporting_period` varchar(16) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
   `written_language` varchar(23) DEFAULT NULL,
-  `number_of_eligible_individuals` varchar(7) DEFAULT NULL,
-  `annotation_code` varchar(1) DEFAULT NULL,
+  `number_of_eligible_individuals` varchar(30) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
   `count_annotation_desc` varchar(38) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -23845,8 +24451,8 @@ CREATE TABLE `covid19_emergency_dental_providers` (
   `state` varchar(5) DEFAULT NULL,
   `zipcode` varchar(10) DEFAULT NULL,
   `phone` varchar(14) DEFAULT NULL,
-  `latitude` decimal(12,8) DEFAULT NULL,
-  `longitude` decimal(12,8) DEFAULT NULL,
+  `latitude` varchar(10) DEFAULT NULL,
+  `longitude` varchar(12) DEFAULT NULL,
   `emergency` varchar(68) DEFAULT NULL,
   `availability` varchar(12) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL
@@ -25976,8 +26582,8 @@ CREATE TABLE `ehr_incentive_program_payments_hospitals` (
   `total_payments` varchar(14) DEFAULT NULL,
   `last_payment_criteria` varchar(21) DEFAULT NULL,
   `recent_disbursement_amount` varchar(26) DEFAULT NULL,
-  `latitude` decimal(12,8) DEFAULT NULL,
-  `longitude` decimal(12,8) DEFAULT NULL,
+  `latitude` varchar(16) DEFAULT NULL,
+  `longitude` varchar(17) DEFAULT NULL,
   `last_program_year` varchar(17) DEFAULT NULL,
   `last_payment_year` varchar(17) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -26008,8 +26614,8 @@ CREATE TABLE `ehr_incentive_program_payments_providers` (
   `payee_npi` varchar(10) DEFAULT NULL,
   `total_paym` varchar(10) DEFAULT NULL,
   `total_rece` varchar(10) DEFAULT NULL,
-  `latitude` decimal(12,8) DEFAULT NULL,
-  `longitude` decimal(12,8) DEFAULT NULL
+  `latitude` varchar(13) DEFAULT NULL,
+  `longitude` varchar(14) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -26233,7 +26839,10 @@ CREATE TABLE `enrolled_medi_cal_fee_for_service_ffs_providers` (
   `zip_4` varchar(5) DEFAULT NULL,
   `dhcs_county_cd` varchar(14) DEFAULT NULL,
   `fips_county_cd` varchar(14) DEFAULT NULL,
-  `county` varchar(15) DEFAULT NULL
+  `county` varchar(15) DEFAULT NULL,
+  `latitude` varchar(11) DEFAULT NULL,
+  `longitude` varchar(12) DEFAULT NULL,
+  `countyname` varchar(46) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -31641,7 +32250,7 @@ CREATE TABLE `licensed_and_certified_healthcare_facility_locations` (
   `city` varchar(21) DEFAULT NULL,
   `zip` varchar(5) DEFAULT NULL,
   `zip9` varchar(4) DEFAULT NULL,
-  `facadmin` varchar(37) DEFAULT NULL,
+  `facadmin` varchar(38) DEFAULT NULL,
   `contact_email` varchar(48) DEFAULT NULL,
   `contact_fax` varchar(14) DEFAULT NULL,
   `contact_phone_number` varchar(20) DEFAULT NULL,
@@ -31660,8 +32269,8 @@ CREATE TABLE `licensed_and_certified_healthcare_facility_locations` (
   `license_effective_date` varchar(22) DEFAULT NULL,
   `license_expiration_date` varchar(23) DEFAULT NULL,
   `entity_type_description` varchar(25) DEFAULT NULL,
-  `latitude` decimal(12,8) DEFAULT NULL,
-  `longitude` decimal(12,8) DEFAULT NULL,
+  `latitude` varchar(11) DEFAULT NULL,
+  `longitude` varchar(12) DEFAULT NULL,
   `location` varchar(27) DEFAULT NULL,
   `hcai_id` varchar(9) DEFAULT NULL,
   `cclho_code` varchar(10) DEFAULT NULL,
@@ -31672,7 +32281,7 @@ CREATE TABLE `licensed_and_certified_healthcare_facility_locations` (
   `trauma_ctr` varchar(10) DEFAULT NULL,
   `type_of_care` varchar(26) DEFAULT NULL,
   `critical_access_hospital` varchar(24) DEFAULT NULL,
-  `data_date` varchar(10) DEFAULT NULL
+  `data_date` varchar(9) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -31741,8 +32350,8 @@ CREATE TABLE `licensed_driving_under_the_influence_provider_directory` (
   `phone_number` varchar(14) DEFAULT NULL,
   `fax_number` varchar(14) DEFAULT NULL,
   `e_mail_website` varchar(39) DEFAULT NULL,
-  `latitude` decimal(12,8) DEFAULT NULL,
-  `longitude` decimal(12,8) DEFAULT NULL,
+  `latitude` varchar(15) DEFAULT NULL,
+  `longitude` varchar(17) DEFAULT NULL,
   `countyname` varchar(22) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -39209,8 +39818,8 @@ CREATE TABLE `mcna_population_points_with_t_d_standards` (
   `county` varchar(15) DEFAULT NULL,
   `zip_code` varchar(8) DEFAULT NULL,
   `county_zip` varchar(21) DEFAULT NULL,
-  `latitude` decimal(12,8) DEFAULT NULL,
-  `longitude` decimal(12,8) DEFAULT NULL,
+  `latitude` varchar(11) DEFAULT NULL,
+  `longitude` varchar(12) DEFAULT NULL,
   `census_tract` varchar(12) DEFAULT NULL,
   `census_block_group` varchar(18) DEFAULT NULL,
   `all_plan` varchar(47) DEFAULT NULL,
@@ -39618,8 +40227,8 @@ CREATE TABLE `medi_cal_fpact_provider_listing` (
   `fips_county_cd` varchar(14) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
   `phone_number` varchar(14) DEFAULT NULL,
-  `latitude` decimal(12,8) DEFAULT NULL,
-  `longitude` decimal(12,8) DEFAULT NULL,
+  `latitude` varchar(16) DEFAULT NULL,
+  `longitude` varchar(17) DEFAULT NULL,
   `countyname` varchar(22) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -39858,8 +40467,8 @@ CREATE TABLE `medical_managed_care_provider_listing` (
   `state` varchar(5) DEFAULT NULL,
   `zip` varchar(5) DEFAULT NULL,
   `zip_4` varchar(5) DEFAULT NULL,
-  `longitude` decimal(12,8) DEFAULT NULL,
-  `latitude` decimal(12,8) DEFAULT NULL,
+  `longitude` varchar(17) DEFAULT NULL,
+  `latitude` varchar(16) DEFAULT NULL,
   `dhcscountycode` varchar(14) DEFAULT NULL,
   `fipscd` varchar(10) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL
@@ -40950,11 +41559,11 @@ CREATE TABLE `obesity_in_california_2012_and_2013` (
 
 DROP TABLE IF EXISTS `older_ae_50_and_over_population_by_county`;
 CREATE TABLE `older_ae_50_and_over_population_by_county` (
-  `year` varchar(4) DEFAULT NULL,
-  `reporting_period` varchar(7) DEFAULT NULL,
+  `year_str` varchar(7) DEFAULT NULL,
+  `reporting_period` varchar(16) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
-  `number_of_eligible_individuals` varchar(8) DEFAULT NULL,
-  `annotation_code` varchar(1) DEFAULT NULL,
+  `number_of_eligible_individuals` varchar(30) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
   `count_annotation_desc` varchar(38) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -45739,10 +46348,10 @@ CREATE TABLE `road_traffic_injuries_2002_2010` (
 
 DROP TABLE IF EXISTS `sb_75_full_scope_medi_cal_for_all_children_enrollment`;
 CREATE TABLE `sb_75_full_scope_medi_cal_for_all_children_enrollment` (
-  `eligibility_date` varchar(7) DEFAULT NULL,
+  `eligibility_date` varchar(19) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
-  `number_of_beneficiaries` varchar(6) DEFAULT NULL,
-  `annotation_code` varchar(1) DEFAULT NULL,
+  `number_of_beneficiaries` varchar(23) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
   `count_annotation_desc` varchar(33) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -46089,6 +46698,114 @@ CREATE TABLE `social_drivers_of_health_sdoh_and_preventable_hosp_rates` (
   `languagepayercategory` varchar(13) DEFAULT NULL,
   `thirds` varchar(16) DEFAULT NULL,
   `preventablehospitalizationspercent` varchar(23) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `specialty_care_clinic_complete_data_2012`
+--
+
+DROP TABLE IF EXISTS `specialty_care_clinic_complete_data_2012`;
+CREATE TABLE `specialty_care_clinic_complete_data_2012` (
+  `tips_and_updates_2012_state_utilization_data_file_of_specialty_` varchar(49) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `specialty_care_clinic_complete_data_2013`
+--
+
+DROP TABLE IF EXISTS `specialty_care_clinic_complete_data_2013`;
+CREATE TABLE `specialty_care_clinic_complete_data_2013` (
+  `tips_and_updates_2013_state_utilization_data_file_of_specialty_` varchar(56) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `specialty_care_clinic_complete_data_2014`
+--
+
+DROP TABLE IF EXISTS `specialty_care_clinic_complete_data_2014`;
+CREATE TABLE `specialty_care_clinic_complete_data_2014` (
+  `tips_and_updates_2014_state_utilization_data_file_of_specialty_` varchar(49) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `specialty_care_clinic_complete_data_2015`
+--
+
+DROP TABLE IF EXISTS `specialty_care_clinic_complete_data_2015`;
+CREATE TABLE `specialty_care_clinic_complete_data_2015` (
+  `tips_and_updates_2015_state_utilization_data_file_of_specialty_` varchar(49) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `specialty_care_clinic_complete_data_2016`
+--
+
+DROP TABLE IF EXISTS `specialty_care_clinic_complete_data_2016`;
+CREATE TABLE `specialty_care_clinic_complete_data_2016` (
+  `tips_and_updates_2016_state_utilization_data_file_of_specialty_` varchar(49) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `specialty_care_clinic_utilization_data_2017`
+--
+
+DROP TABLE IF EXISTS `specialty_care_clinic_utilization_data_2017`;
+CREATE TABLE `specialty_care_clinic_utilization_data_2017` (
+  `tips_and_updates_2017_state_utilization_data_file_of_specialty_` varchar(49) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `specialty_care_clinic_utilization_data_2018`
+--
+
+DROP TABLE IF EXISTS `specialty_care_clinic_utilization_data_2018`;
+CREATE TABLE `specialty_care_clinic_utilization_data_2018` (
+  `tips_and_updates_2018_state_utilization_data_file_of_specialty_` varchar(43) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `specialty_care_clinic_utilization_data_2019`
+--
+
+DROP TABLE IF EXISTS `specialty_care_clinic_utilization_data_2019`;
+CREATE TABLE `specialty_care_clinic_utilization_data_2019` (
+  `tips_and_updates_2019_state_utilization_data_file_of_specialty_` varchar(49) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `specialty_care_clinic_utilization_data_2020`
+--
+
+DROP TABLE IF EXISTS `specialty_care_clinic_utilization_data_2020`;
+CREATE TABLE `specialty_care_clinic_utilization_data_2020` (
+  `tips_and_updates_2020_state_utilization_data_file_of_specialty_` varchar(43) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `specialty_care_clinic_utilization_data_2021`
+--
+
+DROP TABLE IF EXISTS `specialty_care_clinic_utilization_data_2021`;
+CREATE TABLE `specialty_care_clinic_utilization_data_2021` (
+  `tips_and_updates_2021_state_utilization_data_file_of_specialty_` varchar(43) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `specialty_care_clinic_utilization_data_2022`
+--
+
+DROP TABLE IF EXISTS `specialty_care_clinic_utilization_data_2022`;
+CREATE TABLE `specialty_care_clinic_utilization_data_2022` (
+  `tips_and_updates_2022_state_utilization_data_file_of_specialty_` varchar(43) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Table structure for table `specialty_care_clinic_utilization_data_2023`
+--
+
+DROP TABLE IF EXISTS `specialty_care_clinic_utilization_data_2023`;
+CREATE TABLE `specialty_care_clinic_utilization_data_2023` (
+  `tips_and_updates_2023_state_utilization_data_file_of_specialty_` varchar(43) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -48742,13 +49459,13 @@ CREATE TABLE `xray_technologist_listing` (
 
 DROP TABLE IF EXISTS `young_ae_19_25_population_by_county`;
 CREATE TABLE `young_ae_19_25_population_by_county` (
-  `year` varchar(4) DEFAULT NULL,
-  `reporting_period` varchar(7) DEFAULT NULL,
+  `year_str` varchar(7) DEFAULT NULL,
+  `reporting_period` varchar(16) DEFAULT NULL,
   `county` varchar(15) DEFAULT NULL,
-  `number_of_eligible_individuals` varchar(7) DEFAULT NULL,
-  `annotation_code` varchar(1) DEFAULT NULL,
+  `number_of_eligible_individuals` varchar(30) DEFAULT NULL,
+  `annotation_code` varchar(15) DEFAULT NULL,
   `count_annotation_desc` varchar(33) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2025-01-30  8:56:04
+-- Dump completed on 2025-01-31 12:33:00
