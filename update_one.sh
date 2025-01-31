@@ -239,15 +239,15 @@ else
     fi
 
     if [ -f exec_special_after.sql ]; then
-        mysql -vvv ca_hhs < exec_special_after.sql
+        HOME=/home/ray mysql -vvv ca_hhs < exec_special_after.sql
     fi
 fi
 
-bash $HOME/mv_sources.sh .
+HOME=/home/ray bash ../mv_sources.sh .
 
-bash $HOME/update_extensions.sh
+HOME=/home/ray bash ../update_extensions.sh
 
-bash $HOME/share.sh $id
+HOME=/home/ray bash ../share.sh $id
 
 # TODO I really should be reporting the result of all of these here, not previosly.
 
