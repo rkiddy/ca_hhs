@@ -119,7 +119,7 @@ def create_tables(tables, types={}, replaces={}, length_pad=0, verbose=False):
        all of the data and so is probably not optimal and is probably doable in a smarter
        way."""
 
-    created = list()
+    failed = list()
 
     for table in tables:
 
@@ -129,62 +129,98 @@ def create_tables(tables, types={}, replaces={}, length_pad=0, verbose=False):
 
         lengths = dict()
 
-        csvfile = open(file, newline='', encoding='latin1')
+        try:
+            csvfile = open(file, newline='', encoding='latin1')
 
-        line = csvfile.readline().strip()
+            line = csvfile.readline().strip()
 
-        # See https://dnmtechs.com/splitting-quoted-strings-in-python-3-ignoring-separators/
-        # result = re.split(r',(?=(?:[^"]*"[^"]*")*[^"]*$)', string)
+            # See https://dnmtechs.com/splitting-quoted-strings-in-python-3-ignoring-separators/
+            # result = re.split(r',(?=(?:[^"]*"[^"]*")*[^"]*$)', string)
 
-        cols = fix_col_heads(re.split(r',(?=(?:[^"]*"[^"]*")*[^"]*$)', line), {})
-        csvfile.close()
+            cols = fix_col_heads(re.split(r',(?=(?:[^"]*"[^"]*")*[^"]*$)', line), {})
+            csvfile.close()
 
-        first_read = False
+            first_read = False
 
-        with open(file, newline='', encoding='latin1') as csvfile:
-            rdr = csv.DictReader(csvfile, fieldnames=cols)
+            with open(file, newline='', encoding='latin1') as csvfile:
+                rdr = csv.DictReader(csvfile, fieldnames=cols)
 
-            lengths = find_column_lengths(rdr)
+                lengths = find_column_lengths(rdr)
 
-        # print(f"types: {types}\n")
+            # print(f"types: {types}\n")
 
-        col_defs = list()
-        # print(f"lengths: {lengths}")
+            col_defs = list()
+            # print(f"lengths: {lengths}")
 
-        max_lengths = [len(name) for name in cols]
-        if max(max_lengths) > 64:
-            print(f"We have BAD COLUMN NAMES in: {cols}")
-            continue
+            max_lengths = [len(name) for name in cols]
+            if max(max_lengths) > 64:
+                print(f"We have BAD COLUMN NAMES in: {cols}")
+                continue
 
-        created.append(table)
+            # TODO The 'None' key should be checked for earlier but it will be complex.
+            #
+            if None in lengths:
+                lengths.pop(None)
 
-        for col in lengths:
-            # print(f"col: {col}")
-            if table in types and col in types[table]:
-                col_defs.append(f"{col} {types[table][col]}")
-                # print("MATCH")
-            else:
-                col_defs.append(f"{col} varchar({lengths[col] + length_pad})")
-                # print("NO match")
+            for col in lengths:
+                # print(f"col: {col}")
+                if table in types and col in types[table]:
+                    col_defs.append(f"{col} {types[table][col]}")
+                    # print("MATCH")
+                else:
+                    col_defs.append(f"{col} varchar({lengths[col] + length_pad})")
+                    # print("NO match")
 
-        sql = f"create table {table} ("
-        sql += ', '.join(col_defs)
-        sql += ")"
+            sql = f"create table {table} ("
+            sql += ', '.join(col_defs)
+            sql += ")"
 
-        print(f"\ncreating table {table}...")
+            print(f"\ncreating table {table}...")
 
-        db_exec(conn, f"drop table if exists {table}")
+            db_exec(conn, f"drop table if exists {table}")
 
-        # print(f"sql: {sql}")
-        db_exec(conn, sql)
+            # print(f"sql: {sql}")
+            db_exec(conn, sql)
+        except:
+            # traceback.print_exc()
+            failed.append(table)
 
-    return created
+    return failed
+
+
+def fix_bad_offsets(row):
+    # print(f"fix_bad_offsets:: start row: {row}")
+
+    keys = list(row.keys())
+    keys.pop()
+    # print(f"keys: {keys}")
+
+    # vals = [r.strip() for r in list(row.values())]
+    vals = list(row.values())
+    last = vals.pop()
+    extra = len(last)
+    vals.extend(last)
+    # print(f"new vals: {vals}")
+
+    for idx in range(len(vals)):
+        if vals[idx] == '':
+            vals.pop(idx)
+            extra -= 1
+            if extra == 0:
+                break
+    # print(f"new2 vals: {vals}")
+
+    next_row = dict(zip(keys, vals))
+    # print(f"next_row: {next_row}")
+    return next_row
 
 
 def read_data(tables, types={}, replaces={}, start_row=None, bucket=1000):
     """Reads CSV data and puts it into a table."""
 
-    # print(f"read_data: types: {types}")
+    print(f"read_data: types: {types}")
+
+    failed = list()
 
     for table in tables:
 
@@ -193,7 +229,7 @@ def read_data(tables, types={}, replaces={}, start_row=None, bucket=1000):
         else:
             files = [tables[table]]
 
-        # print(f"files: {files}")
+        print(f"files: {files}")
 
         cols = None
         prefix = None
@@ -204,74 +240,86 @@ def read_data(tables, types={}, replaces={}, start_row=None, bucket=1000):
 
             print(f"\nfile: {f} -> ", end='')
 
-            sqls = list()
+            try:
+                sqls = list()
 
-            csvfile = open(f, newline='', encoding='latin1')
+                # TODO I should be able to get this from the create method.
+                #
+                csvfile = open(f, newline='', encoding='latin1')
 
-            line = csvfile.readline().strip()
- 
-            # See: https://dnmtechs.com/splitting-quoted-strings-in-python-3-ignoring-separators/
-            # result = re.split(r',(?=(?:[^"]*"[^"]*")*[^"]*$)', string)
+                # only reading one line to get the column headers.
+                #
+                line = csvfile.readline().strip()
 
-            cols = fix_col_heads(re.split(r',(?=(?:[^"]*"[^"]*")*[^"]*$)', line), {})
-            csvfile.close()
+                # See: https://dnmtechs.com/splitting-quoted-strings-in-python-3-ignoring-separators/
+                # result = re.split(r',(?=(?:[^"]*"[^"]*")*[^"]*$)', string)
 
-            with open(f, newline='', encoding='latin1') as csvfile:
-                rdr = csv.DictReader(csvfile, fieldnames=cols)
+                cols = fix_col_heads(re.split(r',(?=(?:[^"]*"[^"]*")*[^"]*$)', line), {})
+                csvfile.close()
 
-                next(rdr) # do not pull the column name as data...
+                with open(f, newline='', encoding='latin1') as csvfile:
+                    rdr = csv.DictReader(csvfile, fieldnames=cols)
 
-                for row in rdr:
+                    next(rdr) # do not pull the column name as data...
 
-                    if '' in row:
-                        row.pop('')
-                    if None in row:
-                        row.pop(None)
+                    for row in rdr:
 
-                    # TODO I think I am not using this...
-                    if start_row is not None and rdr.line_num < start_row:
-                        continue
+                        if '' in row:
+                            row.pop('')
 
-                    next_vals = list()
+                        if None in row:
+                            row = fix_bad_offsets(row)
 
-                    for col in row:
+                        # when the cell A1 is not the first row.
+                        #
+                        if start_row is not None and rdr.line_num < start_row:
+                            continue
 
-                        val = None
+                        next_vals = list()
 
-                        # print(f"is {table} in types and is {col} in {types[table]}?")
-                        if table in types and col in types[table]:
-                            if types[table][col] == 'int' or types[table][col].startswith('decimal'):
-                                val = fix_int(row[col])
-                            if types[table][col] == 'date':
-                                val = fix_date(row[col])
-                            if types[table][col] == 'text':
+                        for col in row:
+
+                            val = None
+
+                            # print(f"is {table} in types and is {col} in {types[table]}?")
+                            if table in types and col in types[table]:
+                                if types[table][col] == 'int' or types[table][col].startswith('decimal'):
+                                    val = fix_int(row[col])
+                                if types[table][col] == 'date':
+                                    val = fix_date(row[col])
+                                if types[table][col] == 'text':
+                                    val = fix(row[col])
+                            else:
                                 val = fix(row[col])
-                        else:
-                            val = fix(row[col])
 
-                        next_vals.append(val)
+                            next_vals.append(val)
 
-                    if not prefix:
-                        prefix = f"insert into {table} ({', '.join(cols)}) values"
+                        if not prefix:
+                            prefix = f"insert into {table} ({', '.join(cols)}) values"
 
-                    sqls.append(f"({', '.join(next_vals)})")
+                        sqls.append(f"({', '.join(next_vals)})")
 
-                    if len(sqls) >= bucket:
-                        db_exec_many(conn, prefix, sqls)
-                        sqls.clear()
+                        if len(sqls) >= bucket:
+                            db_exec_many(conn, prefix, sqls)
+                            sqls.clear()
 
-                    # When we were doing this one at a time.
-                    #
-                    # sql = f"insert into {table} ({', '.join(cols)}) values ({', '.join(next_vals)})"
-                    # print(f"sql: {sql}")
-                    # db_exec(conn, sql)
+                        # When we were doing this one at a time.
+                        #
+                        # sql = f"insert into {table} ({', '.join(cols)}) values ({', '.join(next_vals)})"
+                        # print(f"sql: {sql}")
+                        # db_exec(conn, sql)
 
-                    added += 1
+                        added += 1
 
-            if len(sqls) > 0:
-                db_exec_many(conn, prefix, sqls)
+                if len(sqls) > 0:
+                    db_exec_many(conn, prefix, sqls)
 
-            print(f"table: {table} # {added}")
+                print(f"table: {table} # {added}")
+            except:
+                # traceback.print_exc()
+                failed.append(table)
+
+    return failed
 
 
 if __name__ == '__main__':

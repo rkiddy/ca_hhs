@@ -25,7 +25,15 @@ if __name__ == '__main__':
 
     replaces = {}
 
-    csv.create_tables(tables, types, replaces)
-    csv.read_data(tables, types, replaces)
+    failed_create = csv.create_tables(tables, types, replaces)
+    print(f"failed_create: {failed_create}")
+
+    failed_read = csv.read_data(tables, types, replaces)
+    print(f"failed_read: {failed_read}")
+
+    fails = len(failed_create) + len(failed_read)
 
     print("")
+
+    if fails > 0:
+        sys.exit(1)
