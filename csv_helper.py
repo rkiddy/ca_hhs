@@ -239,7 +239,7 @@ def read_data(tables, types={}, replaces={}, start_row=None, bucket=1000):
         else:
             files = [tables[table]]
 
-        print(f"files: {files}")
+        # print(f"files: {files}")
 
         cols = None
         prefix = None
@@ -334,7 +334,7 @@ def read_data(tables, types={}, replaces={}, start_row=None, bucket=1000):
                 db_exec(metadb, sql)
 
             except:
-                # traceback.print_exc()
+                traceback.print_exc()
                 failed.append(table)
 
     return failed
