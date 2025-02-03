@@ -11,17 +11,20 @@ import sql_helper
 
 cfg = config.cfg()
 
-engine = create_engine(f"mysql+pymysql://{cfg['MAIN_USR']}:{cfg['MAIN_PWD']}@{cfg['MAIN_HOST']}/{cfg['MAIN_DB']}")
-conn = engine.connect()
+maindb = create_engine(f"mysql+pymysql://{cfg['MAIN_USR']}:{cfg['MAIN_PWD']}@{cfg['MAIN_HOST']}/{cfg['MAIN_DB']}")
+conn1 = maindb.connect()
+
+metadb = create_engine(f"mysql+pymysql://{cfg['META_USR']}:{cfg['META_PWD']}@{cfg['META_HOST']}/{cfg['META_DB']}")
+conn2 = metadb.connect()
 
 
 def db_exec(eng, this_sql):
-    return sql_helper.db_exec(engine, this_sql)
+    return sql_helper.db_exec(eng, this_sql)
 
 
 def db_exec_sql(sql):
     """Assume the existing connection, because this is what happens anway."""
-    return sql_helper.db_exec(conn, sql)
+    return sql_helper.db_exec(conn1, sql)
 
 
 def db_exec_many(conn, prefix, suffixes):
@@ -29,7 +32,7 @@ def db_exec_many(conn, prefix, suffixes):
 
 
 def db_exec_many_sql(prefix, suffixes):
-    return sql_helper.db_exec_many(conn, prefix, suffixes)
+    return sql_helper.db_exec_many(conn1, prefix, suffixes)
 
 
 def fix(start):
@@ -107,9 +110,10 @@ def find_column_lengths(csv_rdr):
         for key in row:
             if key not in found:
                 found[key] = -1
-            if row[key] is not None and len(row[key]) > found[key]:
-                found[key] = len(row[key])
-
+            if row[key] is not None:
+                found_length = len(str(row[key]).strip())
+                if found_length  > found[key]:
+                    found[key] = len(row[key])
     return found
 
 
@@ -147,6 +151,12 @@ def create_tables(tables, types={}, replaces={}, length_pad=0, verbose=False):
 
                 lengths = find_column_lengths(rdr)
 
+            for col in lengths:
+                sql = f"""update tables t1, columns c1 set c1.max_len = {lengths[col]}
+                          where t1.pk = c1.table_pk and t1.name = '{table}' and c1.name = '{col}'"""
+                # print(f"sql: {sql}")
+                db_exec(metadb, sql)
+
             # print(f"types: {types}\n")
 
             col_defs = list()
@@ -177,10 +187,10 @@ def create_tables(tables, types={}, replaces={}, length_pad=0, verbose=False):
 
             print(f"\ncreating table {table}...")
 
-            db_exec(conn, f"drop table if exists {table}")
+            db_exec(maindb, f"drop table if exists {table}")
 
             # print(f"sql: {sql}")
-            db_exec(conn, sql)
+            db_exec(maindb, sql)
         except:
             # traceback.print_exc()
             failed.append(table)
@@ -304,7 +314,7 @@ def read_data(tables, types={}, replaces={}, start_row=None, bucket=1000):
                         sqls.append(f"({', '.join(next_vals)})")
 
                         if len(sqls) >= bucket:
-                            db_exec_many(conn, prefix, sqls)
+                            db_exec_many(maindb, prefix, sqls)
                             sqls.clear()
 
                         # When we were doing this one at a time.
@@ -316,9 +326,13 @@ def read_data(tables, types={}, replaces={}, start_row=None, bucket=1000):
                         added += 1
 
                 if len(sqls) > 0:
-                    db_exec_many(conn, prefix, sqls)
+                    db_exec_many(maindb, prefix, sqls)
 
                 print(f"table: {table} # {added}")
+
+                sql = f"update sources set rows_num = {added} where table_name = '{table}'"
+                db_exec(metadb, sql)
+
             except:
                 # traceback.print_exc()
                 failed.append(table)
