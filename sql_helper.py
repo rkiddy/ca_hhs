@@ -29,21 +29,14 @@ def db_exec_many(conn, prefix, suffixes):
        fall back to doing one at a time. This makes large sets of insertions massively faster."""
 
     done = False
-    try:
-        sql = f"{prefix} {',\n'.join(suffixes)}"
-        db_exec(conn, sql)
-        done = True
-    except:
-        print("EXCEPTION:")
+    sql = f"{prefix} {',\n'.join(suffixes)}"
+    db_exec(conn, sql)
+    done = True
 
     if not done:
-        try:
-            for suffix in suffixes:
-                sql = f"{prefix} {suffix}"
-                db_exec(conn, sql)
-        except:
-            print("EXCEPTION:")
-            traceback.print_exc()
+        for suffix in suffixes:
+            sql = f"{prefix} {suffix}"
+            db_exec(conn, sql)
 
 
 def db_exec_many_sql(prefix, suffixes):
