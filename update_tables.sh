@@ -19,7 +19,7 @@ awk '{if ($1 == "CREATE") print "'\''"$3"'\''";
 sed 's/`//g' | \
 awk 'BEGIN{FS="\n";RS=""}{
     print "insert into tables values ("NR", "$1", NULL);";
-    for (i=2;i<=NF;i++) { print "insert into columns values ("NR", "$i");"}}' t2.txt | \
+    for (i=2;i<=NF;i++) { print "insert into columns values ("NR", "$i");"}}' | \
 ssh opencal mysql ca_hhs_meta
 
 echo "adding row counts..."
@@ -33,7 +33,7 @@ echo "show tables;" | \
 echo "syncing remote ca_hhs_meta to local..."
 ssh opencal mysqldump ca_hhs_meta | mysql ca_hhs_meta
 
-echo "generation tables-columns page..."
+echo "generating tables-columns page..."
 curl --silent 'https://opencalaccess.org/hcai/table_columns/' > /tmp/table_columns.html
 
 echo "generating columns-tables page..."
