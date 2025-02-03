@@ -2,9 +2,10 @@
 import unittest
 
 import csv_helper as csv
+import excel_helper as exc
 
 
-class BitmapTest(unittest.TestCase):
+class CsvHelperTest(unittest.TestCase):
 
     def test_csv_helper_fix_date_001(self):
         expected = "'1969-10-19'"
@@ -55,6 +56,28 @@ class BitmapTest(unittest.TestCase):
                  'rpt_prep', 'org_name', 'er_desig', 'mcar_pronum', 'mcal_pronum', 'reg_mcalnum',
                  'bed_lic', 'bed_avl', 'bed_stf', 'variable', 'amount', 'web_site', 'org_name']
         self.assertEqual(set(expected), set(csv.uniqify_columns(start)))
+
+
+class ExcelHelperTest(unittest.TestCase):
+
+    # TODO test variance conditions, where input is not as it should be.
+    #
+    def test_coordinate_parts(self):
+        self.assertEqual(['A',5], exc.coordinate_parts('A5'))
+        self.assertEqual(['AAA',55], exc.coordinate_parts('AAA55'))
+        self.assertEqual(['ZZ',2], exc.coordinate_parts('ZZ2'))
+
+
+    def test_column_offset(self):
+        self.assertEqual('B', exc.column_offset('A', 1))
+        self.assertEqual('A', exc.column_offset('B', -1))
+        self.assertEqual('AA', exc.column_offset('Z', 1))
+        self.assertEqual('AZ', exc.column_offset('BA', -1))
+        self.assertEqual('Z', exc.column_offset('AA', -1))
+        self.assertEqual('ABC', exc.column_offset('ABB', 1))
+        self.assertEqual('ABB', exc.column_offset('ABC', -1))
+        self.assertEqual('FG', exc.column_offset('FF', 1))
+        self.assertEqual('XAA', exc.column_offset('XZ', 1))
 
 
 if __name__ == '__main__':
