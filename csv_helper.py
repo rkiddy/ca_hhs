@@ -49,7 +49,7 @@ def fix_col_head(start, replaces={}):
 
 
 def uniqify_columns(cols):
-    return sql_helper.uniqify(cols)
+    return sql_helper.uniqify_columns(cols)
 
 
 def fix_col_heads(start, replaces={}):
@@ -274,6 +274,10 @@ def read_data(tables, types={}, replaces={}, start_row=None, bucket=1000):
                         #
                         if start_row is not None and rdr.line_num < start_row:
                             continue
+
+                        for key in row:
+                            if type(row[key]) == str:
+                                row[key] = row[key].strip()
 
                         next_vals = list()
 
