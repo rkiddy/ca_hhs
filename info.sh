@@ -36,4 +36,6 @@ if [ -d ../$ds ]; then
     ls -1 ../$ds/sources/
 fi
 
+echo "select * from updates where ds_pk = $ds order by updated desc" | ssh opencal mysql --table ca_hhs_meta
+
 echo ""
