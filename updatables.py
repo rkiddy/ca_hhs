@@ -12,6 +12,7 @@ def arguments():
     parser = argparse.ArgumentParser()
     parser.add_argument('--exec', '-x', action='store_true', help="Locate datasets to update.")
     parser.add_argument('--file-filter', help="Update only datasets with files that have this extension.")
+    parser.add_argument('--all', action='store_true', help="Display all datasets, regardless of update status.")
     parser.add_argument('--verbose', '-v', action='store_true')
     return parser.parse_args()
 
@@ -39,7 +40,7 @@ if __name__ == '__main__':
         else:
             exts = ''
 
-        if not ca_update or not my_update or my_update < ca_update:
+        if not ca_update or not my_update or my_update < ca_update or args.all:
             if args.exec:
 
                 if args.file_filter:
