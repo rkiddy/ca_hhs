@@ -183,8 +183,8 @@ CREATE TABLE `hospital_building_data` (
   `building_code_year` varchar(18) DEFAULT NULL,
   `year_completed` varchar(14) DEFAULT NULL,
   `ab_1882_notice` varchar(118) DEFAULT NULL,
-  `latitude` varchar(10) DEFAULT NULL,
-  `longitude` varchar(12) DEFAULT NULL,
+  `latitude` decimal(12,8) DEFAULT NULL,
+  `longitude` decimal(12,8) DEFAULT NULL,
   `count_num` varchar(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -352,4 +352,4 @@ CREATE TABLE `wic_products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2025-01-31 12:33:01
+-- Dump completed on 2025-02-02 16:14:12
