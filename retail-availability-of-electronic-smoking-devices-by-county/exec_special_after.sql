@@ -1,0 +1,2 @@
+
+alter table retail_availability_of_electronic_smoking_devices_by_county change column year year int;

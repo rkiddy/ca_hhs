@@ -1,0 +1,2 @@
+
+alter table number_of_individuals_transitioned_from_covered_califor_04af0d5a change column year year int;

@@ -1,0 +1,2 @@
+
+alter table race_of_individuals_selecting_covered_california_qualif_fb667bc0 change column year year int;

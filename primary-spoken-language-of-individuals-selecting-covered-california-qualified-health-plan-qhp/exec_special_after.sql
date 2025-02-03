@@ -1,0 +1,2 @@
+
+alter table primary_spoken_language_of_individuals_selecting_covere_7673f48d change column year year int;

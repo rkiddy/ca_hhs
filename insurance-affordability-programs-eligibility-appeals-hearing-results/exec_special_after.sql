@@ -1,0 +1,2 @@
+
+alter table insurance_affordability_programs_eligibility_appeals_he_ad8e25ad change column year year int;

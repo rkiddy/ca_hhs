@@ -1,0 +1,2 @@
+
+alter table measurable_hospital_acquired_conditions_composite_patie_7d8794fc change column year year int;

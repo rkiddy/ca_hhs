@@ -1,0 +1,2 @@
+
+alter table insurance_affordability_programs_applications_received__5aa42088 change column year year int;

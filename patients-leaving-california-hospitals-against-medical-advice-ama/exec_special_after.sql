@@ -1,0 +1,4 @@
+
+alter table patients_leaving_california_hospitals_against_medical_advice change column year year int;
+
+alter table readmission_rates_in_patients_recently_discharged_ama_vs_not_ama change column year year int;

@@ -1,0 +1,2 @@
+
+alter table primary_written_language_of_individuals_selecting_cover_4baa33c9 change column year year int;

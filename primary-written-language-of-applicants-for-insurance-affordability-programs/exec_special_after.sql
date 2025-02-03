@@ -1,0 +1,2 @@
+
+alter table primary_written_language_of_applicants_for_insurance_af_00562149 change column year year int;

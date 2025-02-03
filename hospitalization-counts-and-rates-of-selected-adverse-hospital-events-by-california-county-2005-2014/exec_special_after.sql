@@ -1,0 +1,2 @@
+
+alter table hospitalization_counts_and_rates_of_selected_adverse_ho_f567d310 change column year year int;

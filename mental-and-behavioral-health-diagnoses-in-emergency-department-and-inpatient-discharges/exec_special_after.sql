@@ -1,0 +1,2 @@
+
+alter table healthy_places_index_hpi_diagnosis_group_by_setting_and_efd436e1 change column year year int;

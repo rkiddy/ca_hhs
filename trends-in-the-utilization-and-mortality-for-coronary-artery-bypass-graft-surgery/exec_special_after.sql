@@ -1,0 +1,2 @@
+
+alter table trends_in_the_utilization_and_mortality_for_coronary_ar_31d7afc5 change column year year int;
