@@ -8,6 +8,8 @@ if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
     echo "--add <tag> <dataset>: will add this existing tag to this dataset."
     echo "--rm <tag> <dataset>: will remove this tag from this dataset."
     echo "--new <tag>: will create this tag."
+    echo "--inactive: list inactive datasets."
+    echo "--missing: list missing files and their datasets."
     echo ""
     exit
 fi
@@ -54,5 +56,35 @@ if [ "$1" = "--rm" ] && [ "$2" != "" ] && [ "$3" != "" ]; then
     echo "delete from tag_joins where tag_pk = $tag_pk and target_pk = $ds_pk and target = 'ds';" | \
         ssh opencal mysql ca_hhs_meta
     echo "Ok"
+fi
+
+# TODO the benefit of reusing the logic here may not be worth it.
+if [ "$1" = "--missing" ] || [ "$1" = "--removed" ]; then
+   echo ""
+   if [ "$1" = "--missing" ]; then
+       echo "Missing files, listed with the dataset."
+   else
+       echo "Removed files, listed with the dataset."
+   fi
+   echo ""
+   if [ "$1" = "--missing" ]; then
+       p1="select d1.name, s1.file_name, from_unixtime(s1.missing) from datasets d1, sources s1"
+       p2="where d1.pk = s1.ds_pk and s1.missing is not NULL;"
+   else
+       p1="select d1.name, s1.file_name, from_unixtime(s1.removed) from datasets d1, sources s1"
+       p2="where d1.pk = s1.ds_pk and s1.removed is not NULL;"
+   fi
+   ( echo "Dataset Filename When"; echo "$p1 $p2" | ssh opencal mysql --skip-column-names ca_hhs_meta ) | column --table
+   echo ""
+fi
+
+if [ "$1" = "--inactive" ]; then
+    echo ""
+    echo "Datasets marked with inactive flag, which means they do not get automatically processed or displayed:"
+    echo ""
+    ( echo "Dataset When";
+    echo "select name, from_unixtime(inactive) from datasets where inactive is not NULL order by name;" | \
+        ssh opencal mysql --skip-column-names ca_hhs_meta ) | column --table
+    echo ""
 fi
 
