@@ -1,0 +1,4 @@
+
+The sources/lookup-table-licensed-and-certified-healthcare-facility-crosswalk.xls file is another
+kind of data dictionary. How the heck do I keep track of this?
+

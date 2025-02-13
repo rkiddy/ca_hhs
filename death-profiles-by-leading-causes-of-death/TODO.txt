@@ -1,0 +1,9 @@
+
+This seems to be a meta-dataset. It points to:
+
+https://data.chhs.ca.gov/dataset/death-profiles-by-county
+
+https://data.chhs.ca.gov/dataset/death-profiles-by-zip-code
+
+https://data.chhs.ca.gov/dataset/statewide-death-profiles
+

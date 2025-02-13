@@ -4,3 +4,12 @@ These two are parts of the same dataset:
 home-health-hospice-annual-utilization-report-complete-data-set
 pre-2012-home-health-agencies-hospice-annual-utilization-report-complete-data-set
 
+And this dataset seems to have gone away:
+
+hospice-utilization-patient-demographics
+
+I am now downloading both of the first two datasets to this directory, so that this
+dataset "virtually" contains that one.
+
+The spreadsheets are complex, with 4 of 5 different sheets each, all with lots of data.
+

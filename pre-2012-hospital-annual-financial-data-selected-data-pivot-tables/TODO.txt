@@ -1,0 +1,60 @@
+
+The csv files here are too wide for automatically making into tables. See the SQL statement below. It is too wide.
+
+It does not work to just change all of the columns to type text. I could do something manual, but this is not the point.
+
+We encountered this in one of the 'complete data' things also. There were a couple of thousand columns in a csv file.
+This was not just one table.
+
+We need to be table to map more than one table to one file. Can we do this withput breaking something? I think so.
+
+We could use code that takes a pattern in the column names and turns that into a table. Or we could have code that divides up the list of columns to automatically turn them into sets of columns.
+
+[SQL: create table 1995_1999_combined_cy_hospital_annual_selected_file (fac_no varchar(9), fac_name varchar(44), 
+    beg_date varchar(8), end_date varchar(8), day_per varchar(7), data_ind varchar(8), audit_ind varchar(16), 
+    county varchar(6), hsa varchar(3), hfpa varchar(4), type_cntrl varchar(11), type_care varchar(11), 
+    type_hosp varchar(20), teach_rurl varchar(11), phone varchar(13), address varchar(31), city varchar(19), 
+    zip_code varchar(10), ceo varchar(29), ceo_title varchar(25), rpt_prep varchar(30), owner varchar(64), 
+    er_desig varchar(8), mcar_pronum varchar(9), mcal_pronum varchar(9), reg_mcalnum varchar(9), bed_lic varchar(7), 
+    bed_avl varchar(7), bed_stf varchar(7), day_mcar varchar(8), day_mcal varchar(8), day_cnty varchar(8), 
+    day_thrd varchar(8), day_oth varchar(7), day_tot varchar(7), dis_mcar varchar(8), dis_mcal varchar(8), 
+    dis_cnty varchar(8), dis_thrd varchar(8), dis_oth varchar(7), dis_tot varchar(7), bed_acute varchar(9), 
+    bed_psych varchar(9), bed_chem varchar(8), bed_rehab varchar(9), bed_ltc varchar(7), bed_resdnt varchar(10), 
+    day_acute varchar(9), day_psych varchar(9), day_chem varchar(8), day_rehab varchar(9), day_ltc varchar(7), 
+    day_resdnt varchar(10), dis_acute varchar(9), dis_psych varchar(9), dis_chem varchar(8), dis_rehab varchar(9), 
+    dis_ltc varchar(7), dis_resdnt varchar(10), occ_lic varchar(7), occ_avl varchar(7), alos_all varchar(8), 
+    alos_exltc varchar(10), bas_nursry varchar(10), day_nursry varchar(10), dis_nursry varchar(10), vis_mcar varchar(8), 
+    vis_mcal varchar(8), vis_cnty varchar(8), vis_thrd varchar(8), vis_oth varchar(7), vis_tot varchar(7), 
+    vis_er varchar(6), vis_clin varchar(8), vis_home varchar(8), vis_ref_op varchar(10), day_hmo varchar(7), 
+    day_man_cr varchar(10), vis_hmo varchar(7), vis_man_cr varchar(10), days_pips varchar(9), op_room varchar(7), 
+    op_min_ip varchar(9), op_min_op varchar(9), surg_ip varchar(7), surg_op varchar(7), card_cath varchar(9), 
+    ct_scans varchar(8), gr_pt_rev varchar(10), ded_fr_rev varchar(10), net_pt_rev varchar(10), oth_op_rev varchar(10), 
+    tot_op_exp varchar(10), net_frm_op varchar(10), nonop_rev varchar(9), nonop_exp varchar(9), inc_tax varchar(8), 
+    ext_item varchar(9), net_income varchar(10), gr_rev_dly varchar(10), gr_rev_amb varchar(10), gr_rev_anc varchar(10), 
+    gr_rev_pip varchar(10), gr_ip_mcar varchar(10), gr_ip_mcal varchar(10), gr_ip_cnty varchar(10), gr_ip_thrd varchar(10), 
+    gr_ip_oth varchar(9), gr_ip_tot varchar(10), gr_op_mcar varchar(10), gr_op_mcal varchar(10), gr_op_cnty varchar(10), 
+    gr_op_thrd varchar(10), gr_op_oth varchar(9), gr_op_tot varchar(9), c_adj_mcar varchar(10), c_adj_mcal varchar(10), 
+    disp_855 varchar(10), c_adj_cnty varchar(10), c_adj_hmo varchar(9), cap_rev varchar(10), c_adj_oth varchar(9), 
+    bad_debt varchar(8), char_hb varchar(7), char_oth varchar(9), sub_indgnt varchar(10), ded_oth varchar(9), 
+    netrv_mcar varchar(10), netrv_mcal varchar(10), netrv_cnty varchar(10), netrv_thrd varchar(10), netrv_oth varchar(9), 
+    disp_trnfr varchar(10), inter_tfr varchar(10), contribtns varchar(10), inc_invest varchar(10), dist_rev varchar(8), 
+    cnty_appro varchar(10), exp_dly varchar(9), exp_amb varchar(9), exp_anc varchar(9), exp_pip varchar(8), 
+    exp_res varchar(8), exp_ed varchar(8), exp_gen varchar(9), exp_fisc varchar(8), exp_adm varchar(9), exp_unassg varchar(10), 
+    exp_sal varchar(9), exp_ben varchar(9), exp_phys varchar(9), exp_othpro varchar(10), exp_supp varchar(9), 
+    exp_purch varchar(9), exp_depre varchar(9), exp_leases varchar(10), exp_insur varchar(9), exp_intrst varchar(10), 
+    exp_oth varchar(8), cur_asst varchar(10), asst_limtd varchar(10), net_ppe varchar(10), const_prog varchar(10), 
+    inv_oth varchar(9), intan_asst varchar(10), tot_asst varchar(10), cur_liab varchar(10), def_cred varchar(9), 
+    net_ltdebt varchar(10), equity varchar(10), liab_eq varchar(10), cash varchar(9), bldgs varchar(10), 
+    equipment varchar(9), tot_ppe varchar(10), acc_depre varchar(11), mort_pay varchar(8), cap_lease varchar(9), 
+    bond_pay varchar(9), tot_ltdebt varchar(10), cur_mat varchar(8), inter_rec varchar(10), inter_pay varchar(10), 
+    cur_rat varchar(7), days_ar varchar(7), bd_rate varchar(7), ltd_asst varchar(8), net_rtn_eq varchar(10), 
+    op_margin varchar(9), age_plant varchar(9), ppe_bed varchar(7), hosp_emp varchar(8), hosp_fte varchar(8), 
+    nurs_emp varchar(11), prod_hrs varchar(8), non_prd_hr varchar(10), paid_hrs varchar(8), med_staff varchar(9), 
+    stdnt_fte varchar(9), prd_hr_mgt varchar(10), prd_hr_tch varchar(10), prd_hr_rn varchar(9), prd_hr_lvn varchar(10), 
+    prd_hr_aid varchar(10), prd_hr_clr varchar(10), prd_hr_env varchar(10), prd_hr_oth varchar(10), cnt_hr_rn varchar(9), 
+    cnt_hr_oth varchar(10), prd_hr_dly varchar(10), prd_hr_amb varchar(10), prd_hr_anc varchar(10), prd_hr_ed varchar(9), 
+    prd_hr_gen varchar(10), prd_hr_fis varchar(10), prd_hr_adm varchar(10), prd_hr_non varchar(10), pd_hr_dly varchar(9), 
+    pd_hr_amb varchar(9), pd_hr_anc varchar(9), pd_hr_ed varchar(8), pd_hr_gen varchar(9), pd_hr_fis varchar(9), 
+    pd_hr_adm varchar(9), pd_hr_non varchar(9))]
+
+
