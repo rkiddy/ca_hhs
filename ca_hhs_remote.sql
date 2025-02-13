@@ -16,7 +16,7 @@ CREATE TABLE `catalog` (
   `description` text,
   `department` varchar(48) DEFAULT NULL,
   `program` text,
-  `contact_email` varchar(43) DEFAULT NULL,
+  `contact_email` varchar(40) DEFAULT NULL,
   `homepage_url` varchar(193) DEFAULT NULL,
   `temporal_coverage` text,
   `spatial_geographic_coverage` text,
@@ -306,7 +306,7 @@ CREATE TABLE `modified_retail_food_env` (
 DROP TABLE IF EXISTS `monthly_update_prescription_drugs_introduced`;
 CREATE TABLE `monthly_update_prescription_drugs_introduced` (
   `oshpd_id` varchar(9) DEFAULT NULL,
-  `manufacturer_name` varchar(138) DEFAULT NULL,
+  `manufacturer_name` varchar(37) DEFAULT NULL,
   `date_reported` varchar(13) DEFAULT NULL,
   `ndc_number` varchar(11) DEFAULT NULL,
   `drug_product_description` varchar(246) DEFAULT NULL,
@@ -352,4 +352,4 @@ CREATE TABLE `wic_products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dump completed on 2025-02-02 16:14:12
+-- Dump completed on 2025-02-13  9:48:18
