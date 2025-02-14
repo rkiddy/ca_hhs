@@ -14,8 +14,15 @@ if [ "$1" = "--help" ] || [ "$1" = "-help" ] || [ "$1" = "-h" ] || [ "$1" = "--h
     show_usage="yes"
 fi
 
-if [ "$1" != "" ] && [ "$1" != "--no-fetch" ] && [ "$1" != "--only-fetch" ]; then
+if [ "$1" != "" ] && [ "$1" != "--no-fetch" ] &&
+                     [ "$1" != "--only-fetch" ] && [ "$1" != "--skip-fetch-special-instead" ]; then
     show_usage="yes"
+fi
+
+if [ "$1" = "--skip-fetch-special-instead" ]; then
+    skip_special="yes"
+else
+    skip_special="no"
 fi
 
 if [ $show_usage = "yes" ]; then
@@ -58,16 +65,9 @@ fi
 
 id=`pwd | awk 'BEGIN{FS="/"}{print $NF}'`
 
-if [ $id = 'chargemasters' ]; then
-    echo ""
-    echo "Aborting update to chargemasters as it cannot be automatically updated."
-    echo ""
-    exit 0
-fi
-
 if [ $fetch = "yes" ]; then
 
-    if [ -f fetch_special_instead.sh ]; then
+    if [ -f fetch_special_instead.sh ] && [ $skip_special != "yes" ]; then
         echo "executing fetch_special_instead.sh..."
         HOME=/home/ray bash fetch_special_instead.sh
 
@@ -129,7 +129,7 @@ if [ $fetch = "yes" ]; then
             exit 1
         fi
 
-        /bin/rm -f sources/*
+        # /bin/rm -f sources/*
 
         unzip -o *.zip
 
@@ -150,16 +150,6 @@ if [ $process = "no" ]; then
 fi
 
 source ./deets.sh
-
-# Locate any processable source files.
-#
-( echo "select s1.file_name, s1.table_name from datasets d1, sources s1";
-  echo " where d1.pk = s1.ds_pk and auto_run = 1 and d1.name = '$id' and s1.file_name like '%%.csv';" ) | \
-    ssh opencal mysql --skip-column-names ca_hhs_meta 2>/dev/null > /tmp/csv_$$.txt
-
-( echo "select s1.file_name, s1.sheet_name, s1.table_name from datasets d1, sources s1";
-  echo " where d1.pk = s1.ds_pk and auto_run = 1 and d1.name = '$id' and s1.file_name like '%%.xlsx';" ) | \
-    ssh opencal mysql --skip-column-names ca_hhs_meta 2>/dev/null > /tmp/xlsx_$$.txt
 
 # Identify correct python executable to use.
 #
@@ -202,6 +192,12 @@ else
         r0=0
     fi
 
+    # Locate any processable source files.
+    #
+    ( echo "select s1.file_name, s1.table_name from datasets d1, sources s1";
+      echo " where d1.pk = s1.ds_pk and auto_run = 1 and d1.name = '$id' and s1.file_name like '%%.csv';" ) | \
+        ssh opencal mysql --skip-column-names ca_hhs_meta 2>/dev/null > /tmp/csv_$$.txt
+
     if [ -s /tmp/csv_$$.txt ]; then
 
         echo "import csv files..."
@@ -211,6 +207,12 @@ else
     else
         r1=0
     fi
+
+    # Locate any processable source files.
+    #
+    ( echo "select s1.file_name, s1.sheet_name, s1.table_name from datasets d1, sources s1";
+      echo " where d1.pk = s1.ds_pk and auto_run = 1 and d1.name = '$id' and s1.file_name like '%%.xlsx';" ) | \
+        ssh opencal mysql --skip-column-names ca_hhs_meta 2>/dev/null > /tmp/xlsx_$$.txt
 
     # TODO I am adding update twice if both csv and xlsx. I need to combine the result values. Just add them?
     #
@@ -231,25 +233,19 @@ else
         exit 1
     fi
 
+    HOME=/home/ray bash ../mv_sources.sh .
+
     eval $upy ../update_sources.py
 
     if [ -f exec_special_after.sh ]; then
         echo "executing exec_special_after.sh..."
         HOME=/home/ray bash exec_special_after.sh
     fi
-
-    if [ -f exec_special_after.sql ]; then
-        HOME=/home/ray mysql -vvv ca_hhs < exec_special_after.sql
-    fi
 fi
-
-HOME=/home/ray bash ../mv_sources.sh .
-
-HOME=/home/ray bash ../update_extensions.sh
 
 HOME=/home/ray bash ../share.sh $id
 
-# TODO I really should be reporting the result of all of these here, not previosly.
+# TODO I really should be reporting the result of all of these here, not previously.
 
 # something here can do a 'is everything really ok?' check.
 #
