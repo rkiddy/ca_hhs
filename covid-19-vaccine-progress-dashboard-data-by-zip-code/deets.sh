@@ -1,5 +1,5 @@
 export uuid1="ead44d40-fd63-4f9f-950a-3b0111074de8"
 export uuid2="654d8c82-9d54-4178-b850-360ef082a0a4"
 export id="covid-19-vaccine-progress-dashboard-data-by-zip-code"
-export hash="2v3cithi"
+export hash="ms1zsibs"
 export script="none"

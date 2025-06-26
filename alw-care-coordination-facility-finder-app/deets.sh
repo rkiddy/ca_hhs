@@ -1,5 +1,5 @@
-export uuid1="c3ab9d81-e7ca-4fa9-aa8d-025a7f96dda3"
-export uuid2="b274dd7c-8e79-4ea9-8aec-5bf55ae308a4"
+export uuid1="6f12669a-d439-4c66-a9a7-01c2c72975d8"
+export uuid2="ad7a8ca8-26f8-4298-b255-7eb4d0e09ff4"
 export id="alw-care-coordination-facility-finder-app"
-export hash="_cc5szi5"
+export hash="5t8awayx"
 export script="none"

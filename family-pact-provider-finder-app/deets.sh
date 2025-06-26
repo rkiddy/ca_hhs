@@ -1,5 +1,5 @@
-export uuid1="5cbbc9e4-7584-41ae-9980-fc4f345c0b81"
-export uuid2="a8f8b7f6-ffda-43bb-88ab-6ceb461cea5a"
+export uuid1="969e2ad5-0a75-4830-a95c-eb7e9e1aee64"
+export uuid2="353e8572-68d4-4393-92a5-b250fff89696"
 export id="family-pact-provider-finder-app"
-export hash="gu8qkih3"
+export hash="05epyju3"
 export script="none"
