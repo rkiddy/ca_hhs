@@ -38,3 +38,18 @@ As I see it now, I want to produce an MCP, which is an agentic resource that mak
 
 ## Unknown unknowns:
 - Are there any? :--)
+
+## Questions:
+- Should I just bite the bullet and stop using bash scripts?
+- What kind of data abstraction layer should I use? SQLAlchemy? Something else?
+- Do I need to think about the ability to store to other databases?
+
+I need to have the phases of the process more clearly separated. It will be good to determine whether a phase needs to read data or write data and whether it really needs to do both, or if these can be separated.
+
+One phase is the updated dataset download phase. I need to be able to see if there has been a changed via the dataset's "Last Updated" value. I need to then (optionally) download the file and determine if an update to individual files has been made. This information should then to passed on to the processing layer or, in a dry run, just displayed. This phase only communicates to the Cal HHS web system and reads, and only reads, from the database.
+
+The processing phase needs to read the data from the file and store it to the database. This phase should do nothing else. This should only write to the database.
+
+A fixing phase needs to happen. This needs to both read and write to the database and is database-specific. But this phase is also optional. Subject to the desire for quality, this may or may not need to do very much.
+
+A verification can run a rule engine to analyze the quality of the data. This phase should only read from the database.
