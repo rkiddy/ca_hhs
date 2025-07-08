@@ -1,6 +1,10 @@
 Things are getting big and I need to re-think how this is being done.
 
-First principles:
+## Goal:
+
+As I see it now, I want to produce an MCP, which is an agentic resource that makes the data in the CalHHS easily usable. The data should include meta-data which described the currency of the data and the quality of the data. A rule engine may need to be developed to examine the quality of the data.
+
+## Known knowns
 - There are almost 600 datasets and there are all sorts of problems with them.
   - There may be no 'Download All' link.
   - There may be a 'Download All' link but it may be broken.
@@ -28,3 +32,10 @@ First principles:
   - The tag join table links via the target pk, an identifier for the target table, and the tag pk.
 - An updates table tracks when datasets are downloaded and tracks whether the processing had an error.
 
+## Known unknowns:
+- How hard is it going to be to read all of the different spreadsheet types? Is there a way to make this a less obnoxious task?
+- Can we get geo data out of the ArcGIS tarpits?
+- Who is interested in this data and who might value this work?
+
+## Unknown unknowns:
+- Are there any? :--)
