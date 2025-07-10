@@ -49,6 +49,8 @@ I need to have the phases of the process more clearly separated. It will be good
 
 One phase is the updated dataset download phase. I need to be able to see if there has been a changed via the dataset's "Last Updated" value. I need to then (optionally) download the file and determine if an update to individual files has been made. This information should then to passed on to the processing layer or, in a dry run, just displayed. This phase only communicates to the Cal HHS web system and reads, and only reads, from the database.
 
+See the source file, fetchability.py, for the phase one functionality.
+
 The processing phase needs to read the data from the file and store it to the database. This phase should do nothing else. This should only write to the database.
 
 A fixing phase needs to happen. This needs to both read and write to the database and is database-specific. But this phase is also optional. Subject to the desire for quality, this may or may not need to do very much.
