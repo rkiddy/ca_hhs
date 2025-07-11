@@ -11,6 +11,7 @@ from bs4 import BeautifulSoup as bs
 from sqlalchemy import create_engine
 
 import config
+import utils as u
 
 cfg = config.cfg()
 
@@ -26,15 +27,6 @@ def arguments():
     parser.add_argument('--no-zips', action="store_true")
     parser.add_argument('--fetch-only', action="store_true")
     return parser.parse_args()
-
-
-def db_exec(eng, this_sql):
-    # print(f"sql: {sql}")
-    if this_sql.strip().startswith('select'):
-        return [dict(row) for row in eng.execute(this_sql).fetchall()]
-    else:
-        # print(f"sql: {this_sql}")
-        return eng.execute(this_sql)
 
 
 def fetch_cal_hhs_dataset_detail(item: dict):
@@ -184,13 +176,13 @@ def fetch_opencal_datasets():
     try:
         # Get the list of ids first.
         #
-        rows = db_exec(conn, "select pk, name as id, inactive from datasets")
+        rows = u.db_exec(conn, "select pk, name as id, inactive from datasets")
         ds = dict(zip([r['pk'] for r in rows], rows))
 
         # Since we fetch the update records in increasing date order, the last one we will see will be latest.
         #
         sql = "select * from updates where fetch_result = 0 and process_result = 0 order by updated"
-        for row in db_exec(conn, sql):
+        for row in u.db_exec(conn, sql):
             pk = row['ds_pk']
 
             if row['updated']:
@@ -235,16 +227,21 @@ def download_zipfile(item: dict, create_dir = False):
     full_fname = f"{id}/{fname}"
 
     if os.path.isfile(full_fname):
-        print(f"already present, SKIPPING, {id}/{fname}\n")
+        print(f"downloading: SKIPPING, {id}/{fname}\n")
         return
 
     print(f"downloading: {id}/{fname}\n")
 
     try:
-        if create_dir:
-            os.mkdir(id)
+        if not os.path.isdir(id):
+            if create_dir:
+                os.mkdir(id)
+            else:
+                print(f"Did NOT try to create dir: {id}, aborting.")
+                return
     except:
         print("Could NOT create dir: {id}")
+        traceback.print_exc()
         return
 
     os.chdir(id)
@@ -253,7 +250,13 @@ def download_zipfile(item: dict, create_dir = False):
         data = requests.get(url)
         with open(fname, mode='wb') as localfile:
             localfile.write(data.content)
+
+        sql = f"""insert into updates (ds_pk, updated, fetched) values
+                  ((select pk from datasets where name = {u.fix(id)}), unix_timestamp(), unix_timestamp())"""
+        u.db_exec(conn, sql)
+
     except:
+        traceback.print_exc()
         print(f"Could NOT download file: {fname}")
 
     os.chdir('..')
