@@ -62,9 +62,7 @@ def fetch_cal_hhs_dataset_detail(item: dict):
 
         for row in meta.find_all('tr'):
             if row.find('th').text == 'Last Updated':
-                # example as found: August 28, 2024, 8:50 PM (UTC-07:00)
-                #
-                # TODO I had assumed "(UTC)" so the example will break.
+                # example as found: August 28, 2024, 8:50 PM (UTC-07:00), sometimes just (UTC).
                 #
                 update = row.find('td').find('span').text.strip()
                 if ' (UTC' in update:
@@ -210,7 +208,7 @@ def fetch_opencal_datasets():
     return results
 
 
-def write(label, data):
+def write(label: str, data: dict):
     obj = json.dumps(data)
     t = int(dt.timestamp(dt.now()))
     file = f"{label}_{t}.json"
@@ -225,7 +223,7 @@ def read(fname):
 
 def download_zipfile(item: dict, create_dir = False):
 
-    if args.no_zip:
+    if args.no_zips:
         return
 
     if 'fetch_result' in item:
@@ -234,11 +232,13 @@ def download_zipfile(item: dict, create_dir = False):
     url = item['dload_all']
     id = item['id']
     fname = item['dload_all'].split('/')[-1]
-    if os.path.isfile(fname):
-        print(f"already present, SKIPPING, {id}/{fname}")
+    full_fname = f"{id}/{fname}"
+
+    if os.path.isfile(full_fname):
+        print(f"already present, SKIPPING, {id}/{fname}\n")
         return
 
-    print(f"downloading: {id}/{fname}")
+    print(f"downloading: {id}/{fname}\n")
 
     try:
         if create_dir:
@@ -292,7 +292,12 @@ if __name__ == '__main__':
         if not args.id:
             cal_hhs_datasets = fetch_cal_hhs_datasets()
         else:
-            cal_hhs_datasets = [{'id': id, 'url': f"https://data.chhs.ca.gov/dataset/{id}"}]
+            # TODO Not working. The dict cannot be turned into json. Why? -rrk 2025-07-11
+            cal_hhs_datasets = dict()
+            cal_hhs_dataset = dict()
+            cal_hhs_dataset['id'] = id
+            cal_hhs_dataset['url'] = f"https://data.chhs.ca.gov/dataset/{id}"
+            cal_hhs_datasets[id] = cal_hhs_dataset
 
         # Read the page for each dataset url, using a progress bar to display as we go.
         #
