@@ -55,6 +55,10 @@ See the source file, fetchability.py, for the phase one functionality.
 ### Phase two
 The processing phase needs to read the data from the file and store it to the database. This phase should do nothing else. This should only write to the database.
 
+First, I should verify that I have the correct information in the sources table. I have been looking at the files in the directory, but I should be looking at the zip file. Every file in the zip file should be in the sources table. This will help me deal witb the fact that files get added and removed at, for example, month- or year-ends.
+
+I have a "tables" table and a "columns" table in ca_hhs_meta to track the data types and such. I think these should go away. For example, I was keeping track of the column changes I would want to make by putting a target colum here, but this may not be workable. I was keeping track of some other things about the table, things about the data, but this does not seem to be the way to go.
+
 ### Phase three
 A fixing phase needs to happen. This needs to both read and write to the database and is database-specific. But this phase is also optional. Subject to the desire for quality, this may or may not need to do very much.
 
