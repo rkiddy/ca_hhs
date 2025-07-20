@@ -12,7 +12,7 @@ import sql_helper
 cfg = config.cfg()
 
 maindb = create_engine(f"mysql+pymysql://{cfg['MAIN_USR']}:{cfg['MAIN_PWD']}@{cfg['MAIN_HOST']}/{cfg['MAIN_DB']}")
-conn1 = maindb.connect()
+conn_main = maindb.connect()
 
 metadb = create_engine(f"mysql+pymysql://{cfg['META_USR']}:{cfg['META_PWD']}@{cfg['META_HOST']}/{cfg['META_DB']}")
 conn2 = metadb.connect()
@@ -24,7 +24,7 @@ def db_exec(eng, this_sql):
 
 def db_exec_sql(sql):
     """Assume the existing connection, because this is what happens anway."""
-    return sql_helper.db_exec(conn1, sql)
+    return sql_helper.db_exec(conn_main, sql)
 
 
 def db_exec_many(conn, prefix, suffixes):
@@ -32,7 +32,7 @@ def db_exec_many(conn, prefix, suffixes):
 
 
 def db_exec_many_sql(prefix, suffixes):
-    return sql_helper.db_exec_many(conn1, prefix, suffixes)
+    return sql_helper.db_exec_many(maindb, prefix, suffixes)
 
 
 def fix(start):
@@ -135,6 +135,8 @@ def create_tables(tables, types={}, replaces={}, length_pad=0, verbose=False):
 
         try:
             csvfile = open(file, newline='', encoding='latin1')
+            if verbose:
+                print(f"csvfile: {csvfile}")
 
             line = csvfile.readline().strip()
 
@@ -144,12 +146,20 @@ def create_tables(tables, types={}, replaces={}, length_pad=0, verbose=False):
             cols = fix_col_heads(re.split(r',(?=(?:[^"]*"[^"]*")*[^"]*$)', line), {})
             csvfile.close()
 
+            #print(f"cols: {cols}")
+
+            if verbose:
+                print(f"cols: {cols}")
+
             first_read = False
 
             with open(file, newline='', encoding='latin1') as csvfile:
                 rdr = csv.DictReader(csvfile, fieldnames=cols)
 
+                next(rdr)
+
                 lengths = find_column_lengths(rdr)
+                #print(f"lengths: {lengths}")
 
             for col in lengths:
                 sql = f"""update tables t1, columns c1 set c1.max_len = {lengths[col]}
@@ -157,10 +167,11 @@ def create_tables(tables, types={}, replaces={}, length_pad=0, verbose=False):
                 # print(f"sql: {sql}")
                 db_exec(metadb, sql)
 
-            # print(f"types: {types}\n")
+            if verbose:
+                print(f"types: {types}\n")
+                print(f"lengths: {lengths}")
 
             col_defs = list()
-            # print(f"lengths: {lengths}")
 
             max_lengths = [len(name) for name in cols]
             if max(max_lengths) > 64:
@@ -189,10 +200,10 @@ def create_tables(tables, types={}, replaces={}, length_pad=0, verbose=False):
 
             db_exec(maindb, f"drop table if exists {table}")
 
-            # print(f"sql: {sql}")
+            print(f"sql: {sql}")
             db_exec(maindb, sql)
         except:
-            # traceback.print_exc()
+            traceback.print_exc()
             failed.append(table)
 
     return failed
@@ -339,6 +350,3 @@ def read_data(tables, types={}, replaces={}, start_row=None, bucket=1000):
 
     return failed
 
-
-if __name__ == '__main__':
-    pass
