@@ -1,4 +1,17 @@
 
+"""Fetch information from the Cal HHS website.
+
+   First, the data is read from the Cal HHS web site. This information is also stored in a json file.
+   Second, the Opencal database content is also read and stored as a json file.
+
+   If the --fetch-only flag is present, the script stops here. If the --opencal-file and --opencal-file
+   are provided, then the previous steps would have been skipped.
+
+   Third, we can determine if the dataset has been updated and if the zip file for the dataset should
+   be re-fetched. If there is no workable 'Download All' link, then we should be able to use selenium,
+   but we are not doing this at present.
+"""
+
 import argparse
 import json
 import os
@@ -24,8 +37,8 @@ def arguments():
     parser.add_argument('--id')
     parser.add_argument('--opencal-file')
     parser.add_argument('--cal-hhs-file')
-    parser.add_argument('--no-zips', action="store_true")
     parser.add_argument('--fetch-only', action="store_true")
+    parser.add_argument('--download-all-zips', action="store_true")
     return parser.parse_args()
 
 
@@ -176,19 +189,20 @@ def fetch_opencal_datasets():
     try:
         # Get the list of ids first.
         #
-        rows = u.db_exec(conn, "select pk, name as id, inactive from datasets")
+        rows = u.db_exec(conn, "select pk, name as id from datasets")
         ds = dict(zip([r['pk'] for r in rows], rows))
 
         # Since we fetch the update records in increasing date order, the last one we will see will be latest.
         #
-        sql = "select * from updates where fetch_result = 0 and process_result = 0 order by updated"
+        sql = "select * from updates order by updated"
         for row in u.db_exec(conn, sql):
             pk = row['ds_pk']
 
-            if row['updated']:
-                ds[pk]['success'] = dt.fromtimestamp(row['updated']).strftime('%Y-%m-%d %H:%M')
-            else:
-                ds[pk]['success'] = '1970-01-01 00:00 (UTC)'
+            if pk in ds:
+                if row['updated']:
+                    ds[pk]['success'] = dt.fromtimestamp(row['updated']).strftime('%Y-%m-%d %H:%M')
+                else:
+                    ds[pk]['success'] = '1970-01-01 00:00 (UTC)'
 
         results = list(ds.values())
 
@@ -213,7 +227,7 @@ def read(fname):
         return json.load(file)
 
 
-def download_zipfile(item: dict, create_dir = False):
+def download_zipfile(item: dict):
 
     if args.no_zips:
         return
@@ -234,11 +248,7 @@ def download_zipfile(item: dict, create_dir = False):
 
     try:
         if not os.path.isdir(id):
-            if create_dir:
-                os.mkdir(id)
-            else:
-                print(f"Did NOT try to create dir: {id}, aborting.")
-                return
+            os.mkdir(id)
     except:
         print("Could NOT create dir: {id}")
         traceback.print_exc()
@@ -313,6 +323,17 @@ if __name__ == '__main__':
 
         write('data_cal_hhs', cal_hhs_datasets)
 
+    for id in opencal_datasets:
+        # TODO inactive should always be present but sometimes it is not? Why?
+        #
+        if 'inactive' in opencal_datasets[id]:
+            # if 'inactive' is a timestamp, that is when it was marked inactive.
+            #
+            if opencal_datasets[id]['inactive'] is not None:
+                if id not in cal_hhs_datasets:
+                    print(f"# To be REMOVED: {opencal_datasets[id]}\n")
+                    cal_hhs_datasets.pop(id)
+
     print(f"cal_hhs_datasets # {len(cal_hhs_datasets)}\n")
 
     if args.fetch_only:
@@ -320,27 +341,32 @@ if __name__ == '__main__':
 
     # which datasets have a "Last Update" after their last successful fetch?
 
-    for id in cal_hhs_datasets:
-        if id in opencal_datasets:
-            
-            if 'success' not in opencal_datasets[id]:
-                opencal_datasets[id]['success'] = '1970-01-01 00:00'
+    if args.download_all_zips:
 
-            if opencal_datasets[id]['success'] >= cal_hhs_datasets[id]['last_update']:
-                print(f"# id: {id}, opencal is more current.\n")
-            else:
-                print(f"# id: {id}, opencal is LESS current, " \
-                       f"{opencal_datasets[id]['success']} vs " \
-                       f"{cal_hhs_datasets[id]['last_update']}\n");
-                if 'dload_all' in cal_hhs_datasets[id]:
+        for id in cal_hhs_datasets:
+            download_zipfile(cal_hhs_datasets[id])
+
+    else:
+        for id in cal_hhs_datasets:
+
+            # if we do not have a download link, why bother?
+            if 'dload_all' not in cal_hhs_datasets[id]:
+                continue
+
+            if args.download_all_zips:
+                download_zipfile(cal_hhs_datasets[id])
+                continue
+
+            if id in opencal_datasets:
+
+                if 'success' not in opencal_datasets[id]:
+                    opencal_datasets[id]['success'] = '1970-01-01 00:00'
+
+                if opencal_datasets[id]['success'] >= cal_hhs_datasets[id]['last_update']:
+                    print(f"# id: {id}, opencal is more current.\n")
+                else:
+                    print(f"# id: {id}, opencal is LESS current, " \
+                           f"{opencal_datasets[id]['success']} vs " \
+                           f"{cal_hhs_datasets[id]['last_update']}\n");
                     download_zipfile(cal_hhs_datasets[id])
-
-        else:
-            print(f"# To be ADDED: {cal_hhs_datasets[id]}\n")
-            if 'dload_all' in cal_hhs_datasets[id]:
-                download_zipfile(cal_hhs_datasets[id], create_dir=True)
-
-    for id in opencal_datasets:
-        if not opencal_datasets[id]['inactive'] and id not in cal_hhs_datasets:
-            print(f"# To be REMOVED: {opencal_datasets[id]}\n")
 
