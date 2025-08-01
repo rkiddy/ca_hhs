@@ -39,6 +39,7 @@ def arguments():
     parser.add_argument('--cal-hhs-file')
     parser.add_argument('--fetch-only', action="store_true")
     parser.add_argument('--download-all-zips', action="store_true")
+    parser.add_argument('--verbose', '-v', action="store_true")
     return parser.parse_args()
 
 
@@ -363,7 +364,8 @@ if __name__ == '__main__':
                     opencal_datasets[id]['success'] = '1970-01-01 00:00'
 
                 if opencal_datasets[id]['success'] >= cal_hhs_datasets[id]['last_update']:
-                    print(f"# id: {id}, opencal is more current.\n")
+                    if args.verbose:
+                        print(f"# id: {id}, opencal is more current.\n")
                 else:
                     print(f"# id: {id}, opencal is LESS current, " \
                            f"{opencal_datasets[id]['success']} vs " \
