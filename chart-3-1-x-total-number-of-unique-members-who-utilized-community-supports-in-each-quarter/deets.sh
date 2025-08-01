@@ -1,5 +1,0 @@
-export uuid1="8df1a34e-38c6-4f79-85af-6238dfd62f6d"
-export uuid2="0555e82d-7259-4e2f-aff4-2318b4defaff"
-export id="chart-3-1-x-total-number-of-unique-members-who-utilized-community-supports-in-each-quarter"
-export hash="z0yf1"
-export script="none"

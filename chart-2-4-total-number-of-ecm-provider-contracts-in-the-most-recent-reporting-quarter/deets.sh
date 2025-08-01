@@ -1,5 +1,0 @@
-export uuid1="8282515a-1c50-4422-96fe-defed253f197"
-export uuid2="f5fc5869-3a81-4cab-a622-56d8233c8a54"
-export id="chart-2-4-total-number-of-ecm-provider-contracts-in-the-most-recent-reporting-quarter"
-export hash="eam9o0gr"
-export script="none"

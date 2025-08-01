@@ -1,5 +1,0 @@
-export uuid1="e796cff7-f1e5-4197-9d5f-d9d2ae8dc62e"
-export uuid2="c2321f8a-3360-47d5-963c-5ef2970ba6b6"
-export id="alw-public-subsidized-housing"
-export hash="nkjq4mhu"
-export script="none"

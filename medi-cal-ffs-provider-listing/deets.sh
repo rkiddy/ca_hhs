@@ -1,5 +1,0 @@
-export uuid1="097fdb82-283b-4d6d-821a-12b9ce580313"
-export uuid2="b49e4497-2946-449a-a85e-871e83ceab96"
-export id="medi-cal-ffs-provider-listing"
-export hash="gkxuy7w7"
-export script="none"

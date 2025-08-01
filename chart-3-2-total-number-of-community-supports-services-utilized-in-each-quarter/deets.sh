@@ -1,5 +1,0 @@
-export uuid1="b4ebfd2b-9ecf-4aaa-8f26-a25ec3040260"
-export uuid2="2cecc1bb-fa58-41b1-a743-18d1a5f6b44f"
-export id="chart-3-2-total-number-of-community-supports-services-utilized-in-each-quarter"
-export hash="ulyd0bth"
-export script="none"

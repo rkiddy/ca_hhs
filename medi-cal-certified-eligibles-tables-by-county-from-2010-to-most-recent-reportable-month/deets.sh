@@ -1,5 +1,0 @@
-export uuid1="8c897320-ba87-4574-bc37-bae974191c35"
-export uuid2="0f7342d7-88db-4c6d-ae22-6e2a5d77cd30"
-export id="medi-cal-certified-eligibles-tables-by-county-from-2010-to-most-recent-reportable-month"
-export hash="ut5x7y8c"
-export script="none"

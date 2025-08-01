@@ -1,5 +1,0 @@
-export uuid1="7423d8e4-6f7b-4ab3-9512-493172393fb6"
-export uuid2="8efdd0e2-d58b-46d4-9f0f-3061dd11cefd"
-export id="chart-4-1-total-number-of-provider-contracts-for-community-supports-in-each-quarter"
-export hash="u6_h35q1"
-export script="none"

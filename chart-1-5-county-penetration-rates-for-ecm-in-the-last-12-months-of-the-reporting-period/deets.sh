@@ -1,5 +1,0 @@
-export uuid1="e03fbf52-a163-487c-a157-5dbe6451a090"
-export uuid2="a2b16052-4935-4269-bba8-9c45d81a0b3d"
-export id="chart-1-5-county-penetration-rates-for-ecm-in-the-last-12-months-of-the-reporting-period"
-export hash="xx44et6"
-export script="none"

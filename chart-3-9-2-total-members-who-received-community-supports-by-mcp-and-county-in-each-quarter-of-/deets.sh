@@ -1,5 +1,0 @@
-export uuid1="fe83fb9d-9bc7-49a7-8986-3e2ba3edd0ef"
-export uuid2="88ca2e8e-6f0c-47ed-b6c7-3a5b01e97077"
-export id="chart-3-9-2-total-members-who-received-community-supports-by-mcp-and-county-in-each-quarter-of-"
-export hash="o"
-export script="none"

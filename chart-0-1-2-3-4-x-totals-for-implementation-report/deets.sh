@@ -1,5 +1,0 @@
-export uuid1="edbbe912-8495-4c37-ae6e-96c84625e2f4"
-export uuid2="7b3cb3d8-d649-4dcf-9663-e2b12709af77"
-export id="chart-0-1-2-3-4-x-totals-for-implementation-report"
-export hash="c1_syx9g"
-export script="none"

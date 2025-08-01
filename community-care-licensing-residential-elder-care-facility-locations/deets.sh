@@ -1,5 +1,0 @@
-export uuid1="00d9608d-53ee-4e93-990a-57cd220a1d4b"
-export uuid2="6fe858cf-f47a-49f4-8c86-8728475a4997"
-export id="community-care-licensing-residential-elder-care-facility-locations"
-export hash="wdqxlhzw"
-export script="none"

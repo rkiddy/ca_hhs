@@ -1,5 +1,0 @@
-export uuid1="58deeba2-8c6b-4f10-a1c1-37549750f28c"
-export uuid2="0d7d5e6d-abd5-400c-8a4d-ef9e5d8073c2"
-export id="physician-survey"
-export hash="8f875hfz"
-export script="none"

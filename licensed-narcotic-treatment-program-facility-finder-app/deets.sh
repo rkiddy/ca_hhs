@@ -1,5 +1,0 @@
-export uuid1="b2e5bd51-ffa7-46b2-b6e9-6234df24c5b3"
-export uuid2="061a07ef-c4e6-4e13-85ef-30124a54b2ba"
-export id="licensed-narcotic-treatment-program-facility-finder-app"
-export hash="pbm_2kze"
-export script="none"

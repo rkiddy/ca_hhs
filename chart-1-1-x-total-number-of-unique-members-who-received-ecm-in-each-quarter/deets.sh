@@ -1,5 +1,0 @@
-export uuid1="1d0b306e-e142-47b0-966a-f9fedd5aaca2"
-export uuid2="c1a400ec-8640-4085-93be-793edc45670c"
-export id="chart-1-1-x-total-number-of-unique-members-who-received-ecm-in-each-quarter"
-export hash="cl4qwm1o"
-export script="none"

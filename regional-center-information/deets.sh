@@ -1,5 +1,0 @@
-export uuid1="0e68b593-183d-41d0-80e0-7e828d99a22d"
-export uuid2="9f4c300a-e3a4-4080-b621-1fd9ed44f91b"
-export id="regional-center-information"
-export hash="939vt7ax"
-export script="none"

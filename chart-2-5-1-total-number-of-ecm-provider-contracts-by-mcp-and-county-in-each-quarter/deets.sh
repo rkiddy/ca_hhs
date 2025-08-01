@@ -1,5 +1,0 @@
-export uuid1="925ec9b7-f12d-43dc-8e7b-370bd5ec0cc8"
-export uuid2="c6b856df-b76c-446e-b17a-dd4a4fc63df4"
-export id="chart-2-5-1-total-number-of-ecm-provider-contracts-by-mcp-and-county-in-each-quarter"
-export hash="km6blvsg"
-export script="none"
