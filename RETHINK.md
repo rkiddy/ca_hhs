@@ -45,14 +45,73 @@ As I see it now, I want to produce an MCP, which is an agentic resource that mak
 - Do I need to think about the ability to store to other databases?
 
 ## Design Ideas
-I need to have the phases of the process more clearly separated. It will be good to determine whether a phase needs to read data or write data and whether it really needs to do both, or if these can be separated.
+There are a series of questions. Each phase of the process answers a question and stores the result.
 
-One phase is the updated dataset download phase. I need to be able to see if there has been a changed via the dataset's "Last Updated" value. I need to then (optionally) download the file and determine if an update to individual files has been made. This information should then to passed on to the processing layer or, in a dry run, just displayed. This phase only communicates to the Cal HHS web system and reads, and only reads, from the database.
+Q: Have we seen this dataset?
 
-See the source file, fetchability.py, for the phase one functionality.
+If it is a new page, add it to the datasets table.
 
-The processing phase needs to read the data from the file and store it to the database. This phase should do nothing else. This should only write to the database.
+Q: Have we downloaded the current zip file?
 
-A fixing phase needs to happen. This needs to both read and write to the database and is database-specific. But this phase is also optional. Subject to the desire for quality, this may or may not need to do very much.
+Read the dataset information off of the page, store updated information and note when the dataset
+was updated by Cal HHS.
 
-A verification can run a rule engine to analyze the quality of the data. This phase should only read from the database.
+These questions are handled by the fetchability script and the data is stored in the datasets table
+and the sources table.
+
+```
+mysql> desc datasets;
++-----------------------+---------------+------+-----+---------+-------+
+| Field                 | Type          | Null | Key | Default | Extra |
++-----------------------+---------------+------+-----+---------+-------+
+| pk                    | int           | NO   | PRI | NULL    |       |
+| name                  | varchar(255)  | YES  | UNI | NULL    |       |
+| update_ca_hhs         | bigint        | YES  |     | NULL    |       |
+| update_ca_hhs_fails   | tinyint       | YES  |     | NULL    |       |
+| update_zip_file       | bigint        | YES  |     | NULL    |       |
+| update_zip_file_fails | tinyint       | YES  |     | NULL    |       |
+| update_tables         | bigint        | YES  |     | NULL    |       |
+| update_tables_fails   | tinyint       | YES  |     | NULL    |       |
+| url                   | varchar(1027) | YES  |     | NULL    |       |
+| zip_file              | varchar(127)  | YES  |     | NULL    |       |
+| updated               | bigint        | YES  |     | NULL    |       |
+| inactive              | bigint        | YES  |     | NULL    |       |
++-----------------------+---------------+------+-----+---------+-------+
+```
+
+The update_ca_hhs columns stores the time that the Cal HHS gives for the last update of the dataset.
+The update_zip_file column stores the time that we downloaded a zip file. These dates are checked, and
+if the update_ca_hhs value is greater than the update_zip_file value, the zip file is downloaded and
+the time is noted.
+
+The update_tables value stores the time that the zip file was used to add data to the database tables.
+The value of this should be greater than the value of the update_zip_file column,
+
+The update_ca_hhs_fails, update_zip_file_fails, and update_tables_fails store a count of how many times
+the referenced update has failed. This only keeps the number of continuous failures. If an operation
+succeeds, the value will be set to 0. If an operation starts to fail and continues to fail, these
+values will go up. The referenced value should only be considered valid if the references "fails" value
+is 0.
+
+What if it is not true that update_ca_hhs < update_zip_file < update_tables?
+
+If the update_zip_file value is less than the update_ca_hhs value, download the zip file. If the
+update_tables value is less than the update_zip_file value, then process the zip file and put its data
+into the database. If this process fails, note that this occurred.
+
+```
+mysql> desc sources;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| pk          | int          | NO   | PRI | NULL    |       |
+| ds_pk       | int          | YES  | MUL | NULL    |       |
+| file_name   | varchar(255) | YES  |     | NULL    |       |
+| file_digest | char(64)     | YES  |     | NULL    |       |
+| sheet_name  | varchar(255) | YES  |     | NULL    |       |
+| table_name  | varchar(255) | YES  | MUL | NULL    |       |
+| created     | bigint       | YES  |     | NULL    |       |
+| inactive    | bigint       | YES  |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+```
+
