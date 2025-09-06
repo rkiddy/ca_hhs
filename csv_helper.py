@@ -3,19 +3,21 @@ import csv
 import os
 import re
 import traceback
+from datetime import datetime as dt
+from zipfile import ZipFile
 
-import config
 from sqlalchemy import create_engine
 
+import config
 import sql_helper
 
 cfg = config.cfg()
 
 maindb = create_engine(f"mysql+pymysql://{cfg['MAIN_USR']}:{cfg['MAIN_PWD']}@{cfg['MAIN_HOST']}/{cfg['MAIN_DB']}")
-conn_main = maindb.connect()
+maindb.connect()
 
 metadb = create_engine(f"mysql+pymysql://{cfg['META_USR']}:{cfg['META_PWD']}@{cfg['META_HOST']}/{cfg['META_DB']}")
-conn2 = metadb.connect()
+metadb.connect()
 
 
 def db_exec(eng, this_sql):
@@ -24,7 +26,7 @@ def db_exec(eng, this_sql):
 
 def db_exec_sql(sql):
     """Assume the existing connection, because this is what happens anway."""
-    return sql_helper.db_exec(conn_main, sql)
+    return sql_helper.db_exec(maindb, sql)
 
 
 def db_exec_many(conn, prefix, suffixes):
@@ -115,6 +117,162 @@ def find_column_lengths(csv_rdr):
                 if found_length  > found[key]:
                     found[key] = len(row[key])
     return found
+
+
+def fix_column_names(d):
+    next_d = dict()
+
+    for key in d:
+        ltrs = list()
+        for ltr in key:
+            if ord(ltr) < 128:
+                ltrs.append(ltr)
+        next_key = ''.join(ltrs).strip()
+
+        next_key = next_key.lower().replace(' ', '_')
+
+        next_d[next_key] = d[key]
+
+    for key in next_d:
+        if len(key) > 63:
+            raise Exception(f"cannot create column name longer than 63 characters, such as \"{key}\"")
+
+    return next_d
+
+
+def create_table(r):
+
+    columns = dict()
+
+    name = f"/tmp/readable_{int(dt.now().strftime('%s'))}.csv"
+
+    # TODO This is stupid, why can we not read text directly out of a zip file?
+    #
+    with ZipFile(r['zip_file']) as myzip:
+        with myzip.open(r['file_name'], 'r') as csvfile:
+            text = csvfile.read().decode('latin1')
+            f = open(name, 'wt')
+            f.write(text)
+            f.close()
+
+    cols = dict()
+
+    with open(name, newline='') as csvfile:
+
+        rdr = csv.DictReader(csvfile)
+
+        count = 0
+        for row in rdr:
+
+            for key in row:
+                if key not in cols:
+                    cols[key] = 0
+                if len(row[key]) > cols[key]:
+                    cols[key] = len(row[key])
+
+    try:
+        cols = fix_column_names(cols)
+    except Exception as e:
+        traceback.print_exc()
+        r['exception'] = e
+        return r
+
+    r['columns'] = cols
+    col_defs = list()
+
+    for key in cols:
+        cols[key] = f"varchar({cols[key]+5})"
+        col_defs.append(f"{key} {cols[key]}")
+
+    r['columns'] = cols
+
+    tname = r['table_name']
+
+    sql = f"create table {tname} ({', '.join(col_defs)})"
+
+    print(f"\ncreating table {tname}...")
+
+    try:
+        sql_helper.db_exec(maindb, f"drop table if exists {tname}")
+
+        print(f"sql: {sql}")
+        sql_helper.db_exec(maindb, sql)
+
+        r['table_file'] = name
+
+    except Exception as e:
+        traceback.print_exc()
+        print(f"ERROR creating table from file: {name}")
+        r['exception'] = e
+
+    return r
+
+
+def fix_sql(s):
+    s = s.replace("'", "''")
+    return f"'{s}'"
+
+
+def generate_insert_sql(table_name, col_names, suffixes):
+
+    sql = f"insert into {table_name} " \
+          f"({', '.join(col_names)}) " \
+          "values " \
+          f"{', '.join(suffixes)}"
+
+    #print(f"\nsql: {sql}")
+    return sql
+
+
+def write_table_data(r):
+    print(f"\nr: {r}")
+
+    col_names = list(r['columns'].keys())
+
+    suffixes = list()
+
+    is_first = True
+
+    rows_found = 0
+
+    with open(r['table_file'], newline='') as csvfile:
+        rdr = csv.DictReader(csvfile, col_names)
+        for row in rdr:
+            # Why, there is no skip rows parameter?
+            if is_first:
+                is_first = False
+                continue
+
+            values = [fix_sql(r) for r in list(row.values())]
+            suffixes.append(f"({', '.join(values)})")
+
+            if len(suffixes) >= 1000:
+
+                try:
+                    sql = generate_insert_sql(r['table_name'], col_names, suffixes)
+                    sql_helper.db_exec(maindb, sql)
+                    rows_found += len(suffixes)
+                    suffixes = list()
+                except Exception as e:
+                    traceback.print_exc()
+                    r['exception'] = e
+                    csvfile.close()
+                    return r
+
+        if len(suffixes) > 0:
+            try:
+                sql = generate_insert_sql(r['table_name'], col_names, suffixes)
+                sql_helper.db_exec(maindb, sql)
+                rows_found += len(suffixes)
+            except Exception as e:
+                traceback.print_exc()
+                r['exception'] = e
+                csvfile.close()
+                return r
+
+    csvfile.close()
+    r['rows'] = rows_found
+    return r
 
 
 def create_tables(tables, types={}, replaces={}, length_pad=0, verbose=False):

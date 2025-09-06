@@ -12,11 +12,10 @@ conn = engine.connect()
 
 
 def db_exec(eng, this_sql):
-    # print(f"sql: {sql}")
+    # print(f"sql: {this_sql}")
     if this_sql.strip().startswith('select'):
         return [dict(row) for row in eng.execute(this_sql).fetchall()]
     else:
-        # print(f"sql: {this_sql}")
         return eng.execute(this_sql)
 
 
@@ -43,13 +42,29 @@ def db_exec_many_sql(prefix, suffixes):
     return db_exec_many(engine, prefix, suffixes)
 
 
+def get_max_pk(conn, table_name):
+    pk_rows = db_exec(conn, f"select max(pk) as max from {table_name}")
+    if len(pk_rows) == 0 or pk_rows[0]['max'] is None:
+        return 0
+    else:
+        return int(pk_rows[0]['max'])
+
+
 def fix(start):
     """For putting a string into a query or insert SQL statement."""
     if not start:
         return 'NULL'
     else:
+        if start.startswith("'"):
+            start = start[1:]
+        if start.endswith("'"):
+            start = start[0:-1]
         start = start.replace("'", "''").replace('%', '%%').replace('\\', '')
         return f"'{start}'"
+
+
+def fix_str(start):
+    return fix(start)
 
 
 def fix_int(start):
@@ -82,6 +97,38 @@ def fix_date(start):
     else:
         raise Exception(f"Cannot understand date format of value: {start}")
     return f"'{year}-{mon}-{dat}'"
+
+
+def fix_date_cols(table, col, s='/'):
+    """Fix the dates in a column one column at a time instead of one date at a time."""
+
+    sqls = list()
+
+    # dates: MM-DD-YYYY
+    sql1 = f"""update {table}
+               set {col} = concat(substr({col},7),'-',substr({col},1,2),'-',substr({col},4,2))
+               where {col} rlike '[0-9][0-9]{s}[0-9][0-9]{s}[0-9][0-9][0-9][0-9]'"""
+    sqls.append(sql1)
+
+    # dates: M-DD-YYYY
+    sql2 = f"""update {table}
+               set {col} = concat(substr({col},6),'-0',substr({col},1,1),'-',substr({col},3,2))
+               where {col} rlike '[0-9]{s}[0-9][0-9]{s}[0-9][0-9][0-9][0-9]'"""
+    sqls.append(sql2)
+
+    # dates: MM-D-YYYY
+    sql3 = f"""update {table}
+               set {col} = concat(substr({col},6),'-',substr({col},1,2),'-0',substr({col},4,1))
+               where {col} rlike '[0-9][0-9]{s}[0-9]{s}[0-9][0-9][0-9][0-9]'"""
+    sqls.append(sql3)
+
+    # dates: M-D-YYYY
+    sql4 = f"""update {table}
+               set {col} = concat(substr({col},5),'-0',substr({col},1,1),'-',substr({col},3,1))
+               where {col} rlike '[0-9]{s}[0-9]{s}[0-9][0-9][0-9][0-9]'"""
+    sqls.append(sql4)
+
+    return sqls
 
 
 known_replacements = {'system': 'system_name',

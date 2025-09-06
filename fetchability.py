@@ -1,5 +1,5 @@
-
 """Fetch information from the Cal HHS website.
+
 
    First, the data is read from the Cal HHS web site. This information is also stored in a json file.
    Second, the Opencal database content is also read and stored as a json file.
@@ -19,6 +19,7 @@ import os.path
 import traceback
 from datetime import datetime as dt
 
+import pytz
 import requests
 from bs4 import BeautifulSoup as bs
 from sqlalchemy import create_engine
@@ -48,6 +49,21 @@ def arguments():
     parser.add_argument('--non-interactive', '-ni', action="store_true",
                         help="Prevent all output, except for errors. Useful when called via cron.")
     return parser.parse_args()
+
+
+def dprint(msg):
+    if args.verbose:
+        print(msg)
+
+
+def iprint(msg):
+    if not args.non_interactive:
+        print(msg)
+
+
+def diprint(msg):
+    if args.verbose and not args.non_interactive:
+        print(msg)
 
 
 def fetch_cal_hhs_dataset_detail(item: dict):
@@ -81,8 +97,15 @@ def fetch_cal_hhs_dataset_detail(item: dict):
                 if ' (UTC' in update:
                     update = update[:update.index(' (UTC')]
 
-                update_dt = dt.strptime(update, '%B %d, %Y, %H:%M').strftime('%s')
-                item['last_update'] = update_dt
+                update_dt = dt.strptime(update, '%B %d, %Y, %H:%M')
+                offset = pytz.timezone("America/Los_Angeles").utcoffset(update_dt).seconds
+                update_dt_sec = int(update_dt.timestamp()) - offset
+
+                # there are datasets that have an updated date far in the future...
+                if update_dt_sec > int(dt.now().timestamp()):
+                    update_dt_sec = int(dt.now().timestamp())
+
+                item['last_update'] = str(update_dt_sec)
 
             if row.find('th').text == 'DCAT Modified Date':
                 # example as found: 'dcat_mod_date': '2025-07-03T17:53:31.874Z'
@@ -118,7 +141,7 @@ def fetch_cal_hhs_dataset_detail(item: dict):
     return item
 
 
-def fetch_cal_hhs_datasets():
+def fetch_cal_hhs_datasets_lists():
     """From from the main Cal HHS Datasets page (https://data.chhs.ca.gov/dataset/) and
        iterate through the list, returning the list of currently available datasets,
        with the information that can be pulled from the summary list page.
@@ -177,6 +200,8 @@ def fetch_cal_hhs_datasets():
 
                 found_here.append(dataset)
 
+            #print(f"page # {page_num} found {len(found_here)} datasets")
+
             if len(found_here) == 0:
                 done = True
             else:
@@ -200,6 +225,14 @@ def fetch_cal_hhs_datasets():
 
     return results
 
+def build_one_dataset(id):
+    cal_hhs_datasets = dict()
+    cal_hhs_dataset = dict()
+    cal_hhs_dataset['id'] = args.id
+    cal_hhs_dataset['url'] = f"https://data.chhs.ca.gov/dataset/{args.id}"
+    cal_hhs_datasets[args.id] = cal_hhs_dataset
+    return cal_hhs_datasets
+
 
 def record_ca_hhs_last_update(data):
     if 'last_update' in data:
@@ -219,10 +252,34 @@ def record_ca_hhs_last_update_fails(id):
     sql_helper.db_exec(dbmeta, sql)
 
 
-def record_zip_file_update(data):
+def update_dataset_details(dss):
+    if args.non_interactive:
+       for dataset in dss:
+           item = fetch_cal_hhs_dataset_detail(dss[dataset])
+           if item is not None:
+               record_ca_hhs_last_update(item)
+               record_ca_hhs_last_update_fails(dataset)
+
+    else:
+        print("Fetching detail pages for each dataset:")
+        import progressbar as pb
+        bar = pb.ProgressBar(maxval=len(dss))
+        bar.start()
+        for dataset in dss:
+            item = fetch_cal_hhs_dataset_detail(dss[dataset])
+            if item is not None:
+                record_ca_hhs_last_update(item)
+                record_ca_hhs_last_update_fails(dataset)
+            bar.increment()
+        bar.finish()
+
+    return dss
+
+
+def record_zip_file_update(data, zip_file):
     sql = f"""update datasets
-              set update_zip_file = unix_timestamp(), update_zip_file_fails = 0
-              where name = '{data['id']}'"""
+              set update_zip_file = unix_timestamp(), update_zip_file_fails = 0, zip_file = '{zip_file}'
+              where name = '{data['id']}' and inactive is NULL"""
     try:
         sql_helper.db_exec(dbmeta, sql)
     except:
@@ -231,7 +288,8 @@ def record_zip_file_update(data):
 
 
 def record_zip_file_update_fails(id):
-    sql = f"update datasets set update_zip_file_fails = uupdate_zip_file_fails + 1 where name = '{id}'"
+    sql = f"""update datasets set update_zip_file_fails = update_zip_file_fails + 1, zip_file = NULL
+              where name = '{id}'"""
     sql_helper.db_exec(dbmeta, sql)
 
 
@@ -241,22 +299,34 @@ def fetch_opencal_datasets():
 
     found = list()
 
+    # mysql> desc datasets;
+    # +-----------------------+---------------+------+-----+---------+-------+
+    # | Field                 | Type          | Null | Key | Default | Extra |
+    # +-----------------------+---------------+------+-----+---------+-------+
+    # | pk                    | int           | NO   | PRI | NULL    |       |
+    # | name                  | varchar(255)  | YES  | UNI | NULL    |       |
+    # | update_ca_hhs         | bigint        | YES  |     | NULL    |       |
+    # | update_ca_hhs_fails   | tinyint       | YES  |     | NULL    |       |
+    # | update_zip_file       | bigint        | YES  |     | NULL    |       |
+    # | update_zip_file_fails | tinyint       | YES  |     | NULL    |       |
+    # | update_tables         | bigint        | YES  |     | NULL    |       |
+    # | update_tables_fails   | tinyint       | YES  |     | NULL    |       |
+    # | url                   | varchar(1027) | YES  |     | NULL    |       |
+    # | zip_file              | varchar(127)  | YES  |     | NULL    |       |
+    # | updated               | bigint        | YES  |     | NULL    |       |
+    # | inactive              | bigint        | YES  |     | NULL    |       |
+    # +-----------------------+---------------+------+-----+---------+-------+
+
     try:
         # Get the list of ids first.
         #
         rows = sql_helper.db_exec(dbmeta, "select * from datasets where inactive is NULL")
-        ds = dict(zip([r['pk'] for r in rows], rows))
 
-        # do something here?
+        return dict(zip([r['name'] for r in rows], rows))
 
-        results = list(ds.values())
-
-        result = dict(zip([r['name'] for r in results], results))
     except:
         traceback.print_exc()
         return []
-
-    return results
 
 
 def update_opencal_table_counts():
@@ -281,6 +351,24 @@ def update_opencal_table_counts():
         sql_helper.db_exec(dbmeta, sql)
 
 
+def read_local_json_data():
+    """
+    The json files for previous fetches are stored like "data_cal_hhs_1756422450.json".
+    """
+    cal_hhs_file = [f for f in os.listdir() if f.startswith('data_cal_hhs_') and f.endswith('.json')][-1]
+    with open(cal_hhs_file, 'r') as file:
+        return json.load(file)
+
+
+def read_opencal_json_data():
+    """
+    The fetch-only version of this script is run on opencalaccess every day and the result
+    is placed into the web server, so that it can be fetched here.
+    """
+    resp = requests.get('https://opencalaccess.com/ca_hhs/latest.json')
+    return resp.json()
+
+
 def write(label: str, data: dict):
     obj = json.dumps(data)
     t = int(dt.timestamp(dt.now()))
@@ -289,12 +377,11 @@ def write(label: str, data: dict):
         outfile.write(obj)
 
 
-def read(fname):
-    with open(fname, 'r') as file:
-        return json.load(file)
-
-
 def download_zipfile(item: dict):
+    """Download a zip file and record the success of the download operation."""
+
+    if 'dload_all' not in item:
+         return
 
     url = item['dload_all']
     id = item['id']
@@ -314,14 +401,23 @@ def download_zipfile(item: dict):
     try:
         os.chdir(id)
 
+        # clear out existing zip files first
+        with os.scandir('.') as it:
+            for entry in it:
+                if entry.name.endswith('.zip') and entry.is_file():
+                    os.remove(entry.name)
+
         data = requests.get(url)
         with open(fname, mode='wb') as localfile:
             localfile.write(data.content)
 
+        found_zip_file = None
+
         with os.scandir('.') as it:
             for entry in it:
                 if entry.name.endswith('.zip') and entry.is_file():
-                    si = os.stat(entry.name)
+                    found_zip_file = entry.name
+                    si = os.stat(found_zip_file)
                     #if args.verbose:
                     print(f"si: {si}")
                     print(f"    size: {si.st_size}")
@@ -330,11 +426,15 @@ def download_zipfile(item: dict):
 
         os.chdir('..')
 
+        record_zip_file_update(item, found_zip_file)
+
         return 0
 
     except:
         traceback.print_exc()
         print(f"Could NOT download file: {fname}")
+
+        record_zip_file_update_fails(item)
 
         return 1
 
@@ -344,81 +444,48 @@ def dump(label, data):
         print(f"{label}: {data[key]}\n")
 
 
+def fromtimestamp(ts):
+    ts1 = dt.fromtimestamp(ts)
+    return ts1.strftime('%Y-%m-%d %H:%M')
+
+
 if __name__ == '__main__':
 
     args = arguments()
 
-    if not args.non_interactive:
-        print("")
+    iprint("")
 
-    # from ca_hhs_meta:
+    # from the opencal database, ca_hhs_meta:
     # get list of datasets that we have fetched and the time of their last successful fetch.
 
     opencal_datasets = fetch_opencal_datasets()
-    opencal_datasets = dict(zip([r['name'] for r in opencal_datasets], opencal_datasets))
 
-    # TODO when should this be called? when should we assume this is updated?
-    #update_opencal_table_counts()
-
-    if not args.non_interactive:
-        print(f"opencal_datasets # {len(opencal_datasets)}")
+    iprint(f"opencal_datasets # {len(opencal_datasets)}")
 
     # from Cal HHS website:
 
     if args.json_in:
-        cal_hhs_file = [f for f in os.listdir() if f.startswith('data_cal_hhs_') and f.endswith('.json')][-1]
-        cal_hhs_datasets = read(cal_hhs_file)
+
+        cal_hhs_datasets = read_local_json_data()
+
+    elif args.opencal_json_in:
+
+        cal_hhs_datasets = read_opencal_json_data()
+
     else:
         if not args.id:
-            cal_hhs_datasets = fetch_cal_hhs_datasets()
+            cal_hhs_datasets = fetch_cal_hhs_datasets_lists()
         else:
-            # TODO Not working. The dict cannot be turned into json. Why? -rrk 2025-07-11
-            cal_hhs_datasets = dict()
-            cal_hhs_dataset = dict()
-            cal_hhs_dataset['id'] = id
-            cal_hhs_dataset['url'] = f"https://data.chhs.ca.gov/dataset/{id}"
-            cal_hhs_datasets[id] = cal_hhs_dataset
+            cal_hhs_datasets = build_one_dataset(args.id)
 
         # Read the page for each dataset url, using a progress bar to display as we go.
         #
-        # If I get a good fetch of the page, update the info. If I fail to read the page, mark that.
-        #
-        if args.non_interactive:
-            for dataset in cal_hhs_datasets:
-                item = fetch_cal_hhs_dataset_detail(cal_hhs_datasets[dataset])
-                if item is not None:
-                    record_ca_hhs_last_update(item)
-                    record_ca_hhs_last_update_fails(dataset)
-
-        else:
-            print("Fetching detail pages for each dataset:")
-            import progressbar as pb
-            bar = pb.ProgressBar(maxval=len(cal_hhs_datasets))
-            bar.start()
-            for dataset in cal_hhs_datasets:
-                item = fetch_cal_hhs_dataset_detail(cal_hhs_datasets[dataset])
-                if item is not None:
-                    record_ca_hhs_last_update(item)
-                    record_ca_hhs_last_update_fails(dataset)
-                bar.increment()
-            bar.finish()
+        cal_hhs_datasets = update_dataset_details(cal_hhs_datasets)
 
         if not args.no_write_json:
             write('data_cal_hhs', cal_hhs_datasets)
 
-    for id in opencal_datasets:
-        # TODO inactive should always be present but sometimes it is not? Why?
-        #
-        if 'inactive' in opencal_datasets[id]:
-            # if 'inactive' is a timestamp, that is when it was marked inactive.
-            #
-            if opencal_datasets[id]['inactive'] is not None:
-                if id not in cal_hhs_datasets:
-                    print(f"# To be REMOVED: {opencal_datasets[id]}\n")
-                    #cal_hhs_datasets.pop(id)
-
-    if not args.non_interactive:
-        print(f"cal_hhs_datasets # {len(cal_hhs_datasets)}\n")
+    iprint(f"cal_hhs_datasets # {len(cal_hhs_datasets)}\n")
 
     if args.fetch_only:
         quit()
@@ -429,8 +496,7 @@ if __name__ == '__main__':
 
         for id in cal_hhs_datasets:
             r = download_zipfile(cal_hhs_datasets[id])
-            if args.verbose and not args.non_interactive:
-                print(f"zip file for {id}, result: {r}")
+            diprint(f"zip file for {id}, result: {r}")
 
     else:
         downloadables = list()
@@ -440,9 +506,12 @@ if __name__ == '__main__':
             # if we do not have a download link, why bother?
             #
             if 'dload_all' not in cal_hhs_datasets[id]:
+                print(f"\nLink for \"dload_all\" not found in {id}")
                 continue
 
             if id in opencal_datasets:
+
+                #print(f"ds detail: {opencal_datasets[id]}")
 
                 ca_hhs_update = cal_hhs_datasets[id]['last_update']
                 if ca_hhs_update is None:
@@ -454,31 +523,25 @@ if __name__ == '__main__':
                 if zip_file_update is None:
                     zip_file_update = 0
 
-                if zip_file_update > ca_hhs_update:
-                    if args.verbose and not args.non_interactive:
-                        print(f"\n# id: {id}, opencal is up to date.\n")
+                # TODO What the fuck? 5 seconds? Why? Arg!
+                #
+                if (zip_file_update + (5*1000)) >= ca_hhs_update:
+                    diprint(f"\n# id: {id}, opencal is up to date.\n")
                 else:
-                    if not args.non_interactive:
-                        print(f"\n# id: {id}, opencal is OUT OF DATE, " \
-                              f"zip file: {zip_file_update}, ca hhs: {ca_hhs_update}")
+                    iprint(f"\n# id: {id}, opencal is OUT OF DATE\n" \
+                           f"    zip file: {fromtimestamp(zip_file_update)}\n" \
+                           f"    ca hhs: {fromtimestamp(ca_hhs_update)}\n")
                     downloadables.append(id)
+            else:
+                print(f"\nid: {id} not in opencal_datasets")
 
-        if not args.non_interactive:
-            print(f"downloadables # {len(downloadables)}")
+        iprint(f"\ndownloadables # {len(downloadables)}")
 
-        if len(downloadables) > 0:
+        if len(downloadables) > 0 and not args.non_interactive:
+            print("\nok to download? ", end="")
+            input()
 
-            if not args.non_interactive:
-                print("\nok to download? ", end="")
-                input()
-
-            for id in downloadables:
-                r = download_zipfile(cal_hhs_datasets[id])
-                if not args.non_interactive:
-                    print(f"\nzip file for {id}, result: {r}\n")
-
-                if r == 0: # 0 means GOOD, as of now.
-                    record_zip_file_update(cal_hhs_datasets[id])
-                else:
-                    record_zip_file_update_fails(id)
+        for id in downloadables:
+            r = download_zipfile(cal_hhs_datasets[id])
+            iprint(f"\nzip file for {id}, result: {r}\n")
 
