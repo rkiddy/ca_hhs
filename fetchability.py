@@ -39,6 +39,7 @@ def arguments():
     parser.add_argument('--id', help="Fetch only the dataset for this id.")
     parser.add_argument('--json-in', action="store_true",
                         help="Use previously fetched data for Cal HHS, instead of fetching it.")
+    parser.add_argument('--opencal-json-in', action="store_true")
     parser.add_argument('--fetch-only', action="store_true",
                         help="Only fetch and process opencal and Cal HHS data.")
     parser.add_argument('--download-all-zips', action="store_true",
