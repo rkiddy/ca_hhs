@@ -274,9 +274,9 @@ def xxx_add_sources(sources):
 
         pk += 1
 
-        sql = f"""insert into sources (pk, ds_pk, auto_run, file_name, created) values
+        sql = f"""insert into sources (pk, ds_pk, auto_run, file_name, created, update_tables) values
                  ({pk}, (select pk from datasets where name = {u.fix(id)}),
-                  {auto_run}, {u.fix(file)}, unix_timestamp())"""
+                  {auto_run}, {u.fix(file)}, unix_timestamp(), 0)"""
         u.db_exec(db, sql)
 
 
