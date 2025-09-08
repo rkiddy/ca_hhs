@@ -259,6 +259,7 @@ def update_dataset_details(dss):
            item = fetch_cal_hhs_dataset_detail(dss[dataset])
            if item is not None:
                record_ca_hhs_last_update(item)
+           else:
                record_ca_hhs_last_update_fails(dataset)
 
     else:
@@ -270,6 +271,7 @@ def update_dataset_details(dss):
             item = fetch_cal_hhs_dataset_detail(dss[dataset])
             if item is not None:
                 record_ca_hhs_last_update(item)
+            else:
                 record_ca_hhs_last_update_fails(dataset)
             bar.increment()
         bar.finish()
