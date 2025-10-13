@@ -1,5 +1,0 @@
-export uuid1="73963208-ed70-4829-8428-e5bc9b3afdff"
-export uuid2="215f7dbc-b44d-44f7-8f65-3e6e95b6a536"
-export id="ffs-provider-type-reference-table"
-export hash="22sjm_h6"
-export script="none"

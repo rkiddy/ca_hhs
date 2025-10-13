@@ -1,5 +1,0 @@
-export uuid1="31f19bf7-2ca3-4834-8e2f-5551c0c72c8c"
-export uuid2="e5954e0c-7bb3-417d-83ef-3d27a06e0b3a"
-export id="covid-19-patient-data"
-export hash="94pnfw1b"
-export script="none"

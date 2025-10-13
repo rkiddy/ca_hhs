@@ -1,5 +1,0 @@
-export uuid1="50f14805-67a5-44b2-a4c3-883aeea519bc"
-export uuid2="ade54027-0aee-44af-b089-07d1133729df"
-export id="long-term-care-ombudsman-complaints-in-residential-care-facility-for-the-elderly-settings"
-export hash="bcs68b"
-export script="none"

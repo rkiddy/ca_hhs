@@ -1,5 +1,0 @@
-export uuid1="ae17c2a1-678d-4189-aad7-e1d7a09f3001"
-export uuid2="77ecd6cf-8949-4762-8575-859032862ff4"
-export id="ca-wellness-plan-data-reference-guide"
-export hash="gnucu48t"
-export script="none"

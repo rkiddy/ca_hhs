@@ -1,5 +1,0 @@
-export uuid1="10358adb-6b56-40ad-abf0-413a833eef92"
-export uuid2="690cfc8f-e3e1-4fe7-8b05-07429717b8fa"
-export id="healthcare-payments-data-hpd-healthcare-measures"
-export hash="j8w5ljsq"
-export script="none"

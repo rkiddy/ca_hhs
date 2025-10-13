@@ -1,5 +1,0 @@
-export uuid1="bfb706d5-3673-49a1-ac4b-d9ca4408f07f"
-export uuid2="7eba9755-7755-412a-bcb2-cc272022e064"
-export id="early-and-periodic-screening-diagnosis-and-treatment-of-children-and-youth-performance-dashboard"
-export hash="dashboard"
-export script="none"

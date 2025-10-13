@@ -1,5 +1,0 @@
-export uuid1="a345bba7-25ed-4019-b6e3-0b597bea7368"
-export uuid2="5c1bbb76-23f5-48a1-9024-7ad566fc94de"
-export id="methicillin-resistant-staphylococcus-aureus-mrsa-bloodstream-infections-bsi-in-california-hospitals"
-export hash="hospit"
-export script="none"

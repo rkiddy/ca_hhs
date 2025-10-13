@@ -1,5 +1,0 @@
-export uuid1="22ab43fc-81c2-44c9-b075-4cd44ca0ba78"
-export uuid2="b20b858d-0973-4d60-ac1c-07c2537a1108"
-export id="licensed-narcotic-treatment-programs"
-export hash="e7zd2ltk"
-export script="none"

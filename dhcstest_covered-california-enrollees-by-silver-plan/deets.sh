@@ -1,5 +1,0 @@
-export uuid1="a2034ac5-4ba7-4ebc-a2f4-787842e447ed"
-export uuid2="1825aef0-7901-4cec-835f-1b37fd3442db"
-export id="dhcstest_covered-california-enrollees-by-silver-plan"
-export hash="1vhocvay"
-export script="none"

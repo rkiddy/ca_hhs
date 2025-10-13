@@ -1,5 +1,0 @@
-export uuid1="9d061c76-0508-4a11-ada0-4681becb33ee"
-export uuid2="32fc536d-6cac-4e8b-a6d3-76ecce5e5591"
-export id="mcna-t-d-standards-by-county"
-export hash="rgzbe0c3"
-export script="none"

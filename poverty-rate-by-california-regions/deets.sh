@@ -1,5 +1,0 @@
-export uuid1="4ea80791-c308-4026-8a94-0e9070b53929"
-export uuid2="6e27fe34-d0d0-477a-ae15-01e8768ebf06"
-export id="poverty-rate-by-california-regions"
-export hash="lli737"
-export script="none"

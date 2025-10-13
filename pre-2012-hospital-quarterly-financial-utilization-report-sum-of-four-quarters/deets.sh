@@ -1,5 +1,0 @@
-export uuid1="86b3f765-c05c-40e5-9e2e-4b70fed6abe3"
-export uuid2="c63778f8-6309-4e00-a2dc-c6983a20ae69"
-export id="pre-2012-hospital-quarterly-financial-utilization-report-sum-of-four-quarters"
-export hash="d7heb67e"
-export script="none"

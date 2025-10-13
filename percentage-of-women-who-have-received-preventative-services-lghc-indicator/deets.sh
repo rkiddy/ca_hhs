@@ -1,5 +1,0 @@
-export uuid1="964d37a7-7a90-4920-afed-2b20b2a04d30"
-export uuid2="7e19fb79-06a0-4c80-b440-9901b3db397f"
-export id="percentage-of-women-who-have-received-preventative-services-lghc-indicator"
-export hash="c5veu9wb"
-export script="none"

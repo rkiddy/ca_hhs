@@ -1,5 +1,0 @@
-export uuid1="9bc0b219-5610-48f7-9aa6-9201e223c260"
-export uuid2="f715ccd4-f136-4ea7-b016-5b554149be0c"
-export id="medical-service-study-area-data-dictionary"
-export hash="3hr8gu4f"
-export script="none"

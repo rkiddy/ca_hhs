@@ -1,5 +1,0 @@
-export uuid1="6804b2c6-5b99-4d5b-ada5-0c2f218491de"
-export uuid2="23108a60-1265-4b6c-b3b7-4019652d0599"
-export id="alw-assisted-living-facilities"
-export hash="5h5gps5t"
-export script="none"

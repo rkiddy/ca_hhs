@@ -1,2 +1,0 @@
-
-alter table rates_of_preventable_hospitalizations_for_selected_medi_6e9ad322 change column year year int;

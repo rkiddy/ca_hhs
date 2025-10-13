@@ -1,5 +1,0 @@
-export uuid1="89a3cbc9-800b-49f6-92cc-10e2f6899c5e"
-export uuid2="b88f6c60-a219-4168-9e50-8fbf3d05eaa9"
-export id="average-reimbursement-per-family-pact-client-served-by-fiscal-year"
-export hash="jdxz6dk_"
-export script="none"

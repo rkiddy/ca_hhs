@@ -1,2 +1,0 @@
-
-alter table total_effectuated_qualified_health_plan_qhp_enrollment__4149ab9a change column year year int;

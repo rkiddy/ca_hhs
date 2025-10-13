@@ -1,5 +1,0 @@
-export uuid1="6273489c-f898-4ae7-bab1-9020cb1f64c6"
-export uuid2="05910f27-3bf0-4609-baf7-a63c4cf84c96"
-export id="race-ethnicity-health-workforce-trends"
-export hash="up2df0mi"
-export script="none"

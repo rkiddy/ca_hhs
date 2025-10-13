@@ -1,5 +1,0 @@
-export uuid1="4da5328e-4ed2-4460-8fa6-48e8d2cf61df"
-export uuid2="c66c132f-f309-4399-9742-11024dafc0c3"
-export id="major-diagnostic-categories-summary"
-export hash="2x1jrq7o"
-export script="none"

@@ -1,5 +1,0 @@
-export uuid1="b4810e9c-c364-4231-aef8-66ee14d9213e"
-export uuid2="f28ae883-b8e3-4f32-9b95-2124b06eb2e0"
-export id="newborn-screening-disorders"
-export hash="er_ipp_b"
-export script="newborns"

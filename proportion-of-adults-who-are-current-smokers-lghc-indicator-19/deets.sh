@@ -1,5 +1,0 @@
-export uuid1="a66328ec-2a61-401a-8af1-84fc9e2e421d"
-export uuid2="4a865e0d-9b72-4a9a-8f6c-d72d222d76c3"
-export id="proportion-of-adults-who-are-current-smokers-lghc-indicator-19"
-export hash="umn0ve1o"
-export script="none"

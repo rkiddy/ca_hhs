@@ -1,9 +1,0 @@
-
-These two datasources are both part of one:
-
-	pre-2012-primary-care-clinic-utilization-data
-	primary-care-clinic-annual-utilization-data
-
-The number of columns in the DataSAS sheet of the file sources/2012-pivot-table-primary-care-clinic-utilization-data.xlsx is extreme.
-
-

@@ -1,5 +1,0 @@
-export uuid1="442e7cde-6230-405c-b8a8-b7ea5489de87"
-export uuid2="8420fdbf-8492-4740-8e92-e8cdfd41b659"
-export id="living-wage"
-export hash="n0a9suy_"
-export script="none"

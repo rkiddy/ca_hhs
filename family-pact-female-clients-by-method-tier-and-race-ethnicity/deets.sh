@@ -1,5 +1,0 @@
-export uuid1="8361b649-c401-4feb-a9ee-4ff7931e832f"
-export uuid2="b3eb7d55-20b1-46ef-b3d4-c446afc2961f"
-export id="family-pact-female-clients-by-method-tier-and-race-ethnicity"
-export hash="hluqzw5p"
-export script="none"

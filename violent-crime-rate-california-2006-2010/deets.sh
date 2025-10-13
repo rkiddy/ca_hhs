@@ -1,5 +1,0 @@
-export uuid1="99bc1fea-c55c-4377-bad8-f00832fd195d"
-export uuid2="c9a0afc7-0310-4aeb-acd9-658ecedcc8f7"
-export id="violent-crime-rate-california-2006-2010"
-export hash="tk4rpbsn"
-export script="none"

@@ -1,5 +1,0 @@
-export uuid1="9413d0d9-c1bd-4641-805f-7fb76455dab2"
-export uuid2="06d801b6-609f-4e3b-83e0-60a4f65a3eba"
-export id="licensed-bed-classification-and-designations-trends"
-export hash="sm_atc2a"
-export script="none"

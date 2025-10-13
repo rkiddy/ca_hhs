@@ -1,5 +1,0 @@
-export uuid1="d88a9279-9b96-4c0f-9b07-9bb2a606747c"
-export uuid2="ecc76f7a-9c69-416f-bd7a-ed03047c59f3"
-export id="sud-recovery-treatment-facilities"
-export hash="a0awmp9z"
-export script="none"

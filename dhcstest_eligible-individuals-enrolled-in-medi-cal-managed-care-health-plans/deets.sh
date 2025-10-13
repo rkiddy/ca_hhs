@@ -1,5 +1,0 @@
-export uuid1="18a26449-c9a4-4246-9599-aaa292cdac7e"
-export uuid2="d4793ca8-d3f9-4217-83b1-cc195425bec4"
-export id="dhcstest_eligible-individuals-enrolled-in-medi-cal-managed-care-health-plans"
-export hash="c6uc_k4e"
-export script="none"

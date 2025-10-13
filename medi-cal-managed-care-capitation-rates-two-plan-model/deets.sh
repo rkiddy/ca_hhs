@@ -1,5 +1,0 @@
-export uuid1="644aecf1-4513-4e32-a3ed-2cc806952e84"
-export uuid2="05346818-febd-481f-9b1b-d22fb1e0b1e0"
-export id="medi-cal-managed-care-capitation-rates-two-plan-model"
-export hash="921il2r8"
-export script="none"

@@ -1,5 +1,0 @@
-export uuid1="15843392-9d5c-4ce9-9d15-18faef28e3d7"
-export uuid2="0db0713d-65b6-41e9-b200-7740c9ea0e58"
-export id="medi-cal-fpact-provider-listing"
-export hash="ej_0sxtk"
-export script="none"

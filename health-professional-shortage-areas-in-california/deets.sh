@@ -1,5 +1,0 @@
-export uuid1="42406266-89d3-4d04-9c45-587de774a1d5"
-export uuid2="f628b080-79dd-40f4-91c7-46913d19a5e4"
-export id="health-professional-shortage-areas-in-california"
-export hash="o8fonolc"
-export script="none"

@@ -1,5 +1,0 @@
-export uuid1="a7379d3c-1e56-4e56-b9f6-398b2a9c7760"
-export uuid2="929887ef-6306-4887-85f1-cb094a437e55"
-export id="disproportionate-share-hospital-dsh-eligibility-for-state-fiscal-years-2010-2017"
-export hash="s014jkg6"
-export script="none"

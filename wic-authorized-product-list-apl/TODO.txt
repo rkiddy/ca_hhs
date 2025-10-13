@@ -1,5 +1,0 @@
-
-They change the file name for each issue but do not leave the old data.
-
-The script will break once a month.
-

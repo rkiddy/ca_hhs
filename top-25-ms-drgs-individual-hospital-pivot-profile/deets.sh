@@ -1,5 +1,0 @@
-export uuid1="0fa47cc2-284e-45a2-83b6-a4524fd84fb2"
-export uuid2="7662fea4-404e-474a-ae74-240ef2d5a0ec"
-export id="top-25-ms-drgs-individual-hospital-pivot-profile"
-export hash="j2vpp5k8"
-export script="none"

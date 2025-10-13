@@ -1,5 +1,0 @@
-export uuid1="a465bab8-8359-43eb-97ad-e99742610889"
-export uuid2="d0c2de37-bdee-4a49-bd1c-195becaaf764"
-export id="ehr-incentive-program-payments-hospitals"
-export hash="kis4ksne"
-export script="none"

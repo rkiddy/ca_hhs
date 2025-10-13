@@ -1,5 +1,0 @@
-export uuid1="4ea8fbae-0d14-4e4a-952e-acb4c813c84c"
-export uuid2="b6d4d405-cf39-4f10-b5bd-202ba7b06fdc"
-export id="housing-cost-burden-2006-2010"
-export hash="yckf7vfq"
-export script="none"

@@ -1,5 +1,0 @@
-export uuid1="5448f054-aa7f-4797-9de2-85767db93dff"
-export uuid2="d5cf4e0c-bbb3-4212-9af5-f69e8472ac81"
-export id="case-mix-index"
-export hash="htc47bi9"
-export script="none"

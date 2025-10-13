@@ -1,5 +1,0 @@
-export uuid1="bcc3e8ec-69f2-4bd2-b215-7664cb8eb720"
-export uuid2="ccbc5f91-78f7-4554-86c4-3fb90a852068"
-export id="physician-survey-licensee-responses-by-address-of-record-zip-code"
-export hash="g6zqblcl"
-export script="none"

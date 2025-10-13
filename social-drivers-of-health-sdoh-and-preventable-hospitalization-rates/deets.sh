@@ -1,5 +1,0 @@
-export uuid1="cb0dc592-36b6-45fe-90ce-6db57eb42a0a"
-export uuid2="f5afd10e-cd45-43b2-a78b-6ea43cff9f7a"
-export id="social-drivers-of-health-sdoh-and-preventable-hospitalization-rates"
-export hash="5jj1rggm"
-export script="none"

@@ -1,5 +1,0 @@
-export uuid1="6214db5a-1953-4acd-90eb-08673d3598c4"
-export uuid2="893ec799-a8f1-4e44-ad81-c8abc0dd7181"
-export id="adults-meeting-physical-activity-guidelines-lghc-indicator-16"
-export hash="a1pqh9kp"
-export script="none"

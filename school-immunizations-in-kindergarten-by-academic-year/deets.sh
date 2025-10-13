@@ -1,5 +1,0 @@
-export uuid1="bc38e725-9180-49e7-97e5-e16cb413a40c"
-export uuid2="e7f4d175-219e-4692-94c0-197a97907bc6"
-export id="school-immunizations-in-kindergarten-by-academic-year"
-export hash="pvo0swos"
-export script="none"

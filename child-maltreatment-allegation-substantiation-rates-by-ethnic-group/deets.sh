@@ -1,5 +1,0 @@
-export uuid1="9af42782-ed00-4baa-9a01-40fbf4e1a2da"
-export uuid2="8156aeb1-6247-432b-b9af-fbba40aea6a5"
-export id="child-maltreatment-allegation-substantiation-rates-by-ethnic-group"
-export hash="v7yib0yq"
-export script="none"

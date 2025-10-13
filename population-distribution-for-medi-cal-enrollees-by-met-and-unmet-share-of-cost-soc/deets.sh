@@ -1,5 +1,0 @@
-export uuid1="873fb5df-a612-448c-8d77-9d33b3453cb1"
-export uuid2="24d514e5-9e90-4a2b-b017-7be7e7ddd36d"
-export id="population-distribution-for-medi-cal-enrollees-by-met-and-unmet-share-of-cost-soc"
-export hash="7a9urdwx"
-export script="none"

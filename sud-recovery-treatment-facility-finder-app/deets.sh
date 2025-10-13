@@ -1,5 +1,0 @@
-export uuid1="371ea74a-1c8c-4508-ad5b-135096b6c441"
-export uuid2="57df905d-09f4-4cf5-af44-207189ec2f2c"
-export id="sud-recovery-treatment-facility-finder-app"
-export hash="i1urc9y0"
-export script="none"

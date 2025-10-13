@@ -1,2 +1,0 @@
-
-alter table rates_of_selected_hospital_procedures_examined_for_over_ed6d5f5f change column year year int;

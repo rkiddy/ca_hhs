@@ -1,5 +1,0 @@
-export uuid1="5ea28f96-7bb6-4c18-9c0d-020484fab181"
-export uuid2="0ae7ac73-1b4b-4e6f-b488-77c2f387f445"
-export id="asthma-deaths-by-county"
-export hash="p1b54xx1"
-export script="none"

@@ -1,5 +1,0 @@
-export uuid1="b1008bb6-2f54-4b49-a0e0-c4d1bc9440ff"
-export uuid2="68aef3ac-debf-4fba-999c-42b88fefa759"
-export id="transportation-to-work-2000-2006-2010"
-export hash="i_90x413"
-export script="none"

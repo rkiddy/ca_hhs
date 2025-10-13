@@ -1,5 +1,0 @@
-export uuid1="5e391154-f07d-4e0c-ab1b-687a0c4c5d06"
-export uuid2="89c9d507-8835-4b56-b400-b2add817d4a3"
-export id="walkable-distance-public-transit-2008-2012"
-export hash="pec5jv_y"
-export script="none"

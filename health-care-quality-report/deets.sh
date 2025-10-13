@@ -1,5 +1,0 @@
-export uuid1="e018845d-a32e-4f7f-b936-66d8e5de9ba6"
-export uuid2="80070622-0348-40bd-b266-ca38286c446c"
-export id="health-care-quality-report"
-export hash="rshjpp4q"
-export script="none"

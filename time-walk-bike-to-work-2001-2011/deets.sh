@@ -1,5 +1,0 @@
-export uuid1="775b88dc-4d37-42f9-9873-be0eb9b55dd4"
-export uuid2="2c3be3bf-5555-410c-bbff-03bd8c701896"
-export id="time-walk-bike-to-work-2001-2011"
-export hash="mrg9f2yj"
-export script="none"

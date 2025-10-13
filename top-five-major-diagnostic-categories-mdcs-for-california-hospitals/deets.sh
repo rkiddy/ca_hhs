@@ -1,5 +1,0 @@
-export uuid1="0e8aaf3b-3683-4e4d-b3d2-d221a81c1511"
-export uuid2="943594e0-2387-4c56-98cf-5625cda351cc"
-export id="top-five-major-diagnostic-categories-mdcs-for-california-hospitals"
-export hash="n6k5sexp"
-export script="none"

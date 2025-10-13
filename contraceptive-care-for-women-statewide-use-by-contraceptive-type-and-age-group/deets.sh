@@ -1,5 +1,0 @@
-export uuid1="6075b226-7331-4c02-93cd-da723b66bab6"
-export uuid2="2d1baee2-a559-4e31-9cb1-6607556c7c52"
-export id="contraceptive-care-for-women-statewide-use-by-contraceptive-type-and-age-group"
-export hash="qv5ibtwr"
-export script="none"

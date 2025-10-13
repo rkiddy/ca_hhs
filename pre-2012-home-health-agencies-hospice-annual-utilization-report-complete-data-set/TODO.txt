@@ -1,6 +1,0 @@
-
-These two are parts of the same dataset:
-
-home-health-hospice-annual-utilization-report-complete-data-set
-pre-2012-home-health-agencies-hospice-annual-utilization-report-complete-data-set
-

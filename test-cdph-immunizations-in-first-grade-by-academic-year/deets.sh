@@ -1,5 +1,0 @@
-export uuid1="e663d22d-0d28-4191-8001-ab09f7031deb"
-export uuid2="ed52a142-b133-4cc3-ac26-c788e8f7b8eb"
-export id="test-cdph-immunizations-in-first-grade-by-academic-year"
-export hash="fezpv58r"
-export script="none"

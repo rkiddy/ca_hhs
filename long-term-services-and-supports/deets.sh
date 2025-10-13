@@ -1,5 +1,0 @@
-export uuid1="d395c7fc-bad7-4869-a024-0d10a7107edb"
-export uuid2="5b449f35-4c04-47a4-ad72-f3170c7b17b5"
-export id="long-term-services-and-supports"
-export hash="bvwyhpqx"
-export script="services"

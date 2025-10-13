@@ -1,5 +1,0 @@
-export uuid1="590aeff1-b022-4240-9a46-3fe90bf3ad91"
-export uuid2="c8784674-0b11-4fbf-ae2d-117bf0691a1a"
-export id="death-profiles-by-zip-code"
-export hash="2k0l814j"
-export script="none"

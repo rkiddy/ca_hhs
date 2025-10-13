@@ -1,5 +1,0 @@
-export uuid1="c95231ec-67fc-4ef2-b6ce-ff7883c26e38"
-export uuid2="ea9478f1-6b8e-4c0a-b107-6469f1d0314b"
-export id="long-term-care-ombudsman-complaints-in-skilled-nursing-intermediate-care-facility-settings"
-export hash="qwlzk"
-export script="none"

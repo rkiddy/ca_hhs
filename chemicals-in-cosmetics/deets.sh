@@ -1,5 +1,0 @@
-export uuid1="596b5eed-31de-4fd8-a645-249f3f9b19c4"
-export uuid2="1e38ed6a-e46d-44a3-844b-f130efdacff1"
-export id="chemicals-in-cosmetics"
-export hash="_5boklb7"
-export script="none"

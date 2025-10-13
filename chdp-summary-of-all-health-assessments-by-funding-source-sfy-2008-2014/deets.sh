@@ -1,5 +1,0 @@
-export uuid1="886e17f7-cd4e-411a-99fc-2d53925e6075"
-export uuid2="ca40902f-673a-48d2-8ad1-81eeff4f9d95"
-export id="chdp-summary-of-all-health-assessments-by-funding-source-sfy-2008-2014"
-export hash="k369gj0w"
-export script="none"

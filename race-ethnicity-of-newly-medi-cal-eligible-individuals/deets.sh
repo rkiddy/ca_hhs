@@ -1,5 +1,0 @@
-export uuid1="e739e93f-4002-4fb6-a271-e1fb90f95378"
-export uuid2="c140e222-69d4-4194-b504-8433d57d197a"
-export id="race-ethnicity-of-newly-medi-cal-eligible-individuals"
-export hash="1aqny6hc"
-export script="none"

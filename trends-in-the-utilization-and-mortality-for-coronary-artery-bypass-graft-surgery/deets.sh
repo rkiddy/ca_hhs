@@ -1,5 +1,0 @@
-export uuid1="eb4cece5-05ea-42d6-a5e0-e7a4f1410ac5"
-export uuid2="832f42ae-25f7-4b3a-a9cb-8390f4a1df1a"
-export id="trends-in-the-utilization-and-mortality-for-coronary-artery-bypass-graft-surgery"
-export hash="k_btzsu1"
-export script="none"

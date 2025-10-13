@@ -1,5 +1,0 @@
-export uuid1="fb0e792f-0165-414d-af91-130a4309505f"
-export uuid2="23e837f4-c146-45e4-95bc-eb4d7c505fab"
-export id="respiratory-virus-dashboard-metrics"
-export hash="5o2px9ym"
-export script="none"

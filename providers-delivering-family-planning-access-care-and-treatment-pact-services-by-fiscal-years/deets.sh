@@ -1,5 +1,0 @@
-export uuid1="e925407e-7a0f-43c2-a5e5-8cf58f8fac21"
-export uuid2="f45fcf34-80db-4854-9c0d-e55c4bd750d0"
-export id="providers-delivering-family-planning-access-care-and-treatment-pact-services-by-fiscal-years"
-export hash="xxl"
-export script="none"

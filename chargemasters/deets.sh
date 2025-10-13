@@ -1,5 +1,0 @@
-export uuid1=""
-export uuid2=""
-export id="chargemasters"
-export hash=""
-export script="none"

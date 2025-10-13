@@ -1,5 +1,0 @@
-export uuid1="20bbdb95-5da1-4a0e-9888-36d0e59b4652"
-export uuid2="ea81c922-8681-4814-8a2f-64a103d05f8a"
-export id="pre-2015-utilization-rates-for-selected-medical-procedures-in-california-hospitals"
-export hash="oxlrskbk"
-export script="none"

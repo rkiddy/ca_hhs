@@ -1,5 +1,0 @@
-export uuid1="a2f39ff5-b212-4d96-aa40-8a977d64b84b"
-export uuid2="c2e49eec-2c31-409b-89f3-d18ce43a9ec1"
-export id="registered-nurse-shortage-areas-in-california"
-export hash="a7csa5qz"
-export script="none"

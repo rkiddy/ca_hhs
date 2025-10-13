@@ -1,5 +1,0 @@
-export uuid1="fcecf935-97e9-4d0b-af12-292637ac0efb"
-export uuid2="33473793-7815-455d-a136-8e5713b09b50"
-export id="primary-care-shortage-area-pcsa"
-export hash="bv35oatr"
-export script="none"

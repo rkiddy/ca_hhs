@@ -1,5 +1,0 @@
-export uuid1="549af51c-7414-40b7-90dc-97bcc1846c3a"
-export uuid2="13cc0bcb-f1dc-434a-ba48-441735b98eae"
-export id="presumptive-eligibility"
-export hash="wig2z7yi"
-export script="none"

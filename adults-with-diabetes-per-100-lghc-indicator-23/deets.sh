@@ -1,5 +1,0 @@
-export uuid1="f9feb1b8-16de-41fc-a983-084bcf80db11"
-export uuid2="efdd6138-c50f-4644-94e5-737237f47b71"
-export id="adults-with-diabetes-per-100-lghc-indicator-23"
-export hash="tmb30nqh"
-export script="none"

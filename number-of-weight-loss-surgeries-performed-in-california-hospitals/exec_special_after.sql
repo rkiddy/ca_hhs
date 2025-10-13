@@ -1,2 +1,0 @@
-
-alter table number_of_weight_loss_surgeries_performed_in_california_1c367c9d change column year year int;

@@ -1,5 +1,0 @@
-export uuid1="7e533b6c-8cbc-4950-8710-c70343952eb0"
-export uuid2="fb3f4251-9173-434f-a079-06775e1f4671"
-export id="public-hospital-redesign-and-incentives-in-medi-cal-prime-program-dy11-dy13-data"
-export hash="oujrrix5"
-export script="none"

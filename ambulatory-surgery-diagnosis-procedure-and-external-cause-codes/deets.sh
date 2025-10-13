@@ -1,5 +1,0 @@
-export uuid1="d84f8a92-24e2-401d-b789-6e208c264aea"
-export uuid2="cea1271b-a62f-43c5-871d-ab9d178c620f"
-export id="ambulatory-surgery-diagnosis-procedure-and-external-cause-codes"
-export hash="c1enc66a"
-export script="none"

@@ -1,5 +1,0 @@
-export uuid1="5a93fcbd-e133-4070-9e76-9fb70fb35344"
-export uuid2="af3deec8-c916-4776-8f0f-9905709fc295"
-export id="rates-of-selected-hospital-procedures-examined-for-over-or-under-use-by-county"
-export hash="895aqi41"
-export script="none"

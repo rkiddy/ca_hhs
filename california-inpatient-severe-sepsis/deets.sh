@@ -1,5 +1,0 @@
-export uuid1="4b44a63e-ec7c-4481-bf26-582b9b65d18b"
-export uuid2="61f7be12-819a-4678-99a8-2e77a8a4151d"
-export id="california-inpatient-severe-sepsis"
-export hash="rmcs5ewc"
-export script="none"

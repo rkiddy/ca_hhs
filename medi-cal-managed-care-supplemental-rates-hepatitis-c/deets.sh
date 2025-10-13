@@ -1,5 +1,0 @@
-export uuid1="e85e432c-1bb1-4fd1-80b2-fc3befde2565"
-export uuid2="1692afd0-9b06-4e9c-843a-72bc343517c2"
-export id="medi-cal-managed-care-supplemental-rates-hepatitis-c"
-export hash="mzbbpjn2"
-export script="none"

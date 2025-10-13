@@ -1,5 +1,0 @@
-export uuid1="78f573b2-4c7e-40da-95d2-f5777514586d"
-export uuid2="de166c48-f8f8-42c0-809e-1947c10491fb"
-export id="data-table-for-map-of-counties-and-number-of-community-supports-available"
-export hash="c3v0aqu8"
-export script="none"

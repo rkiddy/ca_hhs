@@ -1,5 +1,0 @@
-export uuid1="cfdf572b-d7b0-4cb9-8036-47068f98298c"
-export uuid2="b4aadd7e-dfc7-44e3-8b96-ab27af698a02"
-export id="fruit-and-vegetable-consumption-in-california-residents-2012-2013"
-export hash="oll8md03"
-export script="none"

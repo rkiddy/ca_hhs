@@ -1,5 +1,0 @@
-export uuid1="7fb6eb5e-0f39-4d52-a0c5-8d638b550c24"
-export uuid2="8fa33220-1d97-4040-951f-f66d5f9a3dde"
-export id="emergency-department-volume-and-capacity"
-export hash="hfb78al2"
-export script="none"

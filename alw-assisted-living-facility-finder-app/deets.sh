@@ -1,5 +1,0 @@
-export uuid1="979ca873-2cf7-44ca-9369-0b760c8314b8"
-export uuid2="1c69b1d2-98fd-4ece-8379-a7bfce6b90ac"
-export id="alw-assisted-living-facility-finder-app"
-export hash="xvj25m8s"
-export script="none"

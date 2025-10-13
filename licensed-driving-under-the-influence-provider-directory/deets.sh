@@ -1,5 +1,0 @@
-export uuid1="99eb13bb-4b6e-4a67-9050-9209939d2a18"
-export uuid2="9ad9ff49-2d99-471d-98a2-77b4d7d7ee78"
-export id="licensed-driving-under-the-influence-provider-directory"
-export hash="99bcpciq"
-export script="none"

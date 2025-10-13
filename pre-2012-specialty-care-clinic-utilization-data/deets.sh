@@ -1,5 +1,0 @@
-export uuid1="e56c1e8d-3085-41a6-bb17-09d909ede3a0"
-export uuid2="69753cad-1e30-4e8a-ab96-a1d3ecddbb9d"
-export id="pre-2012-specialty-care-clinic-utilization-data"
-export hash="cpd0udrb"
-export script="none"

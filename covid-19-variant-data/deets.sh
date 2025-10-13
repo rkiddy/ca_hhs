@@ -1,5 +1,0 @@
-export uuid1="52e4aa7a-2ea3-4bfd-8cd6-7d653db1ee74"
-export uuid2="01974d7e-0e4c-41c0-9ef3-9d25f379747c"
-export id="covid-19-variant-data"
-export hash="bjk7il_g"
-export script="none"

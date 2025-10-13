@@ -1,5 +1,0 @@
-export uuid1="b210848c-a5ab-476c-b46b-904df4381a67"
-export uuid2="93e98d30-498e-4904-9959-aec1d8a47504"
-export id="percent-of-all-family-pact-clients-served-with-sexually-transmitted-infection-tests-by-fiscal-years"
-export hash="ye"
-export script="none"

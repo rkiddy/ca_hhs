@@ -1,5 +1,0 @@
-export uuid1="f36f29a0-3ad3-4b56-b954-c82766ed5a4a"
-export uuid2="0f98de5f-e5f9-416d-b432-bd29216c4e31"
-export id="rates-of-preventable-hospitalizations-age-18-for-selected-medical-conditions-by-county"
-export hash="kc6bf6pc"
-export script="none"

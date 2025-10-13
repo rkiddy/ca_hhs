@@ -1,5 +1,0 @@
-export uuid1="2a11f891-33f6-4a66-84fb-670fdfedc9bb"
-export uuid2="5433cda7-1a18-44b1-b451-8290c3a3ab74"
-export id="test-dhcs-multi-year-dental-measures-data-by-county-calendar-year-2013-to-2021"
-export hash="w3jy2p43"
-export script="none"

@@ -1,5 +1,0 @@
-export uuid1="59d9abe7-2664-407a-a5aa-f89a866f3381"
-export uuid2="a31bba27-44bc-46b0-b516-0bcc98000636"
-export id="licensed-healthcare-facility-listing"
-export hash="2cy91685"
-export script="facilities"

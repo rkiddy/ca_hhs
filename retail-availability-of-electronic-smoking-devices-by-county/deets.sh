@@ -1,5 +1,0 @@
-export uuid1="8eb8839f-52a1-410b-8c4a-5b1c1678bbc2"
-export uuid2="74b996a9-ed5c-4834-afd5-dba0348ed844"
-export id="retail-availability-of-electronic-smoking-devices-by-county"
-export hash="8r0a7gaq"
-export script="none"

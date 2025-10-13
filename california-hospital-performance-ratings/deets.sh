@@ -1,5 +1,0 @@
-export uuid1="3ae59d3c-aef0-4742-a16e-65d4e3c27d4a"
-export uuid2="a13b091a-6495-4ba2-b7ba-70281115efb9"
-export id="california-hospital-performance-ratings"
-export hash="fujq6h3s"
-export script="none"

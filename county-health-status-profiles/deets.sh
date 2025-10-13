@@ -1,5 +1,0 @@
-export uuid1="8ceba47b-6357-4946-9fb9-cbe8c02ca9ad"
-export uuid2="d37591c5-1cd1-4b01-b14c-b61d739cd3db"
-export id="county-health-status-profiles"
-export hash="ww6e35uw"
-export script="none"

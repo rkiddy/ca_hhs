@@ -1,5 +1,0 @@
-export uuid1="cc9c51e9-d067-4052-937b-e1cc05742731"
-export uuid2="255f645f-ce5d-4688-8069-ad4a7dde75cd"
-export id="dhcs-county-code-reference-table"
-export hash="kkrgslc1"
-export script="none"

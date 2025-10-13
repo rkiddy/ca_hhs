@@ -1,5 +1,0 @@
-export uuid1="be292bc5-244e-4eba-808e-e18edf97e09e"
-export uuid2="9c524003-2f0b-4312-a8c8-f12d6e626234"
-export id="pre-2012-long-term-care-facilities-annual-utilization-data"
-export hash="z6oz7u0m"
-export script="none"

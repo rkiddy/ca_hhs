@@ -1,5 +1,0 @@
-export uuid1="88024cf8-0882-4a4b-b1e2-46804249f033"
-export uuid2="c1183f1d-8b80-46fb-a562-478a18e07f94"
-export id="pre-2012-hospital-annual-financial-data-selected-data-pivot-tables"
-export hash="o8wsoik6"
-export script="none"

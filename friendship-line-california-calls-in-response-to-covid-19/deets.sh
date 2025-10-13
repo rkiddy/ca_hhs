@@ -1,5 +1,0 @@
-export uuid1="d71df234-7ba1-42e7-98bc-160a55beb7d1"
-export uuid2="887d9339-db5c-4703-acf9-d293fb73670d"
-export id="friendship-line-california-calls-in-response-to-covid-19"
-export hash="2f0j09t6"
-export script="none"

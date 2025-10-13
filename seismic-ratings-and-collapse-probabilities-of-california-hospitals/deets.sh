@@ -1,5 +1,0 @@
-export uuid1="257fb4cd-7687-41b5-8ae9-0bc6e29aa28e"
-export uuid2="e6334eca-1a49-49b2-9179-6d51a49eb7ce"
-export id="seismic-ratings-and-collapse-probabilities-of-california-hospitals"
-export hash="vwrsvmd4"
-export script="none"

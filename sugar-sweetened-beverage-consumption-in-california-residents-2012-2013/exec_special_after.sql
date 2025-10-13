@@ -1,2 +1,0 @@
-
-alter table sugar_sweetened_beverage_consumption_in_california_resi_becff160 change column year year int;

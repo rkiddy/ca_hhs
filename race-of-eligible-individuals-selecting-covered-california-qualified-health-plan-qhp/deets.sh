@@ -1,5 +1,0 @@
-export uuid1="255ac729-b152-49f4-9852-d7b747503f0c"
-export uuid2="ea407380-b19d-4057-8444-ba65e4383679"
-export id="race-of-eligible-individuals-selecting-covered-california-qualified-health-plan-qhp"
-export hash="msu471d_"
-export script="none"

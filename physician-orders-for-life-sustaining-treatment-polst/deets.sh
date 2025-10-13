@@ -1,5 +1,0 @@
-export uuid1="156c1977-6b4a-486b-b99e-2208defb1ec0"
-export uuid2="9a8226da-8c41-41a2-a95a-a6afd587d85b"
-export id="physician-orders-for-life-sustaining-treatment-polst"
-export hash="7rbre0n9"
-export script="none"

@@ -1,5 +1,0 @@
-export uuid1="03e61434-7db8-4a53-a3e2-1d4d36d6848d"
-export uuid2="6055f382-39c1-4d7e-a06d-6cc81b564d44"
-export id="infectious-disease"
-export hash="y5zcra9t"
-export script="none"

@@ -1,5 +1,0 @@
-export uuid1="17001513-32aa-4b6e-af7a-8995924804ed"
-export uuid2="9835583a-e967-4d5b-9ec1-e72b9d5c7793"
-export id="mortality-following-hip-fracture-repair-in-california-hospitals"
-export hash="r71fw_9o"
-export script="none"

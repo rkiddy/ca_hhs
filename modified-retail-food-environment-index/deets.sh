@@ -1,5 +1,0 @@
-export uuid1="714a9d67-3291-447b-94b9-9d3e1063d176"
-export uuid2="fc0216ab-ba0d-4bd9-be0c-6fba6fca3c62"
-export id="modified-retail-food-environment-index"
-export hash="1iqesj"
-export script="retail_food"

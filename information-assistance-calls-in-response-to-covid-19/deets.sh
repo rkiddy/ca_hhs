@@ -1,5 +1,0 @@
-export uuid1="1aec099c-2c77-4a17-a03d-a9499663d367"
-export uuid2="2f3f837c-42a0-43b3-b874-86a56bd06460"
-export id="information-assistance-calls-in-response-to-covid-19"
-export hash="nix0e6x5"
-export script="none"

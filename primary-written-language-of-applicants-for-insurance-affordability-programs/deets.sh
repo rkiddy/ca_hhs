@@ -1,5 +1,0 @@
-export uuid1="79a206e2-13bf-482a-9cf0-de93b6452ef1"
-export uuid2="a2cffbb3-61a6-4ffa-8d9c-d131a6cb781c"
-export id="primary-written-language-of-applicants-for-insurance-affordability-programs"
-export hash="rk0qh73i"
-export script="none"

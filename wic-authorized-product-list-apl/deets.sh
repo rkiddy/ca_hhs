@@ -1,5 +1,0 @@
-export uuid1="f34e156d-370d-4ba4-817c-2b62bdd0b8d9"
-export uuid2="7852401b-542c-41ac-8884-ae573c9f72b3"
-export id="wic-authorized-product-list-apl"
-export hash="l4lw557z"
-export script="none"

@@ -1,5 +1,0 @@
-export uuid1="31179b67-a779-4003-940c-15ef7efcebab"
-export uuid2="ef92be7c-b1cb-4777-be1c-72273dbb517f"
-export id="ecm-community-support-data-tables-for-quarterly-implementation-report"
-export hash="bnnz0b_e"
-export script="none"
