@@ -120,6 +120,7 @@ def find_column_lengths(csv_rdr):
 
 
 def fix_column_names(d):
+    # print(f"fix_column_names: d: {d}")
     next_d = dict()
 
     for key in d:
@@ -167,7 +168,7 @@ def create_table(r):
             for key in row:
                 if key not in cols:
                     cols[key] = 0
-                if len(row[key]) > cols[key]:
+                if row[key] is not None and len(row[key]) > cols[key]:
                     cols[key] = len(row[key])
 
     try:
@@ -209,6 +210,8 @@ def create_table(r):
 
 
 def fix_sql(s):
+    if s is None:
+        return 'NULL'
     s = s.replace("'", "''")
     return f"'{s}'"
 
@@ -224,8 +227,8 @@ def generate_insert_sql(table_name, col_names, suffixes):
     return sql
 
 
-def write_table_data(r):
-    print(f"\nr: {r}")
+def write_table_data(r, insert_bucket):
+    # print(f"\nr: {r}")
 
     col_names = list(r['columns'].keys())
 
@@ -246,7 +249,7 @@ def write_table_data(r):
             values = [fix_sql(r) for r in list(row.values())]
             suffixes.append(f"({', '.join(values)})")
 
-            if len(suffixes) >= 1000:
+            if len(suffixes) >= insert_bucket:
 
                 try:
                     sql = generate_insert_sql(r['table_name'], col_names, suffixes)
