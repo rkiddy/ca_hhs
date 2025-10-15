@@ -112,9 +112,7 @@ def verify_source_entries(datasets):
     for name in datasets:
         ds = datasets[name]
 
-        zip_file = ds[0]['zip_file']
-
-        zip_file_last = zip_file.split('/')[-1]
+        zip_file_last = ds[0]['zip_file'].split('/')[-1]
 
         files = [r['file_name'] for r in ds]
 
@@ -122,9 +120,30 @@ def verify_source_entries(datasets):
 
         ds_pk = ds[0]['ds_pk']
 
+        # set up file-table connections...
+        #
+        sql = f"""select file_name, sheet_name, table_name from sources
+                  where ds_pk = {ds_pk} and inactive is NULL and table_name is not NULL"""
+        rows = sql_helper.db_exec(db, sql)
+
+        tables_for_file = dict()
+
+        # a file might go to one table, but if is has sheets in an xlsx, it will go to many...
+        #
+        for row in rows:
+            if row['sheet_name'] is None:
+                tables_for_file[row['file_name']] = row['table_name']
+            else:
+                if row['file_name'] not in tables_for_file:
+                    tables_for_file[row['file_name']] = list()
+                tables_for_file[row['file_name']].append(f"{row['sheet_name']}-->{row['table_name']}")
+
+        # now I can properly start.
+        #
         found[name] = {'name': name,
-                       'zip_file': zip_file,
-                       'ds_pk': ds_pk}
+                       'zip_file': zip_file_last,
+                       'ds_pk': ds_pk,
+                       'both': [], 'extra': [], 'missing': []}
         try:
             with zipfile.ZipFile(full_fn, mode="r") as z:
                 files = z.namelist()
@@ -142,11 +161,6 @@ def verify_source_entries(datasets):
 
             found[name]['both'] = list(set(files) & set(sources.keys()))
 
-            sql = f"""select file_name from sources
-                      where ds_pk = {ds_pk} and inactive is not NULL"""
-            rows = sql_helper.db_exec(db, sql)
-            found[name]['inactive'] = [r['file_name'] for r in rows]
-
         except KeyboardInterrupt as kie:
             print("KeyboardInterrupt")
             quit()
@@ -158,13 +172,136 @@ def verify_source_entries(datasets):
             traceback.print_exc()
             print(f"\nERROR: full_fn: {full_fn}")
 
+        next_both = list()
+        for both in found[name]['both']:
+            if both in tables_for_file:
+                next_both.append(f"{both}-->{tables_for_file[both]}")
+            else:
+                next_both.append(both)
+        found[name]['both'] = next_both
+
+        next_missing = list()
+        for missing in found[name]['missing']:
+            if missing in tables_for_file:
+                next_missing.append(f"{missing}-->{tables_for_file[missing]}")
+            else:
+                next_missing.append(missing)
+        found[name]['missing'] = next_missing
+
     #print("found:")
     #pprint(found, compact=True)
 
     return found
 
 
-def fix_easy_source_entries(datasets):
+def print_ds_with_msgs(ds, msgs):
+    print("")
+    print("="*60)
+    pprint(ds, compact=True)
+    print("")
+    [print(msg) for msg in msgs]
+
+
+def print_help():
+    print("")
+    print("The options here are:")
+    print("    done - will take you to the next dataset.")
+    print("    quit - will quit the entire script.")
+    print("    add file: <name> - will add a source without a table.")
+    print("    add file: <name> table: <name> - will add a source with this table.")
+    print("    add file: <name> sheet: <name> table: <name> - will add a source with this sheet name and table.")
+    print("    remove <name> - will remove the source or sources with this filename.")
+    print("    help - will print out this information.")
+    print("")
+
+
+def process_remove(ds_pk, s):
+    parts = s.split(' ')
+
+    f_name = ' '.join(parts[1:])
+
+    sql = f"update sources set inactive = unix_timestamp() where ds_pk = {ds_pk} and name = '{f_name}'"
+    print(f"sql: {sql}")
+
+
+def process_add(ds_pk, s):
+    parts = s.split(' ')
+
+    pk = sql_helper.get_max_pk(db, 'sources') + 1
+
+    # TODO I could do correctness checks here....
+    #
+    # a file name and a sheet name could have a space, but a table name cannot.
+
+    sql = None
+
+    if 'table:' not in parts and 'sheet:' not in parts:
+        f_idx = 2
+        f_name = ' '.join(parts[f_idx:])
+        sql = f"insert into sources (pk, ds_pk, file_name, created) values " \
+              f"({pk}, {ds_pk}, '{f_name}', unix_timestamp())"
+
+    if 'table:' in parts and 'sheet:' not in parts:
+        f_idx = 2
+        t_idx = parts.index('table:')
+
+        f_name = ' '.join(parts[f_idx:t_idx])
+        t_name = parts[t_idx+1]
+
+        sql = f"insert into sources (pk, ds_pk, file_name, table_name, created) values " \
+              f"({pk}, {ds_pk}, '{f_name}', '{t_name}', unix_timestamp())"
+
+    if 'table:' in parts and 'sheet:' in parts:
+        f_idx = 2
+        s_idx = parts.index('sheet:')
+        t_idx = parts.index('table:')
+
+        f_name = ' '.join(parts[f_idx:s_idx])
+        s_name = ' '.join(parts[s_idx+1:t_idx])
+        t_name = parts[t_idx+1]
+
+        sql = f"insert into sources (pk, ds_pk, file_name, sheet_name table_name, created) values " \
+              f"({pk}, {ds_pk}, '{f_name}', '{s_name}', '{t_name}', unix_timestamp())"
+
+    try:
+        print(f"sql: {sql}")
+        sql_helper.db_exec(db, sql)
+    except:
+        traceback.print_exc()
+
+
+def ask_to_do_what(ds):
+
+    done = False
+
+    while not done:
+        try:
+            print("\ndo? ", end='')
+            r = input()
+
+            if r == 'done' or r == 'd':
+                done = True
+
+            elif r == 'quit':
+                quit()
+
+            elif r.startswith('add '):
+                process_add(ds['ds_pk'], r)
+
+            elif r.startswith('remove '):
+                process_remove(ds['ds_pk'], r)
+
+            elif r == 'help':
+                print_help()
+
+            else:
+                print("did not understand... Type \"help\"")
+
+        except KeyboardInterrupt:
+            done = True
+
+
+def check_source_entries(datasets):
     """Fix the newly found conditions that do not require any thought.
        If a file is newly found and is not a table-data file, then I can just
        add it to the sources table automatically. If it is a table-data file,
@@ -192,143 +329,19 @@ def fix_easy_source_entries(datasets):
 
         msgs = list()
 
-        if has_extra or has_missing:
+        if not has_extra and not has_missing:
+            continue
 
-            for file in ds['missing']:
-                if should_auto_run(file):
-                    msgs.append(f"------ is missing: {file}")
-                else:
-                    source_pk += 1
-                    sql = f"""insert into sources (pk, ds_pk, file_name, created, update_tables_fails)
-                              values ({source_pk}, (select pk from datasets where name = '{ds['name']}'),
-                                      '{file}', unix_timestamp(), 0)"""
-                    #print(f"sql: {sql}")
-                    sql_helper.db_exec(db, sql)
+        for file in ds['missing']:
+            msgs.append(f"------ is missing: {file}")
 
-            for file in ds['extra']:
-                if should_auto_run(file):
-                    msgs.append(f"-- is newly found; {file}")
-                else:
-                    sql = f"""update sources set inactive = unix_timestamp()
-                              where ds_pk = (select pk from datasets where name = '{ds['name']}') and
-                                    file_name = '{file}'"""
-                    #print(f"sql: {sql}")
-                    sql_helper.db_exec(db, sql)
+        for file in ds['extra']:
+            msgs.append(f"-- is newly found; {file}")
 
-            if len(msgs) > 0:
-                print("")
-                print("="*60)
-                pprint(ds, compact=True)
-                print("")
-                [print(msg) for msg in msgs]
+        if len(msgs) > 0:
+            print_ds_with_msgs(ds, msgs)
 
-
-def xxx_sources_from_zips(datasets):
-
-    # HEY Why am i getting so many exceptions from here? What the fuck!
-    sources = list()
-
-    for id in datasets:
-
-        try:
-            source = dict()
-            print(f"\nfrom dataset[{id}]:")
-            pprint(datasets[id], compact=True)
-            source['id'] = {'id': id,
-                            'ds_stored_update': datasets[id]['stored_update'],
-                            'ds_local_update': datasets[id]['local_update'],
-                            'ds_pk': datasets[id]['pk'],
-                            'zip': datasets[id]['zip']}
-            sources.append(source)
-
-        except:
-            traceback.print_exc()
-
-    fsources = list()
-
-    for entry in sources:
-        zip = entry['zip']
-        with zipfile.ZipFile(f"{id}/{zip}", mode="r") as z:
-            files = z.namelist()
-
-        for file in files:
-            fsource = dict(entry)
-            fsource['file_name'] = file
-            fsource['sheet_name'] = 'UNKNOWN'
-
-    return sources
-
-
-def xxx_add_sources(sources):
-
-    pk = sql_helper.get_max_pk(db, 'sources')
-
-    for item in sources:
-        id = item['id']
-        file = item['file']
-
-        if should_auto_run(file):
-            auto_run = 1
-        else:
-            auto_run = 0
-
-        pk += 1
-
-        sql = f"""insert into sources (pk, ds_pk, auto_run, file_name, created, update_tables) values
-                 ({pk}, (select pk from datasets where name = {u.fix(id)}),
-                  {auto_run}, {u.fix(file)}, unix_timestamp(), 0)"""
-        u.db_exec(db, sql)
-
-
-def xxx_extract_file(zip, source):
-    zip = f"{id}/{found[id]['zip']}"
-    with zipfile.ZipFile(zip, mode="r") as z:
-        z.extract(source, path='/tmp')
-    return f"/tmp/{source}"
-
-
-def xxx_problem_zips(zips):
-    found = list()
-    for id in zips:
-        if id == 'chart-1-6-mcp-penetration-rates-for-ecm-in-the-last-12-months-of-the-reporting-period':
-            print(f"id: {id} and zips[id]: {zips[id]}")
-        if zips[id] == 'MULTIPLE_ZIP_FILES_EXIST':
-            found.append(f"{id}/{zips[id]}")
-    return found
-
-
-def xxx_read_file_digest(source):
-    with open(source['file_path'], "rb") as f:
-        digest = hashlib.file_digest(f, "sha256").hexdigest()
-    print(f"read_file_digest:: digest: {digest}\n")
-    return digest
-
-
-def xxx_process_data_file(source):
-
-    print(f"\nprocess_data_file:: source: {source}\n")
-
-    found_digest = read_file_digest(source)
-
-    if source['zip_digest'] == found_digest:
-        print(f"NOT SEEING changes: {source}\n")
-        return
-    else:
-        print(f"OLD digest: {source['file_digest']}")
-        print(f"NEW digest: {found_digest}")
-        print("digests DIFFER\n")
-
-    if source['file_path'].endswith('.csv'):
-        print("will process with csv_helper")
-        #result = csv_helper.create_tables(source)
-        return
-
-    if source['file_path'].endswith('.xlsx'):
-        print("will process with excel_helper")
-        pass # read xlsx file with excel_helper
-        return
-
-    print(f"NOT processable: {source}")
+        ask_to_do_what(ds)
 
 
 if __name__ == '__main__':
@@ -360,16 +373,19 @@ if __name__ == '__main__':
             dataset_sources[row['name']] = list()
         dataset_sources[row['name']].append(row)
 
+    dprint("")
     for name in dataset_sources:
         dprint(f"{name}: sources # {len(dataset_sources[name])}")
 
     # dataset_sources is a dict like: {'dataset-name': {row from datasets and sources}. etc.}
 
-    print(f"dataset_sources found # {len(dataset_sources)}")
+    print(f"\ndataset_sources found # {len(dataset_sources)}")
 
     datasets = verify_source_entries(dataset_sources)
 
-    fix_easy_source_entries(datasets)
+    check_source_entries(datasets)
+
+    quit()
 
     #for ds in datasets:
     #    print(f"\nid: {ds['name']}")
@@ -409,32 +425,6 @@ if __name__ == '__main__':
             source_obj['file_name'] = source
             print(f"source_obj: {source_obj}\n")
 
-#            if 'file_digest' in source_obj and source_obj['file_digest'] is not None:
-#                try:
-#                    if not args.dry_run:
-#                        file_path = extract_file(f"{id}/{found[id]['zip']}", source)
-#                        print(f"extracted: {source}")
-#                    else:
-#                        print(f"would extract: {source}")
-#                except KeyError:
-#                    # TODO deal with missing files (and tables?) better, if possible.
-#                    #
-#                    print(f"MISSING from zip: {source}")
-#                    print(f"source was {source_obj}\n")
-#                    continue
-#            else:
-#                file_path = None
-#                print(f"NOT extracting: {source}\n")
-#
-#            if file_path:
-#                source_obj['file_path'] = file_path
-#                process_data_file(source_obj)
-#
-#                try:
-#                    os.remove(file_path)
-#                except FileNotFoundError:
-#                    print(f"NOT found to delete: {file_path}")
-#
     print("")
 
 
