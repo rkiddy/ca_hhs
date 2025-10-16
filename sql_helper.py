@@ -26,16 +26,16 @@ def db_exec_sql(sql):
 def db_exec_many(conn, prefix, suffixes):
     """Execute a large bunch of sql statements but if there is an error,
        fall back to doing one at a time. This makes large sets of insertions massively faster."""
-
-    done = False
-    sql = f"{prefix} {',\n'.join(suffixes)}"
-    db_exec(conn, sql)
-    done = True
-
-    if not done:
-        for suffix in suffixes:
-            sql = f"{prefix} {suffix}"
-            db_exec(conn, sql)
+    pass
+#    done = False
+#    sql = f"{prefix} {',\n'.join(suffixes)}"
+#    db_exec(conn, sql)
+#    done = True
+#
+#    if not done:
+#        for suffix in suffixes:
+#            sql = f"{prefix} {suffix}"
+#            db_exec(conn, sql)
 
 
 def db_exec_many_sql(prefix, suffixes):
@@ -149,12 +149,16 @@ known_replacements = {'system': 'system_name',
 def fix_col_head(start, replaces={}):
     """Many of the column headers in these files are not compatible with mysql databases."""
 
-    col = fix_first_key(start)
+    ltrs = list()
+    for ltr in start:
+        if ord(ltr) < 128:
+            ltrs.append(ltr)
+    col = ''.join(ltrs).strip()
+
+    col = col.lower()
 
     for key in replaces:
         col = col.replace(key, replaces[key])
-
-    col = col.lower()
 
     for key in known_replacements:
         if col == key:
@@ -164,31 +168,37 @@ def fix_col_head(start, replaces={}):
         col = col[1:]
     while col.endswith(' '):
         col = col[:-1]
+
+    col = col.replace('+', '_plus_')
+    col = col.replace('#', 'num')
+    col = col.replace('%', 'pct')
+    col = col.replace('>=', '_ge_')
+    col = col.replace('<=', '_le_')
+    col = col.replace('>', '_gt_')
+    col = col.replace('<', '_lt_')
+    col = col.replace('=', '_eq_')
+
+    col = col.replace('\n', '_')
+    col = col.replace('\t', '_')
     col = col.replace(' ', '_')
     col = col.replace('-', '_')
-    col = col.replace('(', '')
-    col = col.replace(')', '')
     col = col.replace('/', '_')
     col = col.replace(',', '_')
     col = col.replace('.', '_')
     col = col.replace(';', '_')
-    col = col.replace('+', '_plus_')
-    col = col.replace('#', 'num')
-    col = col.replace('%', 'pct')
+
+    while '__' in col:
+        col = col.replace('__', '_')
+
+    col = col.replace('(', '')
+    col = col.replace(')', '')
     col = col.replace('?', '')
     col = col.replace('&', '')
     col = col.replace('*', '')
-    col = col.replace('>=', '_ge_')
-    col = col.replace('<=', '_le_')
     col = col.replace('"', '')
     col = col.replace("'", '')
     col = col.replace(':', '')
-    col = col.replace('>', '_gt_')
-    col = col.replace('<', '_lt_')
-    col = col.replace('=', '_eq_')
     col = col.replace('^', '')
-
-    col = col.replace('__', '_')
 
     for key in replaces:
         col = col.replace(key, replaces[key])

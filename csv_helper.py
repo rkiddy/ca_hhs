@@ -124,13 +124,8 @@ def fix_column_names(d):
     next_d = dict()
 
     for key in d:
-        ltrs = list()
-        for ltr in key:
-            if ord(ltr) < 128:
-                ltrs.append(ltr)
-        next_key = ''.join(ltrs).strip()
 
-        next_key = next_key.lower().replace(' ', '_')
+        next_key = sql_helper.fix_col_head(key)
 
         next_d[next_key] = d[key]
 
@@ -212,6 +207,8 @@ def create_table(r):
 def fix_sql(s):
     if s is None:
         return 'NULL'
+    if isinstance(s, list):
+        s = ''.join(s)
     s = s.replace("'", "''")
     return f"'{s}'"
 
@@ -249,7 +246,7 @@ def write_table_data(r, insert_bucket):
             values = [fix_sql(r) for r in list(row.values())]
             suffixes.append(f"({', '.join(values)})")
 
-            if len(suffixes) >= insert_bucket:
+            if len(suffixes) >= int(insert_bucket):
 
                 try:
                     sql = generate_insert_sql(r['table_name'], col_names, suffixes)
@@ -485,7 +482,7 @@ def read_data(tables, types={}, replaces={}, start_row=None, bucket=1000):
 
                         sqls.append(f"({', '.join(next_vals)})")
 
-                        if len(sqls) >= bucket:
+                        if len(sqls) >= int(bucket):
                             db_exec_many(maindb, prefix, sqls)
                             sqls.clear()
 
