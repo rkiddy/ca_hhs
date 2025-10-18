@@ -17,3 +17,33 @@ files. There are other Excel file types that my current python code cannot deal 
 ".xlsm" files, and so on. The issues with these may be small. I just have not bothered with them yet.
 
 See the wiki for more details.
+
+As of Oct 2025, I lost a hard drive on my laptop, but everything is up on github. Of course. So, not much was
+lost. But this would be a good place to check in.
+
+I am able to run:
+
+     % stp fetchability.py
+     % stp processing.py
+     % stp update_one.py
+
+There is some data machinery that was taken down that is not completely replaced. But this is working. I run
+the scrape of the Cal HHS datasets every morning and this data is put into a publicly accessible JSON file.
+Anyone can use that with the --opencal-json-file flag on the fetching script.
+
+The front-end of my app is https://https://opencalaccess.org/hcai/ but an administrative (read-only) page
+is giving the status of every CSV file and every table at https://opencalaccess.org/hcai_all/. XLSX files
+are TBD, but those were working so thatdata will be updated RSN.
+
+---------
+
+Set up for myaql-ssh:
+
+The mysql database is running on a remote server. I am in a coffee shop. How do I run the daily scripts?
+
+on my laptop:
+
+% ssh -N -L 3307:127.0.0.1:3306 ray@opencal
+
+then access mysql through a connect to the localhost, port 3307, which can be set up in the .env file.
+
