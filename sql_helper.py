@@ -7,39 +7,33 @@ import config
 
 cfg = config.cfg()
 
-engine = create_engine(f"mysql+pymysql://{cfg['MAIN_USR']}:{cfg['MAIN_PWD']}@{cfg['MAIN_HOST']}/{cfg['MAIN_DB']}")
-conn = engine.connect()
+maindb = create_engine(f"mysql+pymysql://{cfg['USR']}:{cfg['PWD']}@{cfg['HOST']}:{cfg['PORT']}/{cfg['MAIN_DB']}")
+metadb = create_engine(f"mysql+pymysql://{cfg['USR']}:{cfg['PWD']}@{cfg['HOST']}:{cfg['PORT']}/{cfg['META_DB']}")
 
 
 def db_exec(eng, this_sql):
     # print(f"sql: {this_sql}")
+    conn = eng.connect()
     if this_sql.strip().startswith('select'):
-        return [dict(row) for row in eng.execute(this_sql).fetchall()]
+        r = [dict(row) for row in conn.execute(this_sql).fetchall()]
     else:
-        return eng.execute(this_sql)
-
-
-def db_exec_sql(sql):
-    return db_exec(conn, sql)
+        r = conn.execute(this_sql)
+    conn.close()
+    return r
 
 
 def db_exec_many(conn, prefix, suffixes):
     """Execute a large bunch of sql statements but if there is an error,
        fall back to doing one at a time. This makes large sets of insertions massively faster."""
-    pass
-#    done = False
-#    sql = f"{prefix} {',\n'.join(suffixes)}"
-#    db_exec(conn, sql)
-#    done = True
-#
-#    if not done:
-#        for suffix in suffixes:
-#            sql = f"{prefix} {suffix}"
-#            db_exec(conn, sql)
+    done = False
+    sql = f"{prefix} {',\n'.join(suffixes)}"
+    db_exec(conn, sql)
+    done = True
 
-
-def db_exec_many_sql(prefix, suffixes):
-    return db_exec_many(engine, prefix, suffixes)
+    if not done:
+        for suffix in suffixes:
+            sql = f"{prefix} {suffix}"
+            db_exec(conn, sql)
 
 
 def get_max_pk(conn, table_name):

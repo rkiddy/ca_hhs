@@ -11,13 +11,6 @@ from sqlalchemy import create_engine
 import config
 import sql_helper
 
-cfg = config.cfg()
-
-maindb = create_engine(f"mysql+pymysql://{cfg['MAIN_USR']}:{cfg['MAIN_PWD']}@{cfg['MAIN_HOST']}/{cfg['MAIN_DB']}")
-maindb.connect()
-
-metadb = create_engine(f"mysql+pymysql://{cfg['META_USR']}:{cfg['META_PWD']}@{cfg['META_HOST']}/{cfg['META_DB']}")
-metadb.connect()
 
 
 def db_exec(eng, this_sql):
@@ -26,15 +19,11 @@ def db_exec(eng, this_sql):
 
 def db_exec_sql(sql):
     """Assume the existing connection, because this is what happens anway."""
-    return sql_helper.db_exec(maindb, sql)
+    return sql_helper.db_exec(sql_helper.maindb, sql)
 
 
 def db_exec_many(conn, prefix, suffixes):
     return sql_helper.db_exec_many(conn, prefix, suffixes)
-
-
-def db_exec_many_sql(prefix, suffixes):
-    return sql_helper.db_exec_many(maindb, prefix, suffixes)
 
 
 def fix(start):
@@ -189,10 +178,10 @@ def create_table(r):
     print(f"\ncreating table {tname}...")
 
     try:
-        sql_helper.db_exec(maindb, f"drop table if exists {tname}")
+        sql_helper.db_exec(sql_helper.maindb, f"drop table if exists {tname}")
 
         print(f"sql: {sql}")
-        sql_helper.db_exec(maindb, sql)
+        sql_helper.db_exec(sql_helper.maindb, sql)
 
         r['table_file'] = name
 
@@ -250,7 +239,7 @@ def write_table_data(r, insert_bucket):
 
                 try:
                     sql = generate_insert_sql(r['table_name'], col_names, suffixes)
-                    sql_helper.db_exec(maindb, sql)
+                    sql_helper.db_exec(sql_helper.maindb, sql)
                     rows_found += len(suffixes)
                     suffixes = list()
                 except Exception as e:
@@ -262,7 +251,7 @@ def write_table_data(r, insert_bucket):
         if len(suffixes) > 0:
             try:
                 sql = generate_insert_sql(r['table_name'], col_names, suffixes)
-                sql_helper.db_exec(maindb, sql)
+                sql_helper.db_exec(sql_helper.maindb, sql)
                 rows_found += len(suffixes)
             except Exception as e:
                 traceback.print_exc()
@@ -356,10 +345,10 @@ def create_tables(tables, types={}, replaces={}, length_pad=0, verbose=False):
 
             print(f"\ncreating table {table}...")
 
-            db_exec(maindb, f"drop table if exists {table}")
+            db_exec(sql_helper.maindb, f"drop table if exists {table}")
 
             print(f"sql: {sql}")
-            db_exec(maindb, sql)
+            db_exec(sql_helper.maindb, sql)
         except:
             traceback.print_exc()
             failed.append(table)
@@ -483,7 +472,7 @@ def read_data(tables, types={}, replaces={}, start_row=None, bucket=1000):
                         sqls.append(f"({', '.join(next_vals)})")
 
                         if len(sqls) >= int(bucket):
-                            db_exec_many(maindb, prefix, sqls)
+                            db_exec_many(sql_helper.maindb, prefix, sqls)
                             sqls.clear()
 
                         # When we were doing this one at a time.
@@ -495,7 +484,7 @@ def read_data(tables, types={}, replaces={}, start_row=None, bucket=1000):
                         added += 1
 
                 if len(sqls) > 0:
-                    db_exec_many(maindb, prefix, sqls)
+                    db_exec_many(sql_helper.maindb, prefix, sqls)
 
                 print(f"table: {table} # {added}")
 
