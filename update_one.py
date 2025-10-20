@@ -14,9 +14,6 @@ import utils as u
 
 cfg = config.cfg()
 
-dbmeta = create_engine(f"mysql+pymysql://{cfg['META_USR']}:{cfg['META_PWD']}@{cfg['META_HOST']}/{cfg['META_DB']}")
-dbmeta.connect()
-
 
 def arguments():
     parser = argparse.ArgumentParser()
@@ -34,12 +31,12 @@ def load_datasets(name=None):
     if name is not None:
 
         sql = f"select * from datasets where name = '{name}'"
-        rows = sql_helper.db_exec(dbmeta, sql)
+        rows = sql_helper.db_exec(sql_helper.metadb, sql)
         datasets = {name: rows[0]}
         pks = {rows[0]['pk']: rows[0]['name']}
 
         sql = f"select * from sources where ds_pk = {datasets[name]['pk']} and inactive is NULL"
-        rows = sql_helper.db_exec(dbmeta, sql)
+        rows = sql_helper.db_exec(sql_helper.metadb, sql)
 
     else:
         # Create a name-keyed dictionary for general use and a pk-keyed dictionary for linking.
@@ -51,12 +48,12 @@ def load_datasets(name=None):
                        d1.update_zip_file > (select min(s1.update_tables) from sources s1
                                              where d1.pk = s1.ds_pk and s1.table_name is not NULL and
                                                    s1.file_name like '%%csv')"""
-        rows = sql_helper.db_exec(dbmeta, sql)
+        rows = sql_helper.db_exec(sql_helper.metadb, sql)
 
         datasets = dict(zip([r['name'] for r in rows], rows))
         pks = dict(zip([r['pk'] for r in rows], [r['name'] for r in rows]))
 
-        rows = sql_helper.db_exec(dbmeta, "select * from sources where inactive is NULL")
+        rows = sql_helper.db_exec(sql_helper.metadb, "select * from sources where inactive is NULL")
 
     for row in rows:
         ds_pk = row['ds_pk']
@@ -122,8 +119,12 @@ if __name__ == '__main__':
                 print(f"ERROR in reading file: {readable['file_name']}")
                 readable['exception'] = e
 
-            if 'exception' not in readable:
+            print("ready to check file")
+            if 'exception' in readable:
+                print(f"exception: {readable['exception']}")
+            else:
 
+                print("going to check file")
                 if readable['file_name'].endswith('.csv'):
 
                     readable = csv_helper.create_table(readable)
@@ -131,18 +132,23 @@ if __name__ == '__main__':
                     if 'exception' not in readable:
                         readable = csv_helper.write_table_data(readable, args.insert_bucket)
 
+                if readable['file_name'].endswith('.xlsx'):
+
+                    readable = excel_helper.create_table(readable, verbose=args.verbose)
+
             print("readable:")
             pprint(readable, compact=True)
             print("")
+            quit()
 
             if 'exception' not in readable:
                 sql = f"""update sources
                           set update_tables_fails = 0, update_tables = {int(dt.now().strftime('%s'))}
                           where ds_pk = {readable['ds_pk']} and file_name = '{readable['file_name']}'"""
-                sql_helper.db_exec(dbmeta, sql)
+                sql_helper.db_exec(sql_helper.metadb, sql)
 
             else:
                 sql = f"""update sources set update_tables_fails = update_tables_fails + 1
                           where ds_pk = {readable['ds_pk']} and file_name = '{readable['file_name']}'"""
-                sql_helper.db_exec(dbmeta, sql)
+                sql_helper.db_exec(sql_helper.metadb, sql)
 
