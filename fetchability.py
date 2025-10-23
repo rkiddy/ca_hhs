@@ -1,6 +1,5 @@
 """Fetch information from the Cal HHS website.
 
-
    First, the data is read from the Cal HHS web site. This information is also stored in a json file.
    Second, the Opencal database content is also read and stored as a json file.
 
@@ -24,14 +23,8 @@ import requests
 from bs4 import BeautifulSoup as bs
 from sqlalchemy import create_engine
 
-import config
 import sql_helper
 import utils as u
-
-cfg = config.cfg()
-
-dbmeta = create_engine(f"mysql+pymysql://{cfg['META_USR']}:{cfg['META_PWD']}@{cfg['META_HOST']}/{cfg['META_DB']}")
-conn = dbmeta.connect()
 
 
 def arguments():
@@ -49,6 +42,7 @@ def arguments():
     parser.add_argument('--verbose', '-v', action="store_true")
     parser.add_argument('--non-interactive', '-ni', action="store_true",
                         help="Prevent all output, except for errors. Useful when called via cron.")
+    parser.add_argument('--show-ignored-datasets', action="store_true")
     return parser.parse_args()
 
 
@@ -242,7 +236,7 @@ def record_ca_hhs_last_update(data):
                   set update_ca_hhs = {last_update_str}, update_ca_hhs_fails = 0
                   where name = '{data['id']}'"""
         try:
-            sql_helper.db_exec(dbmeta, sql)
+            sql_helper.db_exec(sql_helper.metadb, sql)
         except:
             print(f"BAD sql: {sql}")
             quit()
@@ -250,7 +244,7 @@ def record_ca_hhs_last_update(data):
 
 def record_ca_hhs_last_update_fails(id):
     sql = f"update datasets set update_ca_hhs_fails = update_ca_hhs_fails + 1 where name = '{id}'"
-    sql_helper.db_exec(dbmeta, sql)
+    sql_helper.db_exec(sql_helper.metadb, sql)
 
 
 def update_dataset_details(dss):
@@ -284,7 +278,7 @@ def record_zip_file_update(data, zip_file):
               set update_zip_file = unix_timestamp(), update_zip_file_fails = 0, zip_file = '{zip_file}'
               where name = '{data['id']}' and inactive is NULL"""
     try:
-        sql_helper.db_exec(dbmeta, sql)
+        sql_helper.db_exec(sql_helper.metadb, sql)
     except:
         print(f"BAD sql: {sql}")
         quit()
@@ -293,7 +287,7 @@ def record_zip_file_update(data, zip_file):
 def record_zip_file_update_fails(id):
     sql = f"""update datasets set update_zip_file_fails = update_zip_file_fails + 1, zip_file = NULL
               where name = '{id}'"""
-    sql_helper.db_exec(dbmeta, sql)
+    sql_helper.db_exec(sql_helper.metadb, sql)
 
 
 def fetch_opencal_datasets():
@@ -323,7 +317,7 @@ def fetch_opencal_datasets():
     try:
         # Get the list of ids first.
         #
-        rows = sql_helper.db_exec(dbmeta, "select * from datasets where inactive is NULL")
+        rows = sql_helper.db_exec(sql_helper.metadb, "select * from datasets where inactive is NULL")
 
         return dict(zip([r['name'] for r in rows], rows))
 
@@ -341,7 +335,7 @@ def update_opencal_table_counts():
                    d1.name not like '%%dictionary%%'
                    group by d1.name order by d1.name"""
 
-    rows = sql_helper.db_exec(dbmeta, sql)
+    rows = sql_helper.db_exec(sql_helper.metadb, sql)
 
     for row in rows:
 
@@ -351,7 +345,7 @@ def update_opencal_table_counts():
             count = 0
 
         sql = f"update datasets set tables_count = {count} where pk = {pk}"
-        sql_helper.db_exec(dbmeta, sql)
+        sql_helper.db_exec(sql_helper.metadb, sql)
 
 
 def read_local_json_data():
@@ -498,8 +492,11 @@ if __name__ == '__main__':
     if args.download_all_zips:
 
         for id in cal_hhs_datasets:
-            r = download_zipfile(cal_hhs_datasets[id])
-            diprint(f"zip file for {id}, result: {r}")
+            if 'dload_all' in cal_hhs_datasets[id]:
+                r = download_zipfile(cal_hhs_datasets[id])
+                diprint(f"zip file for {id}, result: {r}")
+            else:
+                print(f"\nLink for \"dload_all\" not found in {id}")
 
     else:
         downloadables = list()
@@ -543,7 +540,8 @@ if __name__ == '__main__':
                            f"    ca hhs: {fromtimestamp(ca_hhs_update)}\n")
                     downloadables.append(id)
             else:
-                print(f"\nid: {id} not in opencal_datasets")
+                if args.show_ignored_datasets:
+                    print(f"\nid: {id} not in opencal_datasets")
 
         iprint(f"\ndownloadables # {len(downloadables)}")
 
