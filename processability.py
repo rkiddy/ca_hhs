@@ -34,11 +34,6 @@ from sqlalchemy import create_engine
 import config
 import utils as u
 
-cfg = config.cfg()
-
-db = create_engine(f"mysql+pymysql://{cfg['META_USR']}:{cfg['META_PWD']}@{cfg['META_HOST']}/{cfg['META_DB']}")
-db.connect()
-
 
 def arguments():
     parser = argparse.ArgumentParser()
@@ -47,6 +42,7 @@ def arguments():
     parser.add_argument('--dry-run', action="store_true", help="List zips but does not open them.")
     parser.add_argument('--do-only', help="Do only X (an integer) datasets. From 1 to -1 (all).")
     parser.add_argument('--skip-mod-check', action="store_true")
+    parser.add_argument('--only-mod-check', action="store_true", help="Run only the mod-check, then quit.")
     parser.add_argument('--verbose', '-v', action="store_true")
     return parser.parse_args()
 
@@ -65,22 +61,22 @@ def update_table_mods(id):
     if id is None:
         sql = """select create_time, update_time, table_name
                  from information_schema.tables where table_schema = 'ca_hhs'"""
-        rows = sql_helper.db_exec(db, sql)
+        rows = sql_helper.db_exec(sql_helper.metadb, sql)
     else:
         sql = f"""select s1.table_name from datasets d1, sources s1
                   where d1.pk = s1.ds_pk and d1.name = '{id}'"""
-        tables = [f"'{r['table_name']}'" for r in db_exec(db, sql)]
+        tables = [f"'{r['table_name']}'" for r in db_exec(sql_helper.metadb, sql)]
 
         tables = ', '.join(tables)
 
         sql = f"""select create_time, update_time, table_name
                   from information_schema.tables
                   where table_schema = 'ca_hhs' and table_name in ({tables})"""
-        rows = sql_helper.db_exec(db, sql)
+        rows = sql_helper.db_exec(sql_helper.metadb, sql)
 
     try:
 
-        sql_helper.db_exec(db, "start transaction")
+        sql_helper.db_exec(sql_helper.metadb, "start transaction")
         dprint("started transaction for table mod dates.")
 
         for row in rows:
@@ -95,13 +91,13 @@ def update_table_mods(id):
             table = row['TABLE_NAME']
 
             sql = f"update sources set update_tables = {mt} where table_name = '{table}'"
-            sql_helper.db_exec(db, sql)
+            sql_helper.db_exec(sql_helper.metadb, sql)
 
     except:
-        sql_helper.db_exec(db, "rollback")
+        sql_helper.db_exec(sql_helper.metadb, "rollback")
         traceback.print_exc()
     finally:
-        sql_helper.db_exec(db, "commit")
+        sql_helper.db_exec(sql_helper.metadb, "commit")
         dprint("done.")
 
 
@@ -124,7 +120,7 @@ def verify_source_entries(datasets):
         #
         sql = f"""select file_name, sheet_name, table_name from sources
                   where ds_pk = {ds_pk} and inactive is NULL and table_name is not NULL"""
-        rows = sql_helper.db_exec(db, sql)
+        rows = sql_helper.db_exec(sql_helper.metadb, sql)
 
         tables_for_file = dict()
 
@@ -150,7 +146,7 @@ def verify_source_entries(datasets):
             #print(f"files # {len(files)}")
 
             sql = f"select * from sources where ds_pk = {ds_pk} and inactive is NULL"
-            rows = sql_helper.db_exec(db, sql)
+            rows = sql_helper.db_exec(sql_helper.metadb, sql)
 
             sources = dict(zip([r['file_name'] for r in rows], rows))
             #print(f"sources # {len(list(sources.keys()))}")
@@ -210,6 +206,7 @@ def print_help():
     print("    add file: <name> - will add a source without a table.")
     print("    add file: <name> table: <name> - will add a source with this table.")
     print("    add file: <name> sheet: <name> table: <name> - will add a source with this sheet name and table.")
+    print("    add file: <name> none: - will add a source that is not a table, such as a pdf or doc.")
     print("    remove <name> - will remove the source or sources with this filename.")
     print("    help - will print out this information.")
     print("")
@@ -220,14 +217,17 @@ def process_remove(ds_pk, s):
 
     f_name = ' '.join(parts[1:])
 
-    sql = f"update sources set inactive = unix_timestamp() where ds_pk = {ds_pk} and name = '{f_name}'"
+    sql = "update sources set inactive = unix_timestamp() " \
+          f"where ds_pk = {ds_pk} and inactive is NULL and file_name = '{f_name}'"
     print(f"sql: {sql}")
+    sql_helper.db_exec(sql_helper.metadb, sql)
 
 
 def process_add(ds_pk, s):
     parts = s.split(' ')
+    print(f"process_add:: parts: {parts}")
 
-    pk = sql_helper.get_max_pk(db, 'sources') + 1
+    pk = sql_helper.get_max_pk(sql_helper.metadb, 'sources') + 1
 
     # TODO I could do correctness checks here....
     #
@@ -235,23 +235,32 @@ def process_add(ds_pk, s):
 
     sql = None
 
-    if 'table:' not in parts and 'sheet:' not in parts:
+    if not sql and 'table:' not in parts and 'sheet:' not in parts and 'none:' not in parts:
         f_idx = 2
         f_name = ' '.join(parts[f_idx:])
-        sql = f"insert into sources (pk, ds_pk, file_name, created) values " \
-              f"({pk}, {ds_pk}, '{f_name}', unix_timestamp())"
+        sql = f"insert into sources (pk, ds_pk, file_name, created, update_tables, update_tables_fails) values " \
+              f"({pk}, {ds_pk}, '{f_name}', unix_timestamp(), 0, 0)"
 
-    if 'table:' in parts and 'sheet:' not in parts:
+    if not sql and 'table:' in parts and 'sheet:' not in parts and 'none:' not in parts:
         f_idx = 2
         t_idx = parts.index('table:')
 
         f_name = ' '.join(parts[f_idx:t_idx])
         t_name = parts[t_idx+1]
 
-        sql = f"insert into sources (pk, ds_pk, file_name, table_name, created) values " \
-              f"({pk}, {ds_pk}, '{f_name}', '{t_name}', unix_timestamp())"
+        sql = f"insert into sources (pk, ds_pk, file_name, table_name, created, update_tables, update_tables_fails) " \
+              f"values ({pk}, {ds_pk}, '{f_name}', '{t_name}', unix_timestamp(), 0, 0)"
 
-    if 'table:' in parts and 'sheet:' in parts:
+    if not sql and 'table:' not in parts and 'none:' in parts:
+        f_idx = 2
+        n_idx = parts.index('none:')
+
+        f_name = ' '.join(parts[f_idx:n_idx])
+
+        sql = f"insert into sources (pk, ds_pk, file_name, created, update_tables, update_tables_fails) " \
+              f"values ({pk}, {ds_pk}, '{f_name}', unix_timestamp(), 0, 0)"
+
+    if not sql and 'table:' in parts and 'sheet:' in parts:
         f_idx = 2
         s_idx = parts.index('sheet:')
         t_idx = parts.index('table:')
@@ -260,14 +269,17 @@ def process_add(ds_pk, s):
         s_name = ' '.join(parts[s_idx+1:t_idx])
         t_name = parts[t_idx+1]
 
-        sql = f"insert into sources (pk, ds_pk, file_name, sheet_name table_name, created) values " \
-              f"({pk}, {ds_pk}, '{f_name}', '{s_name}', '{t_name}', unix_timestamp())"
+        sql = f"insert into sources (pk, ds_pk, file_name, sheet_name table_name, created, update_tables, update_tables_fails) values " \
+              f"({pk}, {ds_pk}, '{f_name}', '{s_name}', '{t_name}', unix_timestamp(), 0, 0)"
 
-    try:
-        print(f"sql: {sql}")
-        sql_helper.db_exec(db, sql)
-    except:
-        traceback.print_exc()
+    if sql:
+        try:
+            print(f"sql: {sql}")
+            sql_helper.db_exec(sql_helper.metadb, sql)
+        except:
+            traceback.print_exc()
+    else:
+        print("\nWARNING: no sql found for adding source?")
 
 
 def ask_to_do_what(ds):
@@ -311,10 +323,12 @@ def check_source_entries(datasets):
 
     print("")
 
-    source_pk = sql_helper.get_max_pk(db, 'sources')
+    source_pk = sql_helper.get_max_pk(sql_helper.metadb, 'sources')
 
     sql = "select table_name from sources where table_name is not NULL and inactive is NULL"
-    existing_tables = [r['table_name'] for r in sql_helper.db_exec(db, sql)]
+    existing_tables = [r['table_name'] for r in sql_helper.db_exec(sql_helper.metadb, sql)]
+
+    found = list()
 
     for name in datasets:
 
@@ -327,10 +341,16 @@ def check_source_entries(datasets):
         has_extra = 'extra' in ds and len(ds['extra']) > 0
         has_missing = 'missing' in ds and len(ds['missing']) > 0
 
-        msgs = list()
+        if has_extra or has_missing:
+            found.append(name)
 
-        if not has_extra and not has_missing:
-            continue
+    to_handle = len(found)
+
+    for name in found:
+
+        ds = datasets[name]
+
+        msgs = list()
 
         for file in ds['missing']:
             msgs.append(f"------ is missing: {file}")
@@ -341,7 +361,12 @@ def check_source_entries(datasets):
         if len(msgs) > 0:
             print_ds_with_msgs(ds, msgs)
 
+        print(f"to handle # {to_handle}")
+
         ask_to_do_what(ds)
+
+        to_handle -= 1
+
 
 
 if __name__ == '__main__':
@@ -352,6 +377,9 @@ if __name__ == '__main__':
 
     if not args.skip_mod_check:
         update_table_mods(args.id)
+        if args.only_mod_check:
+            print("\n--only-mod-check used, so quitting.")
+            quit()
     else:
         dprint("Skipping update_table_mods check...")
 
@@ -366,7 +394,7 @@ if __name__ == '__main__':
                        (s1.update_tables is NULL or s1.update_tables < d1.update_zip_file)
                   order by d1.name, s1.file_name"""
 
-    rows = sql_helper.db_exec(db, sql)
+    rows = sql_helper.db_exec(sql_helper.metadb, sql)
     dataset_sources = dict()
     for row in rows:
         if row['name'] not in dataset_sources:
