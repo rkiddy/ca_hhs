@@ -505,20 +505,22 @@ if __name__ == '__main__':
 
             # if we do not have a download link, why bother?
             #
-            if 'dload_all' not in cal_hhs_datasets[id]:
-                print(f"\nLink for \"dload_all\" not found in {id}")
-                continue
+            #if 'dload_all' not in cal_hhs_datasets[id]:
+            #    print(f"\nLink for \"dload_all\" not found in {id}")
+            #    continue
 
             if id in opencal_datasets:
 
                 diprint(f"ds detail: {opencal_datasets[id]}")
 
-                zip_file_file_only = opencal_datasets[id]['zip_file'].split('/')[-1]
+                if opencal_datasets[id]['zip_file'] is not None:
 
-                full_zip_file = f"{opencal_datasets[id]['name']}/{zip_file_file_only}"
-                if not os.path.isfile(full_zip_file):
-                    downloadables.append(id)
-                    continue
+                    zip_file_file_only = opencal_datasets[id]['zip_file'].split('/')[-1]
+
+                    full_zip_file = f"{opencal_datasets[id]['name']}/{zip_file_file_only}"
+                    if not os.path.isfile(full_zip_file):
+                        downloadables.append(id)
+                        continue
 
                 ca_hhs_update = cal_hhs_datasets[id]['last_update']
                 if ca_hhs_update is None:
