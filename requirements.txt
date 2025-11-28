@@ -1,3 +1,5 @@
+beautifulsoup4==4.13.5
+bs4==0.0.2
 certifi==2024.8.30
 cffi==1.17.1
 charset-normalizer==3.4.0
@@ -6,10 +8,16 @@ et_xmlfile==2.0.0
 greenlet==3.1.1
 idna==3.10
 openpyxl==3.1.5
+progressbar2==4.5.0
 pycparser==2.22
 PyMySQL==1.1.1
 python-dotenv==1.0.1
+python-utils==3.9.1
+pytz==2025.2
 requests==2.32.3
+selenium==4.35.0
+soupsieve==2.8
 SQLAlchemy==1.4.46
+typing_extensions==4.15.0
 urllib3==2.2.3
 xlrd==2.0.1
